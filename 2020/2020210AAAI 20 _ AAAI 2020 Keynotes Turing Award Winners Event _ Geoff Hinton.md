@@ -2,10 +2,10 @@
 
 ## 📽️ 视频概览
 - **标题**: AAAI 2020 图灵奖得主主题演讲 - Geoffrey Hinton  
-- **时间**: 2020年于AAAI大会  
+- **时间**: 2020年2月10日于AAAI大会  
 - **主讲人**: Geoffrey Hinton (SPEAKER_07)  
 - **核心主题**: 批判卷积神经网络(CNNs)的局限性，提出胶囊网络(Capsule Networks)的革新设计，并探讨自我监督学习的前景  
-- **视频链接**: [AAAI 2020 Keynotes](https://techtv.mit.edu/collections/bcs/videos/30698-what-s-wrong-with-convolutional-nets)  
+- **视频链接**: [AAAI 2020 Keynotes](https://www.youtube.com/watch?v=UX8OubxsY8w&t=142s)  
 
 ---
 
