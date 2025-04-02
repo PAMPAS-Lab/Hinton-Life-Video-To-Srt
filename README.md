@@ -307,12 +307,12 @@
   - **核心内容**: 颁奖典礼演讲中强调AI对科学发现的推动作用，呼吁平衡创新与安全。  
   - [链接](./2024/20241211诺贝尔物理学奖得主，杰弗里·辛顿（Geoff%20Hinton）颁奖会演讲.md)
 
-- **2024/20241212 Prof. Geoffrey Hinton AI Godfather on receiving the VinFuture Prize**  
+- **2024/20241212 Geoffrey Hinton: "AI教父在获得VinFuture奖时的讲话" **  
   - **日期**: 12月12日  
   - **核心内容**: 接受VinFuture奖时，强调AI需服务于人类福祉而非军事化。  
   - [链接](./2024/20241212Prof.%20Geoffrey%20Hinton%20AI%20Godfather%20on%20receiving%20the%20VinFuture%20Prize(Geoffrey%20E.%20Hinton.md)
 
-- **2024/20241213 Prof. Geoffrey Hinton Leaves the Audience Stunned by Showing AI Can Think Like Humans**  
+- **2024/20241213 Geoffrey Hinton："AI具备人类级理解的革命性证据" **  
   - **日期**: 12月13日  
   - **核心内容**: 展示AI理解复杂问题的能力，引发对“机器意识”的哲学讨论。  
   - [链接](./2024/20241213Prof.%20Geoffrey%20Hinton%20Leaves%20the%20Audience%20Stunned%20by%20Showing%20AI%20Can%20Think%20Like%20Humans(关于%20Geoffrey%20Hinton：Geoffrey%20Hinton.md)
