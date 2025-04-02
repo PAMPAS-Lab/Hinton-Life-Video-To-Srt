@@ -5,7 +5,7 @@
 - **时间**: 2022年于6月1号The Robots in brains
 - **主讲人**: Geoffrey Hinton (SPEAKER_01)
 - **核心主题**: 探讨了神经网络的工作原理、无监督学习的重要性、卷积神经网络（ConvNets）的局限性以及未来可能的发展方向。
-- **视频链接**：[链接文本](https://example.com/video-link)
+- **视频链接**: [完整视频](https://www.youtube.com/watch?v=2EDP4v-9TUA)  
 
 ## 🎯 核心观点与技术预测
 
