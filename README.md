@@ -1,46 +1,83 @@
 # Hinton-Life-Video-To-Srt
 
 ## 2007
+
+### **12月**
 - **2007/2007124 The Next Generation of Neural Networks**  
   - **日期**: 12月4日  
+  - **核心内容**: 探讨神经网络的下一代发展，可能涉及深度学习的早期架构创新。  
   - [链接](./2007/2007124The%20Next%20Generation%20of%20Neural%20Networks.md)
 
+---
+
 ## 2010
+
+### **3月**
 - **2010/2010319 Recent Developments in Deep Learning**  
   - **日期**: 3月19日  
+  - **核心内容**: 总结当时深度学习领域的最新进展与挑战。  
   - [链接](./2010/2010319Recent%20Developments%20in%20Deep%20Learning.md)
 
+---
+
 ## 2012
+
+### **8月**
 - **2012/2012824 Brains**  
   - **日期**: 8月24日  
+  - **核心内容**: 可能涉及神经科学与人工智能的交叉研究，探讨大脑启发的AI模型。  
   - [链接](./2012/2012824Brains.md)
 
+---
+
 ## 2013
+
+### **5月**
 - **2013/2013520 Geoff Hinton - Recent Developments in Deep Learning**  
   - **日期**: 5月20日  
+  - **核心内容**: 再次聚焦深度学习进展，可能讨论卷积网络或反向传播的优化。  
   - [链接](./2013/2013520Geoff%20Hinton%20-%20Recent%20Developments%20in%20Deep%20Learning.md)
 
+---
+
 ## 2014
-- **2014/2014 What s wrong with convolutional nets**  
+
+### **未知日期**
+- **2014/2014 What's wrong with convolutional nets**  
   - **日期**: 日期未知  
-  - [链接](./2014/2014What%20s%20wrong%20with%20convolutional%20nets.md)
+  - **核心内容**: 分析卷积神经网络的局限性及改进方向（标题修正为 `What's` 并编码单引号 `%27`）。  
+  - [链接](./2014/2014What%27s%20wrong%20with%20convolutional%20nets.md)
+
+---
 
 ## 2016
+
+### **1月**
 - **2016/2016 Prof. Geoffrey Hinton - Artificial Intelligence Turning our understanding of the mind right side up**  
   - **日期**: 日期未知  
+  - **核心内容**: 探讨AI如何重新定义人类对心智与认知的理解。  
   - [链接](./2016/2016Prof.%20Geoffrey%20Hinton%20-%20Artificial%20Intelligence%20Turning%20our%20understanding%20of%20the%20mind%20right%20side%20up.md)
 
-- **2016/201634 Geoffrey Hinton The Godfather of Deep Learning**  
+### **3月**
+- **2016/201634 Geoffrey Hinton: The Godfather of Deep Learning**  
   - **日期**: 3月4日  
+  - **核心内容**: 探讨Hinton在深度学习领域的开创性贡献。  
   - [链接](./2016/201634Geoffrey%20Hinton%20The%20Godfather%20of%20Deep%20Learning.md)
 
-- **2016/2016417 Can sensory cortex do backpropagation - Geoffery Hinton**  
+### **4月**
+- **2016/2016417 Can sensory cortex do backpropagation? - Geoffrey Hinton**  
   - **日期**: 4月17日  
-  - [链接](./2016/2016417Can%20sensory%20cortex%20do%20backpropagation%20-%20Geoffery%20Hinton.md)
+  - **核心内容**: 分析感官皮层是否具备类似反向传播的学习机制（修正拼写 `Geoffery` 为 `Geoffrey`）。  
+  - [链接](./2016/2016417Can%20sensory%20cortex%20do%20backpropagation%20-%20Geoffrey%20Hinton.md)
+
+---
 
 ## 2018
+
+### **6月**
 - **2018/2018626 This Canadian Genius Created Modern AI**  
   - **日期**: 6月26日  
+  - **核心内容**: 回顾Hinton如何引领现代AI技术的发展。  
   - [链接](./2018/2018626This%20Canadian%20Genius%20Created%20Modern%20AI.md)
 
 ## 2019
@@ -310,12 +347,12 @@
 - **2024/20241212 Geoffrey Hinton: "AI教父在获得VinFuture奖时的讲话" **  
   - **日期**: 12月12日  
   - **核心内容**: 接受VinFuture奖时，强调AI需服务于人类福祉而非军事化。  
-  - [链接](./2024/20241212Prof.%20Geoffrey%20Hinton%20AI%20Godfather%20on%20receiving%20the%20VinFuture%20Prize(Geoffrey%20E.%20Hinton.md)
+  - [链接](./2024/20241212Prof.%20Geoffrey%20Hinton%20AI%20Godfather%20on%20receiving%20the%20VinFuture%20Prize%20(%E5%85%B3%E4%BA%8E%20Geoffrey%20E.%20Hinton).md)
 
 - **2024/20241213 Geoffrey Hinton："AI具备人类级理解的革命性证据" **  
   - **日期**: 12月13日  
   - **核心内容**: 展示AI理解复杂问题的能力，引发对“机器意识”的哲学讨论。  
-  - [链接](./2024/20241213Prof.%20Geoffrey%20Hinton%20Leaves%20the%20Audience%20Stunned%20by%20Showing%20AI%20Can%20Think%20Like%20Humans(关于%20Geoffrey%20Hinton：Geoffrey%20Hinton.md)
+  - [链接](./2024/20241212Prof.%20Geoffrey%20Hinton%20AI%20Godfather%20on%20receiving%20the%20VinFuture%20Prize%20(Geoffrey%20E.%20Hinton).md)
 
 - **2024/20241218 AI Unpacked with Nobel Laureate Geoffrey Hinton**  
   - **日期**: 12月18日  
