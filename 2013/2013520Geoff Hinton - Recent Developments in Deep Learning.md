@@ -4,7 +4,8 @@
 - **标题**: Recent Developments in Deep Learning  
 - **时间**: 2014年于MIT  
 - **主讲人**: Geoffrey Hinton (SPEAKER_07)  
-- **核心主题**: 深度学习技术的突破与未来方向，包括深度神经网络（DNN）的优化、语音/图像识别进展，以及生成模型与硬件协同设计。  
+- **核心主题**: 深度学习技术的突破与未来方向，包括深度神经网络（DNN）的优化、语音/图像识别进展，以及生成模型与硬件协同设计。
+- **视频链接**: [完整视频](https://www.youtube.com/watch?v=vShMxxqtDDs)  
 - **内容概况**:  
   本演讲系统回顾了反向传播（Backpropagation）的历史局限性（如梯度消失问题），并重点阐述了通过预训练（Pre-training）、Dropout、修正线性单元（ReLU）等技术实现深度网络训练的突破。Hinton还探讨了卷积神经网络（ConvNets）在计算机视觉中的局限性，并展望了胶囊网络（Capsule Networks）和递归神经网络（RNN）的未来潜力。
 
