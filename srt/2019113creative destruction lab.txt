@@ -1,0 +1,640 @@
+1
+00:00:00,858 --> 00:00:03,944
+Speaker SPEAKER_00: OK, I said I would talk about the nature of intelligence.
+
+2
+00:00:07,812 --> 00:00:08,955
+Speaker SPEAKER_00: And I made a slide.
+
+3
+00:00:10,439 --> 00:00:13,044
+Speaker SPEAKER_00: There's two paradigms for intelligence.
+
+4
+00:00:13,505 --> 00:00:16,992
+Speaker SPEAKER_00: There's the logic-based paradigm, where
+
+5
+00:00:17,496 --> 00:00:25,695
+Speaker SPEAKER_00: You, inside your head, you have symbolic expressions and rules of inference, and you manipulate the symbolic expressions rule using rules of inference, and you get new symbolic expressions.
+
+6
+00:00:26,236 --> 00:00:27,778
+Speaker SPEAKER_00: And that's how thinking works.
+
+7
+00:00:27,798 --> 00:00:31,347
+Speaker SPEAKER_00: And then there's the biological paradigm, where you have big patterns of neural activity.
+
+8
+00:00:35,655 --> 00:00:38,121
+Speaker SPEAKER_00: And they directly cause other big patterns of neural activity.
+
+9
+00:00:41,728 --> 00:00:45,154
+Speaker SPEAKER_00: And it's becoming obvious which one of these paradigms is correct.
+
+10
+00:00:46,195 --> 00:00:53,386
+Speaker SPEAKER_00: And someone at work for me then explained to me that, Jeff, nobody under 30 is interested in the first paradigm.
+
+11
+00:00:53,405 --> 00:00:54,487
+Speaker SPEAKER_00: So it's a waste of a talk.
+
+12
+00:00:54,508 --> 00:01:01,457
+Speaker SPEAKER_00: So I decided to have another talk.
+
+13
+00:01:01,478 --> 00:01:08,108
+Speaker SPEAKER_00: I'm going to talk about the interactions between different timescales of adaptation
+
+14
+00:01:08,459 --> 00:01:09,902
+Speaker SPEAKER_00: This happens a lot in biology.
+
+15
+00:01:10,362 --> 00:01:12,347
+Speaker SPEAKER_00: It doesn't happen that much in neural nets.
+
+16
+00:01:12,367 --> 00:01:17,078
+Speaker SPEAKER_00: So in most neural nets, we have neural activities, and we have weights.
+
+17
+00:01:17,920 --> 00:01:20,165
+Speaker SPEAKER_00: And the neural activities change quickly, and the weights change slowly.
+
+18
+00:01:20,185 --> 00:01:23,531
+Speaker SPEAKER_00: And that's pretty much it.
+
+19
+00:01:23,512 --> 00:01:40,052
+Speaker SPEAKER_00: In biology, we have adaptation in many different timescales, and I can give you a few examples of that and show you a basic principle that comes up again and again in biology, which is that adaptation in a fast timescale can make adaptation in a slow timescale work much better and much faster.
+
+20
+00:01:42,896 --> 00:01:48,823
+Speaker SPEAKER_00: So the first example I'm going to talk about is how to make evolution go much faster.
+
+21
+00:01:48,843 --> 00:01:49,704
+Speaker SPEAKER_00: The next example.
+
+22
+00:01:50,512 --> 00:01:58,284
+Speaker SPEAKER_00: The next example is how to make feedback average faster when you're reading things.
+
+23
+00:01:58,304 --> 00:02:00,766
+Speaker SPEAKER_00: And I'm going to speculate at the end.
+
+24
+00:02:04,091 --> 00:02:10,320
+Speaker SPEAKER_00: So people think that evolution's slow, which it is.
+
+25
+00:02:11,163 --> 00:02:14,948
+Speaker SPEAKER_00: And people often think it's too slow to explain why the brain evolves so rapidly.
+
+26
+00:02:15,909 --> 00:02:18,813
+Speaker SPEAKER_00: And if you just do straight evolution, I think it probably is.
+
+27
+00:02:19,586 --> 00:02:28,062
+Speaker SPEAKER_00: But what I'm showing you is how, if you have an organism that learns, its brain can evolve much faster than an organism that doesn't learn.
+
+28
+00:02:28,342 --> 00:02:37,819
+Speaker SPEAKER_00: And what I mean by evolve faster is the information about the structure of the brain can get into the DNA that specifies the development of the brain, due to learning.
+
+29
+00:02:38,401 --> 00:02:42,608
+Speaker SPEAKER_00: Now that sounds remarkable, but I'm showing you it can be done in a novel way.
+
+30
+00:02:44,596 --> 00:02:47,751
+Speaker SPEAKER_00: So I'll do that with a very simple try-it-all.
+
+31
+00:02:47,771 --> 00:02:49,419
+Speaker SPEAKER_00: Especially on an organism.
+
+32
+00:02:49,439 --> 00:02:51,770
+Speaker SPEAKER_00: And this organism contains amazing stuff.
+
+33
+00:02:52,526 --> 00:02:54,469
+Speaker SPEAKER_00: And the mating circuit has 20 switches in it.
+
+34
+00:02:55,131 --> 00:03:03,423
+Speaker SPEAKER_00: And if you set 10 of them large, if you turn on the right-hand end and turn off the other end, then it will mate very effectively, have lots of offspring.
+
+35
+00:03:04,305 --> 00:03:05,026
+Speaker SPEAKER_00: If you don't, it won't.
+
+36
+00:03:05,986 --> 00:03:09,932
+Speaker SPEAKER_00: So since you have to turn 10 on and 10 off, there's plenty to see history being made.
+
+37
+00:03:10,514 --> 00:03:15,622
+Speaker SPEAKER_00: And you might have thought that only one in a million organisms would have lots of offspring.
+
+38
+00:03:15,641 --> 00:03:19,227
+Speaker SPEAKER_00: So you might have thought you had to build at least a million organisms to evolve that.
+
+39
+00:03:19,206 --> 00:03:28,939
+Speaker SPEAKER_00: And even if you build a million organisms, you'll probably lose it again due to crossover if your organisms are made.
+
+40
+00:03:28,960 --> 00:03:33,165
+Speaker SPEAKER_00: I'm going to show you very soon how you can get the information into the DNA much faster.
+
+41
+00:03:35,008 --> 00:03:37,451
+Speaker SPEAKER_00: But the idea is we're going to have an organism that learns.
+
+42
+00:03:39,219 --> 00:03:41,905
+Speaker SPEAKER_00: So we're going to have three alleles instead of two alleles.
+
+43
+00:03:42,566 --> 00:03:43,287
+Speaker SPEAKER_00: Three to switch.
+
+44
+00:03:43,347 --> 00:03:46,532
+Speaker SPEAKER_00: We're going to have an allele that says it's on, it should be on.
+
+45
+00:03:46,954 --> 00:03:48,516
+Speaker SPEAKER_00: Another one that says it should be off.
+
+46
+00:03:49,078 --> 00:03:50,640
+Speaker SPEAKER_00: And there's going to be eight decisions.
+
+47
+00:03:51,122 --> 00:03:52,944
+Speaker SPEAKER_00: We're going to have a third one that says we need it to load.
+
+48
+00:03:54,086 --> 00:04:01,379
+Speaker SPEAKER_00: And then we're going to organize our population so about half of the alleles are on and off, and about half of them are needed to load.
+
+49
+00:04:02,693 --> 00:04:10,923
+Speaker SPEAKER_00: So now, when an organism is born, it's got a one-in-a-thousand chance of the ten hardwired decisions being correct.
+
+50
+00:04:10,943 --> 00:04:25,482
+Speaker SPEAKER_00: And for the other ones, if it runs about a thousand learning trials where it just randomly reflects them, it's not a very good learning algorithm, but look into these websites, it will eventually hit the one-in-a-thousand correct setting of the other ones if the first ones were correct, the hardwired ones were correct.
+
+51
+00:04:25,922 --> 00:04:27,925
+Speaker SPEAKER_00: And that all means it will have lots of offspring.
+
+52
+00:04:29,406 --> 00:04:34,093
+Speaker SPEAKER_00: So, one in a thousand of these organisms has high fitness, instead of one in a million.
+
+53
+00:04:36,557 --> 00:04:41,963
+Speaker SPEAKER_00: Here's a picture of what's going on as a cell tree that's 20 layers deep, if you look at these pictures in depth.
+
+54
+00:04:43,125 --> 00:04:50,274
+Speaker SPEAKER_00: And we get evolution to search the first 10 layers, and then we get learning to search the last 10 layers.
+
+55
+00:04:50,295 --> 00:04:52,076
+Speaker SPEAKER_00: In the first 10 layers, there's 1,000 of us.
+
+56
+00:04:53,017 --> 00:04:54,399
+Speaker SPEAKER_00: At the end of the first 10 layers.
+
+57
+00:04:54,420 --> 00:04:57,944
+Speaker SPEAKER_00: At the end of the last 10 layers, there's 991,000 of us.
+
+58
+00:04:58,516 --> 00:05:13,521
+Speaker SPEAKER_00: But because we've got a learning algorithm that's filling in from what was our point, we can see that making 10 decisions, where we have a 1 in 5 chance of being correct, we can see whether we made those 10 decisions right.
+
+59
+00:05:15,492 --> 00:05:17,754
+Speaker SPEAKER_00: And so this thing can evolve much faster.
+
+60
+00:05:18,516 --> 00:05:21,860
+Speaker SPEAKER_00: And what's more, when it evolves, it gets the decisions into the DNA.
+
+61
+00:05:22,160 --> 00:05:27,065
+Speaker SPEAKER_00: And with time, the related to learning ones get selected out.
+
+62
+00:05:27,346 --> 00:05:31,190
+Speaker SPEAKER_00: And eventually, almost all the decisions are hardwired.
+
+63
+00:05:31,211 --> 00:05:42,764
+Speaker SPEAKER_00: So this is something that gets hardwired decisions into the DNA much faster than you would have thought was possible, because the search is done by learning, which is a faster learning process.
+
+64
+00:05:43,403 --> 00:05:44,605
+Speaker SPEAKER_00: So this is very old work.
+
+65
+00:05:45,925 --> 00:05:51,134
+Speaker SPEAKER_00: The idea was started in Toronto in 1896 by someone called Baldwin.
+
+66
+00:05:53,797 --> 00:05:57,122
+Speaker SPEAKER_00: And we showed in 19... He didn't do any computer simulations.
+
+67
+00:05:57,783 --> 00:06:01,988
+Speaker SPEAKER_00: We showed in 1987 that this phenomenon really is a powerful phenomenon.
+
+68
+00:06:02,009 --> 00:06:10,120
+Speaker SPEAKER_00: And now I'm going to show you another example of something that's closely related.
+
+69
+00:06:11,365 --> 00:06:16,192
+Speaker SPEAKER_00: Consider the task of getting an old-fashioned robot arm to draw a blackboard with a piece of chalk.
+
+70
+00:06:17,375 --> 00:06:24,226
+Speaker SPEAKER_00: The problem is that if the robot positions the chalk just short of the blackboard, it doesn't write anything.
+
+71
+00:06:24,247 --> 00:06:27,031
+Speaker SPEAKER_00: And if it positions it just the outside of the blackboard, it breaks the chalk.
+
+72
+00:06:29,456 --> 00:06:31,218
+Speaker SPEAKER_00: What we want is a very fast-moving blackboard.
+
+73
+00:06:31,860 --> 00:06:35,567
+Speaker SPEAKER_00: So as the chalk hits the blackboard, the robot arm will stop.
+
+74
+00:06:36,644 --> 00:06:44,939
+Speaker SPEAKER_00: If you have a powerful robot arm, that's very hard to do in the immuno-neurotronal circuitry, in the neural circuitry, but it's possible.
+
+75
+00:06:44,959 --> 00:06:49,267
+Speaker SPEAKER_00: So all you need to do is use physics to give you the feedback.
+
+76
+00:06:49,288 --> 00:06:54,838
+Speaker SPEAKER_00: And the way of eating that is you have an arm, it has two opposing muscles.
+
+77
+00:06:55,375 --> 00:06:59,281
+Speaker SPEAKER_00: And by setting the stiffness of those muscles, you show an equilibrium point for the arm.
+
+78
+00:06:59,663 --> 00:07:01,706
+Speaker SPEAKER_00: For me, this one's stiff, the other goes like that.
+
+79
+00:07:01,726 --> 00:07:03,911
+Speaker SPEAKER_00: And the other one's stiff, the other goes like that.
+
+80
+00:07:03,930 --> 00:07:06,596
+Speaker SPEAKER_00: If I made them both not very stiff, the arm is nice and loose.
+
+81
+00:07:07,637 --> 00:07:15,612
+Speaker SPEAKER_00: And so what I can do is set the position, set the muscles, so the equilibrium position of the typical trunk is just the other side of the arm.
+
+82
+00:07:16,807 --> 00:07:20,232
+Speaker SPEAKER_00: And now I just let physics use that system.
+
+83
+00:07:20,252 --> 00:07:25,540
+Speaker SPEAKER_00: And as soon as the truck gets to that point, physics will provide feedback that will stop the engine.
+
+84
+00:07:28,244 --> 00:07:33,072
+Speaker SPEAKER_00: So what we're doing there is using physics to create an objective function, an energy landscape.
+
+85
+00:07:35,035 --> 00:07:39,161
+Speaker SPEAKER_00: So we're using the stiffnesses of the muscles to create an energy landscape.
+
+86
+00:07:39,341 --> 00:07:43,708
+Speaker SPEAKER_00: So biology creates the energy landscape, and then physics optimizes on that landscape.
+
+87
+00:07:46,641 --> 00:07:50,125
+Speaker SPEAKER_00: If I make the muscles stiff, I get a very sharp rattle.
+
+88
+00:07:50,185 --> 00:07:53,370
+Speaker SPEAKER_00: If I make the muscles loose, I get a very gentle rattle.
+
+89
+00:07:53,389 --> 00:07:56,312
+Speaker SPEAKER_00: And the relative stiffness of the two muscles transforms.
+
+90
+00:07:58,896 --> 00:08:12,851
+Speaker SPEAKER_00: And that's how we managed to overcome the fact that the feedback time between touching something and the brain is much too long to be able to actually do the feedback in real time, in a real-time neuron.
+
+91
+00:08:16,156 --> 00:08:36,339
+Speaker SPEAKER_00: So again, just like in the evolution and learning case, the thickness landscape becomes much broader if you use the stiffness of the muscles to set up an energy landscape and let physics do very fast optimization on that patient.
+
+92
+00:08:36,359 --> 00:08:38,822
+Speaker SPEAKER_00: So the principle here is that
+
+93
+00:08:39,089 --> 00:08:49,562
+Speaker SPEAKER_00: If you can create objective functions with a slow adaptive process, then you need a fast adaptive process to make this.
+
+94
+00:08:49,581 --> 00:08:52,806
+Speaker SPEAKER_00: There's one more example I'll give you, which is the 3L frog.
+
+95
+00:08:54,388 --> 00:09:05,923
+Speaker SPEAKER_00: If you look inside a frog with the right kind of poking instruments, then you will discover that the retina is connected to something called the optic tectum.
+
+96
+00:09:06,645 --> 00:09:09,188
+Speaker SPEAKER_00: And in the undetectable, there's strikes.
+
+97
+00:09:10,409 --> 00:09:19,178
+Speaker SPEAKER_00: So there's a whole bunch of cells that are going to the left eye and strike, and then a whole bunch of cells going to the right eye and strike, and then the left eye, and then the right eye.
+
+98
+00:09:19,198 --> 00:09:20,660
+Speaker SPEAKER_00: And that could have been hard work.
+
+99
+00:09:21,542 --> 00:09:28,208
+Speaker SPEAKER_00: You can imagine that biology evolves, and some processes evolve that result from that.
+
+100
+00:09:29,870 --> 00:09:31,491
+Speaker SPEAKER_00: But it could have been done in a more subtle way.
+
+101
+00:09:31,753 --> 00:09:35,015
+Speaker SPEAKER_00: It could have been done where what biology evolved
+
+102
+00:09:35,182 --> 00:09:45,794
+Speaker SPEAKER_00: or as an objective function, and during the developmental process, the speed back to allow the developmental process to realize that objective function.
+
+103
+00:09:45,815 --> 00:09:52,341
+Speaker SPEAKER_00: In the developmental process, you can cycle time of, like, 20 minutes, whereas the lifetime of the frog is a year or two.
+
+104
+00:09:53,182 --> 00:09:58,809
+Speaker SPEAKER_00: Maybe we should be talking about a time of a maximum, but 20 minutes is still not possible.
+
+105
+00:10:00,611 --> 00:10:08,955
+Speaker SPEAKER_00: And the objective function appears to be that nearby cells in the tectum should try and come from the same reference.
+
+106
+00:10:08,975 --> 00:10:15,432
+Speaker SPEAKER_00: But also, nearby cells in the tectum should come from the nearby places in space.
+
+107
+00:10:16,322 --> 00:10:20,567
+Speaker SPEAKER_00: And if you try an optimization into one, if you set both right, you end up with slopes.
+
+108
+00:10:21,129 --> 00:10:28,657
+Speaker SPEAKER_00: And the test for whether it's an objective function, or whether it's just a system that's hardwired to do that, is to add an extra eye to the frog.
+
+109
+00:10:29,238 --> 00:10:38,128
+Speaker SPEAKER_00: If you add a third eye to the frog, early on in its development, then it builds three slopes, and then two more slopes, left, middle, right, left, middle, right, and so on.
+
+110
+00:10:38,817 --> 00:10:43,725
+Speaker SPEAKER_00: which strongly suggests that development is organizing an objective function.
+
+111
+00:10:43,745 --> 00:10:50,979
+Speaker SPEAKER_00: It's not just a hardwired way of building the connections.
+
+112
+00:10:50,999 --> 00:11:02,479
+Speaker SPEAKER_00: So, I think what's happening is, if you look at evolution, where the gold sweep started from the simplest organisms, to begin with, it was just evolution.
+
+113
+00:11:03,673 --> 00:11:06,239
+Speaker SPEAKER_00: There was some DNA or RNA or stuff like that.
+
+114
+00:11:06,259 --> 00:11:07,682
+Speaker SPEAKER_00: It's replicating stuff.
+
+115
+00:11:08,001 --> 00:11:09,846
+Speaker SPEAKER_00: The replicators are the ones that didn't replicate.
+
+116
+00:11:09,885 --> 00:11:11,109
+Speaker SPEAKER_00: There's been the ones that did replicate.
+
+117
+00:11:11,129 --> 00:11:12,851
+Speaker SPEAKER_00: There was more of them.
+
+118
+00:11:12,871 --> 00:11:14,755
+Speaker SPEAKER_00: That's evolution.
+
+119
+00:11:14,775 --> 00:11:17,480
+Speaker SPEAKER_00: You can tell I use biology for inspiration.
+
+120
+00:11:17,500 --> 00:11:19,445
+Speaker SPEAKER_00: I'm not really a biologist.
+
+121
+00:11:21,489 --> 00:11:26,138
+Speaker SPEAKER_00: Evolution helped to be far more effective, particularly for organisms that live for a long time.
+
+122
+00:11:27,096 --> 00:11:29,438
+Speaker SPEAKER_00: when there is a separate developmental stage.
+
+123
+00:11:30,240 --> 00:11:34,303
+Speaker SPEAKER_00: So you don't try and get evolution to produce the final organism.
+
+124
+00:11:34,323 --> 00:11:35,666
+Speaker SPEAKER_00: It's a part of the final organism.
+
+125
+00:11:36,046 --> 00:11:41,431
+Speaker SPEAKER_00: You have a developmental stage for evolution to tell you what goes on in the developmental stage.
+
+126
+00:11:41,451 --> 00:11:45,615
+Speaker SPEAKER_00: And the developmental stage then optimizes things.
+
+127
+00:11:45,634 --> 00:11:47,756
+Speaker SPEAKER_00: So if you look at your body, your two thumbs are the same.
+
+128
+00:11:49,139 --> 00:11:53,322
+Speaker SPEAKER_00: That's because during development, the same things happened, right?
+
+129
+00:11:54,788 --> 00:12:08,043
+Speaker SPEAKER_00: And if you are very arrogant, and grow up with very short fingers, let's say, like a certain person, then both thumbs would be forbidden, right?
+
+130
+00:12:08,062 --> 00:12:09,364
+Speaker SPEAKER_00: Yeah.
+
+131
+00:12:09,384 --> 00:12:14,028
+Speaker SPEAKER_00: And then learning is an extra stage of learning.
+
+132
+00:12:14,048 --> 00:12:19,075
+Speaker SPEAKER_00: So the more advanced you get, the more learning you do, the less hardwired you are.
+
+133
+00:12:19,982 --> 00:12:21,904
+Speaker SPEAKER_00: And learning has a very fast cycle time.
+
+134
+00:12:21,924 --> 00:12:22,966
+Speaker SPEAKER_00: Learning has a cycle time.
+
+135
+00:12:23,186 --> 00:12:24,667
+Speaker SPEAKER_00: A learning trial takes a few seconds.
+
+136
+00:12:26,068 --> 00:12:39,500
+Speaker SPEAKER_00: So what we see in biology is, at least for our thought organisms, a very slow adaptive process, which is survival of the fittest, where it takes a lifetime to get feedback about whether that was good or bad.
+
+137
+00:12:40,581 --> 00:12:44,504
+Speaker SPEAKER_00: And then a faster process, which is development, with a time cycle of around 20 minutes.
+
+138
+00:12:45,125 --> 00:12:49,769
+Speaker SPEAKER_00: And then a much faster process, which is learning, with a time cycle of around a few seconds.
+
+139
+00:12:50,965 --> 00:12:57,937
+Speaker SPEAKER_00: And between them, this process allows you to build a sophisticated organism much faster.
+
+140
+00:12:57,956 --> 00:12:59,701
+Speaker SPEAKER_00: And what's more, you're going to get backing up.
+
+141
+00:13:00,381 --> 00:13:08,495
+Speaker SPEAKER_00: So that just as with evolution, we were able to back up like this load into the DNA.
+
+142
+00:13:09,577 --> 00:13:11,741
+Speaker SPEAKER_00: I suspect that every time you have
+
+143
+00:13:12,750 --> 00:13:15,275
+Speaker SPEAKER_00: slow adaptive processes and fast adaptive processes.
+
+144
+00:13:15,296 --> 00:13:22,852
+Speaker SPEAKER_00: So you can get information backed up into slow adaptive processes, where the search is done by the fast adaptive processes.
+
+145
+00:13:22,893 --> 00:13:22,972
+Speaker SPEAKER_00: OK.
+
+146
+00:13:22,993 --> 00:13:25,357
+Speaker SPEAKER_00: So I think we're going to come to a new stage.
+
+147
+00:13:25,378 --> 00:13:29,826
+Speaker SPEAKER_00: I think evolution has finally added a fourth stage.
+
+148
+00:13:29,847 --> 00:13:30,649
+Speaker SPEAKER_00: And that's a big deal.
+
+149
+00:13:30,668 --> 00:13:33,375
+Speaker SPEAKER_00: And if you're in your three stages, then your fourth one's a big deal.
+
+150
+00:13:35,296 --> 00:13:43,432
+Speaker SPEAKER_00: And the fourth stage, I think, is that you can have very fast computer optimization, so that a learning tribe
+
+151
+00:13:43,700 --> 00:13:51,750
+Speaker SPEAKER_00: Rather than having to figure out exactly what to do, a learning trial can say, well, what about this objective function?
+
+152
+00:13:51,770 --> 00:13:53,333
+Speaker SPEAKER_00: So imagine someone designing a car.
+
+153
+00:13:54,115 --> 00:13:56,538
+Speaker SPEAKER_00: In the old days, they had to sort of design everything.
+
+154
+00:13:56,557 --> 00:14:06,331
+Speaker SPEAKER_00: But nowadays, someone designing a car could say, well, what if I change the relative importance of being fast and being cheap and being comfortable in this way?
+
+155
+00:14:06,351 --> 00:14:07,594
+Speaker SPEAKER_00: What kind of car do I get there?
+
+156
+00:14:08,315 --> 00:14:13,302
+Speaker SPEAKER_00: And you can imagine a computer telling you, like two seconds later, what kind of a car you get there.
+
+157
+00:14:14,345 --> 00:14:18,448
+Speaker SPEAKER_00: That would make it much, much faster to do these things.
+
+158
+00:14:18,469 --> 00:14:25,517
+Speaker SPEAKER_00: So the point of this talk, to summarize, is that learning or adaptation goes on many timescales.
+
+159
+00:14:26,337 --> 00:14:35,386
+Speaker SPEAKER_00: And rather than just thinking about adaptation on one timescale, which is what we've done with neural networks so far, we should be thinking about systems that are learned on many timescales.
+
+160
+00:14:36,708 --> 00:14:42,495
+Speaker SPEAKER_00: And it's a big advantage to slower timescale adaptations, to have adaptations going on faster.
+

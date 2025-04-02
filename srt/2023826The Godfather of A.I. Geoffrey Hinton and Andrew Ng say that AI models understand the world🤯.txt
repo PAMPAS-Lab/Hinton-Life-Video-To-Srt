@@ -1,0 +1,208 @@
+1
+00:00:00,031 --> 00:00:03,278
+Speaker SPEAKER_00: Okay, so we decided to kind of summarize what we've been talking about.
+
+2
+00:00:04,801 --> 00:00:06,905
+Speaker SPEAKER_00: And there's two main points that came up.
+
+3
+00:00:09,430 --> 00:00:18,850
+Speaker SPEAKER_00: One is that we need the AI researchers to reach a consensus.
+
+4
+00:00:19,420 --> 00:00:32,304
+Speaker SPEAKER_00: in much the same way as climate scientists have reached a consensus on climate change, because politicians and other decision makers are going to be looking for technical opinions from the AI researchers.
+
+5
+00:00:32,884 --> 00:00:41,682
+Speaker SPEAKER_00: And if the AI researchers have all sorts of different opinions, then they're going to be able to pick and choose whatever suits them.
+
+6
+00:00:42,909 --> 00:00:49,060
+Speaker SPEAKER_00: There's currently a big diversity of opinions, and to a certain extent, there's war in camps.
+
+7
+00:00:49,981 --> 00:01:10,031
+Speaker SPEAKER_00: And it'd be great if we could get over that phase and get to something where people agree roughly on what the main threats are from AI, or at least agree on some of the main threats, and also agree on how urgent and how dangerous they are.
+
+8
+00:01:12,373 --> 00:01:14,237
+Speaker SPEAKER_01: So that's one issue.
+
+9
+00:01:14,980 --> 00:01:16,903
+Speaker SPEAKER_01: Just to jump in, I fully agree.
+
+10
+00:01:17,484 --> 00:01:23,638
+Speaker SPEAKER_01: I've never seen the AI community become fragmented the way it feels like it's trending right now.
+
+11
+00:01:23,677 --> 00:01:32,576
+Speaker SPEAKER_01: Many countries, including the United States, have been quite polarized with different camps shouting at each other rather than having a conversation.
+
+12
+00:01:32,557 --> 00:01:38,444
+Speaker SPEAKER_01: I don't think the AI community is that bad, but it's a little very worrying signs of it turning that direction.
+
+13
+00:01:38,504 --> 00:01:55,745
+Speaker SPEAKER_01: And if we can collectively figure out the science and our best assessments of the risks, from catastrophic all the way to something as bad as extinction, to have a shared view, have the conversations, get us all there, we can then guide, help policymakers much better.
+
+14
+00:01:55,906 --> 00:01:56,126
+Speaker SPEAKER_00: Right.
+
+15
+00:01:57,128 --> 00:02:00,572
+Speaker SPEAKER_00: So that would be one thing for the researchers to aim for.
+
+16
+00:02:00,552 --> 00:02:19,623
+Speaker SPEAKER_00: And then a second point is that I think it's fairly urgent for the researchers to come to a consensus about whether these big chatbots like GPT-4 or BARD actually understand what they are saying.
+
+17
+00:02:21,088 --> 00:02:25,355
+Speaker SPEAKER_00: There's clearly some people believe they do, and some people believe they're just stochastic parrots.
+
+18
+00:02:26,557 --> 00:02:35,551
+Speaker SPEAKER_00: And so long as we have those differences, we're not going to be able to come to a consensus about dangers.
+
+19
+00:02:35,572 --> 00:02:45,527
+Speaker SPEAKER_00: And so I think it's sort of urgent for the research community to address this issue of whether they understand or not.
+
+20
+00:02:46,408 --> 00:02:48,953
+Speaker SPEAKER_00: And I think both of us believe they do understand.
+
+21
+00:02:49,050 --> 00:02:52,820
+Speaker SPEAKER_00: But people we respect a lot, like Jan, think they don't really understand.
+
+22
+00:02:52,860 --> 00:02:58,156
+Speaker SPEAKER_00: And it's crucial to resolve this issue.
+
+23
+00:02:58,256 --> 00:03:03,550
+Speaker SPEAKER_00: And we may not be able to come to a consensus about other issues until we've resolved that issue.
+
+24
+00:03:04,862 --> 00:03:12,735
+Speaker SPEAKER_01: One of the challenges of the term understanding is not show us the test for whether a system understands.
+
+25
+00:03:13,235 --> 00:03:24,271
+Speaker SPEAKER_01: And I think that my view is that I believe the large language models and other large AI models are building a world model.
+
+26
+00:03:24,252 --> 00:03:26,795
+Speaker SPEAKER_01: or building something that looks a lot like a world model.
+
+27
+00:03:26,876 --> 00:03:34,068
+Speaker SPEAKER_01: So my gut is that I do believe, to the extent it's building a world model, is conveying learning some understanding of the world.
+
+28
+00:03:35,210 --> 00:03:37,173
+Speaker SPEAKER_01: But that's just my current view.
+
+29
+00:03:37,574 --> 00:03:47,289
+Speaker SPEAKER_01: And I think this is, as you say, Jeff, one of the topics that if the research community discusses and debates more and has a shared understanding of,
+
+30
+00:03:47,741 --> 00:03:59,939
+Speaker SPEAKER_01: I think this would be one of the questions that if we have alignment on this, it will probably cause us to reason in a more consistent way and maybe get a better alignment as a community about the AI risk as well.
+
+31
+00:04:00,600 --> 00:04:01,241
+Speaker SPEAKER_00: Right.
+
+32
+00:04:01,262 --> 00:04:06,889
+Speaker SPEAKER_00: And one aspect of this is the idea it's just statistics.
+
+33
+00:04:06,909 --> 00:04:09,854
+Speaker SPEAKER_00: And we all agree that in some sense it has to be just statistics.
+
+34
+00:04:10,314 --> 00:04:14,661
+Speaker SPEAKER_00: All these things have is the statistics of their input.
+
+35
+00:04:15,247 --> 00:04:23,319
+Speaker SPEAKER_00: Many people who think it's just statistics are thinking in terms of things like trigram models or counting co-occurrence frequencies of words.
+
+36
+00:04:24,360 --> 00:04:25,903
+Speaker SPEAKER_00: And it's not just that.
+
+37
+00:04:26,122 --> 00:04:37,959
+Speaker SPEAKER_00: We believe that this process of creating features of embeddings and then interactions between features is actually understanding.
+
+38
+00:04:39,822 --> 00:04:40,463
+Speaker SPEAKER_00: Once you've
+
+39
+00:04:41,944 --> 00:05:04,569
+Speaker SPEAKER_00: Once you've taken the raw data of symbol strings, and you can now predict the next symbol, not by things like trigrams, but by huge numbers of features interacting in very complicated ways to predict the features of the next word, and from that, make a prediction about the probability of the next words.
+
+40
+00:05:04,589 --> 00:05:07,033
+Speaker SPEAKER_00: The point is, that is understanding.
+
+41
+00:05:07,173 --> 00:05:08,795
+Speaker SPEAKER_00: At least I believe that is understanding.
+
+42
+00:05:08,814 --> 00:05:11,057
+Speaker SPEAKER_00: I believe that's what our brains are doing, too.
+
+43
+00:05:11,627 --> 00:05:23,257
+Speaker SPEAKER_00: But that's an issue to be discussed by the research community and it would be great if we could convince people that they're not just stochastic parrots.
+
+44
+00:05:24,199 --> 00:05:40,892
+Speaker SPEAKER_01: And I think that there are likely a set of questions of which whether AI systems really understands the world that is leading different people to then quite reasonably come to different conclusions about the types and nature of AI catastrophic or even extinction risks.
+
+45
+00:05:40,913 --> 00:05:41,954
+Speaker SPEAKER_01: And I think
+
+46
+00:05:42,526 --> 00:05:46,891
+Speaker SPEAKER_01: coming to a better understanding of whether AI understands will be one of the things.
+
+47
+00:05:47,473 --> 00:05:55,362
+Speaker SPEAKER_01: Probably some other questions as well that are worth laying out that will cause us all to maybe come to more similar conclusions as a community.
+
+48
+00:05:56,244 --> 00:05:57,204
+Speaker SPEAKER_01: Yes, that would be good.
+
+49
+00:05:58,447 --> 00:06:01,190
+Speaker SPEAKER_00: Okay, thanks for the conversation.
+
+50
+00:06:01,350 --> 00:06:06,997
+Speaker SPEAKER_01: Yeah, I look forward to continuing the conversation, us as well as hopefully with everyone.
+
+51
+00:06:07,017 --> 00:06:07,478
+Speaker SPEAKER_01: Thanks, Geoff.
+
+52
+00:06:07,718 --> 00:06:09,141
+Speaker SPEAKER_00: Okay, bye for now.
+

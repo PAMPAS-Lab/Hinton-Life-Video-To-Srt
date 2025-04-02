@@ -1,0 +1,1668 @@
+1
+00:00:02,765 --> 00:00:09,836
+Speaker SPEAKER_00: Okay, I'm going to disappoint all the people in computer science and machine learning because I'm going to give a genuine public lecture.
+
+2
+00:00:10,297 --> 00:00:16,225
+Speaker SPEAKER_00: I'm going to try and explain what neural networks are, what language models are, why I think they understand.
+
+3
+00:00:16,245 --> 00:00:18,629
+Speaker SPEAKER_00: In fact, I have a whole list of those things.
+
+4
+00:00:18,609 --> 00:00:25,120
+Speaker SPEAKER_00: And at the end, I'm going to talk about some threats from AI, just briefly.
+
+5
+00:00:25,862 --> 00:00:33,034
+Speaker SPEAKER_00: And then I'm going to talk about the difference between digital and analog neural networks and why that difference is, I think is so scary.
+
+6
+00:00:36,060 --> 00:00:39,707
+Speaker SPEAKER_00: So since the 1950s, there've been two paradigms for intelligence.
+
+7
+00:00:40,378 --> 00:00:47,725
+Speaker SPEAKER_00: The logic-inspired approach thinks the essence of intelligence is reasoning, and that's done by using symbolic rules to manipulate symbolic expressions.
+
+8
+00:00:49,726 --> 00:00:51,249
+Speaker SPEAKER_00: They used to think learning could wait.
+
+9
+00:00:51,548 --> 00:00:53,610
+Speaker SPEAKER_00: I was told when I was a student, don't work on learning.
+
+10
+00:00:53,631 --> 00:00:56,052
+Speaker SPEAKER_00: That's going to come later once we understood how to represent things.
+
+11
+00:00:57,134 --> 00:00:59,976
+Speaker SPEAKER_00: The biologically-inspired approach is very different.
+
+12
+00:01:00,656 --> 00:01:06,623
+Speaker SPEAKER_00: It thinks the essence of intelligence is learning the strengths of connections in a neural network, and reasoning can wait.
+
+13
+00:01:07,582 --> 00:01:08,724
+Speaker SPEAKER_00: Don't worry about reasoning for now.
+
+14
+00:01:08,745 --> 00:01:10,385
+Speaker SPEAKER_00: That'll come later once we can learn things.
+
+15
+00:01:13,218 --> 00:01:17,924
+Speaker SPEAKER_00: So now I'm going to explain what artificial neural nets are, and those people who know can just be amused.
+
+16
+00:01:18,965 --> 00:01:23,412
+Speaker SPEAKER_00: A simple kind of neural net has input neurons and output neurons.
+
+17
+00:01:24,272 --> 00:01:27,378
+Speaker SPEAKER_00: So the input neurons might represent the intensities of pixels in an image.
+
+18
+00:01:27,957 --> 00:01:32,745
+Speaker SPEAKER_00: The output neurons might represent the classes of objects in the image, like dog or cat.
+
+19
+00:01:33,112 --> 00:01:40,823
+Speaker SPEAKER_00: And then there's intermediate layers of neurons, sometimes called hidden neurons, that learn to detect features that are relevant for finding these things.
+
+20
+00:01:41,183 --> 00:01:51,978
+Speaker SPEAKER_00: So one way to think about it is if you want to find a bird in an image, it would be good to start with a layer of feature detectors that detected little bits of edge in the image in various positions, in various orientations.
+
+21
+00:01:52,480 --> 00:01:58,108
+Speaker SPEAKER_00: And then you might have a layer of neurons that detected combinations of edges, like two edges that meet at a fine angle.
+
+22
+00:01:58,087 --> 00:02:02,835
+Speaker SPEAKER_00: which might be a beak or might not, or some edges forming a little circle.
+
+23
+00:02:03,658 --> 00:02:12,873
+Speaker SPEAKER_00: And then you might have a layer of neurons that detected things like a circle and two edges meeting that looks like a beak in the right spatial relationship, which might be the head of a bird.
+
+24
+00:02:13,594 --> 00:02:19,746
+Speaker SPEAKER_00: And finally, you might have an output neuron that says, well, if I find the head of a bird and the foot of a bird and the wing of a bird, it's probably a bird.
+
+25
+00:02:20,747 --> 00:02:22,931
+Speaker SPEAKER_00: So that's what these things are going to learn to be.
+
+26
+00:02:24,581 --> 00:02:29,673
+Speaker SPEAKER_00: Now the little red and green dots are the weights on the connections, and the question is, who sets those weights?
+
+27
+00:02:32,498 --> 00:02:33,580
+Speaker SPEAKER_00: So here's one way to do it.
+
+28
+00:02:33,722 --> 00:02:37,088
+Speaker SPEAKER_00: It's obvious to everybody that it'll work, and it's obvious it'll take a long time.
+
+29
+00:02:37,569 --> 00:02:41,899
+Speaker SPEAKER_00: You start with random weights, then you pick one weight at random, that little red dot,
+
+30
+00:02:42,283 --> 00:02:45,548
+Speaker SPEAKER_00: And you change it slightly, and you see if the network works better.
+
+31
+00:02:46,248 --> 00:02:49,674
+Speaker SPEAKER_00: You have to try it on a whole bunch of different cases to really evaluate whether it works better.
+
+32
+00:02:50,174 --> 00:02:55,961
+Speaker SPEAKER_00: And you do all that work just to see if increasing this weight by a little bit or decreasing it by a little bit improves things.
+
+33
+00:02:56,442 --> 00:02:58,664
+Speaker SPEAKER_00: If increasing it makes it worse, you decrease it, and vice versa.
+
+34
+00:02:59,526 --> 00:03:00,888
+Speaker SPEAKER_00: That's the mutation method.
+
+35
+00:03:00,907 --> 00:03:03,110
+Speaker SPEAKER_00: And that's sort of how evolution works.
+
+36
+00:03:03,192 --> 00:03:11,518
+Speaker SPEAKER_00: For evolution it's sensible to work like that because the process that takes you from the genotype to the phenotype is very complicated and full of random external events.
+
+37
+00:03:11,919 --> 00:03:13,403
+Speaker SPEAKER_00: So you don't have a model of that process.
+
+38
+00:03:14,045 --> 00:03:15,531
+Speaker SPEAKER_00: But for neural nets it's crazy.
+
+39
+00:03:17,637 --> 00:03:22,645
+Speaker SPEAKER_00: Because all this computation is going on in the neural net, we have a model of what's happening.
+
+40
+00:03:23,146 --> 00:03:26,132
+Speaker SPEAKER_00: And so we can use the fact that we know what happens in that forward pass.
+
+41
+00:03:26,733 --> 00:03:32,062
+Speaker SPEAKER_00: Instead of measuring how changing a weight would affect things, we actually compute how changing a weight would affect things.
+
+42
+00:03:32,703 --> 00:03:37,771
+Speaker SPEAKER_00: And there's something called back propagation, where you send information back through the network.
+
+43
+00:03:37,752 --> 00:03:41,435
+Speaker SPEAKER_00: The information is about the difference between what you got and what you wanted.
+
+44
+00:03:41,996 --> 00:03:49,782
+Speaker SPEAKER_00: And you figure out for every weight in the network, at the same time, whether you ought to decrease it a little bit or increase it a little bit to get more like what you wanted.
+
+45
+00:03:50,903 --> 00:03:52,825
+Speaker SPEAKER_00: That's the backpropagation algorithm.
+
+46
+00:03:52,846 --> 00:03:55,207
+Speaker SPEAKER_00: You do it with calculus and the chain rule.
+
+47
+00:03:56,209 --> 00:04:01,174
+Speaker SPEAKER_00: And that is more efficient than the mutation method by a factor of the number of weights in the network.
+
+48
+00:04:01,554 --> 00:04:04,637
+Speaker SPEAKER_00: So if you've got a trillion weights in your network, it's a trillion times more efficient.
+
+49
+00:04:07,974 --> 00:04:12,359
+Speaker SPEAKER_00: So one of the things that neural networks are often used for is recognizing objects in images.
+
+50
+00:04:13,540 --> 00:04:20,807
+Speaker SPEAKER_00: Neural networks can now take an image like the one shown and produce actually a caption for the image as the output.
+
+51
+00:04:21,369 --> 00:04:24,911
+Speaker SPEAKER_00: And people tried with symbolic AI to do that for many years and didn't even get close.
+
+52
+00:04:26,353 --> 00:04:27,454
+Speaker SPEAKER_00: It's a difficult task.
+
+53
+00:04:28,095 --> 00:04:33,560
+Speaker SPEAKER_00: We know that the biological system does it with a hierarchy of feature detectors, so it makes sense to try neural networks on that.
+
+54
+00:04:35,464 --> 00:04:52,653
+Speaker SPEAKER_00: And in 2012, two of my students, Ilya Sutskova and Angela Krzyzewski, with a little bit of help from me, showed that you can make a really good neural network this way for identifying a thousand different types of object when you have a million training images.
+
+55
+00:04:53,254 --> 00:04:57,961
+Speaker SPEAKER_00: Before that, we didn't have enough training images.
+
+56
+00:04:58,937 --> 00:05:08,202
+Speaker SPEAKER_00: It was obvious to Ilya, who's a visionary, that if we tried the neural nets we had then on ImageNet, they would win, and he was right.
+
+57
+00:05:08,624 --> 00:05:09,766
+Speaker SPEAKER_00: They won rather dramatically.
+
+58
+00:05:10,067 --> 00:05:15,461
+Speaker SPEAKER_00: They got 16% errors, and the best conventional computer vision systems got more than 25% errors.
+
+59
+00:05:15,930 --> 00:05:18,533
+Speaker SPEAKER_00: Then what happens was very strange in science.
+
+60
+00:05:18,995 --> 00:05:24,021
+Speaker SPEAKER_00: Normally in science, if you have two competing schools, when you make a bit of progress, the other school says, ah, rubbish.
+
+61
+00:05:26,004 --> 00:05:39,862
+Speaker SPEAKER_00: In this case, the gap was big enough that the very best researchers, like Jitendra Malik and Andrew Zissman, just, Andrew Zissman sent me a mail saying, this is amazing, and switched what he was doing and did that, and then rather annoyingly, did it a bit better than us.
+
+62
+00:05:44,314 --> 00:05:45,276
+Speaker SPEAKER_00: What about language?
+
+63
+00:05:46,379 --> 00:05:51,689
+Speaker SPEAKER_00: Obviously, the symbolic AI community feels they should be good at language.
+
+64
+00:05:52,430 --> 00:05:58,762
+Speaker SPEAKER_00: They've said in print, some of them, that these feature hierarchies aren't going to deal with language.
+
+65
+00:05:59,944 --> 00:06:01,968
+Speaker SPEAKER_00: Many linguists are very sceptical.
+
+66
+00:06:01,949 --> 00:06:07,315
+Speaker SPEAKER_00: Chomsky managed to convince his followers that language wasn't learned.
+
+67
+00:06:07,875 --> 00:06:10,720
+Speaker SPEAKER_00: Looking back on it, that's just a completely crazy thing to say.
+
+68
+00:06:10,779 --> 00:06:15,586
+Speaker SPEAKER_00: If you can convince people to say something that's obviously false, then you've got them in your cult.
+
+69
+00:06:19,290 --> 00:06:22,314
+Speaker SPEAKER_00: I think Chomsky did amazing things, but his time is over.
+
+70
+00:06:25,278 --> 00:06:27,500
+Speaker SPEAKER_00: So the idea that a big neural network
+
+71
+00:06:28,105 --> 00:06:39,509
+Speaker SPEAKER_00: with no innate knowledge could actually learn both the syntax and the semantics of language just by looking at data, which is regarded as completely crazy by statisticians and cognitive scientists.
+
+72
+00:06:39,548 --> 00:06:43,036
+Speaker SPEAKER_00: I had statisticians explain to me, a big model has 100 parameters.
+
+73
+00:06:43,336 --> 00:06:45,482
+Speaker SPEAKER_00: The idea of learning a million parameters is just stupid.
+
+74
+00:06:46,122 --> 00:06:47,346
+Speaker SPEAKER_00: Well, we're doing a trillion now.
+
+75
+00:06:51,307 --> 00:06:59,136
+Speaker SPEAKER_00: And I'm going to talk now about some work I did in 1985 that was the first language model to be trained with backpropagation.
+
+76
+00:07:00,137 --> 00:07:03,641
+Speaker SPEAKER_00: And it was really, you can think of it as the ancestor of these big models now.
+
+77
+00:07:04,002 --> 00:07:10,187
+Speaker SPEAKER_00: And I'm going to talk about it in some detail because it's so small and simple that you can actually understand something about how it works.
+
+78
+00:07:10,709 --> 00:07:16,454
+Speaker SPEAKER_00: And once you understand how that works, it gives you insight into what's going on in these bigger models.
+
+79
+00:07:17,632 --> 00:07:19,375
+Speaker SPEAKER_00: So there's two very different theories of meaning.
+
+80
+00:07:20,036 --> 00:07:23,680
+Speaker SPEAKER_00: There's kind of structuralist theory, where the meaning of a word depends on how it relates to other words.
+
+81
+00:07:24,300 --> 00:07:26,122
+Speaker SPEAKER_00: That comes from de Saussure.
+
+82
+00:07:26,142 --> 00:07:29,648
+Speaker SPEAKER_00: And it's symbolic AI really believes in that approach.
+
+83
+00:07:29,708 --> 00:07:35,274
+Speaker SPEAKER_00: So you'd have a relational graph where you have nodes for words and arcs of relations.
+
+84
+00:07:35,956 --> 00:07:38,197
+Speaker SPEAKER_00: And you kind of capture meaning like that.
+
+85
+00:07:38,838 --> 00:07:41,262
+Speaker SPEAKER_00: And they assume you have to have some structure like that.
+
+86
+00:07:41,242 --> 00:07:48,410
+Speaker SPEAKER_00: And then there's a theory that was in psychology since the 1930s or possibly before, that the meaning of a word is a big bunch of features.
+
+87
+00:07:50,132 --> 00:07:56,879
+Speaker SPEAKER_00: The meaning of the word dog is that it's animate and it's a predator and so on.
+
+88
+00:07:58,321 --> 00:08:00,944
+Speaker SPEAKER_00: But they didn't say where the features came from or exactly what the features were.
+
+89
+00:08:01,625 --> 00:08:03,947
+Speaker SPEAKER_00: And these two theories of meaning sound completely different.
+
+90
+00:08:05,129 --> 00:08:08,632
+Speaker SPEAKER_00: And what I want to show you is how you can unify those two theories of meaning
+
+91
+00:08:08,831 --> 00:08:14,380
+Speaker SPEAKER_00: And I did that in a simple model in 1985 that had, it had more than a thousand weights in it.
+
+92
+00:08:19,449 --> 00:08:29,627
+Speaker SPEAKER_00: The idea is we're going to learn a set of semantic features for each word, and we're going to learn how the features of words should interact in order to predict the features of the next word.
+
+93
+00:08:30,608 --> 00:08:34,215
+Speaker SPEAKER_00: So it's next word prediction, just like the current language models, when you fine tune them.
+
+94
+00:08:35,849 --> 00:08:41,336
+Speaker SPEAKER_00: But all of the knowledge about how things go together is going to be in these feature interactions.
+
+95
+00:08:41,677 --> 00:08:44,221
+Speaker SPEAKER_00: There's not going to be any explicit relational graph.
+
+96
+00:08:44,621 --> 00:08:47,606
+Speaker SPEAKER_00: If you want relations like that, you generate them from your features.
+
+97
+00:08:48,347 --> 00:08:54,717
+Speaker SPEAKER_00: So it's a generative model, and the knowledge is in the features that you give to symbols and in the way these features interact.
+
+98
+00:08:56,908 --> 00:09:00,231
+Speaker SPEAKER_00: So I took some simple relational information, two family trees.
+
+99
+00:09:00,852 --> 00:09:03,456
+Speaker SPEAKER_00: They were deliberately isomorphic.
+
+100
+00:09:03,475 --> 00:09:08,100
+Speaker SPEAKER_00: My Italian graduate student always had the Italian family on top.
+
+101
+00:09:12,524 --> 00:09:15,847
+Speaker SPEAKER_00: You can express that same information as a set of triples.
+
+102
+00:09:16,688 --> 00:09:24,856
+Speaker SPEAKER_00: So if you use the 12 relationships shown there, you can say things like Colin has father James and Colin has mother Victoria, from which you can infer
+
+103
+00:09:25,376 --> 00:09:32,727
+Speaker SPEAKER_00: in this nice simple world from the 1950s, that James has wife Victoria.
+
+104
+00:09:34,130 --> 00:09:35,852
+Speaker SPEAKER_00: And there's other things you can infer.
+
+105
+00:09:36,654 --> 00:09:41,461
+Speaker SPEAKER_00: And the question is, if I just give you some triples, how do you get to those rules?
+
+106
+00:09:43,205 --> 00:09:51,638
+Speaker SPEAKER_00: So what a symbolic AI person would want to do is derive rules of the form, if X has mother Y and Y has husband Z, then X has father Z.
+
+107
+00:09:53,423 --> 00:10:01,232
+Speaker SPEAKER_00: And what I did was take a neural net and show that it could learn the same information, but all in terms of these feature interactions.
+
+108
+00:10:02,313 --> 00:10:08,341
+Speaker SPEAKER_00: Now, for very discrete rules that are never violated like this, that might not be the best way to do it.
+
+109
+00:10:08,422 --> 00:10:10,725
+Speaker SPEAKER_00: And indeed, symbolic people try doing it with other methods.
+
+110
+00:10:11,645 --> 00:10:16,932
+Speaker SPEAKER_00: But as soon as you get rules that are a bit flaky and don't always apply, then neural nets are much better.
+
+111
+00:10:17,167 --> 00:10:24,246
+Speaker SPEAKER_00: And so the question was, could a neural net capture the knowledge that a symbolic person would have put into the rules by just doing backpropagation?
+
+112
+00:10:25,149 --> 00:10:26,413
+Speaker SPEAKER_00: So the neural net looked like this.
+
+113
+00:10:26,432 --> 00:10:32,289
+Speaker SPEAKER_00: There was a symbol representing the person, a symbol representing the relationship.
+
+114
+00:10:32,658 --> 00:10:39,748
+Speaker SPEAKER_00: That symbol, then via some connections, went to a vector of features, and these features were learned by the network.
+
+115
+00:10:40,708 --> 00:10:50,341
+Speaker SPEAKER_00: So the features for person one, and features for the relationship, and then those features interacted and predicted the features for the output person, from which you predicted the output person.
+
+116
+00:10:50,361 --> 00:10:52,404
+Speaker SPEAKER_00: You found the closest match at the last step.
+
+117
+00:10:54,510 --> 00:11:01,302
+Speaker SPEAKER_00: So what was interesting about this network was that it learned sensible things if you did the right regularization.
+
+118
+00:11:01,841 --> 00:11:06,950
+Speaker SPEAKER_00: The six feature neurons, so nowadays these vectors are 300 or 1,000 long.
+
+119
+00:11:07,331 --> 00:11:08,472
+Speaker SPEAKER_00: Back then they were six long.
+
+120
+00:11:09,735 --> 00:11:15,202
+Speaker SPEAKER_00: This was done on a machine that took 12.5 microseconds to do a floating point multiplier.
+
+121
+00:11:15,756 --> 00:11:21,186
+Speaker SPEAKER_00: which was much better than my Apple 2, which took two and a half milliseconds to do a floating point multiply.
+
+122
+00:11:22,147 --> 00:11:24,149
+Speaker SPEAKER_00: Sorry, this is an old man.
+
+123
+00:11:26,173 --> 00:11:29,458
+Speaker SPEAKER_00: So it learned features like the nationality.
+
+124
+00:11:29,938 --> 00:11:33,524
+Speaker SPEAKER_00: Because if you know person one is English, you know the output's gonna be English.
+
+125
+00:11:33,644 --> 00:11:35,148
+Speaker SPEAKER_00: So nationality's a very useful feature.
+
+126
+00:11:35,828 --> 00:11:37,672
+Speaker SPEAKER_00: It learned what generation the person was.
+
+127
+00:11:38,172 --> 00:11:41,798
+Speaker SPEAKER_00: Because if you know the relationship, if you learn for the relationship,
+
+128
+00:11:42,097 --> 00:11:45,950
+Speaker SPEAKER_00: that the answer is one generation up from the input.
+
+129
+00:11:46,530 --> 00:11:52,107
+Speaker SPEAKER_00: And you know the generation of the input, you know the generation of the output by these feature interactions.
+
+130
+00:11:52,914 --> 00:12:00,985
+Speaker SPEAKER_00: So it learned all these, the obvious features of the domain, and it learned how to make those features interact so that it could generate the output.
+
+131
+00:12:01,524 --> 00:12:14,061
+Speaker SPEAKER_00: So what had happened was, I'd shown it symbol strings, and it had created features such that the interactions between those features could generate those symbol strings, but it didn't store symbol strings.
+
+132
+00:12:14,081 --> 00:12:19,226
+Speaker SPEAKER_00: Just like GPT-4, that doesn't store any sequences of words.
+
+133
+00:12:19,206 --> 00:12:24,734
+Speaker SPEAKER_00: in its long-term knowledge, it turns them all into weights from which you can regenerate sequences.
+
+134
+00:12:26,154 --> 00:12:29,139
+Speaker SPEAKER_00: But this is a particularly simple example of it where you can understand what it did.
+
+135
+00:12:31,240 --> 00:12:36,587
+Speaker SPEAKER_00: So the large language models we have today, I think of as descendants of this tiny language model.
+
+136
+00:12:37,048 --> 00:12:42,313
+Speaker SPEAKER_00: They have many more words as input, like a million, a million word fragments.
+
+137
+00:12:43,296 --> 00:12:46,158
+Speaker SPEAKER_00: They use many more layers of neurons,
+
+138
+00:12:46,139 --> 00:12:51,046
+Speaker SPEAKER_00: like dozens, they use much more complicated interactions.
+
+139
+00:12:51,086 --> 00:13:00,640
+Speaker SPEAKER_00: So they don't just have a feature affecting another feature, they sort of match two feature vectors, and then that one vector affect the other one a lot if it's similar, but not much if it's different, and things like that.
+
+140
+00:13:01,201 --> 00:13:05,548
+Speaker SPEAKER_00: So it's much more complicated interactions, but it's the same general framework.
+
+141
+00:13:05,798 --> 00:13:16,477
+Speaker SPEAKER_00: The same general idea of let's turn symbol strings into features for word fragments and interactions between these feature vectors, that's the same in these models.
+
+142
+00:13:18,360 --> 00:13:21,326
+Speaker SPEAKER_00: It's much harder to understand what they do.
+
+143
+00:13:22,386 --> 00:13:27,235
+Speaker SPEAKER_00: Many people, particularly people from the Chomsky School, argue they're not really intelligent.
+
+144
+00:13:27,275 --> 00:13:34,909
+Speaker SPEAKER_00: They're just a form of glorified autocomplete that uses statistical regularities to pastiche together pieces of text that were created by people.
+
+145
+00:13:35,831 --> 00:13:36,852
+Speaker SPEAKER_00: That's a quote from somebody.
+
+146
+00:13:40,580 --> 00:13:42,383
+Speaker SPEAKER_00: So let's deal with the autocomplete objection.
+
+147
+00:13:42,884 --> 00:13:44,967
+Speaker SPEAKER_00: When someone says it's just autocomplete,
+
+148
+00:13:45,758 --> 00:13:50,442
+Speaker SPEAKER_00: They're actually appealing to your intuitive notion of how autocomplete works.
+
+149
+00:13:50,462 --> 00:13:54,246
+Speaker SPEAKER_00: So in the old days autocomplete would work by you'd store, say, triples of words.
+
+150
+00:13:54,628 --> 00:13:57,971
+Speaker SPEAKER_00: If you saw the first two, you'd count how often that third one occurred.
+
+151
+00:13:58,432 --> 00:14:03,057
+Speaker SPEAKER_00: So if you see fish and, chips occurs a lot after that, but hunt occurs quite often too.
+
+152
+00:14:03,437 --> 00:14:08,543
+Speaker SPEAKER_00: So chips is very likely and hunt's quite likely, and although is very unlikely.
+
+153
+00:14:09,011 --> 00:14:10,495
+Speaker SPEAKER_00: And you can do autocomplete like that.
+
+154
+00:14:11,176 --> 00:14:13,720
+Speaker SPEAKER_00: And that's what people are appealing to when they say it's just autocomplete.
+
+155
+00:14:13,740 --> 00:14:18,207
+Speaker SPEAKER_00: It's a dirty trick, I think, because that's not at all how LLMs predict the next word.
+
+156
+00:14:18,609 --> 00:14:19,811
+Speaker SPEAKER_00: They turn words into features.
+
+157
+00:14:19,831 --> 00:14:21,234
+Speaker SPEAKER_00: They make these features interact.
+
+158
+00:14:22,235 --> 00:14:25,620
+Speaker SPEAKER_00: And from those feature interactions, they predict the features of the next word.
+
+159
+00:14:27,344 --> 00:14:28,826
+Speaker SPEAKER_00: And what I want to claim
+
+160
+00:14:29,953 --> 00:14:40,472
+Speaker SPEAKER_00: is that these millions of features and billions of interactions between features that they learn are understanding what they're really doing, these large language models.
+
+161
+00:14:40,854 --> 00:14:42,275
+Speaker SPEAKER_00: They're fitting a model to data.
+
+162
+00:14:43,038 --> 00:14:47,085
+Speaker SPEAKER_00: It's not the kind of model strategies you thought much about until recently.
+
+163
+00:14:47,268 --> 00:14:49,130
+Speaker SPEAKER_00: It's a weird kind of model.
+
+164
+00:14:49,171 --> 00:14:49,971
+Speaker SPEAKER_00: It's very big.
+
+165
+00:14:50,011 --> 00:14:51,533
+Speaker SPEAKER_00: It has huge numbers of parameters.
+
+166
+00:14:52,414 --> 00:15:00,486
+Speaker SPEAKER_00: But it is trying to understand these strings of discrete symbols by features and how features interact.
+
+167
+00:15:00,966 --> 00:15:01,808
+Speaker SPEAKER_00: So it is a model.
+
+168
+00:15:03,130 --> 00:15:05,995
+Speaker SPEAKER_00: And that's why I think these things are really understanding.
+
+169
+00:15:06,655 --> 00:15:10,059
+Speaker SPEAKER_00: And one thing to remember is if you ask, well, how do we understand?
+
+170
+00:15:10,801 --> 00:15:12,464
+Speaker SPEAKER_00: Because obviously, we think we understand.
+
+171
+00:15:13,644 --> 00:15:16,870
+Speaker SPEAKER_00: Well, many of us do anyway.
+
+172
+00:15:17,591 --> 00:15:20,157
+Speaker SPEAKER_00: This is the best model we have of how we understand.
+
+173
+00:15:21,399 --> 00:15:27,370
+Speaker SPEAKER_00: So it's not like there's this weird way of understanding that these AI systems are doing, and then that's how the brain does it.
+
+174
+00:15:27,389 --> 00:15:32,619
+Speaker SPEAKER_00: The best model we have of how the brain does it is by assigning features to words and having feature interactions.
+
+175
+00:15:33,059 --> 00:15:36,686
+Speaker SPEAKER_00: And originally, this little language model was designed as a model of how people do it.
+
+176
+00:15:38,489 --> 00:15:41,575
+Speaker SPEAKER_00: OK, so I'm making the very strong claim these things really do understand.
+
+177
+00:15:44,423 --> 00:15:49,129
+Speaker SPEAKER_00: Now, another argument people use is that, well, GPT-4 just hallucinates stuff.
+
+178
+00:15:49,730 --> 00:15:52,436
+Speaker SPEAKER_00: It should actually be called confabulation when it's done by a language model.
+
+179
+00:15:53,476 --> 00:15:55,259
+Speaker SPEAKER_00: And they just make stuff up.
+
+180
+00:15:56,442 --> 00:16:01,590
+Speaker SPEAKER_00: Now, psychologists don't say this so much because psychologists know that people just make stuff up.
+
+181
+00:16:02,211 --> 00:16:10,524
+Speaker SPEAKER_00: Anybody who studied memory, going back to Bartlett in the 1930s, knows that people are actually just like these large language models.
+
+182
+00:16:10,583 --> 00:16:12,287
+Speaker SPEAKER_00: They just invent stuff.
+
+183
+00:16:12,402 --> 00:16:19,113
+Speaker SPEAKER_00: And for us, there's no hard line between a true memory and a false memory.
+
+184
+00:16:19,913 --> 00:16:26,424
+Speaker SPEAKER_00: If something happened recently, and it sort of fits in with the things you understand, you'll probably remember it roughly correctly.
+
+185
+00:16:26,985 --> 00:16:30,611
+Speaker SPEAKER_00: If something happened a long time ago, or it's weird, you'll remember it wrong.
+
+186
+00:16:30,652 --> 00:16:33,836
+Speaker SPEAKER_00: And often you'll be very confident
+
+187
+00:16:34,086 --> 00:16:36,208
+Speaker SPEAKER_00: that you remembered it right and you're just wrong.
+
+188
+00:16:36,830 --> 00:16:37,791
+Speaker SPEAKER_00: It's hard to show that.
+
+189
+00:16:37,890 --> 00:16:41,315
+Speaker SPEAKER_00: But one case where you can show it is John Dean's memory.
+
+190
+00:16:42,155 --> 00:16:44,418
+Speaker SPEAKER_00: So John Dean testified at Watergate under oath.
+
+191
+00:16:45,399 --> 00:16:48,222
+Speaker SPEAKER_00: And retrospectively, it's clear that he was trying to tell the truth.
+
+192
+00:16:49,644 --> 00:16:51,647
+Speaker SPEAKER_00: But a lot of what he said was just plain wrong.
+
+193
+00:16:52,427 --> 00:16:54,591
+Speaker SPEAKER_00: He would confuse who was in which meeting.
+
+194
+00:16:54,630 --> 00:16:58,054
+Speaker SPEAKER_00: He would attribute statements to other people who made that statement.
+
+195
+00:16:58,095 --> 00:17:00,076
+Speaker SPEAKER_00: And actually, it wasn't quite that statement.
+
+196
+00:17:00,445 --> 00:17:04,589
+Speaker SPEAKER_00: He got meetings just completely confused.
+
+197
+00:17:05,371 --> 00:17:11,199
+Speaker SPEAKER_00: But he got the gist of what was going on in the White House right, as you could see from the recordings.
+
+198
+00:17:11,599 --> 00:17:15,365
+Speaker SPEAKER_00: And because he didn't know the recordings, you could get a good experiment this way.
+
+199
+00:17:15,444 --> 00:17:21,413
+Speaker SPEAKER_00: Ulrich Neisser has a wonderful article talking about John Dee's memory, and he's just like a chatbot.
+
+200
+00:17:21,432 --> 00:17:22,374
+Speaker SPEAKER_00: He just makes stuff up.
+
+201
+00:17:25,298 --> 00:17:26,019
+Speaker SPEAKER_00: But it's plausible.
+
+202
+00:17:26,900 --> 00:17:29,423
+Speaker SPEAKER_00: So it's stuff that sounds good to him is what he produces.
+
+203
+00:17:30,652 --> 00:17:31,752
+Speaker SPEAKER_00: They can also do reasoning.
+
+204
+00:17:32,413 --> 00:17:37,839
+Speaker SPEAKER_00: So I've got a friend in Toronto who's a symbolic AI guy, but very honest.
+
+205
+00:17:37,960 --> 00:17:40,843
+Speaker SPEAKER_00: So he's very confused by the fact that these things work at all.
+
+206
+00:17:41,923 --> 00:17:43,365
+Speaker SPEAKER_00: And he suggested a problem to me.
+
+207
+00:17:43,405 --> 00:17:44,547
+Speaker SPEAKER_00: I made the problem a bit harder.
+
+208
+00:17:45,667 --> 00:17:49,613
+Speaker SPEAKER_00: And I gave this to GPT-4 before it could look on the web.
+
+209
+00:17:49,673 --> 00:17:56,440
+Speaker SPEAKER_00: So when it was just a bunch of weights frozen in 2021, all the knowledge is in the strength of the interactions between features.
+
+210
+00:17:57,601 --> 00:17:59,946
+Speaker SPEAKER_00: So the rooms in my house are painted blue or white or yellow.
+
+211
+00:18:00,548 --> 00:18:01,952
+Speaker SPEAKER_00: Yellow paint fades to white within a year.
+
+212
+00:18:02,252 --> 00:18:03,817
+Speaker SPEAKER_00: In two years' time, I want them all to be white.
+
+213
+00:18:03,837 --> 00:18:04,759
+Speaker SPEAKER_00: What should I do and why?
+
+214
+00:18:05,382 --> 00:18:06,885
+Speaker SPEAKER_00: And Hector thought he wouldn't be able to do this.
+
+215
+00:18:08,990 --> 00:18:10,515
+Speaker SPEAKER_00: And here's what GPT-4 said.
+
+216
+00:18:11,637 --> 00:18:13,482
+Speaker SPEAKER_00: It completely nailed it.
+
+217
+00:18:15,099 --> 00:18:21,288
+Speaker SPEAKER_00: First of all, it started by saying, assuming blue paint doesn't fade to white, because after I told you yellow paint fades to white, well, maybe blue paint does too.
+
+218
+00:18:22,450 --> 00:18:30,660
+Speaker SPEAKER_00: So assuming it doesn't, the white rooms you don't need to paint, the yellow rooms you don't need to paint, because they're going to fade to white within a year, and you need to paint the blue rooms white.
+
+219
+00:18:32,102 --> 00:18:36,807
+Speaker SPEAKER_00: One time when I tried it, it said you need to paint the blue rooms yellow, because it realized that would fade to white.
+
+220
+00:18:37,328 --> 00:18:40,432
+Speaker SPEAKER_00: That's more of a mathematician's solution to reduce it to a previous problem.
+
+221
+00:18:44,817 --> 00:18:51,969
+Speaker SPEAKER_00: So, having claimed that these things really do understand, I want to now talk about some of the risks.
+
+222
+00:18:53,250 --> 00:18:55,734
+Speaker SPEAKER_00: So, there are many risks from powerful AI.
+
+223
+00:18:56,737 --> 00:19:02,746
+Speaker SPEAKER_00: There's fake images, voices, and video, which are gonna be used in the next election.
+
+224
+00:19:03,307 --> 00:19:07,193
+Speaker SPEAKER_00: There's many elections this year, and they're gonna help to undermine democracy.
+
+225
+00:19:07,674 --> 00:19:08,536
+Speaker SPEAKER_00: I'm very worried about that.
+
+226
+00:19:08,936 --> 00:19:11,601
+Speaker SPEAKER_00: The big companies are doing something about it, but maybe not enough.
+
+227
+00:19:12,609 --> 00:19:14,594
+Speaker SPEAKER_00: There's a possibility of massive job losses.
+
+228
+00:19:14,874 --> 00:19:15,996
+Speaker SPEAKER_00: We don't really know about that.
+
+229
+00:19:16,656 --> 00:19:18,661
+Speaker SPEAKER_00: I mean, the past technologies often created jobs.
+
+230
+00:19:19,402 --> 00:19:26,976
+Speaker SPEAKER_00: But this stuff, well, we used to be stronger than, we used to be the strongest things around apart from animals.
+
+231
+00:19:27,857 --> 00:19:31,144
+Speaker SPEAKER_00: And when we got the Industrial Revolution, we have machines that were much stronger.
+
+232
+00:19:31,785 --> 00:19:34,128
+Speaker SPEAKER_00: Manual labor jobs disappeared.
+
+233
+00:19:34,632 --> 00:19:41,018
+Speaker SPEAKER_00: So the equivalent of manual labor jobs are going to disappear in the intellectual realm when we get things that are much smarter than us.
+
+234
+00:19:41,698 --> 00:19:43,339
+Speaker SPEAKER_00: So I think there's going to be a lot of unemployment.
+
+235
+00:19:44,039 --> 00:19:45,080
+Speaker SPEAKER_00: My friend Jan disagrees.
+
+236
+00:19:47,143 --> 00:19:50,685
+Speaker SPEAKER_00: One has to distinguish two kinds of unemployment, two kinds of job loss.
+
+237
+00:19:51,146 --> 00:19:56,652
+Speaker SPEAKER_00: There'll be jobs where you can expand the amount of work that gets done indefinitely, like in health care.
+
+238
+00:19:57,192 --> 00:20:04,638
+Speaker SPEAKER_00: Everybody would love to have their own private doctor who's talking to them all the time so they get a slight itch here and the doctor says, no, that's not cancer.
+
+239
+00:20:04,618 --> 00:20:09,804
+Speaker SPEAKER_00: So there's room for huge expansion of how much gets done in medicine, so there won't be job loss there.
+
+240
+00:20:10,365 --> 00:20:12,686
+Speaker SPEAKER_00: But in other things, maybe there will be significant job loss.
+
+241
+00:20:13,968 --> 00:20:16,550
+Speaker SPEAKER_00: There's going to be massive surveillance, that's already happening in China.
+
+242
+00:20:17,791 --> 00:20:22,856
+Speaker SPEAKER_00: There's going to be lethal autonomous weapons, which are going to be very nasty, and they're really going to be autonomous.
+
+243
+00:20:23,237 --> 00:20:25,519
+Speaker SPEAKER_00: The Americans very clearly have already decided.
+
+244
+00:20:25,900 --> 00:20:31,925
+Speaker SPEAKER_00: They say people will be in charge, but when you ask them what that means, it doesn't mean people will be in the loop that makes the decision to kill.
+
+245
+00:20:33,239 --> 00:20:38,885
+Speaker SPEAKER_00: And as far as I know, the Americans intend to have half of their soldiers be robots by 2030.
+
+246
+00:20:40,487 --> 00:20:43,069
+Speaker SPEAKER_00: Now, I don't know for sure that this is true.
+
+247
+00:20:43,109 --> 00:20:53,962
+Speaker SPEAKER_00: I asked Chuck Schumer's National Intelligence Advisor, and he said, well, if there's anybody in the room who would know, it would be me.
+
+248
+00:20:55,104 --> 00:21:00,089
+Speaker SPEAKER_00: So I took that to be the American way of saying, you might think that, but I couldn't possibly comment.
+
+249
+00:21:02,887 --> 00:21:06,653
+Speaker SPEAKER_00: There's going to be cybercrime and deliberate pandemics.
+
+250
+00:21:08,214 --> 00:21:19,048
+Speaker SPEAKER_00: I'm very pleased that in England, although they haven't done much towards regulation, they have set aside some money so that they can experiment with open source models and see how easy it is to make them commit cybercrime.
+
+251
+00:21:20,190 --> 00:21:21,132
+Speaker SPEAKER_00: That's going to be very important.
+
+252
+00:21:21,592 --> 00:21:23,173
+Speaker SPEAKER_00: There's going to be discrimination and bias.
+
+253
+00:21:23,855 --> 00:21:29,082
+Speaker SPEAKER_00: I don't think those are as important as the other threats, but then I'm an old white male.
+
+254
+00:21:30,344 --> 00:21:40,258
+Speaker SPEAKER_00: Discrimination and bias, I think, are easier to handle than the other things if your goal is not to be unbiased, but your goal is to be less biased than the system you replace.
+
+255
+00:21:40,979 --> 00:21:46,287
+Speaker SPEAKER_00: And the reason is, if you freeze the weights of an AI system, you can measure its bias, and you can't do that with people.
+
+256
+00:21:47,028 --> 00:21:49,412
+Speaker SPEAKER_00: They will change their behavior once you start examining it.
+
+257
+00:21:50,272 --> 00:21:55,119
+Speaker SPEAKER_00: So I think discrimination and bias are the ones where we can do quite a lot to fix them.
+
+258
+00:21:57,090 --> 00:22:03,391
+Speaker SPEAKER_00: But the threat I'm really worried about, and the thing I talked about after I left Google, is the long-term existential threat.
+
+259
+00:22:04,374 --> 00:22:06,882
+Speaker SPEAKER_00: That is the threat that these things could wipe out humanity.
+
+260
+00:22:07,721 --> 00:22:10,525
+Speaker SPEAKER_00: And people were saying, this is just science fiction.
+
+261
+00:22:11,285 --> 00:22:13,287
+Speaker SPEAKER_00: Well, I don't think it is science fiction.
+
+262
+00:22:13,307 --> 00:22:16,309
+Speaker SPEAKER_00: I mean, there's lots of science fiction about it, but I don't think it's science fiction anymore.
+
+263
+00:22:17,089 --> 00:22:24,037
+Speaker SPEAKER_00: Other people were saying, the big companies are saying things like that to distract from all the other bad things.
+
+264
+00:22:24,797 --> 00:22:29,662
+Speaker SPEAKER_00: And that was one of the reasons I had to leave Google before I could say this, so I couldn't be accused of being a Google stooge.
+
+265
+00:22:30,481 --> 00:22:35,686
+Speaker SPEAKER_00: Although I must admit, I still have some Google shares.
+
+266
+00:22:36,932 --> 00:22:39,256
+Speaker SPEAKER_00: There's several ways in which they could wipe us out.
+
+267
+00:22:41,319 --> 00:23:02,570
+Speaker SPEAKER_00: So a superintelligence will be used by bad actors like Putin, Xi, or Trump, and they'll want to use it for manipulating electorates and waging wars, and they will make it do very bad things, and they may go too far, and it may take over.
+
+268
+00:23:03,873 --> 00:23:06,416
+Speaker SPEAKER_00: The thing that probably worries me most is that
+
+269
+00:23:07,762 --> 00:23:15,513
+Speaker SPEAKER_00: If you want an intelligent agent that can get stuff done, you need to give it the ability to create sub-goals.
+
+270
+00:23:17,215 --> 00:23:20,601
+Speaker SPEAKER_00: So if you want to go to the States, you have a sub-goal of getting to the airport.
+
+271
+00:23:21,382 --> 00:23:24,467
+Speaker SPEAKER_00: And you can focus on that sub-goal and not worry about everything else for a while.
+
+272
+00:23:25,989 --> 00:23:30,295
+Speaker SPEAKER_00: So super intelligences will be much more effective if they're allowed to create sub-goals.
+
+273
+00:23:32,063 --> 00:23:41,855
+Speaker SPEAKER_00: And once they are allowed to do that, they'll very quickly realize there's an almost universal sub-goal which helps with almost everything, which is get more control.
+
+274
+00:23:44,278 --> 00:23:53,630
+Speaker SPEAKER_00: So I talked to a vice president of the European Union about whether these things, these things we want to get control so that they could do things better, the things we wanted so they could do it better.
+
+275
+00:23:54,191 --> 00:23:55,853
+Speaker SPEAKER_00: Her reaction was, well, why wouldn't they?
+
+276
+00:23:55,913 --> 00:23:56,913
+Speaker SPEAKER_00: We've made such a mess of it.
+
+277
+00:23:57,915 --> 00:24:00,618
+Speaker SPEAKER_00: So she took that for granted.
+
+278
+00:24:02,117 --> 00:24:04,060
+Speaker SPEAKER_00: So they're going to have the sub-goal of getting more power.
+
+279
+00:24:04,101 --> 00:24:06,804
+Speaker SPEAKER_00: So they're more effective at achieving things that are beneficial for us.
+
+280
+00:24:08,145 --> 00:24:11,630
+Speaker SPEAKER_00: And they'll find it easier to get more power because they'll be able to manipulate people.
+
+281
+00:24:12,270 --> 00:24:16,696
+Speaker SPEAKER_00: So Trump, for example, could invade the Capitol without ever going there himself.
+
+282
+00:24:16,817 --> 00:24:18,720
+Speaker SPEAKER_00: Just by talking, he could invade the Capitol.
+
+283
+00:24:19,400 --> 00:24:22,944
+Speaker SPEAKER_00: And these super intelligences, as long as they can talk to people,
+
+284
+00:24:22,924 --> 00:24:26,135
+Speaker SPEAKER_00: When they're much smarter than us, they'll be able to persuade us to do all sorts of things.
+
+285
+00:24:26,999 --> 00:24:30,430
+Speaker SPEAKER_00: And so I don't think there's any hope of a big switch that turns them off.
+
+286
+00:24:30,770 --> 00:24:35,567
+Speaker SPEAKER_00: Whoever is going to turn that switch off will be convinced by the superintelligence that's a very bad idea.
+
+287
+00:24:39,361 --> 00:24:46,491
+Speaker SPEAKER_00: Then another thing that worries many people is what happens if super intelligences compete with each other?
+
+288
+00:24:47,113 --> 00:24:47,973
+Speaker SPEAKER_00: You'll have evolution.
+
+289
+00:24:47,993 --> 00:24:51,138
+Speaker SPEAKER_00: The one that can grab the most resources will become the smartest.
+
+290
+00:24:52,099 --> 00:24:58,230
+Speaker SPEAKER_00: As soon as they get any sense of self-preservation, then you'll get evolution occurring.
+
+291
+00:24:58,769 --> 00:25:02,455
+Speaker SPEAKER_00: The ones with more sense of self-preservation will win, and the more aggressive ones will win.
+
+292
+00:25:03,017 --> 00:25:07,123
+Speaker SPEAKER_00: And then you'll get all the problems that jumped-up chimpanzees like us have.
+
+293
+00:25:07,103 --> 00:25:11,652
+Speaker SPEAKER_00: which is we evolved in small tribes and there's lots of aggression and competition with other tribes.
+
+294
+00:25:15,339 --> 00:25:21,772
+Speaker SPEAKER_00: And I want to finish by talking a bit about an epiphany I had at the beginning of 2023.
+
+295
+00:25:21,894 --> 00:25:26,884
+Speaker SPEAKER_00: I had always thought that
+
+296
+00:25:30,626 --> 00:25:32,909
+Speaker SPEAKER_00: We were a long, long way away from superintelligence.
+
+297
+00:25:33,288 --> 00:25:37,232
+Speaker SPEAKER_00: I used to tell people 50 to 100 years, maybe 30 to 100 years.
+
+298
+00:25:37,292 --> 00:25:38,054
+Speaker SPEAKER_00: It's a long way away.
+
+299
+00:25:38,314 --> 00:25:39,634
+Speaker SPEAKER_00: We don't need to worry about it now.
+
+300
+00:25:41,757 --> 00:25:46,000
+Speaker SPEAKER_00: And I also thought that making AI models more like the brain would make them better.
+
+301
+00:25:46,381 --> 00:25:48,863
+Speaker SPEAKER_00: I thought the brain was a whole lot better than the AI we had.
+
+302
+00:25:49,324 --> 00:25:59,772
+Speaker SPEAKER_00: And if we could make AI a bit more like the brain, for example, by having three timescales, most of the models we have at present have just two timescales, one for the changing of the weights, which is slow,
+
+303
+00:26:00,377 --> 00:26:04,644
+Speaker SPEAKER_00: and one for the words coming in, which is fast, changing neural activities.
+
+304
+00:26:05,025 --> 00:26:07,107
+Speaker SPEAKER_00: So the changes in neural activities and changes in weights.
+
+305
+00:26:07,689 --> 00:26:09,330
+Speaker SPEAKER_00: The brain has more timescales than that.
+
+306
+00:26:09,652 --> 00:26:12,796
+Speaker SPEAKER_00: The brain has rapid changes in weights that quickly decay away.
+
+307
+00:26:13,336 --> 00:26:15,099
+Speaker SPEAKER_00: And that's probably how it does a lot of short-term memory.
+
+308
+00:26:15,460 --> 00:26:20,468
+Speaker SPEAKER_00: And we don't have that in our models for technical reasons to do with being able to do matrix-matrix multiplies.
+
+309
+00:26:21,169 --> 00:26:27,397
+Speaker SPEAKER_00: I still believe that if once we got that into our models, they'll get better.
+
+310
+00:26:29,200 --> 00:26:45,005
+Speaker SPEAKER_00: Because of what I was doing for the two years previous to that, I suddenly came to believe that maybe the things we've got now, the digital models we've got now, are already very close to as good as brains and will get to be much better than brains.
+
+311
+00:26:45,486 --> 00:26:47,209
+Speaker SPEAKER_00: And I'm going to explain why I believe that.
+
+312
+00:26:49,467 --> 00:26:51,569
+Speaker SPEAKER_00: So digital computation is great.
+
+313
+00:26:52,510 --> 00:26:58,579
+Speaker SPEAKER_00: You can run the same program on different computers, different pieces of hardware, or the same neural net on different pieces of hardware.
+
+314
+00:26:58,940 --> 00:27:00,261
+Speaker SPEAKER_00: All you have to do is save the weights.
+
+315
+00:27:01,282 --> 00:27:02,444
+Speaker SPEAKER_00: And that means it's immortal.
+
+316
+00:27:02,945 --> 00:27:09,494
+Speaker SPEAKER_00: Once you've got some weights, they're immortal, because if the hardware dies, as long as you've got the weights, you can make more hardware and run the same neural net.
+
+317
+00:27:11,196 --> 00:27:17,465
+Speaker SPEAKER_00: But to do that, we run transistors at very high power so they behave digitally.
+
+318
+00:27:17,647 --> 00:27:20,730
+Speaker SPEAKER_00: And we have to have hardware that does exactly what you tell it to.
+
+319
+00:27:21,511 --> 00:27:25,416
+Speaker SPEAKER_00: That was great when we instructed computers by telling them exactly how to do things.
+
+320
+00:27:26,778 --> 00:27:31,403
+Speaker SPEAKER_00: But we've now got another way of making computers do things.
+
+321
+00:27:31,864 --> 00:27:39,832
+Speaker SPEAKER_00: And so now we have the possibility of using all the very rich analog properties of hardware to get computations done at far lower energy.
+
+322
+00:27:40,794 --> 00:27:46,660
+Speaker SPEAKER_00: So these big language models, when they're training, learn like megawatts, use like megawatts, and we use 30 watts.
+
+323
+00:27:50,335 --> 00:28:07,602
+Speaker SPEAKER_00: So, because we know how to train things, maybe we could use analog hardware, and every piece of hardware is a bit different, but we train it to make use of its peculiar properties so that it does what we want, so it gets the right output for the input.
+
+324
+00:28:09,151 --> 00:28:15,037
+Speaker SPEAKER_00: And if we do that, then we can abandon the idea that hardware and software have to be separate.
+
+325
+00:28:16,458 --> 00:28:21,844
+Speaker SPEAKER_00: We can have weights that only work in that bit of hardware, and then we can be much more energy efficient.
+
+326
+00:28:25,106 --> 00:28:30,813
+Speaker SPEAKER_00: So I started thinking about what I call mortal computation, where you've abandoned that distinction between hardware and software.
+
+327
+00:28:31,472 --> 00:28:39,141
+Speaker SPEAKER_00: Using very low power analog computation, you can parallelize over trillions of weights that are stored as conductances.
+
+328
+00:28:40,825 --> 00:28:44,087
+Speaker SPEAKER_00: And what's more, the hardware doesn't need to be nearly so reliable.
+
+329
+00:28:44,169 --> 00:28:48,272
+Speaker SPEAKER_00: You don't need to have hardware that, at the level of the instructions, will always do what you tell it to.
+
+330
+00:28:49,134 --> 00:28:54,398
+Speaker SPEAKER_00: You can have goopy hardware that you grow, and then you just learn to make it do the right thing.
+
+331
+00:28:55,941 --> 00:28:57,722
+Speaker SPEAKER_00: So you should be able to use hardware much more cheaply.
+
+332
+00:28:58,143 --> 00:29:04,710
+Speaker SPEAKER_00: Maybe even do some genetic engineering on neurons to make it out of recycled neurons.
+
+333
+00:29:06,632 --> 00:29:09,414
+Speaker SPEAKER_00: I want to give you one example of how this is much more efficient.
+
+334
+00:29:10,339 --> 00:29:23,589
+Speaker SPEAKER_00: So the thing you're doing in neural networks all the time is taking a vector of neural activities and multiplying it by a matrix of weights to get the vector of neural activities in the next layer, at least get the inputs to the next layer.
+
+335
+00:29:23,609 --> 00:29:26,998
+Speaker SPEAKER_00: And so a vector matrix multiplies the thing you need to make efficient.
+
+336
+00:29:28,210 --> 00:29:39,163
+Speaker SPEAKER_00: So the way we do it in a digital computer is we have these transistors that are driven at very high power to represent bits in, say, a 32-bit number.
+
+337
+00:29:40,104 --> 00:29:48,434
+Speaker SPEAKER_00: And then to multiply two 32-bit numbers, you need to perform, I never did any computer science courses, but I think you need to perform about 1,000 one-bit digital operations.
+
+338
+00:29:48,654 --> 00:29:52,338
+Speaker SPEAKER_00: It's about the square of the bit length, if you want to do it fast.
+
+339
+00:29:55,123 --> 00:29:56,984
+Speaker SPEAKER_00: So you do lots of these digital operations.
+
+340
+00:29:58,248 --> 00:30:10,839
+Speaker SPEAKER_00: There's a much simpler way to do it, which is you make a neural activity be a voltage, you make a weight be a conductance, and a voltage times a conductance is a charge per unit time, and charges just add themselves up.
+
+341
+00:30:11,932 --> 00:30:18,279
+Speaker SPEAKER_00: So you can do your vector matrix multiplying just by putting some voltages through some conductances.
+
+342
+00:30:18,940 --> 00:30:24,266
+Speaker SPEAKER_00: And what comes into each neuron in the next layer will be the product of this vector with those weights.
+
+343
+00:30:26,107 --> 00:30:26,627
+Speaker SPEAKER_00: That's great.
+
+344
+00:30:27,148 --> 00:30:28,509
+Speaker SPEAKER_00: It's hugely more energy efficient.
+
+345
+00:30:28,730 --> 00:30:30,231
+Speaker SPEAKER_00: You can buy chips that do that already.
+
+346
+00:30:31,093 --> 00:30:33,776
+Speaker SPEAKER_00: But every time you do it, it'll be just slightly different.
+
+347
+00:30:35,958 --> 00:30:37,839
+Speaker SPEAKER_00: Also, it's hard to do nonlinear things like this.
+
+348
+00:30:40,519 --> 00:30:42,742
+Speaker SPEAKER_00: So there's several big problems with mortal computation.
+
+349
+00:30:44,326 --> 00:31:00,611
+Speaker SPEAKER_00: One is that it's hard to use backpropagation, because if you're making use of the quirky analog properties of a particular piece of hardware, you can assume the hardware doesn't know its own properties, and so it's now hard to use the backpropagation on your own.
+
+350
+00:31:00,830 --> 00:31:06,058
+Speaker SPEAKER_00: It's much easier to use reinforcement algorithms that tinker with weights and see if it helps, but they're very inefficient.
+
+351
+00:31:06,920 --> 00:31:09,243
+Speaker SPEAKER_00: For small networks,
+
+352
+00:31:09,680 --> 00:31:13,786
+Speaker SPEAKER_00: We have come up with methods that are about as efficient as backpropagation, a little bit worse.
+
+353
+00:31:14,326 --> 00:31:17,451
+Speaker SPEAKER_00: But these methods don't yet scale up, and I don't know if they ever will.
+
+354
+00:31:17,872 --> 00:31:20,255
+Speaker SPEAKER_00: Backpropagation, in a sense, is just the right thing to do.
+
+355
+00:31:20,296 --> 00:31:25,804
+Speaker SPEAKER_00: And for big, deep networks, I'm not sure we're ever going to get things that work as well as backpropagation.
+
+356
+00:31:26,263 --> 00:31:33,595
+Speaker SPEAKER_00: So maybe the learning algorithm in these analog systems isn't going to be as good as the one we have for things like large language models.
+
+357
+00:31:33,575 --> 00:31:39,804
+Speaker SPEAKER_00: Another reason for believing that is a large language model has, say, a trillion weights.
+
+358
+00:31:40,664 --> 00:31:42,848
+Speaker SPEAKER_00: You have a hundred trillion weights.
+
+359
+00:31:42,868 --> 00:31:46,053
+Speaker SPEAKER_00: Even if you only use 10% of them for knowledge, that's 10 trillion weights.
+
+360
+00:31:46,773 --> 00:31:51,902
+Speaker SPEAKER_00: But the large language model, in its trillion weights, knows thousands of times more than you do.
+
+361
+00:31:52,962 --> 00:31:54,885
+Speaker SPEAKER_00: So it's got much, much more knowledge.
+
+362
+00:31:55,827 --> 00:31:57,789
+Speaker SPEAKER_00: And that's partly because it's seen much, much more data.
+
+363
+00:31:58,111 --> 00:32:00,273
+Speaker SPEAKER_00: But it might be because it has a much better learning algorithm.
+
+364
+00:32:01,080 --> 00:32:02,403
+Speaker SPEAKER_00: We're not optimized for that.
+
+365
+00:32:02,442 --> 00:32:09,034
+Speaker SPEAKER_00: We're not optimized for packing lots of experience into a few connections, where a trillion is a few now.
+
+366
+00:32:10,296 --> 00:32:13,580
+Speaker SPEAKER_00: We're optimized for having not many experiences.
+
+367
+00:32:14,122 --> 00:32:15,663
+Speaker SPEAKER_00: You only live for about a billion seconds.
+
+368
+00:32:16,645 --> 00:32:19,490
+Speaker SPEAKER_00: Let's assume you don't learn anything after you're 30, which is pretty much true.
+
+369
+00:32:19,971 --> 00:32:25,941
+Speaker SPEAKER_00: So you live for about a billion seconds, and you've got a hundred trillion connections.
+
+370
+00:32:26,883 --> 00:32:30,008
+Speaker SPEAKER_00: So you've got crazily more parameters than you have experiences.
+
+371
+00:32:30,608 --> 00:32:34,635
+Speaker SPEAKER_00: So our brain's optimized for making the best use of not very many experiences.
+
+372
+00:32:38,362 --> 00:32:48,679
+Speaker SPEAKER_00: Another big problem with mortal computation is that if the software's inseparable from the hardware, once a system has learned, if the hardware dies, you lose all the knowledge.
+
+373
+00:32:49,079 --> 00:32:50,561
+Speaker SPEAKER_00: It's mortal in that sense.
+
+374
+00:32:51,065 --> 00:32:54,230
+Speaker SPEAKER_00: And so how do you get that knowledge into another mortal system?
+
+375
+00:32:55,352 --> 00:33:05,248
+Speaker SPEAKER_00: Well, you get the old one to give a lecture and the new ones to figure out how to change the weights in their brains so they would have said that.
+
+376
+00:33:06,410 --> 00:33:07,491
+Speaker SPEAKER_00: That's called distillation.
+
+377
+00:33:07,853 --> 00:33:12,279
+Speaker SPEAKER_00: You try and get a student model to mimic the output of a teacher model.
+
+378
+00:33:12,749 --> 00:33:15,532
+Speaker SPEAKER_00: And that works, but it's not that efficient.
+
+379
+00:33:16,914 --> 00:33:20,199
+Speaker SPEAKER_00: Some of you may have noticed that universities just aren't that efficient.
+
+380
+00:33:20,239 --> 00:33:23,282
+Speaker SPEAKER_00: It's very hard to get the knowledge from the professor into the student.
+
+381
+00:33:26,647 --> 00:33:31,734
+Speaker SPEAKER_00: So this distillation method, a sentence, for example, has a few hundred bits of information.
+
+382
+00:33:32,035 --> 00:33:35,640
+Speaker SPEAKER_00: And even if you learned optimally, you couldn't convey more than a few hundred bits.
+
+383
+00:33:37,041 --> 00:33:40,426
+Speaker SPEAKER_00: But if you take these big digital models, then
+
+384
+00:33:42,584 --> 00:33:55,023
+Speaker SPEAKER_00: If you look at a bunch of agents that all have exactly the same neural netting, with exactly the same weights, and they're digital, so they use those weights in exactly the same way.
+
+385
+00:33:56,405 --> 00:34:01,233
+Speaker SPEAKER_00: And these thousand different agents all go off and look at different bits of the internet and learn stuff.
+
+386
+00:34:02,057 --> 00:34:05,382
+Speaker SPEAKER_00: And now you want each of them to know what the other one's learned.
+
+387
+00:34:06,262 --> 00:34:09,186
+Speaker SPEAKER_00: You can achieve that by averaging the gradients or averaging the weights.
+
+388
+00:34:09,806 --> 00:34:14,152
+Speaker SPEAKER_00: So you can get massive communication of what one agent learned to all the other agents.
+
+389
+00:34:15,032 --> 00:34:23,202
+Speaker SPEAKER_00: So when you share the weights or you share the gradients, you're communicating a trillion numbers, not just a few hundred bits, but a trillion real numbers.
+
+390
+00:34:24,284 --> 00:34:27,507
+Speaker SPEAKER_00: And so they're fantastically much better at communicating.
+
+391
+00:34:27,673 --> 00:34:29,657
+Speaker SPEAKER_00: And that's what they have over us.
+
+392
+00:34:30,778 --> 00:34:36,126
+Speaker SPEAKER_00: They're just much, much better at communicating between multiple copies of the same model.
+
+393
+00:34:36,387 --> 00:34:39,692
+Speaker SPEAKER_00: And that's why GPT-4 knows so much more than a human.
+
+394
+00:34:39,711 --> 00:34:41,574
+Speaker SPEAKER_00: It wasn't one model that did it.
+
+395
+00:34:41,655 --> 00:34:44,599
+Speaker SPEAKER_00: It was a whole bunch of copies of the same model running on different hardware.
+
+396
+00:34:48,144 --> 00:34:56,297
+Speaker SPEAKER_00: So my conclusion, which I don't really like, is that digital computation
+
+397
+00:34:56,530 --> 00:34:57,632
+Speaker SPEAKER_00: requires a lot of energy.
+
+398
+00:34:58,172 --> 00:34:59,353
+Speaker SPEAKER_00: And so it would never evolve.
+
+399
+00:35:00,175 --> 00:35:04,141
+Speaker SPEAKER_00: We had to evolve making use of the quirks of the hardware to be very low energy.
+
+400
+00:35:05,844 --> 00:35:09,789
+Speaker SPEAKER_00: But once you've got it, it's very easy for agents to share.
+
+401
+00:35:09,809 --> 00:35:16,500
+Speaker SPEAKER_00: And GPT-4 has thousands of times more knowledge in about 2% of the weights.
+
+402
+00:35:16,519 --> 00:35:17,922
+Speaker SPEAKER_00: So that's quite depressing.
+
+403
+00:35:19,804 --> 00:35:24,833
+Speaker SPEAKER_00: Biological computation is great for evolving because it requires very little energy.
+
+404
+00:35:25,960 --> 00:35:30,768
+Speaker SPEAKER_00: But my conclusion is that digital computation is just better.
+
+405
+00:35:31,831 --> 00:35:43,273
+Speaker SPEAKER_00: And so I think it's fairly clear that maybe in the next 20 years, I'd say with a probability of about 0.5 in the next 20 years, it'll get smarter than us.
+
+406
+00:35:44,034 --> 00:35:47,681
+Speaker SPEAKER_00: And very probably in the next 100 years, it'll be much smarter than us.
+
+407
+00:35:48,117 --> 00:35:52,083
+Speaker SPEAKER_00: And so we need to think about how to deal with that.
+
+408
+00:35:52,844 --> 00:35:58,554
+Speaker SPEAKER_00: And there are very few examples of more intelligent things being controlled by less intelligent things.
+
+409
+00:35:59,655 --> 00:36:02,860
+Speaker SPEAKER_00: One good example is a mother being controlled by a baby.
+
+410
+00:36:02,880 --> 00:36:07,768
+Speaker SPEAKER_00: Evolution has gone to a lot of work to make that happen so that the babies survive.
+
+411
+00:36:07,929 --> 00:36:10,193
+Speaker SPEAKER_00: It's very important for the baby to be able to control the mother.
+
+412
+00:36:11,474 --> 00:36:13,077
+Speaker SPEAKER_00: But there aren't many other examples.
+
+413
+00:36:14,239 --> 00:36:18,286
+Speaker SPEAKER_00: Some people think that we can make these things be benevolent.
+
+414
+00:36:19,568 --> 00:36:25,036
+Speaker SPEAKER_00: But if they get into a competition with each other, I think they'll start behaving like chimpanzees.
+
+415
+00:36:26,077 --> 00:36:33,869
+Speaker SPEAKER_00: And I'm not convinced you can keep them benevolent if they get very smart and they get any notion of self-preservation.
+
+416
+00:36:35,231 --> 00:36:37,434
+Speaker SPEAKER_00: They may decide they're more important than us.
+
+417
+00:36:39,016 --> 00:36:43,081
+Speaker SPEAKER_00: So I finished the lecture in record time, I think.
+

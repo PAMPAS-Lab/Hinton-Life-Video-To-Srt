@@ -1,0 +1,1196 @@
+1
+00:00:16,265 --> 00:00:17,166
+Speaker SPEAKER_01: Welcome everyone.
+
+2
+00:00:17,185 --> 00:00:23,775
+Speaker SPEAKER_01: My name is Merrick Gertler and it is my privilege to serve as President of the University of Toronto.
+
+3
+00:00:25,217 --> 00:00:33,890
+Speaker SPEAKER_01: We're gathered online from around the world to recognize and celebrate University Professor Emeritus Geoffrey Hinton, the 2024 Nobel Laureate in Physics.
+
+4
+00:00:35,112 --> 00:00:42,423
+Speaker SPEAKER_01: Geoff Hinton is internationally recognized and admired as a pioneer in the field of artificial neural networks and deep learning.
+
+5
+00:00:43,045 --> 00:00:54,959
+Speaker SPEAKER_01: His multidisciplinary research program is linked not only to AI and machine learning, but also to physics, cognitive psychology, neurobiology, mathematical optimization, and information theory.
+
+6
+00:00:56,299 --> 00:01:00,164
+Speaker SPEAKER_01: Professor Hinton has had a profound impact on multiple fields and disciplines.
+
+7
+00:01:01,045 --> 00:01:04,730
+Speaker SPEAKER_01: He has literally created new ways of thinking about thinking and learning.
+
+8
+00:01:06,152 --> 00:01:10,436
+Speaker SPEAKER_01: The algorithms he and his students have developed have an astonishing reach.
+
+9
+00:01:10,923 --> 00:01:18,777
+Speaker SPEAKER_01: They underpinned the data processing and advanced discovery capabilities that are now in astonishingly wide use today.
+
+10
+00:01:18,837 --> 00:01:35,125
+Speaker SPEAKER_01: Professor Hinton's foundational contributions and their profound impact have led to widespread scholarly acclaim and even wider popular recognition around the globe, so much so that he is frequently referred to as the godfather of AI.
+
+11
+00:01:36,876 --> 00:01:46,832
+Speaker SPEAKER_01: Professor Hinton has spent some three decades of his stellar academic career at the University of Toronto, where he was named University Professor, our highest academic honour, in 2006.
+
+12
+00:01:46,912 --> 00:01:53,382
+Speaker SPEAKER_01: Due in large part to his leadership and exemplary mentorship of young scholars,
+
+13
+00:01:53,566 --> 00:01:57,251
+Speaker SPEAKER_01: U of T has developed into a global leader in machine learning and AI.
+
+14
+00:01:58,031 --> 00:02:09,787
+Speaker SPEAKER_01: This includes the ethical consequences and social impacts of AI, a topic that Professor Hinton has recently elevated, helping focus the world's attention on these important issues.
+
+15
+00:02:11,008 --> 00:02:20,340
+Speaker SPEAKER_01: It is my honor and great pleasure to introduce University Professor Emeritus Geoffrey Hinton, 2024 Nobel Laureate in Physics.
+
+16
+00:02:21,001 --> 00:02:22,543
+Speaker SPEAKER_01: Professor Hinton, welcome.
+
+17
+00:02:23,586 --> 00:02:24,307
+Speaker SPEAKER_02: Thank you very much.
+
+18
+00:02:25,088 --> 00:02:26,591
+Speaker SPEAKER_02: I'm still slightly in shock.
+
+19
+00:02:26,931 --> 00:02:29,836
+Speaker SPEAKER_02: I got a phone call at one o'clock in the morning in California.
+
+20
+00:02:29,876 --> 00:02:33,861
+Speaker SPEAKER_02: I thought about whether I should answer it or not.
+
+21
+00:02:33,901 --> 00:02:36,344
+Speaker SPEAKER_02: And luckily I decided I would see who was calling.
+
+22
+00:02:37,045 --> 00:02:41,513
+Speaker SPEAKER_02: And I was extremely surprised to get the Nobel Prize in physics.
+
+23
+00:02:42,014 --> 00:02:43,276
+Speaker SPEAKER_02: I never expected that.
+
+24
+00:02:44,377 --> 00:02:53,289
+Speaker SPEAKER_02: I think of the prize as a recognition of a large community of people who worked on neural networks for many years before they worked really well.
+
+25
+00:02:53,522 --> 00:03:01,096
+Speaker SPEAKER_02: I'd particularly like to acknowledge my two main mentors, David Rummelhart, with whom I worked on the backpropagation algorithm.
+
+26
+00:03:01,897 --> 00:03:07,187
+Speaker SPEAKER_02: David died of a nasty brain disease quite young, but for that he would be here instead of me.
+
+27
+00:03:08,449 --> 00:03:17,825
+Speaker SPEAKER_02: And my colleague Terry Sanofsky, who I worked with a lot in the 1980s on Boltzmann machines and who taught me a lot about the brain.
+
+28
+00:03:17,991 --> 00:03:21,094
+Speaker SPEAKER_02: I'd also like to acknowledge my students.
+
+29
+00:03:21,314 --> 00:03:29,141
+Speaker SPEAKER_02: I was particularly fortunate to have many very clever students, much cleverer than me, who actually made things work.
+
+30
+00:03:30,683 --> 00:03:32,945
+Speaker SPEAKER_02: They've gone on to do great things.
+
+31
+00:03:33,545 --> 00:03:36,849
+Speaker SPEAKER_02: I'm particularly proud of the fact that one of my students fired Sam Altman.
+
+32
+00:03:37,710 --> 00:03:43,134
+Speaker SPEAKER_02: And I think I better leave it there and leave it for questions.
+
+33
+00:03:43,155 --> 00:03:44,877
+Speaker SPEAKER_01: Thank you so much, Geoff.
+
+34
+00:03:45,329 --> 00:03:53,015
+Speaker SPEAKER_01: We will now take questions from members of the media, and I invite my colleague, Lisa Pires, from U of T's Media Relations team to moderate our Q&A.
+
+35
+00:03:53,235 --> 00:03:53,556
+Speaker SPEAKER_01: Lisa.
+
+36
+00:03:56,278 --> 00:03:57,719
+Speaker SPEAKER_00: Thank you, President Gerler.
+
+37
+00:03:57,780 --> 00:04:05,045
+Speaker SPEAKER_00: To ensure we can answer as many questions as possible, we will be taking written questions only.
+
+38
+00:04:05,086 --> 00:04:15,235
+Speaker SPEAKER_00: So please include your name and the news outlet you are affiliated with when submitting your questions using the Q&A box you'll see at the bottom of your screen.
+
+39
+00:04:16,007 --> 00:04:18,913
+Speaker SPEAKER_00: We'll take a minute now to let the questions come in.
+
+40
+00:04:25,343 --> 00:04:26,264
+Speaker SPEAKER_02: Well, we're taking a minute.
+
+41
+00:04:26,283 --> 00:04:36,480
+Speaker SPEAKER_02: I'd like to say I should also acknowledge Joshua Bengio and Yann LeCun, who were close colleagues and were very instrumental in developing this whole field.
+
+42
+00:04:46,247 --> 00:04:52,857
+Speaker SPEAKER_00: We see a question in our Q&A box from Adrian at CTV National News.
+
+43
+00:04:52,958 --> 00:04:58,425
+Speaker SPEAKER_00: Adrian, if you wouldn't mind typing in your question, that would help us answer it.
+
+44
+00:05:06,076 --> 00:05:07,278
+Speaker SPEAKER_00: Thank you so much, Adrian.
+
+45
+00:05:07,358 --> 00:05:10,362
+Speaker SPEAKER_00: This is a question for Dr. Hinton.
+
+46
+00:05:10,783 --> 00:05:15,850
+Speaker SPEAKER_00: Dr. Hinton, what do you believe your legacy will be when it comes to AI?
+
+47
+00:05:17,466 --> 00:05:26,600
+Speaker SPEAKER_02: Um, I'm hoping AI will lead to tremendous benefits to tremendous increases in productivity and to a better life for everybody.
+
+48
+00:05:26,980 --> 00:05:29,805
+Speaker SPEAKER_02: I'm convinced that it will do that in healthcare.
+
+49
+00:05:30,646 --> 00:05:36,053
+Speaker SPEAKER_02: Um, my worry is that it may also lead to bad things.
+
+50
+00:05:36,795 --> 00:05:45,987
+Speaker SPEAKER_02: Um, and in particular, when we get things more intelligent than ourselves, no one really knows whether we're going to be able to control them.
+
+51
+00:05:49,242 --> 00:05:53,588
+Speaker SPEAKER_00: Our next question comes from Victoria Gibson at Toronto Star.
+
+52
+00:05:54,470 --> 00:05:56,713
+Speaker SPEAKER_00: This is another one for Dr. Hinton.
+
+53
+00:05:56,994 --> 00:06:02,461
+Speaker SPEAKER_00: She asks, how would you use a neural network right now to improve Toronto as a city?
+
+54
+00:06:08,050 --> 00:06:11,334
+Speaker SPEAKER_02: I'm not quite sure how a neural network could get rid of Doug Ford.
+
+55
+00:06:15,870 --> 00:06:19,916
+Speaker SPEAKER_00: Okay, I've got a follow-up from Victoria again at Toronto Star.
+
+56
+00:06:20,358 --> 00:06:27,869
+Speaker SPEAKER_00: She asks again of Dr. Hinton, how is the Canadian research landscape different now from when you were starting out?
+
+57
+00:06:28,350 --> 00:06:33,076
+Speaker SPEAKER_00: And what is the biggest hurdle to reaching more research breakthroughs in Canada today?
+
+58
+00:06:37,144 --> 00:06:38,225
+Speaker SPEAKER_02: Let me just think about that.
+
+59
+00:06:39,586 --> 00:06:44,595
+Speaker SPEAKER_02: Obviously, a big difference is people now recognize that neural networks actually work.
+
+60
+00:06:45,283 --> 00:06:47,309
+Speaker SPEAKER_02: But much of the landscape is similar.
+
+61
+00:06:48,091 --> 00:06:57,555
+Speaker SPEAKER_02: So there's an organization called the Canadian Institute for Advanced Research that is a big help for people doing research in areas where Canada is strong.
+
+62
+00:07:00,286 --> 00:07:09,428
+Speaker SPEAKER_02: I think the main thing about Canada as a place to do research is there isn't as much money as there is in the US, but it uses its money quite wisely.
+
+63
+00:07:09,529 --> 00:07:15,644
+Speaker SPEAKER_02: In particular, the main funding council for this kind of research called NSERC.
+
+64
+00:07:15,625 --> 00:07:34,449
+Speaker SPEAKER_02: uses money for basic curiosity-driven research, and all of these advances in neural networks came out of basic curiosity-driven research, not out of throwing money at applied problems, but out of letting scientists follow their curiosity to try and understand things.
+
+65
+00:07:36,112 --> 00:07:37,413
+Speaker SPEAKER_02: Canada is quite good at that.
+
+66
+00:07:40,583 --> 00:07:41,004
+Speaker SPEAKER_00: Thank you.
+
+67
+00:07:41,064 --> 00:07:46,031
+Speaker SPEAKER_00: Our next question comes from Issam Ahmed at Agence France-Presse.
+
+68
+00:07:46,692 --> 00:07:48,194
+Speaker SPEAKER_00: They say, congratulations.
+
+69
+00:07:48,535 --> 00:07:57,649
+Speaker SPEAKER_00: Both you and Dr. Hopefield have warned of the dangers of unchecked AI and not understanding enough about how it now works.
+
+70
+00:07:57,668 --> 00:08:00,172
+Speaker SPEAKER_00: How do we avoid catastrophic scenarios?
+
+71
+00:08:02,074 --> 00:08:04,177
+Speaker SPEAKER_02: We don't know how to avoid them all at present.
+
+72
+00:08:04,197 --> 00:08:06,641
+Speaker SPEAKER_02: That's why we urgently need more research.
+
+73
+00:08:07,499 --> 00:08:24,208
+Speaker SPEAKER_02: So I'm advocating that our best young researchers, or many of them, should work on AI safety and governments should force the large companies to provide the computational facilities that they need to do that.
+
+74
+00:08:26,922 --> 00:08:32,769
+Speaker SPEAKER_00: Our next one is from Tara Deschamps from Canadian Press, again for Professor Hinton.
+
+75
+00:08:33,450 --> 00:08:40,378
+Speaker SPEAKER_00: She asks, for a long time, AI was not seen as a sexy or popular technology like it is today.
+
+76
+00:08:40,398 --> 00:08:47,866
+Speaker SPEAKER_00: I wonder if you could share a bit of what it was like to work on the underpinnings of the technology before it was so ubiquitous.
+
+77
+00:08:49,349 --> 00:09:01,020
+Speaker SPEAKER_02: Um, it was a lot of fun doing the research, but it was slightly annoying that many people said, in fact, most people in the field of AI said that neural networks would never work.
+
+78
+00:09:01,501 --> 00:09:12,813
+Speaker SPEAKER_02: They were very confident that these things were just a waste of time and we would never be able to learn complicated things like, for example, understanding natural language using neural networks.
+
+79
+00:09:13,573 --> 00:09:14,174
+Speaker SPEAKER_02: And they were wrong.
+
+80
+00:09:17,075 --> 00:09:21,144
+Speaker SPEAKER_00: The next question comes from Adrian Gobriel at CTV News.
+
+81
+00:09:21,163 --> 00:09:22,287
+Speaker SPEAKER_00: This is his second question.
+
+82
+00:09:22,969 --> 00:09:28,160
+Speaker SPEAKER_00: He asks of Dr. Hinton, can you elaborate on your concerns around AI?
+
+83
+00:09:28,201 --> 00:09:31,649
+Speaker SPEAKER_00: Do you believe it might become more intelligent than humans?
+
+84
+00:09:32,330 --> 00:09:35,758
+Speaker SPEAKER_00: Why and how quickly do you believe that could take place?
+
+85
+00:09:36,667 --> 00:09:45,418
+Speaker SPEAKER_02: OK, so most of the top researchers I know believe that AI will become more intelligent than people.
+
+86
+00:09:46,240 --> 00:09:49,191
+Speaker SPEAKER_02: They vary on the time scales.
+
+87
+00:09:50,081 --> 00:09:53,187
+Speaker SPEAKER_02: A lot of them believe that that will happen sometime in the next 20 years.
+
+88
+00:09:53,626 --> 00:09:55,370
+Speaker SPEAKER_02: Some of them believe it will happen sooner.
+
+89
+00:09:55,971 --> 00:09:57,653
+Speaker SPEAKER_02: Some of them believe it will take much longer.
+
+90
+00:09:58,173 --> 00:10:04,322
+Speaker SPEAKER_02: But quite a few good researchers believe that sometime in the next 20 years, AI will become more intelligent than us.
+
+91
+00:10:05,323 --> 00:10:07,888
+Speaker SPEAKER_02: And we need to think hard about what happens then.
+
+92
+00:10:13,251 --> 00:10:18,740
+Speaker SPEAKER_00: We don't have the name of the next person who has asked a question, but they do have a fun one.
+
+93
+00:10:19,201 --> 00:10:23,105
+Speaker SPEAKER_00: Who was your first call when you discovered you'd won the Nobel Prize?
+
+94
+00:10:24,808 --> 00:10:26,110
+Speaker SPEAKER_02: My sister in Australia.
+
+95
+00:10:30,677 --> 00:10:32,620
+Speaker SPEAKER_00: Follow up to that, what was the reaction?
+
+96
+00:10:32,639 --> 00:10:37,807
+Speaker SPEAKER_02: I think she said something like, oh, my God.
+
+97
+00:10:41,720 --> 00:10:44,886
+Speaker SPEAKER_00: Our next one is a follow up question from Tara Deschamps.
+
+98
+00:10:44,907 --> 00:10:53,648
+Speaker SPEAKER_00: Again, she's from Canadian Press, and she asks of Professor Hinton, you initially mentioned being flabbergasted when you got the news of the Nobel win this morning.
+
+99
+00:10:54,149 --> 00:10:57,096
+Speaker SPEAKER_00: Can you tell us a bit about how your day has gone since?
+
+100
+00:10:58,173 --> 00:11:02,059
+Speaker SPEAKER_02: Um, yes, I have very little sleep.
+
+101
+00:11:02,159 --> 00:11:07,089
+Speaker SPEAKER_02: It was one o'clock in the morning and I'd probably had about an hour's sleep by the time the phone went.
+
+102
+00:11:08,009 --> 00:11:08,751
+Speaker SPEAKER_02: I'm in California.
+
+103
+00:11:09,312 --> 00:11:13,298
+Speaker SPEAKER_02: And, um, since then, I probably had about one more hour's sleep.
+
+104
+00:11:14,041 --> 00:11:16,485
+Speaker SPEAKER_02: Um, so I'm rather sleep deprived now.
+
+105
+00:11:16,465 --> 00:11:29,412
+Speaker SPEAKER_02: and it's just been lots and lots of people trying to get in touch with me, but also lots of messages from old friends from years ago I haven't seen in a long time and that's been very nice.
+
+106
+00:11:33,138 --> 00:11:39,110
+Speaker SPEAKER_00: Our next question comes from Isabel Kirkwood at BetaKit, again for Professor Hinton.
+
+107
+00:11:39,731 --> 00:11:52,378
+Speaker SPEAKER_00: She asks, Professor Hinton, how do you reconcile receiving this recognition with their outspokenness about the need to slow AI advancement and the risks that technology poses?
+
+108
+00:11:53,354 --> 00:11:58,061
+Speaker SPEAKER_02: I've never recommended slowing the advancement of AI because I don't think that's feasible.
+
+109
+00:11:58,863 --> 00:12:10,500
+Speaker SPEAKER_02: AI has so many good effects, like in healthcare, but in pretty much all industries, that I think there's no chance of us slowing the development of it.
+
+110
+00:12:15,609 --> 00:12:17,471
+Speaker SPEAKER_02: Can you say the second half of the question again?
+
+111
+00:12:17,687 --> 00:12:18,590
+Speaker SPEAKER_00: Absolutely.
+
+112
+00:12:18,610 --> 00:12:29,773
+Speaker SPEAKER_00: She asks, how do you reconcile receiving this recognition with your outspokenness about the need to slow AI advancement and the risks that technology poses?
+
+113
+00:12:30,799 --> 00:12:38,572
+Speaker SPEAKER_02: OK, so actually the Nobel Committee recognized that my work on talking about safety was relevant here.
+
+114
+00:12:39,274 --> 00:12:42,159
+Speaker SPEAKER_02: I can't remember exactly what they said, but they said something about that.
+
+115
+00:12:43,000 --> 00:12:49,972
+Speaker SPEAKER_02: I think we need a serious effort to make sure it's safe, because if we can keep it safe, it'll be wonderful.
+
+116
+00:12:52,754 --> 00:13:12,163
+Speaker SPEAKER_00: We have a follow-up again from Professor Hinton and again from Issam Ahmed from AFP who asks, do you think students and even professionals over-relying on LLMs is going to have a dumbing down effect or will we operate on a higher order?
+
+117
+00:13:13,240 --> 00:13:16,004
+Speaker SPEAKER_02: I don't think it will have a significant dumbing down effect.
+
+118
+00:13:16,304 --> 00:13:22,614
+Speaker SPEAKER_02: I think it'll be like what happened when they first had pocket calculators and people said, oh, kids won't learn math anymore.
+
+119
+00:13:22,653 --> 00:13:24,356
+Speaker SPEAKER_02: They won't be able to do multiplication.
+
+120
+00:13:24,998 --> 00:13:28,523
+Speaker SPEAKER_02: Well, you don't need to be able to do multiplication if you've got a pocket calculator.
+
+121
+00:13:29,345 --> 00:13:31,528
+Speaker SPEAKER_02: And I think it'll be the same with LLMs.
+
+122
+00:13:31,908 --> 00:13:37,738
+Speaker SPEAKER_02: People maybe won't remember as many facts that you can just ask an LLM and it will know.
+
+123
+00:13:37,778 --> 00:13:40,682
+Speaker SPEAKER_02: But I think it'll make people smarter, not dumber.
+
+124
+00:13:42,703 --> 00:13:43,264
+Speaker SPEAKER_00: Thank you.
+
+125
+00:13:43,284 --> 00:13:47,635
+Speaker SPEAKER_00: A follow-up from Adrian Gobriel at CTV News.
+
+126
+00:13:48,297 --> 00:13:51,183
+Speaker SPEAKER_00: He asks, if I could ask one more question.
+
+127
+00:13:51,224 --> 00:13:56,155
+Speaker SPEAKER_00: He says, you used the word flabbergasted when you learned about the award.
+
+128
+00:13:56,616 --> 00:13:58,400
+Speaker SPEAKER_00: Why were you so surprised?
+
+129
+00:13:59,578 --> 00:14:02,565
+Speaker SPEAKER_02: I had absolutely no idea that I'd even been nominated.
+
+130
+00:14:02,605 --> 00:14:05,289
+Speaker SPEAKER_02: I'm not a physicist.
+
+131
+00:14:05,711 --> 00:14:07,413
+Speaker SPEAKER_02: I have very high respect for physics.
+
+132
+00:14:07,894 --> 00:14:14,989
+Speaker SPEAKER_02: I dropped out of physics after my first year at university because I couldn't do the complicated math.
+
+133
+00:14:14,969 --> 00:14:19,197
+Speaker SPEAKER_02: Getting an award in physics was very surprising to me.
+
+134
+00:14:19,538 --> 00:14:28,014
+Speaker SPEAKER_02: I'm very pleased that the Nobel Committee recognised that there's been huge progress in the area of artificial neural nets.
+
+135
+00:14:28,755 --> 00:14:31,662
+Speaker SPEAKER_02: And Hopfield's work
+
+136
+00:14:31,642 --> 00:14:33,264
+Speaker SPEAKER_02: was closely related to physics.
+
+137
+00:14:33,344 --> 00:14:39,033
+Speaker SPEAKER_02: And some of the early work I did with Terry Sanofsky on Boltzmann machines was inspired by statistical physics.
+
+138
+00:14:39,592 --> 00:14:43,619
+Speaker SPEAKER_02: But more recently, the work has had less relationship to physics.
+
+139
+00:14:43,899 --> 00:14:46,823
+Speaker SPEAKER_02: And so I was very surprised that I got a prize in physics.
+
+140
+00:14:49,206 --> 00:15:01,024
+Speaker SPEAKER_00: Our next question comes from Matt O'Brien at Associated Press, who asks of Professor Hinton, can you please elaborate on your comment earlier on the call about Sam Altman?
+
+141
+00:15:02,354 --> 00:15:07,190
+Speaker SPEAKER_02: So OpenAI was set up with a big emphasis on safety.
+
+142
+00:15:08,715 --> 00:15:13,831
+Speaker SPEAKER_02: Its primary objective was to develop artificial general intelligence and ensure that it was safe.
+
+143
+00:15:15,178 --> 00:15:20,307
+Speaker SPEAKER_02: One of my former students was the chief scientist.
+
+144
+00:15:22,751 --> 00:15:31,086
+Speaker SPEAKER_02: Over time, it turned out that Sam Altman was much less concerned with safety than with profits.
+
+145
+00:15:31,106 --> 00:15:33,812
+Speaker SPEAKER_02: I think that's unfortunate.
+
+146
+00:15:37,352 --> 00:15:37,813
+Speaker SPEAKER_00: Thank you.
+
+147
+00:15:37,854 --> 00:15:41,499
+Speaker SPEAKER_00: Our next question comes from Jessica Coates at PA Media.
+
+148
+00:15:41,519 --> 00:15:44,583
+Speaker SPEAKER_00: And this is, again, a question for Professor Hinton.
+
+149
+00:15:45,184 --> 00:15:53,677
+Speaker SPEAKER_00: She asks, you mentioned the uncertain future around AI and the need for greater understanding of its potential opportunities and risks.
+
+150
+00:15:54,337 --> 00:15:58,764
+Speaker SPEAKER_00: Do you believe governments look at stepping in to regulate AI more strictly?
+
+151
+00:15:58,784 --> 00:16:02,230
+Speaker SPEAKER_00: How can governments better support AI research?
+
+152
+00:16:03,491 --> 00:16:10,340
+Speaker SPEAKER_02: I think governments can encourage the big companies to spend more of their resources on safety research.
+
+153
+00:16:10,681 --> 00:16:15,385
+Speaker SPEAKER_02: So at present, almost all of the resources go into making the models better.
+
+154
+00:16:16,267 --> 00:16:22,214
+Speaker SPEAKER_02: So they can have shiny new models and there's a big competition going on and the models are getting much better and that's good.
+
+155
+00:16:22,754 --> 00:16:27,120
+Speaker SPEAKER_02: But we need to accompany that with a comparable effort on AI safety.
+
+156
+00:16:27,480 --> 00:16:29,482
+Speaker SPEAKER_02: The effort needs to be more than like 1%.
+
+157
+00:16:29,462 --> 00:16:36,433
+Speaker SPEAKER_02: it needs to be like maybe a third of the effort goes into air safety, because if this stuff becomes unsafe, that's extremely bad.
+
+158
+00:16:36,494 --> 00:16:44,125
+Speaker SPEAKER_00: Our next question is from Tara Deschamps again from CP.
+
+159
+00:16:45,467 --> 00:16:51,116
+Speaker SPEAKER_00: She asks of Professor Hinton, any plans for the money that comes with the Nobel yet?
+
+160
+00:16:52,057 --> 00:16:53,801
+Speaker SPEAKER_02: No specific plans.
+
+161
+00:16:53,921 --> 00:17:05,421
+Speaker SPEAKER_02: I'm going to give it away to charities, but I know one charity I'll give some to which provides jobs for neurodiverse young adults.
+
+162
+00:17:06,303 --> 00:17:09,949
+Speaker SPEAKER_02: I will give it to some other charities, but I don't know which yet.
+
+163
+00:17:12,712 --> 00:17:26,299
+Speaker SPEAKER_00: Our next question for Professor Hinton, again, is from Wa Lone of Reuters, who asks, do you have any recommendations for how to prevent serious consequences in the future?
+
+164
+00:17:27,182 --> 00:17:31,210
+Speaker SPEAKER_00: By that they mean how people should be careful of AI and its use.
+
+165
+00:17:32,050 --> 00:17:33,894
+Speaker SPEAKER_00: As you warned, it can be dangerous.
+
+166
+00:17:35,005 --> 00:17:40,913
+Speaker SPEAKER_02: Um, I don't think individual people being careful in how they use it is going to solve the problems.
+
+167
+00:17:41,575 --> 00:17:45,961
+Speaker SPEAKER_02: I think the people developing AI, um, need to be careful how they develop it.
+
+168
+00:17:46,863 --> 00:17:50,628
+Speaker SPEAKER_02: And I think research needs to be done in the big companies, which have the resources.
+
+169
+00:17:51,510 --> 00:17:55,696
+Speaker SPEAKER_02: Um, I'm not convinced that the way individual people use it is going to make much difference.
+
+170
+00:18:00,232 --> 00:18:04,140
+Speaker SPEAKER_00: Our next question is another follow-up from Issam Ahmed.
+
+171
+00:18:04,661 --> 00:18:07,526
+Speaker SPEAKER_00: This is at AFP and again for Professor Hinton.
+
+172
+00:18:07,967 --> 00:18:18,866
+Speaker SPEAKER_00: They ask, I know you said it's hard to predict what going bad might mean, but if you had to hazard a stab at some rough areas of concern, what would those be?
+
+173
+00:18:20,534 --> 00:18:24,201
+Speaker SPEAKER_02: So there are many different risks from AI and they all have different solutions.
+
+174
+00:18:24,882 --> 00:18:28,489
+Speaker SPEAKER_02: So immediate risks are things like fake videos corrupting elections.
+
+175
+00:18:29,529 --> 00:18:38,626
+Speaker SPEAKER_02: We've already seen politicians either accuse other people of using fake videos or use fake videos themselves and fake images.
+
+176
+00:18:38,606 --> 00:18:40,088
+Speaker SPEAKER_02: So that's one immediate danger.
+
+177
+00:18:40,148 --> 00:18:44,855
+Speaker SPEAKER_02: There's also very immediate dangers from things like cyber attacks.
+
+178
+00:18:44,875 --> 00:18:50,981
+Speaker SPEAKER_02: So last year, for example, there was a 1200% increase in the number of phishing attacks.
+
+179
+00:18:51,462 --> 00:18:56,669
+Speaker SPEAKER_02: And that's because these large language models make it very easy to do phishing attacks.
+
+180
+00:18:57,108 --> 00:19:01,294
+Speaker SPEAKER_02: And you can no longer recognize them by the fact the spelling's wrong and the syntax is slightly odd.
+
+181
+00:19:02,276 --> 00:19:03,416
+Speaker SPEAKER_02: Their English is perfect.
+
+182
+00:19:06,333 --> 00:19:09,199
+Speaker SPEAKER_00: Next question comes from Victoria Gibson.
+
+183
+00:19:09,298 --> 00:19:10,781
+Speaker SPEAKER_00: Again, she is at Toronto Star.
+
+184
+00:19:11,384 --> 00:19:18,598
+Speaker SPEAKER_00: And she asks of Professor Hinton, you've spoken a few times today about the provincial government and the Ontario Science Centre.
+
+185
+00:19:19,119 --> 00:19:22,366
+Speaker SPEAKER_00: Why is that top of mind as you receive this recognition?
+
+186
+00:19:23,748 --> 00:19:30,846
+Speaker SPEAKER_02: So the Ontario Science Centre was very important in encouraging curiosity in young minds and curiosity about science.
+
+187
+00:19:32,250 --> 00:19:34,778
+Speaker SPEAKER_02: It had some problems with the roof and it needed some renovation.
+
+188
+00:19:35,239 --> 00:19:39,309
+Speaker SPEAKER_02: The estimate for the renovation was $200 million.
+
+189
+00:19:39,526 --> 00:19:50,928
+Speaker SPEAKER_02: But the government then told the people who estimated how much it would cost to multiply that by 1.85 in order to get a much bigger number, so that they could then justify knocking it down.
+
+190
+00:19:50,968 --> 00:19:56,458
+Speaker SPEAKER_02: And the reasons it was knocked down were not the reasons the government gave, as far as I can see.
+
+191
+00:19:56,919 --> 00:20:00,605
+Speaker SPEAKER_02: It could have been repaired, and it would have been much cheaper to repair it.
+
+192
+00:20:03,251 --> 00:20:10,265
+Speaker SPEAKER_00: Next is another question from Tara Deschamps at Canadian Press for Professor Hinton.
+
+193
+00:20:10,746 --> 00:20:19,942
+Speaker SPEAKER_00: She says, when people talk about the AI and technology landscape in Canada, your name always comes up as an example of what Canada can achieve.
+
+194
+00:20:20,604 --> 00:20:26,694
+Speaker SPEAKER_00: But people also say the country has to be careful not to squander the opportunities you've created.
+
+195
+00:20:26,792 --> 00:20:33,343
+Speaker SPEAKER_00: What do you think Canada can do to hold on to its status as a major player in the AI space?
+
+196
+00:20:34,758 --> 00:20:38,863
+Speaker SPEAKER_02: It can keep funding curiosity-driven basic research.
+
+197
+00:20:38,962 --> 00:20:41,786
+Speaker SPEAKER_02: That's very important for keeping the best researchers here.
+
+198
+00:20:42,426 --> 00:20:51,057
+Speaker SPEAKER_02: But in this age of artificial neural networks, we also need significant computational resources to keep researchers in universities.
+
+199
+00:20:51,798 --> 00:20:53,700
+Speaker SPEAKER_02: The government is trying to do something about that.
+
+200
+00:20:53,740 --> 00:20:58,925
+Speaker SPEAKER_02: They set aside $2 billion for computational resources for AI research.
+
+201
+00:20:58,905 --> 00:21:01,114
+Speaker SPEAKER_02: So, I think they're doing what they can.
+
+202
+00:21:01,154 --> 00:21:09,928
+Speaker SPEAKER_02: Obviously, we're a much smaller country than China or the United States, but given the resources they have, I think Canada is doing quite well.
+
+203
+00:21:13,772 --> 00:21:34,098
+Speaker SPEAKER_00: Our next question comes from U of T News' very own Rahul Kalvapalli, who asks of Professor Hinton, you persisted with research in artificial neural networks, even during periods of waning interest in the topic among the scientific community.
+
+204
+00:21:34,700 --> 00:21:42,210
+Speaker SPEAKER_00: Do you have a message for professors and students about persisting with endeavors that may be deemed unpopular or futile?
+
+205
+00:21:43,472 --> 00:21:52,587
+Speaker SPEAKER_02: I think my message is this, if you believe in something, don't give up on it until you understand why that belief is wrong.
+
+206
+00:21:53,008 --> 00:21:57,935
+Speaker SPEAKER_02: Often you believe in things and you eventually figure out why that's a wrong thing to believe in.
+
+207
+00:21:58,576 --> 00:22:08,333
+Speaker SPEAKER_02: But so long as you believe in something and you can't see why that's wrong, like the brain has to work somehow, so we have to figure out how it learns the connection strengths to make it work.
+
+208
+00:22:08,313 --> 00:22:14,821
+Speaker SPEAKER_02: So long as you believe in that, keep working on it and don't let people tell you it's nonsense if you can't see why it's nonsense.
+
+209
+00:22:18,207 --> 00:22:18,688
+Speaker SPEAKER_00: Thank you.
+
+210
+00:22:18,728 --> 00:22:28,521
+Speaker SPEAKER_00: Our next question comes from Yasuhiro Kobayashi and they were with the Yomiuri Shimbun newspaper.
+
+211
+00:22:28,561 --> 00:22:33,368
+Speaker SPEAKER_00: They ask, when will AI surpass human capabilities?
+
+212
+00:22:33,828 --> 00:22:35,771
+Speaker SPEAKER_00: What will happen as a result?
+
+213
+00:22:36,832 --> 00:22:41,659
+Speaker SPEAKER_02: So nobody knows when, but most of the good researchers I know think it will happen.
+
+214
+00:22:42,820 --> 00:22:46,906
+Speaker SPEAKER_02: My guess is it'll probably happen sometime between five and 20 years from now.
+
+215
+00:22:47,287 --> 00:22:48,048
+Speaker SPEAKER_02: It might be longer.
+
+216
+00:22:48,729 --> 00:22:50,392
+Speaker SPEAKER_02: There's a very small chance it'll be sooner.
+
+217
+00:22:50,412 --> 00:22:54,438
+Speaker SPEAKER_02: And we don't know what's going to happen then.
+
+218
+00:22:55,117 --> 00:23:06,535
+Speaker SPEAKER_02: So if you look around, there are very few examples of more intelligent things being controlled by less intelligent things, which makes you wonder whether when AI gets smarter than us, it's going to take over control.
+
+219
+00:23:09,990 --> 00:23:11,813
+Speaker SPEAKER_00: Thank you, Professor Hinton.
+
+220
+00:23:12,453 --> 00:23:19,161
+Speaker SPEAKER_00: We no longer see any other questions, but we are happy to stay on the line for a little while.
+
+221
+00:23:19,300 --> 00:23:32,915
+Speaker SPEAKER_00: If anybody has any last minute questions, please do use the Q&A toolbox you'll see at the bottom of your screen and give us your name and your media affiliation, please.
+
+222
+00:23:33,656 --> 00:23:36,640
+Speaker SPEAKER_00: We do have time for a couple more if you have any more.
+
+223
+00:23:47,690 --> 00:23:50,336
+Speaker SPEAKER_00: Another one from Rahul at U of T News.
+
+224
+00:23:51,057 --> 00:24:07,352
+Speaker SPEAKER_00: He asks of President Gertler, he's asking, how do you expect Professor Hinton's Nobel Prize to reverberate through the university and inspire scholarship in AI and other fields?
+
+225
+00:24:09,323 --> 00:24:12,729
+Speaker SPEAKER_01: Well, I think it's going to have a huge impact and a very, very positive one.
+
+226
+00:24:13,289 --> 00:24:23,909
+Speaker SPEAKER_01: I was a very young assistant professor at U of T when another eminent scientist, John Polanyi, won the Nobel Prize in chemistry in 1986.
+
+227
+00:24:23,989 --> 00:24:30,099
+Speaker SPEAKER_01: And I can remember how proud I felt of our intellectual community.
+
+228
+00:24:30,079 --> 00:24:40,576
+Speaker SPEAKER_01: When John got that wonderful news, and it has continued to have such positive impact, not just in chemistry, but across the University of Toronto.
+
+229
+00:24:40,616 --> 00:24:46,586
+Speaker SPEAKER_01: I think Jeff's win today will have a similarly positive effect.
+
+230
+00:24:46,567 --> 00:24:53,636
+Speaker SPEAKER_01: boosting morale across the university, but also helping us attract and retain fantastic talent.
+
+231
+00:24:53,656 --> 00:24:57,522
+Speaker SPEAKER_01: Jeff has already talked about that in response to a couple of questions today.
+
+232
+00:24:57,542 --> 00:25:11,982
+Speaker SPEAKER_01: And I think one cannot overstate the impact of a win like this on the ability of Canada, Toronto, and the University of Toronto to be able to
+
+233
+00:25:11,962 --> 00:25:22,557
+Speaker SPEAKER_01: welcome talented newcomers, great students, and wonderful faculty from across the country and around the world because of the recognition that arises with Jeff's win.
+
+234
+00:25:25,840 --> 00:25:27,122
+Speaker SPEAKER_00: Thank you, President Gertler.
+
+235
+00:25:27,603 --> 00:25:35,573
+Speaker SPEAKER_00: We are now going back to Professor Hinton with another question from Issam Ahmed from AFP.
+
+236
+00:25:36,074 --> 00:25:40,839
+Speaker SPEAKER_00: They ask, what are the exciting next frontiers for you in AI?
+
+237
+00:25:42,759 --> 00:25:49,054
+Speaker SPEAKER_02: OK, I'm 76 and I'm not going to do much more frontier research, I believe.
+
+238
+00:25:49,294 --> 00:25:53,865
+Speaker SPEAKER_02: I'm going to spend my time advocating for people to work on safety.
+
+239
+00:25:54,566 --> 00:25:59,537
+Speaker SPEAKER_02: I think there's very exciting frontiers.
+
+240
+00:25:59,517 --> 00:26:04,548
+Speaker SPEAKER_02: in robotics, in getting AI to be skilled at manipulating things.
+
+241
+00:26:05,049 --> 00:26:12,788
+Speaker SPEAKER_02: At present, we're much better than computers at that, or than artificial neural nets, but there will be a lot of progress there.
+
+242
+00:26:13,651 --> 00:26:17,339
+Speaker SPEAKER_02: It may take a bit longer in that area, though.
+
+243
+00:26:17,319 --> 00:26:22,246
+Speaker SPEAKER_02: I also think these large language models are going to get much, much better reasoning.
+
+244
+00:26:22,605 --> 00:26:29,713
+Speaker SPEAKER_02: So the latest model from OpenAI and models from Google, like the latest versions of Gemini, are getting better at reasoning all the time.
+
+245
+00:26:30,715 --> 00:26:33,459
+Speaker SPEAKER_02: And I think that's going to be very exciting to watch.
+
+246
+00:26:36,682 --> 00:26:39,326
+Speaker SPEAKER_00: Our next question comes from Victoria Gibson.
+
+247
+00:26:39,346 --> 00:26:43,210
+Speaker SPEAKER_00: Again, she's at the Toronto Star, and this is for Professor Hinton.
+
+248
+00:26:43,492 --> 00:26:52,105
+Speaker SPEAKER_00: She asks, you offered some specifics on where AI can go poorly, such as cyber attacks, false videos, et cetera.
+
+249
+00:26:52,744 --> 00:26:57,872
+Speaker SPEAKER_00: Can you share some more specific examples of how you think it can play a positive role?
+
+250
+00:26:59,334 --> 00:26:59,755
+Speaker SPEAKER_02: Oh, yes.
+
+251
+00:27:00,154 --> 00:27:07,424
+Speaker SPEAKER_02: So if you think about an area like health care, a large part of the Ontario budget goes on health care.
+
+252
+00:27:08,536 --> 00:27:10,459
+Speaker SPEAKER_02: it can make a tremendous difference there.
+
+253
+00:27:11,359 --> 00:27:18,829
+Speaker SPEAKER_02: So I actually made a prediction in 2016 that by now, AI would be reading all the scans that radiologists normally read.
+
+254
+00:27:19,391 --> 00:27:20,752
+Speaker SPEAKER_02: That prediction was wrong.
+
+255
+00:27:20,772 --> 00:27:22,255
+Speaker SPEAKER_02: I was a bit overenthusiastic.
+
+256
+00:27:22,734 --> 00:27:26,180
+Speaker SPEAKER_02: It may be another five years before that happens, but we're clearly getting there.
+
+257
+00:27:26,980 --> 00:27:30,425
+Speaker SPEAKER_02: AI is gonna be much better at diagnosis.
+
+258
+00:27:30,645 --> 00:27:37,394
+Speaker SPEAKER_02: So already, if you take difficult cases to diagnose, a doctor gets 40% correct,
+
+259
+00:27:37,375 --> 00:27:41,022
+Speaker SPEAKER_02: A doctor and AI system gets 50% correct.
+
+260
+00:27:42,066 --> 00:27:47,237
+Speaker SPEAKER_02: And the combination of the doctor with the AI system gets 60% correct, which is a big improvement.
+
+261
+00:27:47,817 --> 00:27:52,167
+Speaker SPEAKER_02: In North America, several hundred thousand people a year died by diagnoses.
+
+262
+00:27:52,489 --> 00:27:55,214
+Speaker SPEAKER_02: With AI, diagnoses are going to get much better.
+
+263
+00:27:55,701 --> 00:28:15,869
+Speaker SPEAKER_02: But the thing that's going to really happen is you'll be able to have a family doctor who's an AI, who has seen a hundred million patients and knows huge amounts and will be much, much better at dealing with whatever ailment it is you have, because your AI family doctor will have seen many, many similar cases.
+
+264
+00:28:19,428 --> 00:28:21,251
+Speaker SPEAKER_00: Thank you, Professor Hinton.
+
+265
+00:28:21,973 --> 00:28:28,567
+Speaker SPEAKER_00: We no longer see any other questions, but again, we do have time for one or two more.
+
+266
+00:28:28,587 --> 00:28:38,230
+Speaker SPEAKER_00: So if anybody on the call would like to ask any other questions, we again invite you to include your name and the media outlet you're representing.
+
+267
+00:28:38,210 --> 00:28:43,117
+Speaker SPEAKER_00: and type out those questions in the Q&A box at the bottom of your screen.
+
+268
+00:28:43,137 --> 00:29:01,990
+Speaker SPEAKER_00: While we wait for any of those last minute questions to come in, Professor Hinton, we are curious, is there anything that we haven't touched on during this press conference today that you would like to mention or anything that we've kind of missed here with all the various press questions?
+
+269
+00:29:03,151 --> 00:29:08,997
+Speaker SPEAKER_02: Um, one thing we've only touched on briefly is the role of curiosity driven basic research.
+
+270
+00:29:09,657 --> 00:29:19,808
+Speaker SPEAKER_02: So artificial neural nets, the groundwork was all done by university researchers, almost all done by university researchers, just following their curiosity.
+
+271
+00:29:20,569 --> 00:29:23,113
+Speaker SPEAKER_02: And funding that kind of research is very important.
+
+272
+00:29:23,633 --> 00:29:25,776
+Speaker SPEAKER_02: It's not as expensive as other kinds of research.
+
+273
+00:29:26,395 --> 00:29:32,482
+Speaker SPEAKER_02: Um, but it lays the foundation for things that later are very expensive and involve a lot of technology.
+
+274
+00:29:35,500 --> 00:29:35,961
+Speaker SPEAKER_00: Thank you.
+
+275
+00:29:36,000 --> 00:29:44,315
+Speaker SPEAKER_00: We've got another one here from Victoria Gibson at Toronto Star, possibly a follow-up to what you were saying about healthcare and AI.
+
+276
+00:29:44,796 --> 00:29:52,348
+Speaker SPEAKER_00: She says, why do you think we haven't yet reached the point you predicted where AI is playing a bigger role in healthcare?
+
+277
+00:29:52,930 --> 00:29:55,855
+Speaker SPEAKER_00: Are there any barriers left to this happening?
+
+278
+00:29:56,897 --> 00:30:01,573
+Speaker SPEAKER_02: One barrier is the medical profession is very conservative.
+
+279
+00:30:01,853 --> 00:30:02,977
+Speaker SPEAKER_02: There's good reasons for that.
+
+280
+00:30:03,017 --> 00:30:08,493
+Speaker SPEAKER_02: If people die when you make a mistake, it's a good
+
+281
+00:30:08,625 --> 00:30:13,534
+Speaker SPEAKER_02: policy to be conservative, but they're relatively slow to adopt new technology.
+
+282
+00:30:14,355 --> 00:30:21,846
+Speaker SPEAKER_02: Another reason is I was just wrong about the speed at which AI systems would be better than radiologists at reading scans.
+
+283
+00:30:22,367 --> 00:30:27,276
+Speaker SPEAKER_02: They're now comparable with radiologists at lots of different kinds of scans and better at a few.
+
+284
+00:30:27,256 --> 00:30:30,761
+Speaker SPEAKER_02: I think in another few years, they'll definitely be better than radiologists.
+
+285
+00:30:31,061 --> 00:30:39,636
+Speaker SPEAKER_02: And what we'll see is collaborations between radiologists and AI systems where the AI system reads the scan and the radiologist checks that it didn't make a mistake.
+
+286
+00:30:40,397 --> 00:30:43,222
+Speaker SPEAKER_02: And after a while, the AI systems will be doing nearly all the work.
+
+287
+00:30:46,122 --> 00:30:46,782
+Speaker SPEAKER_00: Okay, great.
+
+288
+00:30:46,903 --> 00:30:48,325
+Speaker SPEAKER_00: Thank you, Professor Hinton.
+
+289
+00:30:48,424 --> 00:30:52,009
+Speaker SPEAKER_00: That is all the time we have for questions today.
+
+290
+00:30:52,029 --> 00:31:00,800
+Speaker SPEAKER_00: So in the chat box, you will see an email address that you can contact if you have additional questions.
+
+291
+00:31:01,942 --> 00:31:03,384
+Speaker SPEAKER_00: You should see it popping up right now.
+
+292
+00:31:03,443 --> 00:31:08,871
+Speaker SPEAKER_00: That email address is media.relations at utoronto.ca.
+
+293
+00:31:08,891 --> 00:31:14,137
+Speaker SPEAKER_00: So at this point, I will now ask President Gertler to provide closing remarks.
+
+294
+00:31:15,957 --> 00:31:16,877
+Speaker SPEAKER_01: Well, thank you, Lisa.
+
+295
+00:31:17,258 --> 00:31:18,338
+Speaker SPEAKER_01: Thank you, Jeff.
+
+296
+00:31:18,358 --> 00:31:22,923
+Speaker SPEAKER_01: And congratulations once again on this wonderful achievement, your Nobel Prize.
+
+297
+00:31:22,963 --> 00:31:38,337
+Speaker SPEAKER_01: I'm sure I speak for the entire University of Toronto community and indeed for all of Canada and for your many, many friends and colleagues and admirers around the world when I say how incredibly proud we are of your achievements that have been recognized today.
+
+298
+00:31:38,397 --> 00:31:43,784
+Speaker SPEAKER_01: Thank you also to everyone for joining us today in this wonderful celebration.
+
+299
+00:31:44,744 --> 00:31:45,204
+Speaker SPEAKER_01: Cheers.
+

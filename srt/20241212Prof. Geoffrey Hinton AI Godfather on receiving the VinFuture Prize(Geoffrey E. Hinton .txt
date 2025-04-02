@@ -1,0 +1,200 @@
+1
+00:00:00,031 --> 00:00:12,026
+Speaker SPEAKER_00: I was in a car, I was a passenger in a car, reading my cell phone, and I got a message asking me to call Sir Richard Friend, which I assumed was about this award.
+
+2
+00:00:12,708 --> 00:00:19,117
+Speaker SPEAKER_00: I looked up who he was, and so I guessed at that point that I was probably a winner of this award.
+
+3
+00:00:20,077 --> 00:00:26,746
+Speaker SPEAKER_00: And I looked up how much the award was, and it was much more than I expected.
+
+4
+00:00:26,727 --> 00:00:31,457
+Speaker SPEAKER_00: And so I told my partner, I think I just won a three million dollar award.
+
+5
+00:00:32,140 --> 00:00:34,204
+Speaker SPEAKER_00: And she said she thought I was joking.
+
+6
+00:00:34,966 --> 00:00:40,399
+Speaker SPEAKER_00: I had to show I had to show the email to believe it.
+
+7
+00:00:42,015 --> 00:00:46,484
+Speaker SPEAKER_00: My first reaction was they really spare the money.
+
+8
+00:00:46,905 --> 00:00:48,929
+Speaker SPEAKER_00: It's a developing country.
+
+9
+00:00:49,451 --> 00:00:54,801
+Speaker SPEAKER_00: I was very surprised that anybody in Vietnam could produce an award like that.
+
+10
+00:00:54,841 --> 00:00:56,725
+Speaker SPEAKER_00: I knew very little about Vietnam.
+
+11
+00:00:57,366 --> 00:01:02,978
+Speaker SPEAKER_00: I hadn't paid much attention to Vietnam since the 1960s when I was a student.
+
+12
+00:01:02,957 --> 00:01:10,992
+Speaker SPEAKER_00: I was very ignorant about the history of Vietnam, and I knew nothing about the Vinh group.
+
+13
+00:01:11,033 --> 00:01:18,486
+Speaker SPEAKER_00: I didn't understand how successful the Vinh group was, and I didn't understand how rapidly Vietnam was developing.
+
+14
+00:01:18,465 --> 00:01:21,471
+Speaker SPEAKER_00: It was probably about a week before I learned who the other co-laureates were.
+
+15
+00:01:21,992 --> 00:01:36,322
+Speaker SPEAKER_00: I was very pleased to see that Jensen Huang got it, and also Fei-Fei Li, because two of the most important things in the development of neural nets was being able to get enough computation
+
+16
+00:01:36,302 --> 00:01:40,929
+Speaker SPEAKER_00: And the NVIDIA chips were wonderful for that.
+
+17
+00:01:41,850 --> 00:01:45,174
+Speaker SPEAKER_00: Not just the hardware, but the software made them easy to use.
+
+18
+00:01:46,356 --> 00:01:49,221
+Speaker SPEAKER_00: And I've been a big proponent of those chips for a long time.
+
+19
+00:01:50,623 --> 00:02:01,298
+Speaker SPEAKER_00: And Fei-Fei Li had made a wonderful database for doing vision, for testing programs that can recognize objects in images.
+
+20
+00:02:01,278 --> 00:02:12,358
+Speaker SPEAKER_00: And so they were both very important in the development of deep learning, and it was very nice to see them on it, as well as Yoshua and Yan and me, who were important in developing the algorithms for deep learning.
+
+21
+00:02:12,960 --> 00:02:13,920
+Speaker SPEAKER_00: It makes a lot of sense.
+
+22
+00:02:14,162 --> 00:02:17,548
+Speaker SPEAKER_00: It's clear to me that people like
+
+23
+00:02:19,199 --> 00:02:30,076
+Speaker SPEAKER_00: Jensen Huang, producing the hardware at NVIDIA, and also some people at the large companies, like Jeff Dean at Google, and Denis Hassabis at DeepMind.
+
+24
+00:02:32,159 --> 00:02:35,665
+Speaker SPEAKER_00: They were both very important, too, in the development, and they both work in industry.
+
+25
+00:02:36,105 --> 00:02:43,198
+Speaker SPEAKER_00: And I think it's good to just honor the people who are crucial in the development of it, independent of where they work.
+
+26
+00:02:43,987 --> 00:02:51,199
+Speaker SPEAKER_00: doing future has more flexibility, probably, it's got less history and strengths on what is done with the prize.
+
+27
+00:02:52,020 --> 00:02:58,311
+Speaker SPEAKER_00: And so I think it's unlikely that the Nobel Prize committees would have awarded a Nobel Prize to Jensen Huang.
+
+28
+00:02:58,792 --> 00:03:02,638
+Speaker SPEAKER_00: It's partly because they don't have a Nobel Prize for that.
+
+29
+00:03:04,153 --> 00:03:06,719
+Speaker SPEAKER_00: So in that sense, you have a lot more flexibility.
+
+30
+00:03:06,841 --> 00:03:12,133
+Speaker SPEAKER_00: You don't have a limited range of things that they can give a Nobel Prize for.
+
+31
+00:03:13,256 --> 00:03:20,373
+Speaker SPEAKER_00: But it's also a novel thing to do and very good that you could use your flexibility to do things like that.
+
+32
+00:03:20,354 --> 00:03:27,444
+Speaker SPEAKER_00: I think there's a problem, which is that there's been a lot of sexism over the last hundred years.
+
+33
+00:03:28,165 --> 00:03:39,283
+Speaker SPEAKER_00: So there's been, there's many fewer women in areas like computer science and engineering than there should be.
+
+34
+00:03:40,645 --> 00:03:45,112
+Speaker SPEAKER_00: That's a result of historical prejudice.
+
+35
+00:03:45,092 --> 00:03:51,824
+Speaker SPEAKER_00: What you do about it now is tricky because it means there are fewer very distinguished women scientists.
+
+36
+00:03:52,384 --> 00:03:57,152
+Speaker SPEAKER_00: The ones there are obviously extremely good and they've had to deal with the difficult system.
+
+37
+00:03:58,875 --> 00:04:05,406
+Speaker SPEAKER_00: But I don't know what you do about the fact that there's many fewer women than there should be because of the historical injustices.
+
+38
+00:04:06,388 --> 00:04:09,192
+Speaker SPEAKER_00: I leave that to politicians to deal with.
+
+39
+00:04:10,354 --> 00:04:12,197
+Speaker SPEAKER_00: Obviously if you're a young researcher
+
+40
+00:04:12,176 --> 00:04:18,675
+Speaker SPEAKER_00: seeing that there are big prizes is very positive and encouraging.
+
+41
+00:04:18,694 --> 00:04:19,959
+Speaker SPEAKER_00: The prize was very motivating.
+
+42
+00:04:20,901 --> 00:04:25,814
+Speaker SPEAKER_00: I think these big prizes, they do motivate people.
+
+43
+00:04:27,262 --> 00:04:35,060
+Speaker SPEAKER_00: I also think I like the idea that you have a grand prize, but you have some prizes that are still very big, but not as big as the grand prize.
+
+44
+00:04:35,682 --> 00:04:37,146
+Speaker SPEAKER_00: And I think that's a good idea.
+
+45
+00:04:37,668 --> 00:04:41,315
+Speaker SPEAKER_00: I think smaller prizes are also very useful.
+
+46
+00:04:41,877 --> 00:04:44,242
+Speaker SPEAKER_00: Only those aren't smaller prizes, they're still big prizes.
+
+47
+00:04:44,694 --> 00:04:54,838
+Speaker SPEAKER_00: I certainly think that a big prize like the VinFuture Prize can make leading scientists far more aware of what's happening in Vietnam.
+
+48
+00:04:55,660 --> 00:05:02,495
+Speaker SPEAKER_00: So I think as a result of this prize, there's now collaboration between Jensen Huang and Vietnam.
+
+49
+00:05:04,079 --> 00:05:07,406
+Speaker SPEAKER_00: I don't know much about that collaboration, but I think it's had a significant influence there.
+
+50
+00:05:07,788 --> 00:05:10,213
+Speaker SPEAKER_00: And that will surely affect the Vietnamese economy.
+

@@ -1,0 +1,236 @@
+1
+00:00:00,031 --> 00:00:12,083
+Speaker SPEAKER_01: Our next question comes from Matt O'Brien at Associated Press, who asks of Professor Hinton, can you please elaborate on your comment earlier on the call about Sam Altman?
+
+2
+00:00:13,846 --> 00:00:18,530
+Speaker SPEAKER_00: So OpenAI was set up with a big emphasis on safety.
+
+3
+00:00:20,053 --> 00:00:25,178
+Speaker SPEAKER_00: Its primary objective was to develop artificial general intelligence and ensure that it was safe.
+
+4
+00:00:26,524 --> 00:00:31,634
+Speaker SPEAKER_00: One of my former students, Ilya Sutskova, was the chief scientist.
+
+5
+00:00:32,595 --> 00:00:41,451
+Speaker SPEAKER_00: And over time, it turned out that Sam Altman was much less concerned with safety than with profits.
+
+6
+00:00:42,593 --> 00:00:45,478
+Speaker SPEAKER_00: And I think that's unfortunate.
+
+7
+00:00:48,917 --> 00:00:49,399
+Speaker SPEAKER_01: Thank you.
+
+8
+00:00:49,459 --> 00:00:53,203
+Speaker SPEAKER_01: Our next question comes from Jessica Coates at PA Media.
+
+9
+00:00:53,243 --> 00:00:56,426
+Speaker SPEAKER_01: And this is, again, a question for Professor Hinton.
+
+10
+00:00:57,027 --> 00:01:05,736
+Speaker SPEAKER_01: She asks, you mentioned the uncertain future around AI and the need for greater understanding of its potential opportunities and risks.
+
+11
+00:01:06,378 --> 00:01:10,862
+Speaker SPEAKER_01: Do you believe governments look at stepping in to regulate AI more strictly?
+
+12
+00:01:10,903 --> 00:01:14,486
+Speaker SPEAKER_01: How can governments better support AI research?
+
+13
+00:01:15,783 --> 00:01:22,942
+Speaker SPEAKER_00: I think governments can encourage the big companies to spend more of their resources on safety research.
+
+14
+00:01:23,284 --> 00:01:30,805
+Speaker SPEAKER_00: So at present, almost all of the resources go into making the models better, so they can have shiny new models.
+
+15
+00:01:30,784 --> 00:01:39,924
+Speaker SPEAKER_00: and there's a big competition going on, and the models are getting much better, and that's good, but we need to accompany that with a comparable effort on AI safety.
+
+16
+00:01:40,286 --> 00:01:41,728
+Speaker SPEAKER_00: The effort needs to be more than like 1%.
+
+17
+00:01:41,989 --> 00:01:49,587
+Speaker SPEAKER_00: It needs to be like maybe a third of the effort goes into AI safety, because if this stuff becomes unsafe, that's extremely bad.
+
+18
+00:01:53,784 --> 00:01:57,968
+Speaker SPEAKER_01: Our next question is from Tara Deschamps again from CP.
+
+19
+00:01:58,429 --> 00:02:03,855
+Speaker SPEAKER_01: She asks of Professor Hinton, any plans for the money that comes with the Nobel yet?
+
+20
+00:02:05,775 --> 00:02:06,858
+Speaker SPEAKER_00: No specific plans.
+
+21
+00:02:06,957 --> 00:02:08,639
+Speaker SPEAKER_00: I'm going to give it away to charities.
+
+22
+00:02:09,780 --> 00:02:18,408
+Speaker SPEAKER_00: But I know one charity I'll give some to, which provides jobs for neurodiverse young adults.
+
+23
+00:02:20,330 --> 00:02:23,032
+Speaker SPEAKER_00: I will give it to some other charities, but I don't know which yet.
+
+24
+00:02:24,497 --> 00:02:29,014
+Speaker SPEAKER_01: and they were with the Yomiuri Shimbun newspaper.
+
+25
+00:02:29,054 --> 00:02:33,850
+Speaker SPEAKER_01: They ask, when will AI surpass human capabilities?
+
+26
+00:02:34,332 --> 00:02:36,280
+Speaker SPEAKER_01: What will happen as a result?
+
+27
+00:02:37,323 --> 00:02:42,210
+Speaker SPEAKER_00: So nobody knows when, but most of the good researchers I know think it will happen.
+
+28
+00:02:43,352 --> 00:02:47,437
+Speaker SPEAKER_00: My guess is it'll probably happen sometime between 5 and 20 years from now.
+
+29
+00:02:47,837 --> 00:02:48,598
+Speaker SPEAKER_00: It might be longer.
+
+30
+00:02:48,639 --> 00:02:50,942
+Speaker SPEAKER_00: There's a very small chance it'll be sooner.
+
+31
+00:02:50,981 --> 00:02:55,669
+Speaker SPEAKER_00: And we don't know what's going to happen then.
+
+32
+00:02:55,649 --> 00:03:07,514
+Speaker SPEAKER_00: So if you look around, there are very few examples of more intelligent things being controlled by less intelligent things, which makes you wonder whether when AI gets smarter than us, it's going to take over control.
+
+33
+00:03:07,967 --> 00:03:10,812
+Speaker SPEAKER_01: Our next question comes from Victoria Gibson.
+
+34
+00:03:10,891 --> 00:03:14,637
+Speaker SPEAKER_01: Again, she's at the Toronto Star, and this is for Professor Hinton.
+
+35
+00:03:15,237 --> 00:03:23,750
+Speaker SPEAKER_01: She asks, you offered some specifics on where AI can go poorly, such as cyber attacks, false videos, et cetera.
+
+36
+00:03:24,350 --> 00:03:29,538
+Speaker SPEAKER_01: Can you share some more specific examples of how you think it can play a positive role?
+
+37
+00:03:31,039 --> 00:03:31,479
+Speaker SPEAKER_00: Oh, yes.
+
+38
+00:03:31,901 --> 00:03:34,784
+Speaker SPEAKER_00: So if you think about an area like healthcare,
+
+39
+00:03:35,322 --> 00:03:39,425
+Speaker SPEAKER_00: A large part of the Ontario budget goes on health care.
+
+40
+00:03:40,435 --> 00:03:42,537
+Speaker SPEAKER_00: it can make a tremendous difference there.
+
+41
+00:03:43,418 --> 00:03:50,905
+Speaker SPEAKER_00: So I actually made a prediction in 2016 that by now, AI will be reading all the scans that radiologists normally read.
+
+42
+00:03:51,485 --> 00:03:52,826
+Speaker SPEAKER_00: That prediction was wrong.
+
+43
+00:03:52,866 --> 00:03:54,389
+Speaker SPEAKER_00: I was a bit overenthusiastic.
+
+44
+00:03:54,848 --> 00:03:58,293
+Speaker SPEAKER_00: It may be another five years before that happens, but we're clearly getting there.
+
+45
+00:03:59,092 --> 00:04:02,817
+Speaker SPEAKER_00: AI is gonna be much better at diagnosis.
+
+46
+00:04:03,016 --> 00:04:09,783
+Speaker SPEAKER_00: So already, if you take difficult cases to diagnose, a doctor gets 40% correct,
+
+47
+00:04:09,764 --> 00:04:19,879
+Speaker SPEAKER_00: A doctor, an AI system gets 50% correct, and the combination of the doctor with the AI system gets 60% correct, which is a big improvement.
+
+48
+00:04:20,439 --> 00:04:24,766
+Speaker SPEAKER_00: In North America, several hundred thousand people a year die of bad diagnoses.
+
+49
+00:04:25,127 --> 00:04:27,891
+Speaker SPEAKER_00: With AI, diagnoses are going to get much better.
+
+50
+00:04:28,377 --> 00:04:48,985
+Speaker SPEAKER_00: But the thing that's going to really happen is you'll be able to have a family doctor who's an AI who has seen 100 million patients and knows huge amounts and will be much, much better at dealing with whatever ailment it is you have because your AI family doctor will have seen many, many similar cases.
+
+51
+00:04:52,423 --> 00:04:54,387
+Speaker SPEAKER_01: Thank you, Professor Hinton.
+
+52
+00:04:55,148 --> 00:05:01,798
+Speaker SPEAKER_01: We no longer see any other questions, but again, we do have time for one or two more.
+
+53
+00:05:01,819 --> 00:05:17,384
+Speaker SPEAKER_01: So if anybody on the call would like to ask any other questions, we again invite you to include your name and the media outlet you're representing and type out those questions in the Q&A box at the bottom of your screen.
+
+54
+00:05:17,365 --> 00:05:36,521
+Speaker SPEAKER_01: While we wait for any of those last minute questions to come in, Professor Hinton, we are curious, is there anything that we haven't touched on during this press conference today that you would like to mention or anything that we've kind of missed here with all the various press questions?
+
+55
+00:05:37,581 --> 00:05:43,906
+Speaker SPEAKER_00: One thing we've only touched on briefly is the role of curiosity-driven basic research.
+
+56
+00:05:44,528 --> 00:05:54,797
+Speaker SPEAKER_00: So artificial neural nets, the groundwork, was all done by university researchers, almost all done by university researchers, just following their curiosity.
+
+57
+00:05:55,557 --> 00:05:58,100
+Speaker SPEAKER_00: And funding that kind of research is very important.
+
+58
+00:05:58,600 --> 00:06:07,588
+Speaker SPEAKER_00: It's not as expensive as other kinds of research, but it lays the foundation for things that later are very expensive and involve a lot of technology.
+
+59
+00:06:07,567 --> 00:06:07,619
+Unknown Speaker: you
+

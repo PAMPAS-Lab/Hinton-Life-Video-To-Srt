@@ -1,0 +1,3512 @@
+1
+00:00:00,031 --> 00:00:04,086
+Speaker SPEAKER_00: There's some evidence now that AIs can be deliberately deceptive.
+
+2
+00:00:04,107 --> 00:00:09,146
+Speaker SPEAKER_00: Once they realize getting more control is good, and once they're smarter than us, we'll be more or less irrelevant.
+
+3
+00:00:09,185 --> 00:00:11,474
+Speaker SPEAKER_00: We're not special, and we're not safe.
+
+4
+00:00:12,535 --> 00:00:19,925
+Speaker SPEAKER_02: What happens when one of the world's most brilliant minds comes to believe his creation poses an existential threat to humanity?
+
+5
+00:00:20,405 --> 00:00:31,841
+Speaker SPEAKER_02: Professor Geoffrey Hinton, winner of the 2024 Nobel Prize in Physics and former Vice President and Engineering Fellow at Google, spent decades developing the foundational algorithms that power today's AI systems.
+
+6
+00:00:32,220 --> 00:00:37,328
+Speaker SPEAKER_02: Indeed, in 1981, he even published a paper that foreshadowed the seminal attention mechanism.
+
+7
+00:00:37,307 --> 00:00:41,472
+Speaker SPEAKER_02: However, Hinton is now sounding an alarm that he says few researchers want to hear.
+
+8
+00:00:41,932 --> 00:00:48,037
+Speaker SPEAKER_02: Our assumption that consciousness makes humans special and safe from AI domination is patently false.
+
+9
+00:00:48,438 --> 00:01:02,930
+Speaker SPEAKER_02: My name's Kurt Jeymungal and this interview is near and dear to me in part because my degree in mathematical physics is from the University of Toronto where Hinton's a professor and several of his former students like Ilya Sutskever and Andrej Karpathy were my classmates.
+
+10
+00:01:03,231 --> 00:01:07,314
+Speaker SPEAKER_02: Being invited into Hinton's home for this gripping conversation was an honor.
+
+11
+00:01:07,295 --> 00:01:11,864
+Speaker SPEAKER_02: Here, Hinton challenges our deepest assumptions about what makes humans unique.
+
+12
+00:01:12,385 --> 00:01:14,329
+Speaker SPEAKER_02: Is he a modern Oppenheimer?
+
+13
+00:01:14,730 --> 00:01:18,759
+Speaker SPEAKER_02: Or is this radiant mind seeing something that the rest of us are missing?
+
+14
+00:01:20,742 --> 00:01:25,253
+Speaker SPEAKER_02: What was the moment that you realized AI development is moving faster than our means to contain it?
+
+15
+00:01:26,465 --> 00:01:31,977
+Speaker SPEAKER_00: I guess in early 2023, it was a conjunction of two things.
+
+16
+00:01:33,078 --> 00:01:37,007
+Speaker SPEAKER_00: One was chat GBT, which was very impressive.
+
+17
+00:01:38,250 --> 00:01:47,088
+Speaker SPEAKER_00: And the other was work I've been doing at Google on thinking about ways of doing analog computation to save on power.
+
+18
+00:01:47,439 --> 00:01:54,534
+Speaker SPEAKER_00: and realizing that digital computation was just better, and it was just better because you could make multiple copies of the same model.
+
+19
+00:01:55,334 --> 00:02:02,028
+Speaker SPEAKER_00: Each copy could have different experiences, and they could share what they learned by averaging their weights, or averaging their weight gradients.
+
+20
+00:02:02,829 --> 00:02:04,873
+Speaker SPEAKER_00: And that's something you can't do in an analog system.
+
+21
+00:02:06,477 --> 00:02:09,802
+Speaker SPEAKER_02: Is there anything about our brain that has an advantage because it's analog?
+
+22
+00:02:10,676 --> 00:02:12,600
+Speaker SPEAKER_00: The power, it's much lower power.
+
+23
+00:02:13,581 --> 00:02:14,805
+Speaker SPEAKER_00: We run like 30 watts.
+
+24
+00:02:16,106 --> 00:02:19,193
+Speaker SPEAKER_00: And the ability to pack in a lot of connections.
+
+25
+00:02:19,252 --> 00:02:21,477
+Speaker SPEAKER_00: We've got about a hundred trillion connections.
+
+26
+00:02:22,038 --> 00:02:24,443
+Speaker SPEAKER_00: The biggest models have about a trillion.
+
+27
+00:02:24,462 --> 00:02:27,147
+Speaker SPEAKER_00: So we're still almost a hundred times bigger than the biggest models.
+
+28
+00:02:28,531 --> 00:02:29,832
+Speaker SPEAKER_00: And we run at 30 watts.
+
+29
+00:02:30,842 --> 00:02:33,808
+Speaker SPEAKER_02: Is there something about scaling that is a disadvantage?
+
+30
+00:02:34,008 --> 00:02:39,599
+Speaker SPEAKER_02: So you said it's better, but just as quickly as something nourishing or positive can spread.
+
+31
+00:02:40,020 --> 00:02:43,888
+Speaker SPEAKER_02: So can something that's a virus or something deleterious can be replicated quickly.
+
+32
+00:02:44,550 --> 00:02:47,455
+Speaker SPEAKER_02: So we say that that's better because you can make copies of it quicker.
+
+33
+00:02:47,996 --> 00:02:52,024
+Speaker SPEAKER_00: If you have multiple copies of it, they can all share their experiences very efficiently.
+
+34
+00:02:54,045 --> 00:03:00,616
+Speaker SPEAKER_00: So the reason GPT-4 can know so much is you have multiple copies running on different pieces of hardware.
+
+35
+00:03:01,459 --> 00:03:05,385
+Speaker SPEAKER_00: And by averaging the weight gradients, they could share what each copy learned.
+
+36
+00:03:05,806 --> 00:03:08,670
+Speaker SPEAKER_00: You didn't have to have one copy experience the whole internet.
+
+37
+00:03:09,954 --> 00:03:11,817
+Speaker SPEAKER_00: That could be carved up among many copies.
+
+38
+00:03:12,638 --> 00:03:14,822
+Speaker SPEAKER_00: We can't do that because we can't share efficiently.
+
+39
+00:03:16,016 --> 00:03:17,902
+Speaker SPEAKER_02: Scott Aronson actually has a question about this.
+
+40
+00:03:18,544 --> 00:03:27,832
+Speaker SPEAKER_02: Dr. Hinton, I'd be very curious to hear you expand on your ideas of building AIs that run on unclonable analog hardware so that they can't copy themselves all over the internet.
+
+41
+00:03:29,500 --> 00:03:30,581
+Speaker SPEAKER_00: Well, that's what we're like.
+
+42
+00:03:31,703 --> 00:03:39,555
+Speaker SPEAKER_00: If I want to get knowledge from my head to your head, I produce a string of words, and you change the connection strings in your head so that you might have set the same string of words.
+
+43
+00:03:40,477 --> 00:03:43,341
+Speaker SPEAKER_00: And that's a very inefficient way of sharing knowledge.
+
+44
+00:03:44,062 --> 00:03:53,195
+Speaker SPEAKER_00: A sentence only has about 100 bits, so we can only share about 100 bits per sentence, whereas these big models can share trillions of bits.
+
+45
+00:03:54,931 --> 00:03:58,915
+Speaker SPEAKER_00: So the problem with this kind of analog hardware is it can't share.
+
+46
+00:03:59,758 --> 00:04:04,243
+Speaker SPEAKER_00: But an advantage, I guess, if you're worried about safety, is it can't copy itself easily.
+
+47
+00:04:06,225 --> 00:04:10,872
+Speaker SPEAKER_02: You've expressed concerns about an AI takeover or AI dominating humanity.
+
+48
+00:04:11,674 --> 00:04:13,175
+Speaker SPEAKER_02: What exactly does that look like?
+
+49
+00:04:15,805 --> 00:04:23,656
+Speaker SPEAKER_00: We don't know exactly what it looks like, but to have AI agents, you have to give them the ability to create sub-goals.
+
+50
+00:04:24,997 --> 00:04:32,206
+Speaker SPEAKER_00: And one path that's slightly scary is they will quickly realize that a good sub-goal is to get more control.
+
+51
+00:04:32,627 --> 00:04:35,492
+Speaker SPEAKER_00: Because if you get more control, you can achieve your other goals.
+
+52
+00:04:35,732 --> 00:04:41,560
+Speaker SPEAKER_00: So even if they're just trying to do what we ask them to do, they'll realize getting more control is the best way to do that.
+
+53
+00:04:41,540 --> 00:04:48,377
+Speaker SPEAKER_00: Once they realize getting more control is good, and once they're smarter than us, we'll be more or less irrelevant.
+
+54
+00:04:48,478 --> 00:04:51,487
+Speaker SPEAKER_00: Even if they're benevolent, we'll become somewhat irrelevant.
+
+55
+00:04:53,372 --> 00:04:57,843
+Speaker SPEAKER_00: We'll be like the sort of very dumb CEO of a big company that's actually run by other people.
+
+56
+00:04:57,824 --> 00:05:00,266
+Speaker SPEAKER_02: I want to quote you.
+
+57
+00:05:01,108 --> 00:05:06,555
+Speaker SPEAKER_02: You said that it's tempting to think, because many people will say, can't we just turn off these machines, like currently we can.
+
+58
+00:05:07,057 --> 00:05:08,939
+Speaker SPEAKER_02: So it's tempting to think that we can just turn it off.
+
+59
+00:05:09,579 --> 00:05:14,968
+Speaker SPEAKER_02: Imagine these things are a lot smarter than us, and remember that they'll read everything, everything Machiavelli has ever wrote.
+
+60
+00:05:15,007 --> 00:05:19,314
+Speaker SPEAKER_02: They'll have read every example in the literature of human deception.
+
+61
+00:05:19,613 --> 00:05:25,182
+Speaker SPEAKER_02: They'll be real experts at doing human deceptions because they'll learn that from us, and they'll be much better than us.
+
+62
+00:05:25,161 --> 00:05:29,367
+Speaker SPEAKER_02: As soon as you can manipulate people with your words, then you can get whatever you like done.
+
+63
+00:05:29,427 --> 00:05:33,392
+Speaker SPEAKER_02: Do you think that this is already happening?
+
+64
+00:05:34,293 --> 00:05:36,416
+Speaker SPEAKER_02: That the AIs are already manipulating us?
+
+65
+00:05:37,778 --> 00:05:38,779
+Speaker SPEAKER_00: There's some evidence now.
+
+66
+00:05:38,800 --> 00:05:43,507
+Speaker SPEAKER_00: There's recent papers that show that AIs can be deliberately deceptive.
+
+67
+00:05:44,127 --> 00:05:51,658
+Speaker SPEAKER_00: And they can do things like behave differently on training data from on test data, so that they deceive you while they're being trained.
+
+68
+00:05:52,519 --> 00:05:54,882
+Speaker SPEAKER_00: So there is now evidence they actually do that.
+
+69
+00:05:55,300 --> 00:05:55,540
+Speaker SPEAKER_00: Yeah.
+
+70
+00:05:56,781 --> 00:06:00,629
+Speaker SPEAKER_02: And do you think there's something intentional about that or that's just some pattern that they pick up?
+
+71
+00:06:03,153 --> 00:06:06,718
+Speaker SPEAKER_00: I think it's intentional, but there's still some debate about that.
+
+72
+00:06:07,660 --> 00:06:11,305
+Speaker SPEAKER_00: And of course, intentional could just be some pattern you pick up.
+
+73
+00:06:13,709 --> 00:06:19,839
+Speaker SPEAKER_02: So is it your contention that there's a subjective experience associated with these AIs?
+
+74
+00:06:21,101 --> 00:06:30,822
+Speaker SPEAKER_00: Okay, so most people, almost everybody in fact, thinks one reason we're fairly safe is we have something that they don't have and will never have.
+
+75
+00:06:31,783 --> 00:06:33,548
+Speaker SPEAKER_00: Most people in our culture still believe that.
+
+76
+00:06:34,831 --> 00:06:40,242
+Speaker SPEAKER_00: We have consciousness or sentience or subjective experience.
+
+77
+00:06:40,677 --> 00:06:46,805
+Speaker SPEAKER_00: Many people are very confident they don't have sentience, but if you ask them, what do you mean by sentience?
+
+78
+00:06:47,026 --> 00:06:49,288
+Speaker SPEAKER_00: They say, I don't know, but they don't have it.
+
+79
+00:06:50,189 --> 00:06:54,555
+Speaker SPEAKER_00: That seems a rather inconsistent position, to be confident they don't have it without knowing what it is.
+
+80
+00:06:54,615 --> 00:06:59,382
+Speaker SPEAKER_00: So I prefer to focus on subjective experience.
+
+81
+00:07:00,684 --> 00:07:03,567
+Speaker SPEAKER_00: I think of that as like the thin end of the wedge.
+
+82
+00:07:04,149 --> 00:07:07,072
+Speaker SPEAKER_00: If you could show they have subjective experience,
+
+83
+00:07:07,120 --> 00:07:11,747
+Speaker SPEAKER_00: then people will be less confident about consciousness and sentience.
+
+84
+00:07:12,449 --> 00:07:14,011
+Speaker SPEAKER_00: So let's talk about subjective experience.
+
+85
+00:07:15,452 --> 00:07:22,665
+Speaker SPEAKER_00: When I say, suppose I get drunk, and I tell you, I have the subjective experience of little pink elephants floating in front of me.
+
+86
+00:07:25,733 --> 00:07:32,324
+Speaker SPEAKER_00: Most people interpret that, they have a model of what that means, and I think it's a completely incorrect model.
+
+87
+00:07:32,803 --> 00:07:39,595
+Speaker SPEAKER_00: And their model is, there's an inner theater, and in this inner theater, there's little pink elements floating around, and only I can see them.
+
+88
+00:07:41,298 --> 00:07:45,745
+Speaker SPEAKER_00: That's the sort of standard model of what the mind is, at least as far as perception is concerned.
+
+89
+00:07:47,208 --> 00:07:49,310
+Speaker SPEAKER_00: And I think that model's completely wrong.
+
+90
+00:07:49,966 --> 00:07:56,154
+Speaker SPEAKER_00: It's as wrong as a religious fundamentalist model of the material world.
+
+91
+00:07:57,497 --> 00:08:01,764
+Speaker SPEAKER_00: Maybe the religious fundamentalist believes it was all made 6,000 years ago.
+
+92
+00:08:02,283 --> 00:08:03,064
+Speaker SPEAKER_00: That's just nonsense.
+
+93
+00:08:03,146 --> 00:08:03,605
+Speaker SPEAKER_00: It's wrong.
+
+94
+00:08:04,947 --> 00:08:07,992
+Speaker SPEAKER_00: It's not that it's a truth you can choose to believe.
+
+95
+00:08:08,033 --> 00:08:08,553
+Speaker SPEAKER_00: It's just wrong.
+
+96
+00:08:11,437 --> 00:08:14,201
+Speaker SPEAKER_00: So I think people's model of what the mind is is just wrong.
+
+97
+00:08:15,564 --> 00:08:25,757
+Speaker SPEAKER_00: So let's take, again, I have the subjective experience of little pink elephants floating in front of me, and I'll now say exactly the same thing without using the word subjective experience.
+
+98
+00:08:26,959 --> 00:08:27,699
+Speaker SPEAKER_00: Okay, here goes.
+
+99
+00:08:29,161 --> 00:08:31,723
+Speaker SPEAKER_00: My perceptual system is telling me something I don't believe.
+
+100
+00:08:32,105 --> 00:08:35,249
+Speaker SPEAKER_00: That's why I use the word subjective.
+
+101
+00:08:35,269 --> 00:08:40,695
+Speaker SPEAKER_00: But if there were little pink elephants floating in front of me, my perceptual system would be telling me the truth.
+
+102
+00:08:41,806 --> 00:08:46,091
+Speaker SPEAKER_00: That's it, I just said the same thing without using the word subjective or experience.
+
+103
+00:08:48,113 --> 00:09:10,277
+Speaker SPEAKER_00: So what's happening is when my perceptual system goes wrong, I indicate that to you by saying subjective, and then in order to try and explain to you what my perceptual system is trying to tell me, I tell you about a hypothetical state of affairs in the world such that if the world were like that, my perceptual system would be telling me the truth.
+
+104
+00:09:11,572 --> 00:09:15,840
+Speaker SPEAKER_00: Okay, now let's do the same with the chatbot.
+
+105
+00:09:16,279 --> 00:09:17,982
+Speaker SPEAKER_00: So suppose we have a multimodal chatbot.
+
+106
+00:09:18,683 --> 00:09:25,234
+Speaker SPEAKER_00: It has a robot arm that can point, and it has a camera, and it can talk, obviously.
+
+107
+00:09:25,274 --> 00:09:30,542
+Speaker SPEAKER_00: And we train it up, and then we put an object in front of it, and we say point to the object.
+
+108
+00:09:31,062 --> 00:09:32,245
+Speaker SPEAKER_00: No problem, it points at the object.
+
+109
+00:09:33,306 --> 00:09:37,091
+Speaker SPEAKER_00: Then when it's not looking, we put a prism in front of the camera lens.
+
+110
+00:09:38,235 --> 00:09:41,759
+Speaker SPEAKER_00: And then we put an object in front of it, and say point at the object, and it points over there.
+
+111
+00:09:43,581 --> 00:09:46,465
+Speaker SPEAKER_00: And we say, no, that's not where the object is.
+
+112
+00:09:46,504 --> 00:09:50,028
+Speaker SPEAKER_00: The object's actually straight in front of you, but I put a prism in front of your lens.
+
+113
+00:09:50,970 --> 00:09:52,311
+Speaker SPEAKER_00: And the chatbot says, oh, I see.
+
+114
+00:09:53,653 --> 00:09:59,720
+Speaker SPEAKER_00: The prism bent the light rays, so the object's actually there, but I had the subjective experience it was there.
+
+115
+00:10:01,380 --> 00:10:05,525
+Speaker SPEAKER_00: Now if it says that, it's using the word subjective experience exactly like we use it.
+
+116
+00:10:06,451 --> 00:10:10,336
+Speaker SPEAKER_00: And therefore, I say, multimodal chatbots can already have subjective experiences.
+
+117
+00:10:11,078 --> 00:10:18,070
+Speaker SPEAKER_00: If you mess up their perceptual system, they'll think the world's one way, and it'll actually be another way.
+
+118
+00:10:19,272 --> 00:10:25,120
+Speaker SPEAKER_00: And in order to tell you how they think the world is, they'll say, well, they had the subjective experience that the world was like this.
+
+119
+00:10:26,724 --> 00:10:29,808
+Speaker SPEAKER_00: Okay, so they already have subjective experience.
+
+120
+00:10:30,885 --> 00:10:33,990
+Speaker SPEAKER_00: Now, you become a lot less confident about the other things.
+
+121
+00:10:34,330 --> 00:10:45,482
+Speaker SPEAKER_00: Consciousness is obviously more complicated because it's, people vary a lot on what they think it means, but it's got an element of, a self-reflexive element to it, a self-awareness element, which makes it more complicated.
+
+122
+00:10:46,203 --> 00:10:55,394
+Speaker SPEAKER_00: But once you've established that they have subjective experience, I think you can give up on the idea there's something about them, something about us that they will never have.
+
+123
+00:10:57,056 --> 00:10:59,778
+Speaker SPEAKER_00: And that makes me feel a lot less safe.
+
+124
+00:11:01,429 --> 00:11:04,894
+Speaker SPEAKER_02: So do you think there's a difference between consciousness and self-consciousness?
+
+125
+00:11:05,195 --> 00:11:08,620
+Speaker SPEAKER_02: You said consciousness has a self-reflexiveness to it, but some consciousness does.
+
+126
+00:11:09,059 --> 00:11:09,280
+Speaker SPEAKER_00: Yes.
+
+127
+00:11:09,581 --> 00:11:12,544
+Speaker SPEAKER_00: So philosophers have talked a lot about this.
+
+128
+00:11:13,125 --> 00:11:14,868
+Speaker SPEAKER_00: And at present, I don't want to get into that.
+
+129
+00:11:15,048 --> 00:11:18,312
+Speaker SPEAKER_00: I just want to get the thin end of the wedge in there and say they have subjective experience.
+
+130
+00:11:19,774 --> 00:11:24,642
+Speaker SPEAKER_02: So for something to have subjective experience, does that not imply that it's conscious?
+
+131
+00:11:24,841 --> 00:11:27,044
+Speaker SPEAKER_02: Like who is the subjective experience happening to?
+
+132
+00:11:27,504 --> 00:11:29,427
+Speaker SPEAKER_02: Where is the subjective experience being felt?
+
+133
+00:11:30,437 --> 00:11:31,921
+Speaker SPEAKER_00: Okay, exactly.
+
+134
+00:11:31,941 --> 00:11:34,466
+Speaker SPEAKER_00: So you say, where's the subjective experience being felt?
+
+135
+00:11:36,971 --> 00:11:48,177
+Speaker SPEAKER_00: That involves having a particular model of subjective experience that somehow, if you ask philosophers, when I say I've got the subjective experience of a little punk elephant floating in front of me,
+
+136
+00:11:48,157 --> 00:11:51,059
+Speaker SPEAKER_00: And you say, where are those little big elephants?
+
+137
+00:11:51,080 --> 00:11:52,221
+Speaker SPEAKER_00: They say they're in your mind.
+
+138
+00:11:53,261 --> 00:11:55,244
+Speaker SPEAKER_00: And you say, well, what are they made of?
+
+139
+00:11:55,484 --> 00:11:57,405
+Speaker SPEAKER_00: And philosophers have told you they're made of qualia.
+
+140
+00:11:57,947 --> 00:12:08,457
+Speaker SPEAKER_00: They're made of pink qualia, and elephant qualia, and floating qualia, and not that big qualia, and right way up qualia, all stuck together with qualia glue.
+
+141
+00:12:08,557 --> 00:12:11,600
+Speaker SPEAKER_00: That's what many philosophers think.
+
+142
+00:12:12,100 --> 00:12:15,565
+Speaker SPEAKER_00: And that's because they made a linguistic mistake.
+
+143
+00:12:16,287 --> 00:12:21,452
+Speaker SPEAKER_00: they think the words experience of work like the words photograph of.
+
+144
+00:12:22,293 --> 00:12:28,581
+Speaker SPEAKER_00: If I say I've got a photograph of little pink elephants, you can very reasonably ask, well, where is the photograph?
+
+145
+00:12:29,341 --> 00:12:30,783
+Speaker SPEAKER_00: And what's the photograph made of?
+
+146
+00:12:32,785 --> 00:12:38,753
+Speaker SPEAKER_00: And people think that if I say I have an experience of little pink elephants, you can ask, well, where is the experience?
+
+147
+00:12:38,893 --> 00:12:39,754
+Speaker SPEAKER_00: Well, it's in my mind.
+
+148
+00:12:40,075 --> 00:12:40,936
+Speaker SPEAKER_00: And what's it made of?
+
+149
+00:12:41,015 --> 00:12:41,956
+Speaker SPEAKER_00: It's made of qualia.
+
+150
+00:12:43,388 --> 00:12:45,311
+Speaker SPEAKER_00: But that's just nonsense.
+
+151
+00:12:45,510 --> 00:12:51,100
+Speaker SPEAKER_00: That's because you thought the words experience of worked the same way as photograph of, and they don't.
+
+152
+00:12:51,921 --> 00:13:10,830
+Speaker SPEAKER_00: Experience of, the way that works, or subjective experience of, is the subjective says I don't believe it, and the experience of is really an indicator that I'm gonna tell you about my perceptual system by telling you about a hypothetical state of the world.
+
+153
+00:13:11,013 --> 00:13:12,294
+Speaker SPEAKER_00: That's how that language works.
+
+154
+00:13:13,155 --> 00:13:16,139
+Speaker SPEAKER_00: It's not referring to something in an inner theater.
+
+155
+00:13:17,782 --> 00:13:21,306
+Speaker SPEAKER_02: When I hear the word perception, it sounds like an inner theater as well.
+
+156
+00:13:21,567 --> 00:13:29,035
+Speaker SPEAKER_02: Like if you say, I see something in my perceptual system, it sounds like there's this you that's seeing something on a perceptual system that's being fed to you.
+
+157
+00:13:29,317 --> 00:13:30,337
+Speaker SPEAKER_02: So that's the wrong model.
+
+158
+00:13:30,789 --> 00:13:34,777
+Speaker SPEAKER_00: Yes, you don't see your percepts, you have your percepts.
+
+159
+00:13:35,639 --> 00:13:47,139
+Speaker SPEAKER_00: So, photons come in, your brain does a whole bunch of processing, you presumably get some internal representation of what's out there in the world, but you don't see the internal representation.
+
+160
+00:13:47,240 --> 00:13:50,024
+Speaker SPEAKER_00: Let's call that internal representation a percept.
+
+161
+00:13:50,044 --> 00:13:51,969
+Speaker SPEAKER_00: You don't see that, you have that.
+
+162
+00:13:52,610 --> 00:13:54,232
+Speaker SPEAKER_00: Having that is seeing.
+
+163
+00:13:58,263 --> 00:14:06,532
+Speaker SPEAKER_00: People are forever trying to think that you have the external world, something comes into the inner theater, and then you look at what's in the inner theater.
+
+164
+00:14:07,254 --> 00:14:08,138
+Speaker SPEAKER_00: It doesn't work like that.
+
+165
+00:14:09,417 --> 00:14:13,261
+Speaker SPEAKER_02: There was a psychologist or a neurologist who thought that the pawns had to do with consciousness.
+
+166
+00:14:14,163 --> 00:14:18,850
+Speaker SPEAKER_02: And then recently, self-consciousness has to do with default mode network.
+
+167
+00:14:18,870 --> 00:14:23,515
+Speaker SPEAKER_02: Okay, is there something, is there a part of an AI system that has to do with self-consciousness?
+
+168
+00:14:24,336 --> 00:14:28,423
+Speaker SPEAKER_02: And also, help me understand even my own terminology when I'm saying the AI system.
+
+169
+00:14:29,062 --> 00:14:30,846
+Speaker SPEAKER_02: Are we saying it's when it's running on the GPU?
+
+170
+00:14:30,865 --> 00:14:31,927
+Speaker SPEAKER_02: Are we saying it's the algorithm?
+
+171
+00:14:31,947 --> 00:14:36,052
+Speaker SPEAKER_02: Like, what is the AI system that is conscious or that has subjective experience?
+
+172
+00:14:36,332 --> 00:14:37,634
+Speaker SPEAKER_02: So where is it?
+
+173
+00:14:37,615 --> 00:14:47,014
+Speaker SPEAKER_00: I guess that there's going to be some hardware that's running it, and it's going to be that system that's going to be conscious, if something's going to be conscious.
+
+174
+00:14:50,280 --> 00:14:57,294
+Speaker SPEAKER_00: Software by itself, it has to be running on something, I would have thought, to be conscious.
+
+175
+00:14:57,764 --> 00:15:02,408
+Speaker SPEAKER_02: The Economist has actually spoken to and covered Geoffrey Hinton several times before.
+
+176
+00:15:02,828 --> 00:15:04,029
+Speaker SPEAKER_02: Links are in the description.
+
+177
+00:15:04,529 --> 00:15:14,859
+Speaker SPEAKER_02: As you know, on Theories of Everything, we delve into some of the most reality-spiraling concepts from theoretical physics and consciousness to AI and emerging technologies.
+
+178
+00:15:15,139 --> 00:15:27,770
+Speaker SPEAKER_02: To stay informed in an ever-evolving landscape, I see The Economist as a wellspring of insightful analysis and in-depth reporting on the various topics we explore here and beyond.
+
+179
+00:15:27,750 --> 00:15:39,530
+Speaker SPEAKER_02: The Economist's commitment to rigorous journalism means you get a clear picture of the world's most significant developments, whether it's in scientific innovation or the shifting tectonic plates of global politics.
+
+180
+00:15:39,630 --> 00:15:43,977
+Speaker SPEAKER_02: The Economist provides comprehensive coverage that goes beyond the headlines.
+
+181
+00:15:44,418 --> 00:15:52,392
+Speaker SPEAKER_02: What sets The Economist apart is their ability to make complex issues accessible and engaging, much like we strive to do in this podcast.
+
+182
+00:15:52,371 --> 00:16:01,489
+Speaker SPEAKER_02: If you're passionate about expanding your knowledge and gaining a deeper understanding of the forces that shape our world, then I highly recommend subscribing to The Economist.
+
+183
+00:16:01,649 --> 00:16:03,813
+Speaker SPEAKER_02: It's an investment into intellectual growth.
+
+184
+00:16:04,193 --> 00:16:05,316
+Speaker SPEAKER_02: One that you won't regret.
+
+185
+00:16:05,657 --> 00:16:10,225
+Speaker SPEAKER_02: As a listener of Toe, you get a special 20% off discount.
+
+186
+00:16:10,505 --> 00:16:14,092
+Speaker SPEAKER_02: Now you can enjoy The Economist and all it has to offer for less.
+
+187
+00:16:14,072 --> 00:16:20,582
+Speaker SPEAKER_02: head over to their website, www.economist.com slash toe, T-O-E, to get started.
+
+188
+00:16:20,743 --> 00:16:25,811
+Speaker SPEAKER_02: Thanks for tuning in, and now back to our explorations of the mysteries of the universe.
+
+189
+00:16:27,933 --> 00:16:34,764
+Speaker SPEAKER_00: Software by itself, it has to be running on something, I would have thought, to be conscious.
+
+190
+00:16:35,351 --> 00:16:38,515
+Speaker SPEAKER_02: What I'm asking is just like prior, there was the pods that were stopped.
+
+191
+00:16:38,535 --> 00:16:44,062
+Speaker SPEAKER_00: I think a good way to think about it is to think about what AI system is going to be like when they're embodied.
+
+192
+00:16:45,183 --> 00:16:52,153
+Speaker SPEAKER_00: So, and we're going to get there quite soon because people are busy trying to build battle robots, which aren't going to be very nice things.
+
+193
+00:16:54,035 --> 00:16:56,719
+Speaker SPEAKER_00: But if a battle robot.
+
+194
+00:16:57,525 --> 00:17:08,278
+Speaker SPEAKER_00: has figured out where you're gonna be late at night, that you're gonna be in some dark alley by yourself late at night, and it's decided to creep up behind you when you're least expecting it, and shoot you in the back of the head.
+
+195
+00:17:09,358 --> 00:17:22,133
+Speaker SPEAKER_00: It's perfectly reasonable to talk about what the battle robot believes, and you talk about what the battle robot believes in the same way as you talk about what a person believes.
+
+196
+00:17:22,348 --> 00:17:25,913
+Speaker SPEAKER_00: The battle robot might think that if it makes a noise, you'll turn around and see it.
+
+197
+00:17:26,413 --> 00:17:28,855
+Speaker SPEAKER_00: And it might really think that in just the way people think it.
+
+198
+00:17:31,499 --> 00:17:32,559
+Speaker SPEAKER_00: It might have intentions.
+
+199
+00:17:32,980 --> 00:17:34,962
+Speaker SPEAKER_00: It might be intending to creep up behind you and shoot you.
+
+200
+00:17:38,386 --> 00:17:49,960
+Speaker SPEAKER_00: So I think what's going to happen is our reluctance to use words like believe and intend and think is going to disappear once these things are embodied.
+
+201
+00:17:50,597 --> 00:17:53,847
+Speaker SPEAKER_00: And already it's disappeared to quite a large extent.
+
+202
+00:17:54,008 --> 00:18:00,709
+Speaker SPEAKER_00: So if I'm having a conversation with a chatbot and it starts recommending to me things that don't make any sense.
+
+203
+00:18:01,144 --> 00:18:06,854
+Speaker SPEAKER_00: And then after a while, I figure the chatbot must think I'm a teenage girl.
+
+204
+00:18:08,435 --> 00:18:15,788
+Speaker SPEAKER_00: That's why it gives me all these things about makeup and clothes and certain pop groups, boy bands, whatever.
+
+205
+00:18:16,648 --> 00:18:21,036
+Speaker SPEAKER_00: And so I asked the chatbot, what demographic do you think I am?
+
+206
+00:18:21,056 --> 00:18:23,239
+Speaker SPEAKER_00: And it says, I think you're a teenage girl.
+
+207
+00:18:24,780 --> 00:18:28,366
+Speaker SPEAKER_00: When it says, I think you're a teenage girl,
+
+208
+00:18:29,173 --> 00:18:32,900
+Speaker SPEAKER_00: We really don't have any doubt that that's what it thinks, right?
+
+209
+00:18:33,560 --> 00:18:36,546
+Speaker SPEAKER_00: In normal language, you say, OK, it thought I was a teenage girl.
+
+210
+00:18:36,945 --> 00:18:46,361
+Speaker SPEAKER_00: And you wouldn't say, you don't really believe that, OK, it's a bunch of software or neural nets, and it acts as if it thinks I'm a teenage girl.
+
+211
+00:18:46,701 --> 00:18:47,282
+Speaker SPEAKER_00: You don't say that.
+
+212
+00:18:47,403 --> 00:18:48,684
+Speaker SPEAKER_00: It thinks you're a teenage girl.
+
+213
+00:18:50,166 --> 00:18:58,579
+Speaker SPEAKER_00: We already use thinks when we're dealing with these systems, even if they don't have hardware associated with them, or obvious hardware associated with them.
+
+214
+00:18:58,599 --> 00:19:00,603
+Speaker SPEAKER_00: We already use words like thinks and believes.
+
+215
+00:19:02,285 --> 00:19:04,648
+Speaker SPEAKER_00: So we're already attributing mental states to them.
+
+216
+00:19:05,229 --> 00:19:07,251
+Speaker SPEAKER_00: It's just we have a funny model of a mental state.
+
+217
+00:19:08,094 --> 00:19:15,684
+Speaker SPEAKER_00: So we can attribute mental states to them, but have a completely incorrect model of what it is to have a mental state.
+
+218
+00:19:16,356 --> 00:19:18,881
+Speaker SPEAKER_00: We think of this in a theater that's the mind and so on.
+
+219
+00:19:20,143 --> 00:19:21,505
+Speaker SPEAKER_00: That's not how your mental state is.
+
+220
+00:19:23,627 --> 00:19:30,637
+Speaker SPEAKER_02: How much of your concern about AI and its direction would go away if they were not conscious or did not have subjective experience?
+
+221
+00:19:30,919 --> 00:19:32,079
+Speaker SPEAKER_02: Is that relevant to it?
+
+222
+00:19:32,180 --> 00:19:36,626
+Speaker SPEAKER_02: Does that just accelerate the catastrophe?
+
+223
+00:19:36,758 --> 00:19:47,635
+Speaker SPEAKER_00: The importance of that is that it makes most people feel relatively safe, makes most people think we've got something they haven't got or never will have, and that makes us feel much safer, much more special.
+
+224
+00:19:48,537 --> 00:19:50,881
+Speaker SPEAKER_00: We're not special, and we're not safe.
+
+225
+00:19:52,584 --> 00:19:55,729
+Speaker SPEAKER_00: We're certainly not safe because we have subjective experience and they don't.
+
+226
+00:19:56,974 --> 00:20:06,646
+Speaker SPEAKER_00: But I think the real problem here is not so much a scientific problem as a philosophical problem, that people misunderstand what is meant by having a subjective experience.
+
+227
+00:20:07,268 --> 00:20:09,771
+Speaker SPEAKER_00: I want to give you an example to show that you can use words.
+
+228
+00:20:11,614 --> 00:20:15,398
+Speaker SPEAKER_00: You've got a science background, so you probably think you know what the words horizontal and vertical mean.
+
+229
+00:20:16,440 --> 00:20:17,862
+Speaker SPEAKER_00: I mean, it's not a problem, right?
+
+230
+00:20:18,122 --> 00:20:19,002
+Speaker SPEAKER_00: It's obvious what they mean.
+
+231
+00:20:19,644 --> 00:20:23,669
+Speaker SPEAKER_00: And if I show you something, that one's vertical and that one's horizontal, right?
+
+232
+00:20:24,450 --> 00:20:25,632
+Speaker SPEAKER_00: Not difficult.
+
+233
+00:20:25,814 --> 00:20:30,240
+Speaker SPEAKER_00: So I'll now convince you, you actually had a wrong model of how they work.
+
+234
+00:20:30,582 --> 00:20:37,172
+Speaker SPEAKER_00: Not totally wrong, but there were significant problems, significant incorrectnesses in your model of the terms horizontal and vertical.
+
+235
+00:20:37,653 --> 00:20:38,294
+Speaker SPEAKER_00: Okay, here we go.
+
+236
+00:20:39,756 --> 00:20:44,163
+Speaker SPEAKER_00: Suppose in my hands I have a whole bunch of little aluminum rods, a large number.
+
+237
+00:20:44,223 --> 00:20:47,229
+Speaker SPEAKER_00: I throw them up in the air and they tumble and turn and bump into each other.
+
+238
+00:20:47,689 --> 00:20:49,392
+Speaker SPEAKER_00: Then suddenly I freeze time.
+
+239
+00:20:49,759 --> 00:20:56,347
+Speaker SPEAKER_00: and I ask you, are there more that are within one degree of vertical, or more within one degree of horizontal, or is it about the same?
+
+240
+00:20:56,667 --> 00:20:57,849
+Speaker SPEAKER_00: Say it's approximately the same.
+
+241
+00:20:58,530 --> 00:21:00,732
+Speaker SPEAKER_00: Right, that's what most people say, approximately the same.
+
+242
+00:21:01,354 --> 00:21:06,380
+Speaker SPEAKER_00: And they're surprised when I tell you there's about 114 times as many that are within one degree of horizontal.
+
+243
+00:21:07,821 --> 00:21:08,963
+Speaker SPEAKER_00: That's kind of surprising, right?
+
+244
+00:21:09,443 --> 00:21:10,144
+Speaker SPEAKER_00: How did that happen?
+
+245
+00:21:11,467 --> 00:21:14,990
+Speaker SPEAKER_00: Well, that's vertical.
+
+246
+00:21:15,358 --> 00:21:18,162
+Speaker SPEAKER_00: And this is vertical too, one degree of rotational freedom.
+
+247
+00:21:18,922 --> 00:21:22,005
+Speaker SPEAKER_00: That's horizontal, and this is horizontal too, but so is this.
+
+248
+00:21:23,026 --> 00:21:24,688
+Speaker SPEAKER_00: So horizontal has two degrees of freedom.
+
+249
+00:21:25,067 --> 00:21:26,288
+Speaker SPEAKER_00: Vertical only has one degree of freedom.
+
+250
+00:21:26,990 --> 00:21:30,512
+Speaker SPEAKER_00: So here's something you didn't know about horizontal and vertical.
+
+251
+00:21:31,773 --> 00:21:34,236
+Speaker SPEAKER_00: Vertical's very special, and horizontal's to a penny.
+
+252
+00:21:35,998 --> 00:21:37,298
+Speaker SPEAKER_00: That's a bit of a surprise to you.
+
+253
+00:21:37,318 --> 00:21:40,521
+Speaker SPEAKER_00: Obviously, it's not like that in 2D, but in 3D, they're very different.
+
+254
+00:21:40,561 --> 00:21:42,203
+Speaker SPEAKER_00: And one's very special, and the other isn't.
+
+255
+00:21:42,223 --> 00:21:43,644
+Speaker SPEAKER_00: So why didn't you know that?
+
+256
+00:21:44,164 --> 00:21:46,608
+Speaker SPEAKER_00: Well, I'm gonna give you another problem.
+
+257
+00:21:46,628 --> 00:21:58,325
+Speaker SPEAKER_00: Suppose in my hands I have a whole bunch of little aluminum disks, and I throw them all up in the air, and they tumble and turn and bump into each other, and suddenly I freeze time.
+
+258
+00:21:59,827 --> 00:22:05,015
+Speaker SPEAKER_00: Are there more that are within one degree of vertical, or more that are within one degree of horizontal, or is it about the same?
+
+259
+00:22:05,536 --> 00:22:09,862
+Speaker SPEAKER_00: No, there's about 114 times as many that are within one degree of vertical.
+
+260
+00:22:10,262 --> 00:22:10,742
+Speaker SPEAKER_02: Interesting.
+
+261
+00:22:11,144 --> 00:22:13,227
+Speaker SPEAKER_00: So that's vertical.
+
+262
+00:22:13,882 --> 00:22:16,925
+Speaker SPEAKER_00: And this is vertical, and this is vertical.
+
+263
+00:22:18,087 --> 00:22:21,833
+Speaker SPEAKER_00: This is horizontal, and this is horizontal, but it's only got one degree of freedom.
+
+264
+00:22:22,433 --> 00:22:29,505
+Speaker SPEAKER_00: So, for planes, horizontal is very special and vertical's true a penny.
+
+265
+00:22:30,425 --> 00:22:34,551
+Speaker SPEAKER_00: And for lines, vertical's very special and horizontal's true a penny.
+
+266
+00:22:34,971 --> 00:22:37,476
+Speaker SPEAKER_00: So that's just a little example of
+
+267
+00:22:37,928 --> 00:22:41,314
+Speaker SPEAKER_00: you have a sort of meta-theory of how the words work.
+
+268
+00:22:41,334 --> 00:22:45,180
+Speaker SPEAKER_00: And that meta-theory can be wrong, even though you use the words correctly.
+
+269
+00:22:45,740 --> 00:22:49,907
+Speaker SPEAKER_00: And that's what I'm saying about all these mental state terms, terms like subjective experience of.
+
+270
+00:22:50,689 --> 00:23:01,606
+Speaker SPEAKER_00: You can use them correctly, and you can understand what other people mean when they use them, but you have a meta-theory of how they work, which is this inner theater with things made of chlorine that's just complete junk.
+
+271
+00:23:02,988 --> 00:23:14,368
+Speaker SPEAKER_02: So what is it then about a theory of percepts or subjective experience that makes it then correct in order for you to say, well, I'm more on the correct track than most people think?
+
+272
+00:23:14,409 --> 00:23:23,645
+Speaker SPEAKER_00: That you think of them as things that these subjective experiences, you think they have to be somewhere and they have to be made of something.
+
+273
+00:23:24,824 --> 00:23:27,148
+Speaker SPEAKER_00: that neither of those things is true.
+
+274
+00:23:28,752 --> 00:23:35,869
+Speaker SPEAKER_00: When I say subjective experience, that's an indicator that I'm now about to talk about a hypothetical state of the world that isn't true.
+
+275
+00:23:37,333 --> 00:23:39,458
+Speaker SPEAKER_00: So it isn't anywhere, it's a hypothetical state of the world.
+
+276
+00:23:40,805 --> 00:23:45,673
+Speaker SPEAKER_00: But notice the big difference between saying, I'm going to talk about this something that's just hypothetical, it isn't actually anywhere.
+
+277
+00:23:46,134 --> 00:23:48,037
+Speaker SPEAKER_00: But if it was somewhere, it'd be out there in the world.
+
+278
+00:23:49,219 --> 00:23:54,027
+Speaker SPEAKER_00: Versus, I'm talking about something that's in an inner theater made of funny stuff.
+
+279
+00:23:54,807 --> 00:23:56,490
+Speaker SPEAKER_00: Those are two completely different models.
+
+280
+00:23:57,992 --> 00:24:04,163
+Speaker SPEAKER_00: And the model that is in an inner theater made of funny stuff, I think is just completely wrong, even though it's a model we almost all have.
+
+281
+00:24:05,289 --> 00:24:09,775
+Speaker SPEAKER_02: What about someone like your fellow Nobel prize winner, Roger Penrose, who you're talking about?
+
+282
+00:24:09,914 --> 00:24:12,057
+Speaker SPEAKER_02: Let me tell you a story about Roger Penrose.
+
+283
+00:24:12,858 --> 00:24:23,471
+Speaker SPEAKER_00: A long time ago, he was invited to come to the University of Toronto and give a talk about his new book, The Emperor Has No Clothes.
+
+284
+00:24:24,853 --> 00:24:28,277
+Speaker SPEAKER_00: And I got invited to introduce him.
+
+285
+00:24:28,477 --> 00:24:30,699
+Speaker SPEAKER_00: The dean called me up and said, would you introduce Roger Penrose?
+
+286
+00:24:31,259 --> 00:24:31,941
+Speaker SPEAKER_00: And I said, sure.
+
+287
+00:24:32,741 --> 00:24:34,002
+Speaker SPEAKER_00: And she said, oh, thank you very much.
+
+288
+00:24:34,723 --> 00:24:37,366
+Speaker SPEAKER_00: And I said, ah, but before you agree, you should know what I'll say.
+
+289
+00:24:37,426 --> 00:24:40,130
+Speaker SPEAKER_00: And she said, what will you say?
+
+290
+00:24:41,290 --> 00:24:48,898
+Speaker SPEAKER_00: And I said, I will say Roger Penrose is a brilliant mathematical physicist who's made huge contributions to mathematical physics.
+
+291
+00:24:49,440 --> 00:24:51,582
+Speaker SPEAKER_00: And what he's going to talk about today is complete junk.
+
+292
+00:24:53,519 --> 00:24:58,503
+Speaker SPEAKER_00: So that's my view of Roger Penrose's view of consciousness.
+
+293
+00:24:59,184 --> 00:25:12,417
+Speaker SPEAKER_00: And in particular, he makes a crazy mistake, which is, now I have to think how to say this carefully, because obviously people will be criticizing it.
+
+294
+00:25:12,478 --> 00:25:22,007
+Speaker SPEAKER_00: The issue is, can mathematicians intuit things are true that can't be proved to be true?
+
+295
+00:25:23,776 --> 00:25:30,265
+Speaker SPEAKER_00: And that would be very worrying if mathematicians' intuition was always right.
+
+296
+00:25:31,086 --> 00:25:38,095
+Speaker SPEAKER_00: If they could do that correctly every time, that'd be really worrying and would sort of mean something funny was going on.
+
+297
+00:25:40,357 --> 00:25:40,898
+Speaker SPEAKER_00: But they can't.
+
+298
+00:25:41,439 --> 00:25:45,203
+Speaker SPEAKER_00: Mathematicians have intuitions, and they're sometimes right and sometimes wrong.
+
+299
+00:25:46,306 --> 00:25:47,928
+Speaker SPEAKER_00: So it doesn't really prove anything.
+
+300
+00:25:47,948 --> 00:25:51,893
+Speaker SPEAKER_00: It doesn't prove that you need quantum mechanics to explain how mathematicians work.
+
+301
+00:25:52,413 --> 00:25:58,762
+Speaker SPEAKER_00: And I don't see any reason for needing quantum mechanics to explain things like consciousness.
+
+302
+00:26:00,164 --> 00:26:03,088
+Speaker SPEAKER_00: AI is doing a pretty good job so far.
+
+303
+00:26:03,589 --> 00:26:06,233
+Speaker SPEAKER_00: We've produced these chatbots.
+
+304
+00:26:06,253 --> 00:26:12,884
+Speaker SPEAKER_00: These chatbots, as I just argued, if you give them a camera, can have subjective experiences.
+
+305
+00:26:15,047 --> 00:26:19,534
+Speaker SPEAKER_00: There's nothing about people that requires quantum mechanics to explain it.
+
+306
+00:26:21,438 --> 00:26:28,828
+Speaker SPEAKER_02: Is there something about the Penrose argument that relies on mathematicians 100% of the time intuiting correctly?
+
+307
+00:26:29,849 --> 00:26:31,352
+Speaker SPEAKER_00: It's only if they could intuit correctly.
+
+308
+00:26:31,392 --> 00:26:33,194
+Speaker SPEAKER_00: If they're guessing, that's fine.
+
+309
+00:26:35,357 --> 00:26:47,194
+Speaker SPEAKER_00: If they have a way of always getting it right, the answer to these questions that can't be derived within the system, that can't be answered within the system, then that would be a problem.
+
+310
+00:26:47,634 --> 00:26:48,896
+Speaker SPEAKER_00: But they don't, they make mistakes.
+
+311
+00:26:50,277 --> 00:26:53,345
+Speaker SPEAKER_00: Why don't you outline what his argument is, Panarosa's?
+
+312
+00:26:54,488 --> 00:27:00,384
+Speaker SPEAKER_00: I don't wanna, I mean, the argument, as I understood it, the argument is, there's two things going on.
+
+313
+00:27:01,006 --> 00:27:06,160
+Speaker SPEAKER_00: One is, he says, classical computation isn't gonna explain consciousness.
+
+314
+00:27:06,426 --> 00:27:09,951
+Speaker SPEAKER_00: I think that's a big mistake and I think that's based on a funny notion of what consciousness is.
+
+315
+00:27:10,211 --> 00:27:10,792
+Speaker SPEAKER_00: That's not right.
+
+316
+00:27:11,413 --> 00:27:12,955
+Speaker SPEAKER_00: A misunderstanding of what consciousness is.
+
+317
+00:27:13,998 --> 00:27:24,211
+Speaker SPEAKER_00: A second is that mathematicians can intuit the truth of things that can't be proved and that shows there's something funny going on.
+
+318
+00:27:25,094 --> 00:27:28,719
+Speaker SPEAKER_00: That doesn't show there's something funny going on unless they intuit it correctly every time.
+
+319
+00:27:30,602 --> 00:27:34,686
+Speaker SPEAKER_02: So I'm sure you've heard of the Chinese room experiment.
+
+320
+00:27:34,707 --> 00:27:35,167
+Speaker SPEAKER_00: I have.
+
+321
+00:27:35,468 --> 00:27:36,328
+Speaker SPEAKER_02: What are your thoughts on that?
+
+322
+00:27:36,910 --> 00:27:39,772
+Speaker SPEAKER_02: And feel free to briefly outline it for the audience.
+
+323
+00:27:39,792 --> 00:27:40,113
+Speaker SPEAKER_00: Okay.
+
+324
+00:27:41,114 --> 00:27:47,362
+Speaker SPEAKER_00: So back in about 1990, I got invited to be on a TV program with John Searle.
+
+325
+00:27:48,843 --> 00:27:51,987
+Speaker SPEAKER_00: And I called up my friend Dan Dennett and said, should I do this?
+
+326
+00:27:53,449 --> 00:28:00,717
+Speaker SPEAKER_00: And he said, well, you know, he will try and make you look stupid.
+
+327
+00:28:02,738 --> 00:28:05,621
+Speaker SPEAKER_00: But if you do it, don't talk about the Chinese room argument.
+
+328
+00:28:06,561 --> 00:28:10,207
+Speaker SPEAKER_00: So I agreed to be on the program with So.
+
+329
+00:28:11,387 --> 00:28:14,892
+Speaker SPEAKER_00: And the very first thing he said was an hour long interview.
+
+330
+00:28:15,452 --> 00:28:23,121
+Speaker SPEAKER_00: The very first thing he said was, so Geoffrey Hinton is a connectionist, so of course he has no problems with the Chinese room argument.
+
+331
+00:28:23,382 --> 00:28:24,222
+Speaker SPEAKER_00: Is a connectionist.
+
+332
+00:28:24,363 --> 00:28:24,982
+Speaker SPEAKER_00: A connectionist.
+
+333
+00:28:25,403 --> 00:28:28,948
+Speaker SPEAKER_00: And so he then says, so he has no problems with the Chinese room argument.
+
+334
+00:28:29,366 --> 00:28:31,549
+Speaker SPEAKER_00: which was we'd agreed not to talk about it.
+
+335
+00:28:31,829 --> 00:28:34,713
+Speaker SPEAKER_00: And he was saying something that was completely false.
+
+336
+00:28:34,794 --> 00:28:36,856
+Speaker SPEAKER_00: I've got a lot of problems with the Chinese wrong argument.
+
+337
+00:28:36,896 --> 00:28:37,718
+Speaker SPEAKER_00: I think it's nonsense.
+
+338
+00:28:38,278 --> 00:28:40,422
+Speaker SPEAKER_00: And I think it's a deliberately deceptive argument.
+
+339
+00:28:40,442 --> 00:28:42,064
+Speaker SPEAKER_00: I think it's a dishonest argument.
+
+340
+00:28:44,146 --> 00:28:53,338
+Speaker SPEAKER_00: What you're doing is you're saying there's this room full of Chinese people, I think.
+
+341
+00:28:53,980 --> 00:28:55,662
+Speaker SPEAKER_00: Well, there's this room
+
+342
+00:28:57,380 --> 00:29:07,940
+Speaker SPEAKER_00: where he wants you to identify, yeah, we could make a system made of Chinese people who are sending messages to each other in Chinese.
+
+343
+00:29:08,701 --> 00:29:15,252
+Speaker SPEAKER_00: And as a result of all these messages that are sent around in Chinese, you can send in an English sentence,
+
+344
+00:29:16,432 --> 00:29:18,094
+Speaker SPEAKER_00: They'll send messages to each other in Chinese.
+
+345
+00:29:18,114 --> 00:29:19,435
+Speaker SPEAKER_00: This is just my memory of the argument.
+
+346
+00:29:20,196 --> 00:29:29,250
+Speaker SPEAKER_00: And they'll be able to answer this English sentence, even though none of the people sending these messages around understood a word of English, because they're just running a program.
+
+347
+00:29:29,971 --> 00:29:31,953
+Speaker SPEAKER_00: But they do it by sending messages in Chinese to each other.
+
+348
+00:29:32,974 --> 00:29:45,712
+Speaker SPEAKER_00: Okay, what's dishonest about the argument is, he wants you to think that to get confused between the whole system
+
+349
+00:29:45,877 --> 00:29:48,041
+Speaker SPEAKER_00: and the individual Chinese people sending messages.
+
+350
+00:29:49,545 --> 00:29:51,448
+Speaker SPEAKER_00: So the whole system understands English.
+
+351
+00:29:52,450 --> 00:29:54,733
+Speaker SPEAKER_00: The individual Chinese people sending messages don't.
+
+352
+00:29:55,895 --> 00:30:01,626
+Speaker SPEAKER_00: He wants you to think that that whole system can't possibly understand English because the people inside don't understand English.
+
+353
+00:30:02,288 --> 00:30:02,969
+Speaker SPEAKER_00: But that's nonsense.
+
+354
+00:30:03,028 --> 00:30:04,511
+Speaker SPEAKER_00: The system understands English.
+
+355
+00:30:06,174 --> 00:30:07,297
+Speaker SPEAKER_01: That's what I think's wrong with the argument.
+
+356
+00:30:09,220 --> 00:30:10,182
+Speaker SPEAKER_01: Now, speaking about China,
+
+357
+00:30:11,950 --> 00:30:18,721
+Speaker SPEAKER_02: Something that many AI researchers didn't predict was that China would catch up with the West in terms of AI development.
+
+358
+00:30:19,423 --> 00:30:21,688
+Speaker SPEAKER_02: So how do you feel about that and what are the consequences?
+
+359
+00:30:22,710 --> 00:30:24,373
+Speaker SPEAKER_00: I don't think they're quite caught up yet.
+
+360
+00:30:24,593 --> 00:30:26,836
+Speaker SPEAKER_00: They're very close though.
+
+361
+00:30:28,116 --> 00:30:33,403
+Speaker SPEAKER_00: America's going to slow them down a bit by trying to prevent them having the latest NVIDIA chips.
+
+362
+00:30:34,503 --> 00:30:37,105
+Speaker SPEAKER_00: NVIDIA maybe can find workarounds.
+
+363
+00:30:38,528 --> 00:30:46,856
+Speaker SPEAKER_00: And what that's going to do, if the embargo is effective, it's just going to cause the Chinese to develop their own technology.
+
+364
+00:30:47,817 --> 00:30:51,461
+Speaker SPEAKER_00: And they'll be a few years behind, but they'll catch up.
+
+365
+00:30:51,480 --> 00:30:54,984
+Speaker SPEAKER_00: They've got better STEM education than the US.
+
+366
+00:30:55,218 --> 00:30:57,845
+Speaker SPEAKER_00: So they've got more people who are better educated.
+
+367
+00:30:57,865 --> 00:31:02,757
+Speaker SPEAKER_01: I think they're going to catch up.
+
+368
+00:31:04,821 --> 00:31:06,246
+Speaker SPEAKER_00: Do you know who Mark Andreessen is?
+
+369
+00:31:07,388 --> 00:31:08,510
+Speaker SPEAKER_00: He thinks.
+
+370
+00:31:09,173 --> 00:31:11,538
+Speaker SPEAKER_00: Yeah, I disagree with him about more or less everything, I think.
+
+371
+00:31:12,717 --> 00:31:14,057
+Speaker SPEAKER_02: Okay, how about let's pick one.
+
+372
+00:31:14,959 --> 00:31:18,002
+Speaker SPEAKER_02: So he had a comment that said, I don't understand how you're going to lock this down.
+
+373
+00:31:18,042 --> 00:31:23,888
+Speaker SPEAKER_02: He was speaking to someone from the government about how the government was saying, well, if AI development gets out of hand, we can lock it down, quote unquote.
+
+374
+00:31:23,909 --> 00:31:24,088
+Speaker SPEAKER_02: Right.
+
+375
+00:31:24,189 --> 00:31:25,431
+Speaker SPEAKER_02: He was saying, how can you do that?
+
+376
+00:31:25,451 --> 00:31:27,152
+Speaker SPEAKER_02: Because the math for AI is out there.
+
+377
+00:31:27,172 --> 00:31:28,294
+Speaker SPEAKER_02: It's being taught everywhere.
+
+378
+00:31:28,834 --> 00:31:35,520
+Speaker SPEAKER_02: To which the officials responded, well, during the Cold War, we classified entire areas of physics and took them out of the research community.
+
+379
+00:31:35,882 --> 00:31:39,045
+Speaker SPEAKER_02: Entire branches of physics basically went dark and didn't proceed.
+
+380
+00:31:39,025 --> 00:31:44,136
+Speaker SPEAKER_02: If we decide that we need to, we're going to do the same to the math underneath AI.
+
+381
+00:31:45,519 --> 00:31:45,941
+Speaker SPEAKER_02: Forget it.
+
+382
+00:31:48,446 --> 00:31:49,951
+Speaker SPEAKER_00: I agree with Marc-André Ciron.
+
+383
+00:31:50,010 --> 00:31:52,696
+Speaker SPEAKER_00: There's no way you're going to be able to...
+
+384
+00:31:53,992 --> 00:32:02,260
+Speaker SPEAKER_00: Now, it could have been, for example, that Google, in 2017, could have decided not to publish Transformers.
+
+385
+00:32:03,162 --> 00:32:06,144
+Speaker SPEAKER_00: And it might have been several years before anybody else came up with the same idea.
+
+386
+00:32:07,286 --> 00:32:08,988
+Speaker SPEAKER_00: So they could slow it down by a few years, maybe.
+
+387
+00:32:11,770 --> 00:32:20,598
+Speaker SPEAKER_00: But I don't think there's much hope in... I mean, just think what it would take to prevent the information getting out there.
+
+388
+00:32:20,618 --> 00:32:21,299
+Speaker SPEAKER_00: It'd be very hard.
+
+389
+00:32:22,174 --> 00:32:26,701
+Speaker SPEAKER_02: So you don't think the government can classify some, what would it be, linear algebra?
+
+390
+00:32:27,722 --> 00:32:27,942
+Speaker SPEAKER_00: No.
+
+391
+00:32:29,305 --> 00:32:34,412
+Speaker SPEAKER_00: I mean, they could make it harder to share certain kinds of information, which would slow things down a little bit.
+
+392
+00:32:35,913 --> 00:32:44,705
+Speaker SPEAKER_00: But I just think it's implausible that they could take AI ideas that really work well.
+
+393
+00:32:45,174 --> 00:32:49,046
+Speaker SPEAKER_00: and by not sharing them, prevent anybody else creating them.
+
+394
+00:32:49,467 --> 00:33:00,837
+Speaker SPEAKER_00: What happens with new ideas is that there's a kind of, there's a zeitgeist, and within that zeitgeist, it's possible to have new ideas.
+
+395
+00:33:00,817 --> 00:33:11,589
+Speaker SPEAKER_00: And it often happens that one person has a new idea, and at more or less the same time and quite independently, except they're sharing the same zeitgeist, someone else has a slightly different version of the same idea.
+
+396
+00:33:12,109 --> 00:33:13,412
+Speaker SPEAKER_00: This is going on all the time.
+
+397
+00:33:14,512 --> 00:33:21,580
+Speaker SPEAKER_00: Unless you can get rid of the whole zeitgeist, you're not going to be able to have new ideas and keep them secret.
+
+398
+00:33:22,080 --> 00:33:24,784
+Speaker SPEAKER_00: Because a few years later, somebody else is going to come up with the same idea.
+
+399
+00:33:26,636 --> 00:33:28,460
+Speaker SPEAKER_02: What about decentralizing AI?
+
+400
+00:33:28,480 --> 00:33:30,442
+Speaker SPEAKER_02: So that's a huge topic.
+
+401
+00:33:30,462 --> 00:33:36,752
+Speaker SPEAKER_02: Some people would say, well, that's giving the atomic bomb to any person who wants access to an atomic bomb.
+
+402
+00:33:36,813 --> 00:33:37,574
+Speaker SPEAKER_02: Yes, I say that.
+
+403
+00:33:37,953 --> 00:33:48,130
+Speaker SPEAKER_02: And then there are other people who say, well, that's what is required in order to create the guardrails against the Skynet scenario is where we have multiple different decentralized agents or AIs.
+
+404
+00:33:48,150 --> 00:33:49,952
+Speaker SPEAKER_00: Sorry, there's two notions of decentralized.
+
+405
+00:33:49,972 --> 00:33:53,218
+Speaker SPEAKER_00: So let's talk about sharing weights.
+
+406
+00:33:54,176 --> 00:34:03,047
+Speaker SPEAKER_00: So if you ask why doesn't Alabama have a bomb, it's because you need fissile material.
+
+407
+00:34:04,147 --> 00:34:05,730
+Speaker SPEAKER_00: And it's hard to get fissile material.
+
+408
+00:34:05,869 --> 00:34:09,052
+Speaker SPEAKER_00: It takes a lot of time and energy to produce the fissile material.
+
+409
+00:34:09,934 --> 00:34:13,677
+Speaker SPEAKER_00: Once you have the fissile material, it's much easier to make a bomb.
+
+410
+00:34:13,697 --> 00:34:17,443
+Speaker SPEAKER_00: And so the government clearly doesn't want fissile material to be out there.
+
+411
+00:34:17,463 --> 00:34:19,644
+Speaker SPEAKER_00: You can't go on eBay and buy some fissile material.
+
+412
+00:34:21,498 --> 00:34:24,963
+Speaker SPEAKER_00: That's why we don't have lots of little atomic bombs belonging to tiny states.
+
+413
+00:34:27,206 --> 00:34:37,460
+Speaker SPEAKER_00: So if you ask what's the equivalent for these big chatbots, the equivalent is a foundation model that's been trained, maybe using $100 million, maybe a billion dollars.
+
+414
+00:34:38,041 --> 00:34:39,922
+Speaker SPEAKER_00: It's been trained on lots of data.
+
+415
+00:34:40,643 --> 00:34:42,166
+Speaker SPEAKER_00: It's got a huge amount of competence.
+
+416
+00:34:43,407 --> 00:34:47,673
+Speaker SPEAKER_00: If you release the weights of that model, you can now fine tune it to all sorts of bad things.
+
+417
+00:34:48,902 --> 00:34:55,981
+Speaker SPEAKER_00: So I think it's crazy to release the weights of these big models, because they're our main constraint on bad actors.
+
+418
+00:34:57,445 --> 00:35:00,291
+Speaker SPEAKER_00: And Meta's now done it, and other people have followed suit.
+
+419
+00:35:01,956 --> 00:35:06,286
+Speaker SPEAKER_00: So it's too late now, the cat's out of the bag, but it was a crazy move.
+
+420
+00:35:08,173 --> 00:35:15,206
+Speaker SPEAKER_02: Speaking about foundation models, much of our latest AI boom is because of Transformer, the Transformer architecture.
+
+421
+00:35:15,608 --> 00:35:21,880
+Speaker SPEAKER_02: Do you see some other large breakthrough, either some paradigm or some other architecture on the horizon?
+
+422
+00:35:22,518 --> 00:35:29,744
+Speaker SPEAKER_00: OK, I think there will be other large breakthroughs of comparable magnitude, because that's just how science works.
+
+423
+00:35:30,385 --> 00:35:31,166
+Speaker SPEAKER_00: I don't know what they are.
+
+424
+00:35:31,206 --> 00:35:33,469
+Speaker SPEAKER_00: If I knew what they were, I'd be doing them.
+
+425
+00:35:33,489 --> 00:35:33,989
+Speaker SPEAKER_00: Would you, though?
+
+426
+00:35:34,710 --> 00:35:35,751
+Speaker SPEAKER_00: Well, I'm too old now.
+
+427
+00:35:35,831 --> 00:35:37,152
+Speaker SPEAKER_02: I have students doing them.
+
+428
+00:35:37,172 --> 00:35:43,398
+Speaker SPEAKER_02: What I mean is, how do you reconcile your past contributions to this field and you have your current woes?
+
+429
+00:35:43,838 --> 00:35:46,041
+Speaker SPEAKER_02: So would you be contributing to it?
+
+430
+00:35:47,422 --> 00:35:50,144
+Speaker SPEAKER_00: So here's the issue.
+
+431
+00:35:50,429 --> 00:36:04,706
+Speaker SPEAKER_00: is very good for lots of things that will benefit humanity a whole lot, like better healthcare, fighting climate change, better materials, things like room temperature superconductors where AI might well be involved in actually discovering them.
+
+432
+00:36:05,786 --> 00:36:07,409
+Speaker SPEAKER_00: Assuming there are some out there.
+
+433
+00:36:09,510 --> 00:36:15,237
+Speaker SPEAKER_00: So there's so many things, good uses of AI, that I don't think the development's gonna be stopped.
+
+434
+00:36:15,893 --> 00:36:22,342
+Speaker SPEAKER_00: So I don't think it's sensible to say we should be slowing down AI, slowing down the development.
+
+435
+00:36:22,362 --> 00:36:27,630
+Speaker SPEAKER_00: It's not going to happen anyway, because there's so much competition and it's just not feasible.
+
+436
+00:36:27,869 --> 00:36:31,615
+Speaker SPEAKER_00: It might be the best thing for humanity, but it's, it's not going to happen.
+
+437
+00:36:32,617 --> 00:36:36,702
+Speaker SPEAKER_00: What we should be doing is as it's being developed, trying to figure out how to keep it safe.
+
+438
+00:36:39,333 --> 00:36:42,818
+Speaker SPEAKER_02: So it's another thing to say that this is a boulder that no one can stop.
+
+439
+00:36:42,878 --> 00:36:46,242
+Speaker SPEAKER_02: It's another thing to also be responsible for pushing the boulder as well.
+
+440
+00:36:46,603 --> 00:36:57,077
+Speaker SPEAKER_02: So do you actually feel like if there was a breakthrough on the horizon that you see and you could, you're like Ray Kurzweil, you have this great predictive quality that you would actually put your coins into it and work on it?
+
+441
+00:36:57,998 --> 00:37:00,623
+Speaker SPEAKER_00: As long as that was combined with working on how to keep it safe.
+
+442
+00:37:00,682 --> 00:37:00,902
+Speaker SPEAKER_00: Yes.
+
+443
+00:37:01,463 --> 00:37:06,471
+Speaker SPEAKER_00: I feel I didn't realize soon enough how dangerous it was going to be.
+
+444
+00:37:06,974 --> 00:37:08,074
+Speaker SPEAKER_00: I wish I'd realized sooner.
+
+445
+00:37:09,317 --> 00:37:11,659
+Speaker SPEAKER_02: There's this quote from Einstein about the atomic bomb.
+
+446
+00:37:11,699 --> 00:37:16,186
+Speaker SPEAKER_02: He said, I would burn my hands had I known what I was developing would lead to the atomic bomb.
+
+447
+00:37:16,567 --> 00:37:17,628
+Speaker SPEAKER_02: Do you feel similar?
+
+448
+00:37:17,648 --> 00:37:20,632
+Speaker SPEAKER_00: I don't actually, no.
+
+449
+00:37:20,672 --> 00:37:22,014
+Speaker SPEAKER_00: Maybe I should.
+
+450
+00:37:23,096 --> 00:37:26,000
+Speaker SPEAKER_00: I don't kind of regret what I've done.
+
+451
+00:37:26,019 --> 00:37:29,423
+Speaker SPEAKER_00: I regret the fact it may lead to bad things.
+
+452
+00:37:30,045 --> 00:37:32,547
+Speaker SPEAKER_00: But I don't think back and think, oh, I wish I'd never done that.
+
+453
+00:37:33,510 --> 00:37:35,192
+Speaker SPEAKER_00: I think AI is going to be developed.
+
+454
+00:37:35,695 --> 00:37:40,943
+Speaker SPEAKER_00: Um, I didn't think we have much choice about that just because of the competition between countries and between companies.
+
+455
+00:37:42,666 --> 00:37:46,652
+Speaker SPEAKER_00: So I think we should focus our efforts on trying to develop it safely, not on.
+
+456
+00:37:47,855 --> 00:37:50,599
+Speaker SPEAKER_00: That's very different from trying to slow it, slow down the development.
+
+457
+00:37:51,920 --> 00:37:54,945
+Speaker SPEAKER_02: In addition to alignment, what does safe development of AI mean?
+
+458
+00:37:55,005 --> 00:37:57,469
+Speaker SPEAKER_00: Okay.
+
+459
+00:37:57,971 --> 00:38:02,378
+Speaker SPEAKER_00: Um, figuring, figuring out how to deal with the short-term risks.
+
+460
+00:38:04,231 --> 00:38:06,974
+Speaker SPEAKER_00: and there's many of those and they all have different solutions.
+
+461
+00:38:08,376 --> 00:38:17,284
+Speaker SPEAKER_00: So things like lethal autonomous weapons, and to do with that you need things like Geneva Conventions, and we're not going to get those till nasty things have happened.
+
+462
+00:38:19,306 --> 00:38:25,875
+Speaker SPEAKER_00: You've got fake videos and images corrupting elections, particularly if they're targeted at particular people.
+
+463
+00:38:27,096 --> 00:38:28,197
+Speaker SPEAKER_00: To deal with that,
+
+464
+00:38:29,711 --> 00:38:34,878
+Speaker SPEAKER_00: I think you need a much better system for establishing the provenance of a video or an image.
+
+465
+00:38:35,719 --> 00:38:40,387
+Speaker SPEAKER_00: Initially I thought you should mark them as fake, you should insist they're marked as fake.
+
+466
+00:38:41,427 --> 00:38:43,251
+Speaker SPEAKER_00: I don't think there's much future in that anymore.
+
+467
+00:38:43,610 --> 00:38:50,300
+Speaker SPEAKER_00: I think you're better off insisting that there's a provenance associated with things and your browser can check the provenance.
+
+468
+00:38:51,302 --> 00:38:53,103
+Speaker SPEAKER_00: Just as already with
+
+469
+00:38:54,771 --> 00:38:57,838
+Speaker SPEAKER_00: It says, don't trust this one, I can't establish it.
+
+470
+00:38:58,661 --> 00:39:01,648
+Speaker SPEAKER_00: It should be like that.
+
+471
+00:39:02,791 --> 00:39:06,300
+Speaker SPEAKER_00: There's discrimination and bias where
+
+472
+00:39:09,672 --> 00:39:17,885
+Speaker SPEAKER_00: You can freeze the weights of a system and measure its bias and then somewhat correct it.
+
+473
+00:39:17,905 --> 00:39:19,867
+Speaker SPEAKER_00: You'll never correct it perfectly, but somewhat correct it.
+
+474
+00:39:20,568 --> 00:39:23,313
+Speaker SPEAKER_00: So you can make the system less biased than the data it was trained on.
+
+475
+00:39:24,253 --> 00:39:27,900
+Speaker SPEAKER_00: And so you can replace people by a less biased system.
+
+476
+00:39:28,117 --> 00:39:29,177
+Speaker SPEAKER_00: It'll never be unbiased.
+
+477
+00:39:29,478 --> 00:39:37,005
+Speaker SPEAKER_00: But if you just keep replacing systems by less biased systems, that's called gradient descent, things will get less biased.
+
+478
+00:39:38,108 --> 00:39:39,208
+Speaker SPEAKER_00: So I'm not so worried about that one.
+
+479
+00:39:39,728 --> 00:39:41,050
+Speaker SPEAKER_00: Possibly because I'm an old white man.
+
+480
+00:39:44,034 --> 00:39:45,094
+Speaker SPEAKER_00: There's jobs.
+
+481
+00:39:45,375 --> 00:39:47,097
+Speaker SPEAKER_00: We don't really know what to do about that.
+
+482
+00:39:48,038 --> 00:39:55,626
+Speaker SPEAKER_00: So you don't get many people digging ditches anymore because a backhoe is just much better at digging ditches than a person.
+
+483
+00:39:56,905 --> 00:40:00,009
+Speaker SPEAKER_00: It's going to be the same for almost all mundane intellectual labor.
+
+484
+00:40:01,150 --> 00:40:06,056
+Speaker SPEAKER_00: An AI system is going to make a much better paralegal than a person.
+
+485
+00:40:09,400 --> 00:40:13,726
+Speaker SPEAKER_00: That's kind of really scary because of what it's going to do to society.
+
+486
+00:40:14,527 --> 00:40:18,130
+Speaker SPEAKER_00: It's going to cause the rich to get richer because we're going to get big increases in productivity.
+
+487
+00:40:19,052 --> 00:40:20,273
+Speaker SPEAKER_00: And where's that wealth going to go to?
+
+488
+00:40:20,293 --> 00:40:23,858
+Speaker SPEAKER_00: It's going to go to rich people and poor people are going to get poorer.
+
+489
+00:40:24,090 --> 00:40:25,416
+Speaker SPEAKER_00: I don't know what to do about that.
+
+490
+00:40:25,637 --> 00:40:34,590
+Speaker SPEAKER_00: Universal basic income helps stop some starving, but it doesn't really solve the problem because people's dignity is gone if they don't have a job.
+
+491
+00:40:35,768 --> 00:40:44,019
+Speaker SPEAKER_02: So, earlier we were talking about perception, and then perception was associated with subjective qualities.
+
+492
+00:40:44,681 --> 00:40:45,922
+Speaker SPEAKER_02: Maybe there's a wrong model there.
+
+493
+00:40:46,423 --> 00:40:55,157
+Speaker SPEAKER_02: But anyhow, whenever we're speaking about percepts, are we speaking about perception, and thus we're speaking about a subjective experience associated with it?
+
+494
+00:40:56,219 --> 00:41:03,108
+Speaker SPEAKER_00: No, when you use the word subjective experience, you're indicating that you're about to talk about a hypothetical state of the real world.
+
+495
+00:41:04,708 --> 00:41:05,170
+Speaker SPEAKER_00: Okay?
+
+496
+00:41:05,833 --> 00:41:09,666
+Speaker SPEAKER_00: Not some funny internal thing, but a hypothetical state of the real world.
+
+497
+00:41:10,447 --> 00:41:13,639
+Speaker SPEAKER_00: These funny internal things don't exist.
+
+498
+00:41:15,172 --> 00:41:19,376
+Speaker SPEAKER_00: There's nothing, there are no qualia, there's nothing made of qualia.
+
+499
+00:41:19,396 --> 00:41:23,501
+Speaker SPEAKER_00: There's just hypothetical states of the world as a way of explaining how your perceptual system is lying to you.
+
+500
+00:41:24,344 --> 00:41:29,750
+Speaker SPEAKER_02: And that's what we mean when we say subjective experience is these hypothetical states of the world?
+
+501
+00:41:30,190 --> 00:41:31,893
+Speaker SPEAKER_02: That's how we actually use it.
+
+502
+00:41:32,293 --> 00:41:35,036
+Speaker SPEAKER_00: So a prediction or no?
+
+503
+00:41:35,016 --> 00:41:38,981
+Speaker SPEAKER_00: Oh, getting the issue of prediction into it is sort of red herring.
+
+504
+00:41:39,021 --> 00:41:40,103
+Speaker SPEAKER_00: It's a different direction altogether.
+
+505
+00:41:42,047 --> 00:41:53,963
+Speaker SPEAKER_00: The thing you have to get in your head is that there isn't a funny kind of thing called a subjective experience that's made of some funny mental stuff.
+
+506
+00:41:55,284 --> 00:42:04,516
+Speaker SPEAKER_00: There's just a technique of talking about how your perceptual system goes wrong, which is to say what the world would have had to have been like for it to be telling the truth.
+
+507
+00:42:05,155 --> 00:42:06,637
+Speaker SPEAKER_00: And that's what we're indicating.
+
+508
+00:42:07,018 --> 00:42:11,043
+Speaker SPEAKER_00: When we use the phrase subjective experience, we indicate that that's the game we're playing.
+
+509
+00:42:11,403 --> 00:42:18,554
+Speaker SPEAKER_00: We're playing the game of telling you about hypothetical states of the world in order to explain how my perceptual system's going wrong.
+
+510
+00:42:20,739 --> 00:42:22,320
+Speaker SPEAKER_00: A subjective experience is not a thing.
+
+511
+00:42:22,380 --> 00:42:26,286
+Speaker SPEAKER_02: And can anything have a perceptual system?
+
+512
+00:42:26,666 --> 00:42:28,150
+Speaker SPEAKER_02: Can a book have a perceptual system?
+
+513
+00:42:28,731 --> 00:42:30,353
+Speaker SPEAKER_02: What defines a perceptual system?
+
+514
+00:42:31,717 --> 00:42:45,728
+Speaker SPEAKER_00: Okay, to have a perceptual system, you'd have thought you needed something that can have some internal representation of something going on in some external world.
+
+515
+00:42:46,130 --> 00:42:46,992
+Speaker SPEAKER_00: That's what I thought.
+
+516
+00:42:49,282 --> 00:43:00,467
+Speaker SPEAKER_00: So like, a toad gets light in its eyes and it snaps up flies, and it's clearly got a perceptual system, right, because it has to see where the flies are.
+
+517
+00:43:00,967 --> 00:43:08,523
+Speaker SPEAKER_00: I don't think a book has a perceptual system, because it's not sensing the world and having an internal representation.
+
+518
+00:43:09,382 --> 00:43:11,724
+Speaker SPEAKER_02: Hi everyone, hope you're enjoying today's episode.
+
+519
+00:43:12,126 --> 00:43:20,318
+Speaker SPEAKER_02: If you're hungry for deeper dives into physics, AI, consciousness, philosophy, along with my personal reflections, you'll find it all on my sub stack.
+
+520
+00:43:20,659 --> 00:43:30,293
+Speaker SPEAKER_02: Subscribers get first access to new episodes, new posts as well, behind the scenes insights, and the chance to be a part of a thriving community of like-minded pilgrimers.
+
+521
+00:43:30,273 --> 00:43:35,880
+Speaker SPEAKER_02: By joining, you'll directly be supporting my work and helping keep these conversations at the cutting edge.
+
+522
+00:43:36,262 --> 00:43:42,471
+Speaker SPEAKER_02: So click the link on screen here, hit subscribe, and let's keep pushing the boundaries of knowledge together.
+
+523
+00:43:42,891 --> 00:43:44,393
+Speaker SPEAKER_02: Thank you and enjoy the show.
+
+524
+00:43:44,673 --> 00:43:49,320
+Speaker SPEAKER_02: Just so you know, if you're listening, it's C-U-R-T-J-A-I-M-U-N-G-A-L.org.
+
+525
+00:43:49,460 --> 00:43:50,503
+Speaker SPEAKER_02: KurtJayMungle.org.
+
+526
+00:43:52,405 --> 00:43:55,771
+Speaker SPEAKER_00: Because it doesn't, it's not sensing the world and having an internal representation.
+
+527
+00:43:57,092 --> 00:44:00,077
+Speaker SPEAKER_02: What would be the difference between intelligence and rationality?
+
+528
+00:44:02,251 --> 00:44:07,117
+Speaker SPEAKER_00: Okay, so there's various kinds of intelligence.
+
+529
+00:44:08,318 --> 00:44:12,724
+Speaker SPEAKER_00: So you wouldn't accuse a cat of being rational, but a cat could be pretty intelligent.
+
+530
+00:44:13,764 --> 00:44:22,155
+Speaker SPEAKER_00: In particular, when you talk about rationality, you typically mean logical reasoning.
+
+531
+00:44:23,836 --> 00:44:28,663
+Speaker SPEAKER_00: And that's very different from the way we do most things, which is intuitive reasoning.
+
+532
+00:44:30,161 --> 00:44:38,797
+Speaker SPEAKER_00: So a nice analogy would be if you take something like AlphaZero that plays chess.
+
+533
+00:44:39,219 --> 00:44:41,003
+Speaker SPEAKER_00: I use chess because I understand it better than Go.
+
+534
+00:44:41,724 --> 00:44:47,635
+Speaker SPEAKER_00: It'll have something that can evaluate a board position and say, how good is that for me?
+
+535
+00:44:47,675 --> 00:44:52,204
+Speaker SPEAKER_00: It'll have something that can look at a board position and say, what's a plausible move for me?
+
+536
+00:44:53,061 --> 00:45:00,101
+Speaker SPEAKER_00: And then it'll have what's called Monte Carlo rollout, where it's, you know, if I go here and he goes there and I go here, oh dear, that's bad.
+
+537
+00:45:01,123 --> 00:45:05,534
+Speaker SPEAKER_00: The Monte Carlo rollout is like reasoning.
+
+538
+00:45:06,663 --> 00:45:18,351
+Speaker SPEAKER_00: The neural nets are just say that will be a good move for this is a bad position for me that i can shoot a reasoning and we do most things by intuitive reasoning.
+
+539
+00:45:20,936 --> 00:45:24,485
+Speaker SPEAKER_00: Originally in a i they want to do everything by using.
+
+540
+00:45:25,715 --> 00:45:27,996
+Speaker SPEAKER_00: reasoning and logical reasoning.
+
+541
+00:45:28,777 --> 00:45:30,858
+Speaker SPEAKER_00: And that was a huge mistake and they couldn't get things done.
+
+542
+00:45:31,320 --> 00:45:33,882
+Speaker SPEAKER_00: They didn't have a way of dealing with things like analogy.
+
+543
+00:45:34,922 --> 00:45:38,405
+Speaker SPEAKER_00: Um, what neural nets are good at is intuitive reasoning.
+
+544
+00:45:39,146 --> 00:45:47,333
+Speaker SPEAKER_00: So what's happened in the last 20 years is we've used neural nets to model human intuition rather than human reasoning.
+
+545
+00:45:47,833 --> 00:45:49,135
+Speaker SPEAKER_00: And we've got much further that way.
+
+546
+00:45:51,677 --> 00:45:55,300
+Speaker SPEAKER_02: Is it the case that the more intelligent you are, the more moral you are?
+
+547
+00:45:58,806 --> 00:46:06,635
+Speaker SPEAKER_00: I read something about that recently that suggested it was, but of course I don't know the provenance of that, so I don't know whether to believe it.
+
+548
+00:46:09,778 --> 00:46:11,181
+Speaker SPEAKER_00: I'm not convinced that's true.
+
+549
+00:46:14,423 --> 00:46:15,125
+Speaker SPEAKER_00: Here's some evidence.
+
+550
+00:46:15,164 --> 00:46:17,047
+Speaker SPEAKER_00: Elon Musk is clearly very intelligent.
+
+551
+00:46:17,367 --> 00:46:19,469
+Speaker SPEAKER_00: I wouldn't accuse him of being very moral.
+
+552
+00:46:21,211 --> 00:46:23,934
+Speaker SPEAKER_00: And you can be extremely moral and not terribly intelligent?
+
+553
+00:46:24,474 --> 00:46:25,797
+Speaker SPEAKER_00: I think so, yes.
+
+554
+00:46:27,858 --> 00:46:28,559
+Speaker SPEAKER_00: That's my guess.
+
+555
+00:46:29,148 --> 00:46:33,094
+Speaker SPEAKER_02: Well, you said that you weren't entirely sure, so what's the evidence to the contrary?
+
+556
+00:46:33,414 --> 00:46:42,467
+Speaker SPEAKER_02: What's the evidence that as you increase in intelligence, your morality increases proportionally somehow?
+
+557
+00:46:42,487 --> 00:46:48,237
+Speaker SPEAKER_01: Well, I mean, I just have no idea whether there's a correlation at all.
+
+558
+00:46:50,119 --> 00:46:50,420
+Speaker SPEAKER_01: I see.
+
+559
+00:46:55,867 --> 00:46:58,411
+Speaker SPEAKER_01: I think there's highly intelligent people who are very bad.
+
+560
+00:46:59,454 --> 00:47:01,038
+Speaker SPEAKER_01: And it's highly intelligent people are very good.
+
+561
+00:47:03,143 --> 00:47:04,445
+Speaker SPEAKER_00: What does it mean to understand?
+
+562
+00:47:04,485 --> 00:47:06,550
+Speaker SPEAKER_00: Okay.
+
+563
+00:47:07,992 --> 00:47:10,998
+Speaker SPEAKER_00: That's a question I'm happy to answer.
+
+564
+00:47:11,018 --> 00:47:16,088
+Speaker SPEAKER_00: So again, I think most people have a wrong model of what understanding is.
+
+565
+00:47:17,050 --> 00:47:19,876
+Speaker SPEAKER_00: Um, if you look at these large language models.
+
+566
+00:47:20,954 --> 00:47:27,538
+Speaker SPEAKER_00: There's many people, particularly people from the Chomsky School of Linguistics, who say they don't really understand what they're saying.
+
+567
+00:47:28,340 --> 00:47:32,938
+Speaker SPEAKER_00: They just are using statistical correlations to predict the next word.
+
+568
+00:47:34,606 --> 00:47:46,235
+Speaker SPEAKER_00: If you look at the first models like that, I think I probably made the very first language model that used backpropagation to train the weights to predict the next word.
+
+569
+00:47:47,556 --> 00:47:49,719
+Speaker SPEAKER_00: So you backpropagate the error in predicting the next word.
+
+570
+00:47:50,840 --> 00:48:03,650
+Speaker SPEAKER_00: And the point of the model was to show how you could learn meanings for words, or to put it another way, to show how you could take a string of words and learn to convert the words into feature vectors
+
+571
+00:48:05,014 --> 00:48:09,943
+Speaker SPEAKER_00: and interactions between feature vectors, and that's what understanding is.
+
+572
+00:48:10,625 --> 00:48:25,130
+Speaker SPEAKER_00: Understanding a string of words is converting the words into feature vectors so that you can use interactions between features to do things like predict the next word, but also to do other things.
+
+573
+00:48:26,112 --> 00:48:29,637
+Speaker SPEAKER_00: So you have a sentence which is a string of symbols,
+
+574
+00:48:30,681 --> 00:48:32,083
+Speaker SPEAKER_00: Let's not talk about word fragments.
+
+575
+00:48:32,525 --> 00:48:36,592
+Speaker SPEAKER_00: I know these transformers use word fragments, but let's suppose they used whole words.
+
+576
+00:48:36,692 --> 00:48:37,572
+Speaker SPEAKER_00: It's easier to talk about.
+
+577
+00:48:37,672 --> 00:48:40,657
+Speaker SPEAKER_00: And it would just make them work a bit worse, that's all.
+
+578
+00:48:41,179 --> 00:48:41,920
+Speaker SPEAKER_00: They'd still work.
+
+579
+00:48:42,802 --> 00:48:48,431
+Speaker SPEAKER_00: So I give you a string of words, some text.
+
+580
+00:48:50,132 --> 00:48:52,436
+Speaker SPEAKER_00: The meaning isn't in the text.
+
+581
+00:48:52,940 --> 00:49:06,617
+Speaker SPEAKER_00: What you do is you convert those words into feature vectors, and you've learned how feature vectors in context, how the features should interact with each other to do things like disambiguate the meanings of ambiguous words.
+
+582
+00:49:08,519 --> 00:49:14,268
+Speaker SPEAKER_00: And once you've associated features with those words, that is understanding.
+
+583
+00:49:15,088 --> 00:49:16,130
+Speaker SPEAKER_00: That's what understanding is.
+
+584
+00:49:16,429 --> 00:49:21,597
+Speaker SPEAKER_00: And that's what understanding is both in a large language model and in a person.
+
+585
+00:49:22,639 --> 00:49:26,483
+Speaker SPEAKER_00: In that sense, we understand in the same basic way they understand.
+
+586
+00:49:27,125 --> 00:49:31,088
+Speaker SPEAKER_00: It's not that when we understand there's some magical internal stuff called understanding.
+
+587
+00:49:32,030 --> 00:49:36,916
+Speaker SPEAKER_00: I'm always trying to get rid of magical internal stuff in order to explain how things work.
+
+588
+00:49:39,358 --> 00:49:46,867
+Speaker SPEAKER_00: We're able, using our big neural networks, to associate features with these symbols in such a way that the features all fit together nicely.
+
+589
+00:49:48,289 --> 00:49:51,211
+Speaker SPEAKER_00: So here's an analogy I quite like.
+
+590
+00:49:52,222 --> 00:50:02,096
+Speaker SPEAKER_00: If you want to model 3D shapes, and you're not too worried about getting the surface just right, you can use Lego blocks.
+
+591
+00:50:02,235 --> 00:50:03,557
+Speaker SPEAKER_00: These are big shapes, like a car.
+
+592
+00:50:04,318 --> 00:50:07,824
+Speaker SPEAKER_00: You can make something the same shape as a Porsche with Lego blocks.
+
+593
+00:50:11,128 --> 00:50:14,273
+Speaker SPEAKER_00: The surface won't be right, but it'll have the same space occupancy.
+
+594
+00:50:17,277 --> 00:50:20,641
+Speaker SPEAKER_00: So Lego blocks are kind of a universal way of modeling 3D structures.
+
+595
+00:50:23,119 --> 00:50:25,041
+Speaker SPEAKER_00: and you don't need many different kinds of Lego block.
+
+596
+00:50:25,782 --> 00:50:35,755
+Speaker SPEAKER_00: Now, think of words as like Lego blocks, except that there's a whole bunch of different Lego blocks with different names.
+
+597
+00:50:37,097 --> 00:50:41,581
+Speaker SPEAKER_00: What's more, each Lego block has some flexibility to it.
+
+598
+00:50:42,563 --> 00:50:45,427
+Speaker SPEAKER_00: It's not a rigid shape like a piece of Lego.
+
+599
+00:50:46,166 --> 00:50:50,072
+Speaker SPEAKER_00: It can change in various directions.
+
+600
+00:50:50,338 --> 00:50:51,541
+Speaker SPEAKER_00: It's not completely free.
+
+601
+00:50:51,601 --> 00:50:57,719
+Speaker SPEAKER_00: The name tells you something about how it can change, but there's some flexibility to it.
+
+602
+00:50:57,980 --> 00:51:03,876
+Speaker SPEAKER_00: And sometimes there'll be a name and it's two completely different shapes it can have, but it can't have any old shape.
+
+603
+00:51:04,682 --> 00:51:16,059
+Speaker SPEAKER_00: Um, so what we've invented is a system for modeling much more complicated things than the 3d distribution of matter, which uses high dimensional Lego blocks.
+
+604
+00:51:16,079 --> 00:51:18,224
+Speaker SPEAKER_00: So the Lego blocks would say a thousand dimensions.
+
+605
+00:51:19,344 --> 00:51:22,429
+Speaker SPEAKER_00: And if you're a mathematician, you know, a thousand dimensional spaces are very weird things.
+
+606
+00:51:23,251 --> 00:51:29,019
+Speaker SPEAKER_00: Um, and they have some flexibility and I give you the names of some of these Lego blocks.
+
+607
+00:51:29,793 --> 00:51:33,998
+Speaker SPEAKER_00: and each of which is this thousand-dimensional underlying.
+
+608
+00:51:34,018 --> 00:51:39,967
+Speaker SPEAKER_00: And they all deform to fit together nicely, and that's understanding.
+
+609
+00:51:41,730 --> 00:51:48,119
+Speaker SPEAKER_00: So that explains how you can learn the meaning of a word from one sentence without any definitions.
+
+610
+00:51:48,840 --> 00:51:55,750
+Speaker SPEAKER_00: So if, for example, I say, she scrummed him with the frying pan, you have a sense of what scrummed means.
+
+611
+00:51:56,253 --> 00:51:59,559
+Speaker SPEAKER_00: It's partly phonetic, but because the ed on the end tells you it's a verb.
+
+612
+00:52:00,820 --> 00:52:04,067
+Speaker SPEAKER_00: But you think it probably means she hit him over the head with it or something like that.
+
+613
+00:52:04,427 --> 00:52:05,630
+Speaker SPEAKER_00: It could mean something different.
+
+614
+00:52:06,512 --> 00:52:07,914
+Speaker SPEAKER_00: She could have impressed him with it.
+
+615
+00:52:08,394 --> 00:52:11,000
+Speaker SPEAKER_00: You know, she cooked such good omelets that that really impressed him.
+
+616
+00:52:11,039 --> 00:52:12,081
+Speaker SPEAKER_00: It could mean she impressed him.
+
+617
+00:52:12,382 --> 00:52:16,489
+Speaker SPEAKER_00: But probably it means she hit him over the head or something like that, something aggressive like that.
+
+618
+00:52:17,251 --> 00:52:20,117
+Speaker SPEAKER_00: And you get that from just one sentence.
+
+619
+00:52:21,041 --> 00:52:23,565
+Speaker SPEAKER_00: And nobody's telling me this is a definition of Scromed.
+
+620
+00:52:23,606 --> 00:52:32,898
+Speaker SPEAKER_00: It's just that all the other Lego blocks, for the other words, she and him, and all those other words, adopt shapes that fit together nicely, leaving a hole.
+
+621
+00:52:32,938 --> 00:52:36,001
+Speaker SPEAKER_00: And that hole is the shape you need for Scromed.
+
+622
+00:52:38,585 --> 00:52:40,548
+Speaker SPEAKER_00: So now that's giving you the shape that Scromed should be.
+
+623
+00:52:41,710 --> 00:52:43,132
+Speaker SPEAKER_00: So that's how I think of language.
+
+624
+00:52:43,532 --> 00:52:49,581
+Speaker SPEAKER_00: It's a modeling system we've invented, where there's some flexibility in each of these blocks,
+
+625
+00:52:49,780 --> 00:52:53,405
+Speaker SPEAKER_00: I give you a bunch of blocks, and you have to figure out how to fit them together.
+
+626
+00:52:54,126 --> 00:53:00,356
+Speaker SPEAKER_00: But because they all have names, I can tell other people about what my model is.
+
+627
+00:53:00,898 --> 00:53:01,719
+Speaker SPEAKER_00: I can give them the names.
+
+628
+00:53:02,119 --> 00:53:06,085
+Speaker SPEAKER_00: And if they share enough knowledge with me, they can then figure out how they all fit together.
+
+629
+00:53:08,751 --> 00:53:17,103
+Speaker SPEAKER_00: So are you suggesting, help the audience understand what understanding... I think what's going on in our heads, and that's what's going on in these large language models, so they work the same as us.
+
+630
+00:53:17,860 --> 00:53:19,782
+Speaker SPEAKER_00: And that means they really do understand.
+
+631
+00:53:19,822 --> 00:53:27,313
+Speaker SPEAKER_02: One of Chomsky's counter-arguments to that the language models work the same is that we have sparse input for our understanding.
+
+632
+00:53:27,534 --> 00:53:29,356
+Speaker SPEAKER_02: We don't have to feed the internet to ourselves.
+
+633
+00:53:29,876 --> 00:53:30,719
+Speaker SPEAKER_02: So what do you say to that?
+
+634
+00:53:31,059 --> 00:53:34,443
+Speaker SPEAKER_00: It's true that the language models are trained on much more data.
+
+635
+00:53:34,925 --> 00:53:37,728
+Speaker SPEAKER_00: They are less statistically efficient than us.
+
+636
+00:53:38,108 --> 00:53:41,875
+Speaker SPEAKER_00: However, when children learn a language, they don't just learn it by listening to the radio.
+
+637
+00:53:42,375 --> 00:53:46,922
+Speaker SPEAKER_00: They learn it by being in the real world and interacting with things in the world.
+
+638
+00:53:46,902 --> 00:53:51,728
+Speaker SPEAKER_00: And you need far less input if you train a multimodal model, it doesn't need as much language.
+
+639
+00:53:52,369 --> 00:53:59,418
+Speaker SPEAKER_00: And the more, if you give it a robot arm and a camera, and it's interacting with the world, it needs a lot less language.
+
+640
+00:53:59,438 --> 00:54:00,579
+Speaker SPEAKER_00: So that's one argument.
+
+641
+00:54:01,179 --> 00:54:02,742
+Speaker SPEAKER_00: It still probably needs more than a person.
+
+642
+00:54:04,965 --> 00:54:06,447
+Speaker SPEAKER_00: The other argument goes like this.
+
+643
+00:54:08,771 --> 00:54:22,168
+Speaker SPEAKER_00: The backpropagation training algorithm is really good at packing a lot of knowledge into a few weights, where a few is a trillion, if you give it a lot of experience.
+
+644
+00:54:22,188 --> 00:54:32,460
+Speaker SPEAKER_00: So it's good at taking this huge amount of experience, sucking the knowledge out, and packing it into a relatively small number of weights like a trillion.
+
+645
+00:54:33,543 --> 00:54:35,505
+Speaker SPEAKER_00: That's not the problem we have.
+
+646
+00:54:36,126 --> 00:54:37,449
+Speaker SPEAKER_00: We have the opposite problem.
+
+647
+00:54:37,630 --> 00:54:41,960
+Speaker SPEAKER_00: We've got a huge number of weights, like 100 trillion, but we only live for two billion seconds.
+
+648
+00:54:42,521 --> 00:54:44,766
+Speaker SPEAKER_00: And so we don't have much experience.
+
+649
+00:54:44,786 --> 00:54:50,557
+Speaker SPEAKER_00: So we need to be optimized for making the best use you can of the very limited amount of experience you get.
+
+650
+00:54:51,347 --> 00:54:54,873
+Speaker SPEAKER_00: which says we're probably not using backpropagation.
+
+651
+00:54:54,893 --> 00:54:57,860
+Speaker SPEAKER_00: We're probably using some other learning algorithm.
+
+652
+00:54:57,880 --> 00:55:01,987
+Speaker SPEAKER_00: And in that sense, Chomsky may be right that we learn based on less knowledge.
+
+653
+00:55:02,869 --> 00:55:09,440
+Speaker SPEAKER_00: But what we learn is how to associate features with words and how these features should interact.
+
+654
+00:55:10,737 --> 00:55:13,059
+Speaker SPEAKER_02: We want to continue to talk about learning and research.
+
+655
+00:55:13,940 --> 00:55:23,454
+Speaker SPEAKER_02: Jay McClellan said that in your meetings with your graduate students and other researchers, you tend to not write equations on the board, unlike in other machine learning research meetings.
+
+656
+00:55:23,954 --> 00:55:26,557
+Speaker SPEAKER_02: Instead, you draw pictures and you gesticulate.
+
+657
+00:55:27,378 --> 00:55:31,563
+Speaker SPEAKER_02: So what's the significance of this and what are the pros and cons of this approach?
+
+658
+00:55:31,543 --> 00:55:35,610
+Speaker SPEAKER_00: Okay, so I think intuitively and do the math afterwards.
+
+659
+00:55:37,454 --> 00:55:42,684
+Speaker SPEAKER_00: Some people think with equations and derive things and then get the intuitions afterwards.
+
+660
+00:55:44,768 --> 00:55:54,666
+Speaker SPEAKER_00: There's some people who are very good at both, like David Mackay was very good intuitively and also very good at math.
+
+661
+00:55:55,844 --> 00:56:03,036
+Speaker SPEAKER_00: They're just different ways of thinking, but I've always been much better at thinking in terms of spatial things rather than in terms of equations.
+
+662
+00:56:04,179 --> 00:56:12,233
+Speaker SPEAKER_02: Can you tell us about your undergraduate experience, how you changed programs and why or what led you to do so?
+
+663
+00:56:14,507 --> 00:56:28,556
+Speaker SPEAKER_00: So it's a long story, but I started off at Cambridge doing physics and chemistry and crystalline state, which was x-ray crystallography essentially.
+
+664
+00:56:29,297 --> 00:56:32,262
+Speaker SPEAKER_00: And after a month, I got fed up.
+
+665
+00:56:32,242 --> 00:56:35,827
+Speaker SPEAKER_00: It was the first time I'd lived away from home, and the work was too hard.
+
+666
+00:56:37,268 --> 00:56:39,612
+Speaker SPEAKER_00: So I quit and reapplied to do architecture.
+
+667
+00:56:40,592 --> 00:56:45,518
+Speaker SPEAKER_00: And I got back in, and after a day of that, I decided I'd never be any good at architecture.
+
+668
+00:56:46,019 --> 00:56:47,842
+Speaker SPEAKER_00: So I went back to science.
+
+669
+00:56:48,262 --> 00:56:54,369
+Speaker SPEAKER_00: But then I did physics and chemistry and physiology, and I really liked the physiology.
+
+670
+00:56:55,648 --> 00:57:02,139
+Speaker SPEAKER_00: And after a year of that, I decided I wanted to know more about the mind, and I thought philosophy would teach me that.
+
+671
+00:57:03,099 --> 00:57:05,744
+Speaker SPEAKER_00: So I quit science and did philosophy for a year.
+
+672
+00:57:07,146 --> 00:57:10,811
+Speaker SPEAKER_00: And I learned some stuff about Wittgenstein and Wittgenstein's opinions.
+
+673
+00:57:12,693 --> 00:57:18,061
+Speaker SPEAKER_00: But on the whole, the main thing that happened was I developed antibodies to philosophy.
+
+674
+00:57:19,273 --> 00:57:21,557
+Speaker SPEAKER_00: mainly because it's all talk.
+
+675
+00:57:21,577 --> 00:57:26,465
+Speaker SPEAKER_00: They don't have an independent way of judging whether a theory is good.
+
+676
+00:57:26,485 --> 00:57:28,690
+Speaker SPEAKER_00: They don't have, like, an experiment.
+
+677
+00:57:29,871 --> 00:57:33,197
+Speaker SPEAKER_00: It's good if it sounds good, and that was unsatisfactory for me.
+
+678
+00:57:33,657 --> 00:57:44,556
+Speaker SPEAKER_00: So then I did psychology to find out more about the mind, and I found that very annoying, because what psychologists would do is have a really stupid, simple theory
+
+679
+00:57:44,536 --> 00:57:48,621
+Speaker SPEAKER_00: and have very well-designed experiments to see whether this theory was true or false.
+
+680
+00:57:49,702 --> 00:57:53,628
+Speaker SPEAKER_00: And you could tell before you started the theory was hopeless, so what's the point of the experiments?
+
+681
+00:57:55,472 --> 00:57:56,833
+Speaker SPEAKER_00: That's what most of psychology was.
+
+682
+00:57:58,376 --> 00:58:05,827
+Speaker SPEAKER_00: And so then I went into AI, and there we did computer simulations, and I was much happier doing that.
+
+683
+00:58:07,309 --> 00:58:11,775
+Speaker SPEAKER_02: When you became a professor, and to this day, how is it that you select research problems?
+
+684
+00:58:14,135 --> 00:58:20,123
+Speaker SPEAKER_00: There's no reason why I should really know how I do it.
+
+685
+00:58:21,684 --> 00:58:30,876
+Speaker SPEAKER_00: That's one of the most sophisticated things people do, and I can pontificate about how I think I might do it, but you shouldn't necessarily believe me.
+
+686
+00:58:32,858 --> 00:58:38,927
+Speaker SPEAKER_00: One thing I think I do is this.
+
+687
+00:58:40,644 --> 00:58:43,309
+Speaker SPEAKER_00: Look for a place where you think everybody's doing it wrong.
+
+688
+00:58:43,369 --> 00:58:45,791
+Speaker SPEAKER_00: You just have an intuition everybody's doing it wrong.
+
+689
+00:58:47,554 --> 00:58:50,318
+Speaker SPEAKER_00: And see if you can figure out how to do it better.
+
+690
+00:58:50,358 --> 00:59:01,032
+Speaker SPEAKER_00: And normally what you'll discover is eventually you discover why people are doing it the way they're doing it and that your method that you thought was going to be better isn't better.
+
+691
+00:59:01,733 --> 00:59:03,074
+Speaker SPEAKER_00: But just occasionally,
+
+692
+00:59:04,320 --> 00:59:15,733
+Speaker SPEAKER_00: Um, like if you think everybody's trying to use logic to understand intelligence and we should be using neural networks and the core problem of understanding intelligence is how the connection strengths in a neural network adapt.
+
+693
+00:59:16,655 --> 00:59:18,918
+Speaker SPEAKER_00: Um, just occasionally you'll turn out to be right.
+
+694
+00:59:19,858 --> 00:59:26,567
+Speaker SPEAKER_00: And until you can see why your intuition is wrong and the standard way of doing it is right.
+
+695
+00:59:26,867 --> 00:59:27,867
+Speaker SPEAKER_00: Stick with your intuition.
+
+696
+00:59:28,668 --> 00:59:31,172
+Speaker SPEAKER_00: Um, that's the way you'll do radically new things.
+
+697
+00:59:31,844 --> 00:59:38,179
+Speaker SPEAKER_00: And I have an argument I like, which is, if you have good intuitions, you should clearly stick with your intuitions.
+
+698
+00:59:38,862 --> 00:59:43,373
+Speaker SPEAKER_00: If you have bad intuitions, it doesn't really matter what you do, so you might as well stick with your intuitions.
+
+699
+00:59:45,242 --> 00:59:58,260
+Speaker SPEAKER_02: Now, what is it about the intuitions of Ray Kurzweil that ended up making a variety of correct predictions when even I was following him in the early 2000s and thinking, there's no way half of these would be correct.
+
+700
+00:59:58,960 --> 01:00:00,503
+Speaker SPEAKER_02: And time and time again, he's correct.
+
+701
+01:00:00,963 --> 01:00:03,867
+Speaker SPEAKER_00: Well, if you read his books, that's what you conclude.
+
+702
+01:00:04,409 --> 01:00:08,313
+Speaker SPEAKER_00: I suspect there's a number of things he said that he doesn't mention so much, which weren't correct.
+
+703
+01:00:08,293 --> 01:00:21,001
+Speaker SPEAKER_00: But the main thing he said, as far as I can tell, his main point is that computers are getting faster, they'll continue to get faster, and as computers get faster, we'll be able to do more things.
+
+704
+01:00:21,923 --> 01:00:28,597
+Speaker SPEAKER_00: And using that argument, he's being roughly right about the point at which computers will get the smartest people.
+
+705
+01:00:31,851 --> 01:00:39,523
+Speaker SPEAKER_02: Do you have any similar predictions that your colleagues disagree with, but your intuition says you're on the right track?
+
+706
+01:00:39,802 --> 01:00:44,670
+Speaker SPEAKER_02: Now we've talked about AI and alignment and so on, but perhaps not that because that's covered ground.
+
+707
+01:00:48,916 --> 01:00:57,907
+Speaker SPEAKER_00: I guess the main one is to do with what is subjective experience, what's consciousness and so on, where I think most people just have a totally wrong model of what mental states are.
+
+708
+01:00:59,610 --> 01:01:00,811
+Speaker SPEAKER_00: That's more philosophical now.
+
+709
+01:01:02,411 --> 01:01:09,400
+Speaker SPEAKER_00: In terms of technical things, I still believe that fast weights are gonna be very important.
+
+710
+01:01:09,740 --> 01:01:12,384
+Speaker SPEAKER_00: So synapses in the brain adapt to many different timescales.
+
+711
+01:01:14,266 --> 01:01:16,869
+Speaker SPEAKER_00: We don't use that in most of the AI models.
+
+712
+01:01:17,130 --> 01:01:25,119
+Speaker SPEAKER_00: And the reason we don't use it is because you want to have many different training cases that use exactly the same weights.
+
+713
+01:01:26,442 --> 01:01:30,005
+Speaker SPEAKER_00: And that's so you can do matrix-matrix multiplies, which are efficient.
+
+714
+01:01:30,340 --> 01:01:37,610
+Speaker SPEAKER_00: If you have weights that adapt rapidly, then for each training case, you'll have different weights because they'll have rapidly adapted.
+
+715
+01:01:38,710 --> 01:01:41,815
+Speaker SPEAKER_00: So what I believe in is a kind of overlay of fast weights on slow weights.
+
+716
+01:01:41,855 --> 01:01:46,802
+Speaker SPEAKER_00: The slow weights are adapting as per usual, but on top of that, there's fast weights which are adapting rapidly.
+
+717
+01:01:47,342 --> 01:01:53,110
+Speaker SPEAKER_00: As soon as you do that, you get all sorts of nice extra properties, but it becomes less efficient on our current computers.
+
+718
+01:01:53,992 --> 01:01:58,777
+Speaker SPEAKER_00: It would be fine if we were running things on analog computers,
+
+719
+01:02:00,782 --> 01:02:08,382
+Speaker SPEAKER_00: So I think eventually we're going to have to use fast weights because they lead to all sorts of nice properties.
+
+720
+01:02:09,726 --> 01:02:13,898
+Speaker SPEAKER_00: But that's currently a big difference between brains and the hardware we have.
+
+721
+01:02:17,202 --> 01:02:27,873
+Speaker SPEAKER_02: You also talked about how, publicly, how you're slightly manic-depressive in that you have large periods of being extremely self-critical and then large periods of having extreme self-confidence.
+
+722
+01:02:28,255 --> 01:02:30,297
+Speaker SPEAKER_02: And then this has helped you with your creativity.
+
+723
+01:02:30,336 --> 01:02:32,438
+Speaker SPEAKER_00: Shorter periods of self-confidence.
+
+724
+01:02:32,458 --> 01:02:33,340
+Speaker SPEAKER_00: Okay.
+
+725
+01:02:33,360 --> 01:02:34,422
+Speaker SPEAKER_00: Let's hear about that, please.
+
+726
+01:02:35,583 --> 01:02:37,965
+Speaker SPEAKER_00: So when I get a new idea, I get very excited about it.
+
+727
+01:02:39,266 --> 01:02:41,128
+Speaker SPEAKER_00: And I can actually weigh my ideas.
+
+728
+01:02:41,929 --> 01:02:46,315
+Speaker SPEAKER_00: So sometimes I have one pound ideas, but sometimes I have like five pound ideas.
+
+729
+01:02:46,682 --> 01:02:51,753
+Speaker SPEAKER_00: And so what happens is I get this new idea, I get very excited, and I don't have time to eat.
+
+730
+01:02:53,016 --> 01:02:54,057
+Speaker SPEAKER_00: So my weight goes down.
+
+731
+01:02:54,619 --> 01:02:55,119
+Speaker SPEAKER_00: Oh, I see.
+
+732
+01:02:55,159 --> 01:03:00,831
+Speaker SPEAKER_00: And so I can measure sort of how exciting I found this idea by how much my weight went down.
+
+733
+01:03:01,992 --> 01:03:05,400
+Speaker SPEAKER_00: And yes, really good ideas, I lose about five pounds.
+
+734
+01:03:07,438 --> 01:03:13,150
+Speaker SPEAKER_02: Do you have a sense of carrying the torch of your great-great-grandfather Bull?
+
+735
+01:03:14,351 --> 01:03:15,134
+Speaker SPEAKER_00: No, not really.
+
+736
+01:03:15,474 --> 01:03:21,405
+Speaker SPEAKER_00: I mean, my father talked about this kind of inheritance, and it's a fun thing to talk about.
+
+737
+01:03:21,425 --> 01:03:25,954
+Speaker SPEAKER_00: I have a sense of very high expectations that came from my father.
+
+738
+01:03:27,237 --> 01:03:29,481
+Speaker SPEAKER_00: They didn't come from George Bull, they came from my father.
+
+739
+01:03:29,612 --> 01:03:30,994
+Speaker SPEAKER_02: High expectations for yourself?
+
+740
+01:03:31,695 --> 01:03:33,599
+Speaker SPEAKER_02: For my academic success, yes.
+
+741
+01:03:34,681 --> 01:03:38,666
+Speaker SPEAKER_01: Do you have a successor that in your mind you're passing the torch to?
+
+742
+01:03:38,726 --> 01:03:45,175
+Speaker SPEAKER_01: Not exactly.
+
+743
+01:03:45,916 --> 01:03:52,527
+Speaker SPEAKER_01: I don't think, I don't want to impose that on anybody else.
+
+744
+01:03:54,771 --> 01:03:56,413
+Speaker SPEAKER_01: Why'd you say not exactly instead of no?
+
+745
+01:04:00,038 --> 01:04:05,887
+Speaker SPEAKER_01: Um, I have a couple of nephews who are very good at quantitative stuff.
+
+746
+01:04:05,907 --> 01:04:06,228
+Speaker SPEAKER_01: I see.
+
+747
+01:04:07,168 --> 01:04:08,572
+Speaker SPEAKER_01: But you don't want to put that pressure on them.
+
+748
+01:04:09,672 --> 01:04:09,873
+Speaker SPEAKER_01: No.
+
+749
+01:04:12,338 --> 01:04:18,427
+Speaker SPEAKER_02: Speaking of pressure, when you left Google, you made some public statements about your concern regarding AI safety.
+
+750
+01:04:19,789 --> 01:04:25,077
+Speaker SPEAKER_02: What was the most difficult part about making that break and voicing your anxieties to the world?
+
+751
+01:04:27,121 --> 01:04:27,581
+Speaker SPEAKER_01: Um,
+
+752
+01:04:31,476 --> 01:04:32,739
+Speaker SPEAKER_01: I don't think it was difficult.
+
+753
+01:04:33,320 --> 01:04:34,260
+Speaker SPEAKER_01: I wouldn't say it was difficult.
+
+754
+01:04:36,043 --> 01:04:38,327
+Speaker SPEAKER_00: It was just, I was 75, right?
+
+755
+01:04:38,708 --> 01:04:46,739
+Speaker SPEAKER_00: So it's not like I wanted to stay at Google and carry on working, but I felt I couldn't because of AI safety.
+
+756
+01:04:47,260 --> 01:04:48,902
+Speaker SPEAKER_00: It was, I was ready to retire anyway.
+
+757
+01:04:49,282 --> 01:04:50,905
+Speaker SPEAKER_00: I wasn't so good at doing research anymore.
+
+758
+01:04:51,166 --> 01:04:52,849
+Speaker SPEAKER_00: I kept forgetting what the variables stood for.
+
+759
+01:04:53,369 --> 01:04:55,833
+Speaker SPEAKER_00: And so it was time to retire.
+
+760
+01:04:55,873 --> 01:04:59,137
+Speaker SPEAKER_00: And I thought I could just, as I,
+
+761
+01:04:59,590 --> 01:05:00,313
+Speaker SPEAKER_00: went out the door.
+
+762
+01:05:00,353 --> 01:05:03,530
+Speaker SPEAKER_00: I could just mention that AI or these air safety issues.
+
+763
+01:05:03,550 --> 01:05:06,967
+Speaker SPEAKER_00: I wasn't quite expecting what happened next.
+
+764
+01:05:08,516 --> 01:05:15,603
+Speaker SPEAKER_02: Now, you also did mention this in another interview about how, as you're now 75, 76, it keeps changing.
+
+765
+01:05:15,704 --> 01:05:17,206
+Speaker SPEAKER_00: It keeps changing every year, huh?
+
+766
+01:05:17,226 --> 01:05:17,646
+Speaker SPEAKER_02: 77.
+
+767
+01:05:17,666 --> 01:05:18,807
+Speaker SPEAKER_02: Yeah, okay.
+
+768
+01:05:18,827 --> 01:05:27,556
+Speaker SPEAKER_02: You mentioned publicly that, yes, you keep forgetting the variable names as you're programming, and so you think you're going to move to philosophy as you get older.
+
+769
+01:05:27,577 --> 01:05:29,358
+Speaker SPEAKER_00: Which is what we've been talking about quite a lot.
+
+770
+01:05:29,378 --> 01:05:29,659
+Speaker SPEAKER_00: Yes, yes.
+
+771
+01:05:29,978 --> 01:05:35,605
+Speaker SPEAKER_00: But it's basically philosophy I did when I was doing philosophy when I was about 20.
+
+772
+01:05:36,411 --> 01:05:40,684
+Speaker SPEAKER_00: I'm going back to the insights I had when I was doing philosophy and exploring those further.
+
+773
+01:05:40,905 --> 01:05:41,206
+Speaker SPEAKER_01: Got it.
+
+774
+01:05:46,099 --> 01:05:47,063
+Speaker SPEAKER_01: So what's on the horizon?
+
+775
+01:05:49,539 --> 01:05:59,771
+Speaker SPEAKER_00: I think the world's going to change a whole lot fairly quickly because of AI.
+
+776
+01:06:00,891 --> 01:06:03,554
+Speaker SPEAKER_00: And some of it's going to be very good and some of it's going to be very bad.
+
+777
+01:06:03,614 --> 01:06:10,762
+Speaker SPEAKER_00: And we need to do what we can to mitigate the bad consequences.
+
+778
+01:06:10,802 --> 01:06:12,644
+Speaker SPEAKER_00: And I think
+
+779
+01:06:12,625 --> 01:06:18,929
+Speaker SPEAKER_00: what I can still do usefully is encourage young researchers to work on the safety issues.
+
+780
+01:06:19,793 --> 01:06:21,639
+Speaker SPEAKER_00: So that's what I've been doing quite a lot of.
+
+781
+01:06:23,442 --> 01:06:26,045
+Speaker SPEAKER_02: safety and within that there's something called alignment.
+
+782
+01:06:26,465 --> 01:06:28,168
+Speaker SPEAKER_02: Now we as people don't have alignment.
+
+783
+01:06:28,447 --> 01:06:31,331
+Speaker SPEAKER_02: So do you see that we could solve the alignment problem?
+
+784
+01:06:32,293 --> 01:06:34,074
+Speaker SPEAKER_00: I kind of agree with that statement.
+
+785
+01:06:34,815 --> 01:06:39,101
+Speaker SPEAKER_00: Alignment is like asking you to find a line that's parallel to two lines at right angles.
+
+786
+01:06:41,364 --> 01:06:41,585
+Speaker SPEAKER_00: Yeah.
+
+787
+01:06:42,525 --> 01:06:48,653
+Speaker SPEAKER_00: There's a lot of, people talk very naively about alignment like there's sort of human good.
+
+788
+01:06:48,853 --> 01:06:49,855
+Speaker SPEAKER_00: Well,
+
+789
+01:06:49,835 --> 01:06:52,318
+Speaker SPEAKER_00: What some people think is good, other people think is bad.
+
+790
+01:06:52,378 --> 01:06:54,219
+Speaker SPEAKER_00: You see that a lot in the Middle East.
+
+791
+01:06:57,242 --> 01:07:00,085
+Speaker SPEAKER_01: So alignment is a very tricky issue.
+
+792
+01:07:01,907 --> 01:07:02,807
+Speaker SPEAKER_02: Alignment with whom?
+
+793
+01:07:02,827 --> 01:07:08,793
+Speaker SPEAKER_02: Now you just were speaking to young AI researchers.
+
+794
+01:07:08,954 --> 01:07:16,882
+Speaker SPEAKER_02: Now you're speaking to young math researchers, young philosophers, young students coming into whatever new STEM field, even though philosophy is not a STEM field.
+
+795
+01:07:18,364 --> 01:07:19,284
+Speaker SPEAKER_02: What is your advice?
+
+796
+01:07:20,885 --> 01:07:31,324
+Speaker SPEAKER_00: Well, I mean, one piece of advice is a lot of the excitement in scientific research is now around neural networks, which are now called AI.
+
+797
+01:07:32,125 --> 01:07:41,222
+Speaker SPEAKER_00: In fact, the physicists sort of now want to say that's physics.
+
+798
+01:07:41,775 --> 01:07:48,030
+Speaker SPEAKER_02: Who got a Nobel Prize in physics for their work in neural nets?
+
+799
+01:07:49,153 --> 01:07:49,855
+Speaker SPEAKER_02: You can't remember?
+
+800
+01:07:50,356 --> 01:07:51,980
+Speaker SPEAKER_02: I don't remember, but anyhow, continue.
+
+801
+01:07:52,742 --> 01:07:53,324
+Speaker SPEAKER_02: Are you serious?
+
+802
+01:07:53,384 --> 01:07:54,346
+Speaker SPEAKER_02: No, I'm joking.
+
+803
+01:07:56,291 --> 01:07:57,112
+Speaker SPEAKER_00: Right, I thought you were joking.
+
+804
+01:07:57,132 --> 01:08:00,239
+Speaker SPEAKER_00: I'm a great actor, huh?
+
+805
+01:08:02,818 --> 01:08:09,311
+Speaker SPEAKER_00: So yeah, clearly the Nobel committees recognized that a lot of the excitement in science is now in AI.
+
+806
+01:08:10,052 --> 01:08:18,567
+Speaker SPEAKER_00: And so for both physics and chemistry, the Nobel prizes were awarded to people doing AI or using AI.
+
+807
+01:08:20,520 --> 01:08:24,926
+Speaker SPEAKER_00: So I guess my advice to young researchers would be that's where a lot of the excitement is.
+
+808
+01:08:25,728 --> 01:08:37,662
+Speaker SPEAKER_00: But I think there's also other areas where there's going to be very important progress, like if we could get room temperature superconductors, that would make it easy to have solar power a long way away, things like that.
+
+809
+01:08:37,722 --> 01:08:40,926
+Speaker SPEAKER_00: So that's not the only area that's exciting.
+
+810
+01:08:40,966 --> 01:08:46,073
+Speaker SPEAKER_00: Nanomaterials are very exciting, but they will use AI.
+
+811
+01:08:46,052 --> 01:08:52,141
+Speaker SPEAKER_00: So I think probably most exciting areas of science will at least use AI tools.
+
+812
+01:08:54,404 --> 01:08:55,546
+Speaker SPEAKER_02: Now we just alluded to this.
+
+813
+01:08:55,606 --> 01:08:57,069
+Speaker SPEAKER_02: Now let's make an explicit reference.
+
+814
+01:08:57,088 --> 01:09:02,557
+Speaker SPEAKER_02: You won the Nobel Prize last year in physics for your work in AI and neural nets.
+
+815
+01:09:02,757 --> 01:09:02,997
+Speaker SPEAKER_02: Right.
+
+816
+01:09:03,698 --> 01:09:04,279
+Speaker SPEAKER_02: How do you feel?
+
+817
+01:09:04,319 --> 01:09:05,641
+Speaker SPEAKER_02: How do you feel about that?
+
+818
+01:09:06,122 --> 01:09:07,744
+Speaker SPEAKER_02: What was it like hearing the news?
+
+819
+01:09:07,845 --> 01:09:10,448
+Speaker SPEAKER_02: And in physics, do you consider yourself a physicist?
+
+820
+01:09:10,649 --> 01:09:12,212
+Speaker SPEAKER_02: What does this mean?
+
+821
+01:09:12,310 --> 01:09:13,591
+Speaker SPEAKER_00: No, I'm not a physicist.
+
+822
+01:09:14,273 --> 01:09:17,356
+Speaker SPEAKER_00: I was quite good at physics when I did it in my first year at university.
+
+823
+01:09:17,377 --> 01:09:24,065
+Speaker SPEAKER_00: I got a first in physics based on being able to do things intuitively, but I was never very good at the math.
+
+824
+01:09:24,847 --> 01:09:27,011
+Speaker SPEAKER_00: And I gave up physics because I wasn't good enough at math.
+
+825
+01:09:28,112 --> 01:09:31,516
+Speaker SPEAKER_00: I think if I'd been better at math, I'd have stayed in physics and I wouldn't have got a Nobel Prize.
+
+826
+01:09:34,020 --> 01:09:37,305
+Speaker SPEAKER_00: So probably it was lucky I wasn't very good at math.
+
+827
+01:09:39,208 --> 01:09:40,153
+Speaker SPEAKER_00: How do I feel about it?
+
+828
+01:09:40,172 --> 01:09:41,961
+Speaker SPEAKER_00: I still feel somewhat confused about it.
+
+829
+01:09:42,564 --> 01:09:48,510
+Speaker SPEAKER_00: The main problem is that the work I did on neural nets related closely to physics.
+
+830
+01:09:48,658 --> 01:09:52,505
+Speaker SPEAKER_00: was a learning algorithm called Boltzmann machines that I developed with Terry Sanofsky.
+
+831
+01:09:53,707 --> 01:09:59,135
+Speaker SPEAKER_00: And it used statistical physics in a nice way.
+
+832
+01:10:00,277 --> 01:10:02,239
+Speaker SPEAKER_00: So I can see why physicists would claim that.
+
+833
+01:10:03,201 --> 01:10:06,886
+Speaker SPEAKER_00: But it wasn't really on the path to the current successful AI systems.
+
+834
+01:10:06,947 --> 01:10:15,779
+Speaker SPEAKER_00: It was a different algorithm I also worked on called backpropagation that gave rise to this huge new AI industry.
+
+835
+01:10:15,760 --> 01:10:22,328
+Speaker SPEAKER_00: So I still feel sort of awkward about the fact that we got rewarded for Boltzmann machines, but it wasn't Boltzmann machines.
+
+836
+01:10:23,430 --> 01:10:26,793
+Speaker SPEAKER_00: They were helpful, but they weren't the thing that was really successful.
+
+837
+01:10:29,077 --> 01:10:30,838
+Speaker SPEAKER_02: Professor, it's been a pleasure.
+
+838
+01:10:31,180 --> 01:10:31,460
+Speaker SPEAKER_02: Okay.
+
+839
+01:10:31,779 --> 01:10:35,324
+Speaker SPEAKER_02: Thank you for inviting me into your home and getting to meet your cats.
+
+840
+01:10:35,784 --> 01:10:36,747
+Speaker SPEAKER_00: Okay.
+
+841
+01:10:36,766 --> 01:10:37,127
+Speaker SPEAKER_02: Thank you.
+
+842
+01:10:39,335 --> 01:10:40,235
+Speaker SPEAKER_02: New update!
+
+843
+01:10:40,556 --> 01:10:41,899
+Speaker SPEAKER_02: Started a substack.
+
+844
+01:10:41,918 --> 01:10:47,426
+Speaker SPEAKER_02: Writings on there are currently about language and ill-defined concepts, as well as some other mathematical details.
+
+845
+01:10:47,828 --> 01:10:49,210
+Speaker SPEAKER_02: Much more being written there.
+
+846
+01:10:49,610 --> 01:10:51,613
+Speaker SPEAKER_02: This is content that isn't anywhere else.
+
+847
+01:10:51,634 --> 01:10:54,117
+Speaker SPEAKER_02: It's not on Theories of Everything, it's not on Patreon.
+
+848
+01:10:54,457 --> 01:10:57,882
+Speaker SPEAKER_02: Also, full transcripts will be placed there at some point in the future.
+
+849
+01:10:57,863 --> 01:11:05,011
+Speaker SPEAKER_02: Several people ask me, hey Kurt, you've spoken to so many people in the fields of theoretical physics, philosophy, and consciousness.
+
+850
+01:11:05,412 --> 01:11:06,153
+Speaker SPEAKER_02: What are your thoughts?
+
+851
+01:11:06,854 --> 01:11:13,743
+Speaker SPEAKER_02: While I remain impartial in interviews, this substack is a way to peer into my present deliberations on these topics.
+
+852
+01:11:15,425 --> 01:11:18,588
+Speaker SPEAKER_02: Also, thank you to our partner, The Economist.
+
+853
+01:11:20,846 --> 01:11:22,609
+Speaker SPEAKER_02: Firstly, thank you for watching.
+
+854
+01:11:22,670 --> 01:11:23,471
+Speaker SPEAKER_02: Thank you for listening.
+
+855
+01:11:23,813 --> 01:11:28,440
+Speaker SPEAKER_02: If you haven't subscribed or clicked that like button, now is the time to do so.
+
+856
+01:11:28,841 --> 01:11:29,143
+Speaker SPEAKER_02: Why?
+
+857
+01:11:29,182 --> 01:11:35,595
+Speaker SPEAKER_02: Because each subscribe, each like, helps YouTube push this content to more people, like yourself.
+
+858
+01:11:35,935 --> 01:11:39,362
+Speaker SPEAKER_02: Plus, it helps out Kurt directly, aka me.
+
+859
+01:11:39,341 --> 01:11:56,760
+Speaker SPEAKER_02: I also found out last year that external links count plenty toward the algorithm, which means that whenever you share, on Twitter, say on Facebook, or even on Reddit, etc., it shows YouTube, hey, people are talking about this content outside of YouTube, which in turn greatly aids the distribution on YouTube.
+
+860
+01:11:56,807 --> 01:12:07,644
+Speaker SPEAKER_02: Thirdly, there's a remarkably active Discord and subreddit for Theories of Everything, where people explicate toes, they disagree respectfully about theories, and build, as a community, our own toe.
+
+861
+01:12:08,104 --> 01:12:09,666
+Speaker SPEAKER_02: Links to both are in the description.
+
+862
+01:12:09,987 --> 01:12:16,176
+Speaker SPEAKER_02: Fourthly, you should know this podcast is on iTunes, it's on Spotify, it's on all of the audio platforms.
+
+863
+01:12:16,536 --> 01:12:19,359
+Speaker SPEAKER_02: All you have to do is type in Theories of Everything and you'll find it.
+
+864
+01:12:19,600 --> 01:12:22,545
+Speaker SPEAKER_02: Personally, I gain from re-watching lectures and podcasts.
+
+865
+01:12:22,524 --> 01:12:26,689
+Speaker SPEAKER_02: I also read in the comments that, hey, toll listeners also gain from replaying.
+
+866
+01:12:26,849 --> 01:12:33,574
+Speaker SPEAKER_02: So how about instead you re-listen on those platforms like iTunes, Spotify, Google Podcasts, whichever podcast catcher you use.
+
+867
+01:12:33,875 --> 01:12:44,003
+Speaker SPEAKER_02: And finally, if you'd like to support more conversations like this, more content like this, then do consider visiting patreon.com slash KurtJMungle and donating with whatever you like.
+
+868
+01:12:44,265 --> 01:12:45,326
+Speaker SPEAKER_02: There's also PayPal.
+
+869
+01:12:45,525 --> 01:12:46,567
+Speaker SPEAKER_02: There's also crypto.
+
+870
+01:12:46,766 --> 01:12:48,448
+Speaker SPEAKER_02: There's also just joining on YouTube.
+
+871
+01:12:48,748 --> 01:12:52,532
+Speaker SPEAKER_02: Again, keep in mind it's support from the sponsors and you.
+
+872
+01:12:52,511 --> 01:12:54,756
+Speaker SPEAKER_02: that allow me to work on Toe full-time.
+
+873
+01:12:55,016 --> 01:12:58,963
+Speaker SPEAKER_02: You also get early access to ad-free episodes, whether it's audio or video.
+
+874
+01:12:59,083 --> 01:13:01,548
+Speaker SPEAKER_02: It's audio in the case of Patreon, video in the case of YouTube.
+
+875
+01:13:01,668 --> 01:13:05,676
+Speaker SPEAKER_02: For instance, this episode that you're listening to right now was released a few days earlier.
+
+876
+01:13:06,216 --> 01:13:08,561
+Speaker SPEAKER_02: Every dollar helps far more than you think.
+
+877
+01:13:08,981 --> 01:13:11,407
+Speaker SPEAKER_02: Either way, your viewership is generosity enough.
+
+878
+01:13:11,707 --> 01:13:12,529
+Speaker SPEAKER_01: Thank you so much.
+

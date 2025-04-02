@@ -1,0 +1,524 @@
+1
+00:00:00,031 --> 00:00:05,157
+Speaker SPEAKER_00: Almost everybody I know who's an expert on AI believes that they will exceed human intelligence.
+
+2
+00:00:05,176 --> 00:00:06,158
+Speaker SPEAKER_00: It's just a question of when.
+
+3
+00:00:06,799 --> 00:00:14,246
+Speaker SPEAKER_00: In between 5 and 20 years from now, there's a probability of about a half that we'll have to confront the problem of them trying to take over.
+
+4
+00:00:16,109 --> 00:00:23,236
+Speaker SPEAKER_01: I began by asking Geoffrey Inton whether he thought the world is getting to grips with this issue or if he's concerned as ever.
+
+5
+00:00:24,161 --> 00:00:28,109
+Speaker SPEAKER_00: I'm still as concerned as I have been, but I'm very pleased that the world's beginning to take it seriously.
+
+6
+00:00:28,890 --> 00:00:37,567
+Speaker SPEAKER_00: So in particular, they're beginning to take the existential threat seriously, that these things will get smarter than us, and we have to worry about whether they'll want to take control away from us.
+
+7
+00:00:38,027 --> 00:00:41,515
+Speaker SPEAKER_00: That's something we should think seriously about, and people now take that seriously.
+
+8
+00:00:41,554 --> 00:00:43,639
+Speaker SPEAKER_00: A few years ago, they thought it was just science fiction.
+
+9
+00:00:43,618 --> 00:00:53,350
+Speaker SPEAKER_01: And from your perspective, from having worked at the top of this, having developed some of the theories underpinning all of this explosion in AI that we're seeing, that existential threat is real?
+
+10
+00:00:54,310 --> 00:00:54,551
+Speaker SPEAKER_00: Yes.
+
+11
+00:00:55,131 --> 00:00:57,715
+Speaker SPEAKER_00: So some people think these things don't really understand.
+
+12
+00:00:57,734 --> 00:00:59,057
+Speaker SPEAKER_00: They're very different from us.
+
+13
+00:00:59,417 --> 00:01:01,198
+Speaker SPEAKER_00: They're just using some statistical tricks.
+
+14
+00:01:01,859 --> 00:01:02,680
+Speaker SPEAKER_00: That's not the case.
+
+15
+00:01:03,942 --> 00:01:06,284
+Speaker SPEAKER_00: These big language models, for example,
+
+16
+00:01:06,265 --> 00:01:10,969
+Speaker SPEAKER_00: The early ones were developed as a theory of how the brain understands language.
+
+17
+00:01:10,989 --> 00:01:14,914
+Speaker SPEAKER_00: They're the best theory you've currently got of how the brain understands language.
+
+18
+00:01:15,453 --> 00:01:21,519
+Speaker SPEAKER_00: We don't understand either how they work or how the brain works in detail, but we think probably they work in fairly similar ways.
+
+19
+00:01:21,941 --> 00:01:23,561
+Speaker SPEAKER_00: What is it that's triggered your concern?
+
+20
+00:01:24,043 --> 00:01:25,524
+Speaker SPEAKER_00: It's been a combination of two things.
+
+21
+00:01:26,325 --> 00:01:32,391
+Speaker SPEAKER_00: So, playing with the large chatbots, particularly one at Google before GPT-4, but also with GPT-4.
+
+22
+00:01:32,370 --> 00:01:34,436
+Speaker SPEAKER_00: They're clearly very competent.
+
+23
+00:01:34,456 --> 00:01:35,659
+Speaker SPEAKER_00: They clearly understand a lot.
+
+24
+00:01:35,759 --> 00:01:38,084
+Speaker SPEAKER_00: They have a lot more knowledge than any person.
+
+25
+00:01:38,525 --> 00:01:40,751
+Speaker SPEAKER_00: They're like a not very good expert at more or less everything.
+
+26
+00:01:41,914 --> 00:01:43,037
+Speaker SPEAKER_00: So that was one worry.
+
+27
+00:01:43,378 --> 00:01:46,245
+Speaker SPEAKER_00: And the second was coming to understand
+
+28
+00:01:46,799 --> 00:01:59,114
+Speaker SPEAKER_00: the way in which they're a superior form of intelligence, because you can make many copies of the same neural network, each copy can look at a different bit of data, and then they can all share what they learned.
+
+29
+00:01:59,814 --> 00:02:09,506
+Speaker SPEAKER_00: So imagine if we had 10,000 people, they could all go off and do a degree in something, they could share what they learned efficiently, and then we'd all have 10,000 degrees.
+
+30
+00:02:10,426 --> 00:02:11,949
+Speaker SPEAKER_00: We'd know a lot then.
+
+31
+00:02:11,968 --> 00:02:16,754
+Speaker SPEAKER_00: We can't share knowledge nearly as efficiently as different copies of the same neural network can.
+
+32
+00:02:17,191 --> 00:02:24,745
+Speaker SPEAKER_01: OK, so the key concern here is that it could exceed human intelligence, indeed the mass of human intelligence.
+
+33
+00:02:24,865 --> 00:02:27,911
+Speaker SPEAKER_00: Very few of the experts are in doubt about that.
+
+34
+00:02:28,372 --> 00:02:33,662
+Speaker SPEAKER_00: Almost everybody I know who's an expert on AI believes that they will exceed human intelligence.
+
+35
+00:02:33,722 --> 00:02:34,764
+Speaker SPEAKER_00: It's just a question of when.
+
+36
+00:02:35,104 --> 00:02:38,912
+Speaker SPEAKER_01: And at that point, it's really quite difficult to control them.
+
+37
+00:02:39,348 --> 00:02:40,188
+Speaker SPEAKER_00: Well, we don't know.
+
+38
+00:02:40,248 --> 00:02:42,432
+Speaker SPEAKER_00: We've never dealt with something like this before.
+
+39
+00:02:42,772 --> 00:02:46,558
+Speaker SPEAKER_00: There's a few experts, like my friend Yann LeCun, who think it'll be no problem.
+
+40
+00:02:46,658 --> 00:02:47,520
+Speaker SPEAKER_00: We'll give them the goals.
+
+41
+00:02:47,560 --> 00:02:48,221
+Speaker SPEAKER_00: It'll be no problem.
+
+42
+00:02:48,241 --> 00:02:48,961
+Speaker SPEAKER_00: They'll do what we say.
+
+43
+00:02:49,383 --> 00:02:50,465
+Speaker SPEAKER_00: They'll be subservient to us.
+
+44
+00:02:52,687 --> 00:02:55,532
+Speaker SPEAKER_00: There's other experts who think absolutely they'll take control.
+
+45
+00:02:56,233 --> 00:03:00,900
+Speaker SPEAKER_00: Given this big spectrum of opinions, I think it's wise to be cautious.
+
+46
+00:03:00,879 --> 00:03:06,054
+Speaker SPEAKER_00: I think there's a chance they'll take control, and it's a significant chance, it's not like 1%, it's much more.
+
+47
+00:03:06,575 --> 00:03:12,391
+Speaker SPEAKER_01: Could they not be contained in certain areas, I don't know, scientific research, but not, for example, the armed forces?
+
+48
+00:03:13,317 --> 00:03:22,915
+Speaker SPEAKER_00: Maybe, but actually if you look at all the current legislation, including the European legislation, there's a little clause in all of it that says that none of this applies to military applications.
+
+49
+00:03:23,556 --> 00:03:27,185
+Speaker SPEAKER_00: Governments aren't willing to restrict their own uses of it for defence.
+
+50
+00:03:28,347 --> 00:03:30,972
+Speaker SPEAKER_01: There's been some evidence
+
+51
+00:03:30,951 --> 00:03:36,758
+Speaker SPEAKER_01: even in current conflicts of the use of AI in generating thousands and thousands of targets.
+
+52
+00:03:37,098 --> 00:03:37,938
+Speaker SPEAKER_01: Yes.
+
+53
+00:03:37,959 --> 00:03:40,542
+Speaker SPEAKER_01: I mean that's happened since you started warning about AI.
+
+54
+00:03:40,662 --> 00:03:42,864
+Speaker SPEAKER_01: Is that the sort of pathway that you're concerned about?
+
+55
+00:03:42,883 --> 00:03:44,586
+Speaker SPEAKER_00: I mean that's the thin end of the wedge.
+
+56
+00:03:45,126 --> 00:03:49,591
+Speaker SPEAKER_00: What I'm most concerned about is when these things can autonomously make the decision to kill people.
+
+57
+00:03:50,852 --> 00:03:51,973
+Speaker SPEAKER_00: So robot soldiers.
+
+58
+00:03:52,394 --> 00:03:52,593
+Speaker SPEAKER_01: Yeah.
+
+59
+00:03:53,314 --> 00:03:54,915
+Speaker SPEAKER_01: And those are common.
+
+60
+00:03:54,936 --> 00:03:55,456
+Speaker SPEAKER_01: And the like.
+
+61
+00:03:55,437 --> 00:04:02,887
+Speaker SPEAKER_00: And it may be we can get something like Geneva Conventions to regulate them, but I don't think that's going to happen until after very nasty things have happened.
+
+62
+00:04:03,168 --> 00:04:14,743
+Speaker SPEAKER_01: And there's an analogy here with the Manhattan Project and with Oppenheimer, which is if we restrain ourselves from military use in the G7, advanced democracies, what's going on in China, what's going on in Russia?
+
+63
+00:04:15,085 --> 00:04:17,408
+Speaker SPEAKER_00: Yes, it has to be an international agreement.
+
+64
+00:04:17,427 --> 00:04:18,930
+Speaker SPEAKER_00: But if you look at chemical weapons,
+
+65
+00:04:19,619 --> 00:04:22,583
+Speaker SPEAKER_00: The International Agreement for Chemical Weapons has worked quite well.
+
+66
+00:04:23,122 --> 00:04:26,947
+Speaker SPEAKER_01: Do you have any sense of whether the shackles are off in a place like Russia?
+
+67
+00:04:27,247 --> 00:04:31,413
+Speaker SPEAKER_00: Well, Putin said some years ago that whoever controls AI controls the world.
+
+68
+00:04:32,254 --> 00:04:34,197
+Speaker SPEAKER_00: So I imagine they're working very hard.
+
+69
+00:04:34,617 --> 00:04:38,581
+Speaker SPEAKER_00: Fortunately, the West is probably well ahead of them in research.
+
+70
+00:04:40,403 --> 00:04:44,928
+Speaker SPEAKER_00: We're probably still slightly ahead of China, but China's putting more resources in.
+
+71
+00:04:45,750 --> 00:04:49,574
+Speaker SPEAKER_00: And so in terms of military uses of AI, I think there's going to be a race.
+
+72
+00:04:49,622 --> 00:04:57,896
+Speaker SPEAKER_01: Sounds very theoretical, but this argument, this thread of argument, if you follow it, you really are quite worried about extinction-level events.
+
+73
+00:04:58,697 --> 00:05:00,701
+Speaker SPEAKER_00: So we should distinguish these different risks.
+
+74
+00:05:01,262 --> 00:05:06,329
+Speaker SPEAKER_00: The risk of using AI for autonomous lethal weapons doesn't depend on AI being smarter than us.
+
+75
+00:05:06,992 --> 00:05:11,738
+Speaker SPEAKER_00: That's a quite separate risk from the risk that the AI itself will go rogue and try and take over.
+
+76
+00:05:12,440 --> 00:05:13,482
+Speaker SPEAKER_00: I'm worried about both things.
+
+77
+00:05:13,843 --> 00:05:16,406
+Speaker SPEAKER_00: The autonomous weapons is clearly going to come.
+
+78
+00:05:16,387 --> 00:05:21,875
+Speaker SPEAKER_00: Whether AI goes rogue and tries to take over is something we may be able to control or we may not, we don't know.
+
+79
+00:05:21,915 --> 00:05:30,247
+Speaker SPEAKER_00: And so at this point, before it's more intelligent than us, we should be putting huge resources into seeing whether we are going to be able to control it.
+
+80
+00:05:30,809 --> 00:05:33,091
+Speaker SPEAKER_01: What sort of society do you see evolving?
+
+81
+00:05:33,293 --> 00:05:36,076
+Speaker SPEAKER_01: Which jobs will still be here?
+
+82
+00:05:36,858 --> 00:05:43,288
+Speaker SPEAKER_00: Yes, I'm very worried about AI taking over lots of mundane jobs.
+
+83
+00:05:43,387 --> 00:05:45,851
+Speaker SPEAKER_00: And that should be a good thing.
+
+84
+00:05:46,452 --> 00:05:50,201
+Speaker SPEAKER_00: It's going to lead to a big increase in productivity, which leads to a big increase in wealth.
+
+85
+00:05:50,682 --> 00:05:53,709
+Speaker SPEAKER_00: And if that wealth was equally distributed, that would be great.
+
+86
+00:05:54,069 --> 00:05:54,992
+Speaker SPEAKER_00: But it's not going to be.
+
+87
+00:05:55,291 --> 00:06:01,345
+Speaker SPEAKER_00: In the systems we live in, that wealth is going to go to the rich and not to the people whose jobs get lost.
+
+88
+00:06:01,459 --> 00:06:03,824
+Speaker SPEAKER_00: And that's going to be very bad for society, I believe.
+
+89
+00:06:04,185 --> 00:06:12,504
+Speaker SPEAKER_00: So it's going to increase the gap between rich and poor, which increases the chances of right-wing populists getting elected.
+
+90
+00:06:13,144 --> 00:06:21,223
+Speaker SPEAKER_01: So to be clear, you think that the societal impacts from the changes in jobs could be so profound
+
+91
+00:06:21,709 --> 00:06:28,199
+Speaker SPEAKER_01: that we may need to rethink the politics of, I know, the benefit system, inequality, universal basic income?
+
+92
+00:06:28,418 --> 00:06:30,482
+Speaker SPEAKER_00: Yes, I certainly believe in universal basic income.
+
+93
+00:06:30,802 --> 00:06:35,369
+Speaker SPEAKER_00: I don't think that's enough, though, because a lot of people get their self-respect from the job they do.
+
+94
+00:06:36,129 --> 00:06:45,642
+Speaker SPEAKER_00: And if you put everybody on universal basic income, that solves the problem of them starving and not being able to pay the rent, but it doesn't solve the self-respect problem.
+
+95
+00:06:45,963 --> 00:06:48,526
+Speaker SPEAKER_00: So, what, you just try to
+
+96
+00:06:48,507 --> 00:06:55,180
+Speaker SPEAKER_01: the government needs to get, I mean it's not how we do things in Britain, you know, we tend to sort of stand back and let the economy decide the winners and losers.
+
+97
+00:06:56,242 --> 00:07:02,855
+Speaker SPEAKER_00: Yes, actually I was consulted by people in Downing Street and I advised them that universal basic income was a good idea.
+
+98
+00:07:03,276 --> 00:07:06,684
+Speaker SPEAKER_01: And this is, I mean you said 10 to 20 percent risk of them taking over.
+
+99
+00:07:06,803 --> 00:07:07,865
+Speaker SPEAKER_01: Yes.
+
+100
+00:07:08,369 --> 00:07:12,855
+Speaker SPEAKER_01: Are you more certain that this is going to have to be addressed in the next five years, the next parliament perhaps?
+
+101
+00:07:13,197 --> 00:07:21,870
+Speaker SPEAKER_00: My guess is in between five and twenty years from now there's a probability of about a half that we'll have to confront the problem of them trying to take over.
+
+102
+00:07:22,310 --> 00:07:26,697
+Speaker SPEAKER_01: Are you particularly impressed by the efforts of governments so far to try and rein this in?
+
+103
+00:07:27,298 --> 00:07:30,764
+Speaker SPEAKER_00: I'm impressed by the fact that they're beginning to take it seriously.
+
+104
+00:07:30,745 --> 00:07:34,494
+Speaker SPEAKER_00: I'm unimpressed by the fact that none of them is willing to regulate military uses.
+
+105
+00:07:35,055 --> 00:07:38,244
+Speaker SPEAKER_00: And I'm unimpressed by the fact that most of the regulations have no teeth.
+
+106
+00:07:38,264 --> 00:07:48,348
+Speaker SPEAKER_01: Do you think that the tech companies are letting down their guard on safety because they need to be the winner in this race for AI?
+
+107
+00:07:48,480 --> 00:07:50,403
+Speaker SPEAKER_00: I don't know about the tech companies in general.
+
+108
+00:07:50,603 --> 00:07:52,706
+Speaker SPEAKER_00: I know quite a lot about Google, because I used to work there.
+
+109
+00:07:53,447 --> 00:07:55,389
+Speaker SPEAKER_00: Google was very concerned about these issues.
+
+110
+00:07:55,911 --> 00:07:58,514
+Speaker SPEAKER_00: And Google didn't release the big chatbots.
+
+111
+00:07:59,115 --> 00:08:01,437
+Speaker SPEAKER_00: It was concerned about its reputation if they told lies.
+
+112
+00:08:03,000 --> 00:08:10,350
+Speaker SPEAKER_00: But as soon as open AI went into business with Microsoft, and Microsoft put chatbots into Bing, Google had no choice.
+
+113
+00:08:10,850 --> 00:08:17,238
+Speaker SPEAKER_00: So I think the competition is going to cause these things to be developed rapidly, and the competition
+
+114
+00:08:17,218 --> 00:08:23,483
+Speaker SPEAKER_00: means that they won't put enough effort into safety.
+
+115
+00:08:24,120 --> 00:08:28,625
+Speaker SPEAKER_01: talk to their children, give them advice on the future of the economy, what jobs they should do, what degrees that they should do.
+
+116
+00:08:28,687 --> 00:08:32,871
+Speaker SPEAKER_01: It seems like the world's being thrown up in the air by this, by the world that you're describing.
+
+117
+00:08:34,352 --> 00:08:39,820
+Speaker SPEAKER_01: What would you advise somebody to study now, to kind of surf this wave?
+
+118
+00:08:40,421 --> 00:08:46,187
+Speaker SPEAKER_00: I don't know, because it's clear that a lot of mid-level intellectual jobs are going to disappear.
+
+119
+00:08:46,828 --> 00:08:52,034
+Speaker SPEAKER_00: And if you ask which jobs are safe, my best bet about a job that's safe is plumbing.
+
+120
+00:08:52,336 --> 00:08:54,979
+Speaker SPEAKER_00: because these things aren't yet very good at physical manipulation.
+
+121
+00:08:55,320 --> 00:08:57,662
+Speaker SPEAKER_00: That'll probably be the last thing they're very good at.
+
+122
+00:08:58,243 --> 00:09:00,306
+Speaker SPEAKER_00: And so I think plumbing is safe for quite a long time.
+
+123
+00:09:01,105 --> 00:09:03,129
+Speaker SPEAKER_00: Driving, that's not going to go.
+
+124
+00:09:03,208 --> 00:09:03,990
+Speaker SPEAKER_00: Not driving, no.
+
+125
+00:09:04,049 --> 00:09:04,330
+Speaker SPEAKER_00: Autonomous.
+
+126
+00:09:04,610 --> 00:09:05,432
+Speaker SPEAKER_00: No, that's hopeless.
+
+127
+00:09:05,971 --> 00:09:07,573
+Speaker SPEAKER_00: I mean, that's been slower than we expected.
+
+128
+00:09:07,594 --> 00:09:08,654
+Speaker SPEAKER_00: Journalism.
+
+129
+00:09:08,936 --> 00:09:13,822
+Speaker SPEAKER_00: Journalism might last a little bit longer, but I think these things are going to be pretty good journalists quite soon.
+
+130
+00:09:14,501 --> 00:09:15,984
+Speaker SPEAKER_00: And probably quite good interviewers, too.
+
+131
+00:09:16,924 --> 00:09:17,466
+Unknown Speaker: OK, well.
+

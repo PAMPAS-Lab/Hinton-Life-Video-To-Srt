@@ -1,0 +1,3036 @@
+1
+00:00:24,989 --> 00:00:31,278
+Speaker SPEAKER_02: I'm really honored to have, to be able to introduce our speaker today.
+
+2
+00:00:32,301 --> 00:00:35,165
+Speaker SPEAKER_02: Jeff Hinton is from the University of Toronto.
+
+3
+00:00:36,106 --> 00:00:45,883
+Speaker SPEAKER_02: He graduated from Cambridge in 1970 with a Bachelor of Arts in Experimental Psychology and from Edinburgh in 1978 with a PhD in Artificial Intelligence.
+
+4
+00:00:46,353 --> 00:00:51,887
+Speaker SPEAKER_02: We barbarians south of the Canadian border don't take much stock in pedigree.
+
+5
+00:00:52,750 --> 00:01:00,168
+Speaker SPEAKER_02: But as a computer scientist, I was, I couldn't help but notice that Jeff is the great, great grandson of the logician George Boole.
+
+6
+00:01:01,633 --> 00:01:02,454
+Speaker SPEAKER_02: Very cool.
+
+7
+00:01:02,789 --> 00:01:18,031
+Speaker SPEAKER_02: Among his many achievements, Jeff co-invented Boltzmann machines along with Terry Sosnowski and introduced back propagation for training multi-layer neural networks with Paul Wehrbusch, David Rumelhart, and Ron Williams.
+
+8
+00:01:18,852 --> 00:01:30,028
+Speaker SPEAKER_02: He's the founding director of the Gatsby Computational Neuroscience Unit at University College London, which is one of the premier places to study computational neuroscience in the world.
+
+9
+00:01:30,430 --> 00:01:35,719
+Speaker SPEAKER_02: His students comprise a stellar list of computer scientists in machine learning and computer vision.
+
+10
+00:01:36,480 --> 00:01:48,102
+Speaker SPEAKER_02: They include Rick Selesky, Richard Zemel, Radford Neal, Carl Rasmussen, Brendan Frey, and EYT, all research scientists well known by many of us.
+
+11
+00:01:48,891 --> 00:01:57,069
+Speaker SPEAKER_02: He was elected to the Royal Society in 1998, received the IJCAI Research Excellence Lifetime Achievement Award in 2005.
+
+12
+00:01:58,513 --> 00:02:08,335
+Speaker SPEAKER_02: And despite these numerous awards and popularity as an invited speaker and thesis advisor, he continues to be amazingly productive and inventive.
+
+13
+00:02:09,395 --> 00:02:25,530
+Speaker SPEAKER_02: If you haven't heard about deep belief networks, contrastive divergence, products of experts, the wake-sleep algorithm, semantic hashing, or any of a host of other inventions of Jeff, you probably don't know what ICML or NIPS stands for either.
+
+14
+00:02:26,472 --> 00:02:37,403
+Speaker SPEAKER_02: Back in January, Yann LeCun, one of the many computer scientists that Jeff has influenced, started a machine learning related meme by writing, Jeff Hinton Facts.
+
+15
+00:02:38,025 --> 00:02:45,752
+Speaker SPEAKER_02: This is an analog of Jeff Norris Facts, which I didn't know about before I found this out.
+
+16
+00:02:47,155 --> 00:02:48,977
+Speaker SPEAKER_02: So, here's a couple of them.
+
+17
+00:02:49,076 --> 00:02:51,399
+Speaker SPEAKER_02: Jeff Hinton doesn't need to make hidden units.
+
+18
+00:02:51,639 --> 00:02:53,981
+Speaker SPEAKER_02: They hide by themselves when he approaches.
+
+19
+00:02:55,008 --> 00:02:58,793
+Speaker SPEAKER_02: Jeff Hinton once built a neural network that beat Chuck Norris on MNIST.
+
+20
+00:03:01,497 --> 00:03:05,001
+Speaker SPEAKER_02: After an encounter with Jeff Hinton, support vectors become unhinged.
+
+21
+00:03:07,645 --> 00:03:11,330
+Speaker SPEAKER_02: And for today's introduction, I created a mashup from two of Jan's facts.
+
+22
+00:03:11,629 --> 00:03:14,493
+Speaker SPEAKER_02: It goes, never interrupt one of Jeff Hinton's talks.
+
+23
+00:03:14,794 --> 00:03:16,796
+Speaker SPEAKER_02: He will make you regret without bounds.
+
+24
+00:03:18,463 --> 00:03:22,110
+Speaker SPEAKER_02: Now that's really unfair, because Jeff's one of the sweetest guys I know.
+
+25
+00:03:22,129 --> 00:03:24,394
+Speaker SPEAKER_02: He doesn't have a mean field in his body.
+
+26
+00:03:25,395 --> 00:03:31,926
+Speaker SPEAKER_02: And you'll have ample opportunity to test this, because he's going to be around with us for most of the summer.
+
+27
+00:03:32,868 --> 00:03:34,532
+Speaker SPEAKER_02: So without further ado, Jeff.
+
+28
+00:03:41,330 --> 00:03:52,730
+Speaker SPEAKER_00: So today, I'm going to talk about a new idea in machine learning and it also has implications for a couple of major problems in biology.
+
+29
+00:03:53,853 --> 00:04:04,131
+Speaker SPEAKER_00: So, the main theme of the talk is going to be this new idea in machine learning but it was partly inspired by some work on theory of evolution.
+
+30
+00:04:04,110 --> 00:04:08,375
+Speaker SPEAKER_00: I worked on it a long time ago and gave up on it because I didn't do the experiments properly.
+
+31
+00:04:08,935 --> 00:04:11,317
+Speaker SPEAKER_00: And then Papa Dimitri came to Toronto and gave a talk.
+
+32
+00:04:11,758 --> 00:04:13,019
+Speaker SPEAKER_00: And I thought, that's the same idea.
+
+33
+00:04:13,378 --> 00:04:14,800
+Speaker SPEAKER_00: And so I went back and did the experiments properly.
+
+34
+00:04:14,820 --> 00:04:15,640
+Speaker SPEAKER_00: And it really works nicely.
+
+35
+00:04:18,903 --> 00:04:23,288
+Speaker SPEAKER_00: So to explain something in the theory of evolution, it also explains something about how neurons communicate.
+
+36
+00:04:24,990 --> 00:04:28,312
+Speaker SPEAKER_00: So in the theory of evolution, there's a problem with sexual reproduction.
+
+37
+00:04:28,872 --> 00:04:33,257
+Speaker SPEAKER_00: And the problem is that to be nice and fit, you need your genes to be working well together.
+
+38
+00:04:33,641 --> 00:04:36,728
+Speaker SPEAKER_00: So you find a nice set of genes that are well co-adapted.
+
+39
+00:04:37,750 --> 00:04:38,471
+Speaker SPEAKER_00: And then you mate.
+
+40
+00:04:39,012 --> 00:04:40,156
+Speaker SPEAKER_00: And half the genes disappear.
+
+41
+00:04:40,355 --> 00:04:41,920
+Speaker SPEAKER_00: This is a simple model of what goes on.
+
+42
+00:04:42,259 --> 00:04:43,201
+Speaker SPEAKER_00: Half the genes disappear.
+
+43
+00:04:43,262 --> 00:04:46,228
+Speaker SPEAKER_00: And so now you don't have your big set of co-adapted genes anymore.
+
+44
+00:04:46,249 --> 00:04:47,050
+Speaker SPEAKER_00: So you don't work so well.
+
+45
+00:04:47,932 --> 00:04:49,956
+Speaker SPEAKER_00: And that is a real puzzle.
+
+46
+00:04:50,036 --> 00:04:51,920
+Speaker SPEAKER_00: Why isn't that a bad thing?
+
+47
+00:04:52,627 --> 00:05:03,319
+Speaker SPEAKER_00: So, the paper by Livnat, Pepper, Dimitra, and Feldman in 2008 claims that the whole point of sexual reproduction is to break up these co-adaptations.
+
+48
+00:05:04,360 --> 00:05:06,682
+Speaker SPEAKER_00: And there's two reasons why that might be a good idea.
+
+49
+00:05:07,204 --> 00:05:08,906
+Speaker SPEAKER_00: One is for long-term optimization.
+
+50
+00:05:09,326 --> 00:05:15,432
+Speaker SPEAKER_00: So in the short term, maybe it's bad, but it gets you out of situations in which you have to change lots of things all at the same time to make any progress.
+
+51
+00:05:15,954 --> 00:05:17,514
+Speaker SPEAKER_00: So it might help long-term optimization.
+
+52
+00:05:18,235 --> 00:05:21,519
+Speaker SPEAKER_00: We don't have much evidence of that from the machine learning perspective yet.
+
+53
+00:05:21,870 --> 00:05:25,694
+Speaker SPEAKER_00: The other thing is, it might make you more robust against changes in the environment.
+
+54
+00:05:26,615 --> 00:05:37,545
+Speaker SPEAKER_00: So if the environment changes, then if you have a big, complex co-adaptation that produces an effect that you want by depending on lots of different genes, it's liable something will get messed up.
+
+55
+00:05:38,466 --> 00:05:49,836
+Speaker SPEAKER_00: But if instead of that, you have lots of smaller co-adaptations that achieve the function in many different ways using a few genes working together, then when you mess with the environment, some of those ways are more likely to survive.
+
+56
+00:05:50,355 --> 00:05:51,999
+Speaker SPEAKER_00: And it turns out that's a big effect.
+
+57
+00:05:55,225 --> 00:05:58,771
+Speaker SPEAKER_00: The other biological issue is how neurons communicate.
+
+58
+00:05:59,372 --> 00:06:02,177
+Speaker SPEAKER_00: So cortical neurons do a lot of signal processing and they're very good at it.
+
+59
+00:06:02,997 --> 00:06:06,124
+Speaker SPEAKER_00: And yet, they don't send real numbers to each other.
+
+60
+00:06:06,725 --> 00:06:11,012
+Speaker SPEAKER_00: As far as we can tell, they send these spikes of activity that are one or zero.
+
+61
+00:06:11,533 --> 00:06:13,336
+Speaker SPEAKER_00: And the timing of the spikes is random.
+
+62
+00:06:13,956 --> 00:06:15,519
+Speaker SPEAKER_00: Now, this is completely crazy.
+
+63
+00:06:15,735 --> 00:06:21,622
+Speaker SPEAKER_00: Because for the same amount of energy, they could send a spike with precise timing relative to some oscillation, say.
+
+64
+00:06:22,043 --> 00:06:26,428
+Speaker SPEAKER_00: And so they could communicate an analog value by the time of the spike.
+
+65
+00:06:26,449 --> 00:06:28,031
+Speaker SPEAKER_00: And the question is, why don't they do that?
+
+66
+00:06:31,475 --> 00:06:31,536
+Speaker SPEAKER_00: OK.
+
+67
+00:06:31,555 --> 00:06:35,600
+Speaker SPEAKER_00: And I'm going to try and answer both those questions when I've told you about this idea in machine learning.
+
+68
+00:06:37,235 --> 00:06:47,747
+Speaker SPEAKER_00: One reason why we sort of need to understand why neurons can communicate with single spikes like this is because we would like to make really big neural nets that are implemented on many cores.
+
+69
+00:06:48,428 --> 00:06:56,238
+Speaker SPEAKER_00: And so the states of neurons, some neurons are going to be in one core and some neurons in another core, they, you need to communicate the states of neurons between cores.
+
+70
+00:06:56,639 --> 00:06:58,062
+Speaker SPEAKER_00: And so you'd like that to be low bandwidth.
+
+71
+00:06:58,442 --> 00:07:04,709
+Speaker SPEAKER_00: And if they only really need one bit to communicate their state, that's a win by a factor of 32 over what people are doing at present.
+
+72
+00:07:07,795 --> 00:07:13,062
+Speaker SPEAKER_00: So on the face of it, it seems very hard to believe that one bit could be a better thing to send than analog value.
+
+73
+00:07:13,923 --> 00:07:21,394
+Speaker SPEAKER_00: I think that's because as engineers, we're used to sort of doing signal processing.
+
+74
+00:07:21,834 --> 00:07:29,485
+Speaker SPEAKER_00: You do things like you fit some data by assuming there's a linear dynamical system and you fit a linear dynamical model.
+
+75
+00:07:30,266 --> 00:07:31,887
+Speaker SPEAKER_00: And to do that, you want to use real numbers.
+
+76
+00:07:34,310 --> 00:07:36,334
+Speaker SPEAKER_00: That's not the kind of problem the brain's solving.
+
+77
+00:07:37,040 --> 00:07:42,550
+Speaker SPEAKER_00: The engineer solves from where they come to the problem with a good idea of what model they want to fit and now they want to sort of identify the parameters.
+
+78
+00:07:43,492 --> 00:07:49,244
+Speaker SPEAKER_00: The brain comes to this completely incomprehensible world with huge amounts of input data.
+
+79
+00:07:50,064 --> 00:07:52,509
+Speaker SPEAKER_00: It's a real sort of confusing mess.
+
+80
+00:07:53,391 --> 00:07:57,579
+Speaker SPEAKER_00: And the right thing to do in that situation is to fit a gazillion different models.
+
+81
+00:07:58,201 --> 00:08:00,303
+Speaker SPEAKER_00: You don't want to fit one specific model really nicely.
+
+82
+00:08:00,324 --> 00:08:03,910
+Speaker SPEAKER_00: You want to fit a gazillion different models and then use the wisdom of crowds.
+
+83
+00:08:04,411 --> 00:08:10,420
+Speaker SPEAKER_00: That is, when someone asks you a question, you get all the gazillion different models to give you an answer and sort of take a consensus.
+
+84
+00:08:10,440 --> 00:08:16,029
+Speaker SPEAKER_00: And that's a very different style of computation from fitting one precise model carefully.
+
+85
+00:08:18,935 --> 00:08:20,458
+Speaker SPEAKER_00: So I'll come back to that issue.
+
+86
+00:08:21,158 --> 00:08:23,161
+Speaker SPEAKER_00: Now I'm going to jump back.
+
+87
+00:08:23,766 --> 00:08:24,348
+Speaker SPEAKER_00: a long time.
+
+88
+00:08:25,968 --> 00:08:31,714
+Speaker SPEAKER_00: Back in the mid-80s, people developed neural networks that had multiple layers of feature detectors.
+
+89
+00:08:32,294 --> 00:08:37,200
+Speaker SPEAKER_00: And we had a learning algorithm called back propagation that was reasonable at learning multiple layers of feature detectors.
+
+90
+00:08:37,879 --> 00:08:46,328
+Speaker SPEAKER_00: So you put some input in, run it through the net, compare that with what you wanted, then go backwards through the net using the chain rule to figure out how to change the weights on the incoming connections of each neuron.
+
+91
+00:08:47,068 --> 00:08:49,991
+Speaker SPEAKER_00: It was very exciting to begin with.
+
+92
+00:08:50,753 --> 00:08:53,115
+Speaker SPEAKER_00: It never worked very well for deep nets.
+
+93
+00:08:53,416 --> 00:08:56,780
+Speaker SPEAKER_00: Except for Yann LeCun's deep nets, which used convolution.
+
+94
+00:08:57,522 --> 00:09:00,988
+Speaker SPEAKER_00: But for the other ones, it never worked very well.
+
+95
+00:09:01,008 --> 00:09:05,595
+Speaker SPEAKER_00: One problem with it was, back then, it was very hard to get very big sets of labeled data.
+
+96
+00:09:06,355 --> 00:09:11,024
+Speaker SPEAKER_00: You could get images, or you get sound waves, but getting accurate labels for them was really tough.
+
+97
+00:09:11,684 --> 00:09:12,947
+Speaker SPEAKER_00: So we couldn't get enough labeled data.
+
+98
+00:09:15,190 --> 00:09:17,614
+Speaker SPEAKER_00: One solution, of course, is just work very hard getting labeled data.
+
+99
+00:09:17,653 --> 00:09:18,775
+Speaker SPEAKER_00: And people in speech did that.
+
+100
+00:09:18,796 --> 00:09:20,317
+Speaker SPEAKER_00: They got big labeled data sets.
+
+101
+00:09:20,686 --> 00:09:36,792
+Speaker SPEAKER_00: Another solution is to say, let's see if we can learn most of the layers of feature detectors, maybe all but the last layer, by trying to model the input data, by trying to build a generative model of the sensory input rather than by trying to decide what the right label for it is.
+
+102
+00:09:37,773 --> 00:09:39,495
+Speaker SPEAKER_00: And it turned out that approach worked quite well.
+
+103
+00:09:40,878 --> 00:09:43,361
+Speaker SPEAKER_00: So since 1985, a number of things have happened.
+
+104
+00:09:43,842 --> 00:09:45,004
+Speaker SPEAKER_00: Computers got a lot faster.
+
+105
+00:09:45,024 --> 00:09:47,688
+Speaker SPEAKER_00: That's the main thing that happened.
+
+106
+00:09:48,225 --> 00:09:49,707
+Speaker SPEAKER_00: Labeled data sets got a lot bigger.
+
+107
+00:09:50,349 --> 00:09:52,311
+Speaker SPEAKER_00: So now you can train big back propagation nets.
+
+108
+00:09:53,952 --> 00:09:59,640
+Speaker SPEAKER_00: We also found better ways to initialize the weights of these multi-layer nets by using unsupervised learning.
+
+109
+00:10:00,240 --> 00:10:04,826
+Speaker SPEAKER_00: And the combination of all three factors means that we can now initialize nets sensibly.
+
+110
+00:10:05,488 --> 00:10:07,931
+Speaker SPEAKER_00: We can then turn them loose on a big data set.
+
+111
+00:10:08,312 --> 00:10:09,633
+Speaker SPEAKER_00: We initialize using unlabeled data.
+
+112
+00:10:09,653 --> 00:10:16,562
+Speaker SPEAKER_00: Turn them loose on a big data set and train the hell out of them with a big, fast computer or a whole bunch of big, fast computers.
+
+113
+00:10:17,065 --> 00:10:18,606
+Speaker SPEAKER_00: And they do very well.
+
+114
+00:10:20,650 --> 00:10:21,873
+Speaker SPEAKER_00: So, here's some propaganda.
+
+115
+00:10:24,657 --> 00:10:27,761
+Speaker SPEAKER_00: Probably the most impressive application so far is in speech recognition.
+
+116
+00:10:29,083 --> 00:10:41,283
+Speaker SPEAKER_00: Some time ago, some of my students and me, but mainly my students, showed that on a relatively small data set of three hours of speech, there was a standard benchmark called
+
+117
+00:10:41,686 --> 00:10:58,075
+Speaker SPEAKER_00: we could beat the existing speaker-independent benchmarks by using a deep neural net to map from a window of acoustic frames to predictions about what pieces of what phoneme the middle frame was representing.
+
+118
+00:10:58,730 --> 00:11:02,053
+Speaker SPEAKER_00: So in speech, you use hidden Markov models to deal with temporal alignment.
+
+119
+00:11:02,514 --> 00:11:06,138
+Speaker SPEAKER_00: And for each phoneme, you have a hidden Markov model that has a few states, typically three.
+
+120
+00:11:06,999 --> 00:11:12,764
+Speaker SPEAKER_00: And sometimes for one phoneme, you have many different hidden Markov models, depending on what phonemes you think are beside it.
+
+121
+00:11:14,025 --> 00:11:21,474
+Speaker SPEAKER_00: But the problem is to get from the acoustic input to a prediction about how likely it is that it's this piece of this phoneme.
+
+122
+00:11:21,494 --> 00:11:23,876
+Speaker SPEAKER_00: And that's what the deep neural nets can do much better.
+
+123
+00:11:24,447 --> 00:11:34,541
+Speaker SPEAKER_00: If you then feed those predictions to a decoder, which uses all sorts of knowledge about language and stuff, it gives you word strings that are more accurate than if you use the previous standard kind of acoustic model.
+
+124
+00:11:36,702 --> 00:11:48,178
+Speaker SPEAKER_00: So here's some results from a recent review paper, which is notable because the paper has authors from MSR Research, IBM, and Google, as well as University of Toronto.
+
+125
+00:11:48,759 --> 00:11:50,522
+Speaker SPEAKER_00: And this is on much bigger data sets.
+
+126
+00:11:51,379 --> 00:11:55,566
+Speaker SPEAKER_00: So MSR used quite a big data set of 309 hours.
+
+127
+00:11:55,605 --> 00:12:07,683
+Speaker SPEAKER_00: And they got the error rate on that data set down from 27% using the standard approach before these deep neural nets were applied to 18%.
+
+128
+00:12:07,904 --> 00:12:08,905
+Speaker SPEAKER_00: That's a huge improvement.
+
+129
+00:12:09,768 --> 00:12:12,851
+Speaker SPEAKER_00: And then on a different test set, they got it down from 23% to 16%.
+
+130
+00:12:14,033 --> 00:12:19,361
+Speaker SPEAKER_00: IBM, who probably had the best speech recognizer, the most carefully tuned one,
+
+131
+00:12:19,779 --> 00:12:26,327
+Speaker SPEAKER_00: on a somewhat smaller data set, got the error rate of their very carefully tuned system down from 18.8% to 17.5%.
+
+132
+00:12:27,629 --> 00:12:30,533
+Speaker SPEAKER_00: And this was a very carefully tuned system.
+
+133
+00:12:30,552 --> 00:12:33,416
+Speaker SPEAKER_00: On Bing Voice Search, they got it down by a lot.
+
+134
+00:12:35,118 --> 00:12:37,321
+Speaker SPEAKER_00: Google used what Google thinks of as a small data set.
+
+135
+00:12:38,721 --> 00:12:41,846
+Speaker SPEAKER_00: And they got the error rate down to 12.3.
+
+136
+00:12:44,068 --> 00:12:47,592
+Speaker SPEAKER_00: They got it down to 12.3 from
+
+137
+00:12:49,057 --> 00:12:52,201
+Speaker SPEAKER_00: 16%, which was trained on what they think of as a big data set.
+
+138
+00:12:53,283 --> 00:12:54,966
+Speaker SPEAKER_00: I don't know how big that is, but it was much bigger.
+
+139
+00:12:55,746 --> 00:12:57,308
+Speaker SPEAKER_00: So you give it much more data, you get 16%.
+
+140
+00:12:57,590 --> 00:13:00,734
+Speaker SPEAKER_00: You give it less data, and you give it this better, this deep neural net, and it gets 12%.
+
+141
+00:13:01,014 --> 00:13:02,376
+Speaker SPEAKER_00: And this is now down below 12%.
+
+142
+00:13:02,456 --> 00:13:11,188
+Speaker SPEAKER_00: And most of this progress was made by one summer intern, with a lot of help from the speech group, of course.
+
+143
+00:13:12,530 --> 00:13:16,416
+Speaker SPEAKER_00: And that's one of the best examples of deep neural nets doing something useful.
+
+144
+00:13:17,392 --> 00:13:23,782
+Speaker SPEAKER_00: MSR has already announced that they're going to put their system, their deep neural net live.
+
+145
+00:13:28,008 --> 00:13:28,207
+Speaker SPEAKER_00: Okay.
+
+146
+00:13:28,227 --> 00:13:31,133
+Speaker SPEAKER_00: So the question is, is there anything we can't do with big deep neural networks?
+
+147
+00:13:32,014 --> 00:13:33,076
+Speaker SPEAKER_00: Why aren't they the answer to everything?
+
+148
+00:13:33,096 --> 00:13:36,279
+Speaker SPEAKER_00: That's what we first thought when we did backprop and I'm beginning to think it again.
+
+149
+00:13:37,461 --> 00:13:39,225
+Speaker SPEAKER_00: Well, here's one thing it's tricky to do.
+
+150
+00:13:39,544 --> 00:13:41,408
+Speaker SPEAKER_00: To train a big deep neural network,
+
+151
+00:13:42,147 --> 00:13:47,534
+Speaker SPEAKER_00: You get a whole bunch of cores, and you split it over cores, and you run for a long time.
+
+152
+00:13:48,495 --> 00:13:55,547
+Speaker SPEAKER_00: And after you've used thousands of cores for several weeks, you've trained your great big network with, say, 1.7 billion parameters.
+
+153
+00:13:56,769 --> 00:14:03,479
+Speaker SPEAKER_00: And then someone says, hey, why don't you train 500 of those guys and average them?
+
+154
+00:14:03,499 --> 00:14:06,562
+Speaker SPEAKER_00: Well, that seems like hard work.
+
+155
+00:14:08,086 --> 00:14:11,630
+Speaker SPEAKER_00: But we know that averaging a whole bunch of models
+
+156
+00:14:12,015 --> 00:14:13,138
+Speaker SPEAKER_00: is always a big win.
+
+157
+00:14:13,778 --> 00:14:27,938
+Speaker SPEAKER_00: So if you want to win a machine learning competition like Netflix, what you should do is take lots of different models, throw away the ones that are no use, and keep the ones that work reasonably well, especially ones that are different from each other, and then average them.
+
+158
+00:14:28,399 --> 00:14:30,743
+Speaker SPEAKER_00: And so the winners were averaging more than 100 models.
+
+159
+00:14:31,604 --> 00:14:34,008
+Speaker SPEAKER_00: And we'd really like to do that with big deep neural networks.
+
+160
+00:14:34,447 --> 00:14:35,809
+Speaker SPEAKER_00: That would presumably make them work better.
+
+161
+00:14:36,331 --> 00:14:41,077
+Speaker SPEAKER_00: And more evidence for that is you can take a rather wimpy machine learning method called decision trees
+
+162
+00:14:41,513 --> 00:14:45,384
+Speaker SPEAKER_00: And one decision tree by itself doesn't work that well.
+
+163
+00:14:46,046 --> 00:14:48,793
+Speaker SPEAKER_00: But if you take a whole bunch of them, then they work really well.
+
+164
+00:14:48,974 --> 00:14:50,057
+Speaker SPEAKER_00: That's called random forests.
+
+165
+00:14:50,658 --> 00:14:54,831
+Speaker SPEAKER_00: And I believe the connect, the thing that gets you how you're dancing about,
+
+166
+00:14:55,115 --> 00:14:58,259
+Speaker SPEAKER_00: from the 3D data, that's using random forests.
+
+167
+00:14:58,980 --> 00:15:04,486
+Speaker SPEAKER_00: And the point about decision trees is they're fast to train, and they're very fast at test time.
+
+168
+00:15:05,067 --> 00:15:07,250
+Speaker SPEAKER_00: So at test time, you can afford to average a whole bunch together.
+
+169
+00:15:07,792 --> 00:15:09,293
+Speaker SPEAKER_00: And also, you can afford to train a whole bunch.
+
+170
+00:15:09,813 --> 00:15:13,259
+Speaker SPEAKER_00: And we would really like to do the same with these big, deep neural networks.
+
+171
+00:15:13,278 --> 00:15:14,441
+Speaker SPEAKER_00: On the face of it, that's going to be tricky.
+
+172
+00:15:17,725 --> 00:15:22,370
+Speaker SPEAKER_00: So before I say how we're going to do that, let me just tell you two ways of averaging models.
+
+173
+00:15:22,890 --> 00:15:32,381
+Speaker SPEAKER_00: The sort of most standard way is, if each model produces a probability distribution across classes, there's three classes here, what you do is simply average those probabilities.
+
+174
+00:15:34,082 --> 00:15:49,000
+Speaker SPEAKER_00: We shall give you a distribution that's softer than what the models predict and is guaranteed to be, is a better bet to use this average distribution than to pick one of the models at random.
+
+175
+00:15:49,368 --> 00:15:51,191
+Speaker SPEAKER_00: Of course, the best model might be better than the average.
+
+176
+00:15:51,530 --> 00:15:53,313
+Speaker SPEAKER_00: But when you've got a lot of models, it typically won't be.
+
+177
+00:15:54,556 --> 00:15:58,682
+Speaker SPEAKER_00: The other way we can combine distributions is to take a geometric mean instead of an arithmetic mean.
+
+178
+00:15:59,423 --> 00:16:03,750
+Speaker SPEAKER_00: We just multiply together the probabilities that the models give to the different classes.
+
+179
+00:16:04,791 --> 00:16:07,294
+Speaker SPEAKER_00: And then we take the sort of nth root if we have n models.
+
+180
+00:16:08,557 --> 00:16:11,201
+Speaker SPEAKER_00: Then we get a bunch of numbers that don't add up to 1, so we have to renormalize.
+
+181
+00:16:13,124 --> 00:16:17,990
+Speaker SPEAKER_00: But that also has the nice property that if you use this geometric mean,
+
+182
+00:16:18,460 --> 00:16:24,445
+Speaker SPEAKER_00: That will give you better predictions than picking a model at random.
+
+183
+00:16:28,849 --> 00:16:28,908
+Speaker SPEAKER_00: OK.
+
+184
+00:16:28,928 --> 00:16:30,410
+Speaker SPEAKER_00: So here's the main idea of the talk.
+
+185
+00:16:31,652 --> 00:16:34,333
+Speaker SPEAKER_00: What we're going to do is we're going to take a slightly oversized neural net.
+
+186
+00:16:34,514 --> 00:16:36,655
+Speaker SPEAKER_00: And I'll begin with a neural net that just has one hidden layer.
+
+187
+00:16:37,697 --> 00:16:44,342
+Speaker SPEAKER_00: And each time I present some training data to it, I'm going to randomly emit each of the hidden units with a probability of 0.5.
+
+188
+00:16:44,823 --> 00:16:46,105
+Speaker SPEAKER_00: So you just pretend they're not there.
+
+189
+00:16:47,923 --> 00:16:52,428
+Speaker SPEAKER_00: So now we have a space of two to the n possible architectures, if there's any hidden units.
+
+190
+00:16:52,769 --> 00:16:54,772
+Speaker SPEAKER_00: So h to the h architectures is h hidden units.
+
+191
+00:16:55,633 --> 00:16:57,775
+Speaker SPEAKER_00: And we're sampling architectures from that space.
+
+192
+00:16:59,197 --> 00:17:01,179
+Speaker SPEAKER_00: So we're going to sample a whole bunch of different architectures.
+
+193
+00:17:02,400 --> 00:17:05,183
+Speaker SPEAKER_00: And each architecture is only ever going to see one training example.
+
+194
+00:17:05,545 --> 00:17:10,450
+Speaker SPEAKER_00: And it's only going to see it once, because the chance of sampling the same thing twice is negligible.
+
+195
+00:17:10,470 --> 00:17:12,432
+Speaker SPEAKER_00: And almost all the architectures will never be sampled.
+
+196
+00:17:13,253 --> 00:17:16,917
+Speaker SPEAKER_00: But all of these architectures are sharing the same weights, which is regularizing them a lot.
+
+197
+00:17:17,843 --> 00:17:20,948
+Speaker SPEAKER_00: And so the question is, sort of, how well will this work?
+
+198
+00:17:21,769 --> 00:17:25,013
+Speaker SPEAKER_00: Also the question is, okay, you do that at training time.
+
+199
+00:17:25,314 --> 00:17:34,848
+Speaker SPEAKER_00: So when you're training, for each training example, you sample an architecture and then update the weights of the hidden units you're actually using slightly, then go to the next example.
+
+200
+00:17:35,108 --> 00:17:36,230
+Speaker SPEAKER_00: But what do you do at test time?
+
+201
+00:17:36,250 --> 00:17:37,973
+Speaker SPEAKER_00: Because how do you average all these things at test time?
+
+202
+00:17:38,755 --> 00:17:44,644
+Speaker SPEAKER_00: And it turns out if you're willing to take a geometric mean, that's very easy.
+
+203
+00:17:48,251 --> 00:17:51,914
+Speaker SPEAKER_00: We can think of having this very large number of possible models.
+
+204
+00:17:52,855 --> 00:18:00,321
+Speaker SPEAKER_00: We've only trained a small fraction of them, but still a large number, as many as the number of presentations of the number of training examples.
+
+205
+00:18:02,805 --> 00:18:11,771
+Speaker SPEAKER_00: So you can think of that as very extreme bagging, where you're making your models different by giving them different training data and strongly regularizing them.
+
+206
+00:18:12,413 --> 00:18:17,297
+Speaker SPEAKER_00: And then at test time, what we can do is
+
+207
+00:18:17,867 --> 00:18:26,338
+Speaker SPEAKER_00: Because each hidden unit is there with a probability of a half during training, we make it be there all the time during test, but we halve its outgoing weights.
+
+208
+00:18:27,220 --> 00:18:29,502
+Speaker SPEAKER_00: So the expected contribution you get from it is the same.
+
+209
+00:18:30,825 --> 00:18:36,551
+Speaker SPEAKER_00: And now, if you do that, then you have a softmax output group that's computing a probability distribution across classes.
+
+210
+00:18:37,192 --> 00:18:44,382
+Speaker SPEAKER_00: You can show that that exactly computes the geometric mean of the predictions of all these 2 to the H different networks.
+
+211
+00:18:45,694 --> 00:18:47,636
+Speaker SPEAKER_00: So that's a nice property.
+
+212
+00:18:47,676 --> 00:18:54,463
+Speaker SPEAKER_00: It means we just run this one mean network that's twice as big as any of the networks we ran during training.
+
+213
+00:18:55,105 --> 00:19:00,450
+Speaker SPEAKER_00: And so for that factor of two, we can average all these networks together, including all the ones we didn't train.
+
+214
+00:19:02,211 --> 00:19:02,372
+Unknown Speaker: Yeah?
+
+215
+00:19:03,153 --> 00:19:04,134
+Speaker SPEAKER_02: AUDIENCE MEMBER 2 This is due to the age problem.
+
+216
+00:19:04,153 --> 00:19:04,835
+Unknown Speaker: Most of them were never trained.
+
+217
+00:19:05,154 --> 00:19:05,915
+Speaker SPEAKER_00: We're never trained, right.
+
+218
+00:19:06,415 --> 00:19:08,278
+Speaker SPEAKER_00: On the other hand, they're sharing weights with the ones that were trained.
+
+219
+00:19:09,859 --> 00:19:13,743
+Speaker SPEAKER_00: So even the ones that weren't trained are going to do sensible things because of this massive weight sharing.
+
+220
+00:19:14,517 --> 00:19:17,842
+Speaker SPEAKER_00: So it's a funny kind of model averaging where we combine model averaging with massive weight sharing.
+
+221
+00:19:21,929 --> 00:19:25,394
+Speaker SPEAKER_00: If we have more hidden layers, we just use dropout in all of the hidden layers.
+
+222
+00:19:26,215 --> 00:19:31,143
+Speaker SPEAKER_00: And we always use, nearly always use 50% dropout because that's not a free parameter anymore.
+
+223
+00:19:32,546 --> 00:19:35,810
+Speaker SPEAKER_00: I mean, a half is sort of, it's not really a fudge.
+
+224
+00:19:35,830 --> 00:19:37,773
+Speaker SPEAKER_00: We just use a half.
+
+225
+00:19:38,632 --> 00:19:40,994
+Speaker SPEAKER_00: We've, of course, experimented with using different numbers.
+
+226
+00:19:41,575 --> 00:19:44,659
+Speaker SPEAKER_00: And any number between like 0.3 and 0.7 has very similar behavior.
+
+227
+00:19:45,398 --> 00:19:52,707
+Speaker SPEAKER_00: It's probably the case that if you have a very big net, if you can afford that, using much more dropout is better.
+
+228
+00:19:54,348 --> 00:19:56,771
+Speaker SPEAKER_00: That is, keeping a smaller fraction on each case.
+
+229
+00:19:58,753 --> 00:20:05,922
+Speaker SPEAKER_00: If you have multiple hidden layers and you use 50% dropout in each layer, then when you use the mean net at test time,
+
+230
+00:20:06,391 --> 00:20:11,919
+Speaker SPEAKER_00: That's not the same as running all possible nets through and averaging them, taking the geometric mean.
+
+231
+00:20:12,338 --> 00:20:14,541
+Speaker SPEAKER_00: But it's a pretty good approximation to that.
+
+232
+00:20:14,561 --> 00:20:18,367
+Speaker SPEAKER_00: So you can do experiments where you run it stochastically a lot of times and average them.
+
+233
+00:20:18,708 --> 00:20:22,053
+Speaker SPEAKER_00: And you'll find you get something very similar to running the mean field net once.
+
+234
+00:20:25,959 --> 00:20:27,540
+Speaker SPEAKER_00: You can do the same thing in the input layer.
+
+235
+00:20:28,382 --> 00:20:29,884
+Speaker SPEAKER_00: And that also helps a lot.
+
+236
+00:20:30,251 --> 00:20:36,298
+Speaker SPEAKER_00: That's already being used by people in Yoshua Bengio's group and elsewhere, where you simply omit some of the inputs.
+
+237
+00:20:36,318 --> 00:20:39,021
+Speaker SPEAKER_00: So if it's an image, you just set some of the pixels to zero.
+
+238
+00:20:39,823 --> 00:20:44,508
+Speaker SPEAKER_00: And that acts as a good regularizer that, of course, hurts you during training, but makes you generalize better.
+
+239
+00:20:44,887 --> 00:20:45,969
+Speaker SPEAKER_00: It's a good kind of noise to add.
+
+240
+00:20:46,730 --> 00:20:49,053
+Speaker SPEAKER_00: And this is just a generalization of that to all of the layers.
+
+241
+00:20:50,173 --> 00:20:52,696
+Speaker SPEAKER_00: In the input layer, you probably don't want to leave out half the pixels.
+
+242
+00:20:53,297 --> 00:20:54,858
+Speaker SPEAKER_00: You want to leave out 20% of them or something.
+
+243
+00:20:58,180 --> 00:21:03,826
+Speaker SPEAKER_00: There is actually a familiar example of dropout, or a particular kind of dropout, for people who know about logistic regression.
+
+244
+00:21:04,507 --> 00:21:15,098
+Speaker SPEAKER_00: If you're doing logistic regression, and you don't have enough data to fit your model really well, so you're prone to overfitting, what you can do is you can drop out all but one of the inputs.
+
+245
+00:21:16,279 --> 00:21:20,505
+Speaker SPEAKER_00: So now you're going to do logistic regression on just this model here, and learn this weight.
+
+246
+00:21:22,086 --> 00:21:24,068
+Speaker SPEAKER_00: And you do that on a whole bunch of data.
+
+247
+00:21:24,469 --> 00:21:25,431
+Speaker SPEAKER_00: And then you drop out.
+
+248
+00:21:25,550 --> 00:21:27,613
+Speaker SPEAKER_00: Then you focus on another one, learn another weight.
+
+249
+00:21:28,201 --> 00:21:32,184
+Speaker SPEAKER_00: If you do logistic regression like that, that's called naive Bayes.
+
+250
+00:21:33,066 --> 00:21:35,528
+Speaker SPEAKER_00: At test time, you use all of these things together.
+
+251
+00:21:36,609 --> 00:21:40,153
+Speaker SPEAKER_00: If you want a distribution, you really ought to take the geometric mean of what they all predict.
+
+252
+00:21:40,535 --> 00:21:44,019
+Speaker SPEAKER_00: But if you're just interested in the most likely class, you don't need to do that.
+
+253
+00:21:45,019 --> 00:21:49,785
+Speaker SPEAKER_00: And so naive Bayes is actually an example of dropout, where you're using dropout to avoid overfitting.
+
+254
+00:21:50,806 --> 00:21:54,089
+Speaker SPEAKER_00: Of course, that immediately suggests that.
+
+255
+00:21:54,694 --> 00:21:58,920
+Speaker SPEAKER_00: Why only consider the possibilities where you use them all or you just use one of them?
+
+256
+00:21:59,701 --> 00:22:09,334
+Speaker SPEAKER_00: Why not consider sort of learning dropout rates for these guys using a validation set so that you're doing sort of subset selection but probabilistic subset selection?
+
+257
+00:22:09,795 --> 00:22:16,784
+Speaker SPEAKER_00: And you're not going to say, I'm going to go for one particular subset of the features and try and find the best subset, which is what statisticians spend most of their time doing.
+
+258
+00:22:17,444 --> 00:22:23,992
+Speaker SPEAKER_00: You say, I'm going to have gazillions of subsets produced by giving each of these a probability that's not 0.5 anymore.
+
+259
+00:22:24,157 --> 00:22:27,163
+Speaker SPEAKER_00: So that sort of useless features would have a low probability being included.
+
+260
+00:22:27,644 --> 00:22:29,708
+Speaker SPEAKER_00: Useful ones would have a much higher probability.
+
+261
+00:22:30,549 --> 00:22:34,837
+Speaker SPEAKER_00: And now you can average all those models together and you'll get the big win out of model averaging.
+
+262
+00:22:34,857 --> 00:22:38,704
+Speaker SPEAKER_00: And that hasn't been, as far as I know, that's hardly been investigated, that kind of idea.
+
+263
+00:22:42,833 --> 00:22:44,817
+Speaker SPEAKER_00: So, in a deep neural network.
+
+264
+00:22:45,099 --> 00:22:58,455
+Speaker SPEAKER_00: Our experience is that if you take any deep neural network that's showing overfitting, so for example, in speech, any neural network that you stop early because if you don't stop it early, it overfits, you can make it work quite a lot better by using Dropout.
+
+265
+00:22:58,997 --> 00:23:03,122
+Speaker SPEAKER_00: It works better than early stopping and it makes a cause a big decrease in the number of errors.
+
+266
+00:23:04,644 --> 00:23:07,527
+Speaker SPEAKER_00: People at Google say, yeah, but I don't have overfitting because I got so much data.
+
+267
+00:23:07,928 --> 00:23:14,095
+Speaker SPEAKER_00: And the answer to that is, well, you should have overfitting because you may have a lot of data but that just means you should use a much bigger neural net.
+
+268
+00:23:17,247 --> 00:23:20,912
+Speaker SPEAKER_00: I mean, you can take the limit of infinite data, but I can take the limit of infinite computation.
+
+269
+00:23:24,958 --> 00:23:31,205
+Speaker SPEAKER_00: OK, so here's some initial experiments on a boring old task called MNIST, which is the kind of drosophila of machine learning.
+
+270
+00:23:32,468 --> 00:23:35,172
+Speaker SPEAKER_00: And people say you shouldn't use MNIST because it's boring.
+
+271
+00:23:35,592 --> 00:23:37,714
+Speaker SPEAKER_00: And that's like telling a biologist, you shouldn't use drosophila.
+
+272
+00:23:37,795 --> 00:23:39,317
+Speaker SPEAKER_00: So many biologists have used drosophila.
+
+273
+00:23:39,356 --> 00:23:40,900
+Speaker SPEAKER_00: Why are you using drosophila?
+
+274
+00:23:40,920 --> 00:23:43,462
+Speaker SPEAKER_00: Well, you're using drosophila because so many other biologists use drosophila.
+
+275
+00:23:44,003 --> 00:23:45,025
+Speaker SPEAKER_00: And you can compare things.
+
+276
+00:23:45,786 --> 00:23:47,067
+Speaker SPEAKER_00: A lot's known about it.
+
+277
+00:23:48,279 --> 00:23:50,722
+Speaker SPEAKER_00: So it's recognizing handwritten digits.
+
+278
+00:23:50,742 --> 00:23:59,392
+Speaker SPEAKER_00: And if you look on Yann LeCun's website, the best reported result for a kind of vanilla neural net is 160 errors on the test set.
+
+279
+00:24:00,333 --> 00:24:03,457
+Speaker SPEAKER_00: You can do much better than that by putting some knowledge in.
+
+280
+00:24:03,596 --> 00:24:13,528
+Speaker SPEAKER_00: You can put knowledge in either by making the net convolutional or by transforming the data using the fact that if you shift something, it stays the same class.
+
+281
+00:24:13,980 --> 00:24:16,042
+Speaker SPEAKER_00: So you put knowledge in via messing with the data.
+
+282
+00:24:16,623 --> 00:24:19,806
+Speaker SPEAKER_00: And you can get down to about sort of 25 errors now by doing all those tricks.
+
+283
+00:24:20,247 --> 00:24:33,077
+Speaker SPEAKER_00: But if you don't do that, if you do a form of learning that would still work if someone randomly permuted the pixels, then the best reported results are 160 errors.
+
+284
+00:24:36,060 --> 00:24:41,546
+Speaker SPEAKER_00: That's this line here.
+
+285
+00:24:41,605 --> 00:24:42,807
+Speaker SPEAKER_00: This is 160 errors.
+
+286
+00:24:44,086 --> 00:24:52,621
+Speaker SPEAKER_00: If you try various different neural nets, deep nets, so here's a net, the blue one, with 800 units in each layer.
+
+287
+00:24:53,182 --> 00:24:56,106
+Speaker SPEAKER_00: That's more than you'd normally use for MNIST, and two hidden layers.
+
+288
+00:24:57,450 --> 00:25:03,299
+Speaker SPEAKER_00: And you train it with a big learning rate, but with a constraint on the weight so they don't blow up.
+
+289
+00:25:04,261 --> 00:25:06,786
+Speaker SPEAKER_00: That already helps you do better than 160 hours, by the way.
+
+290
+00:25:06,984 --> 00:25:09,308
+Speaker SPEAKER_00: Then, here's a whole bunch of different nets.
+
+291
+00:25:09,670 --> 00:25:14,398
+Speaker SPEAKER_00: And here's what happens if you train them with this big learning rate, and then you decay the learning rate.
+
+292
+00:25:15,381 --> 00:25:16,723
+Speaker SPEAKER_00: So you see they don't overfit.
+
+293
+00:25:17,726 --> 00:25:19,548
+Speaker SPEAKER_00: And they all do about the same.
+
+294
+00:25:20,611 --> 00:25:25,180
+Speaker SPEAKER_00: If you make the nets bigger and give them more layers,
+
+295
+00:25:26,307 --> 00:25:28,832
+Speaker SPEAKER_00: So this one has 1,200 units per layer and three layers.
+
+296
+00:25:29,211 --> 00:25:31,355
+Speaker SPEAKER_00: So that's much too big for normal kind of training.
+
+297
+00:25:31,656 --> 00:25:32,798
+Speaker SPEAKER_00: That would overfit horrendously.
+
+298
+00:25:34,342 --> 00:25:35,403
+Speaker SPEAKER_00: That one actually does really well.
+
+299
+00:25:35,503 --> 00:25:42,897
+Speaker SPEAKER_00: That gets down to just over 100 errors, which is really good performance on MNIST for a method that isn't being given extra information.
+
+300
+00:25:43,839 --> 00:25:46,644
+Speaker SPEAKER_00: So support vector machines get about 140 errors.
+
+301
+00:25:46,924 --> 00:25:48,145
+Speaker SPEAKER_00: They're back here on MNIST.
+
+302
+00:25:48,586 --> 00:25:54,256
+Speaker SPEAKER_00: And it was this gap between backprop and support vector machines that originally made people sort of switch to support vector machines.
+
+303
+00:25:55,116 --> 00:25:56,499
+Speaker SPEAKER_00: But now we've sort of reversed it.
+
+304
+00:25:58,821 --> 00:25:59,123
+Speaker SPEAKER_00: Okay.
+
+305
+00:25:59,143 --> 00:26:03,549
+Speaker SPEAKER_00: But MNIST is a sort of boring task.
+
+306
+00:26:03,569 --> 00:26:05,553
+Speaker SPEAKER_00: To make this work, we do use weight constraints.
+
+307
+00:26:06,253 --> 00:26:10,539
+Speaker SPEAKER_00: And if you're using L2 penalties on weights to keep them small or L1 penalties to keep
+
+308
+00:26:11,093 --> 00:26:20,324
+Speaker SPEAKER_00: It tends to work better to say, take each hidden unit and decide on the maximum length of the incoming weight vector using a validation set.
+
+309
+00:26:21,265 --> 00:26:26,412
+Speaker SPEAKER_00: And then during learning, if the weight vector is smaller than that, leave it alone.
+
+310
+00:26:26,892 --> 00:26:33,440
+Speaker SPEAKER_00: As soon as it hits that level, when it goes beyond that, then shrink it by division so it comes back to that maximum length.
+
+311
+00:26:35,762 --> 00:26:38,605
+Speaker SPEAKER_00: That works quite a bit better than using L2 decay in the things we've tried.
+
+312
+00:26:38,807 --> 00:26:39,867
+Speaker SPEAKER_00: And that's what we're using here.
+
+313
+00:26:48,134 --> 00:26:54,583
+Speaker SPEAKER_00: It's just a hard constraint, but I can give you one way of thinking about it.
+
+314
+00:26:55,364 --> 00:27:06,240
+Speaker SPEAKER_00: When you do that division to normalize it back to the length, you'd stay at that length if you had Lagrange multipliers that were just right when you were doing your optimization.
+
+315
+00:27:06,921 --> 00:27:11,346
+Speaker SPEAKER_00: And those Lagrange multipliers are like the weight costs, the penalties on the weights.
+
+316
+00:27:12,067 --> 00:27:13,509
+Speaker SPEAKER_00: But these are penalties that change.
+
+317
+00:27:13,549 --> 00:27:16,233
+Speaker SPEAKER_00: So what will happen is, as the weights grow,
+
+318
+00:27:16,567 --> 00:27:18,210
+Speaker SPEAKER_00: When they're small, there's no penalty.
+
+319
+00:27:18,991 --> 00:27:31,109
+Speaker SPEAKER_00: Once they hit the constraint, then if some of the weights want to grow a lot and the others' weights don't want to grow much, you have to put in big Lagrange multipliers, and that'll actually push the ones that want to grow back down to zero.
+
+320
+00:27:31,430 --> 00:27:38,059
+Speaker SPEAKER_00: So in effect, the L2 penalty on each connection adapts to how much the other connections want to change.
+
+321
+00:27:38,922 --> 00:27:43,428
+Speaker SPEAKER_00: Yeah.
+
+322
+00:27:43,448 --> 00:27:43,828
+Speaker SPEAKER_00: Yeah.
+
+323
+00:27:43,848 --> 00:27:43,909
+Speaker SPEAKER_00: OK.
+
+324
+00:27:45,913 --> 00:27:51,480
+Speaker SPEAKER_00: So here's experiments on Timmy, which was more interesting.
+
+325
+00:27:51,520 --> 00:27:59,710
+Speaker SPEAKER_00: You train the neural network on a window of acoustic frames.
+
+326
+00:28:00,471 --> 00:28:04,455
+Speaker SPEAKER_00: You're trying to predict which states of which HMMs the central frame corresponds to.
+
+327
+00:28:06,397 --> 00:28:07,720
+Speaker SPEAKER_00: With standard fine tuning,
+
+328
+00:28:08,324 --> 00:28:15,671
+Speaker SPEAKER_00: You get 22.7% after doing this unsupervised pre-training.
+
+329
+00:28:16,031 --> 00:28:17,313
+Speaker SPEAKER_00: And that's already a very good result.
+
+330
+00:28:18,894 --> 00:28:19,955
+Speaker SPEAKER_00: We can do better than that.
+
+331
+00:28:20,056 --> 00:28:24,339
+Speaker SPEAKER_00: But what we did was we went to a different way of pre-processing the data so we hadn't already over-fitted it a lot.
+
+332
+00:28:25,060 --> 00:28:27,002
+Speaker SPEAKER_00: We're using Dan Povey's Kaldi system for this.
+
+333
+00:28:27,483 --> 00:28:28,984
+Speaker SPEAKER_00: And that was sort of the first time we'd used it.
+
+334
+00:28:29,605 --> 00:28:36,353
+Speaker SPEAKER_00: Then when you take this net and apply dropout, you get down to 19.7%, which is a record for speaker-independent methods.
+
+335
+00:28:36,712 --> 00:28:37,773
+Speaker SPEAKER_00: That's a big drop.
+
+336
+00:28:42,157 --> 00:28:45,703
+Speaker SPEAKER_00: So here's, that's the phone error rate.
+
+337
+00:28:46,224 --> 00:28:54,417
+Speaker SPEAKER_00: You can also look at, as you're training, you can look at how well you're classifying the individual frames, which is called the classification rate.
+
+338
+00:28:55,259 --> 00:29:05,836
+Speaker SPEAKER_00: And the classification error rate, if you just do normal fine tuning, where you're not doing dropout, you see it comes down and then it overfits.
+
+339
+00:29:06,323 --> 00:29:11,150
+Speaker SPEAKER_00: And so early stopping, if you could stop at just the right point, would get you one of these points for these different nets.
+
+340
+00:29:12,211 --> 00:29:16,277
+Speaker SPEAKER_00: With dropout, it comes down and it just keeps going down.
+
+341
+00:29:16,297 --> 00:29:19,301
+Speaker SPEAKER_00: If you look at the cross-entropy error here, the classification rate doesn't go up.
+
+342
+00:29:19,362 --> 00:29:20,983
+Speaker SPEAKER_00: The cross-entropy error goes up very slightly.
+
+343
+00:29:21,965 --> 00:29:23,548
+Speaker SPEAKER_00: But basically, it's hardly overfitting at all.
+
+344
+00:29:23,827 --> 00:29:28,976
+Speaker SPEAKER_00: And all these different architectures do very similar, and all much better than what you would get with early stopping.
+
+345
+00:29:30,196 --> 00:29:31,960
+Speaker SPEAKER_00: So if you're using early stopping, stop.
+
+346
+00:29:35,280 --> 00:29:38,929
+Speaker SPEAKER_00: Just to show it was universal, we thought we'd do document classification.
+
+347
+00:29:39,711 --> 00:29:41,454
+Speaker SPEAKER_00: It didn't work so well for that but it worked.
+
+348
+00:29:42,076 --> 00:29:53,019
+Speaker SPEAKER_00: So we took a fair, what we think of as a big document set, of the order of a million documents, which are represented by the counts of the 2,000 most frequent words.
+
+349
+00:29:53,961 --> 00:29:56,445
+Speaker SPEAKER_00: There's a sort of little hierarchy of classes.
+
+350
+00:29:57,066 --> 00:30:00,751
+Speaker SPEAKER_00: We simplified it by taking 50 non-overlapping classes.
+
+351
+00:30:01,092 --> 00:30:02,594
+Speaker SPEAKER_00: That's sort of the second level of the hierarchy.
+
+352
+00:30:03,075 --> 00:30:08,923
+Speaker SPEAKER_00: We removed one class that accounted for about a third of the data and we removed a few classes that hardly had any representatives.
+
+353
+00:30:09,384 --> 00:30:14,109
+Speaker SPEAKER_00: So then we had data that had 50 classes and we could see how well dropout helped.
+
+354
+00:30:16,794 --> 00:30:20,880
+Speaker SPEAKER_00: And if you train with that dropout,
+
+355
+00:30:21,265 --> 00:30:23,929
+Speaker SPEAKER_00: You get your classic kind of thing that will favor early stopping.
+
+356
+00:30:24,348 --> 00:30:27,133
+Speaker SPEAKER_00: And with Dropout, you get sort of a percent or two better.
+
+357
+00:30:27,773 --> 00:30:28,674
+Speaker SPEAKER_00: And you don't overfit.
+
+358
+00:30:31,317 --> 00:30:32,740
+Speaker SPEAKER_00: So for document classification, it works.
+
+359
+00:30:32,799 --> 00:30:34,261
+Speaker SPEAKER_00: It's not as big a win as for the other things.
+
+360
+00:30:34,903 --> 00:30:38,607
+Speaker SPEAKER_00: But in general, our experience is pick a task at random.
+
+361
+00:30:38,627 --> 00:30:43,795
+Speaker SPEAKER_00: And this will give you 5% to 10% less errors just by using a somewhat bigger net and using Dropout.
+
+362
+00:30:45,817 --> 00:30:46,878
+Speaker SPEAKER_00: Here's a more interesting task.
+
+363
+00:30:46,939 --> 00:30:50,022
+Speaker SPEAKER_00: This is classifying color images.
+
+364
+00:30:50,289 --> 00:30:56,881
+Speaker SPEAKER_00: They're small color images, so I designed this task to be similar as possible to MNIST, but nevertheless to use real images from the web.
+
+365
+00:30:57,563 --> 00:30:59,486
+Speaker SPEAKER_00: So they're 32 by 32 color images.
+
+366
+00:31:01,930 --> 00:31:03,011
+Speaker SPEAKER_00: There's 10 different classes.
+
+367
+00:31:03,712 --> 00:31:05,916
+Speaker SPEAKER_00: These are examples in the test set of birds.
+
+368
+00:31:07,038 --> 00:31:10,644
+Speaker SPEAKER_00: And you can see, so the images are found, the images are produced in the following way.
+
+369
+00:31:10,979 --> 00:31:19,448
+Speaker SPEAKER_00: First search the web for bird and things that come under bird in some net of classes.
+
+370
+00:31:20,808 --> 00:31:28,857
+Speaker SPEAKER_00: And then take all those things and give them to Toronto undergraduates and say, the instructions are roughly this.
+
+371
+00:31:29,778 --> 00:31:37,527
+Speaker SPEAKER_00: Is the one dominant thing in the image and could that plausibly have the label bird?
+
+372
+00:31:39,413 --> 00:31:49,421
+Speaker SPEAKER_00: You discover after a while that you're paying these undergraduates and they're actually playing games with each other on their laptops and not labeling images, because labeling images is incredibly boring.
+
+373
+00:31:51,083 --> 00:32:01,030
+Speaker SPEAKER_00: The only person I've ever found who liked labeling images was Radford Neal's daughter, who would look at a display of a hundred images and go, cat, cat, cat.
+
+374
+00:32:02,511 --> 00:32:04,134
+Speaker SPEAKER_00: I think she was about two at the time.
+
+375
+00:32:05,055 --> 00:32:06,855
+Speaker SPEAKER_00: And so image labelers ought to be age two.
+
+376
+00:32:06,875 --> 00:32:07,757
+Speaker SPEAKER_00: They really get into it.
+
+377
+00:32:07,777 --> 00:32:09,218
+Speaker SPEAKER_00: They would probably pay you to do it.
+
+378
+00:32:10,987 --> 00:32:15,673
+Speaker SPEAKER_00: So Alex Krzyzewski trained a great big neural net, which is convolutional.
+
+379
+00:32:16,034 --> 00:32:16,835
+Speaker SPEAKER_00: He tried lots of things.
+
+380
+00:32:17,296 --> 00:32:21,362
+Speaker SPEAKER_00: His best net was getting about 18% error, which is about the record on this.
+
+381
+00:32:22,103 --> 00:32:26,067
+Speaker SPEAKER_00: And he then got that down to 16% error.
+
+382
+00:32:26,548 --> 00:32:31,256
+Speaker SPEAKER_00: He's now got that much lower by using translations of the images and things.
+
+383
+00:32:32,518 --> 00:32:39,086
+Speaker SPEAKER_00: But if you don't cheat, if you don't use transformed data where you put in extra knowledge, that's quite a big win.
+
+384
+00:32:41,007 --> 00:32:43,028
+Speaker SPEAKER_00: These numbers are always changing because it keeps improving things.
+
+385
+00:32:45,931 --> 00:32:50,894
+Speaker SPEAKER_00: Here's a more serious test of object recognition.
+
+386
+00:32:51,655 --> 00:32:58,362
+Speaker SPEAKER_00: So I got fed up with the computer vision people saying that you neural net guys are just trying simple sets like Caltech 101.
+
+387
+00:32:59,162 --> 00:33:09,471
+Speaker SPEAKER_00: So I called up Malik, who has been saying that deep neural nets haven't really proved themselves for object recognition because they're always using things that are too simple.
+
+388
+00:33:09,490 --> 00:33:10,592
+Speaker SPEAKER_00: So I talked to Jitendra.
+
+389
+00:33:11,045 --> 00:33:16,737
+Speaker SPEAKER_00: And Jitendra agreed that if we could work on ImageNet, then that was a real result.
+
+390
+00:33:16,757 --> 00:33:19,221
+Speaker SPEAKER_00: ImageNet would be impressive if we could make it work on ImageNet.
+
+391
+00:33:21,185 --> 00:33:28,902
+Speaker SPEAKER_00: There's a 2010 competition where they disclosed the test set, so you can try it yourself.
+
+392
+00:33:29,336 --> 00:33:33,584
+Speaker SPEAKER_00: So 1.3 million training images, so 1,000 different classes.
+
+393
+00:33:34,444 --> 00:33:36,048
+Speaker SPEAKER_00: You're having to do 1,000 way classification.
+
+394
+00:33:36,628 --> 00:33:38,372
+Speaker SPEAKER_00: You got about 1,000 examples of each class.
+
+395
+00:33:38,652 --> 00:33:40,955
+Speaker SPEAKER_00: So it's going to be really important to sort of share features.
+
+396
+00:33:42,939 --> 00:33:48,929
+Speaker SPEAKER_00: The winner of the 2010 competition got 47% error for their first choice.
+
+397
+00:33:49,931 --> 00:33:56,121
+Speaker SPEAKER_00: If you say it's okay to get in your top five choices, then they got 25% error.
+
+398
+00:33:57,079 --> 00:33:58,701
+Speaker SPEAKER_00: So that was the state-of-the-art in 2010.
+
+399
+00:33:58,741 --> 00:34:01,224
+Speaker SPEAKER_00: The state-of-the-art now is a little bit better.
+
+400
+00:34:01,265 --> 00:34:01,845
+Speaker SPEAKER_00: They're down to 45%.
+
+401
+00:34:02,967 --> 00:34:03,867
+Speaker SPEAKER_00: So there's another competition.
+
+402
+00:34:03,887 --> 00:34:07,632
+Speaker SPEAKER_00: The winner of that competition went back to this competition and showed that they get 45% on this competition.
+
+403
+00:34:08,132 --> 00:34:11,715
+Speaker SPEAKER_00: So the state-of-the-art, as far as we know, is 45% on this.
+
+404
+00:34:11,735 --> 00:34:14,659
+Speaker SPEAKER_00: Alex tried a whole bunch of neural nets.
+
+405
+00:34:18,583 --> 00:34:22,327
+Speaker SPEAKER_00: He ended up with a net with seven hidden layers, not counting the max pooling layer.
+
+406
+00:34:22,780 --> 00:34:25,862
+Speaker SPEAKER_00: The early layers were convolutional, so they didn't have too many parameters.
+
+407
+00:34:26,583 --> 00:34:29,266
+Speaker SPEAKER_00: The later layers were fully connected, so they had lots of parameters.
+
+408
+00:34:29,867 --> 00:34:33,831
+Speaker SPEAKER_00: They had like 4,000 units fully connected, so that's 16 million parameters right there.
+
+409
+00:34:34,713 --> 00:34:35,994
+Speaker SPEAKER_00: And there's two of them.
+
+410
+00:34:38,097 --> 00:34:42,420
+Speaker SPEAKER_00: He used this trick of transforming the training data.
+
+411
+00:34:42,460 --> 00:34:47,606
+Speaker SPEAKER_00: So he reduced the images to 256 by 256.
+
+412
+00:34:48,092 --> 00:34:49,635
+Speaker SPEAKER_00: But then didn't use all of that image.
+
+413
+00:34:49,715 --> 00:34:51,317
+Speaker SPEAKER_00: He used patches that were a bit smaller.
+
+414
+00:34:51,336 --> 00:34:52,677
+Speaker SPEAKER_00: So he got lots of different patches.
+
+415
+00:34:53,219 --> 00:34:54,800
+Speaker SPEAKER_00: So he's getting things in lots of different phases.
+
+416
+00:34:55,181 --> 00:34:56,902
+Speaker SPEAKER_00: So he never had the same training example twice.
+
+417
+00:34:58,465 --> 00:35:01,827
+Speaker SPEAKER_00: And he used a bunch of other tricks that I didn't have time to go into.
+
+418
+00:35:02,809 --> 00:35:07,855
+Speaker SPEAKER_00: And aren't sort of relevant to the effect of dropout.
+
+419
+00:35:11,219 --> 00:35:16,664
+Speaker SPEAKER_00: So he got down to about 48% error.
+
+420
+00:35:17,117 --> 00:35:19,740
+Speaker SPEAKER_00: about the state of the art using all these methods.
+
+421
+00:35:22,043 --> 00:35:36,001
+Speaker SPEAKER_00: But then, he applied dropout to the globally connected layers and he's now down to 39% error for the best one and 19% error for the top five.
+
+422
+00:35:36,961 --> 00:35:38,202
+Speaker SPEAKER_00: And that's a huge improvement.
+
+423
+00:35:38,403 --> 00:35:42,027
+Speaker SPEAKER_00: I mean, people who do computer vision will tell you that's a big step forward.
+
+424
+00:35:46,193 --> 00:35:48,016
+Speaker SPEAKER_00: Here's some samples from Alex's net.
+
+425
+00:35:49,960 --> 00:35:53,106
+Speaker SPEAKER_00: This is before he was getting his very best results.
+
+426
+00:35:53,146 --> 00:35:54,869
+Speaker SPEAKER_00: So this is a slightly worse version of his net.
+
+427
+00:35:55,110 --> 00:35:56,652
+Speaker SPEAKER_00: But just to show you what this task is like.
+
+428
+00:35:57,293 --> 00:35:59,978
+Speaker SPEAKER_00: You're given a picture like that and you have to say which of a thousand things it is.
+
+429
+00:36:01,641 --> 00:36:04,668
+Speaker SPEAKER_00: And Alex's neural net says it's an otter.
+
+430
+00:36:05,550 --> 00:36:08,235
+Speaker SPEAKER_00: Now, I'm actually an apologist for deep neural nets.
+
+431
+00:36:08,958 --> 00:36:16,369
+Speaker SPEAKER_00: So I think an otter's a jolly good thing to say, because notice, you haven't got the tip of the beak, and you've got the wet fur of an otter here.
+
+432
+00:36:17,572 --> 00:36:20,096
+Speaker SPEAKER_00: And I think it's very clever to recognize the wet fur of an otter.
+
+433
+00:36:20,737 --> 00:36:27,186
+Speaker SPEAKER_00: It does get quail second, and it does get all the things that I can't distinguish from a quail, like a ruffed grouse and a partridge after that.
+
+434
+00:36:29,190 --> 00:36:32,215
+Speaker SPEAKER_00: This one is obviously a snow plow.
+
+435
+00:36:33,764 --> 00:36:35,045
+Speaker SPEAKER_00: And then you look at its errors.
+
+436
+00:36:35,065 --> 00:36:37,387
+Speaker SPEAKER_00: The errors are always more informative.
+
+437
+00:36:37,867 --> 00:36:40,050
+Speaker SPEAKER_00: Sort of drilling platform and garbage truck seem fine.
+
+438
+00:36:40,530 --> 00:36:41,771
+Speaker SPEAKER_00: Lifeboat, why do you think it's a lifeboat?
+
+439
+00:36:41,791 --> 00:36:43,652
+Speaker SPEAKER_00: Well, you know, this might not be snow.
+
+440
+00:36:43,672 --> 00:36:45,875
+Speaker SPEAKER_00: It might be sort of foamy water.
+
+441
+00:36:45,916 --> 00:36:50,300
+Speaker SPEAKER_00: And if you look again, here's the flag at the front of the lifeboat.
+
+442
+00:36:50,739 --> 00:36:52,221
+Speaker SPEAKER_00: Here's the flag at the back of the lifeboat.
+
+443
+00:36:52,242 --> 00:36:53,583
+Speaker SPEAKER_00: Here's the bridge of the lifeboat.
+
+444
+00:36:53,963 --> 00:36:55,704
+Speaker SPEAKER_00: It really does look very like a lifeboat.
+
+445
+00:36:57,907 --> 00:36:59,588
+Speaker SPEAKER_00: Like I say, I'm an apologist for neural nets.
+
+446
+00:37:00,489 --> 00:37:01,971
+Speaker SPEAKER_00: This one, it gets completely wrong, OK?
+
+447
+00:37:02,150 --> 00:37:03,331
+Speaker SPEAKER_00: It doesn't get in the top five.
+
+448
+00:37:03,751 --> 00:37:06,394
+Speaker SPEAKER_00: The right answer is scabbard.
+
+449
+00:37:09,880 --> 00:37:11,382
+Speaker SPEAKER_00: It's bizarre, it says earthworm.
+
+450
+00:37:11,561 --> 00:37:15,288
+Speaker SPEAKER_00: Guillotine, you can see why it says guillotine, two big vertical bits.
+
+451
+00:37:15,588 --> 00:37:17,952
+Speaker SPEAKER_00: This is presumably something to do with color and the forest.
+
+452
+00:37:19,293 --> 00:37:20,735
+Speaker SPEAKER_00: Broom, you can see why it says broom.
+
+453
+00:37:21,056 --> 00:37:22,739
+Speaker SPEAKER_00: But earthworm, why does it say earthworm?
+
+454
+00:37:22,759 --> 00:37:25,523
+Speaker SPEAKER_00: But if you look in a bit more detail, you can see a couple of earthworms here.
+
+455
+00:37:26,092 --> 00:37:41,918
+Speaker SPEAKER_00: Now, you may think this is just fantasy, but what Alex can do is he can back propagate from the class label to say, tell me which pixels are having the most effect on your confidence in this class label.
+
+456
+00:37:41,938 --> 00:37:44,422
+Speaker SPEAKER_00: So you can see the sensitivity of the label to the pixels.
+
+457
+00:37:44,976 --> 00:37:49,621
+Speaker SPEAKER_00: And he hasn't done it with this one, but there's one where the object is a mite, which is very small in the image.
+
+458
+00:37:49,661 --> 00:37:52,224
+Speaker SPEAKER_00: It's a leaf with a mite in, and it's up to one side in the image.
+
+459
+00:37:52,784 --> 00:37:56,989
+Speaker SPEAKER_00: If you back propagate there, it's the pixels of the mite that are causing it to say mite.
+
+460
+00:37:58,590 --> 00:38:00,532
+Speaker SPEAKER_00: So this isn't just totally fantasy.
+
+461
+00:38:03,375 --> 00:38:04,976
+Speaker SPEAKER_00: I enjoy showing these, so let's show some more.
+
+462
+00:38:06,838 --> 00:38:11,702
+Speaker SPEAKER_00: ImageNet has a wide variety of classes of things, and you can see why they allow you to get in the top five.
+
+463
+00:38:11,742 --> 00:38:13,143
+Speaker SPEAKER_00: So what's the right answer here?
+
+464
+00:38:13,681 --> 00:38:18,407
+Speaker SPEAKER_00: Well, I would have said probably microwave, if not microwave, dishwasher, if that's what that is.
+
+465
+00:38:20,771 --> 00:38:21,751
+Speaker SPEAKER_00: That's exactly what it says.
+
+466
+00:38:22,914 --> 00:38:24,376
+Speaker SPEAKER_00: The right answer is electric range.
+
+467
+00:38:24,456 --> 00:38:26,199
+Speaker SPEAKER_00: I don't even know where the electric range is.
+
+468
+00:38:26,239 --> 00:38:27,340
+Speaker SPEAKER_00: I think it must be over here.
+
+469
+00:38:27,360 --> 00:38:30,204
+Speaker SPEAKER_00: Or it might just be, you know, there must be one there.
+
+470
+00:38:30,224 --> 00:38:32,527
+Speaker SPEAKER_00: Because where there's a dishwasher and a microwave, there must be an electric range.
+
+471
+00:38:33,309 --> 00:38:34,250
+Speaker SPEAKER_00: And there's a wash basin.
+
+472
+00:38:34,710 --> 00:38:36,853
+Speaker SPEAKER_00: So the right answer there is very dubious.
+
+473
+00:38:37,114 --> 00:38:38,456
+Speaker SPEAKER_00: And it actually gave better answers.
+
+474
+00:38:40,057 --> 00:38:42,641
+Speaker SPEAKER_00: Incidentally, if the test set
+
+475
+00:38:43,027 --> 00:38:45,311
+Speaker SPEAKER_00: has some answers that aren't the best answers.
+
+476
+00:38:45,793 --> 00:38:48,617
+Speaker SPEAKER_00: And if you got them all right, that would be zero error.
+
+477
+00:38:48,918 --> 00:38:51,844
+Speaker SPEAKER_00: But if you give better answers in the test set, that's got to be negative error.
+
+478
+00:38:51,864 --> 00:38:54,210
+Speaker SPEAKER_00: So my aim is to get this thing giving negative error rate.
+
+479
+00:38:56,434 --> 00:38:59,159
+Speaker SPEAKER_00: It has distributed things like turnstiles that it can recognize.
+
+480
+00:38:59,621 --> 00:39:04,090
+Speaker SPEAKER_00: It has things from catalogs, like bulletproof vests.
+
+481
+00:39:05,452 --> 00:39:06,534
+Speaker SPEAKER_00: Here's my favorite error.
+
+482
+00:39:07,434 --> 00:39:13,541
+Speaker SPEAKER_00: You show it some iPhone headphones, and it says it's a corkscrew, or lipstick, or a screw.
+
+483
+00:39:14,161 --> 00:39:15,523
+Speaker SPEAKER_00: And then it's an ant.
+
+484
+00:39:16,945 --> 00:39:19,027
+Speaker SPEAKER_00: Why on earth would it think they're an ant?
+
+485
+00:39:19,487 --> 00:39:22,811
+Speaker SPEAKER_00: But if you look at it, this is the view you don't want to have of an ant.
+
+486
+00:39:23,211 --> 00:39:25,974
+Speaker SPEAKER_00: It's an enormous ant, and it's just about to bite you.
+
+487
+00:39:26,014 --> 00:39:26,956
+Speaker SPEAKER_00: It's looking down on you.
+
+488
+00:39:27,036 --> 00:39:27,797
+Speaker SPEAKER_00: Here's the antennae.
+
+489
+00:39:28,998 --> 00:39:30,820
+Speaker SPEAKER_00: This is an aphid's view of an ant.
+
+490
+00:39:31,929 --> 00:39:36,795
+Speaker SPEAKER_00: Now, we can't prove that that's why it said and, but why else would it say and?
+
+491
+00:39:41,201 --> 00:39:42,822
+Speaker SPEAKER_00: There's another way to think about dropout.
+
+492
+00:39:43,123 --> 00:39:45,025
+Speaker SPEAKER_00: So, I've shown you dropout works.
+
+493
+00:39:45,045 --> 00:39:54,697
+Speaker SPEAKER_00: Another way to think about it, which is like what the evolutionary theorists think, is that rather than think of it in terms of model averaging, think of it in terms of what a hidden unit has to do.
+
+494
+00:39:55,318 --> 00:39:58,782
+Speaker SPEAKER_00: So, a hidden unit in a net would like to do something useful.
+
+495
+00:39:59,268 --> 00:40:06,114
+Speaker SPEAKER_00: If he knows exactly who he's going to be collaborating with, then he can sort of tune what he does to what he can expect them to be doing.
+
+496
+00:40:07,094 --> 00:40:08,735
+Speaker SPEAKER_00: And you get these complex co-adaptations.
+
+497
+00:40:09,277 --> 00:40:14,001
+Speaker SPEAKER_00: But if you don't know who else is going to be there, you're out of luck if you try and tune to them.
+
+498
+00:40:14,300 --> 00:40:17,344
+Speaker SPEAKER_00: You better do something that's sort of individually useful.
+
+499
+00:40:17,364 --> 00:40:19,585
+Speaker SPEAKER_00: It turns hidden units into rugged individualists.
+
+500
+00:40:20,226 --> 00:40:25,771
+Speaker SPEAKER_00: Except that, they're rugged individualists who'd like to do something that's useful, given what the other guys are up to in general.
+
+501
+00:40:26,110 --> 00:40:28,092
+Speaker SPEAKER_00: So given all these combinatorially many
+
+502
+00:40:28,630 --> 00:40:32,474
+Speaker SPEAKER_00: sets of other guys you might have to work with, do something that's generally helpful.
+
+503
+00:40:32,755 --> 00:40:37,639
+Speaker SPEAKER_00: And that'll cause you to do something different from what they're doing, but not relying on which particular ones are there.
+
+504
+00:40:38,961 --> 00:40:44,527
+Speaker SPEAKER_00: And that makes you far more robust against them changing, but also against the environment changing.
+
+505
+00:40:44,849 --> 00:40:48,853
+Speaker SPEAKER_00: And being robust against the environment changing is what prevents overfitting.
+
+506
+00:40:49,092 --> 00:40:53,077
+Speaker SPEAKER_00: In machine learning, the environment changes when you switch from the training set to the test set.
+
+507
+00:40:53,097 --> 00:40:55,179
+Speaker SPEAKER_00: And what you really want to be robust against is those changes.
+
+508
+00:40:56,902 --> 00:40:58,384
+Speaker SPEAKER_00: So here's a little example of that.
+
+509
+00:40:59,579 --> 00:41:00,760
+Speaker SPEAKER_00: Here's two training cases.
+
+510
+00:41:02,442 --> 00:41:04,585
+Speaker SPEAKER_00: And those are the inputs, and those are the desired outputs.
+
+511
+00:41:05,485 --> 00:41:07,347
+Speaker SPEAKER_00: And here's a set of weights that does perfectly fine.
+
+512
+00:41:09,610 --> 00:41:11,632
+Speaker SPEAKER_00: You see 5 plus 11 gives you 6.
+
+513
+00:41:11,853 --> 00:41:13,215
+Speaker SPEAKER_00: And if you add in these, you get 4.
+
+514
+00:41:16,278 --> 00:41:18,001
+Speaker SPEAKER_00: But the 5 and 11 are co-adapted.
+
+515
+00:41:19,001 --> 00:41:23,206
+Speaker SPEAKER_00: This minus 5 is sort of going in the wrong direction.
+
+516
+00:41:23,811 --> 00:41:27,036
+Speaker SPEAKER_00: And it's relying on this plus 11 being there, otherwise it's saying something really stupid.
+
+517
+00:41:27,335 --> 00:41:31,882
+Speaker SPEAKER_00: If you do dropout and this plus 11 sometimes isn't there, you'll see that this minus 5 is a really bad idea.
+
+518
+00:41:32,282 --> 00:41:34,005
+Speaker SPEAKER_00: If you do dropout, you'll get weights more like this.
+
+519
+00:41:35,806 --> 00:41:40,373
+Speaker SPEAKER_00: Actually, you'll get weights of twice this, but when you put them into the mean net, you halve them and then you'll get weights like this.
+
+520
+00:41:41,134 --> 00:41:49,784
+Speaker SPEAKER_00: And then these weights will work.
+
+521
+00:41:51,030 --> 00:41:53,715
+Speaker SPEAKER_00: In machine learning, there's sort of two ways of regularizing things.
+
+522
+00:41:53,815 --> 00:41:57,221
+Speaker SPEAKER_00: One is model averaging and the other is adding noise.
+
+523
+00:41:57,380 --> 00:42:04,192
+Speaker SPEAKER_00: People have shown that adding Gaussian noise to weights in a linear system is exactly equivalent to an L2 penalty.
+
+524
+00:42:05,233 --> 00:42:11,503
+Speaker SPEAKER_00: Actually, adding Gaussian noise to the inputs is exactly equivalent to an L2 penalty, sorry.
+
+525
+00:42:11,764 --> 00:42:15,789
+Speaker SPEAKER_00: Yeah, Gaussian noise to the inputs, that's like having an L2 penalty.
+
+526
+00:42:16,090 --> 00:42:18,474
+Speaker SPEAKER_00: As you have a more complex net, it gets a bit more complicated.
+
+527
+00:42:18,914 --> 00:42:22,760
+Speaker SPEAKER_00: But people generally think of adding noise as different from doing model averaging.
+
+528
+00:42:22,780 --> 00:42:29,068
+Speaker SPEAKER_00: What Dropout shows is, is a case when you can view it either as adding noise or as model averaging.
+
+529
+00:42:29,309 --> 00:42:30,811
+Speaker SPEAKER_00: They're not really different methods.
+
+530
+00:42:35,378 --> 00:42:41,827
+Speaker SPEAKER_00: I want to go into one more advantage of using Dropout, which goes back to evolutionary biology, I guess.
+
+531
+00:42:42,195 --> 00:42:47,101
+Speaker SPEAKER_00: When you train a net with dropout, the neurons are very robust against their co-workers changing.
+
+532
+00:42:47,583 --> 00:42:52,369
+Speaker SPEAKER_00: They don't know who's going to be there, and so they better do something that's robust against these changes.
+
+533
+00:42:53,210 --> 00:42:56,353
+Speaker SPEAKER_00: That means these nets ought to be very good in genetic algorithms.
+
+534
+00:42:57,896 --> 00:43:01,920
+Speaker SPEAKER_00: You ought to be able to take two different nets and take half.
+
+535
+00:43:02,001 --> 00:43:03,643
+Speaker SPEAKER_00: Let's suppose you just have one hidden layer.
+
+536
+00:43:03,663 --> 00:43:06,827
+Speaker SPEAKER_00: Take half the hidden units from one net and half the hidden units from the other net.
+
+537
+00:43:07,728 --> 00:43:10,532
+Speaker SPEAKER_00: Already these hidden units are robust against their co-workers changing.
+
+538
+00:43:10,916 --> 00:43:19,005
+Speaker SPEAKER_00: So when you take half from each net, you'll get something that doesn't work properly yet, but it already works pretty well.
+
+539
+00:43:19,385 --> 00:43:20,585
+Speaker SPEAKER_00: I know that Skiva's tested this.
+
+540
+00:43:20,626 --> 00:43:21,327
+Speaker SPEAKER_00: It works pretty well.
+
+541
+00:43:21,646 --> 00:43:25,911
+Speaker SPEAKER_00: And then a little bit of training, and it works almost as well as the parents.
+
+542
+00:43:25,931 --> 00:43:38,443
+Speaker SPEAKER_00: So now what you can do is you can take a big cluster, or big farm, and you can do a lot of computation with almost no communication.
+
+543
+00:43:39,047 --> 00:43:44,574
+Speaker SPEAKER_00: So you're running lots of networks on a little bunch of local cores.
+
+544
+00:43:45,534 --> 00:43:49,278
+Speaker SPEAKER_00: And every so often, one of these networks advertises for a mate.
+
+545
+00:43:51,061 --> 00:43:53,563
+Speaker SPEAKER_00: She considers the possibilities, chooses one.
+
+546
+00:43:54,543 --> 00:43:59,630
+Speaker SPEAKER_00: And then you get half the hidden units from the mother and half from the father.
+
+547
+00:44:01,271 --> 00:44:03,012
+Speaker SPEAKER_00: The mother network then gets suspended.
+
+548
+00:44:03,574 --> 00:44:06,556
+Speaker SPEAKER_00: Mothers know about this.
+
+549
+00:44:06,925 --> 00:44:09,949
+Speaker SPEAKER_00: That core is used to run the child network.
+
+550
+00:44:09,969 --> 00:44:11,452
+Speaker SPEAKER_00: The child network then does some more training.
+
+551
+00:44:12,432 --> 00:44:16,079
+Speaker SPEAKER_00: And then you make a prediction about who's going to end up best, the mother or this child.
+
+552
+00:44:16,139 --> 00:44:18,762
+Speaker SPEAKER_00: The child may not yet be as good as the mother because it hasn't finished training.
+
+553
+00:44:19,284 --> 00:44:20,324
+Speaker SPEAKER_00: But you have to make some prediction.
+
+554
+00:44:20,364 --> 00:44:22,347
+Speaker SPEAKER_00: Is this child likely to end up better than the mother?
+
+555
+00:44:22,809 --> 00:44:23,650
+Speaker SPEAKER_00: If so, you kill the mother.
+
+556
+00:44:24,190 --> 00:44:25,373
+Speaker SPEAKER_00: If not, you kill the child.
+
+557
+00:44:25,876 --> 00:44:28,800
+Speaker SPEAKER_00: You may ask what happens to the fathers.
+
+558
+00:44:30,021 --> 00:44:33,766
+Speaker SPEAKER_00: Well, it's very important in this algorithm to have rapid gender changes.
+
+559
+00:44:34,407 --> 00:44:37,313
+Speaker SPEAKER_00: So a network, there's a father one time, better be a mother another time.
+
+560
+00:44:37,873 --> 00:44:39,255
+Speaker SPEAKER_00: If you're a father, you never get killed.
+
+561
+00:44:41,057 --> 00:44:44,282
+Speaker SPEAKER_00: And so to make it all, to get rid of them, you have to do a gender change.
+
+562
+00:44:45,023 --> 00:44:45,184
+Speaker SPEAKER_00: OK.
+
+563
+00:44:49,070 --> 00:44:54,277
+Speaker SPEAKER_02: Yeah.
+
+564
+00:44:54,297 --> 00:44:54,396
+Speaker SPEAKER_00: Yeah.
+
+565
+00:44:54,416 --> 00:44:55,579
+Speaker SPEAKER_00: Indeed.
+
+566
+00:44:56,251 --> 00:44:59,775
+Speaker SPEAKER_00: One is just sort of standard dropout I get.
+
+567
+00:44:59,875 --> 00:45:00,715
+Speaker SPEAKER_00: One wouldn't work so well.
+
+568
+00:45:02,418 --> 00:45:07,583
+Speaker SPEAKER_00: It may well be that in biology, you have two because organizing group sex is too complicated.
+
+569
+00:45:10,367 --> 00:45:11,969
+Speaker SPEAKER_00: But I don't know.
+
+570
+00:45:12,489 --> 00:45:13,391
+Speaker SPEAKER_00: We haven't done the experiments.
+
+571
+00:45:13,411 --> 00:45:20,699
+Speaker SPEAKER_00: We haven't even, we've just done one very preliminary experiment to show that if you make two of these things, you get a child that quickly learns to be good.
+
+572
+00:45:21,561 --> 00:45:23,422
+Speaker SPEAKER_00: So the robustness you get from dropouts is really helpful.
+
+573
+00:45:23,992 --> 00:45:32,003
+Speaker SPEAKER_00: And the thing about genetic algorithms is you can use a million of your spare cores and you can be using them sort of fully without any communication.
+
+574
+00:45:33,365 --> 00:45:33,626
+Speaker SPEAKER_00: Okay.
+
+575
+00:45:34,407 --> 00:45:36,471
+Speaker SPEAKER_00: Now for something that's not completely different.
+
+576
+00:45:39,514 --> 00:45:48,668
+Speaker SPEAKER_00: If you think what Dropout is doing, it's taking a neuron and the neuron is a logistic neuron in my nets, so it computes a probability P.
+
+577
+00:45:49,576 --> 00:45:52,659
+Speaker SPEAKER_00: And then it gives a number, P, from the logistic.
+
+578
+00:45:53,059 --> 00:45:55,563
+Speaker SPEAKER_00: That's the output of the logistic, which we call the neural activity.
+
+579
+00:45:56,523 --> 00:46:03,030
+Speaker SPEAKER_00: It then sends this number, this real value, with a probability of 0.5 to the layer above.
+
+580
+00:46:03,650 --> 00:46:06,134
+Speaker SPEAKER_00: That's what dropout's doing.
+
+581
+00:46:06,153 --> 00:46:16,005
+Speaker SPEAKER_00: Well, that has exactly the same expected value as sending a 0.5 with a probability of P. OK?
+
+582
+00:46:17,047 --> 00:46:18,289
+Speaker SPEAKER_00: The variance is slightly different.
+
+583
+00:46:19,130 --> 00:46:20,170
+Speaker SPEAKER_00: So why not try that?
+
+584
+00:46:22,634 --> 00:46:25,416
+Speaker SPEAKER_00: So take a neural net.
+
+585
+00:46:25,956 --> 00:46:29,121
+Speaker SPEAKER_00: When we pre-train these neural nets, we use stochastic binary neurons anyway.
+
+586
+00:46:30,001 --> 00:46:39,751
+Speaker SPEAKER_00: And instead of doing back propagation by sending these real values, why not just send a single bit chosen stochastically?
+
+587
+00:46:39,771 --> 00:46:44,777
+Speaker SPEAKER_00: So you compute P, and then with probability P, you send a 1.
+
+588
+00:46:48,233 --> 00:46:55,942
+Speaker SPEAKER_00: It's sort of bizarre, because we always thought that the breakthrough in back propagation was realizing that you needed to send those real numbers.
+
+589
+00:46:57,023 --> 00:46:58,985
+Speaker SPEAKER_00: Actually, if you do that, it works really well.
+
+590
+00:47:01,528 --> 00:47:06,916
+Speaker SPEAKER_00: The neural net is obviously slower to learn, and you need to make it a bit bigger to be able to learn the same amount of stuff.
+
+591
+00:47:07,235 --> 00:47:08,577
+Speaker SPEAKER_00: But it generalizes much better.
+
+592
+00:47:09,338 --> 00:47:17,007
+Speaker SPEAKER_00: And from preliminary experiments I've done, the improvement you get in performance is similar to what you get from dropout.
+
+593
+00:47:17,478 --> 00:47:28,913
+Speaker SPEAKER_00: So what this is saying is, if you've got a big deep neural net and you're relying on regularizing it, it's big, right?
+
+594
+00:47:28,932 --> 00:47:30,235
+Speaker SPEAKER_00: It doesn't have enough training data.
+
+595
+00:47:31,237 --> 00:47:34,860
+Speaker SPEAKER_00: You want to regularize it by using something like dropout or noise.
+
+596
+00:47:35,922 --> 00:47:42,692
+Speaker SPEAKER_00: It's actually better for the neurons to send a single bit than it is for them to send an analog value.
+
+597
+00:47:45,541 --> 00:47:56,956
+Speaker SPEAKER_00: In dropout, your variance, if you send a half, if you send p with probability of half, your average value is a half p. And so your value is going to be a quarter p away from that.
+
+598
+00:47:57,016 --> 00:47:59,541
+Speaker SPEAKER_00: So when you, whatever.
+
+599
+00:48:00,601 --> 00:48:01,623
+Speaker SPEAKER_00: That's the variance you get.
+
+600
+00:48:01,724 --> 00:48:06,871
+Speaker SPEAKER_00: With a stochastic bit, but where you're sending a 0.5, this is the variance.
+
+601
+00:48:07,391 --> 00:48:10,054
+Speaker SPEAKER_00: You can see that when p equals a half, they're the same.
+
+602
+00:48:10,114 --> 00:48:11,396
+Speaker SPEAKER_00: That's good, because they have to be.
+
+603
+00:48:11,831 --> 00:48:16,356
+Speaker SPEAKER_00: When P is big, this guy has lower variance than this guy.
+
+604
+00:48:18,878 --> 00:48:22,501
+Speaker SPEAKER_00: But when P is small, this guy has bigger variance.
+
+605
+00:48:23,541 --> 00:48:25,724
+Speaker SPEAKER_00: This guy, when P is small, goes as P squared.
+
+606
+00:48:25,764 --> 00:48:32,971
+Speaker SPEAKER_00: This guy goes as P. And so when P is small, using a SCASI bit, you're getting even more variance than you do with dropout.
+
+607
+00:48:33,951 --> 00:48:36,514
+Speaker SPEAKER_00: And that's the Poisson limit when P is small.
+
+608
+00:48:36,534 --> 00:48:37,393
+Speaker SPEAKER_00: You ignore this term.
+
+609
+00:48:38,275 --> 00:48:40,336
+Speaker SPEAKER_00: And the variance is proportional to P now.
+
+610
+00:48:40,942 --> 00:48:43,766
+Speaker SPEAKER_00: And that's sort of roughly what neurons are like.
+
+611
+00:48:43,806 --> 00:48:50,695
+Speaker SPEAKER_00: A lot of neuroscientists will tell you what a neuron does is it computes a Poisson rate and then it emits spikes according to a Poisson.
+
+612
+00:48:52,416 --> 00:48:56,623
+Speaker SPEAKER_00: You have to take into account the fact that it can't immediately emit another spike and that makes life more complicated.
+
+613
+00:48:56,943 --> 00:49:00,306
+Speaker SPEAKER_00: But ignoring that, a Poisson model is a pretty good model of a neuron.
+
+614
+00:49:00,887 --> 00:49:04,552
+Speaker SPEAKER_00: And it's always been a puzzle, why don't they use the times of spikes?
+
+615
+00:49:04,802 --> 00:49:06,666
+Speaker SPEAKER_00: Why do they do all this randomness?
+
+616
+00:49:07,047 --> 00:49:08,731
+Speaker SPEAKER_00: And the answer is because that's what they want to do.
+
+617
+00:49:08,751 --> 00:49:11,759
+Speaker SPEAKER_00: That's the right thing to do if you want to fit models to data.
+
+618
+00:49:12,519 --> 00:49:14,284
+Speaker SPEAKER_00: If you sent real numbers, you'd do worse.
+
+619
+00:49:17,431 --> 00:49:19,817
+Speaker SPEAKER_00: So here's an amusing piece of history which I already alluded to.
+
+620
+00:49:20,878 --> 00:49:21,681
+Speaker SPEAKER_00: When we
+
+621
+00:49:22,166 --> 00:49:27,235
+Speaker SPEAKER_00: trained, first discovered that you can train lots of layers of features unsupervised.
+
+622
+00:49:27,255 --> 00:49:30,139
+Speaker SPEAKER_00: We're using things called Boltzmann machines that have stochastic binary units.
+
+623
+00:49:31,541 --> 00:49:38,010
+Speaker SPEAKER_00: Terry Sanofsky insisted on stochastic binary units in about 1980 when I first met him because he said that's what neurons are like.
+
+624
+00:49:38,632 --> 00:49:43,398
+Speaker SPEAKER_00: And so we tried to develop ways of computing with them because that's what neurons were
+
+625
+00:49:44,019 --> 00:49:46,282
+Speaker SPEAKER_00: We discovered we could train those of each detectors like this.
+
+626
+00:49:46,403 --> 00:49:49,829
+Speaker SPEAKER_00: But after doing that, we knew backpropagation was good for fine tuning.
+
+627
+00:49:50,429 --> 00:49:58,081
+Speaker SPEAKER_00: So we pretended they were deterministic neurons, which is a horrible intellectual fudge, and we used backpropagation.
+
+628
+00:49:58,101 --> 00:50:07,233
+Speaker SPEAKER_00: It turns out, if you don't do that, if you keep running them as stochastic binary neurons in the forward pass, but run the standard backpropagation in the backward pass.
+
+629
+00:50:07,574 --> 00:50:13,182
+Speaker SPEAKER_00: So in the backward pass, you're using those P's and 1 minus P's, but they never need to be communicated outside the neuron.
+
+630
+00:50:13,822 --> 00:50:21,673
+Speaker SPEAKER_00: Then it actually trains slower, but it generalizes much better.
+
+631
+00:50:22,454 --> 00:50:23,516
+Speaker SPEAKER_00: So it's a better thing to do.
+
+632
+00:50:26,922 --> 00:50:34,855
+Speaker SPEAKER_00: And so I want to end with some explanations of why cortical neurons don't send analog values, because that's always been a puzzle.
+
+633
+00:50:35,856 --> 00:50:39,541
+Speaker SPEAKER_00: And a lot of people say, well, there's no way they can do it efficiently.
+
+634
+00:50:40,534 --> 00:50:45,121
+Speaker SPEAKER_00: But actually, it takes some sugar to send a spike, because you have to send this wave of depolarization.
+
+635
+00:50:46,623 --> 00:50:50,307
+Speaker SPEAKER_00: It takes the same amount of sugar to send a spike with precise timing.
+
+636
+00:50:51,409 --> 00:50:53,711
+Speaker SPEAKER_00: That's not a good reason not to use the time.
+
+637
+00:50:54,072 --> 00:50:57,797
+Speaker SPEAKER_00: What's more, we know that there's neurons that do use very precise times.
+
+638
+00:50:58,277 --> 00:51:06,168
+Speaker SPEAKER_00: So when I localize a sound, I'm relying on the difference in time for the sound to get to my two ears.
+
+639
+00:51:06,929 --> 00:51:08,652
+Speaker SPEAKER_00: Now, that's a millisecond for sound.
+
+640
+00:51:09,255 --> 00:51:12,519
+Speaker SPEAKER_00: And the difference in time to my two ears is more sort of like this.
+
+641
+00:51:12,621 --> 00:51:13,621
+Speaker SPEAKER_00: That's the difference in distance.
+
+642
+00:51:14,242 --> 00:51:16,284
+Speaker SPEAKER_00: So we're talking about a small fraction of a millisecond.
+
+643
+00:51:17,467 --> 00:51:23,034
+Speaker SPEAKER_00: And your neurons do that by sending a spike this way and a spike this way and seeing where they overlap.
+
+644
+00:51:23,414 --> 00:51:25,217
+Speaker SPEAKER_00: So they're using spike timing very precisely.
+
+645
+00:51:26,338 --> 00:51:28,221
+Speaker SPEAKER_00: So we know evolution can do that if it wants to.
+
+646
+00:51:28,862 --> 00:51:36,833
+Speaker SPEAKER_00: Also in your hippocampus, you have, well, if you were a rat, you'd have, which basically you are.
+
+647
+00:51:37,554 --> 00:51:40,400
+Speaker SPEAKER_00: You'd have cells that fired when you're in a particular place.
+
+648
+00:51:41,822 --> 00:51:45,447
+Speaker SPEAKER_00: And so the fact that the cell fired would tell you you were there.
+
+649
+00:51:46,268 --> 00:51:51,438
+Speaker SPEAKER_00: But when it fired relative to an oscillation tells you where you are within that place field.
+
+650
+00:51:52,559 --> 00:51:54,884
+Speaker SPEAKER_00: There's some debate about that still, but it's pretty well established.
+
+651
+00:51:55,204 --> 00:52:03,478
+Speaker SPEAKER_00: So there you're using the precise time of the spike to tell you where you are, and the fact that it occurred to tell you you're somewhere around about here.
+
+652
+00:52:04,251 --> 00:52:06,255
+Speaker SPEAKER_00: So we know they can use time to spike.
+
+653
+00:52:06,315 --> 00:52:09,099
+Speaker SPEAKER_00: So I think this just isn't a plausible explanation.
+
+654
+00:52:09,360 --> 00:52:10,061
+Speaker SPEAKER_00: They can do it.
+
+655
+00:52:10,561 --> 00:52:11,603
+Speaker SPEAKER_00: There's an efficient way to do it.
+
+656
+00:52:11,884 --> 00:52:12,445
+Speaker SPEAKER_00: And they don't.
+
+657
+00:52:14,086 --> 00:52:15,949
+Speaker SPEAKER_00: Another argument is evolution just never thought of it.
+
+658
+00:52:16,010 --> 00:52:17,793
+Speaker SPEAKER_00: I mean, it just never stumbled across this idea.
+
+659
+00:52:18,454 --> 00:52:19,876
+Speaker SPEAKER_00: And I find that highly implausible.
+
+660
+00:52:20,396 --> 00:52:23,402
+Speaker SPEAKER_00: Evolution can take the same cells and turn them into teeth and eyeballs.
+
+661
+00:52:24,003 --> 00:52:32,436
+Speaker SPEAKER_00: If it can do that, why can't, you know, if using the time of a spike seems sort of pretty obvious.
+
+662
+00:52:33,175 --> 00:52:34,195
+Speaker SPEAKER_00: We can even think of it.
+
+663
+00:52:35,918 --> 00:52:36,657
+Speaker SPEAKER_00: So I don't believe that.
+
+664
+00:52:38,360 --> 00:52:43,965
+Speaker SPEAKER_00: My current explanation is neurons don't send analog values because they don't want to.
+
+665
+00:52:44,025 --> 00:52:46,047
+Speaker SPEAKER_00: They're better off sending stochastic spikes.
+
+666
+00:52:46,527 --> 00:52:48,369
+Speaker SPEAKER_00: And that's because it's such a great regularizer.
+
+667
+00:52:49,170 --> 00:53:00,201
+Speaker SPEAKER_00: And what neurons are really concerned to do is fit a gazillion models to this weird data they're confronted with, average what all these models are saying, and sending stochastic spikes is a very good way to do that.
+
+668
+00:53:01,081 --> 00:53:01,782
+Speaker SPEAKER_00: OK, I'm done.
+
+669
+00:53:14,958 --> 00:53:16,920
+Speaker SPEAKER_03: So we have time for a few questions.
+
+670
+00:53:16,940 --> 00:53:20,284
+Speaker SPEAKER_03: But if you want to ask a question, you have to talk into the microphone.
+
+671
+00:53:28,235 --> 00:53:28,554
+Speaker SPEAKER_03: No one?
+
+672
+00:53:28,695 --> 00:53:29,255
+Speaker SPEAKER_03: Oh, OK.
+
+673
+00:53:29,436 --> 00:53:34,623
+Speaker SPEAKER_03: One person will talk.
+
+674
+00:53:34,663 --> 00:53:42,972
+Speaker SPEAKER_06: Another argument why cortical neurons don't send analog values is that it's more power efficient to do it stochastically.
+
+675
+00:53:44,336 --> 00:53:45,577
+Speaker SPEAKER_00: Why is it more power efficient?
+
+676
+00:53:45,597 --> 00:53:50,885
+Speaker SPEAKER_00: Because the energy is in sending this wave of depolarization down the axon.
+
+677
+00:53:51,846 --> 00:53:55,409
+Speaker SPEAKER_00: You have to sort of, your sodium pump has to pump the ions back in again.
+
+678
+00:53:55,789 --> 00:54:03,398
+Speaker SPEAKER_06: No, no, not sending the spikes, like doing the work related to like aligning the spikes and like looking at where it's along the wave.
+
+679
+00:54:05,561 --> 00:54:07,003
+Speaker SPEAKER_00: It's not that hard.
+
+680
+00:54:08,063 --> 00:54:15,250
+Speaker SPEAKER_00: One thing that really convinced me of this is I dreamt up a little scheme so I could send, I could, you could time spikes carefully.
+
+681
+00:54:15,789 --> 00:54:24,978
+Speaker SPEAKER_00: And you could, for example, do scalar products where it was a scalar product of a vector of synapse strengths and a vector of spike times.
+
+682
+00:54:25,920 --> 00:54:31,144
+Speaker SPEAKER_00: You can do that scalar product and then it's quite easy to convert that back into the time of a spike for the next layer.
+
+683
+00:54:31,704 --> 00:54:33,907
+Speaker SPEAKER_00: So it's not hard to dream up machinery that does it.
+
+684
+00:54:34,668 --> 00:54:36,670
+Speaker SPEAKER_00: It's just that the cortex doesn't seem to be using it.
+
+685
+00:54:37,594 --> 00:54:40,467
+Speaker SPEAKER_00: So I think there is an energy efficient way to do it.
+
+686
+00:54:41,797 --> 00:54:43,018
+Speaker SPEAKER_00: Yeah.
+
+687
+00:54:43,039 --> 00:54:49,628
+Speaker SPEAKER_03: So in the dropout case, you turn the stochasticity on during training as a regularizer.
+
+688
+00:54:49,969 --> 00:54:55,516
+Speaker SPEAKER_03: But then at test time, to get the power of those models back out, you average them, right?
+
+689
+00:54:55,777 --> 00:55:01,485
+Speaker SPEAKER_03: But if this is your conjecture for how the brain works, and stochasticity is always on, it's as if it's always training.
+
+690
+00:55:01,585 --> 00:55:02,847
+Speaker SPEAKER_03: When can it cash out?
+
+691
+00:55:03,027 --> 00:55:08,335
+Speaker SPEAKER_03: How can it cash out and actually average those models to behave well at test time, like right now?
+
+692
+00:55:08,356 --> 00:55:10,639
+Speaker SPEAKER_00: So to average the models, what it would need to do
+
+693
+00:55:10,619 --> 00:55:13,443
+Speaker SPEAKER_00: is run for a while and use spike rates.
+
+694
+00:55:13,804 --> 00:55:18,431
+Speaker SPEAKER_00: Basically, you need to integrate over time, being stochastic.
+
+695
+00:55:19,391 --> 00:55:24,079
+Speaker SPEAKER_00: And if you look at people making decisions, they get more and more accurate with time.
+
+696
+00:55:26,061 --> 00:55:35,675
+Speaker SPEAKER_00: So the way the brain, if this is why it's using stochastic spikes, the way it would have to do the model averaging is in the correct way, which is to run it several times.
+
+697
+00:55:36,356 --> 00:55:40,103
+Speaker SPEAKER_00: And so you get more accurate if you spend more time by averaging results over time.
+
+698
+00:55:41,246 --> 00:55:44,030
+Speaker SPEAKER_00: And psychologists have lots of evidence that you do that when you're trying to make decisions.
+
+699
+00:55:44,070 --> 00:55:45,833
+Speaker SPEAKER_00: That's why you get more accurate if you give them more time.
+
+700
+00:55:54,708 --> 00:55:54,927
+Speaker SPEAKER_07: Hi.
+
+701
+00:55:54,947 --> 00:56:00,257
+Speaker SPEAKER_07: So has a method like this been applied to general Boltzmann machines, more general models like this?
+
+702
+00:56:02,300 --> 00:56:04,463
+Speaker SPEAKER_00: Well, a Boltzmann machine's sort of already doing this, right?
+
+703
+00:56:04,483 --> 00:56:07,507
+Speaker SPEAKER_00: A Boltzmann machine is all stochastic spikes.
+
+704
+00:56:08,467 --> 00:56:12,536
+Speaker SPEAKER_04: That's true.
+
+705
+00:56:30,639 --> 00:56:37,688
+Speaker SPEAKER_05: I don't know if the spikes, the intensity of the spikes, I mean, in your case, it's 0.20 constant.
+
+706
+00:56:38,367 --> 00:56:42,532
+Speaker SPEAKER_05: But in observations, it could be very diverse, right?
+
+707
+00:56:43,134 --> 00:56:43,373
+Speaker SPEAKER_00: No.
+
+708
+00:56:43,914 --> 00:56:46,317
+Speaker SPEAKER_00: Spikes are pretty much all the same size.
+
+709
+00:56:47,097 --> 00:56:50,601
+Speaker SPEAKER_00: So a spike is propagated by sending a wave of depolarization down the axon.
+
+710
+00:56:51,643 --> 00:56:54,204
+Speaker SPEAKER_00: And it's a digital thing.
+
+711
+00:56:54,226 --> 00:56:59,331
+Speaker SPEAKER_00: That is, there's digital cleanup at each stage so that if you
+
+712
+00:57:00,391 --> 00:57:05,820
+Speaker SPEAKER_00: hyperpolarize it, sorry, depolarize it at one end so that the wave starts traveling.
+
+713
+00:57:06,280 --> 00:57:09,025
+Speaker SPEAKER_00: What comes out the other end is entirely predictable.
+
+714
+00:57:10,228 --> 00:57:14,916
+Speaker SPEAKER_00: And what comes out the other end will stay the same even if the action has branches and so on.
+
+715
+00:57:15,898 --> 00:57:17,940
+Speaker SPEAKER_00: So, it's a sort of digital system.
+
+716
+00:57:18,742 --> 00:57:21,086
+Speaker SPEAKER_00: You put a one in this end and a one comes out the other end.
+
+717
+00:57:22,048 --> 00:57:23,471
+Speaker SPEAKER_00: And they're pretty much always the same size.
+
+718
+00:57:25,134 --> 00:57:25,233
+Unknown Speaker: Okay.
+
+719
+00:57:25,822 --> 00:57:30,909
+Speaker SPEAKER_00: Now, there are some models, like people have made sort of computational neuroscience models where you have spikes at different heights.
+
+720
+00:57:30,949 --> 00:57:32,050
+Speaker SPEAKER_00: Mike Lewinke has a model like that.
+
+721
+00:57:32,271 --> 00:57:34,894
+Speaker SPEAKER_00: But that's not what real spikes are like.
+
+722
+00:57:34,914 --> 00:57:38,481
+Speaker SPEAKER_03: AUDIENCE MEMBER 1 Different model.
+
+723
+00:57:41,764 --> 00:57:41,945
+Unknown Speaker: One more.
+
+724
+00:57:41,965 --> 00:57:43,248
+Speaker SPEAKER_01: AUDIENCE MEMBER 2 Thank you.
+
+725
+00:57:43,307 --> 00:57:45,931
+Speaker SPEAKER_01: Support vector machine could be viewed as one neuron.
+
+726
+00:57:46,371 --> 00:57:48,916
+Speaker SPEAKER_01: So dropouts could be applied to support vector machine.
+
+727
+00:57:48,956 --> 00:57:49,737
+Speaker SPEAKER_01: Have you tried this?
+
+728
+00:57:50,746 --> 00:57:52,309
+Speaker SPEAKER_01: No, I haven't.
+
+729
+00:57:52,369 --> 00:57:56,199
+Speaker SPEAKER_00: I'm not sure I understand you, but I like the view that a support vector machine is one neuron.
+
+730
+00:58:03,637 --> 00:58:06,222
+Speaker SPEAKER_00: You can explain it to me afterwards.
+
+731
+00:58:14,708 --> 00:58:20,179
+Speaker SPEAKER_04: So, if you treat Dropout or view it as a regularizer, it shuts off half the nodes at any given time.
+
+732
+00:58:20,699 --> 00:58:25,309
+Speaker SPEAKER_04: Another straw man would be to simply have half as many nodes that are always on.
+
+733
+00:58:26,210 --> 00:58:27,673
+Speaker SPEAKER_04: You've tried that and it's... Oh, yes.
+
+734
+00:58:27,733 --> 00:58:28,695
+Speaker SPEAKER_00: Dropout is much better.
+
+735
+00:58:30,460 --> 00:58:30,559
+Speaker SPEAKER_00: Okay.
+
+736
+00:58:30,579 --> 00:58:33,105
+Speaker SPEAKER_00: So, if you look at that 160 on Jan's webpage,
+
+737
+00:58:33,980 --> 00:58:37,784
+Speaker SPEAKER_00: A lot of different people who know a lot about tuning back propagation.
+
+738
+00:58:38,846 --> 00:58:40,188
+Speaker SPEAKER_00: John Platt tried lots of things.
+
+739
+00:58:40,748 --> 00:58:47,396
+Speaker SPEAKER_00: And John Platt was the guy who got 160 by running a big hidden layer, just one hidden layer, and training it very, very slowly.
+
+740
+00:58:47,878 --> 00:58:49,480
+Speaker SPEAKER_00: And he managed to get 160 once.
+
+741
+00:58:52,322 --> 00:58:54,485
+Speaker SPEAKER_00: Lots of other people tried and did worse.
+
+742
+00:58:54,954 --> 00:58:57,418
+Speaker SPEAKER_00: if you don't sort of transform the data or put in knowledge.
+
+743
+00:58:58,320 --> 00:59:01,003
+Speaker SPEAKER_00: So that's been very carefully explored.
+
+744
+00:59:02,445 --> 00:59:05,168
+Speaker SPEAKER_00: There is a result on Jan's webpage of 153.
+
+745
+00:59:05,248 --> 00:59:09,134
+Speaker SPEAKER_00: That's an unpublished result, and it's by me.
+
+746
+00:59:11,237 --> 00:59:13,621
+Speaker SPEAKER_00: And that result was obtained by using these weight constraints.
+
+747
+00:59:13,641 --> 00:59:15,682
+Speaker SPEAKER_00: So weight constraints, actually, you can beat 160.
+
+748
+00:59:16,224 --> 00:59:20,530
+Speaker SPEAKER_00: You can get down to about 150 just by using the weight constraints.
+
+749
+00:59:20,550 --> 00:59:24,135
+Speaker SPEAKER_00: But you won't get anywhere near sort of 110 or 120.
+
+750
+00:59:25,414 --> 00:59:29,679
+Speaker SPEAKER_04: Another thing is the ones with dropout learn more slowly.
+
+751
+00:59:29,981 --> 00:59:30,161
+Speaker SPEAKER_00: Yes.
+
+752
+00:59:30,762 --> 00:59:36,309
+Speaker SPEAKER_04: Have you thought of, you know, not using dropout at the beginning and then, you know.
+
+753
+00:59:36,329 --> 00:59:37,710
+Speaker SPEAKER_00: So, this is fairly new stuff.
+
+754
+00:59:38,650 --> 00:59:41,956
+Speaker SPEAKER_00: We've only written one paper on it that was just rejected.
+
+755
+00:59:42,655 --> 00:59:49,264
+Speaker SPEAKER_00: And so, almost everything to be tried, we haven't tried yet.
+
+756
+00:59:50,045 --> 00:59:50,146
+Speaker SPEAKER_00: Okay.
+
+757
+00:59:50,166 --> 00:59:52,789
+Speaker SPEAKER_00: We just got the initial results that suggest it works really well.
+
+758
+00:59:58,135 --> 00:59:59,860
+Speaker SPEAKER_03: All right, so we're kind of out of time.
+
+759
+00:59:59,981 --> 01:00:12,077
+Speaker SPEAKER_03: So let's thank Jeff.
+

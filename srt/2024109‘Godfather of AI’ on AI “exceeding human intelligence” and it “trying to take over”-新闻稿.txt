@@ -1,0 +1,30 @@
+Geoffrey Hinton says there is 10% to 20% chance AI will lead to human extinction in three decades, as change moves fast。
+‘We need dramatic changes’: is societal collapse inevitable?
+The British-Canadian computer scientist often touted as a “godfather” of artificial intelligence has shortened the odds of AI wiping out humanity over the next three decades, warning the pace of change in the technology is “much faster” than expected.
+
+Prof Geoffrey Hinton, who this year was awarded the Nobel prize in physics for his work in AI, said there was a “10% to 20%” chance that AI would lead to human extinction within the next three decades.
+
+Previously Hinton had said there was a 10% chance of the technology triggering a catastrophic outcome for humanity.
+
+Asked on BBC Radio 4’s Today programme if he had changed his analysis of a potential AI apocalypse and the one in 10 chance of it happening, he said: “Not really, 10% to 20%.”
+
+Hinton’s estimate prompted Today’s guest editor, the former chancellor Sajid Javid, to say “you’re going up”, to which Hinton replied: “If anything. You see, we’ve never had to deal with things more intelligent than ourselves before.”
+
+He added: “And how many examples do you know of a more intelligent thing being controlled by a less intelligent thing? There are very few examples. There’s a mother and baby. Evolution put a lot of work into allowing the baby to control the mother, but that’s about the only example I know of.”
+
+London-born Hinton, a professor emeritus at the University of Toronto, said humans would be like toddlers compared with the intelligence of highly powerful AI systems.
+
+“I like to think of it as: imagine yourself and a three-year-old. We’ll be the three-year-olds,” he said.
+
+AI can be loosely defined as computer systems performing tasks that typically require human intelligence.
+
+Last year, Hinton made headlines after resigning from his job at Google in order to speak more openly about the risks posed by unconstrained AI development, citing concerns that“bad actors” would use the technology to harm others. A key concern of AI safety campaigners is that the creation of artificial general intelligence, or systems that are smarter than humans, could lead to the technology posing an existential threat by evading human control.
+
+Reflecting on where he thought the development of AI would have reached when he first started his work on the technology, Hinton said: “I didn’t think it would be where we [are] now. I thought at some point in the future we would get here.”
+He added: “Because the situation we’re in now is that most of the experts in the field think that sometime, within probably the next 20 years, we’re going to develop AIs that are smarter than people. And that’s a very scary thought.”
+
+Hinton said the pace of development was “very, very fast, much faster than I expected” and called for government regulation of the technology.
+
+“My worry is that the invisible hand is not going to keep us safe. So just leaving it to the profit motive of large companies is not going to be sufficient to make sure they develop it safely,” he said. “The only thing that can force those big companies to do more research on safety is government regulation.”
+
+Hinton is one of the three “godfathers of AI” who have won the ACM AM Turing award – the computer science equivalent of the Nobel prize – for their work. However, one of the trio, Yann LeCun, the chief AI scientist at Mark Zuckerberg’s Meta, has played down the existential threat and has said AI “could actually save humanity from extinction”.

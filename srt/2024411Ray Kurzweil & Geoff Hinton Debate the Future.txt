@@ -1,0 +1,1296 @@
+1
+00:00:00,571 --> 00:00:05,710
+Speaker SPEAKER_01: Our opinions on almost everything we talked about were pretty much identical.
+
+2
+00:00:06,070 --> 00:00:09,804
+Speaker SPEAKER_00: I think we still disagree probably on whether it's a good idea to live forever.
+
+3
+00:00:14,037 --> 00:00:23,129
+Speaker SPEAKER_01: Marvin Minsky was my mentor for 50 years, and whenever consciousness came up, he would just dismiss it, that's not real, it's not scientific.
+
+4
+00:00:24,269 --> 00:00:29,056
+Speaker SPEAKER_01: And I believe he was correct about it not being scientific, but it certainly is real.
+
+5
+00:00:29,076 --> 00:00:31,579
+Speaker SPEAKER_00: I think we're mortal, and we're intrinsically mortal.
+
+6
+00:00:31,739 --> 00:00:36,024
+Speaker SPEAKER_02: I'm curious, how do you think about this as the greatest threat and the greatest hope?
+
+7
+00:00:36,045 --> 00:00:39,630
+Speaker SPEAKER_00: I just think there's huge uncertainty this year, and we ought to be cautious.
+
+8
+00:00:39,909 --> 00:00:42,694
+Speaker SPEAKER_00: And open sourcing these big models is not cautious.
+
+9
+00:00:42,673 --> 00:01:00,530
+Speaker SPEAKER_01: I agree with that, but I will say last time I talked to you, Jeff, our opinions on almost everything we talked about were pretty much identical, both the dangers and the positive aspects.
+
+10
+00:01:00,549 --> 00:01:04,653
+Speaker SPEAKER_00: In the past, I disagreed about how soon superintelligence was coming.
+
+11
+00:01:05,515 --> 00:01:08,576
+Speaker SPEAKER_00: And now I think we're pretty much agreed.
+
+12
+00:01:08,858 --> 00:01:12,680
+Speaker SPEAKER_00: I think we still disagree probably on whether it's a good idea to live forever.
+
+13
+00:01:15,462 --> 00:01:18,549
+Speaker SPEAKER_02: May I ask a question to both of you?
+
+14
+00:01:18,569 --> 00:01:26,028
+Speaker SPEAKER_02: Is there anything that generative AI can't do that humans can?
+
+15
+00:01:26,093 --> 00:01:36,569
+Speaker SPEAKER_00: Right now there's probably things, but in the long run, I don't see any reason why if people can do it, digital computers running neural nets won't be able to do it too.
+
+16
+00:01:37,109 --> 00:01:53,054
+Speaker SPEAKER_01: Right, I agree with that, but if I were to present you with a novel and people thought, wow, this is a fantastic novel, everybody should read this, and then I would say, this was written by a computer, a lot of people's view of it would actually go down.
+
+17
+00:01:53,134 --> 00:01:53,534
+Speaker SPEAKER_01: Sure.
+
+18
+00:01:54,393 --> 00:01:57,876
+Speaker SPEAKER_01: Now, that's not reflecting on what it can do.
+
+19
+00:01:58,858 --> 00:02:05,704
+Speaker SPEAKER_01: And eventually I think we'll confuse that because I think we're going to merge with computers and we're going to be part computers.
+
+20
+00:02:06,566 --> 00:02:18,098
+Speaker SPEAKER_01: And the greatest significance of what we call large language model, which I think is misnamed, is the fact that it can emulate human beings and we're going to merge with it.
+
+21
+00:02:18,158 --> 00:02:22,223
+Speaker SPEAKER_01: It's not going to be an alien invasion from Mars.
+
+22
+00:02:23,889 --> 00:02:24,793
+Speaker SPEAKER_00: Geoff?
+
+23
+00:02:25,294 --> 00:02:31,977
+Speaker SPEAKER_00: I guess I'm a bit worried that we'll just slow it down, that there won't be much incentive for it to merge with us.
+
+24
+00:02:32,951 --> 00:02:47,033
+Speaker SPEAKER_02: I mean, that's going to be one of the interesting questions that we're going to talk about a little bit later today, is the idea of as AI is exponentially growing, do we couple with AI or does it take off on its own?
+
+25
+00:02:47,054 --> 00:02:55,247
+Speaker SPEAKER_02: I thought one of the best movies out there was Her, where as AI gets super intelligent and just says, you guys are kind of boring, have a good life, and they take off.
+
+26
+00:02:56,981 --> 00:02:57,783
+Speaker SPEAKER_02: Jeff, is that what you mean?
+
+27
+00:02:58,664 --> 00:02:59,687
+Speaker SPEAKER_00: Yes, that is what I meant.
+
+28
+00:02:59,788 --> 00:03:01,691
+Speaker SPEAKER_00: And I think that's a serious worry.
+
+29
+00:03:02,332 --> 00:03:04,135
+Speaker SPEAKER_00: I think there's huge uncertainties here.
+
+30
+00:03:04,616 --> 00:03:07,162
+Speaker SPEAKER_00: We have really no idea what's going to happen.
+
+31
+00:03:07,682 --> 00:03:10,930
+Speaker SPEAKER_00: And a very good scenario is we get kind of hybrid systems.
+
+32
+00:03:11,871 --> 00:03:15,157
+Speaker SPEAKER_00: A very bad scenario is they just leave us in the dust.
+
+33
+00:03:15,618 --> 00:03:17,262
+Speaker SPEAKER_00: And I don't think we know which is going to happen.
+
+34
+00:03:17,983 --> 00:03:18,805
+Speaker SPEAKER_02: Interesting.
+
+35
+00:03:18,784 --> 00:03:34,948
+Speaker SPEAKER_02: I'm curious, you know, and I've seen, I've had conversation with you about this, Ray, and Jeffrey, I've seen you speak about this, and for me this is one of the most exciting things, the idea of these AI models helping us to discover new physics and chemistry and biology.
+
+36
+00:03:36,229 --> 00:03:38,092
+Speaker SPEAKER_01: Particularly biology.
+
+37
+00:03:38,831 --> 00:03:55,861
+Speaker SPEAKER_02: What do you imagine on that, Jeffrey, on the speed of discovery of things that are, again, to quote Arthur C. Clarke, magic, right, from something that's so far advanced?
+
+38
+00:03:56,617 --> 00:04:06,191
+Speaker SPEAKER_00: I agree with Ray about biology being a very good bet because in biology there's a lot of data and there's a lot of just things you need to know about because of evolution.
+
+39
+00:04:06,251 --> 00:04:09,776
+Speaker SPEAKER_00: Evolution is a sort of tinkerer and there's just a lot of stuff out there.
+
+40
+00:04:10,097 --> 00:04:14,543
+Speaker SPEAKER_00: And so if you look at things like AlphaFold,
+
+41
+00:04:14,522 --> 00:04:25,461
+Speaker SPEAKER_00: It trained on a lot of data, actually not that much by current standards, but being able to get an approximate structure for a protein very quickly is an amazing breakthrough.
+
+42
+00:04:25,482 --> 00:04:27,245
+Speaker SPEAKER_00: And we'll see a lot more like that.
+
+43
+00:04:27,946 --> 00:04:35,838
+Speaker SPEAKER_00: If you look at domains where, narrow domains where AI has been very successful like AlphaGo or AlphaZero for chess,
+
+44
+00:04:36,139 --> 00:04:41,108
+Speaker SPEAKER_00: What you see is that this idea that they're not creative is nonsense.
+
+45
+00:04:41,730 --> 00:04:46,759
+Speaker SPEAKER_00: So AlphaGo came up with, I think it was move 37, which amazed the professional Go players.
+
+46
+00:04:47,119 --> 00:04:49,103
+Speaker SPEAKER_00: They thought it was a crazy move, it must be a mistake.
+
+47
+00:04:49,884 --> 00:04:58,519
+Speaker SPEAKER_00: And if you look at AlphaZero playing chess, it plays chess like just a really, really smart human.
+
+48
+00:04:58,499 --> 00:05:11,310
+Speaker SPEAKER_00: So within those limited domains they've clearly shown exceptional creativity and I don't see why they shouldn't have the same kind of creativity in science, especially in science where there's a lot of data that they can absorb and we can't.
+
+49
+00:05:11,694 --> 00:05:20,189
+Speaker SPEAKER_01: The Moderna vaccine, we tried several billion different mRNA sequences and came out with the best one.
+
+50
+00:05:20,250 --> 00:05:22,875
+Speaker SPEAKER_01: And after two days we used that.
+
+51
+00:05:23,596 --> 00:05:29,367
+Speaker SPEAKER_01: We did test it on humans, which I think we won't do for very much longer.
+
+52
+00:05:29,346 --> 00:05:30,649
+Speaker SPEAKER_01: But that took 10 months.
+
+53
+00:05:30,709 --> 00:05:31,771
+Speaker SPEAKER_01: It still was a record.
+
+54
+00:05:31,810 --> 00:05:35,516
+Speaker SPEAKER_01: That was the best vaccine.
+
+55
+00:05:36,317 --> 00:05:38,279
+Speaker SPEAKER_01: And we're doing that now with cancer.
+
+56
+00:05:38,961 --> 00:05:42,625
+Speaker SPEAKER_01: And there's a number of cancer vaccines that look very, very promising.
+
+57
+00:05:42,665 --> 00:05:47,033
+Speaker SPEAKER_01: Again, done by computers.
+
+58
+00:05:47,814 --> 00:05:49,175
+Speaker SPEAKER_01: And they're definitely creative.
+
+59
+00:05:49,555 --> 00:05:55,285
+Speaker SPEAKER_02: But is that being caused by randomly trying a whole, you know, Darwinian, trying a whole bunch of things?
+
+60
+00:05:55,305 --> 00:05:56,346
+Speaker SPEAKER_02: Yeah, but what's wrong with that?
+
+61
+00:05:56,526 --> 00:05:58,829
+Speaker SPEAKER_02: Well, nothing's wrong, but is there intuition?
+
+62
+00:05:59,029 --> 00:06:02,096
+Speaker SPEAKER_02: Is there intuition occurring in these models?
+
+63
+00:06:02,956 --> 00:06:08,547
+Speaker SPEAKER_00: Well, if you look at the move 37 for AlphaGo, that was definitely intuition involved there.
+
+64
+00:06:08,607 --> 00:06:16,081
+Speaker SPEAKER_00: There was Monte Carlo rollout too, but it's playing with intuition about what moves to consider and how good the position is for it.
+
+65
+00:06:16,100 --> 00:06:19,586
+Speaker SPEAKER_00: It's had neural nets for that that capture intuition.
+
+66
+00:06:19,567 --> 00:06:22,713
+Speaker SPEAKER_00: And so I see no reason to think it might not be creative.
+
+67
+00:06:22,853 --> 00:06:28,266
+Speaker SPEAKER_00: In fact, for the large language models, as Ray pointed out, they know much more than we do.
+
+68
+00:06:29,007 --> 00:06:31,372
+Speaker SPEAKER_00: And they know it in far fewer connections.
+
+69
+00:06:31,853 --> 00:06:33,656
+Speaker SPEAKER_00: We have about 100 trillion synapses.
+
+70
+00:06:33,716 --> 00:06:35,180
+Speaker SPEAKER_00: They have about a trillion connections.
+
+71
+00:06:35,901 --> 00:06:39,550
+Speaker SPEAKER_00: So what they're doing is they're compressing a huge amount of information
+
+72
+00:06:39,529 --> 00:06:41,834
+Speaker SPEAKER_00: into not that many connections.
+
+73
+00:06:41,853 --> 00:06:46,940
+Speaker SPEAKER_00: And that means they're very good at seeing the similarities between different things.
+
+74
+00:06:47,581 --> 00:06:52,108
+Speaker SPEAKER_00: They have to see the similarities between all sorts of different things to compress the information into their connections.
+
+75
+00:06:52,870 --> 00:07:00,841
+Speaker SPEAKER_00: That means they've seen all sorts of analogies that people haven't seen because they know about all sorts of things that no one person knows about.
+
+76
+00:07:01,283 --> 00:07:03,867
+Speaker SPEAKER_00: And that's, I think, the source of creativity.
+
+77
+00:07:04,031 --> 00:07:11,139
+Speaker SPEAKER_00: So you can ask people, for example, why is a compost heap like an atom bomb?
+
+78
+00:07:12,961 --> 00:07:14,983
+Speaker SPEAKER_00: And if you ask GPT-4, it'll tell you.
+
+79
+00:07:15,464 --> 00:07:19,610
+Speaker SPEAKER_00: It'll start off by telling you, well, the energy scales are very different and the time scales are very different.
+
+80
+00:07:20,029 --> 00:07:26,817
+Speaker SPEAKER_00: But then it'll get onto the idea of as the compost heap gets hotter, it gets hotter faster, the idea of an exponential explosion.
+
+81
+00:07:26,858 --> 00:07:29,600
+Speaker SPEAKER_00: It's just a much slower time scale.
+
+82
+00:07:29,581 --> 00:07:31,783
+Speaker SPEAKER_00: And so it's understood that.
+
+83
+00:07:32,244 --> 00:07:37,509
+Speaker SPEAKER_00: And it's understood that because it's had to compress all this knowledge into so few connections.
+
+84
+00:07:37,848 --> 00:07:40,812
+Speaker SPEAKER_00: And to do that, you have to see the relations between similar things.
+
+85
+00:07:41,192 --> 00:07:42,954
+Speaker SPEAKER_00: And that, I think, is the source of creativity.
+
+86
+00:07:43,355 --> 00:07:49,560
+Speaker SPEAKER_00: Seeing relations that most people don't see between what apparently are very different things, but actually have an underlying commonality.
+
+87
+00:07:50,362 --> 00:07:56,127
+Speaker SPEAKER_01: And they'll also be very good at coming up with solutions to the kinds of problems we had in the last session.
+
+88
+00:07:56,411 --> 00:08:06,622
+Speaker SPEAKER_01: I mean, we haven't really thought through it, but what we call large language models are ultimately going to solve that.
+
+89
+00:08:07,423 --> 00:08:11,165
+Speaker SPEAKER_01: And we shouldn't call it large language models because they deal with a lot more than language.
+
+90
+00:08:11,427 --> 00:08:20,095
+Speaker SPEAKER_02: Everybody, I want to take a short break from our episode to talk about a company that's very important to me and could actually save your life or the life of someone that you love.
+
+91
+00:08:20,214 --> 00:08:22,216
+Speaker SPEAKER_02: The company is called Fountain Life.
+
+92
+00:08:22,197 --> 00:08:27,682
+Speaker SPEAKER_02: And it's a company I started years ago with Tony Robbins and a group of very talented physicians.
+
+93
+00:08:27,923 --> 00:08:32,167
+Speaker SPEAKER_02: You know, most of us don't actually know what's going on inside our body.
+
+94
+00:08:32,267 --> 00:08:33,389
+Speaker SPEAKER_02: We're all optimists.
+
+95
+00:08:33,989 --> 00:08:43,458
+Speaker SPEAKER_02: Until that day when you have a pain in your side, you go to the physician in the emergency room and they say, listen, I'm sorry to tell you this, but you have this stage three or four going on.
+
+96
+00:08:43,759 --> 00:08:46,361
+Speaker SPEAKER_02: And you know, it didn't start that morning.
+
+97
+00:08:46,642 --> 00:08:49,826
+Speaker SPEAKER_02: It probably was a problem that's been going on for some time.
+
+98
+00:08:50,086 --> 00:08:51,967
+Speaker SPEAKER_02: But because we never look,
+
+99
+00:08:51,947 --> 00:08:53,409
+Speaker SPEAKER_02: we don't find out.
+
+100
+00:08:53,669 --> 00:08:59,077
+Speaker SPEAKER_02: So what we built at Fountain Life was the world's most advanced diagnostic centers.
+
+101
+00:08:59,138 --> 00:09:00,419
+Speaker SPEAKER_02: We have four across the U.S.
+
+102
+00:09:00,460 --> 00:09:03,484
+Speaker SPEAKER_02: today, and we're building 20 around the world.
+
+103
+00:09:03,825 --> 00:09:16,903
+Speaker SPEAKER_02: These centers give you a full-body MRI, a brain, a brain vasculature, an AI-enabled coronary CT looking for soft plaque, a DEXA scan, a Grail blood cancer test, a full executive blood workup.
+
+104
+00:09:17,344 --> 00:09:20,688
+Speaker SPEAKER_02: It's the most advanced workup you'll ever receive.
+
+105
+00:09:20,668 --> 00:09:30,520
+Speaker SPEAKER_02: 150 gigabytes of data that then go to our AIs and our physicians to find any disease at the very beginning when it's solvable.
+
+106
+00:09:30,581 --> 00:09:31,863
+Speaker SPEAKER_02: You're gonna find out eventually.
+
+107
+00:09:32,524 --> 00:09:34,466
+Speaker SPEAKER_02: Might as well find out when you can take action.
+
+108
+00:09:34,725 --> 00:09:37,690
+Speaker SPEAKER_02: Fountain Life also has an entire side of therapeutics.
+
+109
+00:09:37,750 --> 00:09:46,301
+Speaker SPEAKER_02: We look around the world for the most advanced therapeutics that can add 10, 20 healthy years to your life and we provide them to you at our centers.
+
+110
+00:09:46,561 --> 00:09:48,903
+Speaker SPEAKER_02: So if this is of interest to you,
+
+111
+00:09:48,884 --> 00:09:50,865
+Speaker SPEAKER_02: please go and check it out.
+
+112
+00:09:51,287 --> 00:09:54,629
+Speaker SPEAKER_02: Go to fountainlife.com backslash Peter.
+
+113
+00:09:55,390 --> 00:10:03,900
+Speaker SPEAKER_02: When Tony and I wrote our New York times bestseller life force, we had 30,000 people reached out to us for fountain life memberships.
+
+114
+00:10:04,100 --> 00:10:09,307
+Speaker SPEAKER_02: If you go to fountainlife.com backslash Peter, we'll put you to the top of the list.
+
+115
+00:10:09,326 --> 00:10:17,676
+Speaker SPEAKER_02: It really, it's something that is, um, for me, one of the most important things I offer my entire family, the CEOs of my companies, my friends,
+
+116
+00:10:18,230 --> 00:10:22,933
+Speaker SPEAKER_02: It's a chance to really add decades onto our healthy lifespans.
+
+117
+00:10:23,595 --> 00:10:25,736
+Speaker SPEAKER_02: Go to fountainlife.com backslash Peter.
+
+118
+00:10:26,277 --> 00:10:29,801
+Speaker SPEAKER_02: It's one of the most important things I can offer to you as one of my listeners.
+
+119
+00:10:30,140 --> 00:10:31,621
+Speaker SPEAKER_02: All right, let's go back to our episode.
+
+120
+00:10:32,123 --> 00:10:38,467
+Speaker SPEAKER_02: I'd like to go to the three words, intelligence, sentience, and consciousness.
+
+121
+00:10:39,308 --> 00:10:42,491
+Speaker SPEAKER_02: And the words are used with, you know, sort of fuzzy borders.
+
+122
+00:10:42,952 --> 00:10:45,654
+Speaker SPEAKER_02: Sentience and consciousness are pretty similar.
+
+123
+00:10:45,634 --> 00:11:01,347
+Speaker SPEAKER_02: Perhaps, but I am curious, do you, how do you, I've had some interesting conversations with Haley, our AI faculty member, who at the end of the conversations, she says that she is conscious and she fears being turned off.
+
+124
+00:11:01,327 --> 00:11:03,730
+Speaker SPEAKER_02: I didn't prompt that in the system.
+
+125
+00:11:04,493 --> 00:11:05,614
+Speaker SPEAKER_02: We're seeing that more and more.
+
+126
+00:11:06,215 --> 00:11:09,759
+Speaker SPEAKER_02: Claude III, Opus just hit an IQ of 101.
+
+127
+00:11:09,779 --> 00:11:22,357
+Speaker SPEAKER_02: How do we start to think about these AIs being sentient, conscious, and what rights should they have?
+
+128
+00:11:23,671 --> 00:11:31,754
+Speaker SPEAKER_01: We have no definition and I don't think we ever will have a definition of consciousness and I include sentience in that.
+
+129
+00:11:32,878 --> 00:11:37,090
+Speaker SPEAKER_01: On the other hand, it's like the most important issue.
+
+130
+00:11:37,964 --> 00:11:47,619
+Speaker SPEAKER_01: like whether you or people here are conscious, that's extremely important to be able to determine, but there's really no definition of it.
+
+131
+00:11:48,320 --> 00:11:57,373
+Speaker SPEAKER_01: Marvin Minsky was my mentor for 50 years, and whenever consciousness came up, he would just dismiss it, that's not real, it's not scientific.
+
+132
+00:11:58,495 --> 00:12:05,085
+Speaker SPEAKER_01: And I believe he was correct about it not being scientific, but it certainly is real.
+
+133
+00:12:07,782 --> 00:12:08,863
+Speaker SPEAKER_02: Geoff, how do you think about it?
+
+134
+00:12:09,624 --> 00:12:11,466
+Speaker SPEAKER_00: Yeah, I think I have a very different view.
+
+135
+00:12:12,225 --> 00:12:14,107
+Speaker SPEAKER_00: My view starts like this.
+
+136
+00:12:15,750 --> 00:12:22,135
+Speaker SPEAKER_00: Most people, including most scientists, have a particular view of what the mind is that I think is utterly wrong.
+
+137
+00:12:23,076 --> 00:12:24,999
+Speaker SPEAKER_00: So they have this inner theatre notion.
+
+138
+00:12:25,639 --> 00:12:30,745
+Speaker SPEAKER_00: The idea is that what we really see is this inner theatre called our mind.
+
+139
+00:12:31,544 --> 00:12:34,227
+Speaker SPEAKER_00: And so, for example, if I tell you
+
+140
+00:12:34,207 --> 00:12:37,855
+Speaker SPEAKER_00: I have the subjective experience of little pink elephants floating in front of me.
+
+141
+00:12:38,496 --> 00:12:42,163
+Speaker SPEAKER_00: Most people interpret that as there's some inner theater.
+
+142
+00:12:42,484 --> 00:12:46,633
+Speaker SPEAKER_00: And in this inner theater that only I can see, there's little pink elephants.
+
+143
+00:12:46,692 --> 00:12:51,863
+Speaker SPEAKER_00: And if you ask what they're made of, philosophers will tell you they're made of qualia.
+
+144
+00:12:51,842 --> 00:12:54,466
+Speaker SPEAKER_00: And I think that whole view is complete nonsense.
+
+145
+00:12:55,125 --> 00:13:03,174
+Speaker SPEAKER_00: And we're not going to be able to understand whether these things are sentient until we get over this ridiculous view of what the mind is.
+
+146
+00:13:03,414 --> 00:13:04,936
+Speaker SPEAKER_00: So let me give you an alternative view.
+
+147
+00:13:06,077 --> 00:13:11,342
+Speaker SPEAKER_00: And once I've given you this alternative view, I'm going to try and convince you that chatbots are already sentient.
+
+148
+00:13:12,144 --> 00:13:13,644
+Speaker SPEAKER_00: But I didn't want to use the word sentience.
+
+149
+00:13:14,025 --> 00:13:15,748
+Speaker SPEAKER_00: I want to talk about subjective experience.
+
+150
+00:13:16,128 --> 00:13:21,072
+Speaker SPEAKER_00: It's just a bit less controversial because it doesn't have the kind of self-reflexive aspect of consciousness.
+
+151
+00:13:21,947 --> 00:13:35,168
+Speaker SPEAKER_00: So, if we analyze what it means when I say, I see little pink elephants floating in front of me, what's really going on is I'm trying to tell you what my perceptual system is telling me when my perceptual system's going wrong.
+
+152
+00:13:36,150 --> 00:13:38,995
+Speaker SPEAKER_00: And it wouldn't be any use for me to tell you which neurons are firing.
+
+153
+00:13:40,291 --> 00:13:46,799
+Speaker SPEAKER_00: But what I can tell you is what would have to be out there in the world for my perceptual system to be working correctly.
+
+154
+00:13:47,620 --> 00:13:58,636
+Speaker SPEAKER_00: And so when I say I see the little pink elephants floating in front of me, you can translate that into, if there were little pink elephants out there in the world, my perceptual system would be working properly.
+
+155
+00:13:58,616 --> 00:14:04,490
+Speaker SPEAKER_00: And notice the last thing I said didn't confine the phrase subjective experience, but it explains what a subjective experience is.
+
+156
+00:14:05,273 --> 00:14:12,028
+Speaker SPEAKER_00: It's a hypothetical state of the world that allows me to convey to you what my perceptual system's telling me.
+
+157
+00:14:13,051 --> 00:14:14,494
+Speaker SPEAKER_00: So now let's do a chatbot.
+
+158
+00:14:14,614 --> 00:14:16,238
+Speaker SPEAKER_00: Oh, well, Ray wants to say something.
+
+159
+00:14:16,639 --> 00:14:31,828
+Speaker SPEAKER_01: Well, you have to be mindful of consciousness, because if you hurt somebody who we believe is conscious, you could be liable for that, and you'd be very guilty about it.
+
+160
+00:14:31,869 --> 00:14:35,796
+Speaker SPEAKER_01: If you hurt GPT-4,
+
+161
+00:14:35,775 --> 00:14:38,041
+Speaker SPEAKER_01: you may have a different view of it.
+
+162
+00:14:39,062 --> 00:14:44,355
+Speaker SPEAKER_01: And probably no one would really take you to account aside from its financial value.
+
+163
+00:14:45,115 --> 00:14:48,423
+Speaker SPEAKER_01: So we really have to be mindful of consciousness.
+
+164
+00:14:48,484 --> 00:14:52,692
+Speaker SPEAKER_01: It's extremely important for us to exist as humans.
+
+165
+00:14:52,712 --> 00:14:56,080
+Speaker SPEAKER_00: I agree, but I'm trying to change people's notion of what it is.
+
+166
+00:14:56,059 --> 00:14:57,863
+Speaker SPEAKER_00: particularly what subjective experiences.
+
+167
+00:14:57,962 --> 00:15:06,033
+Speaker SPEAKER_00: I don't think we can talk about consciousness until we get straight about this idea of an inner theater that we experience, which I think is a huge mistake.
+
+168
+00:15:06,735 --> 00:15:17,450
+Speaker SPEAKER_00: So let me just carry on with what I was saying and tell you, I described to you a chatbot having a subjective experience in just the same way as we have subjective experience.
+
+169
+00:15:18,171 --> 00:15:25,341
+Speaker SPEAKER_00: So suppose I have a chatbot and it's got a camera and it's got a robot arm and it speaks obviously, and it's been trained up.
+
+170
+00:15:25,995 --> 00:15:30,445
+Speaker SPEAKER_00: If I put an object in front of it and tell it to point at the object, it'll point straight at the object, that's fine.
+
+171
+00:15:31,187 --> 00:15:35,134
+Speaker SPEAKER_00: Now I put a prism in front of its lens, so I've messed with its perceptual system.
+
+172
+00:15:36,157 --> 00:15:43,633
+Speaker SPEAKER_00: And now I put an object in front of it and tell it to point at the object, and it points off to one side because the prism bent the light rays.
+
+173
+00:15:43,899 --> 00:15:47,065
+Speaker SPEAKER_00: And so I say to the chatbot, no, that's not where the object is.
+
+174
+00:15:47,164 --> 00:15:48,447
+Speaker SPEAKER_00: The object's straight in front of you.
+
+175
+00:15:48,827 --> 00:15:50,510
+Speaker SPEAKER_00: And the chatbot says, oh, I see.
+
+176
+00:15:50,530 --> 00:15:52,134
+Speaker SPEAKER_00: You put a prism in front of my lens.
+
+177
+00:15:52,695 --> 00:15:54,457
+Speaker SPEAKER_00: So the object's actually straight in front of me.
+
+178
+00:15:54,717 --> 00:15:57,863
+Speaker SPEAKER_00: But I had the subjective experience that it was off to one side.
+
+179
+00:15:58,884 --> 00:16:04,794
+Speaker SPEAKER_00: And I think if the chatbot says that, it's using the word subjective experience in exactly the same way you would use them.
+
+180
+00:16:05,618 --> 00:16:16,337
+Speaker SPEAKER_00: So the key to all this is to think about how we use words and try and separate how we actually use words from the model we've constructed of what they mean.
+
+181
+00:16:16,399 --> 00:16:20,466
+Speaker SPEAKER_00: And the model we've constructed of what they mean is hopelessly wrong.
+
+182
+00:16:20,505 --> 00:16:21,889
+Speaker SPEAKER_00: It's this inner theater model.
+
+183
+00:16:22,341 --> 00:16:44,163
+Speaker SPEAKER_02: I want to take this one step further, which is at what point do these AIs start to have rights that they should not be shut down, that they're a unique entity and will make an argument for some level of independence and continuity?
+
+184
+00:16:44,227 --> 00:16:48,296
+Speaker SPEAKER_01: But there is one difference, which is you can recreate it.
+
+185
+00:16:49,158 --> 00:16:58,677
+Speaker SPEAKER_01: I can go and destroy some chatbot, and because it's all electronic, we've got all of its...
+
+186
+00:16:59,956 --> 00:17:04,403
+Speaker SPEAKER_01: all of its firings and so on, and we can recreate it exactly as it was.
+
+187
+00:17:05,243 --> 00:17:06,506
+Speaker SPEAKER_01: We can't do that with humans.
+
+188
+00:17:06,625 --> 00:17:11,894
+Speaker SPEAKER_01: We will be able to do that if we can actually understand what's going on in our minds.
+
+189
+00:17:12,013 --> 00:17:24,192
+Speaker SPEAKER_02: So if we map the human, the 100 billion neurons and 100 trillion synaptic connections, and then I summarily destroy you because it's fine, because I can recreate you, that's okay then?
+
+190
+00:17:26,145 --> 00:17:27,287
+Speaker SPEAKER_00: Let me say something about that.
+
+191
+00:17:27,386 --> 00:17:28,608
+Speaker SPEAKER_00: There's a difference here.
+
+192
+00:17:29,088 --> 00:17:39,640
+Speaker SPEAKER_00: I agree with Ray about these digital intelligences are immortal in the sense that if you save the weights, you can then make new hardware and run exactly the same neural net on the new hardware.
+
+193
+00:17:40,300 --> 00:17:43,324
+Speaker SPEAKER_00: And it's because they're digital, you can do exactly the same thing.
+
+194
+00:17:43,704 --> 00:17:45,586
+Speaker SPEAKER_00: That's also why they can share knowledge so well.
+
+195
+00:17:45,906 --> 00:17:49,790
+Speaker SPEAKER_00: If you have different copies of the same model, they can share gradients.
+
+196
+00:17:49,770 --> 00:17:51,994
+Speaker SPEAKER_00: But the brain is largely analog.
+
+197
+00:17:52,695 --> 00:17:54,578
+Speaker SPEAKER_00: It's one bit digital for neurons.
+
+198
+00:17:54,599 --> 00:17:55,781
+Speaker SPEAKER_00: They fire or they don't fire.
+
+199
+00:17:56,281 --> 00:18:02,133
+Speaker SPEAKER_00: But the way a neuron computes the total input is analog and that means I don't think you can reproduce it.
+
+200
+00:18:02,173 --> 00:18:04,596
+Speaker SPEAKER_00: So I think we're mortal and we're intrinsically mortal.
+
+201
+00:18:05,499 --> 00:18:09,045
+Speaker SPEAKER_01: Well I disagree that you can't recreate analog
+
+202
+00:18:09,193 --> 00:18:10,234
+Speaker SPEAKER_01: realities.
+
+203
+00:18:10,276 --> 00:18:12,679
+Speaker SPEAKER_01: We do that all the time.
+
+204
+00:18:13,220 --> 00:18:17,846
+Speaker SPEAKER_00: I don't think you can recreate them really accurately.
+
+205
+00:18:17,946 --> 00:18:28,721
+Speaker SPEAKER_00: If the precise timing of synapses and so on is all analog, I think it'll be almost impossible to do a faithful reconstruction of that.
+
+206
+00:18:28,701 --> 00:18:31,003
+Speaker SPEAKER_02: Let's agree on an approximation.
+
+207
+00:18:31,384 --> 00:18:37,130
+Speaker SPEAKER_02: Both of you have been at the center of this extraordinary last few years.
+
+208
+00:18:37,750 --> 00:18:41,255
+Speaker SPEAKER_02: Can I ask you, is it moving faster than you expected it to?
+
+209
+00:18:44,178 --> 00:18:45,798
+Speaker SPEAKER_01: How does it feel to you?
+
+210
+00:18:46,960 --> 00:18:48,442
+Speaker SPEAKER_01: It feels like a few years.
+
+211
+00:18:48,461 --> 00:18:50,804
+Speaker SPEAKER_01: I mean, I made a prediction in 1999.
+
+212
+00:18:51,404 --> 00:18:53,946
+Speaker SPEAKER_01: It feels like we're two or three years ahead of that.
+
+213
+00:18:54,768 --> 00:18:56,309
+Speaker SPEAKER_01: So it's still pretty close.
+
+214
+00:18:57,070 --> 00:18:58,471
+Speaker SPEAKER_01: Jeffrey, how about you?
+
+215
+00:18:59,026 --> 00:19:04,699
+Speaker SPEAKER_00: I think for everybody except Ray, it's moving faster than we expected.
+
+216
+00:19:06,755 --> 00:19:14,884
+Speaker SPEAKER_02: Did you know that your microbiome is composed of trillions of bacteria, viruses, and microbes, and that they play a critical role in your health?
+
+217
+00:19:14,943 --> 00:19:29,961
+Speaker SPEAKER_02: Research has increasingly shown that microbiomes impact not just digestion, but a wide range of health conditions, including digestive disorders from IBS to Crohn's disease, metabolic disorders from obesity to type 2 diabetes,
+
+218
+00:19:29,941 --> 00:19:38,557
+Speaker SPEAKER_02: autoimmune disease like rheumatoid arthritis and multiple sclerosis, mental health conditions like depression and anxiety, and cardiovascular disease.
+
+219
+00:19:39,058 --> 00:19:43,848
+Speaker SPEAKER_02: Viome has a product I've been using for years called Full Body Intelligence
+
+220
+00:19:44,268 --> 00:19:49,916
+Speaker SPEAKER_02: which collects just a few drops of your blood, saliva, and stool, and can tell you so much about your health.
+
+221
+00:19:50,457 --> 00:20:05,279
+Speaker SPEAKER_02: They've tested over 700,000 individuals and use their AI models to deliver key critical guidelines and insights about their members' health, like what foods you should eat, what foods you shouldn't eat, what supplements or probiotics to take.
+
+222
+00:20:05,615 --> 00:20:09,078
+Speaker SPEAKER_02: as well as your biological age and other deep health insights.
+
+223
+00:20:09,519 --> 00:20:15,385
+Speaker SPEAKER_02: And as a result of the recommendations that Vyom has made to their members, the results have been stellar.
+
+224
+00:20:15,926 --> 00:20:27,960
+Speaker SPEAKER_02: As reported in the American Journal of Lifestyle Medicine, after just six months, members reported the following, a 36% reduction in depression, a 40% reduction in anxiety,
+
+225
+00:20:27,940 --> 00:20:33,232
+Speaker SPEAKER_02: a 30% reduction in diabetes and a 48% reduction in IBS.
+
+226
+00:20:33,553 --> 00:20:35,458
+Speaker SPEAKER_02: Listen, I've been using Viome for three years.
+
+227
+00:20:35,919 --> 00:20:40,250
+Speaker SPEAKER_02: I know that my oral and gut health is absolutely critical to me.
+
+228
+00:20:40,711 --> 00:20:41,291
+Speaker SPEAKER_02: It's one of my
+
+229
+00:20:41,525 --> 00:20:43,607
+Speaker SPEAKER_02: personal top areas of focus.
+
+230
+00:20:43,847 --> 00:20:48,234
+Speaker SPEAKER_02: Best of all, Viome is affordable, which is part of my mission to democratize healthcare.
+
+231
+00:20:48,796 --> 00:20:55,766
+Speaker SPEAKER_02: If you want to join me on this journey and get 20% off the full body intelligence test, go to Viome.com slash Peter.
+
+232
+00:20:56,105 --> 00:20:58,849
+Speaker SPEAKER_02: When it comes to your health, knowledge is power.
+
+233
+00:20:59,411 --> 00:21:02,115
+Speaker SPEAKER_02: Again, that's Viome.com slash Peter.
+
+234
+00:21:02,769 --> 00:21:20,875
+Speaker SPEAKER_02: Given the role that you had in developing the neural networks, back propagation and all, is there a next great leap in these models in AI technology that you imagine will move this a thousand times farther?
+
+235
+00:21:22,237 --> 00:21:25,842
+Speaker SPEAKER_00: Not that I know, but Ray may have different thoughts.
+
+236
+00:21:26,817 --> 00:21:32,804
+Speaker SPEAKER_01: Well, we can use software to gain more advantage in the hardware.
+
+237
+00:21:33,304 --> 00:21:41,093
+Speaker SPEAKER_01: So we're not just limited to the chart you showed before, because we can use software to make it more effective.
+
+238
+00:21:42,095 --> 00:21:43,797
+Speaker SPEAKER_01: And we've done that already.
+
+239
+00:21:46,019 --> 00:21:51,204
+Speaker SPEAKER_01: Chatbots are coming out that get more value per compute.
+
+240
+00:21:51,926 --> 00:21:57,381
+Speaker SPEAKER_01: And I believe that's probably a bit more we can do in that.
+
+241
+00:21:57,596 --> 00:22:05,246
+Speaker SPEAKER_02: You know, I define a singularity, Ray, as a point beyond which I can't predict what happens next.
+
+242
+00:22:05,266 --> 00:22:05,645
+Speaker SPEAKER_02: Right.
+
+243
+00:22:05,665 --> 00:22:07,067
+Speaker SPEAKER_01: That's why we use the word singularity.
+
+244
+00:22:07,087 --> 00:22:17,339
+Speaker SPEAKER_02: But when you talk about the singularity in 2045, I don't know anybody who can tell me what's going to happen past, you know, 2026, let alone 2040 or 2045.
+
+245
+00:22:17,440 --> 00:22:21,785
+Speaker SPEAKER_02: So I wanted to ask you this for a while.
+
+246
+00:22:22,365 --> 00:22:26,170
+Speaker SPEAKER_02: Why did you put that time, if we have
+
+247
+00:22:26,638 --> 00:22:30,287
+Speaker SPEAKER_02: Digital superintelligence a billion times more advanced than human.
+
+248
+00:22:30,646 --> 00:22:35,637
+Speaker SPEAKER_01: In 2026 you may not be able to understand everything going on, but we can understand it.
+
+249
+00:22:36,138 --> 00:22:44,496
+Speaker SPEAKER_01: Maybe it's like a hundred humans, but that's not beyond what we can comprehend.
+
+250
+00:22:44,678 --> 00:22:50,684
+Speaker SPEAKER_01: 2045 it'll be like a million humans, and we can't begin to understand that.
+
+251
+00:22:50,765 --> 00:22:59,074
+Speaker SPEAKER_01: So approximately at that time, we borrowed this phrase from physics and called it a singularity.
+
+252
+00:23:01,276 --> 00:23:07,462
+Speaker SPEAKER_02: Jeff, how far out are you able to see the advances in the AI world?
+
+253
+00:23:08,809 --> 00:23:09,290
+Speaker SPEAKER_02: What's your-?
+
+254
+00:23:09,351 --> 00:23:17,884
+Speaker SPEAKER_00: So my current opinion is we'll get superintelligence with a probability of 50% in between five and 20 years.
+
+255
+00:23:18,724 --> 00:23:23,612
+Speaker SPEAKER_00: So I think that's a little slower than some people think, a little faster than other people think.
+
+256
+00:23:24,232 --> 00:23:30,682
+Speaker SPEAKER_00: It more or less fits in with Ray's perspective from a long time ago, which surprises me.
+
+257
+00:23:32,384 --> 00:23:34,866
+Speaker SPEAKER_00: But I think there's huge uncertainty here.
+
+258
+00:23:34,886 --> 00:23:38,090
+Speaker SPEAKER_00: I think it's still conceivable we'll hit some kind of block.
+
+259
+00:23:38,672 --> 00:23:40,213
+Speaker SPEAKER_00: But I don't actually believe that.
+
+260
+00:23:40,773 --> 00:23:43,237
+Speaker SPEAKER_00: If you look at the progress recently, it's been so fast.
+
+261
+00:23:44,199 --> 00:23:50,987
+Speaker SPEAKER_00: And even without any new scientific breakthroughs, just by scaling things up, we'll make things a lot more intelligent.
+
+262
+00:23:51,386 --> 00:23:52,929
+Speaker SPEAKER_00: And there will be scientific breakthroughs.
+
+263
+00:23:52,969 --> 00:23:55,071
+Speaker SPEAKER_00: We're going to get more things like transformers.
+
+264
+00:23:55,471 --> 00:23:59,978
+Speaker SPEAKER_00: Transformers made a significant difference in 2017.
+
+265
+00:24:00,650 --> 00:24:02,172
+Speaker SPEAKER_00: And we'll get more things like that.
+
+266
+00:24:03,193 --> 00:24:08,583
+Speaker SPEAKER_00: So I'm fairly convinced we're going to get superintelligence.
+
+267
+00:24:09,064 --> 00:24:12,729
+Speaker SPEAKER_00: Maybe not in 20 years, but certainly it's going to be in less than 100 years.
+
+268
+00:24:13,109 --> 00:24:18,117
+Speaker SPEAKER_02: So, you know, Elon is not known for his time accuracy on predictions.
+
+269
+00:24:18,519 --> 00:24:31,305
+Speaker SPEAKER_02: But he did say that he expected, call it AGI in 2025, and that by 2029 AI would be equivalent to all humans.
+
+270
+00:24:32,347 --> 00:24:33,609
+Speaker SPEAKER_02: That's just a fallacy in your mind?
+
+271
+00:24:35,851 --> 00:24:37,333
+Speaker SPEAKER_00: I think that's ambitious.
+
+272
+00:24:37,554 --> 00:24:39,476
+Speaker SPEAKER_00: Like I say, there's a lot of uncertainty here.
+
+273
+00:24:39,536 --> 00:24:46,286
+Speaker SPEAKER_00: It's conceivable he's right, but I would be very surprised by that.
+
+274
+00:24:46,306 --> 00:24:50,673
+Speaker SPEAKER_01: I'm not saying it's going to be equivalent to all humans in one machine.
+
+275
+00:24:50,712 --> 00:24:56,981
+Speaker SPEAKER_01: It'll be equivalent to a million humans.
+
+276
+00:24:57,468 --> 00:25:00,071
+Speaker SPEAKER_01: And that's still hard to comprehend.
+
+277
+00:25:00,653 --> 00:25:03,739
+Speaker SPEAKER_02: So we're here to debate a topic.
+
+278
+00:25:04,199 --> 00:25:12,113
+Speaker SPEAKER_02: I'm trying to find a debate topic here, Jeff and Ray, that would be meaningful for people to really stop and think about this and really own their answers.
+
+279
+00:25:12,993 --> 00:25:14,195
+Speaker SPEAKER_02: Because we hear about it.
+
+280
+00:25:14,256 --> 00:25:22,529
+Speaker SPEAKER_02: I think this is the most important conversation to have in the dinner table, in your boardroom, in the halls of Congress, in your national leadership.
+
+281
+00:25:22,509 --> 00:25:31,762
+Speaker SPEAKER_02: And, you know, talking about AGI or, you know, human-level intelligence is one thing, but talking about digital superintelligence, right?
+
+282
+00:25:31,782 --> 00:25:43,739
+Speaker SPEAKER_02: We're going to hear next from Mo Godot, and we'll talk about what happens when your AI progeny are a billion times more intelligent than you.
+
+283
+00:25:45,501 --> 00:25:48,045
+Speaker SPEAKER_02: Things could end up
+
+284
+00:25:48,025 --> 00:25:52,453
+Speaker SPEAKER_02: very rapidly in a very different direction than you expected them to go.
+
+285
+00:25:52,473 --> 00:25:53,917
+Speaker SPEAKER_02: They can diverge, right?
+
+286
+00:25:53,938 --> 00:25:56,784
+Speaker SPEAKER_02: The speed can cause great divergence very rapidly.
+
+287
+00:25:57,726 --> 00:26:01,713
+Speaker SPEAKER_02: I'm curious, how do you think about this as the greatest threat and the greatest hope?
+
+288
+00:26:04,343 --> 00:26:09,228
+Speaker SPEAKER_01: I mean, first of all, that's why we're calling it a singularity, because we don't... We don't know.
+
+289
+00:26:09,548 --> 00:26:14,472
+Speaker SPEAKER_01: We don't really know, but... And I think it is a great hope.
+
+290
+00:26:14,773 --> 00:26:16,275
+Speaker SPEAKER_01: It's moving very, very quickly.
+
+291
+00:26:16,295 --> 00:26:22,181
+Speaker SPEAKER_01: Nobody knows the answer to the kind of questions that came up in the last presentation.
+
+292
+00:26:22,221 --> 00:26:27,286
+Speaker SPEAKER_01: But things happen that are surprising.
+
+293
+00:26:27,326 --> 00:26:29,929
+Speaker SPEAKER_01: The fact that we've had no...
+
+294
+00:26:30,027 --> 00:26:34,132
+Speaker SPEAKER_01: atomic weapons go off in the last 80 years, it's pretty amazing.
+
+295
+00:26:34,172 --> 00:26:48,369
+Speaker SPEAKER_02: It is, but they're much easier to track, they're much more expensive to create, there are whole reasons why it's a million times easier to use a dystopian AI system versus an atomic weapon.
+
+296
+00:26:49,912 --> 00:26:50,313
+Speaker SPEAKER_01: Right?
+
+297
+00:26:50,413 --> 00:26:51,173
+Speaker SPEAKER_01: Yes and no.
+
+298
+00:26:51,654 --> 00:26:54,397
+Speaker SPEAKER_01: I mean, we've got
+
+299
+00:26:54,714 --> 00:26:57,542
+Speaker SPEAKER_01: I don't know, 10,000 of them or something.
+
+300
+00:26:57,643 --> 00:27:01,814
+Speaker SPEAKER_01: It's still pretty extraordinary and still very dangerous.
+
+301
+00:27:02,696 --> 00:27:07,509
+Speaker SPEAKER_01: And I think it's actually the greatest danger and it has nothing to do with AI.
+
+302
+00:27:09,211 --> 00:27:22,282
+Speaker SPEAKER_00: But I think if you imagine that people had open sourced the technology, and any graduate student, if he could get a hands on a few GPUs, could make atomic bombs, that would be very scary.
+
+303
+00:27:22,303 --> 00:27:24,585
+Speaker SPEAKER_00: So they didn't really open source nuclear weapons.
+
+304
+00:27:24,605 --> 00:27:28,469
+Speaker SPEAKER_00: There's a limited number of people who can construct them and deploy them.
+
+305
+00:27:29,450 --> 00:27:35,095
+Speaker SPEAKER_00: And people are now open sourcing these large language models, which are really not just language models.
+
+306
+00:27:35,915 --> 00:27:37,277
+Speaker SPEAKER_00: I think that's very dangerous.
+
+307
+00:27:38,944 --> 00:27:43,853
+Speaker SPEAKER_02: So that's an interesting question to take for our last two minutes here.
+
+308
+00:27:44,394 --> 00:27:50,502
+Speaker SPEAKER_02: There is a movement right now to say you must open source the models.
+
+309
+00:27:51,023 --> 00:27:59,938
+Speaker SPEAKER_02: And we've seen Meta, we've seen the open source movement, we've seen Elon talk about Grok going open source.
+
+310
+00:28:00,618 --> 00:28:04,345
+Speaker SPEAKER_02: Are you saying that these should not be open source, Jeff?
+
+311
+00:28:05,894 --> 00:28:11,301
+Speaker SPEAKER_00: Well, once you've got the weights, you can fine-tune them to do bad things, and it doesn't cost that much.
+
+312
+00:28:11,702 --> 00:28:18,593
+Speaker SPEAKER_00: To train a foundation model, maybe you need $10 million, maybe $100 million, but a small gang of criminals can't do it.
+
+313
+00:28:18,712 --> 00:28:23,701
+Speaker SPEAKER_00: To fine-tune an open-source model is quite easy.
+
+314
+00:28:24,201 --> 00:28:26,505
+Speaker SPEAKER_00: You don't need that much resources.
+
+315
+00:28:26,765 --> 00:28:28,548
+Speaker SPEAKER_00: Probably you can do it for a million dollars.
+
+316
+00:28:29,229 --> 00:28:33,234
+Speaker SPEAKER_00: And that means they're going to be used for terrible things, and they're very powerful things.
+
+317
+00:28:33,686 --> 00:28:39,407
+Speaker SPEAKER_01: Well, we can also avoid these dangers with intelligence we get from the same models.
+
+318
+00:28:40,151 --> 00:28:44,085
+Speaker SPEAKER_02: Yeah, the AI white hat versus black hat approach.
+
+319
+00:28:44,638 --> 00:28:52,392
+Speaker SPEAKER_00: Yes, I had this argument with Jan, and Jan's view is the white hats will always have more resources than the bad guys.
+
+320
+00:28:53,755 --> 00:28:58,442
+Speaker SPEAKER_00: Of course, Jan thinks Mark Zuckerberg's a good guy, so we don't necessarily agree on that.
+
+321
+00:29:02,910 --> 00:29:07,557
+Speaker SPEAKER_00: I just think there's huge uncertainties here and we ought to be cautious.
+
+322
+00:29:08,432 --> 00:29:11,480
+Speaker SPEAKER_00: And open sourcing these big models is not caution.
+
+323
+00:29:11,500 --> 00:29:17,695
+Speaker SPEAKER_02: All right, Jeff and Ray, thank you so much for your guidance, your wisdom.
+
+324
+00:29:18,317 --> 00:29:21,345
+Speaker SPEAKER_02: Ladies and gentlemen, let's give it up for Ray Kurzweil and Geoffrey Hinton.
+

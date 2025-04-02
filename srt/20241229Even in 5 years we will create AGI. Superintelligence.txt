@@ -1,0 +1,392 @@
+1
+00:00:01,110 --> 00:00:02,753
+Speaker SPEAKER_05: We are going to get superintelligence.
+
+2
+00:00:03,193 --> 00:00:07,841
+Speaker SPEAKER_05: It's not hype and it's not designed to distract from other problems with AI.
+
+3
+00:00:08,340 --> 00:00:10,263
+Speaker SPEAKER_05: It's what we have believed for a long time.
+
+4
+00:00:10,523 --> 00:00:14,050
+Speaker SPEAKER_05: I think between 5 and 20 years we'll get something like superintelligence.
+
+5
+00:00:14,589 --> 00:00:19,236
+Speaker SPEAKER_00: AI will be one of the most powerful, if not the most powerful technologies humanity will ever invent.
+
+6
+00:00:19,718 --> 00:00:23,722
+Speaker SPEAKER_00: We need to take those risks very seriously and there isn't a lot of time to do the research.
+
+7
+00:00:23,803 --> 00:00:25,565
+Speaker SPEAKER_00: Do you regret something?
+
+8
+00:00:30,321 --> 00:00:35,427
+Speaker SPEAKER_01: We are in a very special place, the building of the Royal Swedish Academy of Sciences.
+
+9
+00:00:36,530 --> 00:00:45,200
+Speaker SPEAKER_01: This is where, in accordance with Alfred Nobel's will, the Nobel Prizes in physics, chemistry and economics are awarded each year.
+
+10
+00:00:46,081 --> 00:00:53,789
+Speaker SPEAKER_01: We are here to ask a question to Geoffrey Hinton, the father of artificial intelligence and Nobel Prize laureate in physics.
+
+11
+00:00:54,752 --> 00:00:56,734
+Speaker SPEAKER_01: Does he regret what he has created?
+
+12
+00:00:57,118 --> 00:01:01,396
+Speaker SPEAKER_04: Welcome to this press conference and the Royal Swedish Academy of Sciences.
+
+13
+00:01:02,240 --> 00:01:05,474
+Speaker SPEAKER_04: And of course, a special welcome to our laureates.
+
+14
+00:01:06,164 --> 00:01:07,546
+Speaker SPEAKER_04: My name is Hans Ellergren.
+
+15
+00:01:07,585 --> 00:01:09,668
+Speaker SPEAKER_04: I'm the Secretary General of the Academy.
+
+16
+00:01:09,870 --> 00:01:11,052
+Speaker SPEAKER_04: I open the press conference.
+
+17
+00:01:11,992 --> 00:01:13,275
+Speaker SPEAKER_04: Who would like to start?
+
+18
+00:01:13,295 --> 00:01:13,635
+Speaker SPEAKER_04: Please.
+
+19
+00:01:14,656 --> 00:01:17,981
+Speaker SPEAKER_06: My first question is to Professor Geoffrey Hinton.
+
+20
+00:01:18,001 --> 00:01:21,487
+Speaker SPEAKER_06: You are the father of artificial neutral networks.
+
+21
+00:01:21,688 --> 00:01:27,257
+Speaker SPEAKER_06: When you look at AI development today, do you regret something?
+
+22
+00:01:28,018 --> 00:01:32,745
+Speaker SPEAKER_06: If you could turn back time, would you do this?
+
+23
+00:01:34,091 --> 00:01:35,274
+Speaker SPEAKER_05: There's two kinds of regret.
+
+24
+00:01:35,313 --> 00:01:39,739
+Speaker SPEAKER_05: There's guilty regret when you did something and at the time you knew you shouldn't have done it.
+
+25
+00:01:39,760 --> 00:01:41,402
+Speaker SPEAKER_05: I don't have any of that.
+
+26
+00:01:42,022 --> 00:01:44,706
+Speaker SPEAKER_05: If in the same circumstances, I would do the same again.
+
+27
+00:01:45,367 --> 00:01:52,117
+Speaker SPEAKER_05: However, I think it might have been unfortunate in that we're going to get superintelligence faster than I thought.
+
+28
+00:01:52,677 --> 00:01:55,021
+Speaker SPEAKER_05: And I wish I'd thought about safety earlier.
+
+29
+00:01:55,542 --> 00:02:01,450
+Speaker SPEAKER_06: And my second question to Professor Geoffrey Hinton and Demis Hassabis, if do you
+
+30
+00:02:01,801 --> 00:02:15,205
+Speaker SPEAKER_06: deeply believe that something like a superhuman AI exists if we ever achieve this level or it's the marketing tick of big tech and huge companies.
+
+31
+00:02:15,225 --> 00:02:18,872
+Speaker SPEAKER_05: I think both Demis and I believe we are going to get superintelligence.
+
+32
+00:02:18,893 --> 00:02:20,215
+Speaker SPEAKER_05: It's not hype.
+
+33
+00:02:20,194 --> 00:02:23,519
+Speaker SPEAKER_05: And it's not designed to distract from other problems with AI.
+
+34
+00:02:24,020 --> 00:02:25,923
+Speaker SPEAKER_05: It's what we have believed for a long time.
+
+35
+00:02:25,962 --> 00:02:33,491
+Speaker SPEAKER_05: Now, I thought it would be much further away, but the speed of recent developments means I think it's going to be quite soon.
+
+36
+00:02:34,193 --> 00:02:40,521
+Speaker SPEAKER_05: I think between 5 and 20 years, I think Demis thinks in about 10 years, we'll get something like superintelligence.
+
+37
+00:02:40,542 --> 00:02:43,806
+Speaker SPEAKER_05: And we have to worry seriously about how we stay in control then.
+
+38
+00:02:43,937 --> 00:02:47,364
+Speaker SPEAKER_00: I agree with what Professor Hinton's just said.
+
+39
+00:02:47,604 --> 00:03:01,268
+Speaker SPEAKER_00: For us, actually, starting at DeepMind back in 2010, we did sort of think through what would happen if we built these kinds of intelligences.
+
+40
+00:03:02,028 --> 00:03:04,073
+Speaker SPEAKER_00: Of course, my passion is always to
+
+41
+00:03:04,052 --> 00:03:19,108
+Speaker SPEAKER_00: build these types of tools to help us with scientific discovery, as we see today, and I think we'll get amazing things out of that, cures for diseases, helping with energy, climate, a lot of the big challenges we have in front of us as humanity today.
+
+42
+00:03:19,087 --> 00:03:29,768
+Speaker SPEAKER_00: We've always been cognizant as well of the risks that come with any powerful general purpose technology and I think AI will be one of the most powerful, if not the most powerful technologies humanity will ever invent.
+
+43
+00:03:30,269 --> 00:03:35,258
+Speaker SPEAKER_00: So we need to take those risks very seriously and there isn't a lot of time to do the research.
+
+44
+00:03:35,237 --> 00:03:41,228
+Speaker SPEAKER_00: and are required to think about things like interpreting the systems and controlling those systems.
+
+45
+00:03:41,548 --> 00:03:54,528
+Speaker SPEAKER_00: But it's also a societal question about, not just a technological question, about what do we want to use these systems for, how do we want to deploy them, and making sure that all of humanity benefits from what these systems can do.
+
+46
+00:03:54,677 --> 00:04:11,538
+Speaker SPEAKER_01: During the conference, this particular question was also raised, whether regulation today is capable of halting the development of artificial intelligence, and how all of this relates to the ubiquitous interests of big tech companies, including those driven by profit.
+
+47
+00:04:11,519 --> 00:04:19,526
+Speaker SPEAKER_05: My point to make first is that one of the shorter-term dangers of AI is the development of lethal autonomous weapons.
+
+48
+00:04:20,226 --> 00:04:22,149
+Speaker SPEAKER_05: And there isn't going to be any regulation there.
+
+49
+00:04:22,670 --> 00:04:30,737
+Speaker SPEAKER_05: If you look at the European regulations, for example, they have a specific clause in them that says none of these regulations apply to military uses of AI.
+
+50
+00:04:31,398 --> 00:04:36,002
+Speaker SPEAKER_05: So governments are unwilling to regulate themselves when it comes to lethal autonomous weapons.
+
+51
+00:04:36,382 --> 00:04:40,766
+Speaker SPEAKER_05: And there is an arms race going on between all the major arms suppliers.
+
+52
+00:04:40,747 --> 00:04:47,988
+Speaker SPEAKER_05: like the United States, China, Russia, Britain, Israel, and possibly even Sweden, though I don't know.
+
+53
+00:04:50,062 --> 00:05:00,055
+Speaker SPEAKER_00: I think AI is a very important technology to regulate, but I think it's very important that we get the regulations right.
+
+54
+00:05:00,235 --> 00:05:06,322
+Speaker SPEAKER_00: And I think that's the hard thing at the moment is it's such a fast moving technology and evolving so quickly.
+
+55
+00:05:06,362 --> 00:05:12,069
+Speaker SPEAKER_00: What we would have discussed regulating a few years ago is not what we would be thinking about regulating now.
+
+56
+00:05:12,050 --> 00:05:29,992
+Speaker SPEAKER_00: So what I've been advising governments and civil society to do is to have fast and nimble regulations, maybe build on regulations in domains that we already have regulations in, like healthcare, transport and so on, and see how the technology develops and then quickly adapt to the way that's going.
+
+57
+00:05:30,273 --> 00:05:35,720
+Speaker SPEAKER_01: At the meeting, we also posed a question to Demis Hassabis, the creator of DeepMind.
+
+58
+00:05:36,100 --> 00:05:40,925
+Speaker SPEAKER_01: Do technologies today discriminate, and what can be done to ensure they don't?
+
+59
+00:05:41,040 --> 00:05:48,687
+Speaker SPEAKER_00: Yeah, look, so AI, today's modern AI does require a lot of resources, especially compute resources, and it's very expensive.
+
+60
+00:05:49,588 --> 00:06:01,160
+Speaker SPEAKER_00: But a lot of the models that are produced by that are then open source or very easily available off the shelf almost to almost anybody to use it, including a lot of the tools that we've built.
+
+61
+00:06:01,699 --> 00:06:06,704
+Speaker SPEAKER_00: So I think there's a lot of democratization of the technology.
+
+62
+00:06:06,805 --> 00:06:08,786
+Speaker SPEAKER_00: It's diffusing very, very quickly.
+
+63
+00:06:11,685 --> 00:06:19,314
+Speaker SPEAKER_02: AI is a really, really powerful tool, like a new type of microscope, like a new type of way of getting some information about the world.
+
+64
+00:06:19,374 --> 00:06:20,995
+Speaker SPEAKER_02: But we confirm it with experiments.
+
+65
+00:06:21,055 --> 00:06:24,718
+Speaker SPEAKER_02: We use it to do the same types of problems as we have before.
+
+66
+00:06:24,738 --> 00:06:27,923
+Speaker SPEAKER_02: We maybe even have new problems that look approachable now.
+
+67
+00:06:28,442 --> 00:06:37,052
+Speaker SPEAKER_02: And so I think we will see more and more AI pop up as a step within the process or even the main step within the process of the people that appear
+
+68
+00:06:37,031 --> 00:06:41,459
+Speaker SPEAKER_02: for future Nobels, but they won't get it because they brought AI to it, right?
+
+69
+00:06:41,519 --> 00:07:01,790
+Speaker SPEAKER_02: It's not just about funding, it's about the discovery, and they will get it because of the discovery, and hopefully even, and you know, the one I really look forward to is when someone is up here where, for example, using AlphaFold or another protein structure prediction tool was the decisive step in them discovering something new about how the cell works, and they're up there, up here for knowing how the cell works.
+
+70
+00:07:05,365 --> 00:07:14,944
+Speaker SPEAKER_03: AI is incredibly powerful, but it should be recognized that deep learning methods require really large and well-curated data sets.
+
+71
+00:07:15,264 --> 00:07:22,057
+Speaker SPEAKER_03: And the three of us really benefited from 60 years of hard work.
+
+72
+00:07:22,038 --> 00:07:29,846
+Speaker SPEAKER_03: by tens of thousands of scientists and tens of billions of dollars of investment in solving protein structures experimentally.
+
+73
+00:07:30,307 --> 00:07:36,293
+Speaker SPEAKER_03: And so in a sense, we had this incredible resource there that generations of scientists had put together.
+
+74
+00:07:36,874 --> 00:07:44,661
+Speaker SPEAKER_03: And that was why, well, that certainly made it possible to apply powerful deep learning methods to solve these problems.
+
+75
+00:07:45,103 --> 00:07:51,048
+Speaker SPEAKER_03: And so in terms of thinking about how AI and deep learning methods sort of progress,
+
+76
+00:07:51,028 --> 00:07:55,295
+Speaker SPEAKER_03: to, you know, to extend to science more generally.
+
+77
+00:07:56,476 --> 00:08:05,769
+Speaker SPEAKER_03: But I think part of that will depend on the extent to which datasets are available or generated of considerable richness in other areas.
+
+78
+00:08:05,829 --> 00:08:12,619
+Speaker SPEAKER_03: For example, as we move up the biological complexity ladder, there are, you know, obviously huge numbers of unanswered questions.
+
+79
+00:08:13,019 --> 00:08:15,163
+Speaker SPEAKER_03: There are datasets
+
+80
+00:08:15,142 --> 00:08:20,427
+Speaker SPEAKER_03: questions are, are the data sets really comparable in their depth and richness?
+
+81
+00:08:20,548 --> 00:08:21,990
+Speaker SPEAKER_03: And the answer is probably no.
+
+82
+00:08:22,029 --> 00:08:27,836
+Speaker SPEAKER_03: So I think it's not just the methods, it's also the data that is really important.
+
+83
+00:08:27,855 --> 00:08:32,880
+Speaker SPEAKER_01: After the conference, we met with the Nobel Prize laureate in chemistry, David Baker.
+
+84
+00:08:33,020 --> 00:08:41,590
+Speaker SPEAKER_01: You'll soon be able to watch the entire conversation on our channel, but for now, we're sharing a short excerpt focused on artificial intelligence.
+
+85
+00:08:42,851 --> 00:08:53,602
+Speaker SPEAKER_06: Do you think that this year's Nobel Prize is something like a tribute to the Nobel Committee for Artificial Intelligence, for technology?
+
+86
+00:08:53,623 --> 00:08:59,808
+Speaker SPEAKER_06: You are sharing your Nobel with co-founders of DeepMind that created the AI system.
+
+87
+00:09:00,649 --> 00:09:05,394
+Speaker SPEAKER_06: During a press conference, you were sitting next to the father of AI, Geoffrey Hinton.
+
+88
+00:09:05,815 --> 00:09:08,437
+Speaker SPEAKER_06: Do you think it's a tribute to that technology?
+
+89
+00:09:08,418 --> 00:09:20,655
+Speaker SPEAKER_03: Well, I think certainly the prizes this year are a testament to the big impact AI is having really across many domains.
+
+90
+00:09:21,418 --> 00:09:26,424
+Speaker SPEAKER_03: And in my particular area, what they cited was really work we had done before AI.
+
+91
+00:09:26,806 --> 00:09:33,254
+Speaker SPEAKER_03: But on the other hand, the design methods that we've been developing for the last four years are all AI methods.
+
+92
+00:09:33,495 --> 00:09:37,682
+Speaker SPEAKER_03: So I think it's certainly there was a common theme this year.
+
+93
+00:09:37,898 --> 00:09:42,441
+Speaker SPEAKER_06: in your work there is more humanity or more computer sciences.
+
+94
+00:09:42,927 --> 00:09:51,960
+Speaker SPEAKER_03: Well, I would say it's both, but it's really, you know, design is very much a human activity because you have to decide what problem you want to solve.
+
+95
+00:09:52,701 --> 00:10:06,779
+Speaker SPEAKER_03: And so people come to my group from all over the world, many from Europe, from, you know, from other places also, and they come with a passion for solving a particular problem, like doing something about climate change or curing disease.
+
+96
+00:10:07,621 --> 00:10:10,065
+Speaker SPEAKER_03: And so it's a very human thing because
+
+97
+00:10:11,243 --> 00:10:16,287
+Speaker SPEAKER_03: You know, what are the problems that need to be solved that you would like to design new proteins for?
+
+98
+00:10:16,548 --> 00:10:18,317
+Speaker SPEAKER_03: A computer isn't going to tell you that.
+

@@ -1,0 +1,1820 @@
+1
+00:00:12,686 --> 00:00:22,184
+Speaker SPEAKER_00: Hi everyone, and thank you so much for joining us and we have the great honor and we are very delighted to have Professor Jeff Hinton with us.
+
+2
+00:00:23,187 --> 00:00:27,355
+Speaker SPEAKER_00: Professor Hinton on behalf of Morocco AI community on all
+
+3
+00:00:27,672 --> 00:00:30,335
+Speaker SPEAKER_00: the Morocco AI scientist researchers.
+
+4
+00:00:30,657 --> 00:00:32,219
+Speaker SPEAKER_00: It is a great honor to have you.
+
+5
+00:00:32,478 --> 00:00:39,609
+Speaker SPEAKER_00: I'm sure Professor Hinton needs no introduction, but I have the great honor to read his bio and introduce him.
+
+6
+00:00:39,729 --> 00:00:49,545
+Speaker SPEAKER_00: Professor Geoffrey Hinton was one of the researchers who introduced the backpropagation algorithm and the first to use backpropagation for learning word embedding.
+
+7
+00:00:50,335 --> 00:00:55,604
+Speaker SPEAKER_00: Professor Hinton has invented several foundational deep learning techniques throughout his decades long career.
+
+8
+00:00:56,185 --> 00:01:07,066
+Speaker SPEAKER_00: His other contributions to neural network research include Boltzmann machines, distributed representations, time delay neural networks, mixture of experts, variational learning, and deep learning.
+
+9
+00:01:07,406 --> 00:01:08,427
+Speaker SPEAKER_00: And his research
+
+10
+00:01:08,864 --> 00:01:16,153
+Speaker SPEAKER_00: group in Toronto made major breakthroughs in deep learning, their revolutionized speech recognition and object classification.
+
+11
+00:01:16,855 --> 00:01:22,563
+Speaker SPEAKER_00: Professor Hinton received his PhD in AI from Edinburgh in 1978.
+
+12
+00:01:23,024 --> 00:01:29,572
+Speaker SPEAKER_00: After five years as a faculty member at Carnegie Mellon, he became a fellow at the Canadian Institute
+
+13
+00:01:29,552 --> 00:01:36,740
+Speaker SPEAKER_00: for Advanced Research and moved to the Department of Computer Science at the University of Toronto, where he is now an emeritus professor.
+
+14
+00:01:37,120 --> 00:01:42,947
+Speaker SPEAKER_00: He's also a VP Engineering Fellow at Google and Chief Scientific Advisor at the Vector Institute.
+
+15
+00:01:43,688 --> 00:01:48,072
+Speaker SPEAKER_00: Professor Hinton has many awards that I cannot list all.
+
+16
+00:01:48,093 --> 00:01:50,295
+Speaker SPEAKER_00: He's a fellow, I will just mention some.
+
+17
+00:01:50,314 --> 00:01:59,424
+Speaker SPEAKER_00: He's a fellow of the UK Royal Society and a former member of the US National Academy of Engineering and the American Academy of Arts and Sciences.
+
+18
+00:01:59,658 --> 00:02:14,717
+Speaker SPEAKER_00: His other awards include the David Rumelhart Prize, the Killam Prize for Engineering, and the IEEE Frank Rosenblatt Medal, the IEEE James Kirk Maxwell Gold Medal, and the Honda Prize, and of course, the Turin Award.
+
+19
+00:02:14,979 --> 00:02:17,861
+Speaker SPEAKER_00: It is our great honor to have you, Professor Hinton.
+
+20
+00:02:18,002 --> 00:02:19,264
+Speaker SPEAKER_00: Please, the floor is yours.
+
+21
+00:02:20,806 --> 00:02:22,087
+Speaker SPEAKER_01: Thank you for the introduction.
+
+22
+00:02:33,306 --> 00:02:38,995
+Speaker SPEAKER_02: Okay, the talk I'm gonna give today is very similar to the talk I gave at NeurIPS recently.
+
+23
+00:02:39,795 --> 00:02:41,618
+Speaker SPEAKER_02: It's about the forward-forward algorithm.
+
+24
+00:02:43,562 --> 00:02:52,875
+Speaker SPEAKER_02: And the motivation for it is to try and understand how the brain might be getting gradients.
+
+25
+00:02:52,895 --> 00:02:56,780
+Speaker SPEAKER_02: So we all know that backpropagation works extremely well.
+
+26
+00:02:57,622 --> 00:03:01,407
+Speaker SPEAKER_02: It creates things like chat GPT, which are extremely impressive.
+
+27
+00:03:01,639 --> 00:03:07,370
+Speaker SPEAKER_02: And that raises the question of, is the brain using backpropagation or is it using some other way to get gradients?
+
+28
+00:03:08,752 --> 00:03:18,889
+Speaker SPEAKER_02: And rather than focus on making bigger and bigger models that work better and better, for the last few years I've been focusing on how the brain is getting gradients.
+
+29
+00:03:19,240 --> 00:03:22,705
+Speaker SPEAKER_02: And to begin with, I felt the brain had to be using backprop because it works so well.
+
+30
+00:03:23,626 --> 00:03:32,098
+Speaker SPEAKER_02: And I've now come to the conclusion that it probably isn't using backprop and possibly it doesn't work as well as big systems that use backprop.
+
+31
+00:03:34,080 --> 00:03:39,627
+Speaker SPEAKER_02: There's no convincing evidence that there's backpropagation going on in cortex, backpropagation of derivatives.
+
+32
+00:03:40,687 --> 00:03:48,104
+Speaker SPEAKER_02: And obviously backpropagation through time is implausible if you're having to deal with real-time continuous input like video.
+
+33
+00:03:49,006 --> 00:03:52,334
+Speaker SPEAKER_02: There just isn't time for the brain to stop and backpropagate things backwards through time.
+
+34
+00:03:53,697 --> 00:03:55,741
+Speaker SPEAKER_02: If you look at the anatomy of the brain, it's all wrong.
+
+35
+00:03:56,643 --> 00:03:59,710
+Speaker SPEAKER_02: So between two cortical areas that are forward connections,
+
+36
+00:04:00,584 --> 00:04:02,788
+Speaker SPEAKER_02: and backward connections.
+
+37
+00:04:02,807 --> 00:04:11,723
+Speaker SPEAKER_02: So if you order the cortical areas by how close they are to the perceptual input, there's forward connections and backward connections, but the backward connections don't mirror the forward connections.
+
+38
+00:04:12,584 --> 00:04:14,507
+Speaker SPEAKER_02: Actually, what you find is little loops.
+
+39
+00:04:15,408 --> 00:04:18,052
+Speaker SPEAKER_02: So in the lower cortical area,
+
+40
+00:04:18,336 --> 00:04:21,899
+Speaker SPEAKER_02: if you have activity in a layer in the lower cortical area.
+
+41
+00:04:22,440 --> 00:04:30,247
+Speaker SPEAKER_02: It'll go through about six different synapses in the lower cortical area and the higher cortical area before the activity gets back to where it started.
+
+42
+00:04:31,108 --> 00:04:35,833
+Speaker SPEAKER_02: So it looks like it's set up for doing things like auto-encoding loops, but it's not set up for doing backprop.
+
+43
+00:04:38,074 --> 00:04:45,541
+Speaker SPEAKER_02: And the final argument is backprop requires an exact model of the computation you perform in the forward pass so that you can compute derivatives.
+
+44
+00:04:46,720 --> 00:05:00,797
+Speaker SPEAKER_02: And if you have low power analog hardware or noisy hardware like the brain where the input output properties of individual neurons drift with time, it's gonna be very hard to get the gradients.
+
+45
+00:05:01,978 --> 00:05:13,591
+Speaker SPEAKER_02: So we need an algorithm that is robust to having hardware that behaves in variable ways and ways that we don't properly, that we can't model properly.
+
+46
+00:05:14,372 --> 00:05:16,035
+Speaker SPEAKER_01: And that's what the forward-forward algorithm is.
+
+47
+00:05:19,019 --> 00:05:25,271
+Speaker SPEAKER_01: So the other thing we know about the brain is it's highly recurrent.
+
+48
+00:05:26,413 --> 00:05:34,769
+Speaker SPEAKER_02: So if you take, for example, a mouse visual cortex, mice aren't that visual, but they do have visual cortex.
+
+49
+00:05:35,228 --> 00:05:38,175
+Speaker SPEAKER_02: And if you look at what's called the visual cortex,
+
+50
+00:05:39,725 --> 00:05:42,949
+Speaker SPEAKER_02: When the mouse isn't behaving, the neurons are driven by vision.
+
+51
+00:05:43,329 --> 00:05:51,500
+Speaker SPEAKER_02: But as soon as the mouse starts behaving, then the neurons are driven more by the motor behavior of the mouse than by the vision.
+
+52
+00:05:53,562 --> 00:05:55,966
+Speaker SPEAKER_02: But everywhere in the brain, things are highly recurrent.
+
+53
+00:05:57,007 --> 00:06:02,475
+Speaker SPEAKER_02: So it doesn't fit at all with a pure feed-forward net.
+
+54
+00:06:03,281 --> 00:06:14,055
+Speaker SPEAKER_02: problem with backpropagation being how we work is that the big language models that we're getting now know much, much more than we do, and they use far, far fewer weights.
+
+55
+00:06:16,218 --> 00:06:21,163
+Speaker SPEAKER_02: So backprop is really optimized for squeezing a lot of knowledge into not many weights, like only a trillion.
+
+56
+00:06:22,987 --> 00:06:24,749
+Speaker SPEAKER_02: In the cortex, you've got the opposite problem.
+
+57
+00:06:25,750 --> 00:06:28,192
+Speaker SPEAKER_02: You have about 100 trillion connections,
+
+58
+00:06:28,915 --> 00:06:31,017
+Speaker SPEAKER_02: but you only live for about 10 to the nine seconds.
+
+59
+00:06:31,197 --> 00:06:33,420
+Speaker SPEAKER_02: Fortunately for me, that's about two times 10 to the nine.
+
+60
+00:06:34,242 --> 00:06:39,769
+Speaker SPEAKER_02: And so you don't actually have much experience compared with number of parameters you've got.
+
+61
+00:06:40,529 --> 00:06:45,956
+Speaker SPEAKER_02: Whereas these really big language models have seen many, many trillions of training examples.
+
+62
+00:06:46,838 --> 00:06:51,264
+Speaker SPEAKER_02: So that's sort of different ends of the spectrum.
+
+63
+00:06:51,363 --> 00:06:55,428
+Speaker SPEAKER_02: Backprop, you have a small net and a lot of data.
+
+64
+00:06:55,797 --> 00:06:58,942
+Speaker SPEAKER_02: And the cortex, you have a big net and not much data.
+
+65
+00:07:00,504 --> 00:07:02,867
+Speaker SPEAKER_01: So the requirements on the learning algorithm are somewhat different.
+
+66
+00:07:07,516 --> 00:07:10,079
+Speaker SPEAKER_01: So the forward-forward algorithm works like this.
+
+67
+00:07:12,423 --> 00:07:14,826
+Speaker SPEAKER_02: We're gonna train each layer of a feed-forward network.
+
+68
+00:07:15,588 --> 00:07:19,694
+Speaker SPEAKER_02: So to begin with, we'll have a feed-forward network, but we'll generalize it to recurrent networks later.
+
+69
+00:07:20,232 --> 00:07:43,973
+Speaker SPEAKER_02: You're gonna train each layer, have high goodness when it's presented with a positive data vector, that is one from the training set, and low goodness when it's presented with a negative vector, that is one that is not from the training set, and there's many ways to get these negative vectors, but the obvious way is to get the model to generate them itself, like in a Boltzmann machine where it generates its own negative data.
+
+70
+00:07:46,516 --> 00:07:49,699
+Speaker SPEAKER_02: We're gonna train the layers greedily one layer at a time,
+
+71
+00:07:49,814 --> 00:07:50,415
+Speaker SPEAKER_01: to begin with.
+
+72
+00:07:52,557 --> 00:07:56,822
+Speaker SPEAKER_01: And I'll describe some of the ways of generating negative data vectors.
+
+73
+00:08:01,026 --> 00:08:05,271
+Speaker SPEAKER_02: So each hidden layer is gonna be composed of ReLUs.
+
+74
+00:08:05,492 --> 00:08:10,137
+Speaker SPEAKER_02: It doesn't have to be ReLUs, you could use all sorts of things, but for now I'm using ReLUs, rectified linear units.
+
+75
+00:08:11,759 --> 00:08:17,627
+Speaker SPEAKER_02: And there's gonna be a goodness function, which to begin with will be equal to the sum of the squares of the activities.
+
+76
+00:08:18,298 --> 00:08:20,182
+Speaker SPEAKER_02: There are many possible goodness functions you can use.
+
+77
+00:08:21,062 --> 00:08:22,105
+Speaker SPEAKER_02: That's the most obvious one.
+
+78
+00:08:24,007 --> 00:08:37,149
+Speaker SPEAKER_02: And what each hidden layer is gonna do is try and compute the probability that the input is positive data, that is real data, as opposed to fake data, that is stuff generated by the model itself or generated some other way.
+
+79
+00:08:39,133 --> 00:08:43,158
+Speaker SPEAKER_02: And so it's gonna say the probability that this is positive data,
+
+80
+00:08:43,392 --> 00:08:48,399
+Speaker SPEAKER_02: is the logistic of the goodness of this whole layer minus some threshold.
+
+81
+00:08:49,441 --> 00:08:59,054
+Speaker SPEAKER_02: And so we want the goodness of a layer, that is the sum of the squares of the activities in the layer, to be high for positive data, and we want it to be low for negative data.
+
+82
+00:09:04,363 --> 00:09:07,947
+Speaker SPEAKER_01: Now, you can see how you could learn one layer like that,
+
+83
+00:09:08,738 --> 00:09:14,326
+Speaker SPEAKER_02: But obviously, after you've learned one layer, the activities in that layer will be high for positive data and low for negative data.
+
+84
+00:09:14,667 --> 00:09:16,529
+Speaker SPEAKER_02: So the next layer will have a very easy job.
+
+85
+00:09:16,909 --> 00:09:20,095
+Speaker SPEAKER_02: It just needs to look to see whether the activity is high in the layer before.
+
+86
+00:09:20,635 --> 00:09:21,918
+Speaker SPEAKER_02: And if it is, it says positive.
+
+87
+00:09:23,840 --> 00:09:33,615
+Speaker SPEAKER_02: To prevent that, we're going to normalize the length of the activity vector in the first hidden layer using a simple form of layer norm before presenting it to the second hidden layer.
+
+88
+00:09:35,501 --> 00:09:43,791
+Speaker SPEAKER_02: So the first hidden layer was trying to decide whether it's positive or negative data based on the length of the activity vector, the squared length, the sum of the squares.
+
+89
+00:09:46,033 --> 00:09:58,147
+Speaker SPEAKER_02: When we normalize that by making it be a constant length, then we remove all the activity that was used in the first hidden layer for classifying the input as positive or negative.
+
+90
+00:09:59,488 --> 00:10:05,475
+Speaker SPEAKER_02: So now the second hidden layer has to use some other kind of information, namely the information in the relative activities,
+
+91
+00:10:06,046 --> 00:10:11,535
+Speaker SPEAKER_02: So you can think of it as the activity vector in the first hidden layer has a length and an orientation.
+
+92
+00:10:12,317 --> 00:10:21,596
+Speaker SPEAKER_02: We use the length to decide whether it's positive or negative data and then we remove the length by normalizing it and we send the orientation to the second hidden layer.
+
+93
+00:10:22,417 --> 00:10:26,485
+Speaker SPEAKER_02: And what the second hidden layer has to do is take that orientation
+
+94
+00:10:26,971 --> 00:10:36,682
+Speaker SPEAKER_02: and using its incoming weight matrix, it has to convert some of the information in the orientation into a length that can be used for deciding whether it's positive or negative data.
+
+95
+00:10:41,187 --> 00:10:45,373
+Speaker SPEAKER_01: So to begin with, I'm going to show you FF doing supervised learning.
+
+96
+00:10:47,294 --> 00:10:56,927
+Speaker SPEAKER_02: And since it's a feed-forward network and we're not doing backpropagation, it's not immediately obvious how to give it a label, because we normally put the label in at the output there.
+
+97
+00:10:57,750 --> 00:11:01,715
+Speaker SPEAKER_02: But what we're going to do is we're going to put the label into the input there.
+
+98
+00:11:04,538 --> 00:11:08,182
+Speaker SPEAKER_02: So positive images will be images that include the correct label.
+
+99
+00:11:08,883 --> 00:11:12,027
+Speaker SPEAKER_02: And I'm actually going to put the image as the label as part of the image.
+
+100
+00:11:12,888 --> 00:11:20,235
+Speaker SPEAKER_02: You can do this in MNIST because Jan LeCun left a big black margin around each digit to make life easier for convolutional nets.
+
+101
+00:11:20,777 --> 00:11:24,500
+Speaker SPEAKER_02: But it means there's some way you can put labels if you want to that doesn't interfere with the image.
+
+102
+00:11:25,898 --> 00:11:31,846
+Speaker SPEAKER_02: So positive images will have the correct label in them in the first 10 pixels using a one of N code.
+
+103
+00:11:33,570 --> 00:11:35,373
+Speaker SPEAKER_02: Actually, it's not one, it's five.
+
+104
+00:11:35,472 --> 00:11:37,275
+Speaker SPEAKER_02: I make it more active so it has more effect.
+
+105
+00:11:38,898 --> 00:11:42,264
+Speaker SPEAKER_02: So there'll be nine zeros and one five in the first 10 pixels.
+
+106
+00:11:43,385 --> 00:11:46,910
+Speaker SPEAKER_02: And negative images include an incorrect label.
+
+107
+00:11:48,293 --> 00:11:51,298
+Speaker SPEAKER_02: And so the only difference between positive and negative images is the label.
+
+108
+00:11:53,422 --> 00:12:01,230
+Speaker SPEAKER_02: Features of the image that don't correlate with that label will be ignored by the algorithm, because they don't help it to discriminate between positive and negative cases.
+
+109
+00:12:02,672 --> 00:12:11,741
+Speaker SPEAKER_02: So if I were to put some random noise elsewhere in the margin, it would just ignore that random noise, because the random noise doesn't correlate with the difference between positive and negative images.
+
+110
+00:12:12,942 --> 00:12:16,047
+Speaker SPEAKER_01: That's the nice thing about supervised learning, it ignores things that are irrelevant.
+
+111
+00:12:19,870 --> 00:12:22,533
+Speaker SPEAKER_01: So there's two ways you can test the network once it's learned.
+
+112
+00:12:23,341 --> 00:12:25,364
+Speaker SPEAKER_02: you can give it a neutral label.
+
+113
+00:12:26,586 --> 00:12:30,049
+Speaker SPEAKER_02: That is you take the first 10 pixels and make them all equally active.
+
+114
+00:12:33,394 --> 00:12:36,679
+Speaker SPEAKER_02: Then run forwards through the network to get activities in the hidden layers.
+
+115
+00:12:38,261 --> 00:12:42,849
+Speaker SPEAKER_02: And then take all those hidden activities and make them the inputs to a softmax.
+
+116
+00:12:43,509 --> 00:12:45,331
+Speaker SPEAKER_02: So that's called a linear classifier.
+
+117
+00:12:46,054 --> 00:12:47,375
+Speaker SPEAKER_02: even though it's nonlinear.
+
+118
+00:12:48,236 --> 00:12:56,466
+Speaker SPEAKER_02: And that way you can just use the hidden activities is learned to learn a simple model that classifies the digits.
+
+119
+00:12:57,366 --> 00:12:58,368
+Speaker SPEAKER_02: And that's quick.
+
+120
+00:12:58,389 --> 00:13:00,230
+Speaker SPEAKER_02: You just have to run things through the network once.
+
+121
+00:13:02,113 --> 00:13:09,801
+Speaker SPEAKER_02: A better method, but slower, is you give the net the same image many different times, once with each possible label.
+
+122
+00:13:10,101 --> 00:13:13,226
+Speaker SPEAKER_02: And you see which label gives the highest total goodness in the hidden layers.
+
+123
+00:13:14,048 --> 00:13:15,410
+Speaker SPEAKER_02: That's what you were really training.
+
+124
+00:13:16,172 --> 00:13:17,734
+Speaker SPEAKER_02: And so that's the right way to test it.
+
+125
+00:13:18,355 --> 00:13:26,087
+Speaker SPEAKER_02: But it involves having to run it as many different times as there are labels, which is fine if there are only 10 labels, but if there were a thousand labels, it would be expensive.
+
+126
+00:13:26,989 --> 00:13:31,996
+Speaker SPEAKER_02: And what you would do then is you'd first use the quick method to get a short list of plausible labels.
+
+127
+00:13:32,498 --> 00:13:36,244
+Speaker SPEAKER_02: And then you could sequentially check the goodness of each label in the short list.
+
+128
+00:13:36,510 --> 00:13:39,695
+Speaker SPEAKER_02: And so maybe you get the best five labels and check those.
+
+129
+00:13:40,375 --> 00:13:43,380
+Speaker SPEAKER_01: So it's relatively efficient, even for big label sets.
+
+130
+00:13:48,268 --> 00:14:04,289
+Speaker SPEAKER_02: So on MNIST, if you take a fully connected net and it's non-convolutional, you typically get about 1.4% test errors with MNIST, somewhere between 1.3 and 1.4 if you use backprop.
+
+131
+00:14:05,299 --> 00:14:19,874
+Speaker SPEAKER_02: With the forward-forward algorithm, which isn't back-propagating, if you just make the negative labels, the labels you use in negative cases, you just make them be random, the training is quite a lot slower.
+
+132
+00:14:20,894 --> 00:14:26,299
+Speaker SPEAKER_02: Because towards the end of training, most of the negative cases it's getting are obviously negative cases.
+
+133
+00:14:27,380 --> 00:14:29,943
+Speaker SPEAKER_02: They're not plausible labels, given what it knows already.
+
+134
+00:14:30,244 --> 00:14:31,424
+Speaker SPEAKER_02: So it doesn't learn anything.
+
+135
+00:14:33,042 --> 00:14:39,250
+Speaker SPEAKER_02: You can make it learn faster by giving it negative cases that are hard negatives.
+
+136
+00:14:40,270 --> 00:14:52,907
+Speaker SPEAKER_02: And the way you do that is you, as you're training the feed forward, the forward-forward algorithm, you also train the linear softmax classifier that uses the hidden activities to classify images.
+
+137
+00:14:54,472 --> 00:15:09,350
+Speaker SPEAKER_02: And you look at the outputs of the SOPAC classifier and you pick one of the more active classes, not the correct class, but one you pick from the distribution over the incorrect classes.
+
+138
+00:15:09,431 --> 00:15:12,916
+Speaker SPEAKER_02: So you pick hard negatives much more often than easy negatives.
+
+139
+00:15:13,817 --> 00:15:15,259
+Speaker SPEAKER_02: And that makes it learn much faster.
+
+140
+00:15:15,578 --> 00:15:20,565
+Speaker SPEAKER_02: And then it learns about a factor of two slower than backprop.
+
+141
+00:15:23,126 --> 00:15:24,908
+Speaker SPEAKER_01: And it gets about the same performance as backprop.
+
+142
+00:15:26,471 --> 00:15:49,539
+Speaker SPEAKER_02: If you jitter the images by up to two pixels in all four directions, so there's now 25 different locations for an image, and you train for a long time, you get a much better error rate of about 0.64%, which is about what you get with backprop if you jitter the images.
+
+143
+00:15:50,600 --> 00:15:55,205
+Speaker SPEAKER_02: It's also what you get with backprop much faster if you use convolutional nets.
+
+144
+00:15:55,926 --> 00:16:01,211
+Speaker SPEAKER_02: So for MNIST, jittering the images allows you to get a performance similar to convolutional nets.
+
+145
+00:16:02,613 --> 00:16:04,775
+Speaker SPEAKER_02: And you also get nice receptive fields if you do that.
+
+146
+00:16:06,197 --> 00:16:09,201
+Speaker SPEAKER_02: So I'll show you some of the receptive fields.
+
+147
+00:16:12,544 --> 00:16:20,033
+Speaker SPEAKER_02: So what you're seeing here is in the first hidden layer, the receptive fields it's learning.
+
+148
+00:16:20,130 --> 00:16:27,985
+Speaker SPEAKER_02: And you'll see in the first 10 pixels are the weights that a feature detector has to the label units.
+
+149
+00:16:29,107 --> 00:16:31,591
+Speaker SPEAKER_02: And the two ones in red boxes I've blown up on the right.
+
+150
+00:16:32,934 --> 00:16:42,712
+Speaker SPEAKER_02: And if you look at that top feature on the right, if you see sort of two roughly horizontal lines like that with black in between them,
+
+151
+00:16:43,672 --> 00:16:53,285
+Speaker SPEAKER_02: that's pretty good evidence that it's either three or a seven that's got a crossbar halfway down, and it learns that.
+
+152
+00:16:53,667 --> 00:16:54,988
+Speaker SPEAKER_02: So it's learned a sensible feature.
+
+153
+00:16:55,008 --> 00:17:06,404
+Speaker SPEAKER_02: We can interpret what it's learned, and it's a very sensible feature that says, if you see that, it's probably three or seven, and therefore it's learned big weights coming from the three and the seven.
+
+154
+00:17:08,865 --> 00:17:13,230
+Speaker SPEAKER_02: And that means when you put in one of those as a label, that'll activate that feature.
+
+155
+00:17:13,590 --> 00:17:18,075
+Speaker SPEAKER_02: But if you put something else in as a label, a bad label, that feature won't get so active.
+
+156
+00:17:18,355 --> 00:17:19,396
+Speaker SPEAKER_02: So it won't be so happy.
+
+157
+00:17:19,436 --> 00:17:20,617
+Speaker SPEAKER_02: So it'll know it's a negative case.
+
+158
+00:17:24,602 --> 00:17:37,454
+Speaker SPEAKER_02: So a major problem with that version of the forward-forward algorithm is that because it's not backpropagating, what you learn in later layers doesn't affect what you learn in earlier layers.
+
+159
+00:17:38,144 --> 00:17:43,832
+Speaker SPEAKER_02: And that seems to be bad because that's one of the major good aspects of backpropagation.
+
+160
+00:17:44,452 --> 00:17:48,377
+Speaker SPEAKER_02: And it looks like we've lost it if we use this algorithm.
+
+161
+00:17:50,280 --> 00:17:54,247
+Speaker SPEAKER_02: It's particularly bad if you want to model top-down effects in perception, which I do.
+
+162
+00:17:56,288 --> 00:18:00,996
+Speaker SPEAKER_02: So here's three examples of top-down effects in perception.
+
+163
+00:18:01,684 --> 00:18:08,873
+Speaker SPEAKER_02: If you look at the H in the middle of those two words, it's exactly the same, but it's an H if you look at the verb and it's an A if you look at the cat.
+
+164
+00:18:09,473 --> 00:18:17,281
+Speaker SPEAKER_02: And if you don't attend to the letter, but just attend to the whole words, you interpret that H differently, depending on the context.
+
+165
+00:18:18,624 --> 00:18:22,989
+Speaker SPEAKER_02: Similarly, if you look at the picture on the right, when you first see it, you see a face.
+
+166
+00:18:24,089 --> 00:18:26,932
+Speaker SPEAKER_02: And so that pair in the middle, you interpret as a nose.
+
+167
+00:18:28,499 --> 00:18:33,325
+Speaker SPEAKER_02: And the bottom-up data isn't really telling you it's a nose, it's telling you it's a pair, if anything.
+
+168
+00:18:34,125 --> 00:18:38,852
+Speaker SPEAKER_02: But top-down data from the whole image is telling you there should be a nose there, and that's what you see it as.
+
+169
+00:18:39,833 --> 00:18:42,076
+Speaker SPEAKER_02: So that's a strong effect of top-down information.
+
+170
+00:18:43,617 --> 00:18:49,765
+Speaker SPEAKER_02: And then if you look at the sentence at the bottom, if I give you that sentence,
+
+171
+00:18:52,039 --> 00:18:56,905
+Speaker SPEAKER_02: in a single sentence, you get a good sense of what the word scrummed probably means.
+
+172
+00:18:57,605 --> 00:19:02,571
+Speaker SPEAKER_02: It probably means she hit him over the head with it, or she attacked him with it somehow.
+
+173
+00:19:05,575 --> 00:19:10,840
+Speaker SPEAKER_02: It could mean sort of she impressed him with how well she cooked, but that's much less likely.
+
+174
+00:19:11,883 --> 00:19:16,748
+Speaker SPEAKER_02: So you get an idea of the meaning of a word from a single context.
+
+175
+00:19:17,452 --> 00:19:26,544
+Speaker SPEAKER_02: And that's another example of a top-down effect from the context telling you how to create a vector that represents the meaning of the word scrummed.
+
+176
+00:19:31,750 --> 00:19:42,481
+Speaker SPEAKER_02: So the way we're gonna make the forward-forward algorithm deal with top-down effects is by taking a static image and treating it as a video.
+
+177
+00:19:43,323 --> 00:19:46,047
+Speaker SPEAKER_02: It's a very boring video, because every frame is the same.
+
+178
+00:19:46,907 --> 00:19:49,991
+Speaker SPEAKER_02: But we're going to use a recurrent network that's designed to process video.
+
+179
+00:19:50,571 --> 00:19:53,476
+Speaker SPEAKER_02: And we're just going to give it a very boring video, which is a static image.
+
+180
+00:19:56,339 --> 00:19:58,742
+Speaker SPEAKER_02: Then the learning is greedy in time.
+
+181
+00:19:58,803 --> 00:20:00,244
+Speaker SPEAKER_02: It's not doing backdrop through time.
+
+182
+00:20:00,885 --> 00:20:02,969
+Speaker SPEAKER_02: But it's not greedy in layers, as you'll see.
+
+183
+00:20:06,973 --> 00:20:09,857
+Speaker SPEAKER_02: So this is the kind of network I'm going to use.
+
+184
+00:20:09,877 --> 00:20:13,261
+Speaker SPEAKER_02: And this is taken from a paper I published last year.
+
+185
+00:20:13,343 --> 00:20:28,121
+Speaker SPEAKER_02: on a system I call Glom, that's designed to explain how a neural net could model part-whole hierarchies without having to keep rewiring itself according to the structure of the part-whole hierarchy.
+
+186
+00:20:28,142 --> 00:20:35,510
+Speaker SPEAKER_02: So in a neural net, what neurons do depends on their connection strengths, and they can't just go off and do different things on the fly.
+
+187
+00:20:37,732 --> 00:20:39,756
+Speaker SPEAKER_02: So that makes it hard to
+
+188
+00:20:40,309 --> 00:20:46,259
+Speaker SPEAKER_02: implement in a neural net flexible graph structures like part-hole hierarchies, which are different for each image you see.
+
+189
+00:20:47,000 --> 00:20:55,253
+Speaker SPEAKER_02: And the Glom paper was about how you might implement those hierarchies by having islands of similar vectors representing parts or holes.
+
+190
+00:20:56,474 --> 00:21:03,527
+Speaker SPEAKER_02: And it required an architecture like this in which you could learn.
+
+191
+00:21:04,708 --> 00:21:05,710
+Speaker SPEAKER_02: And when I was
+
+192
+00:21:06,532 --> 00:21:08,535
+Speaker SPEAKER_02: In the Glom paper, it was kind of embarrassing.
+
+193
+00:21:08,555 --> 00:21:12,721
+Speaker SPEAKER_02: I didn't have a learning algorithm that was biologically plausible for this kind of architecture.
+
+194
+00:21:13,761 --> 00:21:18,788
+Speaker SPEAKER_02: And now the forward-forward algorithm works in this kind of architecture and it's much more biologically plausible.
+
+195
+00:21:20,210 --> 00:21:31,983
+Speaker SPEAKER_02: So if you look at the middle level there, level L, and you look at the right-hand box, the activity at any time in that box
+
+196
+00:21:32,048 --> 00:21:40,978
+Speaker SPEAKER_02: That layer is determined by bottom up input coming from the level below at the previous time step.
+
+197
+00:21:41,858 --> 00:21:50,528
+Speaker SPEAKER_02: Top down input coming from the level above at the previous time step and lateral input coming from the same level at the previous time step that's in green.
+
+198
+00:21:51,670 --> 00:21:58,798
+Speaker SPEAKER_02: And so, if you now think about how would I get.
+
+199
+00:21:59,436 --> 00:22:17,380
+Speaker SPEAKER_02: high activity levels for positive data in that layer, then the way you get high activity level is for the, the main way, is for that top down input, the red arrow, and the bottom up input, the blue arrow, to agree, to point in the same direction.
+
+200
+00:22:17,900 --> 00:22:19,301
+Speaker SPEAKER_02: Then you'll have high activity.
+
+201
+00:22:20,429 --> 00:22:28,968
+Speaker SPEAKER_02: So you can see that the forward-forward algorithm is trying to get agreement between top-down predictions and bottom-up feature extractions.
+
+202
+00:22:29,869 --> 00:22:37,846
+Speaker SPEAKER_02: And that top-down prediction, that down-coming red arrow to the rightmost box in the middle level, if you look where it came from,
+
+203
+00:22:38,349 --> 00:22:50,227
+Speaker SPEAKER_02: It came from input data two time steps ago, actually three time steps ago, because it had to come up through level L on the left hand side there, then up again to level L plus one and then down to level L again.
+
+204
+00:22:52,569 --> 00:23:00,662
+Speaker SPEAKER_02: So the contextual information is from earlier time steps and it's gone through more levels of processing.
+
+205
+00:23:01,756 --> 00:23:25,131
+Speaker SPEAKER_02: And what's happening here is when it tries to get high activity in level L, what the forward-forward algorithm is really trying to do is make the top-down activity that's based on a bigger context, but older data to agree with bottom-up activity that's based on a smaller context, but fresher data.
+
+206
+00:23:26,534 --> 00:23:29,518
+Speaker SPEAKER_02: So it's gonna have to learn to be a predictive model.
+
+207
+00:23:29,599 --> 00:23:37,491
+Speaker SPEAKER_02: So if the video is actually moving, I've done it with moving video and it works too, as long as the movement's simple.
+
+208
+00:23:38,292 --> 00:23:47,006
+Speaker SPEAKER_02: It's gonna learn a predictive model and it's gonna seek agreement between what the predictive model predicts and what you actually see.
+
+209
+00:23:47,046 --> 00:23:54,477
+Speaker SPEAKER_02: And so we're now getting top-down effects in perception.
+
+210
+00:23:56,836 --> 00:24:01,321
+Speaker SPEAKER_01: Now, those top-down effects don't propagate as fast as back propagation.
+
+211
+00:24:03,865 --> 00:24:09,633
+Speaker SPEAKER_01: So let me just show you what it looks like for doing digits.
+
+212
+00:24:10,755 --> 00:24:14,579
+Speaker SPEAKER_02: The frames of the video are just digits, and it's the same digit every time.
+
+213
+00:24:16,102 --> 00:24:26,556
+Speaker SPEAKER_02: And at the top level, we put in a label, and it's the same label every time, using a 1 of n. Actually, it's 5, not 1, but there you go.
+
+214
+00:24:28,695 --> 00:24:30,739
+Speaker SPEAKER_02: And so that's the recurrent net retraining.
+
+215
+00:24:31,941 --> 00:24:35,666
+Speaker SPEAKER_01: And if you train this recurrent net with the forward-forward algorithm, it works quite well.
+
+216
+00:24:38,471 --> 00:24:45,922
+Speaker SPEAKER_02: So the video pixels of the bottom layer, the top layer is clamped to the correct label for positive data and to incorrect label for negative data.
+
+217
+00:24:47,104 --> 00:24:50,890
+Speaker SPEAKER_01: We run it for eight iterations and
+
+218
+00:24:53,536 --> 00:24:58,323
+Speaker SPEAKER_01: To begin with, I tried to make the goodness be high.
+
+219
+00:24:58,344 --> 00:25:02,549
+Speaker SPEAKER_02: I tried to make high activity be the goodness function.
+
+220
+00:25:03,191 --> 00:25:07,837
+Speaker SPEAKER_02: So you're trying to get a big sum squared activity for positive and small for negative.
+
+221
+00:25:09,981 --> 00:25:14,208
+Speaker SPEAKER_02: It turned out it worked better to actually make low activity be the goodness function.
+
+222
+00:25:14,888 --> 00:25:19,797
+Speaker SPEAKER_02: You're trying to get low activity for positive data and high activity for negative data.
+
+223
+00:25:19,944 --> 00:25:26,076
+Speaker SPEAKER_02: And in that case, what you want is for the top-down input to be exactly the opposite of the bottom-up input.
+
+224
+00:25:26,096 --> 00:25:31,326
+Speaker SPEAKER_02: This is much more like predictive coding, where you're trying to make the top-down input erase the bottom-up input.
+
+225
+00:25:34,292 --> 00:25:36,436
+Speaker SPEAKER_02: That actually works better, and that's more like the brain.
+
+226
+00:25:37,199 --> 00:25:39,702
+Speaker SPEAKER_02: For familiar data, you tend to have less activity.
+
+227
+00:25:40,144 --> 00:25:42,087
+Speaker SPEAKER_01: When it's surprising data, you have more activity.
+
+228
+00:25:48,058 --> 00:25:54,048
+Speaker SPEAKER_02: So if you use two hidden layers of rectified linear units and you run for eight time steps.
+
+229
+00:25:57,333 --> 00:26:01,638
+Speaker SPEAKER_02: And to begin with, I started collecting gradients after four time steps because I thought it should settle down for a bit.
+
+230
+00:26:02,079 --> 00:26:05,545
+Speaker SPEAKER_02: Actually, it works better if you collect gradients right from the beginning.
+
+231
+00:26:06,772 --> 00:26:11,621
+Speaker SPEAKER_02: and you decay the learning rate down from the initial learning rate down to zero after 60 epochs.
+
+232
+00:26:12,402 --> 00:26:15,847
+Speaker SPEAKER_02: So it's running for two or three times as long as backprop would run.
+
+233
+00:26:15,867 --> 00:26:18,352
+Speaker SPEAKER_02: And it's also doing multiple iterations.
+
+234
+00:26:18,511 --> 00:26:19,913
+Speaker SPEAKER_02: So it's quite a lot slower than backprop.
+
+235
+00:26:20,776 --> 00:26:24,141
+Speaker SPEAKER_02: At test time,
+
+236
+00:26:24,626 --> 00:26:27,872
+Speaker SPEAKER_02: You then do the expensive way of making a classification.
+
+237
+00:26:27,932 --> 00:26:32,599
+Speaker SPEAKER_02: You run the net 10 different times with different labels and pick the one that has the highest goodness.
+
+238
+00:26:33,300 --> 00:26:39,351
+Speaker SPEAKER_02: It now gets 1.31% error, which is right in the range of what a sensible model trained with backprop will get.
+
+239
+00:26:40,794 --> 00:26:50,549
+Speaker SPEAKER_02: It seems to be slightly better than the non-recurrent net that I described before, but that may not be significant, but at least it is not significantly worse.
+
+240
+00:26:55,558 --> 00:27:12,982
+Speaker SPEAKER_02: If you try something harder, like CIFAR-10, where there's a lot of irrelevant information in the backgrounds, and you run this recurrent net with either two or three hidden layers, and you use local connectivity.
+
+241
+00:27:13,683 --> 00:27:15,326
+Speaker SPEAKER_02: So I'm not using convolution.
+
+242
+00:27:15,626 --> 00:27:21,875
+Speaker SPEAKER_02: I'm not sharing weights, because that's biologically implausible, but I am using local receptor fields.
+
+243
+00:27:21,895 --> 00:27:25,059
+Speaker SPEAKER_02: And the way I do that is every hidden layer
+
+244
+00:27:25,765 --> 00:27:28,368
+Speaker SPEAKER_02: has a sort of 32 by 32 layout.
+
+245
+00:27:30,892 --> 00:27:36,720
+Speaker SPEAKER_02: So a unit is sort of centered on some part of the input image.
+
+246
+00:27:38,281 --> 00:27:47,915
+Speaker SPEAKER_02: And in each hidden layer, you connect it to units that are within an 11 by 11 receptive field centered on that point in the image.
+
+247
+00:27:50,138 --> 00:27:52,442
+Speaker SPEAKER_02: And you do that for the bottom-up connections.
+
+248
+00:27:52,461 --> 00:27:54,625
+Speaker SPEAKER_02: You also do it for the top-down connections.
+
+249
+00:27:55,329 --> 00:28:01,657
+Speaker SPEAKER_02: So it's got local connectivity, which limits the number of connections and makes it generalize a little bit better.
+
+250
+00:28:04,442 --> 00:28:12,011
+Speaker SPEAKER_02: And I run it for eight iterations using a softmax linear classifier to select hard negative labels.
+
+251
+00:28:13,353 --> 00:28:20,021
+Speaker SPEAKER_02: And if you take that same architecture, at least the feed forward part of it, and you train it with backprop,
+
+252
+00:28:21,115 --> 00:28:26,741
+Speaker SPEAKER_02: you get about 37% error with two hidden layers and about 39% error with three hidden layers.
+
+253
+00:28:27,722 --> 00:28:30,586
+Speaker SPEAKER_02: You have to regularize it quite strongly with strong weight decay.
+
+254
+00:28:32,749 --> 00:28:38,876
+Speaker SPEAKER_02: If you do the same thing with the forward-forward algorithm, it's slightly worse.
+
+255
+00:28:39,938 --> 00:28:42,540
+Speaker SPEAKER_02: It's not as good as backprop, but it's close.
+
+256
+00:28:43,622 --> 00:28:47,547
+Speaker SPEAKER_02: And also, as you go to more hidden layers, it doesn't get significantly worse.
+
+257
+00:28:48,288 --> 00:28:50,750
+Speaker SPEAKER_02: If anything, it got better, but that's probably insignificant.
+
+258
+00:28:51,962 --> 00:28:54,726
+Speaker SPEAKER_02: So it works, it doesn't work quite as well as backprop.
+
+259
+00:28:56,428 --> 00:29:09,441
+Speaker SPEAKER_02: But my current view is the brain probably doesn't work quite as well as backprop, which is a little bit scary because it suggests that the digital technology we've got now is going to end up working really, really well and maybe better than us.
+
+260
+00:29:14,086 --> 00:29:19,471
+Speaker SPEAKER_01: If you think what's happening as this network is settling down,
+
+261
+00:29:19,891 --> 00:29:24,517
+Speaker SPEAKER_02: It's not doing back propagation, but it is doing something else, which I call back relaxation.
+
+262
+00:29:25,198 --> 00:29:31,446
+Speaker SPEAKER_02: So if we go back to the picture of the network, this one will do.
+
+263
+00:29:34,912 --> 00:29:45,747
+Speaker SPEAKER_02: The information that's coming down on those red arrows, if providing top-down input, that's helping to train the bottom-up input,
+
+264
+00:29:46,874 --> 00:29:59,432
+Speaker SPEAKER_02: And that means information from the representation at a higher level is influencing the bottom up input, so if you look at that middle layer, the right hand box in the middle layer.
+
+265
+00:30:00,239 --> 00:30:08,969
+Speaker SPEAKER_02: the bottom up blue arrow, the learning there is being influenced by what's coming down from above based on older video frames.
+
+266
+00:30:08,989 --> 00:30:18,019
+Speaker SPEAKER_02: And so you are getting this thing we want, which is that high level representations can influence the learning of lower level representations.
+
+267
+00:30:19,060 --> 00:30:25,268
+Speaker SPEAKER_02: But if you ask how fast information gets back, well, at that middle layer,
+
+268
+00:30:25,872 --> 00:30:30,417
+Speaker SPEAKER_02: The top down information gets mixed with the bottom up information.
+
+269
+00:30:32,141 --> 00:30:43,576
+Speaker SPEAKER_02: For rival representation and then that sort of average representation gets sent down to the level below, so the information above is being diluted by the information coming bottom up.
+
+270
+00:30:44,417 --> 00:30:54,654
+Speaker SPEAKER_02: And what you get is that the rate at which information from the high layers propagated to lower layers is much more like diffusion or relaxation than like propagation.
+
+271
+00:30:55,455 --> 00:31:06,914
+Speaker SPEAKER_02: In back propagation, the information gets all the way back and sort of full information gets back, modified by all the weight matrices on the way, but not diluted by the activities on the forward pass.
+
+272
+00:31:07,215 --> 00:31:10,519
+Speaker SPEAKER_02: And here it's a diffusion process.
+
+273
+00:31:10,558 --> 00:31:12,661
+Speaker SPEAKER_02: So it'll work through several layers, okay.
+
+274
+00:31:12,681 --> 00:31:14,541
+Speaker SPEAKER_02: But it wouldn't work at all through a hundred layers.
+
+275
+00:31:15,423 --> 00:31:17,444
+Speaker SPEAKER_02: Now, fortunately the brain doesn't have a hundred layers.
+
+276
+00:31:18,306 --> 00:31:26,653
+Speaker SPEAKER_02: And what will happen here is the information won't get all the way back to early layers the first time you see an image.
+
+277
+00:31:27,894 --> 00:31:34,079
+Speaker SPEAKER_02: But the learning that you do when you see an image, you'll get the information back through a few layers.
+
+278
+00:31:34,680 --> 00:31:36,902
+Speaker SPEAKER_02: So now the bottom up input,
+
+279
+00:31:37,000 --> 00:31:43,069
+Speaker SPEAKER_02: to the middle layers will have learned to be different because of the information coming down from above.
+
+280
+00:31:44,172 --> 00:31:49,441
+Speaker SPEAKER_02: And so, if I now show you the same image again, the bottom upper areas are different.
+
+281
+00:31:49,882 --> 00:31:59,498
+Speaker SPEAKER_02: So now, that difference which was caused by the high level representation will cause a difference at the level below.
+
+282
+00:31:59,967 --> 00:32:08,821
+Speaker SPEAKER_02: And so, if you present an image several times, the information will get back through many layers, but it won't get back through many layers efficiently in one presentation.
+
+283
+00:32:10,023 --> 00:32:16,035
+Speaker SPEAKER_02: And so that's the difference in back relaxation and back propagation and I suspect we're stuck with back relaxation.
+
+284
+00:32:24,730 --> 00:32:25,029
+Speaker SPEAKER_01: Okay.
+
+285
+00:32:28,974 --> 00:32:31,637
+Speaker SPEAKER_01: I just wanted to finish by saying how this relates to GANs.
+
+286
+00:32:32,999 --> 00:32:42,528
+Speaker SPEAKER_02: So a generative adversarial network, like a Boltzmann machine or noise contrast estimation, works by trying to discriminate between real data and generated data.
+
+287
+00:32:43,410 --> 00:32:56,163
+Speaker SPEAKER_02: And the discriminative model of a GAN in the forward-forward algorithm is replaced by a greedy feed-forward model that tries to make a discrimination at every layer instead of just having a logistic unit at the last layer.
+
+288
+00:32:57,140 --> 00:33:06,854
+Speaker SPEAKER_02: And because it's trying to make a discrimination at every layer and it's greedy, trained greedily, it can be trained without using backpropagation, because we're making these greedy discriminations each layer.
+
+289
+00:33:07,734 --> 00:33:12,000
+Speaker SPEAKER_02: So that's how we managed to learn a discriminative model without using backpropagation.
+
+290
+00:33:13,544 --> 00:33:22,876
+Speaker SPEAKER_02: Now, and again, the generative model, which is normally trained by backpropagating the discriminative error through the generative model,
+
+291
+00:33:24,865 --> 00:33:27,587
+Speaker SPEAKER_02: we're not gonna have a separate generative model.
+
+292
+00:33:28,588 --> 00:33:33,953
+Speaker SPEAKER_02: We're gonna replace the hidden layers of the generative model by the hidden layers of the discriminative model.
+
+293
+00:33:33,973 --> 00:33:35,835
+Speaker SPEAKER_02: We're gonna share the same representation.
+
+294
+00:33:37,616 --> 00:33:43,162
+Speaker SPEAKER_02: And we're gonna use those hidden layers in the discriminative model to try and predict the next term in a sequence.
+
+295
+00:33:44,303 --> 00:33:51,269
+Speaker SPEAKER_02: So we can train the generative model without backprop because it doesn't have to learn its hidden representations.
+
+296
+00:33:51,369 --> 00:33:53,471
+Speaker SPEAKER_02: It's just stealing them from the discriminative model.
+
+297
+00:33:54,650 --> 00:33:57,554
+Speaker SPEAKER_02: And that gives us several advantages and one big disadvantage.
+
+298
+00:33:59,656 --> 00:34:06,925
+Speaker SPEAKER_02: So if you think about the problems that GANs have, they've got an adversarial competition between the generative and discriminative model.
+
+299
+00:34:07,226 --> 00:34:08,447
+Speaker SPEAKER_02: And that makes training tricky.
+
+300
+00:34:08,768 --> 00:34:10,431
+Speaker SPEAKER_02: You have to get the relative learning rates right.
+
+301
+00:34:12,393 --> 00:34:17,018
+Speaker SPEAKER_02: That disappears if the generative model and the discriminative model share their hidden representations.
+
+302
+00:34:18,820 --> 00:34:21,585
+Speaker SPEAKER_02: Another problem with GANs is they have mode collapse.
+
+303
+00:34:21,733 --> 00:34:28,967
+Speaker SPEAKER_02: So the generative model might end up ignoring large parts of the data space, but the GAN still seems very happy.
+
+304
+00:34:29,007 --> 00:34:45,818
+Speaker SPEAKER_02: And that can't happen if you share the hidden representations with the discriminative model, because now the hidden representations are trained on the whole of the data space, everything covered by the training data.
+
+305
+00:34:46,489 --> 00:34:48,972
+Speaker SPEAKER_02: And so you eliminate mode collapse.
+
+306
+00:34:48,992 --> 00:34:53,317
+Speaker SPEAKER_02: But the big disadvantage you get is that you don't learn such a good generative model.
+
+307
+00:34:54,018 --> 00:35:10,976
+Speaker SPEAKER_02: And a big open question at present is whether using the forward-forward algorithm, particularly in a recurrent net, you can learn a good enough generative model so that the model can produce negative data that's good enough for training the forward-forward algorithm.
+
+308
+00:35:11,795 --> 00:35:12,958
+Speaker SPEAKER_02: And that's what I'm working on now.
+
+309
+00:35:14,599 --> 00:35:15,179
+Speaker SPEAKER_02: And that's the end.
+
+310
+00:35:16,375 --> 00:35:20,780
+Speaker SPEAKER_00: Thank you so much, Professor, for this amazing, insightful talk.
+
+311
+00:35:21,121 --> 00:35:26,027
+Speaker SPEAKER_00: So I have many questions that I'm going to try to select some that I can ask you.
+
+312
+00:35:26,608 --> 00:35:31,956
+Speaker SPEAKER_00: So with this forward-to-forward algorithm, this opened a new kind of area of research.
+
+313
+00:35:32,476 --> 00:35:40,527
+Speaker SPEAKER_00: How do you see this influencing the creation of other architecture, other models and architectures?
+
+314
+00:35:41,231 --> 00:35:47,262
+Speaker SPEAKER_02: Okay, I think in practical terms, backpropagation works better on current digital computers.
+
+315
+00:35:49,166 --> 00:35:54,134
+Speaker SPEAKER_02: But the forward-forward algorithm might allow us to use pure analog computation.
+
+316
+00:35:54,715 --> 00:36:02,407
+Speaker SPEAKER_02: So the problem with analog computation is it's noisy, stray electric fields influence the results of the computation.
+
+317
+00:36:03,630 --> 00:36:04,692
+Speaker SPEAKER_02: And
+
+318
+00:36:04,891 --> 00:36:13,442
+Speaker SPEAKER_02: As a result, you can't make two different analog computers behave exactly the same way unless you keep digitizing things as you go.
+
+319
+00:36:13,461 --> 00:36:19,530
+Speaker SPEAKER_02: And of course, as soon as you start digitizing things, you lose all the advantages of analog.
+
+320
+00:36:20,130 --> 00:36:33,648
+Speaker SPEAKER_02: You have to use high power and one bit digital might be okay, like the brain does and spike or not spike, but getting like a eight bit or 16 bit number is a crazy amount of energy compared with pure analog computation.
+
+321
+00:36:34,742 --> 00:36:42,030
+Speaker SPEAKER_02: The advantage of the forward-forward algorithm is you can run it in hardware where you don't know how the hardware works.
+
+322
+00:36:43,010 --> 00:37:00,547
+Speaker SPEAKER_02: So for example, if I put in a layer that's just a random matrix followed by rectified linear units, or followed by any other kind of unit I like, and I put that in the middle of my network, and I don't even know about it, and I run the forward-forward algorithm, it'll work just fine.
+
+323
+00:37:01,152 --> 00:37:02,054
+Speaker SPEAKER_02: it doesn't have a problem.
+
+324
+00:37:02,554 --> 00:37:15,596
+Speaker SPEAKER_02: Whereas if you have a layer in the middle of a backprop network, a feed-forward network, that where you don't know what the transformation is, and maybe the transformation is not even stationary, the backprop algorithm doesn't work.
+
+325
+00:37:15,817 --> 00:37:21,967
+Speaker SPEAKER_02: The best you can do is try and build yourself a differentiable model of that black box that's in the middle of your net.
+
+326
+00:37:23,009 --> 00:37:25,632
+Speaker SPEAKER_02: But the forward-forward algorithm, it just doesn't slow it down at all.
+
+327
+00:37:25,753 --> 00:37:26,755
+Speaker SPEAKER_02: It has no problem.
+
+328
+00:37:27,561 --> 00:37:35,331
+Speaker SPEAKER_02: And that seems very promising if you're having to work with hardware where you don't know exactly how it's going to behave.
+
+329
+00:37:35,371 --> 00:37:36,552
+Speaker SPEAKER_02: You know roughly how it's going to behave.
+
+330
+00:37:36,974 --> 00:37:43,001
+Speaker SPEAKER_02: You need to know enough about it to know how to change your incoming weights to be more active or to be less active.
+
+331
+00:37:43,422 --> 00:37:45,224
+Speaker SPEAKER_02: But that's all you need to know in this algorithm.
+
+332
+00:37:46,085 --> 00:37:48,608
+Speaker SPEAKER_02: So you need to have some units in the network.
+
+333
+00:37:48,588 --> 00:37:51,090
+Speaker SPEAKER_02: that can change their incoming weights to get more or less active.
+
+334
+00:37:52,992 --> 00:37:56,697
+Speaker SPEAKER_02: But you have lots of other stuff going on, and it'll just adapt to it.
+
+335
+00:37:57,157 --> 00:38:01,422
+Speaker SPEAKER_02: And it's because the two different forward passes cancel all these things out.
+
+336
+00:38:02,523 --> 00:38:10,634
+Speaker SPEAKER_02: And there's a very important issue here, which is doing the contrast between positive data and negative data allows you to cancel all these things out.
+
+337
+00:38:11,355 --> 00:38:18,443
+Speaker SPEAKER_02: As soon as you try and do your contrast between two internal representations, like you do in typical contrastive learning at present,
+
+338
+00:38:18,507 --> 00:38:21,632
+Speaker SPEAKER_02: you get big problems with all these stray effects.
+
+339
+00:38:22,755 --> 00:38:29,847
+Speaker SPEAKER_02: But there's a wonderful property that happens if you use positive data and negative data, which is all these internal noises and uncertainties.
+
+340
+00:38:30,148 --> 00:38:34,577
+Speaker SPEAKER_02: They all cancel each other out because they're the same in the forward and both forward passes.
+
+341
+00:38:35,478 --> 00:38:37,262
+Speaker SPEAKER_00: This sounds very promising for hardware.
+
+342
+00:38:37,461 --> 00:38:42,050
+Speaker SPEAKER_00: Then do you see this being adapted for, let's say, GPUs and TPUs and all?
+
+343
+00:38:42,891 --> 00:38:49,117
+Speaker SPEAKER_02: No, no, I see it as a completely different kind of hardware, which I call mortal computation.
+
+344
+00:38:49,599 --> 00:39:06,695
+Speaker SPEAKER_02: So if you look at the history of computing, when they first made general purpose digital computers, everybody assumed that the way you get it to do a specific task is by writing a program that tells it exactly what to do.
+
+345
+00:39:10,119 --> 00:39:10,619
+Speaker SPEAKER_02: Now,
+
+346
+00:39:11,443 --> 00:39:19,931
+Speaker SPEAKER_02: Now that we have good learning algorithms, you can get a general purpose network to do specific tasks just by learning.
+
+347
+00:39:19,972 --> 00:39:21,134
+Speaker SPEAKER_02: You don't have to write a program.
+
+348
+00:39:21,614 --> 00:39:26,418
+Speaker SPEAKER_02: Obviously, the learning algorithm has to be in there, but you don't write a program for each task.
+
+349
+00:39:28,601 --> 00:39:37,349
+Speaker SPEAKER_02: And I think that suggests that we could get rid of one of the basic foundations of computer science, which is the distinction between software and hardware.
+
+350
+00:39:38,891 --> 00:39:41,434
+Speaker SPEAKER_02: So if you can separate the software from the hardware,
+
+351
+00:39:41,768 --> 00:39:46,672
+Speaker SPEAKER_02: you can have a computer science department where you talk about the properties of programs without knowing any electrical engineering.
+
+352
+00:39:47,793 --> 00:39:52,237
+Speaker SPEAKER_02: If you can't separate them, you have to know about electrical engineering as well as programming.
+
+353
+00:39:53,119 --> 00:40:02,148
+Speaker SPEAKER_02: Also, if you can separate the hardware from the software, you can put the same software on millions of different cell phones.
+
+354
+00:40:02,789 --> 00:40:03,750
+Speaker SPEAKER_02: So it's very convenient.
+
+355
+00:40:05,150 --> 00:40:08,014
+Speaker SPEAKER_02: Also, you can prove things about what the program does.
+
+356
+00:40:09,235 --> 00:40:11,336
+Speaker SPEAKER_02: I'm suggesting giving up on all that
+
+357
+00:40:12,092 --> 00:40:15,722
+Speaker SPEAKER_02: If you look at biology, it didn't have the same constraints.
+
+358
+00:40:16,846 --> 00:40:23,342
+Speaker SPEAKER_02: And if you go in the other direction, you say each piece of hardware is going to be different from each other piece of hardware.
+
+359
+00:40:24,485 --> 00:40:28,617
+Speaker SPEAKER_02: It's going to be somewhat different in its details, just like your brain and my brain.
+
+360
+00:40:29,389 --> 00:40:34,914
+Speaker SPEAKER_02: And the weights that you learn are only gonna work in that particular piece of hardware.
+
+361
+00:40:35,496 --> 00:40:41,822
+Speaker SPEAKER_02: And they're gonna be adapted to the particular properties of the particular neurons in that piece of hardware.
+
+362
+00:40:41,842 --> 00:40:48,907
+Speaker SPEAKER_02: Or if it's analog hardware, the particular properties of those particular analog circuits, which aren't the same in each piece of hardware.
+
+363
+00:40:50,068 --> 00:40:55,393
+Speaker SPEAKER_02: So now you have a big problem that you have to train each piece of hardware separately.
+
+364
+00:40:56,175 --> 00:40:57,456
+Speaker SPEAKER_02: They have to be educated.
+
+365
+00:40:58,144 --> 00:40:59,567
+Speaker SPEAKER_02: just like people.
+
+366
+00:41:00,708 --> 00:41:09,277
+Speaker SPEAKER_02: And you can get information from one piece of hardware to another piece of hardware by using techniques like distillation, which is a form of education.
+
+367
+00:41:10,619 --> 00:41:12,041
+Speaker SPEAKER_02: But you can't just copy weights across.
+
+368
+00:41:12,702 --> 00:41:18,168
+Speaker SPEAKER_02: And my current belief is there's a tremendous win from being able to just copy the weights across.
+
+369
+00:41:19,208 --> 00:41:22,432
+Speaker SPEAKER_02: And that's what makes back propagation in our current digital hardware.
+
+370
+00:41:22,672 --> 00:41:24,175
+Speaker SPEAKER_02: That's what means it's going to be better than us.
+
+371
+00:41:25,996 --> 00:41:27,679
+Speaker SPEAKER_02: But if you want to have low power,
+
+372
+00:41:28,688 --> 00:41:34,818
+Speaker SPEAKER_02: then it's worth exploring analog hardware, where you give up on the separation of software and hardware.
+
+373
+00:41:35,380 --> 00:41:38,846
+Speaker SPEAKER_02: Each separate piece has to be trained, but then it can run.
+
+374
+00:41:38,865 --> 00:41:43,152
+Speaker SPEAKER_02: Then you can run something with 100 trillion connections for only 30 watts.
+
+375
+00:41:43,487 --> 00:41:48,074
+Speaker SPEAKER_00: Do you see AI going on this direction of actually separating software and hardware?
+
+376
+00:41:48,094 --> 00:41:53,461
+Speaker SPEAKER_00: I mean, we already know that usually now we do optimization on software, and then we try to do optimization on hardware as well.
+
+377
+00:41:53,842 --> 00:41:54,764
+Speaker SPEAKER_00: What's your stand?
+
+378
+00:41:55,244 --> 00:41:56,847
+Speaker SPEAKER_02: I see there being a bifurcation.
+
+379
+00:41:57,547 --> 00:42:10,726
+Speaker SPEAKER_02: This frontier where you use current digital hardware and clever programming, and you share weight, so you get model parallelism,
+
+380
+00:42:13,289 --> 00:42:18,936
+Speaker SPEAKER_02: Sorry, you can train the same model on different data on different computers and then average the weights, things like that.
+
+381
+00:42:18,956 --> 00:42:25,666
+Speaker SPEAKER_02: That's going to be where devices get the most intelligent.
+
+382
+00:42:26,967 --> 00:42:32,496
+Speaker SPEAKER_02: But there's going to be a completely different kind of device, which is these analog low power devices.
+
+383
+00:42:34,096 --> 00:42:40,166
+Speaker SPEAKER_02: whose main advantage is that it's going to be cheap to fabricate the hardware, because it doesn't need to be fabricated reliably.
+
+384
+00:42:40,586 --> 00:42:44,434
+Speaker SPEAKER_02: You won't need a $10 billion fab line to make the hardware.
+
+385
+00:42:44,454 --> 00:42:46,297
+Speaker SPEAKER_02: You'll actually grow it with nanotechnology.
+
+386
+00:42:47,378 --> 00:42:49,963
+Speaker SPEAKER_02: And it's going to run at very low power.
+
+387
+00:42:51,666 --> 00:42:58,297
+Speaker SPEAKER_02: So you're going to be able to have a language interface in your toaster for $1 running at a few watts.
+
+388
+00:43:00,050 --> 00:43:08,259
+Speaker SPEAKER_02: but it's not gonna be as smart as these really big, very expensive, very power-hungry systems trained with backprop.
+
+389
+00:43:08,440 --> 00:43:09,603
+Speaker SPEAKER_02: That's my current belief.
+
+390
+00:43:09,871 --> 00:43:12,315
+Speaker SPEAKER_00: Super promising, and it's great to hear.
+
+391
+00:43:12,675 --> 00:43:15,561
+Speaker SPEAKER_00: Maybe one last question regarding the presentation.
+
+392
+00:43:16,581 --> 00:43:21,230
+Speaker SPEAKER_00: Do you see this as a new area, maybe, of research?
+
+393
+00:43:21,250 --> 00:43:24,976
+Speaker SPEAKER_00: Because it's very different than the way how we used to do things like back propagation.
+
+394
+00:43:25,036 --> 00:43:28,322
+Speaker SPEAKER_00: So do you feel that this is giving birth to new different ways?
+
+395
+00:43:28,342 --> 00:43:29,744
+Speaker SPEAKER_02: Well, this isn't giving birth to it.
+
+396
+00:43:29,764 --> 00:43:32,248
+Speaker SPEAKER_02: There's already people who have all these beliefs.
+
+397
+00:43:32,509 --> 00:43:36,114
+Speaker SPEAKER_02: There's a guy called Jack Kendall who works for a company called Rain.
+
+398
+00:43:36,094 --> 00:43:41,568
+Speaker SPEAKER_02: And there's people, there's a group at Stanford who believe all this and are trying to do analog hardware.
+
+399
+00:43:42,431 --> 00:43:46,762
+Speaker SPEAKER_02: And this algorithm is very relevant to them.
+
+400
+00:43:49,730 --> 00:43:51,132
+Speaker SPEAKER_00: OK, and I have a question here.
+
+401
+00:43:51,851 --> 00:44:01,324
+Speaker SPEAKER_00: You are very optimistic about that we always are getting closer to learning how the brain works.
+
+402
+00:44:01,884 --> 00:44:11,556
+Speaker SPEAKER_00: So what are some of your latest discoveries about the brain that have changed your way of thinking about it?
+
+403
+00:44:11,635 --> 00:44:15,940
+Speaker SPEAKER_00: I think you said that last time maybe we will figure out in five years or so.
+
+404
+00:44:15,981 --> 00:44:17,862
+Speaker SPEAKER_00: Do you still feel that we are growing?
+
+405
+00:44:17,842 --> 00:44:21,509
+Speaker SPEAKER_02: I always think we're going to figure it out in five years or so, and eventually I'll be right.
+
+406
+00:44:25,675 --> 00:44:31,344
+Speaker SPEAKER_02: It's just that saying we're not going to figure it out for 100 years isn't a very good research strategy.
+
+407
+00:44:31,385 --> 00:44:37,775
+Speaker SPEAKER_02: It may be a bit more realistic, but if we're not going to figure out for 100 years, you might as well give up.
+
+408
+00:44:39,324 --> 00:44:41,469
+Speaker SPEAKER_02: It's clear we're not going to figure out in the next week.
+
+409
+00:44:43,371 --> 00:44:53,690
+Speaker SPEAKER_02: But believing that we may well figure... And the reason I think we may figure it out is because once you get close enough, there'll be a big attractor.
+
+410
+00:44:53,769 --> 00:44:57,197
+Speaker SPEAKER_02: Once you get close enough, suddenly all sorts of things will start making sense.
+
+411
+00:44:57,898 --> 00:45:02,025
+Speaker SPEAKER_02: All sorts of weird facts about the brain will start making sense.
+
+412
+00:45:02,561 --> 00:45:11,304
+Speaker SPEAKER_02: So it's a bit like the singularity in that there'll be this sudden effect that you've got close enough, so now you can see how it all fits together.
+
+413
+00:45:12,748 --> 00:45:17,280
+Speaker SPEAKER_02: And that's what I'm hoping will happen, and I'm hoping I'll live to see it.
+
+414
+00:45:18,289 --> 00:45:24,918
+Speaker SPEAKER_00: One last question and this is, I mean there are so many other questions about like brain and back propagation.
+
+415
+00:45:24,938 --> 00:45:27,099
+Speaker SPEAKER_00: This one is about actually Morocco and AI.
+
+416
+00:45:27,440 --> 00:45:40,315
+Speaker SPEAKER_00: So I have this question that there is a lot of good momentum in AI in Morocco and Morocco AI we strive to have like a strong presence in all these top ML conferences and innovation yet for all these developing countries
+
+417
+00:45:40,295 --> 00:45:43,038
+Speaker SPEAKER_00: There are many challenges like the resources, right?
+
+418
+00:45:43,059 --> 00:45:48,826
+Speaker SPEAKER_00: The resources from one end or maybe just good mentoring by qualified academics.
+
+419
+00:45:48,846 --> 00:46:01,041
+Speaker SPEAKER_00: So what is your advice, Professor Hinton, to all these AI researchers from Morocco for it to lead Africa or just help out on AI advancements and breakthroughs?
+
+420
+00:46:02,503 --> 00:46:06,487
+Speaker SPEAKER_02: So I'm not sure I have any very specific advice.
+
+421
+00:46:07,610 --> 00:46:09,492
+Speaker SPEAKER_02: Jeff Dean at Google,
+
+422
+00:46:10,146 --> 00:46:11,630
+Speaker SPEAKER_02: is very keen on helping Africa.
+
+423
+00:46:11,650 --> 00:46:13,934
+Speaker SPEAKER_02: I mean, he got a Google lab set up in Ghana.
+
+424
+00:46:14,996 --> 00:46:26,681
+Speaker SPEAKER_02: And in general, I think a lot of the academics and leading researchers in industry are keen to help Africa.
+
+425
+00:46:26,721 --> 00:46:31,210
+Speaker SPEAKER_02: They recognize that there's a huge amount of talent there.
+
+426
+00:46:31,476 --> 00:46:45,213
+Speaker SPEAKER_02: My friend Terry Sinofsky, who's more of a biologist than me, explained to me that if you look at genetic diversity, there's more genetic diversity in Africa than the rest of the world put together, because people have been there longer.
+
+427
+00:46:47,074 --> 00:47:00,471
+Speaker SPEAKER_02: So there's a lot of reasons for wanting to help Africa, including all the bad things that imperialist countries, like the one I came from, did in the past.
+
+428
+00:47:02,105 --> 00:47:10,019
+Speaker SPEAKER_02: So I think you'll find that there's a lot of academics keen to help by, for example, giving talks at your conferences.
+
+429
+00:47:11,802 --> 00:47:20,518
+Speaker SPEAKER_00: Another one was like kind of like if there is any specific like research areas that you would suggest, for example, for them to look into dependent on where they're located, for example.
+
+430
+00:47:23,324 --> 00:47:24,686
+Speaker SPEAKER_01: Obviously.
+
+431
+00:47:25,949 --> 00:47:38,777
+Speaker SPEAKER_02: One thing is there will be, it's clear to everybody now that neural nets trained with backpropagation are working so well that they're going to be used for everything.
+
+432
+00:47:39,230 --> 00:47:44,958
+Speaker SPEAKER_02: In Africa, there's probably lots of interesting applications that are specific to Africa.
+
+433
+00:47:45,798 --> 00:47:50,164
+Speaker SPEAKER_02: And those are gonna be places where African researchers have an edge.
+
+434
+00:47:50,286 --> 00:47:53,369
+Speaker SPEAKER_02: They can understand the application and work with people who need that application.
+
+435
+00:47:53,971 --> 00:47:55,552
+Speaker SPEAKER_02: So that seems like an obvious thing to do.
+
+436
+00:47:56,494 --> 00:48:06,148
+Speaker SPEAKER_02: I haven't really thought about what else, but the most obvious thing is think about
+
+437
+00:48:07,141 --> 00:48:11,746
+Speaker SPEAKER_02: applications that are specific to Africa and work on those.
+
+438
+00:48:13,329 --> 00:48:17,614
+Speaker SPEAKER_02: And that'll be, that's obviously a sort of virtuous circle.
+
+439
+00:48:19,177 --> 00:48:22,362
+Speaker SPEAKER_00: And maybe as you mentioned earlier, if this compute changes, right?
+
+440
+00:48:22,382 --> 00:48:34,498
+Speaker SPEAKER_00: So right now we see like this compute at all of these big companies, you know, so maybe if there is areas of actually just working on problems with much less compute and still innovate there, that can be a very maybe promising
+
+441
+00:48:34,478 --> 00:48:36,179
+Speaker SPEAKER_02: Well, that's what I do.
+
+442
+00:48:36,320 --> 00:48:43,666
+Speaker SPEAKER_02: I don't use, I mean, I'm at Google, so I could use these vast computing resources, but I'm also old, so I don't like learning new languages.
+
+443
+00:48:43,746 --> 00:48:45,288
+Speaker SPEAKER_02: I'm very slow at learning new languages.
+
+444
+00:48:45,907 --> 00:48:51,413
+Speaker SPEAKER_02: So actually, I decided to do kind of basic research on how the brain might be getting gradients.
+
+445
+00:48:51,452 --> 00:48:56,257
+Speaker SPEAKER_02: And that doesn't require, to do the basic research, you don't require lots of computation.
+
+446
+00:48:56,277 --> 00:49:01,943
+Speaker SPEAKER_02: You do require it if you're pushing the frontier, like these big language models, that just requires a lot of computation.
+
+447
+00:49:02,282 --> 00:49:04,485
+Speaker SPEAKER_02: And that's one of the reasons I chose to work on
+
+448
+00:49:04,465 --> 00:49:11,826
+Speaker SPEAKER_02: trying to understand how the brain might be getting gradients, which I don't think requires huge resources.
+
+449
+00:49:12,608 --> 00:49:13,952
+Speaker SPEAKER_02: It just requires good ideas.
+
+450
+00:49:17,003 --> 00:49:17,563
+Speaker SPEAKER_00: Amazing.
+
+451
+00:49:17,744 --> 00:49:20,949
+Speaker SPEAKER_00: Professor Hinton, thank you so much for the talk.
+
+452
+00:49:21,048 --> 00:49:25,896
+Speaker SPEAKER_00: It's been a great honour to have you on behalf of the whole community, on behalf of Morocco AI.
+
+453
+00:49:26,195 --> 00:49:32,364
+Speaker SPEAKER_00: We were so happy and delighted to share this very recent work of yours with us.
+
+454
+00:49:32,625 --> 00:49:37,932
+Speaker SPEAKER_00: And I hope you will hear about some great AI research coming from Morocco very soon.
+
+455
+00:49:38,454 --> 00:49:41,458
+Speaker SPEAKER_00: And in four years' time, I hope you beat the French.
+

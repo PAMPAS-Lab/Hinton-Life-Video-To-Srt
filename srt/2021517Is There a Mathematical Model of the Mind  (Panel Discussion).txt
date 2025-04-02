@@ -1,0 +1,2420 @@
+1
+00:00:16,821 --> 00:00:17,463
+Speaker SPEAKER_07: Hello, everyone.
+
+2
+00:00:17,542 --> 00:00:19,144
+Speaker SPEAKER_07: Welcome to the panel discussion.
+
+3
+00:00:19,204 --> 00:00:23,169
+Speaker SPEAKER_07: The topic of discussion is, is there a mathematical model of the mind?
+
+4
+00:00:24,109 --> 00:00:27,675
+Speaker SPEAKER_07: The first half will be the panel discussion, followed by audience Q&A.
+
+5
+00:00:29,036 --> 00:00:36,283
+Speaker SPEAKER_07: Please use the Google Meet chat or the Dory link or the Twitter hashtag to pose your questions.
+
+6
+00:00:36,744 --> 00:00:38,426
+Speaker SPEAKER_07: And you can pose your questions as you think about them.
+
+7
+00:00:38,447 --> 00:00:43,673
+Speaker SPEAKER_07: You don't have to wait until the Q&A starts.
+
+8
+00:00:44,834 --> 00:00:50,222
+Speaker SPEAKER_07: It's an honor to have amongst us luminaries, analysts who are luminaries from their individual fields.
+
+9
+00:00:50,942 --> 00:01:01,279
+Speaker SPEAKER_07: We have Lenore Blum from CMU and UC Berkeley, who works on theory of computing and is a presidential award winner for mentorship in science, math and engineering.
+
+10
+00:01:01,378 --> 00:01:11,313
+Speaker SPEAKER_07: Jack Galland from UC Berkeley, who's a cognitive neuroscientist and winner of Time Magazine Inventor Award and frequently appears on radio talk shows and podcasts.
+
+11
+00:01:11,783 --> 00:01:17,069
+Speaker SPEAKER_07: Jeffrey Hinton from Google and University of Toronto, who works on foundations of deep learning and is a Turing Award winner.
+
+12
+00:01:17,590 --> 00:01:24,519
+Speaker SPEAKER_07: Percy Liang from Stanford, who works on natural language processing and is a recipient of the Presidential Early Career Award.
+
+13
+00:01:25,180 --> 00:01:28,686
+Speaker SPEAKER_07: Bin Yu from UC Berkeley, who works in statistics and machine learning.
+
+14
+00:01:29,126 --> 00:01:34,433
+Speaker SPEAKER_07: She's a member of the National Academy of Sciences and a winner of the COPS EL Scott Prize.
+
+15
+00:01:34,993 --> 00:01:36,576
+Speaker SPEAKER_07: And I'm Reena Maligray from Google.
+
+16
+00:01:36,617 --> 00:01:37,418
+Speaker SPEAKER_07: I'll be the moderator.
+
+17
+00:01:37,438 --> 00:01:40,542
+Speaker SPEAKER_07: I work on algorithms and theory of machine learning.
+
+18
+00:01:41,146 --> 00:01:42,608
+Speaker SPEAKER_07: So let's start with the first question.
+
+19
+00:01:43,370 --> 00:01:45,293
+Speaker SPEAKER_07: Is there a mathematical model of the mind?
+
+20
+00:01:46,093 --> 00:01:51,001
+Speaker SPEAKER_07: And here, when I say mind, we are essentially referring to its algorithmic capabilities.
+
+21
+00:01:51,022 --> 00:01:57,953
+Speaker SPEAKER_07: And it doesn't have to be the human mind, but it could be an artificial intelligence system with the same abilities or with much more abilities.
+
+22
+00:01:58,974 --> 00:02:05,945
+Speaker SPEAKER_07: And will we be able to find such an algorithm and claim confidently with the mathematical proof that it has those abilities?
+
+23
+00:02:06,525 --> 00:02:08,789
+Speaker SPEAKER_07: Or is this study mostly an empirical science?
+
+24
+00:02:11,807 --> 00:02:15,032
+Speaker SPEAKER_07: Who wants to take this question?
+
+25
+00:02:15,052 --> 00:02:16,414
+Speaker SPEAKER_01: Can I make a comment about that?
+
+26
+00:02:16,435 --> 00:02:17,997
+Speaker SPEAKER_01: Sure, go ahead.
+
+27
+00:02:18,897 --> 00:02:23,444
+Speaker SPEAKER_01: I think most of what we do is not well captured by algorithms.
+
+28
+00:02:23,906 --> 00:02:27,150
+Speaker SPEAKER_01: So most of what we do is immediate intuitive reasoning or perception.
+
+29
+00:02:27,591 --> 00:02:34,600
+Speaker SPEAKER_01: And of course, there are algorithms for learning in the sense that you have rules for changing synaptic weights.
+
+30
+00:02:35,181 --> 00:02:40,650
+Speaker SPEAKER_01: But the result of those rules for changing synaptic weights is a great big system with billions of weights in.
+
+31
+00:02:41,103 --> 00:02:57,137
+Speaker SPEAKER_01: and I don't think, I think it may well be the case that for things like intuitive reasoning you'll never get a significantly simpler explanation of why someone believed something than saying well he had these 100 billion weights
+
+32
+00:02:57,116 --> 00:03:01,722
+Speaker SPEAKER_01: And they were created by this experience, if you want to give an explanation where they came from.
+
+33
+00:03:01,762 --> 00:03:10,069
+Speaker SPEAKER_01: And the result of this is that he has hundreds of thousands of little rules that make some things plausible and other things implausible.
+
+34
+00:03:10,370 --> 00:03:15,876
+Speaker SPEAKER_01: And in this particular case, like 200,000 rules said this and 100,000 rules said that.
+
+35
+00:03:16,556 --> 00:03:18,098
+Speaker SPEAKER_01: So he said this.
+
+36
+00:03:18,818 --> 00:03:24,424
+Speaker SPEAKER_01: And representing that by saying what all the individual rules are is just not going to help you a lot.
+
+37
+00:03:26,530 --> 00:03:27,911
+Speaker SPEAKER_00: OK, I'd like to say a few words.
+
+38
+00:03:28,711 --> 00:03:31,936
+Speaker SPEAKER_07: Percy had raised his hand, so let me just go to Percy next.
+
+39
+00:03:31,955 --> 00:03:32,856
+Speaker SPEAKER_07: Then to Lenore.
+
+40
+00:03:33,598 --> 00:03:36,961
+Speaker SPEAKER_00: Yeah, thanks, Armino, for inviting me to participate on this panel.
+
+41
+00:03:37,001 --> 00:03:52,176
+Speaker SPEAKER_00: The context that you have stated, namely that it doesn't have to be for the human mind, aligns closely with the perspective that Manuel Blum, Alvin Blum, and I have taken in designing, actually, a mathematical model of consciousness.
+
+42
+00:03:52,237 --> 00:03:53,778
+Speaker SPEAKER_00: So we're looking at consciousness.
+
+43
+00:03:54,280 --> 00:03:56,401
+Speaker SPEAKER_00: So I'll say a few words about our model.
+
+44
+00:03:56,382 --> 00:04:09,037
+Speaker SPEAKER_00: In designing our model, we were not looking for a complex model of the brain or cognition, but we were saying we're looking for a very simple model to understand consciousness.
+
+45
+00:04:09,717 --> 00:04:20,050
+Speaker SPEAKER_00: So our mathematical theory is at a very, very high level, a high level of abstraction at levels well above neurons and neuronal activity, so it makes it very simple.
+
+46
+00:04:20,069 --> 00:04:23,875
+Speaker SPEAKER_00: We call our model a conscious AI,
+
+47
+00:04:26,403 --> 00:04:27,764
+Speaker SPEAKER_00: or a Turing machine.
+
+48
+00:04:27,845 --> 00:04:33,690
+Speaker SPEAKER_00: And this is in a way an homage to Turing's simple yet powerful model of computation.
+
+49
+00:04:34,071 --> 00:04:37,675
+Speaker SPEAKER_00: But as Jeff said, our model is not actually a Turing machine.
+
+50
+00:04:38,355 --> 00:04:53,372
+Speaker SPEAKER_00: Since it's not the input, at least for consciousness, it's not the input output that determines its function consciousness, but rather it's a whole bunch of things like it's the architecture, which in our case, we use the global workspace architecture.
+
+51
+00:04:53,351 --> 00:05:04,557
+Speaker SPEAKER_00: It's a kind of predictive dynamics, cycles of prediction, feedback, error correction learning, and certain special processes that are key.
+
+52
+00:05:04,637 --> 00:05:08,728
+Speaker SPEAKER_00: In our case, it's models of the world and other speech.
+
+53
+00:05:08,708 --> 00:05:15,398
+Speaker SPEAKER_00: So it's really, I think, from our perspective, it's not really the input-output map.
+
+54
+00:05:15,577 --> 00:05:21,226
+Speaker SPEAKER_00: It's the structure that gives it the qualitative features of consciousness.
+
+55
+00:05:21,346 --> 00:05:27,836
+Speaker SPEAKER_00: And I would imagine, in terms of cognition, that would also be the case as well.
+
+56
+00:05:28,517 --> 00:05:32,343
+Speaker SPEAKER_00: So I think an input-output map might be too limiting.
+
+57
+00:05:35,668 --> 00:05:36,589
+Speaker SPEAKER_07: Percy, you want to raise hand?
+
+58
+00:05:36,790 --> 00:05:37,651
+Speaker SPEAKER_07: You want to go next?
+
+59
+00:05:37,884 --> 00:05:39,826
+Speaker SPEAKER_05: Yeah, so I could say a few things.
+
+60
+00:05:40,208 --> 00:05:44,833
+Speaker SPEAKER_05: I kind of really struggle with this question because I'm not used to thinking about things in terms of the mind.
+
+61
+00:05:45,553 --> 00:05:53,463
+Speaker SPEAKER_05: And just to put it in perspective, so I'm a computer scientist and I want to build systems that are useful in the world.
+
+62
+00:05:54,142 --> 00:06:02,812
+Speaker SPEAKER_05: And the way I think about this is my goal, personally, is to think about a sort of idealized intelligence.
+
+63
+00:06:02,793 --> 00:06:19,557
+Speaker SPEAKER_05: which is separate from human intelligence, because we know that humans, for all the greatness that we can celebrate, are prone to various types of flaws, such as biases and not being very rational or logical about the way of thinking.
+
+64
+00:06:20,036 --> 00:06:31,213
+Speaker SPEAKER_05: And I think for a long time, AI has made tremendous amount of progress by essentially kind of putting humans on a pedestal and thinking about how we can model or mimic
+
+65
+00:06:31,192 --> 00:06:32,915
+Speaker SPEAKER_05: some aspects of human intelligence.
+
+66
+00:06:33,776 --> 00:06:39,625
+Speaker SPEAKER_05: But I think it's becoming clear that AI is just a very different, you know, alien type of intelligence.
+
+67
+00:06:39,646 --> 00:06:43,672
+Speaker SPEAKER_05: It has immense capabilities that far surpass any humans.
+
+68
+00:06:43,732 --> 00:06:47,536
+Speaker SPEAKER_05: It also has fundamental weaknesses with things like adversary examples.
+
+69
+00:06:47,978 --> 00:06:53,286
+Speaker SPEAKER_05: So I think the analogy, I think, can maybe only take us, you know, so far
+
+70
+00:06:53,485 --> 00:07:00,971
+Speaker SPEAKER_05: Just to, you know, obviously everyone's probably familiar with the overused analogy as of building birds versus airplanes.
+
+71
+00:07:01,153 --> 00:07:07,319
+Speaker SPEAKER_05: I think we're still in the mode of kind of building planes that flap their wings in some sense.
+
+72
+00:07:07,478 --> 00:07:11,463
+Speaker SPEAKER_05: It offers a very compelling existence proof of what we can build.
+
+73
+00:07:11,822 --> 00:07:21,653
+Speaker SPEAKER_05: But I think, and I hope that there's some ways that we can use to kind of make our systems that AI systems that we build kind of much more
+
+74
+00:07:21,632 --> 00:07:22,853
+Speaker SPEAKER_05: and reliable in the future.
+
+75
+00:07:23,555 --> 00:07:38,612
+Speaker SPEAKER_05: So on the question more pertinent to the immediate question of mathematical model, and I latch on to the word model because, you know, just to quote statistician George Box, you know, all models are wrong and some are useful.
+
+76
+00:07:39,273 --> 00:07:45,379
+Speaker SPEAKER_05: And I think that that's kind of the way that, you know, I would like to think about, you know, any sort of model.
+
+77
+00:07:45,399 --> 00:07:51,065
+Speaker SPEAKER_05: I don't think that the complexities of a real world are going to be far more
+
+78
+00:07:51,045 --> 00:08:12,480
+Speaker SPEAKER_05: not capturable by any sort of simple object, but doesn't mean that we can't have clean abstractions and models that help us kind of think about how we should architect things, need some sort of scaffolding, even existing deep learning with the idea of, you know,
+
+79
+00:08:12,459 --> 00:08:19,408
+Speaker SPEAKER_05: having a clean idea of here's loss functions that you can take gradients, those are kind of, it's a mathematical model of how things work.
+
+80
+00:08:19,428 --> 00:08:30,322
+Speaker SPEAKER_05: And that's been, you know, proved to be very productive, even though there's a lot of aspects of the mind or intelligence that are not really captured.
+
+81
+00:08:34,748 --> 00:08:38,011
+Speaker SPEAKER_07: Jack, Ben, you haven't spoken yet, respond.
+
+82
+00:08:40,912 --> 00:08:42,313
+Speaker SPEAKER_07: But you're muted, Ben.
+
+83
+00:08:42,793 --> 00:08:43,115
+Speaker SPEAKER_03: I see.
+
+84
+00:08:44,235 --> 00:08:44,976
+Speaker SPEAKER_03: OK.
+
+85
+00:08:44,996 --> 00:08:46,619
+Speaker SPEAKER_03: Jack, do you want to go first?
+
+86
+00:08:46,639 --> 00:08:47,200
+Speaker SPEAKER_07: No, no, Ben.
+
+87
+00:08:47,220 --> 00:08:47,480
+Speaker SPEAKER_04: Go ahead.
+
+88
+00:08:48,861 --> 00:08:49,663
+Speaker SPEAKER_03: OK.
+
+89
+00:08:50,124 --> 00:08:55,870
+Speaker SPEAKER_03: So to kind of follow what Percy said, I do think artificial intelligence has huge potential.
+
+90
+00:08:56,392 --> 00:09:00,336
+Speaker SPEAKER_03: But I'm of the view that I think human mind is still amazingly efficient.
+
+91
+00:09:00,977 --> 00:09:09,028
+Speaker SPEAKER_03: So saying that it's a kind of different kind of intelligence from the artificial intelligence, if you consider energy consumption,
+
+92
+00:09:09,008 --> 00:09:13,855
+Speaker SPEAKER_03: I don't really think that really the artificial intelligence wins as we know it.
+
+93
+00:09:14,057 --> 00:09:17,522
+Speaker SPEAKER_03: Maybe you have some better way to supply the energy.
+
+94
+00:09:18,182 --> 00:09:30,563
+Speaker SPEAKER_03: And for me, when I look at the question Raina provided, it's really a co-evolution of our mathematical characterization of the mind and with our understanding of the mind through neuroscience measurements.
+
+95
+00:09:31,245 --> 00:09:33,970
+Speaker SPEAKER_03: And now to bring up this important
+
+96
+00:09:34,101 --> 00:09:46,380
+Speaker SPEAKER_03: For me, you can also view that some of the previous speakers that you compute kind of qualitative understanding the mind into machine learning AI systems and do machine learning AI tasks.
+
+97
+00:09:46,400 --> 00:09:47,543
+Speaker SPEAKER_03: So that's one way to do it.
+
+98
+00:09:48,144 --> 00:09:56,897
+Speaker SPEAKER_03: The other is you actually use mathematical models to help generate hypotheses about the mind that we can collect data and to verify.
+
+99
+00:09:57,097 --> 00:10:01,323
+Speaker SPEAKER_03: I mean, I work with Jack, so you can see that I wanted him to speak first.
+
+100
+00:10:02,467 --> 00:10:06,533
+Speaker SPEAKER_03: And, but the important thing for me is empirical evidence, right?
+
+101
+00:10:06,552 --> 00:10:22,211
+Speaker SPEAKER_03: When you compare the two mathematical model and the human mind, if you look at the structure that the neurons actually in our brains are not physically connected, there are gaps between the dendrites.
+
+102
+00:10:23,173 --> 00:10:27,898
+Speaker SPEAKER_03: And there's also a lot of other actors that help, right?
+
+103
+00:10:27,918 --> 00:10:29,320
+Speaker SPEAKER_03: There's something called
+
+104
+00:10:29,653 --> 00:10:31,557
+Speaker SPEAKER_03: malenation, right?
+
+105
+00:10:31,576 --> 00:10:37,404
+Speaker SPEAKER_03: You kind of cold the axons and then the speed of communication will be a lot faster.
+
+106
+00:10:37,445 --> 00:10:41,890
+Speaker SPEAKER_03: And there are two kinds of communication, chemical and also electrical.
+
+107
+00:10:42,852 --> 00:10:47,158
+Speaker SPEAKER_03: So all of that, you can say that maybe you can simplify and we don't need that, it's possible.
+
+108
+00:10:47,558 --> 00:10:54,068
+Speaker SPEAKER_03: But it's also there for us to learn, to say that maybe the neurons from the design shouldn't be all connected together.
+
+109
+00:10:54,109 --> 00:10:56,471
+Speaker SPEAKER_03: And we'll have deletions, we can
+
+110
+00:10:56,451 --> 00:11:00,976
+Speaker SPEAKER_03: take and there's an evolution and how children learn and how the neuron constructs.
+
+111
+00:11:00,998 --> 00:11:03,500
+Speaker SPEAKER_03: I just felt we have a lot to learn from the evolution.
+
+112
+00:11:04,381 --> 00:11:09,268
+Speaker SPEAKER_03: And the key is how do we know we say it's a good model, right?
+
+113
+00:11:09,288 --> 00:11:13,712
+Speaker SPEAKER_03: Even useful as Judge Boxer, what we'll call a mathematical model being useful.
+
+114
+00:11:14,113 --> 00:11:16,416
+Speaker SPEAKER_03: I really just taught the information theory class.
+
+115
+00:11:16,777 --> 00:11:19,539
+Speaker SPEAKER_03: So it's very much in my mind about Shannon information theory.
+
+116
+00:11:19,519 --> 00:11:23,047
+Speaker SPEAKER_03: This is one of the most elegant mathematical theories for communication.
+
+117
+00:11:23,508 --> 00:11:33,826
+Speaker SPEAKER_03: And one thing is that the key concept of entropy-mutual information also has physical meaning and gives physical capacity limits about compression or channel transmission.
+
+118
+00:11:34,668 --> 00:11:37,072
+Speaker SPEAKER_03: And can we somehow
+
+119
+00:11:38,115 --> 00:11:43,400
+Speaker SPEAKER_03: also give us criteria to say, oh, this is the properties this mathematical model have to satisfy.
+
+120
+00:11:43,421 --> 00:11:50,288
+Speaker SPEAKER_03: What are the empirical measurements need to be collected to say this is good enough for now?
+
+121
+00:11:50,567 --> 00:11:51,708
+Speaker SPEAKER_03: And then we go to the next level.
+
+122
+00:11:53,750 --> 00:11:54,011
+Speaker SPEAKER_03: Jack?
+
+123
+00:11:56,894 --> 00:11:59,797
+Speaker SPEAKER_04: OK, so these are all really good points.
+
+124
+00:12:00,118 --> 00:12:03,380
+Speaker SPEAKER_04: I agree with most of what people said.
+
+125
+00:12:03,765 --> 00:12:08,350
+Speaker SPEAKER_04: I feel like this is a hard question to answer because we haven't defined our terms yet.
+
+126
+00:12:08,951 --> 00:12:11,215
+Speaker SPEAKER_04: The question here is, what is the mathematical model of the mind?
+
+127
+00:12:11,274 --> 00:12:12,775
+Speaker SPEAKER_04: And I actually don't know what the mind is.
+
+128
+00:12:13,998 --> 00:12:20,325
+Speaker SPEAKER_04: I assume that you guys, mostly being ML AI guys, think of the mind as the software running on hardware.
+
+129
+00:12:20,586 --> 00:12:21,886
+Speaker SPEAKER_04: And I think that's perfectly fine.
+
+130
+00:12:21,927 --> 00:12:28,794
+Speaker SPEAKER_04: I think that's probably how neuroscientists think about it too.
+
+131
+00:12:29,432 --> 00:12:32,538
+Speaker SPEAKER_04: You know, the general rule of science is there's math for everything.
+
+132
+00:12:32,557 --> 00:12:34,081
+Speaker SPEAKER_04: You just may not know what the math is.
+
+133
+00:12:34,201 --> 00:12:35,984
+Speaker SPEAKER_04: So I think we can all answer the question.
+
+134
+00:12:36,004 --> 00:12:38,908
+Speaker SPEAKER_04: Of course, there's a mathematical theory of the mind at some level.
+
+135
+00:12:38,947 --> 00:12:44,417
+Speaker SPEAKER_04: We just don't know what that is, both because we don't really know that much about the software that's running.
+
+136
+00:12:44,456 --> 00:12:53,030
+Speaker SPEAKER_04: And probably we don't have appropriate math for it anyway, since the brain is a huge, ugly, nonlinear dynamical system.
+
+137
+00:12:53,631 --> 00:12:56,537
+Speaker SPEAKER_04: And we don't really have good math to even describe those sorts of systems.
+
+138
+00:12:56,972 --> 00:13:00,225
+Speaker SPEAKER_04: But I think the real question isn't, is there a mathematical model of the brain?
+
+139
+00:13:00,246 --> 00:13:02,215
+Speaker SPEAKER_04: It's what is the mathematical model of the brain?
+
+140
+00:13:02,335 --> 00:13:06,392
+Speaker SPEAKER_04: And I found it interesting that in this discussion, it mostly
+
+141
+00:13:06,524 --> 00:13:10,087
+Speaker SPEAKER_04: seems to boil down to what can we abstract out?
+
+142
+00:13:10,748 --> 00:13:20,498
+Speaker SPEAKER_04: No one wants to think about modeling the mind in terms of the motion of microtubules inside axons.
+
+143
+00:13:20,518 --> 00:13:21,399
+Speaker SPEAKER_04: That's just crazy.
+
+144
+00:13:21,438 --> 00:13:24,361
+Speaker SPEAKER_04: So there has to be something we can abstract away.
+
+145
+00:13:24,881 --> 00:13:27,384
+Speaker SPEAKER_04: And people have various positions on this.
+
+146
+00:13:30,488 --> 00:13:35,653
+Speaker SPEAKER_04: Even though I'm a neuroscientist and spent many years as a neurophysiologist, my personal view is neurons probably don't matter.
+
+147
+00:13:35,971 --> 00:13:40,197
+Speaker SPEAKER_04: There could be little fairies in the brain hitting each other with wands every time a spike was generated.
+
+148
+00:13:40,236 --> 00:13:46,486
+Speaker SPEAKER_04: And you'd probably get the same thing, as long as those little fairies had the same kind of nonlinear dynamical properties.
+
+149
+00:13:47,168 --> 00:13:51,533
+Speaker SPEAKER_04: So I guess it's kind of a weird question.
+
+150
+00:13:51,695 --> 00:14:03,952
+Speaker SPEAKER_04: But I think it's, I don't know, I think we should maybe focus on this issue of abstraction, since that seems to be what everybody's implicitly dealing with, even though that wasn't the question we started with.
+
+151
+00:14:05,013 --> 00:14:08,057
+Speaker SPEAKER_07: So just quick comments, any quick comments before we move on to the next question?
+
+152
+00:14:11,801 --> 00:14:15,225
+Speaker SPEAKER_00: So Jeff wants to talk and then I do too.
+
+153
+00:14:15,326 --> 00:14:26,700
+Speaker SPEAKER_00: I'd like to quickly just follow up on what Jack said and also what Bin said because I think there's a much more fundamental question here and why have a mathematical theory of the mind?
+
+154
+00:14:26,679 --> 00:14:36,532
+Speaker SPEAKER_00: And I think Jack was pointing out, when Turing talked about his Turing machine in the 30s, I mean, we didn't have a precise notion of algorithm.
+
+155
+00:14:36,952 --> 00:14:41,158
+Speaker SPEAKER_00: We didn't have a precise notion of program or programming language.
+
+156
+00:14:41,217 --> 00:14:43,360
+Speaker SPEAKER_00: And then that evolved to complexity.
+
+157
+00:14:43,760 --> 00:14:49,467
+Speaker SPEAKER_00: And all of these notions became mathematically formalized, and they clarified.
+
+158
+00:14:49,807 --> 00:14:55,455
+Speaker SPEAKER_00: And even if everybody doesn't go back to Turing's notion of algorithm, we all have an idea
+
+159
+00:14:55,434 --> 00:15:00,145
+Speaker SPEAKER_00: that there's a fundamental clear notion that we can all sort of hang on.
+
+160
+00:15:00,687 --> 00:15:10,229
+Speaker SPEAKER_00: So I think that it's really important to be able to have some kind of basic theory which will help us formalize and clarify ideas.
+
+161
+00:15:10,971 --> 00:15:11,773
+Speaker SPEAKER_00: And
+
+162
+00:15:11,753 --> 00:15:13,917
+Speaker SPEAKER_00: Neuroscience is really complicated.
+
+163
+00:15:14,477 --> 00:15:22,495
+Speaker SPEAKER_00: And if we can sort of have an idea to hang on some of these more complex things, I think that would be really fundamental.
+
+164
+00:15:22,514 --> 00:15:25,561
+Speaker SPEAKER_00: And as Shannon, information theory does similar things.
+
+165
+00:15:26,903 --> 00:15:31,111
+Speaker SPEAKER_00: So why have a mathematical theory of the mind, I think is the question.
+
+166
+00:15:31,530 --> 00:15:34,394
+Speaker SPEAKER_07: Jeffrey, quick comment before we move on to the next question?
+
+167
+00:15:34,414 --> 00:15:42,645
+Speaker SPEAKER_01: Yeah, I want to sort of make an analogy between, there's two different relationships you could have between microscopic things and macroscopic things.
+
+168
+00:15:43,126 --> 00:15:46,451
+Speaker SPEAKER_01: So in thermodynamics, you have a nice macroscopic theory.
+
+169
+00:15:47,072 --> 00:15:50,417
+Speaker SPEAKER_01: It's the results of the motions of molecules
+
+170
+00:15:50,683 --> 00:15:55,611
+Speaker SPEAKER_01: But the molecules are all the same in a sense, and you can abstract away and get thermodynamics, and it's great.
+
+171
+00:15:55,692 --> 00:15:56,192
+Speaker SPEAKER_01: It's wonderful.
+
+172
+00:15:56,232 --> 00:15:59,258
+Speaker SPEAKER_01: That's a kind of one of the queen of sciences is like that.
+
+173
+00:15:59,298 --> 00:16:08,052
+Speaker SPEAKER_01: Then if you take the Navier-Stokes equations in the regime where they're giving turbulent flow, you can look at the water coming into a lock.
+
+174
+00:16:08,673 --> 00:16:12,759
+Speaker SPEAKER_01: There's these simple underlying things, which are like the learning algorithm of a neural net.
+
+175
+00:16:13,330 --> 00:16:20,080
+Speaker SPEAKER_01: But the eddies that Leonardo drew, for example, you're never going to have a nice algorithmic theory of those.
+
+176
+00:16:20,780 --> 00:16:24,365
+Speaker SPEAKER_01: You can have a phenomenalist kind of theory of what kinds of eddies you get.
+
+177
+00:16:24,626 --> 00:16:27,711
+Speaker SPEAKER_01: You can understand something about the relationship between the Navier-Stokes equations.
+
+178
+00:16:28,371 --> 00:16:34,561
+Speaker SPEAKER_01: It could all get a lot more interesting if the Navier-Stokes equations learned in order to get nice eddies, which is more like a neural net.
+
+179
+00:16:35,722 --> 00:16:39,248
+Speaker SPEAKER_01: But these seem to be two very different kinds of relationship.
+
+180
+00:16:39,288 --> 00:16:42,072
+Speaker SPEAKER_01: And when someone says, is it an algorithmic theory,
+
+181
+00:16:42,894 --> 00:16:46,639
+Speaker SPEAKER_01: I get the feel like going after the first one when reality is more like the second one.
+
+182
+00:16:48,301 --> 00:16:48,561
+Speaker SPEAKER_07: Thanks.
+
+183
+00:16:50,222 --> 00:16:51,224
+Speaker SPEAKER_07: Let's move on to the next question.
+
+184
+00:16:51,845 --> 00:16:56,048
+Speaker SPEAKER_07: So when you look at today's deep learning framework, what do you think are the main missing elements?
+
+185
+00:16:57,169 --> 00:17:03,017
+Speaker SPEAKER_07: And are there any intellectual or ingredients in the human brain that we should be adding to deep learning?
+
+186
+00:17:06,019 --> 00:17:06,701
+Speaker SPEAKER_01: Can I go first?
+
+187
+00:17:07,761 --> 00:17:10,484
+Speaker SPEAKER_01: OK, go ahead.
+
+188
+00:17:10,505 --> 00:17:12,767
+Speaker SPEAKER_01: Yes, there's lots missing.
+
+189
+00:17:13,944 --> 00:17:15,165
+Speaker SPEAKER_01: but it's mainly not logic.
+
+190
+00:17:16,488 --> 00:17:28,500
+Speaker SPEAKER_01: So if you look at most neural nets until transformers came along, they were taking the scalar product of an activity vector with a weight vector in order to activate a neuron.
+
+191
+00:17:28,519 --> 00:17:32,824
+Speaker SPEAKER_01: And then transformers came along and took scalar products of activity vectors with activity vectors.
+
+192
+00:17:33,404 --> 00:17:35,165
+Speaker SPEAKER_01: And that does all sorts of nice things for you.
+
+193
+00:17:35,227 --> 00:17:38,670
+Speaker SPEAKER_01: It's much more sensitive to correlate covariances.
+
+194
+00:17:38,953 --> 00:17:40,615
+Speaker SPEAKER_01: And so you get all sorts of new abilities.
+
+195
+00:17:41,196 --> 00:17:44,019
+Speaker SPEAKER_01: So that's one thing they were missing, and they now got that with transformers.
+
+196
+00:17:44,480 --> 00:17:56,894
+Speaker SPEAKER_01: There's something else they're missing, which I'm convinced must be happening all over the place in the brain ever since Terry Sanofsky told me in the early ages it was happening, which is that we only have two timescales in most neural nets.
+
+197
+00:17:57,336 --> 00:18:04,944
+Speaker SPEAKER_01: We have the timescale of the activities that change with every new input, and we have the timescale of the weights that change very slowly as you learn.
+
+198
+00:18:06,005 --> 00:18:13,173
+Speaker SPEAKER_01: And that means when you ask about things like short-term memory, you're tempted to put those in neural activities.
+
+199
+00:18:14,413 --> 00:18:19,499
+Speaker SPEAKER_01: But of course, you can't make copies of a bunch of neurons so you can store their state while you use neurons for something else.
+
+200
+00:18:20,259 --> 00:18:31,352
+Speaker SPEAKER_01: So it seems to me there have to be fast weights, that is, weights that adapt rapidly and decay rapidly and are a kind of overlay on the existing weights.
+
+201
+00:18:31,951 --> 00:18:33,513
+Speaker SPEAKER_01: And using fast weights,
+
+202
+00:18:33,982 --> 00:18:37,748
+Speaker SPEAKER_01: you can make things like a, you can do true recursion.
+
+203
+00:18:38,148 --> 00:18:39,289
+Speaker SPEAKER_01: And we're missing that at present.
+
+204
+00:18:39,309 --> 00:18:45,478
+Speaker SPEAKER_01: So in true recursion, you're reusing the same neurons and the same connections for the recursive call.
+
+205
+00:18:46,219 --> 00:18:49,022
+Speaker SPEAKER_01: And you can only do that if you can remember the states of those neurons.
+
+206
+00:18:49,042 --> 00:18:50,184
+Speaker SPEAKER_01: So you need something like a stack.
+
+207
+00:18:50,664 --> 00:18:53,449
+Speaker SPEAKER_01: And you can put that stack into an associative memory made of fast weights.
+
+208
+00:18:54,450 --> 00:18:55,771
+Speaker SPEAKER_01: So I think
+
+209
+00:18:56,089 --> 00:18:57,957
+Speaker SPEAKER_01: We don't have nearly enough timescales.
+
+210
+00:18:57,977 --> 00:19:04,040
+Speaker SPEAKER_01: If you look at biology, look at the adaptation of the eye, there's like six different timescales, or maybe more.
+
+211
+00:19:05,354 --> 00:19:06,516
+Speaker SPEAKER_01: We need more timescales.
+
+212
+00:19:06,536 --> 00:19:13,467
+Speaker SPEAKER_01: And in particular, we need at least one more very important timescale, which is something that gives you short-term memory in weights, which is much higher capacity.
+
+213
+00:19:14,189 --> 00:19:17,173
+Speaker SPEAKER_01: But because it's such high capacity, you don't need to make it that efficient.
+
+214
+00:19:17,193 --> 00:19:19,017
+Speaker SPEAKER_01: So you can use Azure product learning for it.
+
+215
+00:19:19,037 --> 00:19:21,039
+Speaker SPEAKER_01: You don't need to use error correcting learning.
+
+216
+00:19:21,380 --> 00:19:25,366
+Speaker SPEAKER_01: You can get a lot into a short weight, into a fast weight memory with Azure product learning.
+
+217
+00:19:25,386 --> 00:19:26,970
+Speaker SPEAKER_01: So I think that's a huge missing ingredient.
+
+218
+00:19:27,450 --> 00:19:29,032
+Speaker SPEAKER_01: And I'll tell you why we don't have it.
+
+219
+00:19:29,501 --> 00:19:37,717
+Speaker SPEAKER_01: Why we don't have it is because of the damn hardware we have, where it takes 200 cycles to get a weight from memory, so you better reuse that weight a whole bunch of times.
+
+220
+00:19:38,538 --> 00:19:42,865
+Speaker SPEAKER_01: Now, if you've got a fast weight, it's going to be different for every training case, so you can't reuse it.
+
+221
+00:19:43,507 --> 00:19:48,455
+Speaker SPEAKER_01: So the actual hardware you use strongly militates against having fast weights.
+
+222
+00:19:49,127 --> 00:19:56,036
+Speaker SPEAKER_01: And I got Ilya to implement fast weights in 2010 when we were doing early language models, character-based language models, and they worked.
+
+223
+00:19:56,636 --> 00:20:03,224
+Speaker SPEAKER_01: It's just they weren't efficient because you can't amortize the cost of fetching a weight from memory.
+
+224
+00:20:03,244 --> 00:20:12,394
+Speaker SPEAKER_01: And it's crazy that our theories of the brain are strongly skewed by the cost of, by amortizing the cost of a memory fetch since the brain doesn't do that.
+
+225
+00:20:14,958 --> 00:20:16,299
+Speaker SPEAKER_07: Okay, Lenore, you raised your hand.
+
+226
+00:20:16,903 --> 00:20:17,625
+Speaker SPEAKER_00: Yeah.
+
+227
+00:20:18,105 --> 00:20:29,175
+Speaker SPEAKER_00: So, you know, there's some current work by Yashua Bengio, Rufus von Rollen, and Ryota Kanai to incorporate global workspace architecture into deep learning.
+
+228
+00:20:29,616 --> 00:20:43,671
+Speaker SPEAKER_00: So I'm not sure how important, how good that is, but I know that we use the global workspace architecture of Bernhard Baars, cognitive neuroscientist Bernhard Baars in our model too, which is very powerful.
+
+229
+00:20:43,651 --> 00:21:01,223
+Speaker SPEAKER_00: And actually, it's not so surprising that they would think about global workspace, because in fact, that was the original model of cognition in the 60s at Carnegie Mellon by people like Alan Newell, Herb Simon, Raj Reddy, his blackboard.
+
+230
+00:21:01,625 --> 00:21:06,974
+Speaker SPEAKER_00: So I think the idea of incorporating things that were at the beginning of the theory
+
+231
+00:21:06,954 --> 00:21:11,981
+Speaker SPEAKER_00: into deep learning might be actually very interesting.
+
+232
+00:21:12,542 --> 00:21:22,096
+Speaker SPEAKER_00: And that model of global workspace where you have a global broadcast and you have a competition to get up on the stage is a very powerful model.
+
+233
+00:21:22,897 --> 00:21:25,381
+Speaker SPEAKER_00: So that's just a comment.
+
+234
+00:21:25,481 --> 00:21:28,766
+Speaker SPEAKER_04: Jack?
+
+235
+00:21:29,247 --> 00:21:33,373
+Speaker SPEAKER_04: I just want to follow up on what Jeff was saying, maybe a slightly different perspective.
+
+236
+00:21:33,814 --> 00:21:36,237
+Speaker SPEAKER_04: The one thing you learn if you
+
+237
+00:21:36,502 --> 00:21:39,306
+Speaker SPEAKER_04: work on brains is they're incredibly dynamic.
+
+238
+00:21:39,425 --> 00:21:41,788
+Speaker SPEAKER_04: Nothing is stable, including representations.
+
+239
+00:21:42,449 --> 00:21:46,693
+Speaker SPEAKER_04: So representations change at all time scales that you can record.
+
+240
+00:21:47,875 --> 00:21:50,278
+Speaker SPEAKER_04: In particular, attention actually changes representation.
+
+241
+00:21:50,357 --> 00:21:59,788
+Speaker SPEAKER_04: So everywhere anybody's looked in the brain, attention changes the way information, not just the, it's not like a volume control that actually changes the way the information is represented.
+
+242
+00:22:00,689 --> 00:22:03,372
+Speaker SPEAKER_04: And the amount by which
+
+243
+00:22:04,009 --> 00:22:09,695
+Speaker SPEAKER_04: the representation can change in a brain area is directly proportional to the attentional effects in that area.
+
+244
+00:22:10,176 --> 00:22:14,361
+Speaker SPEAKER_04: So in primary visual cortex, attention has about a 2% effect on spike rates.
+
+245
+00:22:14,902 --> 00:22:17,104
+Speaker SPEAKER_04: And if you look at, it's really, it's very minimal.
+
+246
+00:22:17,845 --> 00:22:24,672
+Speaker SPEAKER_04: And if you look at the way the attention can change representation, it's a minuscule effect that's so small you can't measure it.
+
+247
+00:22:25,492 --> 00:22:33,662
+Speaker SPEAKER_04: If you go up into the mid-level of the visual system, where attention's having maybe a 15% or 20% effect, and on the spike rate overall,
+
+248
+00:22:34,097 --> 00:22:36,942
+Speaker SPEAKER_04: then it also changes representation by 15 or 20%.
+
+249
+00:22:37,182 --> 00:22:46,776
+Speaker SPEAKER_04: If you go into prefrontal cortex where attention can change the spike rate from zero to full blast, attention can also completely change the way information is represented.
+
+250
+00:22:47,196 --> 00:22:50,942
+Speaker SPEAKER_04: And this has been shown both in neurophysiology and in MRI.
+
+251
+00:22:51,103 --> 00:22:54,548
+Speaker SPEAKER_04: In fact, it's one of the closest correspondences between neurophysiology and MRI that we have.
+
+252
+00:22:55,849 --> 00:23:03,800
+Speaker SPEAKER_04: And this thing, this dynamic thing that happens that to representation online all the time is
+
+253
+00:23:04,152 --> 00:23:25,047
+Speaker SPEAKER_04: as far as I know, basically not reflected anywhere in AI right now because most of the, you know, the whole field is kind of based on this train test, you know, kind of paradigm where, you know, you learn, your network learns and then you release it in the wild and it's updated only a small amount after that.
+
+254
+00:23:25,211 --> 00:23:29,659
+Speaker SPEAKER_04: So I think that's probably, I think this is very adjacent to what Jeff was saying.
+
+255
+00:23:29,719 --> 00:23:40,154
+Speaker SPEAKER_04: There's things happening at multiple timescales in the brain, and the difference between attention and learning is almost really more of just a difference of timescale than anything else.
+
+256
+00:23:40,895 --> 00:23:51,692
+Speaker SPEAKER_04: And I think if you pay attention to something a lot, you know, over and over repeatedly, then those short-term plasticity changes become long-term plasticity changes, and that's what we call learning.
+
+257
+00:23:52,178 --> 00:23:56,994
+Speaker SPEAKER_04: So I think that's a big missing feature of the current technology that we have in AI.
+
+258
+00:23:58,439 --> 00:23:58,539
+Speaker SPEAKER_07: Okay.
+
+259
+00:23:58,559 --> 00:24:00,365
+Speaker SPEAKER_07: Bin, let's keep responses under one minute.
+
+260
+00:24:01,932 --> 00:24:04,595
+Speaker SPEAKER_03: Yeah, I also think dynamics is extremely important.
+
+261
+00:24:04,734 --> 00:24:11,323
+Speaker SPEAKER_03: And also the architecture of real brain keep changing, depends on the memory learning, things get deleted and things get added.
+
+262
+00:24:11,343 --> 00:24:14,586
+Speaker SPEAKER_03: It depends on how the strands of the connections are.
+
+263
+00:24:15,107 --> 00:24:17,111
+Speaker SPEAKER_03: So that's not really in there.
+
+264
+00:24:17,451 --> 00:24:21,996
+Speaker SPEAKER_03: Maybe it's a hardware issue, but I also want to bring out this environment, right?
+
+265
+00:24:22,057 --> 00:24:27,383
+Speaker SPEAKER_03: In the earlier talk, we know that all the data set we learn with this deep learning is deficient.
+
+266
+00:24:27,363 --> 00:24:29,486
+Speaker SPEAKER_03: It's not a real environment.
+
+267
+00:24:29,605 --> 00:24:37,335
+Speaker SPEAKER_03: So you're asking this AI to learn in a very artificial, synthetic, and often misleading environment.
+
+268
+00:24:37,355 --> 00:24:44,304
+Speaker SPEAKER_03: And you're not really giving, even you have the best architecture, you could put this type of data for the architecture to learn.
+
+269
+00:24:44,364 --> 00:24:47,728
+Speaker SPEAKER_03: It won't be just learning like real life experiences.
+
+270
+00:24:47,748 --> 00:24:51,272
+Speaker SPEAKER_03: So that I want to bring in is also what you feed to this structure.
+
+271
+00:24:51,854 --> 00:24:55,377
+Speaker SPEAKER_03: And you have deficiency of structure, but also
+
+272
+00:24:55,779 --> 00:24:57,942
+Speaker SPEAKER_03: data makes a huge difference as well.
+
+273
+00:24:59,244 --> 00:24:59,545
+Speaker SPEAKER_05: Percy?
+
+274
+00:25:01,007 --> 00:25:04,332
+Speaker SPEAKER_05: Yeah, this one's a little bit of, I'm going to say something a little bit out there.
+
+275
+00:25:04,352 --> 00:25:15,106
+Speaker SPEAKER_05: Again, thinking beyond kind of just the kind of our conception of a single agent mind, which is often you think about things as a kind of a centralized way.
+
+276
+00:25:15,768 --> 00:25:21,957
+Speaker SPEAKER_05: I think, you know, because we're, if we're dealing with artificial
+
+277
+00:25:21,936 --> 00:25:29,586
+Speaker SPEAKER_05: neural networks and, you know, systems, I think the way that things develop could be, you know, very, very different.
+
+278
+00:25:29,906 --> 00:25:36,595
+Speaker SPEAKER_05: I think there are often multiple models created by different, you know, stakeholders.
+
+279
+00:25:37,895 --> 00:25:44,784
+Speaker SPEAKER_05: How do these, I think, about, you know, how can you build a kind of a swarm or a collection of these things that could, you know, interact?
+
+280
+00:25:45,025 --> 00:25:51,893
+Speaker SPEAKER_05: I mean, for humans, we have language in other ways, but there's nothing to say that we can't
+
+281
+00:25:51,873 --> 00:25:57,816
+Speaker SPEAKER_05: you know, back propagate or send some more kind of continuous signals that could
+
+282
+00:25:57,998 --> 00:26:01,723
+Speaker SPEAKER_05: you know, build up intelligent systems in a different way.
+
+283
+00:26:02,484 --> 00:26:06,069
+Speaker SPEAKER_05: Another thing that's kind of interesting is this kind of transplant.
+
+284
+00:26:06,089 --> 00:26:15,944
+Speaker SPEAKER_05: If you have these large pre-trained models such as, you know, BERT and NLP, it's the same kind of thing that's used in a lot of different places.
+
+285
+00:26:16,886 --> 00:26:25,660
+Speaker SPEAKER_05: And so there's a certain sense of, you know, and that's just kind of the reality of how these systems are kind of built up in
+
+286
+00:26:25,875 --> 00:26:34,573
+Speaker SPEAKER_05: know in practice and what are the implications for how a kind of a single source can kind of influence a bunch of different things.
+
+287
+00:26:34,613 --> 00:26:41,926
+Speaker SPEAKER_05: So I think you know our kind of human analogies of you know evolution and kind of learning
+
+288
+00:26:41,906 --> 00:26:46,593
+Speaker SPEAKER_05: kind of exhibit maybe two types of adaptivity.
+
+289
+00:26:46,653 --> 00:26:56,204
+Speaker SPEAKER_05: But I think in a more kind of systems way that's happening, there's maybe other ways of kind of slicing up the space.
+
+290
+00:26:57,886 --> 00:26:58,507
+Speaker SPEAKER_07: Next question.
+
+291
+00:26:59,228 --> 00:27:00,569
+Speaker SPEAKER_07: How do we remember things?
+
+292
+00:27:01,371 --> 00:27:07,117
+Speaker SPEAKER_07: If we meet someone, we can later recall who we met, what we talked about, what are the related events and people.
+
+293
+00:27:08,359 --> 00:27:10,362
+Speaker SPEAKER_07: So is that some kind of a knowledge graph
+
+294
+00:27:10,612 --> 00:27:14,338
+Speaker SPEAKER_07: of objects in our brain, and how is this implemented in the brain?
+
+295
+00:27:14,358 --> 00:27:17,884
+Speaker SPEAKER_07: Is there a lookup table with C++-style objects with pointers?
+
+296
+00:27:18,967 --> 00:27:26,019
+Speaker SPEAKER_07: And how would you get something like this knowledge graph arising automatically in a deep learning system?
+
+297
+00:27:26,599 --> 00:27:32,550
+Speaker SPEAKER_07: Let's keep responses brief.
+
+298
+00:27:32,570 --> 00:27:33,092
+Speaker SPEAKER_05: Who wants to go?
+
+299
+00:27:34,877 --> 00:27:35,839
+Speaker SPEAKER_05: I can say something.
+
+300
+00:27:36,821 --> 00:27:56,261
+Speaker SPEAKER_05: So one thing maybe to clarify about knowledge graphs is that today we think of knowledge graphs as essentially triple stores of facts, and I think this is really not kind of, and maybe you are able to do various types of queries on these ground facts, but I think
+
+301
+00:27:56,241 --> 00:28:11,719
+Speaker SPEAKER_05: You know, knowledge representation, I think, is a really interesting general thing, at least in kind of the logical tradition has had a lot more complexity if you want to store not just facts such as, you know, Percy is in a Google meet.
+
+302
+00:28:11,699 --> 00:28:22,061
+Speaker SPEAKER_05: meeting right now, but there are five cats in the room or things like negation or things like propositional attitudes or representing beliefs.
+
+303
+00:28:22,182 --> 00:28:30,500
+Speaker SPEAKER_05: I know that Jeff said this and that Rena thinks a lot of these types of knowledge are
+
+304
+00:28:30,480 --> 00:28:34,205
+Speaker SPEAKER_05: extremely kind of challenging to represent.
+
+305
+00:28:34,286 --> 00:28:47,964
+Speaker SPEAKER_05: And I think the modern solution is just pretend that a problem doesn't kind of exist and you learn various types of associations that allow you to kind of fake certain types of abilities.
+
+306
+00:28:48,025 --> 00:28:55,355
+Speaker SPEAKER_05: But I think the fundamental questions about kind of knowledge representation are still kind of unsolved.
+
+307
+00:28:57,198 --> 00:28:57,298
+Unknown Speaker: Next.
+
+308
+00:29:00,231 --> 00:29:00,531
+Speaker SPEAKER_07: Jack?
+
+309
+00:29:01,835 --> 00:29:07,844
+Speaker SPEAKER_04: I feel compelled to say something about the brain, but I'm constrained by the fact that you asked for a short answer.
+
+310
+00:29:08,444 --> 00:29:13,133
+Speaker SPEAKER_04: I think it's really useful to think of two memory systems in the human brain.
+
+311
+00:29:13,252 --> 00:29:16,198
+Speaker SPEAKER_04: One is this long-term store that's probably
+
+312
+00:29:16,567 --> 00:29:32,810
+Speaker SPEAKER_04: as a shortcut, best to think of it as some sort of Hopfield network that is like, you know, buried in the synapses in some way that we don't really understand and involves the hippocampus and, you know, pararental cortex and stuff down deep down in the giblets of the brain.
+
+313
+00:29:33,211 --> 00:29:35,654
+Speaker SPEAKER_04: And then you have this sort of
+
+314
+00:29:36,292 --> 00:29:49,611
+Speaker SPEAKER_04: It's a more modern I would say cortical working memory kind of store that's really bound up with language and is broadly distributed over all of human cortex and when you have incoming sensory information, essentially it gets distributed.
+
+315
+00:29:50,182 --> 00:29:57,211
+Speaker SPEAKER_04: probably interacting with whatever prior you had online throughout this cortical sort of semantic network.
+
+316
+00:29:57,231 --> 00:30:08,588
+Speaker SPEAKER_04: And then that somehow or other, there are multiple points at which sensory information is transformed into that sort of working memory semantic knowledge.
+
+317
+00:30:08,608 --> 00:30:16,701
+Speaker SPEAKER_04: And there are multiple points at which long-term memories are sort of also probed and tickled and interact with that.
+
+318
+00:30:16,780 --> 00:30:18,383
+Speaker SPEAKER_04: And you end up with basically a big soup
+
+319
+00:30:18,801 --> 00:30:23,586
+Speaker SPEAKER_04: of long-term priors, short-term priors, and incoming sensory information that all interacts.
+
+320
+00:30:24,567 --> 00:30:26,891
+Speaker SPEAKER_04: And it interacts everywhere.
+
+321
+00:30:27,290 --> 00:30:30,054
+Speaker SPEAKER_04: So there's no simple answer to this.
+
+322
+00:30:30,994 --> 00:30:35,240
+Speaker SPEAKER_04: And I should just mention, like, neuroscientists have no clue how long-term memories are stored.
+
+323
+00:30:35,980 --> 00:30:41,006
+Speaker SPEAKER_04: It's absolutely, I mean, they have ideas, there's theories, but no real solid data on anything.
+
+324
+00:30:42,847 --> 00:30:43,729
+Speaker SPEAKER_03: Ben?
+
+325
+00:30:44,771 --> 00:30:58,451
+Speaker SPEAKER_03: Well, there seems to be belief that if you take the concept, then like a hammer, it seems to be stored both as a tool, but also functionality and visual.
+
+326
+00:30:58,952 --> 00:31:05,261
+Speaker SPEAKER_03: So I think each concept also has multiple representations at different parts, and they're kind of connected.
+
+327
+00:31:05,241 --> 00:31:16,413
+Speaker SPEAKER_03: And I don't know how the short-term memory and long, I would believe that the long-term memory definitely probably has multiple storage places for the same experience, but then connect them.
+
+328
+00:31:16,733 --> 00:31:31,689
+Speaker SPEAKER_03: And the short-term memory, I don't know how that will work easily to see, are they still associated in some way through multiple views of the same thing, or is kind of independently stored and later connected?
+
+329
+00:31:32,088 --> 00:31:35,011
+Speaker SPEAKER_03: That I, maybe Jack can share some light on.
+
+330
+00:31:34,991 --> 00:31:37,397
+Speaker SPEAKER_03: mind that work with short-term, long-term memory.
+
+331
+00:31:37,999 --> 00:31:39,963
+Speaker SPEAKER_04: Yeah, can I add just one more really quick thing?
+
+332
+00:31:40,244 --> 00:31:40,644
+Speaker SPEAKER_04: Go ahead, yeah.
+
+333
+00:31:40,746 --> 00:31:43,913
+Speaker SPEAKER_04: Because Ben's point was important and I neglected it.
+
+334
+00:31:44,314 --> 00:31:53,035
+Speaker SPEAKER_04: If you just think about the concept of dog, like you show somebody movie of a dog or you say the word dog, you get this, you can map brain activity
+
+335
+00:31:53,385 --> 00:32:14,465
+Speaker SPEAKER_04: related to dog across a constellation of like 10 different dog related areas and the data that we have looks like you know the way a dog looks is stored in areas near the visual system the way a dog sounds is stored in areas near the auditory system prefrontal cortex contains prior information about like you know maybe a dog bit you when you were a kid you don't like dogs and of course our
+
+336
+00:32:15,204 --> 00:32:23,336
+Speaker SPEAKER_04: we end up having this unitary concept of dog, but in the hardware, it's represented in this very diffused distributed code.
+
+337
+00:32:23,837 --> 00:32:25,339
+Speaker SPEAKER_04: Yeah, that's been mentioned.
+
+338
+00:32:27,022 --> 00:32:32,912
+Speaker SPEAKER_01: So one comment on that is if you ask what is a word, a word is actually an association of a sound and a meaning.
+
+339
+00:32:33,633 --> 00:32:34,314
+Speaker SPEAKER_01: That's what a word is.
+
+340
+00:32:37,679 --> 00:32:39,321
+Speaker SPEAKER_07: Any other quick comments before we move to the next one?
+
+341
+00:32:39,721 --> 00:32:40,182
+Speaker SPEAKER_07: Next question?
+
+342
+00:32:43,183 --> 00:32:49,796
+Speaker SPEAKER_07: Okay, so the next question is that as humans we can learn skills and functions that build on top of each other and grow over time.
+
+343
+00:32:50,317 --> 00:32:54,143
+Speaker SPEAKER_07: So is there a library of modules in the human brain?
+
+344
+00:32:54,243 --> 00:32:55,365
+Speaker SPEAKER_07: Are they physically separate?
+
+345
+00:32:56,146 --> 00:33:01,256
+Speaker SPEAKER_07: Is there a program called stack that tracks which functions are being called and what arguments are being passed?
+
+346
+00:33:02,057 --> 00:33:05,242
+Speaker SPEAKER_07: And do we need such stacks and modules in deep networks?
+
+347
+00:33:06,438 --> 00:33:12,564
+Speaker SPEAKER_01: So I already gave an answer to that in a previous answer, which is, I think we do have stacks and they're done in fast weights.
+
+348
+00:33:13,045 --> 00:33:15,186
+Speaker SPEAKER_01: And that's what allows neural networks to do real recursion.
+
+349
+00:33:17,388 --> 00:33:17,788
+Speaker SPEAKER_07: Interesting.
+
+350
+00:33:19,590 --> 00:33:19,990
+Speaker SPEAKER_07: Anyone else?
+
+351
+00:33:25,297 --> 00:33:31,702
+Speaker SPEAKER_07: Jack, is there any guess on how modules are called?
+
+352
+00:33:33,234 --> 00:33:37,680
+Speaker SPEAKER_07: So in programming languages, modules, when you call them functions, then you have to pass arguments.
+
+353
+00:33:38,441 --> 00:33:39,642
+Speaker SPEAKER_07: Is there any guess?
+
+354
+00:33:40,303 --> 00:33:42,945
+Speaker SPEAKER_07: I know this is a very hard... Yeah, I don't think so.
+
+355
+00:33:43,026 --> 00:34:01,605
+Speaker SPEAKER_04: I mean, as Menar mentioned earlier, there's really old ideas from the 1950s that are, you know, very kind of classic Von Neumann architecture inspired ideas about how the brain works, but how those map onto neural networks, I don't even think you guys in artificial neural network world have solved that yet.
+
+356
+00:34:02,007 --> 00:34:03,208
+Speaker SPEAKER_04: And we're certainly not going to solve that
+
+357
+00:34:03,593 --> 00:34:15,166
+Speaker SPEAKER_04: in the brain until you guys have a more formal relationship between those two domains of AI magisteria that you're fighting with.
+
+358
+00:34:15,186 --> 00:34:17,407
+Speaker SPEAKER_07: So how would this happen in a machine learning system?
+
+359
+00:34:17,788 --> 00:34:20,030
+Speaker SPEAKER_07: How would you have different modules that can call each other?
+
+360
+00:34:25,155 --> 00:34:25,416
+Speaker SPEAKER_07: Anyone?
+
+361
+00:34:28,059 --> 00:34:30,322
+Speaker SPEAKER_02: I don't see what the problem is in a machine learning system.
+
+362
+00:34:30,362 --> 00:34:32,284
+Speaker SPEAKER_02: You just have different modules that can call each other.
+
+363
+00:34:33,192 --> 00:34:35,275
+Speaker SPEAKER_07: So do they have to be physically separate modules?
+
+364
+00:34:35,735 --> 00:34:42,487
+Speaker SPEAKER_07: Or like maybe even a single network, it can do multiple functions.
+
+365
+00:34:43,128 --> 00:34:45,853
+Speaker SPEAKER_07: But it's not necessary that the functions are really separate.
+
+366
+00:34:45,873 --> 00:34:48,317
+Speaker SPEAKER_07: And if they're all separate, then they won't be able to share subroutines.
+
+367
+00:34:49,338 --> 00:34:52,483
+Speaker SPEAKER_01: Obviously, I think we have distributed representations.
+
+368
+00:34:52,543 --> 00:34:54,327
+Speaker SPEAKER_01: And so we do a huge amount of sharing.
+
+369
+00:34:55,989 --> 00:34:59,976
+Speaker SPEAKER_01: But the question you asked was in a machine learning system as opposed to a neural network.
+
+370
+00:35:00,445 --> 00:35:02,929
+Speaker SPEAKER_07: Yeah, sorry, I meant deep learning.
+
+371
+00:35:03,009 --> 00:35:07,336
+Speaker SPEAKER_03: Can I just make a point?
+
+372
+00:35:09,139 --> 00:35:17,695
+Speaker SPEAKER_03: Yeah, I think one thing I want to bring in is like, you know, the concept usually started as graphs or collection of neurons, you know.
+
+373
+00:35:18,333 --> 00:35:20,320
+Speaker SPEAKER_03: communicating to other collections of neurons.
+
+374
+00:35:21,202 --> 00:35:31,077
+Speaker SPEAKER_03: I think for the human brain, I believe there's a lot of inherent organization one will bone through years and years of evolution.
+
+375
+00:35:31,393 --> 00:35:32,936
+Speaker SPEAKER_03: That's really put advantage.
+
+376
+00:35:32,976 --> 00:35:36,000
+Speaker SPEAKER_03: I'm sure this connection formed already when the futures was developed.
+
+377
+00:35:36,019 --> 00:35:38,322
+Speaker SPEAKER_03: It's not just mind with bones suddenly become a person.
+
+378
+00:35:39,184 --> 00:35:43,710
+Speaker SPEAKER_03: And so that is like, that's something that deep learning just doesn't have.
+
+379
+00:35:44,231 --> 00:35:50,699
+Speaker SPEAKER_03: And how can we build that in to help to have a jumpstart than start from like ImageNet, right?
+
+380
+00:35:50,719 --> 00:35:54,003
+Speaker SPEAKER_03: That's very, very barren environment, if you ask me.
+
+381
+00:35:54,083 --> 00:35:55,865
+Speaker SPEAKER_03: And with no good
+
+382
+00:35:55,846 --> 00:35:57,847
+Speaker SPEAKER_03: like priors, you had it in there.
+
+383
+00:35:58,389 --> 00:35:59,489
+Speaker SPEAKER_01: Actually that's not quite true.
+
+384
+00:35:59,630 --> 00:36:12,563
+Speaker SPEAKER_01: So if you're willing to use huge amounts of computation like they do at Google, you can have these evolutionary systems for designing the architectures and you can show that they design architectures to do slightly better.
+
+385
+00:36:13,603 --> 00:36:22,072
+Speaker SPEAKER_01: And that the evolutionary stage there is very, is what will correspond to evolution that gives you an architecture that works nicely for this task.
+
+386
+00:36:23,099 --> 00:36:29,166
+Speaker SPEAKER_03: Yeah I mean I didn't know that you guys doing that all right that's great but do you are you going to share with the academic world?
+
+387
+00:36:29,728 --> 00:36:34,974
+Speaker SPEAKER_01: Oh yeah this is published but there's Kwok Lee looks for papers by Kwok Lee.
+
+388
+00:36:36,396 --> 00:36:39,420
+Speaker SPEAKER_03: Is the architecture and the weights all shared?
+
+389
+00:36:41,503 --> 00:36:44,887
+Speaker SPEAKER_01: You're learning simultaneously the you have an inner loop
+
+390
+00:36:45,273 --> 00:36:52,159
+Speaker SPEAKER_01: which is like development and learning, which is saying, for this architecture, how well can I do at this task?
+
+391
+00:36:52,500 --> 00:36:54,942
+Speaker SPEAKER_01: And then you have an outer loop, which is tinkering with the architecture.
+
+392
+00:36:56,182 --> 00:36:59,646
+Speaker SPEAKER_03: So you think with the data, you don't need any prior information to put in.
+
+393
+00:37:00,106 --> 00:37:03,228
+Speaker SPEAKER_03: I was arguing that the genetics put us at advantage.
+
+394
+00:37:03,449 --> 00:37:05,690
+Speaker SPEAKER_03: And you believe that we don't really need that step.
+
+395
+00:37:06,072 --> 00:37:09,875
+Speaker SPEAKER_03: We can just, with huge, I mean, the cost here is a huge amount of computation.
+
+396
+00:37:10,576 --> 00:37:13,018
+Speaker SPEAKER_01: What I'm saying is, if you're willing to
+
+397
+00:37:14,094 --> 00:37:31,159
+Speaker SPEAKER_01: compete with all the computation all the members of our species have done in their whole evolutionary history, because you're Google, then you can afford to learn many, many, many times at the same task and get better and better at learning that task by gradually tinkering with the architecture.
+
+398
+00:37:31,882 --> 00:37:35,710
+Speaker SPEAKER_03: But how do you have all this different creativity in different genius brains?
+
+399
+00:37:35,851 --> 00:37:44,693
+Speaker SPEAKER_03: And is Google going to have the ubiquitous genius created in such a way, or are you going to have different versions of this creative brain?
+
+400
+00:37:47,608 --> 00:37:54,706
+Speaker SPEAKER_01: I don't know the answer to that, but at present obviously you can't really compete with all the computation that's been done in our whole evolutionary history.
+
+401
+00:37:55,146 --> 00:37:58,213
+Speaker SPEAKER_01: So the evolutionary bit of it has to be somewhat restricted.
+
+402
+00:37:58,815 --> 00:38:05,230
+Speaker SPEAKER_01: You don't get it to search all possibilities, you get it to search some set of possibilities, and within those possibilities
+
+403
+00:38:05,210 --> 00:38:16,943
+Speaker SPEAKER_01: It can find, like you say, I'm going to have this basic module, which is going to be a couple of layers of copying things, and then on the side, a bit of convolution, and then I'm going to put them together, and I'm going to make something out of those.
+
+404
+00:38:17,264 --> 00:38:20,588
+Speaker SPEAKER_01: Now, how should I design that module so everything works better when I train it?
+
+405
+00:38:21,210 --> 00:38:22,391
+Speaker SPEAKER_01: And you can do that search.
+
+406
+00:38:22,911 --> 00:38:25,614
+Speaker SPEAKER_07: So, Jeffrey, how would you know that you have to create a new module?
+
+407
+00:38:27,467 --> 00:38:32,556
+Speaker SPEAKER_01: Well, you've got hyperparameters of this module and you're exploring the hyperparameters of the module, right?
+
+408
+00:38:32,577 --> 00:38:35,882
+Speaker SPEAKER_07: And how do you know you have to now allocate a new module for a new concept?
+
+409
+00:38:38,547 --> 00:38:40,088
+Speaker SPEAKER_01: These aren't exactly modules for concepts.
+
+410
+00:38:40,128 --> 00:38:45,177
+Speaker SPEAKER_01: These are the modules out of which you will build a perceptual system, for example, a multi-layer perceptual system.
+
+411
+00:38:46,440 --> 00:38:50,606
+Speaker SPEAKER_07: So how do new concepts then form in our brain or in a deep learning system?
+
+412
+00:38:51,952 --> 00:38:53,835
+Speaker SPEAKER_01: Oh, I think that's it.
+
+413
+00:38:54,697 --> 00:38:57,583
+Speaker SPEAKER_01: Let's separate that from the evolutionary argument of what's innate.
+
+414
+00:38:58,724 --> 00:39:00,829
+Speaker SPEAKER_01: I think concepts are attractors.
+
+415
+00:39:01,731 --> 00:39:03,092
+Speaker SPEAKER_01: They're all distributed representations.
+
+416
+00:39:03,574 --> 00:39:08,923
+Speaker SPEAKER_01: So one thing that Papa Demetrius said, which was when he went for assemblies, assemblies are a really bad idea.
+
+417
+00:39:08,963 --> 00:39:11,228
+Speaker SPEAKER_01: They're just a gang of grandmother cells.
+
+418
+00:39:11,208 --> 00:39:15,536
+Speaker SPEAKER_01: And if you're going to have a gang of cells, you want them all doing different things, not all doing the same thing.
+
+419
+00:39:16,157 --> 00:39:19,264
+Speaker SPEAKER_01: Assemblies are equivalent to what coding theorists call a replica code.
+
+420
+00:39:19,603 --> 00:39:22,009
+Speaker SPEAKER_01: And we know that replica codes are a really bad idea.
+
+421
+00:39:23,050 --> 00:39:26,958
+Speaker SPEAKER_01: And if you ask, will stochastic gradient descent ever learn a replica code?
+
+422
+00:39:27,038 --> 00:39:27,559
+Speaker SPEAKER_01: No, it won't.
+
+423
+00:39:27,619 --> 00:39:28,922
+Speaker SPEAKER_01: It'll always make them do different things.
+
+424
+00:39:29,202 --> 00:39:33,030
+Speaker SPEAKER_01: It won't make many copies of the same neuron.
+
+425
+00:39:33,500 --> 00:39:41,253
+Speaker SPEAKER_01: So I think we're getting attractors, which are distributed representations of a bunch of neurons that are interacting, and how many happy states they can settle to.
+
+426
+00:39:41,273 --> 00:39:42,215
+Speaker SPEAKER_01: And that's a new concept.
+
+427
+00:39:43,356 --> 00:39:44,659
+Speaker SPEAKER_07: Okay, let's move on to the next question.
+
+428
+00:39:44,679 --> 00:39:51,190
+Speaker SPEAKER_07: So as humans, when we make decisions or recognize a chair, we can explain why it is a chair.
+
+429
+00:39:51,610 --> 00:39:53,994
+Speaker SPEAKER_07: Why is this so difficult to do for our deep learning system?
+
+430
+00:39:54,695 --> 00:39:55,677
+Speaker SPEAKER_07: Quick responses, please.
+
+431
+00:39:56,668 --> 00:40:03,958
+Speaker SPEAKER_01: I have a classic example which is when we say, when we recognize a 2 we can explain why it's a 2 and our explanations are always completely wrong.
+
+432
+00:40:04,380 --> 00:40:08,965
+Speaker SPEAKER_01: I can, you give me an explanation why something was a 2 and I'll show you 2s that don't fit your pattern.
+
+433
+00:40:09,427 --> 00:40:13,952
+Speaker SPEAKER_01: So we think we can do this but I'm not sure we can explain why we think something's a chair.
+
+434
+00:40:15,315 --> 00:40:15,755
+Speaker SPEAKER_07: Anyone else?
+
+435
+00:40:15,856 --> 00:40:16,516
+Speaker SPEAKER_07: Quick response?
+
+436
+00:40:17,137 --> 00:40:18,019
+Speaker SPEAKER_05: I would agree with that.
+
+437
+00:40:18,260 --> 00:40:21,465
+Speaker SPEAKER_05: I think the notion of humans being more interpretable is kind of an illusion.
+
+438
+00:40:22,126 --> 00:40:29,862
+Speaker SPEAKER_05: And I think if anything, we have more hope for making artificial systems that are more interpretable because we can look inside them in ways that we can't do with humans.
+
+439
+00:40:30,822 --> 00:40:32,106
+Speaker SPEAKER_01: And the same goes for unbiased.
+
+440
+00:40:32,166 --> 00:40:37,155
+Speaker SPEAKER_01: We can look inside them and make them unbiased in a way we can't with humans.
+
+441
+00:40:37,175 --> 00:40:37,675
+Speaker SPEAKER_07: Anyone else?
+
+442
+00:40:37,695 --> 00:40:38,117
+Speaker SPEAKER_07: Quick?
+
+443
+00:40:38,266 --> 00:40:44,072
+Speaker SPEAKER_03: Well, I think whether the decision is made in an interpretable way or we make the decision and interpret it.
+
+444
+00:40:44,612 --> 00:40:49,858
+Speaker SPEAKER_03: I see myself as more like, I make a decision, I don't know how to make it, and then rationalize it and make it interpretable.
+
+445
+00:40:50,398 --> 00:40:52,820
+Speaker SPEAKER_03: So it's very unclear, actually, yeah.
+
+446
+00:40:52,981 --> 00:40:56,885
+Speaker SPEAKER_03: So I agree that we want to interpret because we need to communicate, we need to explain ourselves.
+
+447
+00:40:58,487 --> 00:41:00,610
+Speaker SPEAKER_03: But it doesn't mean the decision is made in an interpretable way.
+
+448
+00:41:03,371 --> 00:41:03,512
+Speaker SPEAKER_00: Yeah.
+
+449
+00:41:03,532 --> 00:41:05,775
+Speaker SPEAKER_00: Totally agree with what everybody said.
+
+450
+00:41:06,346 --> 00:41:07,007
+Speaker SPEAKER_00: so far.
+
+451
+00:41:08,949 --> 00:41:10,632
+Speaker SPEAKER_00: Yeah.
+
+452
+00:41:10,652 --> 00:41:12,235
+Speaker SPEAKER_07: Yeah, I have a question for you.
+
+453
+00:41:12,275 --> 00:41:15,338
+Speaker SPEAKER_07: So you have written about conscious tuning machines.
+
+454
+00:41:16,059 --> 00:41:20,387
+Speaker SPEAKER_07: So how do you connect consciousness with programs?
+
+455
+00:41:21,047 --> 00:41:24,552
+Speaker SPEAKER_07: And when you say a conscious tuning machine, is the is the program actually conscious?
+
+456
+00:41:25,094 --> 00:41:25,974
+Speaker SPEAKER_07: Does it have conscious feelings?
+
+457
+00:41:26,094 --> 00:41:28,759
+Speaker SPEAKER_07: Or is it just simulating the feelings and their effects?
+
+458
+00:41:30,157 --> 00:41:32,460
+Speaker SPEAKER_00: Okay, so this is a loaded question.
+
+459
+00:41:33,923 --> 00:41:35,507
+Speaker SPEAKER_00: So answer it in several ways.
+
+460
+00:41:35,547 --> 00:41:43,481
+Speaker SPEAKER_00: First of all, consciousness, there are many different views of consciousness coming from philosophers through the millennia, right?
+
+461
+00:41:43,521 --> 00:41:48,351
+Speaker SPEAKER_00: And it's only since 1980s, that it's been a
+
+462
+00:41:48,331 --> 00:41:53,099
+Speaker SPEAKER_00: unacceptable, it's always been taboo as area to study scientifically.
+
+463
+00:41:53,659 --> 00:42:08,403
+Speaker SPEAKER_00: And the 80s with the advent of actually Bernard Barr's global workspace theory and fMRIs where you can look into the brain, you know, non-invasively, that people started to look at consciousness more scientifically.
+
+464
+00:42:08,744 --> 00:42:12,972
+Speaker SPEAKER_00: And there are two major theories of consciousness now that
+
+465
+00:42:12,952 --> 00:42:16,561
+Speaker SPEAKER_00: Well, there are many theories, but there are two that are somewhat competitive.
+
+466
+00:42:17,081 --> 00:42:28,210
+Speaker SPEAKER_00: One is called the Global Neuronal Workspace Theory, where one is taking the global workspace and looking at the brain, people like Dehane, Shanzhou, Meshour have
+
+467
+00:42:28,190 --> 00:42:36,067
+Speaker SPEAKER_00: looked at things in the brain and sort of just outlined what would be maybe the short-term memory, long-term memory, consciousness, and all that.
+
+468
+00:42:36,527 --> 00:42:40,436
+Speaker SPEAKER_00: And then there's the theory, which is seemingly more mathematical.
+
+469
+00:42:40,456 --> 00:42:44,545
+Speaker SPEAKER_00: So I would say our theory is very closely aligned with global neuronal
+
+470
+00:42:44,525 --> 00:42:45,346
+Speaker SPEAKER_00: workspace.
+
+471
+00:42:45,427 --> 00:42:48,932
+Speaker SPEAKER_00: We sort of see that as what we're sort of abstracting from.
+
+472
+00:42:48,972 --> 00:42:55,344
+Speaker SPEAKER_00: And then there's another competing theory which is called integrated information theory.
+
+473
+00:42:55,403 --> 00:43:06,322
+Speaker SPEAKER_00: It seems to be a more mathematical theory and it gives a measure of consciousness based on somewhat the feedback systems.
+
+474
+00:43:06,862 --> 00:43:09,688
+Speaker SPEAKER_00: Okay, so again
+
+475
+00:43:09,668 --> 00:43:12,331
+Speaker SPEAKER_00: We also like that theory because you can give a measure.
+
+476
+00:43:12,472 --> 00:43:17,358
+Speaker SPEAKER_00: But also, as people have pointed out, the thermostat has a measure of consciousness in this theory.
+
+477
+00:43:17,898 --> 00:43:23,565
+Speaker SPEAKER_00: So Giulio Tononi is the inventor of this theory, also with Koch.
+
+478
+00:43:24,306 --> 00:43:30,875
+Speaker SPEAKER_00: And I think they would say that today, all our computers have some measure of consciousness.
+
+479
+00:43:31,315 --> 00:43:38,224
+Speaker SPEAKER_00: Because if a thermostat's conscious, of course, computers would be.
+
+480
+00:43:38,304 --> 00:43:44,996
+Speaker SPEAKER_00: But we don't believe the computers right now or the systems right now have much consciousness.
+
+481
+00:43:45,498 --> 00:43:51,248
+Speaker SPEAKER_00: But as I said before, it's not the algorithm or the input output map that we're feeling is very critical.
+
+482
+00:43:51,668 --> 00:43:54,753
+Speaker SPEAKER_00: It's really the architecture and the dynamics and what it's doing.
+
+483
+00:43:55,153 --> 00:44:00,043
+Speaker SPEAKER_00: So if you unwind a certain, if a certain system has consciousness and you unwind it,
+
+484
+00:44:01,036 --> 00:44:06,070
+Speaker SPEAKER_00: and it may have logically equivalent input output, it may not be conscious anymore.
+
+485
+00:44:06,150 --> 00:44:08,757
+Speaker SPEAKER_00: And also that's true by IIT as well.
+
+486
+00:44:09,217 --> 00:44:13,510
+Speaker SPEAKER_00: So we think that the dynamics and the architecture is really critical to give this consciousness.
+
+487
+00:44:13,871 --> 00:44:16,277
+Speaker SPEAKER_00: So, okay.
+
+488
+00:44:16,257 --> 00:44:23,889
+Speaker SPEAKER_00: Right now, again, there's a controversy about whether animals, we're the only people, only entities that have consciousness.
+
+489
+00:44:24,028 --> 00:44:38,172
+Speaker SPEAKER_00: And we, again, believe that this is very widespread consciousness, there are many studies, there's, how would you know whether something's conscious, one needs something like a Turing-like test to test if a system is conscious, we're looking into that.
+
+490
+00:44:38,291 --> 00:44:41,016
+Speaker SPEAKER_00: So there is something called the mirror test,
+
+491
+00:44:41,181 --> 00:44:47,289
+Speaker SPEAKER_07: Let's keep the response short and we'll move on.
+
+492
+00:44:47,309 --> 00:44:47,489
+Speaker SPEAKER_00: Okay.
+
+493
+00:44:48,311 --> 00:44:58,003
+Speaker SPEAKER_00: So we're looking at generalized test, generalized mirror test that will be applicable to test whether systems are conscious or not.
+
+494
+00:44:58,965 --> 00:45:04,393
+Speaker SPEAKER_00: But the short answer is no, machines right now probably are not conscious.
+
+495
+00:45:05,134 --> 00:45:05,373
+Speaker SPEAKER_07: Thanks.
+
+496
+00:45:05,775 --> 00:45:09,719
+Speaker SPEAKER_07: So to be fair to the audience, let's open up the questions from audience.
+
+497
+00:45:12,467 --> 00:45:21,438
+Speaker SPEAKER_06: Yeah, so we have one question coming in from Twitter.
+
+498
+00:45:23,240 --> 00:45:25,322
+Speaker SPEAKER_06: This is related to some of the discussion previously.
+
+499
+00:45:25,422 --> 00:45:29,027
+Speaker SPEAKER_06: So the question is from Adriano and the question is as follows.
+
+500
+00:45:29,788 --> 00:45:32,931
+Speaker SPEAKER_06: How do humans remember the temporal order of stored memories?
+
+501
+00:45:33,913 --> 00:45:37,918
+Speaker SPEAKER_06: That is, I know when things I did today happened and in what order.
+
+502
+00:45:38,219 --> 00:45:40,983
+Speaker SPEAKER_06: This maybe relies on, in quotes, place cells.
+
+503
+00:45:42,164 --> 00:45:43,588
+Speaker SPEAKER_06: Is there a deep learning equivalent?
+
+504
+00:45:47,173 --> 00:45:53,143
+Speaker SPEAKER_01: I guess if you have anything that can learn sequences, then it's not a problem, right?
+
+505
+00:45:53,583 --> 00:45:57,590
+Speaker SPEAKER_01: Any kind of recurrent net is going to remember the order of things if it remembers the sequence.
+
+506
+00:46:00,534 --> 00:46:02,217
+Speaker SPEAKER_02: I don't really understand the question, I guess.
+
+507
+00:46:04,527 --> 00:46:12,539
+Speaker SPEAKER_04: There's almost no human work on this, but there's a lot of mouse work and rat work on this in the navigation literature about maze learning.
+
+508
+00:46:12,818 --> 00:46:33,588
+Speaker SPEAKER_04: So that a lot is known about how these sequences are kind of, I mean, I wouldn't say everything is known, but a lot is known about how these sequences of spatial movement are stored and how essentially movement to one position can essentially evoke predictive activity involving movement to the next position.
+
+509
+00:46:34,025 --> 00:46:35,967
+Speaker SPEAKER_04: in a sequence.
+
+510
+00:46:35,987 --> 00:46:36,887
+Speaker SPEAKER_04: But that's all very local.
+
+511
+00:46:42,693 --> 00:46:43,114
+Speaker SPEAKER_06: OK.
+
+512
+00:46:43,534 --> 00:46:43,815
+Speaker SPEAKER_06: Anyone?
+
+513
+00:46:43,875 --> 00:46:44,755
+Speaker SPEAKER_07: There are no questions.
+
+514
+00:46:44,775 --> 00:46:44,876
+Speaker SPEAKER_07: Yeah.
+
+515
+00:46:44,896 --> 00:46:45,396
+Speaker SPEAKER_07: Any other questions?
+
+516
+00:46:46,577 --> 00:46:53,704
+Speaker SPEAKER_06: Not anymore from Twitter, but anyone on the Meet link, you can feel free to unmute yourself and ask questions.
+
+517
+00:46:58,769 --> 00:46:58,891
+Speaker SPEAKER_07: OK.
+
+518
+00:46:58,911 --> 00:47:00,251
+Speaker SPEAKER_07: In the meantime, I have a question.
+
+519
+00:47:00,737 --> 00:47:05,686
+Speaker SPEAKER_07: So if we look at programming languages versus natural languages, they seem very different.
+
+520
+00:47:07,268 --> 00:47:16,382
+Speaker SPEAKER_07: Is any of the compiler theory and parsing methods for programming languages, can they be applied to natural languages or is NLP completely different?
+
+521
+00:47:19,407 --> 00:47:22,070
+Speaker SPEAKER_05: Maybe I can take that one.
+
+522
+00:47:22,338 --> 00:47:26,585
+Speaker SPEAKER_05: Both are languages and they share commonalities.
+
+523
+00:47:27,045 --> 00:47:27,786
+Speaker SPEAKER_05: It's a code.
+
+524
+00:47:28,128 --> 00:47:37,304
+Speaker SPEAKER_05: It's a kind of a sequence of symbols that has some semantics that, you know, in one case it's between humans and in another case it's between either humans or a computer.
+
+525
+00:47:37,905 --> 00:47:44,615
+Speaker SPEAKER_05: I think traditionally the way that these have developed is quite, you know, different.
+
+526
+00:47:44,596 --> 00:47:50,905
+Speaker SPEAKER_05: computer languages are defined and constructed in a certain way, and human languages are more evolved.
+
+527
+00:47:51,065 --> 00:47:58,697
+Speaker SPEAKER_05: I think in the future, I see kind of a world in which things could be more kind of blended.
+
+528
+00:47:59,559 --> 00:48:12,038
+Speaker SPEAKER_05: For example, we have systems where I think the nature of programming should evolve to a point where it's more like natural language, not necessarily that you talk to the computer, but in
+
+529
+00:48:12,018 --> 00:48:16,273
+Speaker SPEAKER_05: benefits from some of the underspecification.
+
+530
+00:48:16,590 --> 00:48:19,054
+Speaker SPEAKER_05: that you have in natural language.
+
+531
+00:48:19,074 --> 00:48:22,818
+Speaker SPEAKER_05: I mean, if you think about why is natural language helpful, it's two things.
+
+532
+00:48:22,998 --> 00:48:31,108
+Speaker SPEAKER_05: One is that it's compositional, so you can have a few set of symbols that can be combined in infinite ways and provide rich meanings.
+
+533
+00:48:31,427 --> 00:48:32,909
+Speaker SPEAKER_05: This is shared by programming languages.
+
+534
+00:48:33,710 --> 00:48:35,452
+Speaker SPEAKER_05: The other is you underspecify.
+
+535
+00:48:35,672 --> 00:48:42,260
+Speaker SPEAKER_05: Because you have a rich context, you have an intelligent being on the other side listening to what you're saying, so you don't need to say everything.
+
+536
+00:48:42,240 --> 00:48:49,148
+Speaker SPEAKER_05: And that's what makes language, natural language, so much more effective than programming because you have to specify everything.
+
+537
+00:48:49,847 --> 00:49:01,719
+Speaker SPEAKER_05: But I think in the future, hopefully programming will lead to be in a world where you can underspecify as well and make things much more efficient.
+
+538
+00:49:01,739 --> 00:49:08,005
+Speaker SPEAKER_01: So I think natural language has all sorts of crazy shortcuts that make it somewhat different from programming languages.
+
+539
+00:49:08,545 --> 00:49:11,268
+Speaker SPEAKER_01: Like, you say things like, I'll try and do it.
+
+540
+00:49:12,126 --> 00:49:15,030
+Speaker SPEAKER_01: And you don't really mean I'll try and do it.
+
+541
+00:49:15,532 --> 00:49:17,054
+Speaker SPEAKER_01: You mean I'll try to do it.
+
+542
+00:49:17,855 --> 00:49:20,117
+Speaker SPEAKER_01: But you say I'll try and do it because that's easier to say.
+
+543
+00:49:20,157 --> 00:49:22,382
+Speaker SPEAKER_01: And language is full of that kind of stuff.
+
+544
+00:49:23,103 --> 00:49:26,887
+Speaker SPEAKER_01: And it's a nightmare for anybody who wants to write semantics for natural language.
+
+545
+00:49:28,329 --> 00:49:28,590
+Speaker SPEAKER_03: Yeah.
+
+546
+00:49:28,871 --> 00:49:30,373
+Speaker SPEAKER_03: I also think they're quite different.
+
+547
+00:49:30,592 --> 00:49:32,615
+Speaker SPEAKER_03: And I think the
+
+548
+00:49:32,797 --> 00:49:38,684
+Speaker SPEAKER_03: Programming language is very reproducible, it's very rigid, and two programmers will read the same and will have the same execution.
+
+549
+00:49:39,065 --> 00:49:47,456
+Speaker SPEAKER_03: With humans, what is written, the interpretation is different, depends on your experience, depends on your mood, and it's just very multiple, very fuzzy.
+
+550
+00:49:47,775 --> 00:49:50,519
+Speaker SPEAKER_03: And that gives the really resilience of the language.
+
+551
+00:49:51,099 --> 00:49:54,204
+Speaker SPEAKER_03: And the programming language is very brittle right now.
+
+552
+00:49:54,324 --> 00:50:01,572
+Speaker SPEAKER_03: So some fuzzy programming language, maybe a probabilistic language is moving toward that direction, but in my mind, they're quite different.
+
+553
+00:50:04,726 --> 00:50:17,931
+Speaker SPEAKER_05: Maybe just to inject one thing, just to balance things out a bit, I think if you look very coarsely and only at syntax, there is a sense in which the grammar of a language is actually pretty rigid, right?
+
+554
+00:50:17,952 --> 00:50:23,663
+Speaker SPEAKER_05: I mean, of course, there's gray areas where things are not grammatical, but in broad strokes,
+
+555
+00:50:23,643 --> 00:50:41,331
+Speaker SPEAKER_05: the idea of adjectives before nouns and all of these rules, especially if you look at phonology and morphology, there's a certain kind of compactness and rigidity to things that you wouldn't have necessarily predicted if you were just thinking like, here's anything can go.
+
+556
+00:50:41,311 --> 00:50:54,088
+Speaker SPEAKER_05: So somehow language has converged on something that's very tempting to describe in terms of a formal language, and there are decades of people trying to do that, and that gets you to a certain point.
+
+557
+00:50:54,690 --> 00:51:07,047
+Speaker SPEAKER_05: And it gets you to a point where you feel like it does tell you something about, you have scientific insight into a language, but it's not nearly enough to get you all the way there and explain the whole of natural language.
+
+558
+00:51:08,311 --> 00:51:15,259
+Speaker SPEAKER_03: But even that, I think that rigid semantics is broken, say foreigners speaking some particular language.
+
+559
+00:51:15,599 --> 00:51:22,768
+Speaker SPEAKER_03: So context, reputation, the communication is still achieved, that the programming language wouldn't be able to do that.
+
+560
+00:51:22,827 --> 00:51:25,711
+Speaker SPEAKER_03: So I still think it's quite different.
+
+561
+00:51:25,811 --> 00:51:28,155
+Speaker SPEAKER_03: Maybe one day we'll be getting closer.
+
+562
+00:51:29,597 --> 00:51:38,266
+Speaker SPEAKER_03: You can break those semantics and the communication is still done.
+
+563
+00:51:39,427 --> 00:51:41,309
+Speaker SPEAKER_06: Yeah, I think we have time for one more question.
+
+564
+00:51:41,409 --> 00:51:44,793
+Speaker SPEAKER_06: This is coming from YouTube by Rishabh Singh.
+
+565
+00:51:45,715 --> 00:51:46,755
+Speaker SPEAKER_06: So the question is as follows.
+
+566
+00:51:47,195 --> 00:51:52,101
+Speaker SPEAKER_06: There are a lot of overarching questions of how minds differ from AI slash ML right now.
+
+567
+00:51:52,782 --> 00:51:57,887
+Speaker SPEAKER_06: But according to you, what things are in reach to take inspiration from and replicate to advance?
+
+568
+00:52:01,351 --> 00:52:02,572
+Speaker SPEAKER_01: Can I say something about that?
+
+569
+00:52:02,811 --> 00:52:08,338
+Speaker SPEAKER_01: I think we're very confused about the meaning of the term mind.
+
+570
+00:52:08,572 --> 00:52:26,219
+Speaker SPEAKER_01: So when I say something like, I'm seeing pink elephants, what I mean is, I think what I mean is, I'm having an internal brain state which would be veridical if there were pink elephants out there.
+
+571
+00:52:26,239 --> 00:52:33,972
+Speaker SPEAKER_01: So what's funny about mental language isn't that it's weird, spooky internal stuff, it's that it's hypothetical external stuff.
+
+572
+00:52:34,204 --> 00:52:40,474
+Speaker SPEAKER_01: And all the language we use for sensations and feelings refers to external things, like I feel like hitting you.
+
+573
+00:52:41,335 --> 00:52:46,141
+Speaker SPEAKER_01: And what we've got is we've got that we want to say what's going on inside our heads.
+
+574
+00:52:46,643 --> 00:52:47,784
+Speaker SPEAKER_01: We don't have a language for it.
+
+575
+00:52:47,804 --> 00:52:49,947
+Speaker SPEAKER_01: And if you refer to the neurons, it wouldn't help anyway.
+
+576
+00:52:50,708 --> 00:52:55,755
+Speaker SPEAKER_01: And so we refer to what's going on inside our heads by saying what the normal causes would be.
+
+577
+00:52:56,076 --> 00:52:57,117
+Speaker SPEAKER_01: That's called sensations.
+
+578
+00:52:57,557 --> 00:52:58,960
+Speaker SPEAKER_01: Or what the normal effects would be.
+
+579
+00:52:59,221 --> 00:53:00,802
+Speaker SPEAKER_01: That's called feelings.
+
+580
+00:53:00,782 --> 00:53:05,166
+Speaker SPEAKER_01: Or in one special case, we can do both, and that's called thoughts.
+
+581
+00:53:05,807 --> 00:53:12,755
+Speaker SPEAKER_01: So with thoughts, you can take any string of words you can put inside quotes, and you can say, Fred thought, damn, or Fred thought, oh, no.
+
+582
+00:53:12,775 --> 00:53:29,371
+Speaker SPEAKER_01: And what you mean by that is what's going on inside Fred's head is the kind of thing that would be caused by him hearing, oh, no, and would actually cause him to say, oh, no, because we've got language in and language out, unlike video.
+
+583
+00:53:29,469 --> 00:53:34,237
+Speaker SPEAKER_01: And so I think what thoughts are, they're not internal symbolic strings.
+
+584
+00:53:34,597 --> 00:53:43,351
+Speaker SPEAKER_01: They're external symbolic strings that your current brain state might cause you to say, or that might cause your current brain state.
+
+585
+00:53:44,052 --> 00:53:49,860
+Speaker SPEAKER_01: And so these symbolic strings that people always thought must be going on somehow inside the brain, they're external things.
+
+586
+00:53:49,880 --> 00:53:53,166
+Speaker SPEAKER_01: And they're used to refer to the big vectors of activity you have inside the brain.
+
+587
+00:53:54,074 --> 00:53:57,721
+Speaker SPEAKER_07: So Jack, just a quick comment, and then we'll have to wrap up.
+
+588
+00:53:57,740 --> 00:54:11,768
+Speaker SPEAKER_04: Yeah, well, it's because this relates to actually an earlier talk today, which are several earlier talks that were pointing out that, you know, current image networks or anything that's trained on ImageNet to basically classify an object are bad.
+
+589
+00:54:11,989 --> 00:54:13,331
+Speaker SPEAKER_04: And that is actually directly
+
+590
+00:54:13,632 --> 00:54:15,213
+Speaker SPEAKER_04: related to what Jeff was just saying.
+
+591
+00:54:15,293 --> 00:54:16,414
+Speaker SPEAKER_04: Humans are robots.
+
+592
+00:54:16,534 --> 00:54:17,735
+Speaker SPEAKER_04: We're embedded in the world.
+
+593
+00:54:17,755 --> 00:54:18,777
+Speaker SPEAKER_04: We're embodied in the world.
+
+594
+00:54:19,398 --> 00:54:25,905
+Speaker SPEAKER_04: And most of our thought and most of our evolutionary pressure all involves basically stimulus-response relationships.
+
+595
+00:54:26,286 --> 00:54:30,489
+Speaker SPEAKER_04: We have to be able to engage in behaviors that are productive in the world.
+
+596
+00:54:30,811 --> 00:54:41,461
+Speaker SPEAKER_04: And so insects, they don't label anything, or they label almost nothing except maybe the other insect of their conspecific of the opposite gender.
+
+597
+00:54:41,864 --> 00:54:43,005
+Speaker SPEAKER_04: But they can segment the world.
+
+598
+00:54:43,344 --> 00:54:45,947
+Speaker SPEAKER_04: They have to segment the world because they have to navigate through the world.
+
+599
+00:54:46,648 --> 00:54:53,815
+Speaker SPEAKER_04: And if you just try to solve image net without segmentation, then what you get is basically texture operators rather than something based on objects.
+
+600
+00:54:53,894 --> 00:55:02,242
+Speaker SPEAKER_04: So I think what Jeff's point is is valid that everything we do involves either the state of the world or our actions in the world.
+
+601
+00:55:02,302 --> 00:55:09,389
+Speaker SPEAKER_04: And all of our brain architecture is designed in the context of robotics, of us being a robot.
+
+602
+00:55:10,027 --> 00:55:12,099
+Speaker SPEAKER_07: OK, we are out of time.
+
+603
+00:55:12,179 --> 00:55:15,797
+Speaker SPEAKER_07: So thanks to all the panelists for all these insightful responses.
+
+604
+00:55:16,239 --> 00:55:18,108
+Speaker SPEAKER_07: We'll come back in two minutes for the next session.
+
+605
+00:55:18,128 --> 00:55:18,672
+Speaker SPEAKER_07: Thanks so much.
+

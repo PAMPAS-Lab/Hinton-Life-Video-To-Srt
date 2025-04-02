@@ -1,0 +1,1268 @@
+1
+00:00:01,415 --> 00:00:04,479
+Speaker SPEAKER_00: Please welcome Jeffrey Hinton and Cade Metz.
+
+2
+00:00:09,625 --> 00:00:25,126
+Speaker SPEAKER_01: So unlike everyone else who has walked onto the stage, we are going to stay standing, but there's a good reason for that.
+
+3
+00:00:25,512 --> 00:00:35,182
+Speaker SPEAKER_01: Due to a back problem, Jeffrey Henton last sat down in June of 2005 and he says that was a mistake.
+
+4
+00:00:36,685 --> 00:00:38,546
+Speaker SPEAKER_01: So we're not going to make the same mistake today.
+
+5
+00:00:38,587 --> 00:00:39,328
+Speaker SPEAKER_01: We're going to stand.
+
+6
+00:00:40,348 --> 00:00:51,942
+Speaker SPEAKER_01: And more to the point, everything we've been talking about today, I don't think it's an exaggeration to say, or just about everything, can be traced back to Jeff's work.
+
+7
+00:00:52,462 --> 00:01:06,917
+Speaker SPEAKER_01: He didn't invent neural nets, but there was research he did as far back as the 80s that were instrumental to the evolution of this technology, which is now reinventing image recognition and speech recognition, language translation.
+
+8
+00:01:08,838 --> 00:01:12,582
+Speaker SPEAKER_01: That is exactly what has happened over the past five years.
+
+9
+00:01:13,504 --> 00:01:20,611
+Speaker SPEAKER_01: But because we've got you here, maybe you could explain to the audience, because I think it would help with where we're going to go with this conversation,
+
+10
+00:01:20,828 --> 00:01:22,450
+Speaker SPEAKER_01: what a neural network is.
+
+11
+00:01:24,052 --> 00:01:24,472
+Speaker SPEAKER_00: OK.
+
+12
+00:01:25,834 --> 00:01:31,082
+Speaker SPEAKER_00: Many of you know in excruciating detail how neural networks work, and many of you don't.
+
+13
+00:01:32,004 --> 00:01:34,186
+Speaker SPEAKER_00: So if you know, just turn your ears off.
+
+14
+00:01:34,908 --> 00:01:40,536
+Speaker SPEAKER_00: A neural net is basically a system where you show it inputs.
+
+15
+00:01:42,058 --> 00:01:46,584
+Speaker SPEAKER_00: Inside the system, there's lots of little processes which are a little bit like brain cells.
+
+16
+00:01:47,206 --> 00:01:48,548
+Speaker SPEAKER_00: They work a little bit like brain cells.
+
+17
+00:01:48,947 --> 00:01:50,751
+Speaker SPEAKER_00: They have connections between them.
+
+18
+00:01:51,018 --> 00:01:53,180
+Speaker SPEAKER_00: And you learn the weights on those connections.
+
+19
+00:01:54,724 --> 00:01:58,790
+Speaker SPEAKER_00: And by changing the weights on the connections, you change the outputs the system will give.
+
+20
+00:01:59,932 --> 00:02:03,296
+Speaker SPEAKER_00: So the basic problem with neural nets is I show you an input.
+
+21
+00:02:03,918 --> 00:02:05,962
+Speaker SPEAKER_00: I show you the output you ought to produce.
+
+22
+00:02:06,582 --> 00:02:10,549
+Speaker SPEAKER_00: And the neural net has to figure out how to change all those connection strengths.
+
+23
+00:02:10,568 --> 00:02:15,877
+Speaker SPEAKER_00: And there's an obvious algorithm for doing that, which is you just sort of randomly change one and see if it gets better.
+
+24
+00:02:16,478 --> 00:02:17,699
+Speaker SPEAKER_00: And that's very inefficient.
+
+25
+00:02:18,844 --> 00:02:28,475
+Speaker SPEAKER_00: There's a slightly less obvious algorithm, which is you look at the difference between what came out with the current connection strengths and what you would like to come out.
+
+26
+00:02:29,037 --> 00:02:34,842
+Speaker SPEAKER_00: And then you do some calculus and figure out, for every connection strength, how you should change it to make the output a little bit more like you'd like it.
+
+27
+00:02:35,484 --> 00:02:38,608
+Speaker SPEAKER_00: And you change all the connection strengths a little bit to make the output a bit better.
+
+28
+00:02:39,108 --> 00:02:43,332
+Speaker SPEAKER_00: And you just do that for thousands and thousands of examples, or millions of examples.
+
+29
+00:02:43,752 --> 00:02:45,774
+Speaker SPEAKER_00: And you might think it would get stuck, but it doesn't.
+
+30
+00:02:46,936 --> 00:02:49,397
+Speaker SPEAKER_00: Eventually it gets stuck, but eventually it gets stuck in a good solution.
+
+31
+00:02:50,199 --> 00:02:56,526
+Speaker SPEAKER_00: And it was perfectly reasonable for people in conventional artificial intelligence to think these things will never work.
+
+32
+00:02:57,347 --> 00:03:01,230
+Speaker SPEAKER_00: But it turned out when we got big data sets and big computers, they worked amazingly well.
+
+33
+00:03:02,652 --> 00:03:09,681
+Speaker SPEAKER_01: So just to set us up for your current work, describe specifically how we do image recognition nowadays.
+
+34
+00:03:09,841 --> 00:03:11,682
+Speaker SPEAKER_01: You use different neural network techniques.
+
+35
+00:03:12,051 --> 00:03:13,334
+Speaker SPEAKER_01: for different tasks.
+
+36
+00:03:13,354 --> 00:03:18,423
+Speaker SPEAKER_01: So describe what we use today for image recognition.
+
+37
+00:03:18,502 --> 00:03:21,247
+Speaker SPEAKER_00: Okay, so I'm going to describe this in an unusual way.
+
+38
+00:03:21,307 --> 00:03:27,399
+Speaker SPEAKER_00: For image recognition, we use a thing called a convolutional neural net.
+
+39
+00:03:28,721 --> 00:03:34,431
+Speaker SPEAKER_00: And I'm going to describe a convolutional net that's not used for image recognition, because I think it's easy to understand.
+
+40
+00:03:35,237 --> 00:03:49,336
+Speaker SPEAKER_00: So this is a kind of net developed by David Duvenoe, among other people, who's a professor at U of T. Let's suppose you have a molecule and you want to predict what its properties will be.
+
+41
+00:03:49,757 --> 00:03:51,360
+Speaker SPEAKER_00: And all I give you is the molecular structure.
+
+42
+00:03:51,379 --> 00:03:53,042
+Speaker SPEAKER_00: I just give you the chain of atoms.
+
+43
+00:03:53,883 --> 00:03:57,106
+Speaker SPEAKER_00: So let's say you've got a carbon and a carbon and a nitrogen and an oxygen.
+
+44
+00:03:58,229 --> 00:04:02,814
+Speaker SPEAKER_00: So we're going to have a first level description, which I just gave you, which is at each atom,
+
+45
+00:04:03,335 --> 00:04:05,118
+Speaker SPEAKER_00: I can tell you what that atom is.
+
+46
+00:04:05,800 --> 00:04:07,122
+Speaker SPEAKER_00: So that's the first level features.
+
+47
+00:04:08,063 --> 00:04:14,657
+Speaker SPEAKER_00: And maybe I tell you not with a word, but with a bunch of numbers, but a bunch of numbers specific to that atom.
+
+48
+00:04:14,676 --> 00:04:19,487
+Speaker SPEAKER_00: Then at the next level, I make a richer description of that atom.
+
+49
+00:04:19,720 --> 00:04:26,007
+Speaker SPEAKER_00: And my richer description is a bunch of numbers that tell me not only about that atom, but about what its neighbors are.
+
+50
+00:04:26,908 --> 00:04:33,495
+Speaker SPEAKER_00: So at the next level up, I've got this bunch of numbers that says, this is a carbon with a carbon on one side and a nitrogen on the other side.
+
+51
+00:04:34,235 --> 00:04:37,779
+Speaker SPEAKER_00: I also say on the nitrogen, this is a nitrogen with a carbon on one side and oxygen on the other side.
+
+52
+00:04:38,841 --> 00:04:48,192
+Speaker SPEAKER_00: And then at the next level up, I get this is a carbon, and on one side it's got a nitrogen that's got an oxygen attached to it, and so on as you go up.
+
+53
+00:04:49,083 --> 00:04:59,495
+Speaker SPEAKER_00: And when you get to a pretty high level, you have this big vector of numbers that really tells you a lot about that atom, because it's gradually getting contextual information into the description of that atom.
+
+54
+00:05:00,557 --> 00:05:03,319
+Speaker SPEAKER_00: OK, now let's go to convolutional neural nets for vision.
+
+55
+00:05:04,281 --> 00:05:07,805
+Speaker SPEAKER_00: You start, and I'm going to simplify, but this is the essence of the idea.
+
+56
+00:05:08,545 --> 00:05:10,267
+Speaker SPEAKER_00: You start off with a grid of pixels.
+
+57
+00:05:10,848 --> 00:05:13,572
+Speaker SPEAKER_00: And all you know is the RGB values of these pixels.
+
+58
+00:05:14,310 --> 00:05:17,233
+Speaker SPEAKER_00: And so that's your bottom-level description of a pixel.
+
+59
+00:05:17,254 --> 00:05:27,444
+Speaker SPEAKER_00: Then I'm going to get a slightly richer description of a pixel that might say, this is a pixel with these RGB values, but it has brighter pixels to this side and darker pixels to this side.
+
+60
+00:05:27,463 --> 00:05:30,766
+Speaker SPEAKER_00: At least it does in the red channel, but in the green channel, it's got brighter ones, and so on.
+
+61
+00:05:31,307 --> 00:05:36,211
+Speaker SPEAKER_00: So you get a description in terms of the neighboring pixels of what's going on at this pixel.
+
+62
+00:05:36,733 --> 00:05:40,976
+Speaker SPEAKER_00: You're getting contextual information and putting it into the description of this pixel.
+
+63
+00:05:41,834 --> 00:05:47,423
+Speaker SPEAKER_00: And then you go to the next level, where the neighbors now already have some contextual information they get from their neighbors.
+
+64
+00:05:47,944 --> 00:05:49,086
+Speaker SPEAKER_00: And so you put that in.
+
+65
+00:05:49,125 --> 00:06:04,490
+Speaker SPEAKER_00: And so you get a richer and richer description of what's happening in each pixel that's gradually absorbing more and more of the information in the context around it, until after a few levels, or maybe nowadays after 100 levels, you get a very rich description of each pixel.
+
+66
+00:06:04,730 --> 00:06:08,836
+Speaker SPEAKER_00: And from that, you can start making bets about what the objects are in the image.
+
+67
+00:06:10,267 --> 00:06:13,151
+Speaker SPEAKER_01: And suffice it to say, this works pretty well nowadays.
+
+68
+00:06:13,230 --> 00:06:22,279
+Speaker SPEAKER_01: Now that we have the computing power and the data, by some measures, this works when identifying objects in photos, for instance, better than a human.
+
+69
+00:06:22,300 --> 00:06:26,884
+Speaker SPEAKER_01: But you're now on record as saying that it's flawed, which it is.
+
+70
+00:06:27,786 --> 00:06:28,807
+Speaker SPEAKER_01: Why is it flawed?
+
+71
+00:06:28,826 --> 00:06:32,370
+Speaker SPEAKER_01: What are the limitations of this concept?
+
+72
+00:06:32,389 --> 00:06:33,190
+Speaker SPEAKER_00: OK.
+
+73
+00:06:33,211 --> 00:06:37,035
+Speaker SPEAKER_00: So a long time ago, I used to be a psychologist.
+
+74
+00:06:37,095 --> 00:06:40,257
+Speaker SPEAKER_00: I'm very interested in mental imagery.
+
+75
+00:06:41,420 --> 00:06:45,064
+Speaker SPEAKER_00: I developed some theories about what happens when people do mental imagery.
+
+76
+00:06:46,365 --> 00:06:58,156
+Speaker SPEAKER_00: And it's pretty clear that whenever a person understands a shape, they do it by taking a coordinate system and understanding where the pieces of the shape are relative to the coordinate system.
+
+77
+00:07:00,240 --> 00:07:05,384
+Speaker SPEAKER_00: So for example, if you take a capital letter H, if I take a vertical coordinate system,
+
+78
+00:07:05,483 --> 00:07:17,562
+Speaker SPEAKER_00: That's a capital letter H. If I turn my coordinate system, believe the H where it was, and see it with the top this way, that's a capital letter I with a rather large bar at the top and bottom.
+
+79
+00:07:18,043 --> 00:07:21,608
+Speaker SPEAKER_00: So when I change coordinate system on you, it changed the identity of the shape.
+
+80
+00:07:22,970 --> 00:07:24,413
+Speaker SPEAKER_00: Now, a convolutional MET can't do that.
+
+81
+00:07:24,492 --> 00:07:33,567
+Speaker SPEAKER_00: A convolutional MET, you show it something, and it does some processing, and it doesn't get different representations depending on what coordinate frame it chose to impose.
+
+82
+00:07:34,254 --> 00:07:40,526
+Speaker SPEAKER_00: And in order to show you what a strong phenomenon this is, I'm going to show you a three-dimensional puzzle.
+
+83
+00:07:42,370 --> 00:07:48,903
+Speaker SPEAKER_00: And the three-dimensional puzzle, you just have two pieces.
+
+84
+00:07:49,043 --> 00:07:50,846
+Speaker SPEAKER_00: And the pieces aren't very complicated.
+
+85
+00:07:51,988 --> 00:07:54,372
+Speaker SPEAKER_00: And you have to put them together to make a tetrahedron.
+
+86
+00:07:55,636 --> 00:08:02,646
+Speaker SPEAKER_00: And just so you can't say you didn't know what a tetrahedron is, most pyramids have a square base, like the Egyptian ones.
+
+87
+00:08:03,288 --> 00:08:05,411
+Speaker SPEAKER_00: Imagine a pyramid with a triangular base.
+
+88
+00:08:05,432 --> 00:08:08,896
+Speaker SPEAKER_00: So its base is a triangle, and its sides are triangles.
+
+89
+00:08:09,358 --> 00:08:11,240
+Speaker SPEAKER_00: It's got three faces that are triangles and a base.
+
+90
+00:08:11,762 --> 00:08:12,862
+Speaker SPEAKER_00: And it's got a point at the top.
+
+91
+00:08:13,504 --> 00:08:15,427
+Speaker SPEAKER_00: And that's how you think about a tetrahedron.
+
+92
+00:08:16,369 --> 00:08:21,997
+Speaker SPEAKER_00: So you're using a coordinate frame in which there's an axis that goes vertically to the point at the top.
+
+93
+00:08:22,314 --> 00:08:27,120
+Speaker SPEAKER_00: And then for the other axis, you have to make some decision about which way you're going to put those axes.
+
+94
+00:08:27,721 --> 00:08:28,884
+Speaker SPEAKER_00: But you do make that decision.
+
+95
+00:08:29,464 --> 00:08:31,507
+Speaker SPEAKER_00: And you see a tetrahedron that way.
+
+96
+00:08:33,149 --> 00:08:42,682
+Speaker SPEAKER_00: If I give you two pieces, each of which is half of a tetrahedron, an incredible thing happens, which is you cannot make the tetrahedron.
+
+97
+00:08:42,701 --> 00:08:45,164
+Speaker SPEAKER_00: And Cade Metz, I gave it to Cade Metz.
+
+98
+00:08:45,706 --> 00:08:48,109
+Speaker SPEAKER_00: He spent a minute or two trying to make the tetrahedron, and he couldn't.
+
+99
+00:08:48,690 --> 00:08:50,111
+Speaker SPEAKER_00: And he's perfectly normal.
+
+100
+00:08:51,913 --> 00:08:57,000
+Speaker SPEAKER_00: Just occasionally, you get some really annoying person who just does it right away.
+
+101
+00:08:58,143 --> 00:09:02,368
+Speaker SPEAKER_00: A particular really annoying person is John Giandria, who's a senior vice president at Google.
+
+102
+00:09:02,769 --> 00:09:05,552
+Speaker SPEAKER_00: And I was explaining this to him and showing him this neat trick that nobody could do.
+
+103
+00:09:05,572 --> 00:09:07,335
+Speaker SPEAKER_00: And he went, oh, what's the problem?
+
+104
+00:09:07,355 --> 00:09:11,200
+Speaker SPEAKER_00: Very annoying.
+
+105
+00:09:11,220 --> 00:09:12,743
+Speaker SPEAKER_00: I will now show you these two pieces.
+
+106
+00:09:16,408 --> 00:09:17,149
+Speaker SPEAKER_00: Here's the two pieces.
+
+107
+00:09:17,188 --> 00:09:17,769
+Speaker SPEAKER_00: They're the same.
+
+108
+00:09:17,809 --> 00:09:21,094
+Speaker SPEAKER_00: You can probably see what they look like.
+
+109
+00:09:21,664 --> 00:09:23,087
+Speaker SPEAKER_00: They're very simple pieces, they're the same.
+
+110
+00:09:23,509 --> 00:09:24,370
+Speaker SPEAKER_00: And here's what people do.
+
+111
+00:09:24,390 --> 00:09:26,515
+Speaker SPEAKER_00: They go, no, that's not a tetrahedron.
+
+112
+00:09:27,277 --> 00:09:27,938
+Speaker SPEAKER_00: Let's see.
+
+113
+00:09:29,081 --> 00:09:32,788
+Speaker SPEAKER_00: That's not a tetrahedron.
+
+114
+00:09:33,650 --> 00:09:34,493
+Speaker SPEAKER_00: That's not a tetrahedron.
+
+115
+00:09:34,653 --> 00:09:36,837
+Speaker SPEAKER_00: And they keep going like that.
+
+116
+00:09:37,222 --> 00:09:52,092
+Speaker SPEAKER_00: Now I took these instruments of torture to MIT and I did an experiment where the horizontal axis is the number of years you've been a professor at MIT and the vertical axis is the number of minutes it takes you.
+
+117
+00:09:53,068 --> 00:10:02,659
+Speaker SPEAKER_00: If you've been a professor at MIT for only a year or two, you can do it in a few minutes, which is still pretty extraordinary given that these are two pieces which has five faces and they're identical and they make a tetrahedron.
+
+118
+00:10:03,880 --> 00:10:05,403
+Speaker SPEAKER_00: So you need to explain that, right?
+
+119
+00:10:05,682 --> 00:10:06,724
+Speaker SPEAKER_00: This is bizarre.
+
+120
+00:10:07,725 --> 00:10:15,253
+Speaker SPEAKER_00: If you've got tenure at MIT, I've tried on two people with tenure, and it takes you an infinite amount of time.
+
+121
+00:10:18,297 --> 00:10:21,220
+Speaker SPEAKER_00: This is what tenure is meant for, right?
+
+122
+00:10:22,921 --> 00:10:31,413
+Speaker SPEAKER_00: So one of them refused to do it, and the other one was very weird.
+
+123
+00:10:31,432 --> 00:10:32,534
+Speaker SPEAKER_00: He looked at the two pieces.
+
+124
+00:10:32,554 --> 00:10:33,235
+Speaker SPEAKER_00: He didn't pick them up.
+
+125
+00:10:33,576 --> 00:10:39,705
+Speaker SPEAKER_00: He just looked at them, and he looked at them for a long, long time, and then he wrote down a proof that it was impossible.
+
+126
+00:10:41,928 --> 00:10:43,211
+Speaker SPEAKER_00: He was called Carl Hewitt.
+
+127
+00:10:43,250 --> 00:10:44,192
+Speaker SPEAKER_00: This was a long time ago.
+
+128
+00:10:44,231 --> 00:10:48,337
+Speaker SPEAKER_00: I'm now going to show you
+
+129
+00:10:49,481 --> 00:10:50,182
+Speaker SPEAKER_00: how it works.
+
+130
+00:10:50,562 --> 00:10:52,065
+Speaker SPEAKER_00: So people do this.
+
+131
+00:10:53,046 --> 00:10:54,207
+Speaker SPEAKER_00: No, that's not a tetrahedron.
+
+132
+00:10:54,508 --> 00:10:55,249
+Speaker SPEAKER_00: And then they do this.
+
+133
+00:10:55,288 --> 00:10:56,510
+Speaker SPEAKER_00: No, that's not a tetrahedron.
+
+134
+00:10:56,870 --> 00:10:57,932
+Speaker SPEAKER_00: And what they don't do is that.
+
+135
+00:10:59,794 --> 00:11:01,817
+Speaker SPEAKER_00: Now if you look at that, that's what you wanted, right?
+
+136
+00:11:01,836 --> 00:11:03,720
+Speaker SPEAKER_00: That's a tetrahedron, in case you didn't know what it was.
+
+137
+00:11:04,860 --> 00:11:05,981
+Speaker SPEAKER_00: And it makes a tetrahedron very easy.
+
+138
+00:11:06,001 --> 00:11:06,844
+Speaker SPEAKER_00: You just have to do that.
+
+139
+00:11:07,904 --> 00:11:10,288
+Speaker SPEAKER_00: You just have to take the square face and put it together like that.
+
+140
+00:11:11,188 --> 00:11:12,890
+Speaker SPEAKER_00: So why can't people do that?
+
+141
+00:11:14,474 --> 00:11:17,918
+Speaker SPEAKER_00: Well, look at the tetrahedron now and think of the axis system you use on it.
+
+142
+00:11:18,198 --> 00:11:22,965
+Speaker SPEAKER_00: There's this vertical axis goes down from my chin through the peak there, down to the middle of the base.
+
+143
+00:11:24,706 --> 00:11:31,235
+Speaker SPEAKER_00: And when I show you one of these pieces, if I just show you one, you impose a coordinate system on this piece.
+
+144
+00:11:31,817 --> 00:11:37,124
+Speaker SPEAKER_00: And it has a long axis like this, and it has an axis like this, and it has an axis like this.
+
+145
+00:11:37,684 --> 00:11:42,591
+Speaker SPEAKER_00: And those axes don't line up at all with the axes that you normally use for describing a tetrahedron.
+
+146
+00:11:43,921 --> 00:11:48,307
+Speaker SPEAKER_00: And because of that, you're incapable of seeing how this relates to a tetrahedron.
+
+147
+00:11:50,049 --> 00:11:51,852
+Speaker SPEAKER_00: People who do solve it, solve it by reasoning.
+
+148
+00:11:51,893 --> 00:11:55,697
+Speaker SPEAKER_00: They say, look, tetrahedron, all the faces are triangular.
+
+149
+00:11:55,958 --> 00:11:57,520
+Speaker SPEAKER_00: I'm never going to make this into a triangle.
+
+150
+00:11:57,760 --> 00:11:59,224
+Speaker SPEAKER_00: So it must be these two faces.
+
+151
+00:11:59,524 --> 00:12:00,785
+Speaker SPEAKER_00: And eventually, they put them like that.
+
+152
+00:12:04,971 --> 00:12:08,157
+Speaker SPEAKER_00: So the whole point of this, well, the main point was to have fun.
+
+153
+00:12:08,277 --> 00:12:13,725
+Speaker SPEAKER_00: But the subsidiary point was to try and convince you people doing post frames of reference
+
+154
+00:12:14,616 --> 00:12:20,363
+Speaker SPEAKER_00: on objects, they understand objects using those frames of reference, and they can't sort of overcome it.
+
+155
+00:12:20,423 --> 00:12:25,629
+Speaker SPEAKER_00: That's intrinsic to how we see things, and it's not what convolutional nets do.
+
+156
+00:12:27,191 --> 00:12:38,682
+Speaker SPEAKER_01: So, because this is intrinsic to the way we see, you want to produce a computing system that imposes that same coordinate system you talked about, that 3D coordinate system, on images
+
+157
+00:12:38,883 --> 00:12:41,067
+Speaker SPEAKER_01: and thus can better recognize them, right?
+
+158
+00:12:41,087 --> 00:12:42,711
+Speaker SPEAKER_00: Yes, and I have another piece of logic.
+
+159
+00:12:42,831 --> 00:12:45,155
+Speaker SPEAKER_00: This is impeccable logic.
+
+160
+00:12:46,438 --> 00:12:49,144
+Speaker SPEAKER_00: There's two systems that don't have any problem with viewpoint.
+
+161
+00:12:50,427 --> 00:12:53,855
+Speaker SPEAKER_00: One is our perceptual system, and the other is computer graphics.
+
+162
+00:12:54,676 --> 00:12:55,999
+Speaker SPEAKER_00: Therefore, they work the same way.
+
+163
+00:12:57,341 --> 00:12:59,726
+Speaker SPEAKER_00: That's natural reasoning.
+
+164
+00:13:00,128 --> 00:13:05,053
+Speaker SPEAKER_00: So in computer graphics, what you need to do is someone says, make a house.
+
+165
+00:13:06,176 --> 00:13:08,938
+Speaker SPEAKER_00: And so you figure out that they tell you where the house should be.
+
+166
+00:13:10,240 --> 00:13:12,182
+Speaker SPEAKER_00: So now you want to know where the door should be.
+
+167
+00:13:13,105 --> 00:13:16,028
+Speaker SPEAKER_00: Well, you know the relationship between the house and the door.
+
+168
+00:13:17,210 --> 00:13:19,052
+Speaker SPEAKER_00: And sort of mathematically, how do you think of that?
+
+169
+00:13:19,111 --> 00:13:23,378
+Speaker SPEAKER_00: Well, you impose a frame of reference on the house, and you impose a frame of reference on the door.
+
+170
+00:13:23,878 --> 00:13:26,861
+Speaker SPEAKER_00: You have two coordinate systems, one for the house and one for the door.
+
+171
+00:13:26,993 --> 00:13:36,030
+Speaker SPEAKER_00: And you store inside the computer, as part of the knowledge about what a house is, what the relationship is between those two coordinate systems.
+
+172
+00:13:36,432 --> 00:13:40,259
+Speaker SPEAKER_00: How you convert from the coordinate system for the house to the coordinate system for the door.
+
+173
+00:13:40,460 --> 00:13:47,549
+Speaker SPEAKER_00: And then for the door, if you want to know where the doorknob is, you know the coordinate system for the doorknob, and you know where doorknobs are relative to doors, and so on.
+
+174
+00:13:47,570 --> 00:13:53,216
+Speaker SPEAKER_00: So computer graphics starts with the whole object and goes down until it gets primitive little things like little triangles.
+
+175
+00:13:53,918 --> 00:14:00,147
+Speaker SPEAKER_00: And then it does rendering, which means then it starts dealing with properties of light and surfaces and actually producing pixels.
+
+176
+00:14:00,767 --> 00:14:02,669
+Speaker SPEAKER_00: But up to that point, it's just doing geometry.
+
+177
+00:14:04,085 --> 00:14:15,280
+Speaker SPEAKER_00: So if you believe we should use the same kind of methods for dealing with viewpoint variation that computer graphics does, because it deals with viewpoint very well, you want to do the same thing in reverse.
+
+178
+00:14:15,301 --> 00:14:16,482
+Speaker SPEAKER_00: You want to start with the pixels.
+
+179
+00:14:17,524 --> 00:14:27,918
+Speaker SPEAKER_00: You want to do an initial stage that unpicks the properties of light and surfaces and gets you to the sort of geometry of little pieces of surface.
+
+180
+00:14:29,500 --> 00:14:32,826
+Speaker SPEAKER_00: And then from there, you want to put pieces together to make bigger pieces.
+
+181
+00:14:34,020 --> 00:14:42,476
+Speaker SPEAKER_00: And in order to do that with a neural net, you want to use a very different kind of neural net from the kind we use at present.
+
+182
+00:14:43,398 --> 00:14:45,581
+Speaker SPEAKER_00: I should say something about the kind of neural net we use at present.
+
+183
+00:14:46,443 --> 00:14:54,458
+Speaker SPEAKER_00: If you've been in the field for a long time, like I have, you know that the neural nets we use now, there's nothing really special about them.
+
+184
+00:14:54,479 --> 00:14:55,640
+Speaker SPEAKER_00: We just made them up.
+
+185
+00:14:56,363 --> 00:14:58,693
+Speaker SPEAKER_00: They're not, that's not what neural nets are.
+
+186
+00:14:59,316 --> 00:15:04,922
+Speaker SPEAKER_00: Some people made up some tricks and we've got a bag of tricks that works pretty well, but there's hundreds of other tricks we didn't explore.
+
+187
+00:15:05,493 --> 00:15:13,139
+Speaker SPEAKER_00: Just so you can see how primitive the current state of the art is, we had logistic units that have an input-output curve that looks like this.
+
+188
+00:15:13,799 --> 00:15:15,001
+Speaker SPEAKER_00: It's a sigmoid, like this.
+
+189
+00:15:16,123 --> 00:15:18,865
+Speaker SPEAKER_00: And for 30 years, we used those because we thought those were best.
+
+190
+00:15:19,625 --> 00:15:26,251
+Speaker SPEAKER_00: And then we discovered that if the input-output relationship is like this, that's called a rectified linear unit, these things are easier to train.
+
+191
+00:15:26,772 --> 00:15:29,413
+Speaker SPEAKER_00: So for 30 years, we used the wrong thing.
+
+192
+00:15:30,014 --> 00:15:31,655
+Speaker SPEAKER_00: And then we found something that works better.
+
+193
+00:15:32,376 --> 00:15:33,457
+Speaker SPEAKER_00: And then we used that.
+
+194
+00:15:34,078 --> 00:15:42,517
+Speaker SPEAKER_00: Well, if we could be that dumb about something that straightforward, just imagine how much we've got wrong in all the rest of neural nets.
+
+195
+00:15:45,222 --> 00:15:49,010
+Speaker SPEAKER_00: So we can make a different kind of neural net where you divide the neurons into little groups.
+
+196
+00:15:49,633 --> 00:15:51,977
+Speaker SPEAKER_00: I'll call that group a capsule.
+
+197
+00:15:51,998 --> 00:15:53,421
+Speaker SPEAKER_00: And in the capsule,
+
+198
+00:15:53,822 --> 00:15:55,004
+Speaker SPEAKER_00: You're going to have a bunch of numbers.
+
+199
+00:15:55,625 --> 00:15:57,107
+Speaker SPEAKER_00: Those are the activities of the neurons.
+
+200
+00:15:57,528 --> 00:15:59,410
+Speaker SPEAKER_00: But they're going to be a bunch that go together.
+
+201
+00:16:00,052 --> 00:16:02,095
+Speaker SPEAKER_00: In a normal neural net, you just have lots of neurons.
+
+202
+00:16:02,475 --> 00:16:06,181
+Speaker SPEAKER_00: And there's nothing saying, these ones go with those ones, and those ones go with those ones.
+
+203
+00:16:06,461 --> 00:16:07,322
+Speaker SPEAKER_00: It might learn to do that.
+
+204
+00:16:07,341 --> 00:16:09,745
+Speaker SPEAKER_00: But in capsules, we're going to define that in advance.
+
+205
+00:16:10,687 --> 00:16:12,450
+Speaker SPEAKER_00: And we're going to have, say, 16 neurons.
+
+206
+00:16:13,090 --> 00:16:14,091
+Speaker SPEAKER_00: And they all go together.
+
+207
+00:16:15,313 --> 00:16:21,923
+Speaker SPEAKER_00: And they're going to represent, well, this bunch of neurons is going to get active
+
+208
+00:16:22,105 --> 00:16:24,589
+Speaker SPEAKER_00: there'll be an extra neuron that says whether this bunch is active or not.
+
+209
+00:16:25,811 --> 00:16:31,320
+Speaker SPEAKER_00: They'll get active when an entity of a particular kind is present, maybe Cade's nose.
+
+210
+00:16:32,221 --> 00:16:46,105
+Speaker SPEAKER_00: So my visual system has spotted a nose, and it'll activate a bunch of neurons that say the geometrical relationship between a coordinate frame embedded in the nose and a coordinate frame embedded in my eyeball.
+
+211
+00:16:47,705 --> 00:16:52,673
+Speaker SPEAKER_00: And that's my knowledge of the orientation, position, and size of the nose.
+
+212
+00:16:53,033 --> 00:16:58,422
+Speaker SPEAKER_00: It's that geometrical relationship between a coordinate frame in the nose and a coordinate frame in my eyeball.
+
+213
+00:16:58,442 --> 00:16:59,222
+Speaker SPEAKER_00: OK.
+
+214
+00:16:59,243 --> 00:17:04,711
+Speaker SPEAKER_00: Maybe another bunch of neurons got active, and they recognized Cade's mouth as a mouth.
+
+215
+00:17:05,893 --> 00:17:13,644
+Speaker SPEAKER_00: And that bunch of 16 neurons will represent the relationship between the coordinate frame embedded in the mouth and my eyeball.
+
+216
+00:17:15,835 --> 00:17:32,701
+Speaker SPEAKER_00: And then the 16 neurons that think they might have found a nose, but aren't quite sure, can predict, if they know the viewpoint on the nose, they can predict how the coordinate frame embedded in the whole face should be related to my eyeball.
+
+217
+00:17:33,843 --> 00:17:38,028
+Speaker SPEAKER_00: That is, they're predicting the size and orientation and position of the face in my visual field.
+
+218
+00:17:39,712 --> 00:17:41,255
+Speaker SPEAKER_00: And so they make a prediction.
+
+219
+00:17:41,957 --> 00:17:46,644
+Speaker SPEAKER_00: The 16 neurons that represent a mouse can also make a prediction.
+
+220
+00:17:47,025 --> 00:17:48,186
+Speaker SPEAKER_00: I hope I said nose before.
+
+221
+00:17:48,207 --> 00:17:49,808
+Speaker SPEAKER_00: But anyway, the nose makes a prediction.
+
+222
+00:17:50,069 --> 00:17:51,151
+Speaker SPEAKER_00: The mouth makes a prediction.
+
+223
+00:17:51,711 --> 00:17:54,957
+Speaker SPEAKER_00: These are 16 neural activities for each of them.
+
+224
+00:17:55,878 --> 00:17:57,520
+Speaker SPEAKER_00: And as I move around, you stay still.
+
+225
+00:17:57,761 --> 00:17:59,263
+Speaker SPEAKER_00: As I move around, no, stay still.
+
+226
+00:17:59,284 --> 00:17:59,785
+Speaker SPEAKER_00: Don't look at me.
+
+227
+00:18:00,326 --> 00:18:01,688
+Speaker SPEAKER_00: As I move around.
+
+228
+00:18:02,359 --> 00:18:06,428
+Speaker SPEAKER_00: Those 16 numbers change because the relation of his mouth to my eyeball has changed.
+
+229
+00:18:07,029 --> 00:18:08,352
+Speaker SPEAKER_00: So those are neural activities.
+
+230
+00:18:09,054 --> 00:18:14,766
+Speaker SPEAKER_00: But there's something that doesn't change, and that's the relationship between his nose and his face.
+
+231
+00:18:16,028 --> 00:18:21,819
+Speaker SPEAKER_00: And so what we do is we take the 16 numbers that represent how his mouth is related to my eyeball.
+
+232
+00:18:22,458 --> 00:18:25,240
+Speaker SPEAKER_00: and we multiply them by a matrix, a 4x4 matrix.
+
+233
+00:18:26,041 --> 00:18:29,926
+Speaker SPEAKER_00: We actually form them into a 4x4 matrix, multiply them into another 4x4 matrix.
+
+234
+00:18:30,386 --> 00:18:32,589
+Speaker SPEAKER_00: This will sound very familiar to computer graphics people.
+
+235
+00:18:33,270 --> 00:18:37,316
+Speaker SPEAKER_00: And we get out a matrix that says how his face ought to be related to my eyeball.
+
+236
+00:18:38,196 --> 00:18:41,961
+Speaker SPEAKER_00: And we do the same for both the nose and the mouth.
+
+237
+00:18:43,082 --> 00:18:51,132
+Speaker SPEAKER_00: And what will happen is if the nose and the mouth are correctly related to make a face, they'll make the same prediction for the pose of the face.
+
+238
+00:18:52,292 --> 00:18:59,471
+Speaker SPEAKER_00: Now as I move around, as I change my viewpoint, the nose will change its prediction because I've changed my relationship to his face.
+
+239
+00:19:00,212 --> 00:19:01,576
+Speaker SPEAKER_00: And the mouth will change its prediction.
+
+240
+00:19:01,596 --> 00:19:03,340
+Speaker SPEAKER_00: But what won't change is that they agree.
+
+241
+00:19:03,381 --> 00:19:09,576
+Speaker SPEAKER_00: So all the knowledge about the shape of a face
+
+242
+00:19:10,450 --> 00:19:18,184
+Speaker SPEAKER_00: is in these transformation matrices that you apply to the viewpoint matrix, you transform it, you get a prediction for the viewpoint on the face.
+
+243
+00:19:19,047 --> 00:19:21,151
+Speaker SPEAKER_00: And that knowledge doesn't depend on viewpoint at all.
+
+244
+00:19:22,093 --> 00:19:25,859
+Speaker SPEAKER_00: So the relationship between his nose and his face is completely independent of my viewpoint.
+
+245
+00:19:27,163 --> 00:19:30,990
+Speaker SPEAKER_00: And so what we want to put into a neural net is we want to make the activities
+
+246
+00:19:32,067 --> 00:19:34,450
+Speaker SPEAKER_00: be very dependent on viewpoint.
+
+247
+00:19:35,310 --> 00:19:39,095
+Speaker SPEAKER_00: Most people doing convolutional nets are trying to make the activities independent of viewpoint, and that's a mistake.
+
+248
+00:19:39,695 --> 00:19:41,317
+Speaker SPEAKER_00: You make the activities dependent on viewpoint.
+
+249
+00:19:42,159 --> 00:19:47,705
+Speaker SPEAKER_00: You make the weights on the connections be completely independent of viewpoint.
+
+250
+00:19:47,786 --> 00:19:49,327
+Speaker SPEAKER_00: That's where the knowledge about shapes is.
+
+251
+00:19:50,608 --> 00:19:53,333
+Speaker SPEAKER_00: And you now try and predict the viewpoint on the whole object.
+
+252
+00:19:53,853 --> 00:19:57,617
+Speaker SPEAKER_00: And if you get predictions that agree, you say, hey, that thing's there.
+
+253
+00:19:58,179 --> 00:20:01,061
+Speaker SPEAKER_00: And if you get predictions that don't agree, you say, hey,
+
+254
+00:20:01,700 --> 00:20:06,069
+Speaker SPEAKER_00: there's nothing there. Um, it's fake news. Um, so, um, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so, so,
+
+255
+00:20:08,163 --> 00:20:14,510
+Speaker SPEAKER_00: So this is a much more robust way of identifying objects than what we use at present.
+
+256
+00:20:14,530 --> 00:20:15,592
+Speaker SPEAKER_00: And I want to give you an analogy.
+
+257
+00:20:15,771 --> 00:20:16,452
+Speaker SPEAKER_00: I talked too long.
+
+258
+00:20:16,472 --> 00:20:16,794
+Speaker SPEAKER_00: Go ahead.
+
+259
+00:20:17,634 --> 00:20:19,757
+Speaker SPEAKER_00: I want to give you an analogy from the intelligence world.
+
+260
+00:20:22,079 --> 00:20:26,665
+Speaker SPEAKER_00: Suppose you were monitoring radio traffic, and you saw mention in New York, and mention of Chicago, and Los Angeles.
+
+261
+00:20:27,145 --> 00:20:29,890
+Speaker SPEAKER_00: And you saw mention of September, and mention of October.
+
+262
+00:20:29,910 --> 00:20:34,035
+Speaker SPEAKER_00: And you saw mention of the 5th, and mention of the 12th, and mention of the 11th.
+
+263
+00:20:34,015 --> 00:20:35,896
+Speaker SPEAKER_00: And you see lots of these things.
+
+264
+00:20:36,597 --> 00:20:41,544
+Speaker SPEAKER_00: But suppose in three different messages you saw New York, September the 11th.
+
+265
+00:20:42,865 --> 00:20:44,507
+Speaker SPEAKER_00: That's a high-dimensional coincidence.
+
+266
+00:20:45,087 --> 00:20:46,449
+Speaker SPEAKER_00: Several things coincide there.
+
+267
+00:20:46,730 --> 00:20:52,215
+Speaker SPEAKER_00: And if you see that combination several times, that's really something you should pay attention to.
+
+268
+00:20:52,876 --> 00:21:02,587
+Speaker SPEAKER_00: And similarly, the nose predicts things like the size and the orientation of the position of the face, and the mouth predicts the same things.
+
+269
+00:21:02,872 --> 00:21:04,413
+Speaker SPEAKER_00: And so you've got a high-dimensional coincidence.
+
+270
+00:21:05,536 --> 00:21:18,914
+Speaker SPEAKER_00: So there's a big difference between the way I think neural nets should work and the way they're working at present, which is a present neural net takes a neuron, it has some weights, and it looks at how the weights relate to the activities in the layer below.
+
+271
+00:21:18,934 --> 00:21:19,435
+Speaker SPEAKER_00: Do they fit?
+
+272
+00:21:20,196 --> 00:21:24,643
+Speaker SPEAKER_00: What it should be doing is getting activities to make predictions, saying, do two sets of predictions fit?
+
+273
+00:21:25,265 --> 00:21:26,226
+Speaker SPEAKER_00: That's much more powerful.
+
+274
+00:21:26,787 --> 00:21:36,898
+Speaker SPEAKER_00: And fortunately for me, I got a very good, basically a graduate student, working with me for the last six months, and she made it all work.
+
+275
+00:21:37,559 --> 00:21:40,723
+Speaker SPEAKER_01: Yeah, we should say that this is not mere theory.
+
+276
+00:21:40,763 --> 00:21:49,855
+Speaker SPEAKER_01: You published two papers recently on this, and you've shown, at least in some cases, this can outperform a convolutional neural net for image recognition.
+
+277
+00:21:50,272 --> 00:21:52,718
+Speaker SPEAKER_00: So what we showed is early days.
+
+278
+00:21:53,679 --> 00:22:02,756
+Speaker SPEAKER_00: It's sort of embarrassing to go public with it so soon, but we showed one small data set that's designed to be a test of shape recognition.
+
+279
+00:22:03,317 --> 00:22:05,801
+Speaker SPEAKER_00: We get half the error rate of convolutional nets.
+
+280
+00:22:06,742 --> 00:22:08,686
+Speaker SPEAKER_00: But I've seen that before.
+
+281
+00:22:09,448 --> 00:22:18,163
+Speaker SPEAKER_00: So in 2009, two of my graduate students designed something for speech recognition that is slightly better than a well-developed technology.
+
+282
+00:22:18,324 --> 00:22:21,430
+Speaker SPEAKER_00: And convolutional neural nets are now a well-developed technology.
+
+283
+00:22:21,450 --> 00:22:26,659
+Speaker SPEAKER_00: If you can do slightly better with one graduate student working on it with lots of things you haven't tuned,
+
+284
+00:22:26,638 --> 00:22:28,501
+Speaker SPEAKER_00: it's obvious in the end you're going to do much better.
+
+285
+00:22:29,162 --> 00:22:44,103
+Speaker SPEAKER_00: That happened with speech recognition, it happened with shape recognition with convolutional nets, and I'm hoping it will happen with this new way of doing shape recognition, and that neural nets will stop having this silly problem that if they've learned to recognize things from some viewpoints, they can't recognize them from new viewpoints.
+
+286
+00:22:45,003 --> 00:22:52,173
+Speaker SPEAKER_01: And do you think you can also apply it to other tasks, beyond image recognition to speech recognition or translation or whatever else?
+
+287
+00:22:52,271 --> 00:23:04,491
+Speaker SPEAKER_00: So the general idea that you should recognize things not by a matched filter, that is not by having some weights and some activities and saying there's big activities where the weights are big.
+
+288
+00:23:05,053 --> 00:23:05,934
+Speaker SPEAKER_00: That's a matched filter.
+
+289
+00:23:06,756 --> 00:23:07,897
+Speaker SPEAKER_00: And that's one way to recognize things.
+
+290
+00:23:07,917 --> 00:23:09,099
+Speaker SPEAKER_00: That's template matching.
+
+291
+00:23:10,480 --> 00:23:20,417
+Speaker SPEAKER_00: A much more powerful way to recognize things is to get two different measured things, but multidimensional things, to make predictions and see if the predictions agree.
+
+292
+00:23:21,098 --> 00:23:31,817
+Speaker SPEAKER_00: And if you get this agreement of predictions in a high dimensional space in multiple numbers, that's a much more indicative sign that you've really found something.
+
+293
+00:23:32,479 --> 00:23:34,462
+Speaker SPEAKER_00: And I think neural nets are going to change to do that.
+
+294
+00:23:35,236 --> 00:23:37,619
+Speaker SPEAKER_01: And we should also point out, this is not a new idea.
+
+295
+00:23:37,660 --> 00:23:41,766
+Speaker SPEAKER_01: This is an old idea of yours dating back to the late 70s, right?
+
+296
+00:23:41,786 --> 00:23:43,347
+Speaker SPEAKER_01: Even before your bankruptcy.
+
+297
+00:23:43,367 --> 00:23:43,628
+Speaker SPEAKER_00: Yes.
+
+298
+00:23:45,632 --> 00:23:49,176
+Speaker SPEAKER_00: You probably heard this morning how incredibly fast the progress in neural nets is.
+
+299
+00:23:51,019 --> 00:23:56,208
+Speaker SPEAKER_00: So I started on this 38 years ago, and it's just coming to fruition now.
+
+300
+00:23:58,290 --> 00:23:59,573
+Speaker SPEAKER_00: But I'm a bit slow.
+
+301
+00:24:00,515 --> 00:24:01,696
+Speaker SPEAKER_01: But it's a different world, right?
+
+302
+00:24:01,717 --> 00:24:02,738
+Speaker SPEAKER_01: We have the computing power.
+
+303
+00:24:02,798 --> 00:24:03,680
+Speaker SPEAKER_01: We have the data.
+
+304
+00:24:04,240 --> 00:24:08,646
+Speaker SPEAKER_01: And it sounds like you think that this can progress at a much faster pace now.
+
+305
+00:24:09,087 --> 00:24:09,328
+Speaker SPEAKER_00: Yeah.
+
+306
+00:24:09,409 --> 00:24:11,291
+Speaker SPEAKER_00: And I should give a big word of caution.
+
+307
+00:24:12,512 --> 00:24:13,474
+Speaker SPEAKER_00: This is just a theory.
+
+308
+00:24:13,955 --> 00:24:16,038
+Speaker SPEAKER_00: This is something that works on a small data set.
+
+309
+00:24:16,559 --> 00:24:18,382
+Speaker SPEAKER_00: It works quite impressively on the small data set.
+
+310
+00:24:18,863 --> 00:24:20,766
+Speaker SPEAKER_00: But we don't know it's going to work on big data sets.
+
+311
+00:24:20,786 --> 00:24:23,069
+Speaker SPEAKER_00: And until it works on big data sets, you shouldn't believe it.
+
+312
+00:24:25,192 --> 00:24:25,512
+Speaker SPEAKER_01: All right.
+
+313
+00:24:25,532 --> 00:24:26,575
+Speaker SPEAKER_01: We have something to look forward to.
+
+314
+00:24:27,395 --> 00:24:27,896
+Speaker SPEAKER_01: Thank you, Jim.
+
+315
+00:24:27,916 --> 00:24:28,096
+Speaker SPEAKER_00: OK.
+
+316
+00:24:28,116 --> 00:24:28,438
+Speaker SPEAKER_00: Thank you.
+
+317
+00:24:28,959 --> 00:24:29,239
+Speaker SPEAKER_01: Appreciate it.
+

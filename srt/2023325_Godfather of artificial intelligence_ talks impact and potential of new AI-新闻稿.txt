@@ -1,0 +1,45 @@
+Artificial intelligence is more prevalent than ever, with OpenAI, Microsoft and Google all offering easily available AI tools. The technology could change the world, but experts also say it's something to be cautious of.
+
+Some chatbots are even advanced enough to understand and create natural language, based on the online content they are trained on. Chatbots have taken advanced tests, like the bar exam, and scored well. The models can also write computer code, create art and much more. 
+
+Those chat apps are the current rage, but AI also has the potential for more advanced use. Geoffrey Hinton, known as the "godfather of artificial intelligence," told CBS News' Brook Silva-Braga that the technology's advancement could be comparable to "the Industrial Revolution, or electricity ... or maybe the wheel." 
+
+Hinton, who works with Google and mentors AI's rising stars, started looking at artificial intelligence over 40 years ago, when it seemed like something out of a science fiction story. Hinton moved to Toronto, Canada, where the government agreed to fund his research. 
+
+"I was kind of weird because I did this stuff everyone else thought was nonsense," Hinton told CBS News.
+
+
+
+Artificial intelligence is more prevalent than ever, with OpenAI, Microsoft and Google all offering easily available AI tools. The technology could change the world, but experts also say it's something to be cautious of.
+
+Some chatbots are even advanced enough to understand and create natural language, based on the online content they are trained on. Chatbots have taken advanced tests, like the bar exam, and scored well. The models can also write computer code, create art and much more. 
+
+Those chat apps are the current rage, but AI also has the potential for more advanced use. Geoffrey Hinton, known as the "godfather of artificial intelligence," told CBS News' Brook Silva-Braga that the technology's advancement could be comparable to "the Industrial Revolution, or electricity ... or maybe the wheel." 
+
+Hinton, who works with Google and mentors AI's rising stars, started looking at artificial intelligence over 40 years ago, when it seemed like something out of a science fiction story. Hinton moved to Toronto, Canada, where the government agreed to fund his research. 
+
+"I was kind of weird because I did this stuff everyone else thought was nonsense," Hinton told CBS News.
+
+Instead of programming logic and reasoning skills into computers, the way some creators tried to do, Hinton thought it was better to mimic the brain and give computers the ability to figure those skills out for themselves and allow the technology to become a virtual neural network, making the right connections to solve a task.  
+
+"The big issue was could you expect a big neural network that learns by just changing the strengths of the connections? Could you expect that to just look at data and with no kind of innate prior knowledge, learn how to do things?" Hinton said. "And people in mainstream AI I thought that was completely ridiculous." 
+
+In the last decade or so, computers have finally reached a point where they can prove Hinton right. His machine-learning ideas are used to create all kinds of outputs, including deepfake photos, videos and audio, leaving those who study misinformation worried about how the tools can be used. 
+
+People also worry that the technology could take a lot of jobs, but Nick Frosst, who was mentored by Hinton and the co-founder of the company Cohere, said that it won't replace workers, but change their days. 
+
+"I  think it's going to make a whole lot of jobs easier and a whole lot of jobs faster," Frosst said. "I think we try our best to think about what the true impact of this technology is." 
+
+Some people, including OpenAI CEO Sam Altman, even worry that a "Terminator"-style "artificial general intelligence," is possible, where AI could zoom past human abilities and act of its own accord, but Frosst and others say that this is an overblown concern. 
+
+"I don't think the technology we're building today naturally leads to artificial general intelligence," Frosst said. "I don't think we're close to that." 
+
+Hinton once agreed, but now, he's more cautious. 
+"Until quite recently, I thought it was going to be like 20 to 50 years before we have general-purpose AI. And now I think it may be 20 years or less," he said, adding that we "might be" close to computers being able to come up with ideas to improve themselves. "That's an issue, right? We have to think hard about how you control that." 
+
+As for the odds of AI trying to wipe out humanity? 
+
+"It's not inconceivable, that's all I'll say," Hinton said. 
+The bigger issue, he said, is that people need to learn to manage a technology that could give a handful of companies or governments an incredible amount of power. 
+
+"I think it's very reasonable for people to be worrying about these issues now, even though it's not going to happen in the next year or two," Hinton said. "People should be thinking about those issues." 

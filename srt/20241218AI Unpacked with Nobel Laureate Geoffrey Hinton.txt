@@ -1,0 +1,1152 @@
+1
+00:00:00,031 --> 00:00:01,252
+Speaker SPEAKER_02: Jeff, welcome.
+
+2
+00:00:01,433 --> 00:00:03,214
+Speaker SPEAKER_02: We're so excited to have you here today.
+
+3
+00:00:03,314 --> 00:00:09,042
+Speaker SPEAKER_02: We are gathered with CHRO's heads of talent of some of the largest companies in the world.
+
+4
+00:00:09,202 --> 00:00:12,586
+Speaker SPEAKER_02: And what we're trying to do is make sense of AI.
+
+5
+00:00:13,348 --> 00:00:15,590
+Speaker SPEAKER_02: We're really wondering what it's going to be like in the future.
+
+6
+00:00:16,172 --> 00:00:19,356
+Speaker SPEAKER_02: But to understand that, I'd like to go back to the past.
+
+7
+00:00:19,335 --> 00:00:35,604
+Speaker SPEAKER_02: If we look back to, let's say, around 2010, so almost 15 years ago, if you tried to, you know, Geoffrey Hinton in 2010, the predictions that you made, where were you too optimistic, too pessimistic about the speed of progress?
+
+8
+00:00:36,485 --> 00:00:38,609
+Speaker SPEAKER_02: How has the field progressed since then?
+
+9
+00:00:39,399 --> 00:00:41,384
+Speaker SPEAKER_00: So ask me about 2016 later.
+
+10
+00:00:43,508 --> 00:00:57,375
+Speaker SPEAKER_00: So I think if you had asked people, even fairly enthusiastic people who believed in neural nets, in 2010, where we would be now, they wouldn't have believed we'd have something like GPT-4.
+
+11
+00:00:57,490 --> 00:01:06,060
+Speaker SPEAKER_00: they would have said, no, in the next 14 years, you're not going to develop something that's an expert at everything.
+
+12
+00:01:06,980 --> 00:01:08,843
+Speaker SPEAKER_00: Not a very good expert, but an expert at everything.
+
+13
+00:01:08,864 --> 00:01:24,121
+Speaker SPEAKER_00: You're not going to be able to have a system where you can just ask any question you like, some obscure question about British tax law, or some weird question about how you solve equations, and it's going to be able to give you a pretty good answer, an answer that's better than 99% of the population could give you.
+
+14
+00:01:25,721 --> 00:01:27,885
+Speaker SPEAKER_00: That's extraordinary, and we wouldn't have predicted that.
+
+15
+00:01:28,989 --> 00:01:32,856
+Speaker SPEAKER_02: And so progress is happening faster than you anticipated.
+
+16
+00:01:33,477 --> 00:01:33,798
+Speaker SPEAKER_00: Yes.
+
+17
+00:01:33,819 --> 00:01:34,680
+Speaker SPEAKER_02: Can you share more?
+
+18
+00:01:35,100 --> 00:01:40,070
+Speaker SPEAKER_02: What's it like to experience that as one of the leading researchers in the space and watching it accelerate?
+
+19
+00:01:40,090 --> 00:01:45,822
+Speaker SPEAKER_00: It's amazing, because back in the 80s, when Rommelhart
+
+20
+00:01:45,921 --> 00:01:51,028
+Speaker SPEAKER_00: reinvented backpropagation, he rediscovered it, and he and I worked together to use it for things.
+
+21
+00:01:51,650 --> 00:01:55,293
+Speaker SPEAKER_00: And we thought, to begin with, we thought this is going to solve everything.
+
+22
+00:01:55,754 --> 00:02:00,320
+Speaker SPEAKER_00: We've got something that can just learn, and there doesn't seem to be any limits to it.
+
+23
+00:02:00,340 --> 00:02:03,945
+Speaker SPEAKER_00: And then it was very disappointing, and we didn't understand why it didn't work better.
+
+24
+00:02:04,727 --> 00:02:11,096
+Speaker SPEAKER_00: It was partly architectural things, and for about 30 years we used an input-output function that looked like this, when we should have used one that looked like this.
+
+25
+00:02:12,877 --> 00:02:14,460
+Speaker SPEAKER_00: Just crazy.
+
+26
+00:02:15,772 --> 00:02:29,371
+Speaker SPEAKER_00: But it was mainly scale, and we just didn't understand that this whole idea would only really come into its own when you had a lot of connections and a lot of training data and a huge amount of compute.
+
+27
+00:02:30,111 --> 00:02:31,413
+Speaker SPEAKER_00: So we couldn't have done it back then.
+
+28
+00:02:31,473 --> 00:02:39,525
+Speaker SPEAKER_00: And if we'd said back then, yeah, but if we made one a million times bigger and had a million times more data, it would really work, that would have just sounded like a pathetic excuse.
+
+29
+00:02:40,164 --> 00:02:41,426
+Speaker SPEAKER_00: But it turned out that was the truth.
+
+30
+00:02:41,407 --> 00:02:42,388
+Speaker SPEAKER_02: That's fascinating.
+
+31
+00:02:42,829 --> 00:02:52,641
+Speaker SPEAKER_02: So one of the things that you and I talked about earlier is the underselling of what large language models do if we use the term next word prediction.
+
+32
+00:02:52,701 --> 00:02:58,128
+Speaker SPEAKER_02: The experience that we have is that they could be reasoning, they could have a degree of intelligence.
+
+33
+00:02:58,149 --> 00:03:00,271
+Speaker SPEAKER_02: Can you share more about how that comes about?
+
+34
+00:03:00,872 --> 00:03:08,342
+Speaker SPEAKER_00: So there's many people who say these things are just using statistical tricks, they don't really understand what they're saying, they're just using correlations.
+
+35
+00:03:09,266 --> 00:03:13,218
+Speaker SPEAKER_00: But if you ask those people, well, what's your model of how people understand?
+
+36
+00:03:14,582 --> 00:03:19,497
+Speaker SPEAKER_00: If they're symbolic AI people, their model is we have symbolic expressions and we manipulate them with symbolic rules.
+
+37
+00:03:19,729 --> 00:03:21,312
+Speaker SPEAKER_00: And that never worked that well.
+
+38
+00:03:21,372 --> 00:03:23,597
+Speaker SPEAKER_00: It didn't work nearly as well as the large language models.
+
+39
+00:03:24,198 --> 00:03:35,437
+Speaker SPEAKER_00: If you have cognitive scientists, they'll come up with a variety of explanations, but my initial tiny language model wasn't designed to do NLP, natural language processing.
+
+40
+00:03:35,736 --> 00:03:39,282
+Speaker SPEAKER_00: It was designed to show how people could learn the meanings of words.
+
+41
+00:03:39,302 --> 00:03:41,045
+Speaker SPEAKER_00: So it's a model of people.
+
+42
+00:03:41,161 --> 00:03:48,312
+Speaker SPEAKER_00: a very simplistic model, but the best model we have of how people understand sentences is these large language models.
+
+43
+00:03:48,832 --> 00:03:53,000
+Speaker SPEAKER_00: It's not like we have a different model of how people work and these work differently.
+
+44
+00:03:54,923 --> 00:03:57,807
+Speaker SPEAKER_00: The only good model of how people work that we have is like this.
+
+45
+00:03:58,968 --> 00:04:02,694
+Speaker SPEAKER_00: So I think they really do understand and they understand in the same way as we do.
+
+46
+00:04:03,757 --> 00:04:08,163
+Speaker SPEAKER_02: These large language models might have that kind of embedded creativity already in them
+
+47
+00:04:08,278 --> 00:04:13,508
+Speaker SPEAKER_00: Yes, so many people say, you know, these language models will do routine things, but people are creative.
+
+48
+00:04:14,109 --> 00:04:21,040
+Speaker SPEAKER_00: Well, if you take a standard test of creativity, I think the large language models now do better than 90% of people.
+
+49
+00:04:22,322 --> 00:04:25,127
+Speaker SPEAKER_00: So the idea they're not creative is crazy.
+
+50
+00:04:26,831 --> 00:04:32,379
+Speaker SPEAKER_00: This is very relevant to the debate among artists and Silicon Valley.
+
+51
+00:04:32,360 --> 00:04:38,269
+Speaker SPEAKER_00: about whether these AI models are just stealing the creation of artists.
+
+52
+00:04:39,512 --> 00:04:45,081
+Speaker SPEAKER_00: Obviously, to produce a work in a genre, you have to listen to a lot of music in that genre.
+
+53
+00:04:45,802 --> 00:04:46,822
+Speaker SPEAKER_00: But it's the same with a person.
+
+54
+00:04:47,184 --> 00:04:54,956
+Speaker SPEAKER_00: Whenever a person produces new music in a genre, they are stealing the works of previous people in just the same way the AI system is.
+
+55
+00:04:55,437 --> 00:04:59,463
+Speaker SPEAKER_00: So the AI system is not stealing them any more than another musician does.
+
+56
+00:04:59,865 --> 00:05:08,802
+Speaker SPEAKER_02: I mean, it's fascinating if you read analysis of the work of Picasso, he is clearly borrowing from artistic traditions.
+
+57
+00:05:08,982 --> 00:05:18,298
+Speaker SPEAKER_02: I think he's, you know, Benin masks and many other areas, and he's merging them into a new approach, but he is building off of things that he's seen.
+
+58
+00:05:18,939 --> 00:05:23,528
+Speaker SPEAKER_02: I think AI, if it's seen everything, there's no reason why it can't do the same thing.
+
+59
+00:05:23,591 --> 00:05:25,254
+Speaker SPEAKER_00: Yes, so AI can be creative.
+
+60
+00:05:26,214 --> 00:05:32,223
+Speaker SPEAKER_00: And of course, to be creative in a particular way, you look at works of art that are done in that way.
+
+61
+00:05:33,444 --> 00:05:41,514
+Speaker SPEAKER_00: But it's hard to say that it's stealing, because what it's not doing is pastiching together bits of other things.
+
+62
+00:05:42,175 --> 00:05:49,184
+Speaker SPEAKER_00: It's understanding the underlying structure the same way a person does, and then generating new stuff with the same kind of underlying structure.
+
+63
+00:05:49,805 --> 00:05:51,826
+Speaker SPEAKER_00: So it's just very like a person creating something.
+
+64
+00:05:51,891 --> 00:05:55,398
+Speaker SPEAKER_02: Now, you also studied psychology, the human brain in your undergrad.
+
+65
+00:05:55,577 --> 00:05:58,583
+Speaker SPEAKER_02: How does that compare to what we have in our brains?
+
+66
+00:05:59,204 --> 00:06:01,387
+Speaker SPEAKER_00: So we have about 100 million synapses.
+
+67
+00:06:02,528 --> 00:06:10,401
+Speaker SPEAKER_00: And even though many of them are used for other things, like breathing, the cortex, the neocortex, has most of those.
+
+68
+00:06:11,624 --> 00:06:17,173
+Speaker SPEAKER_00: And so we've got many more adaptable parameters.
+
+69
+00:06:17,271 --> 00:06:22,798
+Speaker SPEAKER_00: than these big language models, which makes it very strange that GPT-4 knows thousands of times more than we do.
+
+70
+00:06:23,418 --> 00:06:24,420
+Speaker SPEAKER_02: And you said a hundred million.
+
+71
+00:06:24,439 --> 00:06:25,961
+Speaker SPEAKER_02: I think you meant a hundred trillion.
+
+72
+00:06:25,980 --> 00:06:26,721
+Speaker SPEAKER_02: Did I say a hundred million?
+
+73
+00:06:26,742 --> 00:06:27,723
+Speaker SPEAKER_02: I think you said a hundred million.
+
+74
+00:06:27,783 --> 00:06:29,345
+Speaker SPEAKER_00: I could be a politician.
+
+75
+00:06:30,004 --> 00:06:31,666
+Speaker SPEAKER_00: I can't tell the difference between millions and trillions.
+
+76
+00:06:32,108 --> 00:06:33,288
+Speaker SPEAKER_00: A hundred trillion, yes.
+
+77
+00:06:33,309 --> 00:06:35,350
+Speaker SPEAKER_02: A hundred trillion synapses.
+
+78
+00:06:35,932 --> 00:06:37,552
+Speaker SPEAKER_02: And so it's fascinating.
+
+79
+00:06:37,572 --> 00:06:46,822
+Speaker SPEAKER_02: So we have large language models that are two orders of magnitude smaller than the connections in the human brain, and yet know an enormous amount of information.
+
+80
+00:06:46,802 --> 00:06:49,550
+Speaker SPEAKER_00: Yes, they are not very good experts at everything.
+
+81
+00:06:50,132 --> 00:06:53,040
+Speaker SPEAKER_00: So they know thousands of times more than any one person.
+
+82
+00:06:53,101 --> 00:07:01,706
+Speaker SPEAKER_00: And one of the reasons it can do that is you can have many different copies of exactly the same neural net running on different hardware.
+
+83
+00:07:01,990 --> 00:07:06,355
+Speaker SPEAKER_00: So you can get one copy to look at this bit of the internet, another copy to look at that bit of the internet.
+
+84
+00:07:07,016 --> 00:07:09,380
+Speaker SPEAKER_00: They can both figure out how they'd like to change their own weights.
+
+85
+00:07:09,882 --> 00:07:15,750
+Speaker SPEAKER_00: And if you just average those changes, then both copies have learned from the experience that each of them had.
+
+86
+00:07:16,331 --> 00:07:17,593
+Speaker SPEAKER_00: So now take 1,000 of those.
+
+87
+00:07:18,153 --> 00:07:20,637
+Speaker SPEAKER_00: Imagine if we could take 1,000 people.
+
+88
+00:07:21,057 --> 00:07:22,860
+Speaker SPEAKER_00: They could all go off and do a different course.
+
+89
+00:07:23,581 --> 00:07:28,369
+Speaker SPEAKER_00: And at the end, everyone knew what everyone had experienced.
+
+90
+00:07:28,449 --> 00:07:32,776
+Speaker SPEAKER_02: We've talked a little bit about memory and how memory is stored in the human brain.
+
+91
+00:07:32,817 --> 00:07:36,824
+Speaker SPEAKER_02: We've talked about sort of fast weights and how those can adjust.
+
+92
+00:07:37,305 --> 00:07:43,536
+Speaker SPEAKER_02: Is there anything missing in an LLM architecture that humans still do exceptionally better, the human brain does better?
+
+93
+00:07:43,576 --> 00:07:50,728
+Speaker SPEAKER_00: I think we still learn better from limited data and we don't quite know how we do that.
+
+94
+00:07:52,295 --> 00:07:58,365
+Speaker SPEAKER_00: We know the human brain has changes in connection strengths at many different timescales.
+
+95
+00:07:59,706 --> 00:08:05,516
+Speaker SPEAKER_00: So the first time I met Terry Sanofsky in 1979, that was basically the first thing we talked about.
+
+96
+00:08:06,077 --> 00:08:10,064
+Speaker SPEAKER_00: How these neural net models have just two timescales.
+
+97
+00:08:10,084 --> 00:08:14,471
+Speaker SPEAKER_00: They have the timescale of the activities of the neurons changing, and so
+
+98
+00:08:15,177 --> 00:08:19,142
+Speaker SPEAKER_00: Each time you put in a different sentence, neural activities will change.
+
+99
+00:08:19,783 --> 00:08:25,773
+Speaker SPEAKER_00: And then they have the activities of the values of the weights, the connection strings, and they change very slowly.
+
+100
+00:08:25,793 --> 00:08:26,834
+Speaker SPEAKER_00: That's where all the knowledge is.
+
+101
+00:08:27,815 --> 00:08:29,197
+Speaker SPEAKER_00: And they just have those two timescales.
+
+102
+00:08:29,879 --> 00:08:32,562
+Speaker SPEAKER_00: Now you could have many more timescales.
+
+103
+00:08:32,602 --> 00:08:36,990
+Speaker SPEAKER_00: Let's just suppose you have one more timescale where you have weights.
+
+104
+00:08:37,289 --> 00:08:43,158
+Speaker SPEAKER_00: You have the weights that change slowly, but you have an overlay of weights that change much faster but decay quickly.
+
+105
+00:08:43,898 --> 00:08:46,721
+Speaker SPEAKER_00: That gives you all sorts of extra nice properties.
+
+106
+00:08:47,743 --> 00:09:08,251
+Speaker SPEAKER_00: So, for example, if I say an unexpected word to you, like cucumber, and a couple of minutes later I put headphones on you, and I put lots of noise in the headphones, and I play words so you can only just hear them, most of them you can't quite make out what they are, you'll be considerably better at making out the word cucumber.
+
+107
+00:09:08,552 --> 00:09:09,975
+Speaker SPEAKER_00: because you heard it two minutes ago.
+
+108
+00:09:10,557 --> 00:09:12,740
+Speaker SPEAKER_00: So the question is, where is that stored?
+
+109
+00:09:12,880 --> 00:09:14,423
+Speaker SPEAKER_00: And it's not stored in neural activities.
+
+110
+00:09:14,443 --> 00:09:15,306
+Speaker SPEAKER_00: You can't afford to do that.
+
+111
+00:09:15,365 --> 00:09:16,869
+Speaker SPEAKER_00: You use up too many neurons.
+
+112
+00:09:16,889 --> 00:09:20,755
+Speaker SPEAKER_00: And it's not stored in the long-term weights, because in a few days' time, it'll be gone.
+
+113
+00:09:21,378 --> 00:09:24,563
+Speaker SPEAKER_00: It's stored in short-term changes to the synapse strengths.
+
+114
+00:09:25,044 --> 00:09:26,847
+Speaker SPEAKER_00: And we don't have that in the model as of present.
+
+115
+00:09:26,827 --> 00:09:31,852
+Speaker SPEAKER_02: My undergraduate research was actually looking at something very similar, except it was pre-perceptual.
+
+116
+00:09:32,293 --> 00:09:34,716
+Speaker SPEAKER_02: So you would flash the word cucumber very quickly.
+
+117
+00:09:35,115 --> 00:09:36,616
+Speaker SPEAKER_02: You didn't notice that you'd seen it.
+
+118
+00:09:36,638 --> 00:09:36,998
+Speaker SPEAKER_00: It was subliminal.
+
+119
+00:09:37,298 --> 00:09:37,859
+Speaker SPEAKER_02: Subliminal.
+
+120
+00:09:38,119 --> 00:09:44,325
+Speaker SPEAKER_02: And then you could pick it up more likely if you either saw it in a collection of words or listened to it.
+
+121
+00:09:44,784 --> 00:09:54,674
+Speaker SPEAKER_02: And so there was a question of how did you process the word cucumber without realizing it in such a way that your brain stored it and was able to recognize it more quickly.
+
+122
+00:09:54,654 --> 00:09:58,572
+Speaker SPEAKER_00: I think there's also a phenomenon where you flash the word cucumber.
+
+123
+00:09:58,687 --> 00:10:02,052
+Speaker SPEAKER_00: and you'll be better at hearing, at recognizing the word lettuce.
+
+124
+00:10:02,091 --> 00:10:04,355
+Speaker SPEAKER_00: Yes, that was actually what we pickled.
+
+125
+00:10:04,934 --> 00:10:07,018
+Speaker SPEAKER_02: It was the association of sort of similar words.
+
+126
+00:10:07,038 --> 00:10:11,923
+Speaker SPEAKER_00: Yes, so it's not just that you got the word, you got the semantics of the word without any consciousness.
+
+127
+00:10:12,124 --> 00:10:25,219
+Speaker SPEAKER_02: Can you share some examples of how introducing new information to an LLM that it might not have had in its training data, how it can reason over that and come up with an answer that's similar to how a human might reason by analogy?
+
+128
+00:10:27,054 --> 00:10:30,780
+Speaker SPEAKER_00: Well, I can give a nice example of it doing analogies that most people can't do.
+
+129
+00:10:31,261 --> 00:10:32,082
+Speaker SPEAKER_02: I would love to hear that.
+
+130
+00:10:32,484 --> 00:10:43,061
+Speaker SPEAKER_00: So I asked GPT-4 some time ago when it wasn't hooked up to the web, why is a compost heap like an atom bomb?
+
+131
+00:10:43,081 --> 00:10:44,864
+Speaker SPEAKER_02: And I would not be able to answer that question.
+
+132
+00:10:44,923 --> 00:10:46,886
+Speaker SPEAKER_00: Excellent.
+
+133
+00:10:47,254 --> 00:10:51,625
+Speaker SPEAKER_00: So it said the time scales are very different and the energy scales are very different.
+
+134
+00:10:52,288 --> 00:10:54,293
+Speaker SPEAKER_00: And then it went on about chain reactions.
+
+135
+00:10:54,373 --> 00:10:57,841
+Speaker SPEAKER_00: It went on about how in a compost heap, the hotter it gets, the faster it generates heat.
+
+136
+00:10:58,383 --> 00:11:02,614
+Speaker SPEAKER_00: In an atom bomb, the more neutrons it's producing, the faster it generates neutrons.
+
+137
+00:11:03,201 --> 00:11:09,970
+Speaker SPEAKER_00: And so the underlying physics similarity, GPT-4 had seen.
+
+138
+00:11:10,309 --> 00:11:12,692
+Speaker SPEAKER_00: Now, it probably didn't see it when I asked the question.
+
+139
+00:11:12,712 --> 00:11:14,094
+Speaker SPEAKER_00: It had probably seen it during training.
+
+140
+00:11:14,934 --> 00:11:16,517
+Speaker SPEAKER_00: So we see a lot of analogies.
+
+141
+00:11:17,238 --> 00:11:19,320
+Speaker SPEAKER_00: And we actually store things in the weights.
+
+142
+00:11:20,061 --> 00:11:30,913
+Speaker SPEAKER_00: And it's much easier to store things in weights if they're kind of analogous structures, because you can share the weights.
+
+143
+00:11:32,833 --> 00:11:34,879
+Speaker SPEAKER_00: And these large language models are just the same.
+
+144
+00:11:35,340 --> 00:11:41,414
+Speaker SPEAKER_00: And so in order to store huge amounts of information, they have to see analogies between different facts that they're learning.
+
+145
+00:11:42,177 --> 00:11:45,004
+Speaker SPEAKER_00: And they will have seen many analogies that no person's ever seen.
+
+146
+00:11:46,013 --> 00:11:47,075
+Speaker SPEAKER_02: So this is fascinating.
+
+147
+00:11:47,115 --> 00:11:59,797
+Speaker SPEAKER_02: So in order to compress that amount of information into that few parameters, they have to implicitly understand and codify analogies in their weighting?
+
+148
+00:11:59,836 --> 00:12:05,506
+Speaker SPEAKER_00: Yes, and many of those analogies are analogies at a deep level, like between a compost heap and an atom bomb.
+
+149
+00:12:05,756 --> 00:12:13,671
+Speaker SPEAKER_02: And they might be discovering, they might have embedded in the weights right now, analogies that we as humans have not actually thought about ourselves.
+
+150
+00:12:13,971 --> 00:12:21,446
+Speaker SPEAKER_00: Yes, because GPT-4 is a not very good expert at physics, but it's also not very good expert at ancient Greek literature.
+
+151
+00:12:21,926 --> 00:12:28,879
+Speaker SPEAKER_00: And it may well be there's something in ancient Greek literature that's rather like some weird thing in quantum mechanics, but no one person's ever seen those two things.
+
+152
+00:12:28,859 --> 00:12:32,865
+Speaker SPEAKER_02: And so, in 2010, you started understanding what was possible.
+
+153
+00:12:32,884 --> 00:12:36,250
+Speaker SPEAKER_02: You and Ilya won ImageNet.
+
+154
+00:12:36,610 --> 00:12:39,535
+Speaker SPEAKER_02: Alex, I think, was... Alex Krashevsky.
+
+155
+00:12:39,615 --> 00:12:40,517
+Speaker SPEAKER_00: It's called AlexNet.
+
+156
+00:12:40,677 --> 00:12:41,197
+Speaker SPEAKER_02: AlexNet.
+
+157
+00:12:41,217 --> 00:12:41,778
+Speaker SPEAKER_02: Oh, that's right.
+
+158
+00:12:41,940 --> 00:12:50,513
+Speaker SPEAKER_00: He was an amazing coder, and he managed to code convolutional nets on NVIDIA GPUs much more efficiently than anybody else.
+
+159
+00:12:50,932 --> 00:12:53,635
+Speaker SPEAKER_02: And so at that point, you've started to see that scale matters.
+
+160
+00:12:54,057 --> 00:12:58,384
+Speaker SPEAKER_02: How is the past 10 years, 2016, why is that moment an important moment for you?
+
+161
+00:12:58,403 --> 00:13:05,034
+Speaker SPEAKER_00: Oh, the reason I mentioned 2016 is because I made a prediction in 2016 that was wrong in the opposite direction.
+
+162
+00:13:05,576 --> 00:13:08,681
+Speaker SPEAKER_00: I predicted that in five years' time, we wouldn't need radiologists anymore.
+
+163
+00:13:09,903 --> 00:13:12,106
+Speaker SPEAKER_00: This upset some radiologists.
+
+164
+00:13:12,648 --> 00:13:13,609
+Speaker SPEAKER_00: And it turned out it was wrong.
+
+165
+00:13:14,190 --> 00:13:17,174
+Speaker SPEAKER_00: I was off by about a factor of two, possibly even a factor of three.
+
+166
+00:13:18,285 --> 00:13:21,211
+Speaker SPEAKER_00: The time is going to come, and I meant for scans.
+
+167
+00:13:21,490 --> 00:13:23,975
+Speaker SPEAKER_00: I actually think you said at the time, five years, maybe 10.
+
+168
+00:13:24,034 --> 00:13:38,336
+Speaker SPEAKER_00: But when they're reading scans in maybe 10 years from now, I'm very confident that the way you'll read almost all medical scans is an AI will read them and a doctor will check it.
+
+169
+00:13:38,653 --> 00:13:41,738
+Speaker SPEAKER_00: AI is just going to get much better than doctors.
+
+170
+00:13:41,758 --> 00:13:44,662
+Speaker SPEAKER_00: AI can see much more in scans than doctors can.
+
+171
+00:13:44,682 --> 00:13:54,254
+Speaker SPEAKER_00: So my wife had cancer, and she'd get CAT scans every so often, and they'd say the tumour is two centimetres, and then a month later they'd say the tumour is three centimetres.
+
+172
+00:13:54,674 --> 00:14:00,062
+Speaker SPEAKER_00: Well this thing's shaped like an octopus, and two is not a very good measure of the size of an octopus, right?
+
+173
+00:14:00,543 --> 00:14:04,788
+Speaker SPEAKER_00: You'd like to know much more about what's going on, and with AI we can do that.
+
+174
+00:14:05,450 --> 00:14:08,052
+Speaker SPEAKER_00: With doctors they can't do that because they don't have the
+
+175
+00:14:08,995 --> 00:14:10,318
+Speaker SPEAKER_00: they don't know what the outcomes are.
+
+176
+00:14:10,880 --> 00:14:17,923
+Speaker SPEAKER_00: But I think with AI we're going to be able to see things about cancers that will tell you whether they're going to metastasize soon and stuff like that.
+
+177
+00:14:19,408 --> 00:14:22,397
+Speaker SPEAKER_00: We know there's lots more information in the images that is being used.
+
+178
+00:14:22,850 --> 00:14:36,328
+Speaker SPEAKER_02: Well, as you said earlier, if you've got, you know, 500 doctors that can each spend a lifetime looking at 500 images and seeing the progression of them and then compress their brains, that's vastly more information than one single doctor.
+
+179
+00:14:36,509 --> 00:14:42,477
+Speaker SPEAKER_00: Yes, so no radiologist can train on enough data to compete with these things once these things are really good at vision.
+
+180
+00:14:42,457 --> 00:14:47,065
+Speaker SPEAKER_00: But, for example, in tuition, we're going to get very good AI tutors.
+
+181
+00:14:47,085 --> 00:14:52,451
+Speaker SPEAKER_00: And there's a lot of research that shows, take a school kid and put them in the classroom, they'll learn at a certain rate.
+
+182
+00:14:52,732 --> 00:14:54,634
+Speaker SPEAKER_00: Give them a private tutor, they'll learn twice as fast.
+
+183
+00:14:55,677 --> 00:15:04,389
+Speaker SPEAKER_00: And so we know that AI is approaching being good enough to understand what people are misunderstanding.
+
+184
+00:15:04,428 --> 00:15:08,414
+Speaker SPEAKER_00: And as soon as you get private tuition by
+
+185
+00:15:08,480 --> 00:15:17,022
+Speaker SPEAKER_00: an entity that knows what you don't understand, it's going to be a much more efficient way of learning than just sitting in a classroom and listening to a broadcast.
+
+186
+00:15:17,803 --> 00:15:24,902
+Speaker SPEAKER_00: So I think in healthcare and education, there's going to be huge advantages.
+
+187
+00:15:25,404 --> 00:15:37,142
+Speaker SPEAKER_02: I wanna spend a moment on that education example, because we've been inspired by that, the idea of a tutor for everyone, for people learning in traditional education, a leadership coach for everyone who is at work.
+
+188
+00:15:37,663 --> 00:15:40,687
+Speaker SPEAKER_02: And so for us, this idea of personalization matters.
+
+189
+00:15:41,207 --> 00:15:49,640
+Speaker SPEAKER_02: Do you think AI can understand you and your context and almost be able to sort of access, it's like a librarian for the world's information, but just for you?
+
+190
+00:15:50,126 --> 00:16:04,136
+Speaker SPEAKER_00: Absolutely, so a few weeks ago I won a Nobel Prize and I've never had a personal assistant before and the University gave me a personal assistant and she now understands quite a lot about me and it's wonderful.
+
+191
+00:16:04,639 --> 00:16:07,063
+Speaker SPEAKER_00: And everybody could have that if we can do it with AI.
+
+192
+00:16:07,303 --> 00:16:08,085
+Speaker SPEAKER_02: That's fascinating.
+
+193
+00:16:08,125 --> 00:16:11,250
+Speaker SPEAKER_02: And you had to bring her up to speed, give her a context.
+
+194
+00:16:11,289 --> 00:16:15,755
+Speaker SPEAKER_02: If she had infinite access to your information, she'd be even more helpful.
+
+195
+00:16:15,775 --> 00:16:17,038
+Speaker SPEAKER_00: Yeah.
+
+196
+00:16:17,778 --> 00:16:20,943
+Speaker SPEAKER_00: But I think that's sort of the good scenario.
+
+197
+00:16:20,984 --> 00:16:26,731
+Speaker SPEAKER_00: We all get these really intelligent personal assistants that know everything about us and help.
+
+198
+00:16:27,403 --> 00:16:38,455
+Speaker SPEAKER_01: When we think about building AI products, something that gets tossed around a lot is human-machine or human-model empathy and helping users understand what maybe they should expect from models so they know how to channel it properly.
+
+199
+00:16:38,875 --> 00:16:41,077
+Speaker SPEAKER_01: How do you think about that for software?
+
+200
+00:16:41,317 --> 00:16:49,126
+Speaker SPEAKER_00: Well, there's one experiment where you have AI doctors and real doctors, and they interact with patients.
+
+201
+00:16:49,706 --> 00:16:52,009
+Speaker SPEAKER_00: And then you ask the patients, how would you rate them for empathy?
+
+202
+00:16:52,389 --> 00:16:53,630
+Speaker SPEAKER_00: The AI ones do much better.
+
+203
+00:16:54,471 --> 00:16:56,313
+Speaker SPEAKER_00: The AI ones actually listen to the patients.
+
+204
+00:16:57,947 --> 00:17:01,091
+Speaker SPEAKER_00: So already they can exhibit empathy.
+
+205
+00:17:02,092 --> 00:17:06,759
+Speaker SPEAKER_00: It may be, we think of empathy as you think, how would that be for me?
+
+206
+00:17:06,798 --> 00:17:08,721
+Speaker SPEAKER_00: And then you think, oh my God, that would be awful for me.
+
+207
+00:17:08,760 --> 00:17:09,442
+Speaker SPEAKER_00: I'm so sorry.
+
+208
+00:17:10,143 --> 00:17:17,152
+Speaker SPEAKER_00: And maybe they don't do that, but they nevertheless, behaviorally, they seem to exhibit empathy pretty well.
+
+209
+00:17:17,172 --> 00:17:26,502
+Speaker SPEAKER_00: And we would like, if you had an AI tutor, you'd like it to have empathy about the fact that the pupils misunderstood something.
+
+210
+00:17:27,226 --> 00:17:29,569
+Speaker SPEAKER_00: And I'm sure they're going to be able to do that.
+
+211
+00:17:30,731 --> 00:17:38,486
+Speaker SPEAKER_02: And I think you would say, correct me if I'm wrong, that if it exhibits empathy, it might be doing it in the same way that we exhibit empathy.
+
+212
+00:17:38,506 --> 00:17:44,557
+Speaker SPEAKER_02: And therefore it might be, it's not just an exhibit, like performative empathy, it's going to come across as genuine empathy.
+
+213
+00:17:44,596 --> 00:17:45,137
+Speaker SPEAKER_02: Is that right?
+
+214
+00:17:45,578 --> 00:17:46,840
+Speaker SPEAKER_00: It might be genuine empathy.
+
+215
+00:17:48,604 --> 00:17:50,887
+Speaker SPEAKER_00: I think for us to call it genuine empathy,
+
+216
+00:17:52,031 --> 00:17:57,003
+Speaker SPEAKER_00: the eyes would have to be similar enough to us so they could imagine what it would be like for them.
+
+217
+00:17:57,806 --> 00:18:07,087
+Speaker SPEAKER_00: We tend to think of empathy as the ability to imagine what it would be like for you and then see, understand how it is for the other person.
+
+218
+00:18:07,067 --> 00:18:10,933
+Speaker SPEAKER_00: And I think if you're not doing that, you're just being very, oh, that's terrible.
+
+219
+00:18:11,034 --> 00:18:12,316
+Speaker SPEAKER_00: I'm so sorry about that.
+
+220
+00:18:12,576 --> 00:18:15,059
+Speaker SPEAKER_00: But you're not thinking of how it would be for you, right?
+
+221
+00:18:15,079 --> 00:18:16,821
+Speaker SPEAKER_00: That seems less genuine empathy.
+
+222
+00:18:17,603 --> 00:18:18,825
+Speaker SPEAKER_00: And I can certainly do that.
+
+223
+00:18:19,105 --> 00:18:20,247
+Speaker SPEAKER_02: I mean, I definitely agree with that.
+
+224
+00:18:20,267 --> 00:18:27,417
+Speaker SPEAKER_02: But I think part of the beauty of literature is that it puts you in other people's positions, and you can experience it through that.
+
+225
+00:18:27,597 --> 00:18:32,484
+Speaker SPEAKER_02: And you can say, well, I've never been in that position, but I've now lived that experience.
+
+226
+00:18:32,464 --> 00:18:44,686
+Speaker SPEAKER_02: And if you have the world's literature compressed into that model, they might be able to understand what a range of humans, even more than I would, would be going through and exhibit empathy to that.
+
+227
+00:18:45,268 --> 00:18:46,390
+Speaker SPEAKER_02: They might, yes.
+
+228
+00:18:46,410 --> 00:18:47,672
+Speaker SPEAKER_02: That's really interesting.
+
+229
+00:18:47,652 --> 00:18:51,375
+Speaker SPEAKER_02: So looking, I want to zoom out to the societal side of things.
+
+230
+00:18:51,454 --> 00:18:59,803
+Speaker SPEAKER_02: So we've seen an enormous amount of hype, an enormous amount of coverage of LLMs in the past couple of years.
+
+231
+00:19:00,943 --> 00:19:07,049
+Speaker SPEAKER_02: One of the things you and I talked about is the analogy of sort of how difficult it is to see the future when things are growing exponentially.
+
+232
+00:19:07,470 --> 00:19:11,032
+Speaker SPEAKER_02: Can you share a little bit more about how you're experiencing that?
+
+233
+00:19:11,173 --> 00:19:13,055
+Speaker SPEAKER_00: Yeah, we're not used to exponential growth.
+
+234
+00:19:13,075 --> 00:19:17,118
+Speaker SPEAKER_00: So a good analogy is if you're driving at night,
+
+235
+00:19:17,098 --> 00:19:21,486
+Speaker SPEAKER_00: on a windy road that you don't know, you often drive on the taillights of the car in front of you.
+
+236
+00:19:22,227 --> 00:19:25,131
+Speaker SPEAKER_00: And as the car gets further away from you, the taillights get dimmer.
+
+237
+00:19:25,791 --> 00:19:27,335
+Speaker SPEAKER_00: And they get dimmer quadratically.
+
+238
+00:19:28,355 --> 00:19:34,144
+Speaker SPEAKER_00: So, if you triple the distance, they get dimmer by a factor of nine.
+
+239
+00:19:35,587 --> 00:19:36,628
+Speaker SPEAKER_00: That's why you try and stay close.
+
+240
+00:19:39,032 --> 00:19:40,776
+Speaker SPEAKER_00: With fog, it's not like that at all.
+
+241
+00:19:40,836 --> 00:19:42,397
+Speaker SPEAKER_00: It's totally different.
+
+242
+00:19:42,579 --> 00:19:50,453
+Speaker SPEAKER_00: With fog, if you can see clearly at like 100 yards, you just assume you'll be able to see something at 200 yards.
+
+243
+00:19:51,075 --> 00:19:56,345
+Speaker SPEAKER_00: But actually, you can see clearly at 100 yards and then nothing at 200 yards, because fog is exponential.
+
+244
+00:19:56,384 --> 00:19:58,950
+Speaker SPEAKER_00: Per unit distance, it removes a certain fraction of the light.
+
+245
+00:19:59,351 --> 00:20:03,458
+Speaker SPEAKER_00: It's very different from linear or quadratic things that we're used to.
+
+246
+00:20:03,438 --> 00:20:08,770
+Speaker SPEAKER_00: People don't really understand the word exponential because it's misused so much.
+
+247
+00:20:09,292 --> 00:20:11,237
+Speaker SPEAKER_00: People misuse the word exponential to mean a lot.
+
+248
+00:20:11,798 --> 00:20:16,349
+Speaker SPEAKER_00: In fact, I think the rate at which they're misusing exponential is growing quadratically.
+
+249
+00:20:17,073 --> 00:20:37,038
+Speaker SPEAKER_02: It reminds me of a riddle that I used to love as a child, which was, if you have a pond that starts with one lily in it and it doubles every day until the 30th day when the lilies cover the pond and obliterate sunlight and so the pond dies, which day is the pond half-filled with lilies?
+
+250
+00:20:37,019 --> 00:20:39,162
+Speaker SPEAKER_02: And the answer is the 29th day.
+
+251
+00:20:39,402 --> 00:20:41,845
+Speaker SPEAKER_02: But the intuition people have is, oh, maybe it's around the 15th.
+
+252
+00:20:42,484 --> 00:20:49,113
+Speaker SPEAKER_02: And so it's hard to sometimes understand, because we don't live in that experience, what exponential growth could be like.
+
+253
+00:20:49,794 --> 00:20:52,217
+Speaker SPEAKER_02: Is there anything, as you think about the future of work?
+
+254
+00:20:52,376 --> 00:20:54,038
+Speaker SPEAKER_02: We talked a little bit about workforce.
+
+255
+00:20:54,759 --> 00:20:58,223
+Speaker SPEAKER_02: A world of everyone having assistance is obviously wonderful.
+
+256
+00:20:58,443 --> 00:21:02,689
+Speaker SPEAKER_02: A world of jobs being replaced is obviously going to cause a lot of social stress.
+
+257
+00:21:02,669 --> 00:21:08,140
+Speaker SPEAKER_02: How should people who are leading large companies think about navigating the next two to three years?
+
+258
+00:21:08,727 --> 00:21:10,788
+Speaker SPEAKER_00: There's obviously joblessness.
+
+259
+00:21:11,769 --> 00:21:17,016
+Speaker SPEAKER_00: So we just don't know whether AI is going to get rid of a lot of jobs.
+
+260
+00:21:17,036 --> 00:21:17,836
+Speaker SPEAKER_00: I suspect it is.
+
+261
+00:21:18,237 --> 00:21:18,998
+Speaker SPEAKER_00: Jan thinks it is.
+
+262
+00:21:19,097 --> 00:21:20,960
+Speaker SPEAKER_00: Janneke, my friend, thinks it isn't.
+
+263
+00:21:21,461 --> 00:21:27,606
+Speaker SPEAKER_00: And in the past, things like automatic teller machines didn't cause massive unemployment among tellers.
+
+264
+00:21:27,827 --> 00:21:33,874
+Speaker SPEAKER_00: They just ended up doing more interesting, complicated things and taking longer about it, so you have to queue for a long time.
+
+265
+00:21:35,878 --> 00:21:39,083
+Speaker SPEAKER_00: So maybe it'll produce joblessness, maybe it won't.
+
+266
+00:21:39,123 --> 00:21:43,709
+Speaker SPEAKER_00: I suspect there's some kinds of jobs where you could use a lot more of that.
+
+267
+00:21:44,769 --> 00:21:52,019
+Speaker SPEAKER_00: So if, for example, they made doctors more efficient, we could all, especially old people, could use a lot more doctors' time.
+
+268
+00:21:52,519 --> 00:21:56,984
+Speaker SPEAKER_00: If you got doctors who were 10 times as efficient, I'd just get 10 times as much healthcare.
+
+269
+00:21:57,045 --> 00:21:57,285
+Speaker SPEAKER_00: Great.
+
+270
+00:21:59,428 --> 00:22:01,329
+Speaker SPEAKER_00: There's other things, though, that aren't like that.
+
+271
+00:22:01,731 --> 00:22:09,721
+Speaker SPEAKER_00: And what'll happen is one person with an AI assistant will be doing the jobs that 10 people used to do, and the other nine people will be unemployed.
+
+272
+00:22:10,282 --> 00:22:13,788
+Speaker SPEAKER_00: And the problem with that is you've got an increase in productivity.
+
+273
+00:22:13,928 --> 00:22:15,108
+Speaker SPEAKER_00: That should help people.
+
+274
+00:22:15,990 --> 00:22:21,698
+Speaker SPEAKER_00: But you get nine people unemployed and one rich person who gets a bit richer.
+
+275
+00:22:22,538 --> 00:22:24,240
+Speaker SPEAKER_00: And that's very bad for society.
+
+276
+00:22:24,480 --> 00:22:26,983
+Speaker SPEAKER_00: Obviously, we can't see very far in the future.
+
+277
+00:22:27,003 --> 00:22:31,829
+Speaker SPEAKER_00: If you take the fog analogy, I think the wall comes down at three to five years.
+
+278
+00:22:33,030 --> 00:22:36,655
+Speaker SPEAKER_00: We're fairly confident we've got some idea what's going to happen in the next few years.
+
+279
+00:22:37,115 --> 00:22:39,880
+Speaker SPEAKER_00: In 10 years' time, we have no idea what's going to happen.
+
+280
+00:22:40,079 --> 00:22:41,582
+Speaker SPEAKER_00: And you can see that by looking 10 years back.
+
+281
+00:22:41,622 --> 00:22:44,125
+Speaker SPEAKER_00: We had no idea this was going to happen.
+
+282
+00:22:45,640 --> 00:22:56,798
+Speaker SPEAKER_00: I think companies should navigate it by going in the direction of everybody having an intelligent AI assistant.
+
+283
+00:22:57,384 --> 00:23:07,317
+Speaker SPEAKER_00: people feel they're going to get improved working conditions from this smart assistant, you're going to get increases in productivity, that would be great for everybody.
+
+284
+00:23:08,258 --> 00:23:26,598
+Speaker SPEAKER_02: The next five years are going to be extraordinarily eventful, for lack of a better word, and you've played an enormous role helping us get here, getting through the AI winter, getting through those moments when it might not have felt like it was quite as clear as it is now, and I just want to say what an honour it's been to have this conversation and thank you.
+
+285
+00:23:26,578 --> 00:23:29,117
+Speaker SPEAKER_00: Yeah, I really enjoyed it.
+
+286
+00:23:29,137 --> 00:23:29,923
+Speaker SPEAKER_02: Thank you.
+
+287
+00:23:30,710 --> 00:23:31,496
+Speaker SPEAKER_01: Thank you so much.
+
+288
+00:23:31,798 --> 00:23:32,099
+Speaker SPEAKER_02: You're welcome.
+

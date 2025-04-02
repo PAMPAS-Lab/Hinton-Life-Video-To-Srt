@@ -1,0 +1,836 @@
+1
+00:00:00,031 --> 00:00:05,945
+Speaker SPEAKER_00: Our major limitation was our physical strength and Industrial Revolution removed that limitation.
+
+2
+00:00:06,367 --> 00:00:11,880
+Speaker SPEAKER_00: Now our major limitation is our intellectual strength and AI is going to remove that limitation.
+
+3
+00:00:24,937 --> 00:00:28,626
+Speaker SPEAKER_00: So deep learning is inspired by the way the brain works.
+
+4
+00:00:28,987 --> 00:00:32,655
+Speaker SPEAKER_00: We don't exactly know how the brain works, but we know quite a lot about it.
+
+5
+00:00:33,679 --> 00:00:39,673
+Speaker SPEAKER_00: So in your brain you have a lot of brain cells called neurons, and these brain cells have connections between them.
+
+6
+00:00:40,884 --> 00:00:44,192
+Speaker SPEAKER_00: And when you learn something, you change the strength of those connections.
+
+7
+00:00:44,993 --> 00:00:47,156
+Speaker SPEAKER_00: Neurons send signals to other neurons by going ping.
+
+8
+00:00:48,179 --> 00:00:51,064
+Speaker SPEAKER_00: And all a neuron has to do is decide when to go ping.
+
+9
+00:00:51,646 --> 00:00:58,079
+Speaker SPEAKER_00: And it decides when to go ping by looking at input coming from other neurons, some of which are sensory neurons, like in your retina.
+
+10
+00:00:59,161 --> 00:01:01,104
+Speaker SPEAKER_00: If it gets enough input,
+
+11
+00:01:01,085 --> 00:01:02,106
+Speaker SPEAKER_00: then it goes ping.
+
+12
+00:01:02,606 --> 00:01:05,412
+Speaker SPEAKER_00: But how much input it gets depends on the weights on the connections.
+
+13
+00:01:05,671 --> 00:01:10,900
+Speaker SPEAKER_00: So a connection with a small weight means that when one neuron sends a signal to another neuron, it doesn't have much effect.
+
+14
+00:01:11,600 --> 00:01:18,471
+Speaker SPEAKER_00: A connection with a big weight means that when a neuron sends a signal to another neuron, it has a big effect and is likely to make it go ping.
+
+15
+00:01:18,492 --> 00:01:21,777
+Speaker SPEAKER_00: And learning consists of changing the strengths of the connections.
+
+16
+00:01:22,111 --> 00:01:27,843
+Speaker SPEAKER_00: And the main issue in learning is, what principles does the brain use for changing the strength of the connections?
+
+17
+00:01:28,185 --> 00:01:36,001
+Speaker SPEAKER_00: In the 1980s, people came up with a method called backpropagation, which is one way of deciding how to change the strength of connections.
+
+18
+00:01:36,965 --> 00:01:40,272
+Speaker SPEAKER_00: And it turned out in the 1980s it worked moderately well.
+
+19
+00:01:40,706 --> 00:01:47,316
+Speaker SPEAKER_00: And we didn't realize then that if you gave it huge amounts of data and huge amounts of computation, it would work extremely well.
+
+20
+00:01:47,337 --> 00:01:55,409
+Speaker SPEAKER_00: And now the big chatbots use backpropagation to change the strengths of connections in a neural network that's simulated in the computer.
+
+21
+00:01:56,450 --> 00:01:58,192
+Speaker SPEAKER_00: And that's how deep learning works.
+
+22
+00:01:58,614 --> 00:02:02,799
+Speaker SPEAKER_00: So for example, if you want a neural network that can recognize a bird,
+
+23
+00:02:03,522 --> 00:02:06,947
+Speaker SPEAKER_00: In the first layer, it might have neurons that recognize edges.
+
+24
+00:02:07,828 --> 00:02:13,014
+Speaker SPEAKER_00: And then in the next layer, it might have neurons that recognize combinations of edges, like two edges meeting at a fine angle.
+
+25
+00:02:13,716 --> 00:02:15,078
+Speaker SPEAKER_00: That might be the beak of a bird.
+
+26
+00:02:15,579 --> 00:02:21,948
+Speaker SPEAKER_00: And then in the next layer, it might have neurons that recognize combinations of things that might be beaks with things that might be eyes.
+
+27
+00:02:22,467 --> 00:02:25,812
+Speaker SPEAKER_00: And if they're in the right relation to one another, it thinks that might be the head of a bird.
+
+28
+00:02:26,213 --> 00:02:27,876
+Speaker SPEAKER_00: And the trick is that
+
+29
+00:02:27,855 --> 00:02:42,742
+Speaker SPEAKER_00: It has these layers of more and more complicated feature detectors, until it sees that, okay, we've got something that might be a bird's head, and something that might be the foot of a bird that looks like this, something that might be the tip of a bird wing, and if we see all those things, we say it's probably a bird.
+
+30
+00:02:43,043 --> 00:02:48,657
+Speaker SPEAKER_00: But all of the weights, the connection strengths, are learned in the neural network.
+
+31
+00:02:48,676 --> 00:02:53,530
+Speaker SPEAKER_00: So since the beginning of AI in the 1950s, there were two approaches to AI.
+
+32
+00:02:54,131 --> 00:02:58,301
+Speaker SPEAKER_00: There was the approach based on logic and the approach based on biology.
+
+33
+00:02:58,282 --> 00:03:07,411
+Speaker SPEAKER_00: So the biology approach tried to simulate neural networks in the brain, and the logic approach tried to simulate logic to do reasoning.
+
+34
+00:03:07,831 --> 00:03:15,038
+Speaker SPEAKER_00: And it wasn't until quite recently that the biological approach using neural networks got a lot better than the logical approach.
+
+35
+00:03:15,778 --> 00:03:23,326
+Speaker SPEAKER_00: For many, many years, for the first 50 years of AI, almost everybody believed in the logical approach, and it didn't really work.
+
+36
+00:03:23,306 --> 00:03:34,008
+Speaker SPEAKER_00: And then starting this century, in about 2009, suddenly the biological approach that used neural networks started working really well.
+
+37
+00:03:35,192 --> 00:03:36,495
+Speaker SPEAKER_00: And that made a huge difference.
+
+38
+00:03:37,395 --> 00:03:41,485
+Speaker SPEAKER_00: So one big breakthrough was in 2012,
+
+39
+00:03:41,465 --> 00:03:53,181
+Speaker SPEAKER_00: When neural networks, which were simulating biology, suddenly became very good at recognizing objects, there were really three things that made neural networks work well.
+
+40
+00:03:55,122 --> 00:04:01,491
+Speaker SPEAKER_00: The first was enormous computer power that came from things like NVIDIA chips developed for gaming.
+
+41
+00:04:02,592 --> 00:04:06,038
+Speaker SPEAKER_00: The second was huge amounts of data that came from the internet.
+
+42
+00:04:06,354 --> 00:04:16,086
+Speaker SPEAKER_00: And the third was developments in the technology, like, for example, in 2017, Google introduced transformers that made language models work much better.
+
+43
+00:04:16,487 --> 00:04:19,071
+Speaker SPEAKER_00: And then there was a big wave of interest in neural networks.
+
+44
+00:04:19,732 --> 00:04:30,725
+Speaker SPEAKER_00: And then there was a huge wave of interest when ChatGPT was released, and people saw that neural networks could really understand what you were saying and could answer questions sensibly.
+
+45
+00:04:31,266 --> 00:04:34,589
+Speaker SPEAKER_00: So AI is going to be used in all industries, I think.
+
+46
+00:04:34,569 --> 00:04:39,459
+Speaker SPEAKER_00: So there's some areas where its influence is obviously going to be very good, like for example in healthcare.
+
+47
+00:04:40,781 --> 00:04:45,310
+Speaker SPEAKER_00: So at present, if I get some symptoms, I go to my family doctor.
+
+48
+00:04:46,271 --> 00:04:51,461
+Speaker SPEAKER_00: And if I have some rare disease, my family doctor has probably never seen an instance of that rare disease.
+
+49
+00:04:52,603 --> 00:04:56,189
+Speaker SPEAKER_00: I'd much rather go to a family doctor who'd seen a hundred million people
+
+50
+00:04:56,389 --> 00:05:02,759
+Speaker SPEAKER_00: and a family doctor who knew my entire genome and knew the results of all my medical tests for my whole history.
+
+51
+00:05:03,721 --> 00:05:07,648
+Speaker SPEAKER_00: And we're going to get AI doctors like that that are just much better than normal doctors.
+
+52
+00:05:08,389 --> 00:05:11,213
+Speaker SPEAKER_00: They're also going to be much better at reading medical images.
+
+53
+00:05:11,954 --> 00:05:15,040
+Speaker SPEAKER_00: So AI will be able to use much more information.
+
+54
+00:05:15,600 --> 00:05:23,173
+Speaker SPEAKER_00: Already, if you get difficult cases to diagnose, you can give them to a doctor,
+
+55
+00:05:23,778 --> 00:05:25,622
+Speaker SPEAKER_00: and they'll get about 40% correct.
+
+56
+00:05:26,365 --> 00:05:30,877
+Speaker SPEAKER_00: Or you can give them to an AI system, and that'll get about 50% correct.
+
+57
+00:05:30,896 --> 00:05:37,314
+Speaker SPEAKER_00: Or you can give them to the combination of the doctor and the AI system, the two working together, and they'll get about 60% correct.
+
+58
+00:05:38,189 --> 00:05:42,494
+Speaker SPEAKER_00: Now in North America, about 200,000 people a year die from wrong diagnoses.
+
+59
+00:05:43,314 --> 00:05:44,937
+Speaker SPEAKER_00: So that's already a huge saving in life.
+
+60
+00:05:45,617 --> 00:05:53,646
+Speaker SPEAKER_00: In education, we know that if you have a private tutor, you learn things about twice as fast as if you're in a classroom with other children.
+
+61
+00:05:54,887 --> 00:05:58,312
+Speaker SPEAKER_00: And with AI, everybody will be able to have their own private tutor.
+
+62
+00:05:58,851 --> 00:06:01,074
+Speaker SPEAKER_00: So it'll make children learn things twice as fast.
+
+63
+00:06:02,134 --> 00:06:04,137
+Speaker SPEAKER_00: that's going to have a huge impact on education.
+
+64
+00:06:05,098 --> 00:06:07,000
+Speaker SPEAKER_00: It's maybe not so good for universities.
+
+65
+00:06:07,281 --> 00:06:12,526
+Speaker SPEAKER_00: But in any area where you have data, AI is going to be helpful.
+
+66
+00:06:13,507 --> 00:06:14,668
+Speaker SPEAKER_00: So let me give you an example.
+
+67
+00:06:14,968 --> 00:06:25,341
+Speaker SPEAKER_00: I have a neighbour who developed an AI system which, for a company that does mining, takes the data they have
+
+68
+00:06:25,692 --> 00:06:33,406
+Speaker SPEAKER_00: on how long it took to perform certain operations, like digging a certain length of mineshaft, in different circumstances.
+
+69
+00:06:34,307 --> 00:06:37,132
+Speaker SPEAKER_00: And they have something like 10 billion data points about that.
+
+70
+00:06:37,574 --> 00:06:39,718
+Speaker SPEAKER_00: They've now put them into an AI system.
+
+71
+00:06:40,406 --> 00:06:44,874
+Speaker SPEAKER_00: and now they can answer any question you ask very quickly.
+
+72
+00:06:45,654 --> 00:06:56,711
+Speaker SPEAKER_00: So it used to be that if they wanted to know what's the chance that if a contractor says he'll be able to do this, what's the chance he'll actually be able to do it in the time he says.
+
+73
+00:06:58,052 --> 00:07:06,786
+Speaker SPEAKER_00: In the old days, if you wanted to know the answer to that, you'd employ a big consulting company and they would write you a report, and three weeks later you'd get a report.
+
+74
+00:07:07,322 --> 00:07:11,430
+Speaker SPEAKER_00: Now what happens is, four seconds later, his system will give you the answer.
+
+75
+00:07:11,930 --> 00:07:16,399
+Speaker SPEAKER_00: That's just one example, but it's going to be like that in all industries where you have a lot of data.
+
+76
+00:07:16,980 --> 00:07:24,151
+Speaker SPEAKER_00: You're going to be able to have all this data that the company has, and be able to really make use of that data extremely effectively, very fast.
+
+77
+00:07:24,932 --> 00:07:31,845
+Speaker SPEAKER_00: Already, when I want to deal with some new problem, I ask GPT-4 to help me.
+
+78
+00:07:32,939 --> 00:07:36,946
+Speaker SPEAKER_00: So I have a cottage, and the cottage was infested by some kind of ant.
+
+79
+00:07:37,706 --> 00:07:42,375
+Speaker SPEAKER_00: And I talked to GPT-4, and it told me all the kinds of ant it might be and what to do about them.
+
+80
+00:07:43,177 --> 00:07:44,197
+Speaker SPEAKER_00: It's extremely helpful.
+
+81
+00:07:44,639 --> 00:07:50,769
+Speaker SPEAKER_00: It's like having a friend who's very, very knowledgeable and very, very patient.
+
+82
+00:07:51,630 --> 00:07:53,014
+Speaker SPEAKER_00: But we do see their hallucination, right?
+
+83
+00:07:53,033 --> 00:07:55,737
+Speaker SPEAKER_00: Sometimes it gets things wrong, but then so do people.
+
+84
+00:07:56,439 --> 00:07:58,423
+Speaker SPEAKER_00: The fact that it hallucinates
+
+85
+00:07:58,639 --> 00:08:00,184
+Speaker SPEAKER_00: That's just what people do too.
+
+86
+00:08:00,725 --> 00:08:02,449
+Speaker SPEAKER_00: When people do it, it's called confabulation.
+
+87
+00:08:02,891 --> 00:08:04,675
+Speaker SPEAKER_00: And people confabulate all the time.
+
+88
+00:08:05,237 --> 00:08:10,913
+Speaker SPEAKER_00: So if you look at anybody recollecting something that happened a long time ago, they won't get the details right.
+
+89
+00:08:11,153 --> 00:08:14,201
+Speaker SPEAKER_00: They'll be very confident, but they'll get the details wrong.
+
+90
+00:08:14,721 --> 00:08:18,348
+Speaker SPEAKER_00: So people are just like these big chatbots.
+
+91
+00:08:18,509 --> 00:08:19,690
+Speaker SPEAKER_00: They confabulate all the time.
+
+92
+00:08:20,232 --> 00:08:24,238
+Speaker SPEAKER_00: It's very hard to predict the future, especially when things are changing fast.
+
+93
+00:08:25,000 --> 00:08:32,333
+Speaker SPEAKER_00: Probably the best thing you can do, if you want to know what it's going to be like in 10 years' time, look back 10 years and see what it was like 10 years ago.
+
+94
+00:08:33,076 --> 00:08:38,264
+Speaker SPEAKER_00: And 10 years ago, nobody would have expected to have anything like GPT-4.
+
+95
+00:08:38,245 --> 00:08:41,708
+Speaker SPEAKER_00: or the big chatbots developed at Google, like Gemini.
+
+96
+00:08:42,470 --> 00:08:46,315
+Speaker SPEAKER_00: So in 10 years in the future from now, we'll have things that nobody expects.
+
+97
+00:08:47,355 --> 00:08:49,138
+Speaker SPEAKER_00: They'll be much better than people expected.
+
+98
+00:08:50,019 --> 00:08:53,583
+Speaker SPEAKER_00: If you look forward a few years, things won't change dramatically.
+
+99
+00:08:54,004 --> 00:08:58,870
+Speaker SPEAKER_00: But over a period of 10 years, we'll see enormous changes in what AI can do.
+
+100
+00:08:59,238 --> 00:09:10,360
+Speaker SPEAKER_00: How significant is the AI revolution, the meaning in the history of our civilization, compared to the previous technological revolutions?
+
+101
+00:09:10,701 --> 00:09:13,145
+Speaker SPEAKER_00: So if you look at the industrial revolution,
+
+102
+00:09:13,480 --> 00:09:18,986
+Speaker SPEAKER_00: What happened in the Industrial Revolution was human strength ceased to be that important.
+
+103
+00:09:19,668 --> 00:09:22,672
+Speaker SPEAKER_00: Before that, if you wanted to dig a ditch, you needed people to dig a ditch.
+
+104
+00:09:23,754 --> 00:09:31,024
+Speaker SPEAKER_00: There were animals and there were things like windmills, water wheels, but basically human strength was important.
+
+105
+00:09:31,683 --> 00:09:34,467
+Speaker SPEAKER_00: After the Industrial Revolution, human strength became unimportant.
+
+106
+00:09:35,089 --> 00:09:38,052
+Speaker SPEAKER_00: What's happening at present is human intelligence is important.
+
+107
+00:09:39,096 --> 00:09:47,268
+Speaker SPEAKER_00: When AI gets much smarter than us, human intelligence will become unimportant in the same way as human strength became unimportant after the Industrial Revolution.
+
+108
+00:09:47,628 --> 00:09:51,192
+Speaker SPEAKER_00: You can think of history as removing limitations from people.
+
+109
+00:09:51,833 --> 00:09:56,278
+Speaker SPEAKER_00: And for a long time, our major limitation was our physical strength.
+
+110
+00:09:57,160 --> 00:10:00,565
+Speaker SPEAKER_00: Now our major limitation is our intellectual strength.
+
+111
+00:10:00,950 --> 00:10:02,913
+Speaker SPEAKER_00: And AI is going to remove that limitation.
+
+112
+00:10:03,514 --> 00:10:10,964
+Speaker SPEAKER_00: And if you ask, how many examples do you know of where a more intelligent thing is controlled by a less intelligent thing?
+
+113
+00:10:11,565 --> 00:10:15,129
+Speaker SPEAKER_00: I only know of one example, and that's a mother and baby.
+
+114
+00:10:15,910 --> 00:10:20,115
+Speaker SPEAKER_00: And evolution put a huge amount of work into allowing the baby to control the mother.
+
+115
+00:10:20,897 --> 00:10:22,820
+Speaker SPEAKER_00: It was very important for the survival of the species.
+
+116
+00:10:23,160 --> 00:10:27,125
+Speaker SPEAKER_00: But a baby and a mother are about the same intelligence anyway.
+
+117
+00:10:27,105 --> 00:10:31,716
+Speaker SPEAKER_00: We don't know if we're going to be able to stay in control when these things are more intelligent than us.
+
+118
+00:10:32,717 --> 00:10:38,289
+Speaker SPEAKER_00: Some people, like my friend Yann LeCun, think it's going to be fine, we make these things, they'll always do what we tell them to.
+
+119
+00:10:39,192 --> 00:10:40,354
+Speaker SPEAKER_00: I don't believe that.
+
+120
+00:10:40,433 --> 00:10:41,976
+Speaker SPEAKER_00: I don't think we can be confident about that.
+
+121
+00:10:42,619 --> 00:10:46,025
+Speaker SPEAKER_00: I believe that we're material objects.
+
+122
+00:10:46,158 --> 00:10:53,546
+Speaker SPEAKER_00: And there's nothing about a person that can't be developed in a computer.
+
+123
+00:10:54,086 --> 00:10:57,811
+Speaker SPEAKER_00: In the long run, computers can have all the sensibilities that we have.
+
+124
+00:10:58,010 --> 00:10:59,613
+Speaker SPEAKER_00: I don't think there's anything special about people.
+
+125
+00:11:00,153 --> 00:11:01,595
+Speaker SPEAKER_00: They're just very, very complicated.
+
+126
+00:11:02,014 --> 00:11:03,576
+Speaker SPEAKER_00: They've evolved over a very long time.
+
+127
+00:11:04,258 --> 00:11:05,578
+Speaker SPEAKER_00: We're very special to other people.
+
+128
+00:11:07,140 --> 00:11:10,725
+Speaker SPEAKER_00: But there's nothing about us that can't be simulated in a machine.
+
+129
+00:11:11,384 --> 00:11:14,629
+Speaker SPEAKER_00: There are some worries about the AI can take away your job.
+
+130
+00:11:15,097 --> 00:11:17,821
+Speaker SPEAKER_00: So there are many different risks from AI.
+
+131
+00:11:18,221 --> 00:11:20,023
+Speaker SPEAKER_00: And we shouldn't confuse these different risks.
+
+132
+00:11:20,783 --> 00:11:22,385
+Speaker SPEAKER_00: Different risks have different solutions.
+
+133
+00:11:23,066 --> 00:11:27,610
+Speaker SPEAKER_00: And it's certainly the case that AI is going to replace a lot of jobs.
+
+134
+00:11:28,331 --> 00:11:35,619
+Speaker SPEAKER_00: So things like paralegals, people who do research for lawyers, AI can now do that, most of that, better.
+
+135
+00:11:36,419 --> 00:11:38,702
+Speaker SPEAKER_00: So we're not going to need as many paralegals.
+
+136
+00:11:39,783 --> 00:11:42,826
+Speaker SPEAKER_00: For many ordinary office jobs,
+
+137
+00:11:43,447 --> 00:11:45,230
+Speaker SPEAKER_00: will need far fewer people.
+
+138
+00:11:46,791 --> 00:11:52,495
+Speaker SPEAKER_00: I have a relative who works for a health service and responds to letters of complaint.
+
+139
+00:11:53,417 --> 00:11:58,640
+Speaker SPEAKER_00: And it used to take her 25 minutes to write an answer to a letter of complaint.
+
+140
+00:11:59,461 --> 00:12:06,207
+Speaker SPEAKER_00: Now she just types the letter to ChatGBT and it produces the answer, the reply.
+
+141
+00:12:06,768 --> 00:12:07,989
+Speaker SPEAKER_00: She just checks it and sends it off.
+
+142
+00:12:08,009 --> 00:12:08,870
+Speaker SPEAKER_00: That takes five minutes.
+
+143
+00:12:09,711 --> 00:12:12,493
+Speaker SPEAKER_00: So they need five times fewer people like that.
+
+144
+00:12:13,267 --> 00:12:16,972
+Speaker SPEAKER_00: That's typical of many average office jobs.
+
+145
+00:12:18,375 --> 00:12:31,096
+Speaker SPEAKER_00: Now some people say AI will create lots of new jobs, and it will create a lot of new jobs, but it's not clear it will create enough new jobs to replace all the ordinary office jobs that get done by AI instead of people.
+
+146
+00:12:31,898 --> 00:12:33,139
+Speaker SPEAKER_00: So it's a serious problem.
+
+147
+00:12:33,660 --> 00:12:35,123
+Speaker SPEAKER_00: What's going to happen?
+
+148
+00:12:35,102 --> 00:12:37,865
+Speaker SPEAKER_00: to all these people whose jobs get taken by AI.
+
+149
+00:12:38,346 --> 00:12:40,467
+Speaker SPEAKER_00: And I think that's a problem that governments need to worry about.
+
+150
+00:12:40,989 --> 00:12:52,360
+Speaker SPEAKER_00: I think the things I'm worried the most about in the short term are cyber attacks and biological weapons being made easier by AI.
+
+151
+00:12:53,221 --> 00:13:03,591
+Speaker SPEAKER_00: So last year, for example, phishing attacks went up by 1,200%, and that was largely because of these chatbots being able to be used for phishing attacks.
+
+152
+00:13:03,756 --> 00:13:07,705
+Speaker SPEAKER_00: I'm worried about people using these things for making new pathogens.
+
+153
+00:13:08,405 --> 00:13:11,392
+Speaker SPEAKER_00: There's very little control on that at present.
+
+154
+00:13:11,591 --> 00:13:12,394
+Speaker SPEAKER_00: That's the short term.
+
+155
+00:13:12,894 --> 00:13:17,342
+Speaker SPEAKER_00: In the medium term, I'm very worried about loss of jobs and autonomous lethal weapons.
+
+156
+00:13:18,365 --> 00:13:24,297
+Speaker SPEAKER_00: And in the longer term, I'm really worried about these things getting to be smarter than us and just taking over from us.
+
+157
+00:13:24,850 --> 00:13:30,004
+Speaker SPEAKER_00: I think within two to three years, we may see autonomous lethal weapons.
+
+158
+00:13:30,046 --> 00:13:31,028
+Speaker SPEAKER_00: That'll be the bad side.
+
+159
+00:13:31,590 --> 00:13:35,181
+Speaker SPEAKER_00: All of the big defense departments are trying to develop them.
+
+160
+00:13:36,359 --> 00:13:44,991
+Speaker SPEAKER_00: If you look at the regulations about AI so far, they all have a clause in them that says none of these regulations applies to military uses of AI.
+
+161
+00:13:45,734 --> 00:13:52,303
+Speaker SPEAKER_00: So the European regulations, for example, have an explicit clause that say they do not apply to military uses of AI.
+
+162
+00:13:53,325 --> 00:13:55,649
+Speaker SPEAKER_00: So governments are not willing to regulate themselves.
+
+163
+00:13:56,509 --> 00:13:59,615
+Speaker SPEAKER_00: They're in a big race to develop autonomous lethal weapons.
+
+164
+00:13:59,975 --> 00:14:01,437
+Speaker SPEAKER_00: Once those are used,
+
+165
+00:14:01,957 --> 00:14:03,460
+Speaker SPEAKER_00: we'll see just how awful they are.
+
+166
+00:14:04,181 --> 00:14:10,509
+Speaker SPEAKER_00: After they've been used and done terrible things, we may be able to get something like the Geneva Conventions that we got for chemical weapons.
+
+167
+00:14:11,390 --> 00:14:12,751
+Speaker SPEAKER_00: And those conventions have worked.
+
+168
+00:14:13,413 --> 00:14:15,475
+Speaker SPEAKER_00: In the Ukraine, they're not using chemical weapons.
+
+169
+00:14:16,778 --> 00:14:22,745
+Speaker SPEAKER_00: But we didn't get the conventions until we'd seen how awful they were in the First World War.
+
+170
+00:14:23,366 --> 00:14:28,894
+Speaker SPEAKER_00: What we need to do is have a lot more work on safety as things are developed.
+
+171
+00:14:29,886 --> 00:14:32,750
+Speaker SPEAKER_00: And the only people who have the resources to do that are the big companies.
+
+172
+00:14:34,232 --> 00:14:38,440
+Speaker SPEAKER_00: So we need governments to force the big companies to do more work on safety.
+
+173
+00:14:39,640 --> 00:14:41,784
+Speaker SPEAKER_00: Obviously, you need a lot of computer power.
+
+174
+00:14:42,645 --> 00:14:44,489
+Speaker SPEAKER_00: Obviously, you need a lot of skilled people.
+
+175
+00:14:45,429 --> 00:14:47,552
+Speaker SPEAKER_00: So you need to keep your skilled scientists.
+
+176
+00:14:48,794 --> 00:14:54,222
+Speaker SPEAKER_00: And the way to keep skilled scientists is to give them an environment where they can do research.
+
+177
+00:14:55,283 --> 00:15:02,875
+Speaker SPEAKER_00: So Canada, for example, is, for the size of its economy, is doing very well in AI.
+
+178
+00:15:03,296 --> 00:15:08,264
+Speaker SPEAKER_00: And it's doing very well in AI because it had a policy of funding basic scientific research.
+
+179
+00:15:08,725 --> 00:15:13,613
+Speaker SPEAKER_00: So leading AI researchers like me and Yoshua Bengio and Rich Sutton
+
+180
+00:15:13,592 --> 00:15:20,402
+Speaker SPEAKER_00: came to Canada partly because of the social system, but mainly because of the way it was willing to fund basic scientific research.
+
+181
+00:15:20,942 --> 00:15:24,846
+Speaker SPEAKER_00: So one thing you need to do is fund basic scientific research well.
+
+182
+00:15:25,567 --> 00:15:41,067
+Speaker SPEAKER_00: My advice for Korea is if you give very good funding for basic scientific research to creative researchers, they would actually prefer to do basic scientific research than just make a lot of money working for a bank.
+
+183
+00:15:41,048 --> 00:15:43,892
+Speaker SPEAKER_00: Some people will go off and make a lot of money working for a bank.
+
+184
+00:15:44,131 --> 00:15:45,373
+Speaker SPEAKER_00: There's not much you can do about that.
+
+185
+00:15:46,495 --> 00:15:54,945
+Speaker SPEAKER_00: But good support for basic scientific research, which now includes good support for the computing power, that's the way to keep the good researchers.
+
+186
+00:15:56,346 --> 00:16:00,633
+Speaker SPEAKER_00: Do you think we're going to have a robot come along with the AI?
+
+187
+00:16:00,653 --> 00:16:01,774
+Speaker SPEAKER_00: A humanoid robot?
+
+188
+00:16:03,086 --> 00:16:04,830
+Speaker SPEAKER_00: A lot of people are now working on that.
+
+189
+00:16:06,832 --> 00:16:07,494
+Speaker SPEAKER_00: It's possible.
+
+190
+00:16:08,335 --> 00:16:12,059
+Speaker SPEAKER_00: The reason we might is because factories are designed for people.
+
+191
+00:16:13,322 --> 00:16:16,527
+Speaker SPEAKER_00: I mean, they design all the machines in a factory so that people can operate them.
+
+192
+00:16:17,788 --> 00:16:22,014
+Speaker SPEAKER_00: And so, rather than redesigning all the machines, you might just want to redesign a person.
+
+193
+00:16:22,897 --> 00:16:24,239
+Speaker SPEAKER_00: And then you can use the same machines.
+
+194
+00:16:25,600 --> 00:16:27,403
+Speaker SPEAKER_00: And people are trying that now.
+
+195
+00:16:27,583 --> 00:16:28,804
+Speaker SPEAKER_00: I don't know what's going to happen with that.
+
+196
+00:16:29,466 --> 00:16:31,929
+Speaker SPEAKER_00: I think it's a time of huge uncertainty.
+
+197
+00:16:32,821 --> 00:16:36,008
+Speaker SPEAKER_00: And when you're in a time of huge uncertainty, you should be cautious.
+
+198
+00:16:36,889 --> 00:16:39,995
+Speaker SPEAKER_00: Would there be a period of adjustment or recession?
+
+199
+00:16:40,998 --> 00:16:42,421
+Speaker SPEAKER_00: There are two different views on that.
+
+200
+00:16:43,744 --> 00:16:45,548
+Speaker SPEAKER_00: So my view is it will continue.
+
+201
+00:16:46,591 --> 00:16:56,581
+Speaker SPEAKER_00: Some people, particularly people who believe in the logical approach to AI, the old-fashioned approach, who never liked neural networks, keep saying, this is about to come to an end.
+
+202
+00:16:57,422 --> 00:17:01,525
+Speaker SPEAKER_00: But neural networks, for many, many years, people have been saying they're overhyped.
+
+203
+00:17:02,086 --> 00:17:03,087
+Speaker SPEAKER_00: But they have delivered.
+
+204
+00:17:03,347 --> 00:17:04,630
+Speaker SPEAKER_00: They do amazing things now.
+
+205
+00:17:05,150 --> 00:17:06,290
+Speaker SPEAKER_00: So I don't think they're overhyped.
+
+206
+00:17:06,951 --> 00:17:10,055
+Speaker SPEAKER_00: Every few years, they say, hey, neural nets are overhyped.
+
+207
+00:17:10,596 --> 00:17:12,538
+Speaker SPEAKER_00: And it's all about to come crashing down and stop.
+
+208
+00:17:13,239 --> 00:17:14,640
+Speaker SPEAKER_00: And they've been wrong every time.
+
+209
+00:17:16,290 --> 00:17:17,761
+Speaker SPEAKER_00: and I think they'll continue to be wrong.
+

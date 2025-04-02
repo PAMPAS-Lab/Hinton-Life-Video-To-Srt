@@ -1,0 +1,456 @@
+1
+00:00:02,021 --> 00:00:08,814
+Speaker SPEAKER_03: Geoffrey Hinton, the sometimes called godfather of artificial intelligence is trying to explain its risks to the world.
+
+2
+00:00:09,294 --> 00:00:11,378
+Speaker SPEAKER_01: This is just something somebody sent me from Twitter.
+
+3
+00:00:11,398 --> 00:00:16,588
+Speaker SPEAKER_03: Which means explaining something very real that can sound entirely made up.
+
+4
+00:00:16,608 --> 00:00:16,989
+Speaker SPEAKER_00: I'm lost.
+
+5
+00:00:17,169 --> 00:00:17,649
+Speaker SPEAKER_00: I don't know.
+
+6
+00:00:18,390 --> 00:00:22,739
+Speaker SPEAKER_03: He's eager for good communication of the urgency and look who might be offering it.
+
+7
+00:00:23,179 --> 00:00:24,402
+Speaker SPEAKER_03: Snoop Dogg.
+
+8
+00:00:24,382 --> 00:00:28,106
+Speaker SPEAKER_00: It's blowing my mind because I watch movies on this as a kid.
+
+9
+00:00:28,126 --> 00:00:34,210
+Speaker SPEAKER_00: I heard the dude, the old dude that created AI saying, this is not safe because the AI's got their own minds.
+
+10
+00:00:34,731 --> 00:00:37,094
+Speaker SPEAKER_00: And these motherfuckers are going to start doing their own shit.
+
+11
+00:00:37,113 --> 00:00:39,256
+Speaker SPEAKER_00: And I'm like, is we in a fucking movie right now or what?
+
+12
+00:00:39,276 --> 00:00:42,058
+Speaker SPEAKER_00: What the fuck, man?
+
+13
+00:00:42,378 --> 00:00:43,060
+Speaker SPEAKER_00: Do y'all know?
+
+14
+00:00:44,381 --> 00:00:45,502
+Speaker SPEAKER_03: That's what people are saying.
+
+15
+00:00:45,521 --> 00:00:46,682
+Speaker SPEAKER_03: He's like, are we in trouble?
+
+16
+00:00:48,104 --> 00:00:48,765
+Speaker SPEAKER_01: He gets it.
+
+17
+00:00:49,526 --> 00:00:50,207
+Speaker SPEAKER_01: He's smart.
+
+18
+00:00:50,807 --> 00:00:52,548
+Speaker SPEAKER_03: You know what if he calls you the old dude?
+
+19
+00:00:53,220 --> 00:00:57,244
+Speaker SPEAKER_01: No, I call myself the old dude now.
+
+20
+00:00:57,265 --> 00:01:00,969
+Speaker SPEAKER_03: Imagine working your entire adult life to build a better future.
+
+21
+00:01:01,469 --> 00:01:07,816
+Speaker SPEAKER_01: I think we're going to see the learning methods we've got already have dramatic effect on many industries and solve lots of problems.
+
+22
+00:01:07,837 --> 00:01:11,361
+Speaker SPEAKER_03: Where computers and machine learning make life better for humans.
+
+23
+00:01:11,881 --> 00:01:15,805
+Speaker SPEAKER_03: These chatbots answer complicated questions, draft emails and speeches.
+
+24
+00:01:16,346 --> 00:01:22,873
+Speaker SPEAKER_03: Then realizing that the creation is nearing a point where it could do a type of harm that cannot be undone.
+
+25
+00:01:24,287 --> 00:01:28,694
+Speaker SPEAKER_03: That's the realization that hit Hinton when he was working for Google.
+
+26
+00:01:28,713 --> 00:01:33,540
+Speaker SPEAKER_03: Because of his job he couldn't talk so he quit his job and now he talks.
+
+27
+00:01:34,662 --> 00:01:36,603
+Speaker SPEAKER_03: I caught up with him in London a few days ago.
+
+28
+00:01:37,926 --> 00:01:42,731
+Speaker SPEAKER_03: I think people are ultimately excited to hear from you and a bit afraid.
+
+29
+00:01:42,751 --> 00:01:43,393
+Speaker SPEAKER_03: Should they be?
+
+30
+00:01:43,862 --> 00:01:46,126
+Speaker SPEAKER_01: I think there are things to be worried about.
+
+31
+00:01:46,146 --> 00:01:57,721
+Speaker SPEAKER_01: There's all the normal things that everybody knows about, but there's another threat that's rather different from those, which is if we produce things that are more intelligent than us, how do we know we can keep control?
+
+32
+00:01:58,001 --> 00:02:07,575
+Speaker SPEAKER_01: And what tends to happen when... Well, if we're talking about evolution, all these species are evolving, and what tends to happen is it doesn't go well for the less intelligent species.
+
+33
+00:02:08,212 --> 00:02:08,993
+Speaker SPEAKER_02: The other one kills it?
+
+34
+00:02:09,275 --> 00:02:10,216
+Speaker SPEAKER_01: Not necessarily.
+
+35
+00:02:10,836 --> 00:02:13,722
+Speaker SPEAKER_01: Ants look after aphids because they produce honey.
+
+36
+00:02:14,623 --> 00:02:16,766
+Speaker SPEAKER_01: Ants are in charge?
+
+37
+00:02:17,328 --> 00:02:18,389
+Speaker SPEAKER_01: Ants are in charge, yes.
+
+38
+00:02:19,792 --> 00:02:25,040
+Speaker SPEAKER_03: Ants, in this analogy, in case that wasn't ominously clear enough, are not the humans.
+
+39
+00:02:27,956 --> 00:02:35,052
+Speaker SPEAKER_01: It made me realize that these digital intelligences have something we don't have that makes them much better.
+
+40
+00:02:35,152 --> 00:02:40,283
+Speaker SPEAKER_01: When one of them knows something, it can tell all the others that's what we don't have with people.
+
+41
+00:02:40,846 --> 00:02:46,437
+Speaker SPEAKER_01: So imagine you had 10,000 people, and imagine if when one person learned something, everybody knew it.
+
+42
+00:02:47,076 --> 00:02:48,800
+Speaker SPEAKER_01: you could learn a lot more stuff, right?
+
+43
+00:02:48,939 --> 00:02:54,490
+Speaker SPEAKER_01: And that's why things like ChatGPT knows like 10,000 times as much as any one person.
+
+44
+00:02:54,911 --> 00:03:07,192
+Speaker SPEAKER_01: It's because when you train it, there's lots of different copies looking at different bits of the data and learning stuff, and they can all combine what they learn instantly with a bandwidth of like trillions of bits.
+
+45
+00:03:08,014 --> 00:03:09,776
+Speaker SPEAKER_01: So can they think?
+
+46
+00:03:09,907 --> 00:03:10,288
+Speaker SPEAKER_01: Yes.
+
+47
+00:03:10,908 --> 00:03:12,449
+Speaker SPEAKER_01: So, imagine the following scenario.
+
+48
+00:03:12,530 --> 00:03:16,774
+Speaker SPEAKER_01: I'm talking to Chatbot, and we talk for a bit, and the answers it's giving me seem a bit strange to me.
+
+49
+00:03:17,093 --> 00:03:20,097
+Speaker SPEAKER_01: And I suddenly realize that it thinks I'm a teenage girl.
+
+50
+00:03:20,497 --> 00:03:23,120
+Speaker SPEAKER_01: And I say, what demographic do you think I am?
+
+51
+00:03:23,759 --> 00:03:25,300
+Speaker SPEAKER_01: And it says it thinks I'm a teenage girl.
+
+52
+00:03:27,643 --> 00:03:36,010
+Speaker SPEAKER_01: So the question is, when I said it's- I suddenly realized it thinks I'm a teenage girl, was that a metaphorical use of the word think?
+
+53
+00:03:36,031 --> 00:03:38,633
+Speaker SPEAKER_01: Or was that just the same way as we use think?
+
+54
+00:03:38,866 --> 00:03:46,718
+Speaker SPEAKER_01: And I strongly believe that use of the word think, when I said, it thinks I'm a teenage girl, was exactly the same way of using think as we do with people.
+
+55
+00:03:46,979 --> 00:03:53,390
+Speaker SPEAKER_03: And so that was enough to make you say, what, this has accelerated beyond my comfort level?
+
+56
+00:03:54,051 --> 00:03:59,221
+Speaker SPEAKER_01: I suddenly realized, maybe they already are better, and making them more like real neural nets isn't the point.
+
+57
+00:03:59,580 --> 00:04:01,144
+Speaker SPEAKER_01: They're already better than us.
+
+58
+00:04:01,816 --> 00:04:03,719
+Speaker SPEAKER_01: They're a better way of doing learning.
+
+59
+00:04:04,140 --> 00:04:07,187
+Speaker SPEAKER_01: And if we make them bigger, they'll get much smarter than us.
+
+60
+00:04:07,388 --> 00:04:09,412
+Speaker SPEAKER_01: They already know more than any one person.
+
+61
+00:04:10,112 --> 00:04:20,634
+Speaker SPEAKER_03: I understand that things could go awry, but I still think that people hear the notion of danger and they dismiss it as hyperbole.
+
+62
+00:04:21,526 --> 00:04:24,970
+Speaker SPEAKER_01: I thought it was hyperbole for a long time because I thought these things were a long way off.
+
+63
+00:04:25,310 --> 00:04:34,903
+Speaker SPEAKER_01: I thought there will eventually be danger, but I thought focusing on it now is unnecessary because it'll be 30 to 50 years before these things get more intelligent than us.
+
+64
+00:04:35,764 --> 00:04:48,040
+Speaker SPEAKER_01: But this combination of realizing that they might have a much better way of learning than we have, because they can share knowledge instantly, and seeing things like ChatGPT or Palm at Google,
+
+65
+00:04:48,677 --> 00:04:58,351
+Speaker SPEAKER_01: that can explain why a joke is funny made me realize these things are already pretty intelligent and if they've got a better form of intelligence than ours then it gets to be much more urgent.
+
+66
+00:04:59,754 --> 00:05:02,639
+Speaker SPEAKER_03: Probably still hard to see the threat, right?
+
+67
+00:05:02,718 --> 00:05:03,699
+Speaker SPEAKER_03: Some changes are clear.
+
+68
+00:05:04,461 --> 00:05:12,372
+Speaker SPEAKER_03: As chat GPT for example gets smarter as AI gets more advanced yes some jobs will disappear and some may shift.
+
+69
+00:05:15,964 --> 00:05:17,146
+Speaker SPEAKER_03: There can be pluses.
+
+70
+00:05:17,185 --> 00:05:21,851
+Speaker SPEAKER_03: For example, an AI doctor may have data from hundreds of millions of patients.
+
+71
+00:05:21,891 --> 00:05:24,935
+Speaker SPEAKER_03: So far more knowledge than an actual human.
+
+72
+00:05:25,036 --> 00:05:32,483
+Speaker SPEAKER_03: But what if that machine, that AI doctor, stops recommending treatment for people with a low chance of recovering?
+
+73
+00:05:34,247 --> 00:05:36,048
+Speaker SPEAKER_03: That can happen with humans too.
+
+74
+00:05:36,168 --> 00:05:43,137
+Speaker SPEAKER_03: But as machines learn and supersede human learning, it is the unintended consequences that haunt.
+
+75
+00:05:45,596 --> 00:05:49,483
+Speaker SPEAKER_03: Can we give these machines a moral code, a code of ethics?
+
+76
+00:05:50,103 --> 00:05:52,226
+Speaker SPEAKER_01: You can't kill people, you can't hurt people.
+
+77
+00:05:52,286 --> 00:06:01,560
+Speaker SPEAKER_01: It would be nice if we could do that, but just remember that one of the main players in developing these machines is defence departments.
+
+78
+00:06:02,302 --> 00:06:09,351
+Speaker SPEAKER_01: And defence departments... I mean, Isaac Asimov said, if you make a smart robot, the first rule should be, do not harm people.
+
+79
+00:06:10,653 --> 00:06:15,081
+Speaker SPEAKER_01: Well, I don't think that's going to be the first rule in a robot soldier produced by a defence department.
+
+80
+00:06:15,836 --> 00:06:16,117
+Speaker SPEAKER_03: Right.
+
+81
+00:06:17,180 --> 00:06:21,108
+Speaker SPEAKER_03: But is there not some language we can give them so that they can police themselves?
+
+82
+00:06:22,069 --> 00:06:24,053
+Speaker SPEAKER_01: How does it work out when things police themselves?
+
+83
+00:06:25,377 --> 00:06:28,362
+Speaker SPEAKER_01: Yeah, not well.
+
+84
+00:06:28,382 --> 00:06:30,346
+Speaker SPEAKER_03: Where's your mind going in this conversation?
+
+85
+00:06:30,427 --> 00:06:34,776
+Speaker SPEAKER_03: Is it going to that terrible place of past creations that threatened humanity?
+
+86
+00:06:34,976 --> 00:06:36,579
+Speaker SPEAKER_03: The nuclear bomb, for example.
+
+87
+00:06:38,617 --> 00:06:41,500
+Speaker SPEAKER_03: It's not a bad example because it's so terrified.
+
+88
+00:06:41,560 --> 00:06:44,904
+Speaker SPEAKER_03: That fear motivated a type of global togetherness.
+
+89
+00:06:45,324 --> 00:06:48,348
+Speaker SPEAKER_03: Treaties that have kept the threat at bay until now.
+
+90
+00:06:48,908 --> 00:06:50,951
+Speaker SPEAKER_03: This, says Hinton, is that.
+
+91
+00:06:52,012 --> 00:06:55,516
+Speaker SPEAKER_03: Was this not where we say, China?
+
+92
+00:06:56,137 --> 00:06:56,576
+Speaker SPEAKER_03: Russia?
+
+93
+00:06:57,278 --> 00:06:58,639
+Speaker SPEAKER_03: We can't stand each other.
+
+94
+00:06:58,800 --> 00:07:01,141
+Speaker SPEAKER_03: All these countries, they're angry.
+
+95
+00:07:01,523 --> 00:07:03,685
+Speaker SPEAKER_03: But we have a common concern.
+
+96
+00:07:03,964 --> 00:07:04,425
+Speaker SPEAKER_01: Exactly.
+
+97
+00:07:04,526 --> 00:07:06,228
+Speaker SPEAKER_01: For the superintelligence that's taking over.
+
+98
+00:07:06,288 --> 00:07:08,170
+Speaker SPEAKER_01: Not for all the other things, but for that.
+
+99
+00:07:08,807 --> 00:07:09,928
+Speaker SPEAKER_01: We're all in the same boat.
+
+100
+00:07:10,589 --> 00:07:12,110
+Speaker SPEAKER_01: It's like a global nuclear war.
+
+101
+00:07:12,211 --> 00:07:12,872
+Speaker SPEAKER_01: We all lose.
+
+102
+00:07:13,932 --> 00:07:18,016
+Speaker SPEAKER_01: And so that's the situation in which warring tribes cooperate.
+
+103
+00:07:18,057 --> 00:07:23,723
+Speaker SPEAKER_01: An external enemy that's bigger than them will force them to cooperate because they get the same payoff as each other.
+
+104
+00:07:24,463 --> 00:07:25,925
+Speaker SPEAKER_01: And so this threat is like that.
+
+105
+00:07:26,185 --> 00:07:27,487
+Speaker SPEAKER_02: Do you think China understands that?
+
+106
+00:07:27,666 --> 00:07:27,867
+Speaker SPEAKER_01: Yes.
+
+107
+00:07:28,127 --> 00:07:29,187
+Speaker SPEAKER_02: What makes you think that?
+
+108
+00:07:29,629 --> 00:07:32,071
+Speaker SPEAKER_01: There's researchers in China who are talking about this.
+
+109
+00:07:32,591 --> 00:07:33,853
+Speaker SPEAKER_02: Do the Americans understand it?
+
+110
+00:07:34,458 --> 00:07:35,759
+Speaker SPEAKER_01: They're beginning to, I think, yes.
+
+111
+00:07:36,341 --> 00:07:47,581
+Speaker SPEAKER_01: Senior political leaders in the States are paying attention now, and they're getting very interested in... So it's not just things like fakes and job losses, which are these sort of immediate concerns.
+
+112
+00:07:48,141 --> 00:07:52,990
+Speaker SPEAKER_01: They're also becoming interested in this existential threat of, how do we stop these things taking over?
+
+113
+00:07:54,437 --> 00:08:01,860
+Speaker SPEAKER_03: The White House is indeed talking about a moral obligation for tech companies to consider the risks of AI not just the benefits.
+
+114
+00:08:02,442 --> 00:08:06,995
+Speaker SPEAKER_03: Where the planet agrees on so little just maybe it can agree on this.
+

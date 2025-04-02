@@ -1,0 +1,1296 @@
+1
+00:00:04,823 --> 00:00:06,466
+Speaker SPEAKER_02: So our next speaker is Jeff Hinton.
+
+2
+00:00:07,609 --> 00:00:11,076
+Speaker SPEAKER_02: Jeff is a scientist who essentially needs, I think, almost no introduction.
+
+3
+00:00:11,237 --> 00:00:18,832
+Speaker SPEAKER_02: He's an absolute pillar of the field of machine learning, and he's made more contributions than I could plausibly enumerate here.
+
+4
+00:00:19,167 --> 00:00:30,682
+Speaker SPEAKER_02: You know, David has mentioned the profound impact that Jeff has had on his scientific career, and this is something that I would echo, and I think actually quite a few people in the room would also say the same thing.
+
+5
+00:00:31,504 --> 00:00:43,521
+Speaker SPEAKER_02: In fact, I would say that with the revival of interest in neural networks that we've seen over the last several years, and also Jeff's contributions to online learning, he's inspired, I think, an entire generation of machine learning researchers.
+
+6
+00:00:43,500 --> 00:00:49,087
+Speaker SPEAKER_02: Today, I expect, as is Jeff's custom, he's going to explain to us how the brain works.
+
+7
+00:00:51,549 --> 00:00:52,030
+Speaker SPEAKER_02: Take it away, Jeff.
+
+8
+00:01:00,479 --> 00:01:03,243
+Speaker SPEAKER_01: Okay, since Ryan has gone silent, I assume I'm talking now.
+
+9
+00:01:06,245 --> 00:01:08,989
+Speaker SPEAKER_01: Before I start, I'd just like to say a couple of words about David.
+
+10
+00:01:10,811 --> 00:01:11,652
+Speaker SPEAKER_01: Ryan, can you hear me?
+
+11
+00:01:11,671 --> 00:01:12,832
+Speaker SPEAKER_01: Can you nod if you can hear me?
+
+12
+00:01:14,399 --> 00:01:15,260
+Speaker SPEAKER_01: Okay, good.
+
+13
+00:01:16,941 --> 00:01:19,625
+Speaker SPEAKER_01: So I first met David at a NIPS poster.
+
+14
+00:01:21,406 --> 00:01:26,012
+Speaker SPEAKER_01: This kid came up to the poster and looked at it for one minute and said, why didn't you do it this way?
+
+15
+00:01:26,591 --> 00:01:28,635
+Speaker SPEAKER_01: And I thought, damn, why didn't we do it that way?
+
+16
+00:01:29,334 --> 00:01:33,819
+Speaker SPEAKER_01: And so I immediately thought I better get him as a post doc.
+
+17
+00:01:33,960 --> 00:01:36,864
+Speaker SPEAKER_01: And I tried to get him as a post doc, but he said he didn't like America.
+
+18
+00:01:38,885 --> 00:01:44,371
+Speaker SPEAKER_01: Later on, however, he visited Toronto a lot in the 1990s.
+
+19
+00:01:44,891 --> 00:01:49,698
+Speaker SPEAKER_01: At that time, I was working on variational methods, and I had this crazy bits-back argument.
+
+20
+00:01:50,159 --> 00:01:53,123
+Speaker SPEAKER_01: And most people, when I tried to explain the bits-back argument, got very confused.
+
+21
+00:01:53,724 --> 00:01:55,668
+Speaker SPEAKER_01: David immediately understood it and liked it.
+
+22
+00:01:56,188 --> 00:01:58,572
+Speaker SPEAKER_01: And so that was very nice, and we talked a lot about variational methods.
+
+23
+00:02:00,275 --> 00:02:05,843
+Speaker SPEAKER_01: The last thing I want to say about David is that he's not just a brilliant academic, but he's also somebody who made a difference.
+
+24
+00:02:06,924 --> 00:02:12,132
+Speaker SPEAKER_01: So both his book and his work as a government chief scientist actually may have helped to save the world.
+
+25
+00:02:12,532 --> 00:02:15,256
+Speaker SPEAKER_01: And you can't say that about many academics.
+
+26
+00:02:16,456 --> 00:02:17,518
+Speaker SPEAKER_01: OK, on to the talk.
+
+27
+00:02:19,360 --> 00:02:21,722
+Speaker SPEAKER_01: I'm going to talk about joint work with Timothy Lillicrap.
+
+28
+00:02:21,902 --> 00:02:23,824
+Speaker SPEAKER_01: I've talked about some of this before in Cambridge.
+
+29
+00:02:24,444 --> 00:02:26,848
+Speaker SPEAKER_01: And at the end, I'm going to have some new stuff.
+
+30
+00:02:28,649 --> 00:02:29,150
+Speaker SPEAKER_01: Next slide.
+
+31
+00:02:31,431 --> 00:02:32,233
+Speaker SPEAKER_01: Can we get the next slide?
+
+32
+00:02:37,198 --> 00:02:41,021
+Speaker SPEAKER_01: OK.
+
+33
+00:02:41,423 --> 00:02:46,409
+Speaker SPEAKER_01: Neuroscientists have claimed for a long time that backpropagation is ridiculous as a model of cortex.
+
+34
+00:02:48,132 --> 00:02:57,044
+Speaker SPEAKER_01: And I don't think they really understand the importance of adapting early feature detectors so they provide what things later on in the system need.
+
+35
+00:02:58,326 --> 00:03:01,131
+Speaker SPEAKER_01: They don't really understand how computationally important that is.
+
+36
+00:03:02,573 --> 00:03:07,919
+Speaker SPEAKER_01: They need to understand it because we now know that this supervised learning works really well.
+
+37
+00:03:08,574 --> 00:03:10,516
+Speaker SPEAKER_01: And so we should ask, why do they think it's impossible?
+
+38
+00:03:10,818 --> 00:03:11,318
+Speaker SPEAKER_01: Next slide.
+
+39
+00:03:18,046 --> 00:03:18,728
+Speaker SPEAKER_02: You got it.
+
+40
+00:03:18,747 --> 00:03:21,531
+Speaker SPEAKER_01: And I think there's four main reasons.
+
+41
+00:03:22,292 --> 00:03:24,455
+Speaker SPEAKER_01: One is there's no obvious source for a supervision signal.
+
+42
+00:03:25,336 --> 00:03:30,883
+Speaker SPEAKER_01: A second is that the second reason was what Francis Crick believed.
+
+43
+00:03:30,923 --> 00:03:34,347
+Speaker SPEAKER_01: It's the reason why Francis Crick thought the backpropagation was ridiculous.
+
+44
+00:03:34,799 --> 00:03:41,425
+Speaker SPEAKER_01: is the cortical neurons can't communicate real-valued activities, which appears to be necessary for backprop.
+
+45
+00:03:41,445 --> 00:03:51,855
+Speaker SPEAKER_01: The third is that neurons in backprop need to send an error derivative backwards and send a signal about what feature they detected forwards.
+
+46
+00:03:52,937 --> 00:03:56,300
+Speaker SPEAKER_01: And so the output of a neuron needs to convey two kinds of information.
+
+47
+00:03:56,700 --> 00:03:58,943
+Speaker SPEAKER_01: Now many people say, well, we'll have two different neurons to do that.
+
+48
+00:03:59,423 --> 00:04:01,245
+Speaker SPEAKER_01: But it'd be really nice if you could do it with one neuron.
+
+49
+00:04:01,832 --> 00:04:09,465
+Speaker SPEAKER_01: And the main idea of this talk is that you can do it with one neuron if you commit yourself to a certain way of representing error derivatives.
+
+50
+00:04:09,485 --> 00:04:22,105
+Speaker SPEAKER_01: And the last problem is that although if one cortical area has connections to another, there's always backwards connections, the backwards connections aren't actually to the same neurons as send the forwards connections, and they're certainly not symmetrical in their weights.
+
+51
+00:04:22,464 --> 00:04:28,654
+Speaker SPEAKER_01: So you don't have this kind of point-to-point symmetry that you need if you're going to use the transpose of the forward matrix.
+
+52
+00:04:28,675 --> 00:04:29,375
+Speaker SPEAKER_01: Next slide.
+
+53
+00:04:35,194 --> 00:04:35,716
+Speaker SPEAKER_01: Next slide.
+
+54
+00:04:38,338 --> 00:04:43,244
+Speaker SPEAKER_01: Okay, so there are many possible sources of supervision.
+
+55
+00:04:43,824 --> 00:04:46,367
+Speaker SPEAKER_01: I spent a long time in the sort of 80s and 90s thinking about this.
+
+56
+00:04:47,608 --> 00:04:51,733
+Speaker SPEAKER_01: The obvious one is something like an autoencoder, where you reconstruct all or part of the current frame.
+
+57
+00:04:52,413 --> 00:04:57,560
+Speaker SPEAKER_01: You can also have an autoencoder that predicts the future, that is, you try and reconstruct the next frame.
+
+58
+00:04:58,120 --> 00:05:02,225
+Speaker SPEAKER_01: And that's a very simple way of turning unsupervised learning into a form of supervised learning.
+
+59
+00:05:03,987 --> 00:05:04,947
+Speaker SPEAKER_01: Something that I think
+
+60
+00:05:05,249 --> 00:05:13,742
+Speaker SPEAKER_01: cortex is probably using is to make locally extracted features agree with features predicted from the local context or from another modality.
+
+61
+00:05:14,504 --> 00:05:22,216
+Speaker SPEAKER_01: So if I show you the sentence, she scrummed him with the frying pan, the context of the word scrummed gives you a sense of what it might mean.
+
+62
+00:05:22,255 --> 00:05:27,764
+Speaker SPEAKER_01: And so in one trial, you can get a pretty good idea of what scrummed means.
+
+63
+00:05:28,285 --> 00:05:32,471
+Speaker SPEAKER_01: I mean, you have some uncertainty, but it probably means she bashed him in some way with a frying pan.
+
+64
+00:05:35,658 --> 00:05:36,559
+Speaker SPEAKER_01: OK, next slide.
+
+65
+00:05:41,646 --> 00:05:44,610
+Speaker SPEAKER_01: So I think that all those sources of supervision are readily available.
+
+66
+00:05:44,872 --> 00:05:46,733
+Speaker SPEAKER_01: And so I think we can stop worrying about that problem.
+
+67
+00:05:48,276 --> 00:05:52,161
+Speaker SPEAKER_01: The next problem is that neurons don't send analog signals.
+
+68
+00:05:52,903 --> 00:05:54,204
+Speaker SPEAKER_01: And this worried me for a long time.
+
+69
+00:05:55,067 --> 00:06:05,461
+Speaker SPEAKER_01: And I think it's actually easily understood once you realize that we operate in the domain of small data.
+
+70
+00:06:06,454 --> 00:06:11,262
+Speaker SPEAKER_01: If you've got a big brain, you can afford to throw a lot of synapses at training examples.
+
+71
+00:06:11,942 --> 00:06:14,728
+Speaker SPEAKER_01: And you could ask, how many synapses do we throw at each training example?
+
+72
+00:06:15,309 --> 00:06:16,711
+Speaker SPEAKER_01: And it's about 10 to the 5.
+
+73
+00:06:17,170 --> 00:06:20,596
+Speaker SPEAKER_01: It might be as few as 10 to the 4 or as many as 10 to the 6.
+
+74
+00:06:21,117 --> 00:06:24,783
+Speaker SPEAKER_01: But we throw thousands and thousands of synapses at each training example.
+
+75
+00:06:25,524 --> 00:06:29,651
+Speaker SPEAKER_01: If you talk to a statistician, they'll tell you you shouldn't have more parameters than training examples.
+
+76
+00:06:31,233 --> 00:06:35,178
+Speaker SPEAKER_01: Luckily, the brain didn't talk to a statistician.
+
+77
+00:06:35,985 --> 00:06:36,807
+Speaker SPEAKER_01: Hugely more.
+
+78
+00:06:37,608 --> 00:06:44,137
+Speaker SPEAKER_01: Now we all know a way of using many more parameters than there are training examples, and that's to build an ensemble of models.
+
+79
+00:06:45,199 --> 00:06:57,156
+Speaker SPEAKER_01: So you use a few parameters in each model in the ensemble, and we know that as you get more and more synapses, you can make your model better and better if you just keep adding things to the ensemble.
+
+80
+00:06:57,336 --> 00:06:58,437
+Speaker SPEAKER_01: You get diminishing returns.
+
+81
+00:07:01,281 --> 00:07:04,726
+Speaker SPEAKER_01: So we know there is a way to always make use of more synapses,
+
+82
+00:07:05,973 --> 00:07:18,665
+Speaker SPEAKER_01: And a few years ago, I noticed that you could get the same effect as an ensemble, but be much more efficient by having a technique called dropout, where you randomly leave out neurons in your network.
+
+83
+00:07:19,165 --> 00:07:21,928
+Speaker SPEAKER_01: So each time you run the network, it's a different member of the ensemble.
+
+84
+00:07:22,709 --> 00:07:34,461
+Speaker SPEAKER_01: And it's going to be an exponentially big ensemble, but the nice property is that all the members of the ensemble share parameters now, and that means that
+
+85
+00:07:35,031 --> 00:07:40,199
+Speaker SPEAKER_01: You can learn the parameters even if you never see an example of one member of the ensemble.
+
+86
+00:07:41,401 --> 00:07:42,622
+Speaker SPEAKER_01: And so you get a nice property.
+
+87
+00:07:42,663 --> 00:07:47,949
+Speaker SPEAKER_01: So basically, this shows that adding noise and having ensembles is very, very similar.
+
+88
+00:07:48,812 --> 00:07:53,218
+Speaker SPEAKER_01: Dropout you can think of as a way of adding Bernoulli noise to the activities of units.
+
+89
+00:07:54,699 --> 00:08:00,228
+Speaker SPEAKER_01: But at least with one hidden layer, it's exactly equivalent to having a big ensemble.
+
+90
+00:08:00,247 --> 00:08:04,413
+Speaker SPEAKER_01: So in Dropout, each neuron is either going to send
+
+91
+00:08:04,815 --> 00:08:13,064
+Speaker SPEAKER_01: the normal output, actually twice the normal output, or it's going to send zero.
+
+92
+00:08:16,127 --> 00:08:21,711
+Speaker SPEAKER_01: You get a very similar effect to dropout if you send random spikes from a Poisson process.
+
+93
+00:08:22,333 --> 00:08:26,916
+Speaker SPEAKER_01: Again, you get this Poisson noise, and it looks as though Poisson noise is going to be bad.
+
+94
+00:08:27,718 --> 00:08:29,980
+Speaker SPEAKER_01: But actually, Poisson noise is very good.
+
+95
+00:08:30,880 --> 00:08:32,982
+Speaker SPEAKER_01: It's a way of, in effect,
+
+96
+00:08:33,250 --> 00:08:41,841
+Speaker SPEAKER_01: getting the same properties you get from an ensemble, which is that you can have hugely more parameters than data and still not overfit.
+
+97
+00:08:43,243 --> 00:08:50,532
+Speaker SPEAKER_01: So it's actually better to send a spike from a Poisson process than to send the real value underlying the Poisson process.
+
+98
+00:08:51,974 --> 00:08:52,413
+Speaker SPEAKER_01: Next slide.
+
+99
+00:08:56,058 --> 00:09:00,303
+Speaker SPEAKER_01: So what I'm going to conclude from that, can we have the next slide?
+
+100
+00:09:01,852 --> 00:09:06,476
+Speaker SPEAKER_01: What I'm going to conclude from that is that we don't need to worry about the fact that neurons don't send analog values.
+
+101
+00:09:07,158 --> 00:09:08,599
+Speaker SPEAKER_01: Let's assume that they do.
+
+102
+00:09:09,220 --> 00:09:13,183
+Speaker SPEAKER_01: And we know that at the end, we can replace these analog values by spikes from a Poisson process.
+
+103
+00:09:13,724 --> 00:09:16,086
+Speaker SPEAKER_01: And everything will be fine, except it will be better regularized.
+
+104
+00:09:17,668 --> 00:09:23,974
+Speaker SPEAKER_01: We also know that stochastic gradient descent is very robust to added noise, as long as the noise is unbiased.
+
+105
+00:09:25,394 --> 00:09:27,616
+Speaker SPEAKER_01: So we're fine having Poisson spikes instead of real numbers.
+
+106
+00:09:28,758 --> 00:09:29,599
+Speaker SPEAKER_01: OK, next slide.
+
+107
+00:09:33,950 --> 00:09:37,193
+Speaker SPEAKER_01: So this is where we get to the new idea on the next slide.
+
+108
+00:09:42,322 --> 00:09:52,676
+Speaker SPEAKER_01: We need to be able to represent error derivatives in feedforward pathways in the sensory cortex, which is what I'm mainly concerned with here.
+
+109
+00:09:54,759 --> 00:09:59,926
+Speaker SPEAKER_01: And the normal idea of neuroscientists is you'd have some separate neuron for sending error derivatives backwards.
+
+110
+00:10:01,488 --> 00:10:03,770
+Speaker SPEAKER_01: This is actually quite problematic because
+
+111
+00:10:04,139 --> 00:10:09,043
+Speaker SPEAKER_01: That separate neuron would need to send things that are both positive, sometimes positive, and sometimes negative.
+
+112
+00:10:09,504 --> 00:10:13,089
+Speaker SPEAKER_01: And there's a basic rule in neuroscience, which is neurons can't reverse the sign of their effect.
+
+113
+00:10:15,410 --> 00:10:16,832
+Speaker SPEAKER_01: So it violates Dale's law.
+
+114
+00:10:17,974 --> 00:10:31,327
+Speaker SPEAKER_01: But there's a much simpler way to send error derivatives, which is to make a fundamental representational decision that we're going to make the rate of change of the output of a neuron represent the error derivative.
+
+115
+00:10:32,354 --> 00:10:40,067
+Speaker SPEAKER_01: So the value of the output represents what the neuron's representing, and the rate of change of that value represents an error derivative, at least for a limited time.
+
+116
+00:10:41,671 --> 00:10:48,123
+Speaker SPEAKER_01: So now the same neuron, the same axon, can simultaneously carry the signal forwards and the error derivative backwards.
+
+117
+00:10:49,345 --> 00:10:53,732
+Speaker SPEAKER_01: And that makes life much simpler, if you can now figure out how to do backprop with that.
+
+118
+00:10:55,115 --> 00:10:56,116
+Speaker SPEAKER_01: So next slide, please.
+
+119
+00:11:06,205 --> 00:11:08,106
+Speaker SPEAKER_01: Sorry, there's a big delay in getting the slides.
+
+120
+00:11:08,126 --> 00:11:16,235
+Speaker SPEAKER_01: Okay, I'm gonna show you a way of using temporal derivatives and error derivatives that James Helland and I played around with in 1987.
+
+121
+00:11:16,815 --> 00:11:27,306
+Speaker SPEAKER_01: And it was an early attempt to make an autoencoder that didn't require the backwards connections to be the same as the forwards connections.
+
+122
+00:11:28,466 --> 00:11:34,692
+Speaker SPEAKER_01: And the idea was you take the input, you send it once around a loop, and the loop could have several stages to it.
+
+123
+00:11:35,264 --> 00:11:44,933
+Speaker SPEAKER_01: So you send it once around the loop using the green connections, and then you send it around the loop again, and the red connections are the same as the green connections, it's just showing you it goes around a second time.
+
+124
+00:11:46,556 --> 00:12:02,672
+Speaker SPEAKER_01: And then you look at the activity in each neuron, and you say the change in activity is bad, we would like the activities to stay the same, because if the activities stay the same in all the neurons when we go around the loop again, that means we've reconstructed the input well.
+
+125
+00:12:03,783 --> 00:12:10,653
+Speaker SPEAKER_01: And so we're just going to treat the change in the activity of a neuron as the postsynaptic term in the learning rule.
+
+126
+00:12:10,673 --> 00:12:25,134
+Speaker SPEAKER_01: So the change in a weight from neuron I to neuron J is now minus the output of neuron I times the rate of change of the output of neuron J. And that is spike time dependent plasticity, but with the wrong sign.
+
+127
+00:12:25,174 --> 00:12:30,162
+Speaker SPEAKER_01: What's interesting about this was I think in 1987 when we
+
+128
+00:12:30,412 --> 00:12:32,735
+Speaker SPEAKER_01: We actually published this model in NIPS.
+
+129
+00:12:32,875 --> 00:12:35,220
+Speaker SPEAKER_01: It was an old NIPS paper with very poor experiments.
+
+130
+00:12:35,861 --> 00:12:40,408
+Speaker SPEAKER_01: I think at that time people didn't know about spike time-dependent plasticity.
+
+131
+00:12:40,730 --> 00:12:43,554
+Speaker SPEAKER_01: So you could think of it as a prediction, but it has the wrong sign.
+
+132
+00:12:43,575 --> 00:12:44,736
+Speaker SPEAKER_01: But the sign's only one bit.
+
+133
+00:12:47,461 --> 00:12:48,724
+Speaker SPEAKER_01: Let's go to the next slide.
+
+134
+00:13:03,232 --> 00:13:12,707
+Speaker SPEAKER_01: Okay, so I realized later on that you could combine this kind of STDP with the wrong sign with STDP with the right sign.
+
+135
+00:13:13,809 --> 00:13:19,379
+Speaker SPEAKER_01: And I realized this when I was doing pre-training with stacks of restricted Boltzmann machines.
+
+136
+00:13:20,019 --> 00:13:25,950
+Speaker SPEAKER_01: And I actually gave a talk about it in 2007 and the slides and an update of the slides are on the web.
+
+137
+00:13:28,173 --> 00:13:29,274
+Speaker SPEAKER_01: So the idea is,
+
+138
+00:13:30,081 --> 00:13:34,826
+Speaker SPEAKER_01: We're going to first learn a stack of autoencoders, which will involve using reverse STTP.
+
+139
+00:13:35,407 --> 00:13:41,192
+Speaker SPEAKER_01: Once we've learned a stack of autoencoders, we're then going to put the signal through this stack of autoencoders.
+
+140
+00:13:42,173 --> 00:13:44,654
+Speaker SPEAKER_01: We're going to get some error signal at the top.
+
+141
+00:13:46,236 --> 00:13:51,701
+Speaker SPEAKER_01: And then we're going to drive the neurons top-down in two different phases.
+
+142
+00:13:52,322 --> 00:13:58,467
+Speaker SPEAKER_01: In the first top-down path, we drive the neurons from the representation that we predicted from the input.
+
+143
+00:13:59,883 --> 00:14:11,258
+Speaker SPEAKER_01: And in the second top-down pass, we drive them from the correct representation, or at least from what we predicted regressed in the direction of the correct representation, that is, in the direction of the target.
+
+144
+00:14:12,779 --> 00:14:17,005
+Speaker SPEAKER_01: And so you get a difference between the activities of the neurons in these two top-down passes.
+
+145
+00:14:17,966 --> 00:14:21,412
+Speaker SPEAKER_01: And that difference will actually allow you to do backprop.
+
+146
+00:14:22,373 --> 00:14:25,957
+Speaker SPEAKER_01: That is, you just use the STTP learning rule
+
+147
+00:14:26,730 --> 00:14:35,321
+Speaker SPEAKER_01: where you make the change in a weight be proportional to the input activity times the rate of change of the activity of the post-synaptic neuron.
+
+148
+00:14:36,381 --> 00:14:38,705
+Speaker SPEAKER_01: And this will approximate backprop.
+
+149
+00:14:38,725 --> 00:14:40,787
+Speaker SPEAKER_01: And we've been running this now, and it actually does work.
+
+150
+00:14:43,210 --> 00:14:55,083
+Speaker SPEAKER_01: So Tim Lillicrap has simulated learning a stack of autoencoders with this kind of loopy reverse STDP, and then running this two-pass procedure.
+
+151
+00:14:55,503 --> 00:15:01,889
+Speaker SPEAKER_01: we can actually now, in somewhat more plausible neural nets, do an approximation to back problem works.
+
+152
+00:15:05,192 --> 00:15:06,634
+Speaker SPEAKER_01: Okay, next slide please.
+
+153
+00:15:13,659 --> 00:15:23,669
+Speaker SPEAKER_01: So I just want to go over the fact that spike time-dependent plasticity is just making the change in a weight be proportional to the rate of change of the post-synaptic activity.
+
+154
+00:15:24,325 --> 00:15:38,065
+Speaker SPEAKER_01: The normal way spike-down-dependent plasticity is presented is, at the time of a presynaptic spike, that's the zero there, you look to see whether a postsynaptic spike occurred just before or just after this presynaptic spike.
+
+155
+00:15:39,287 --> 00:15:41,669
+Speaker SPEAKER_01: And if it occurred just after, you increase the weight.
+
+156
+00:15:41,690 --> 00:15:43,413
+Speaker SPEAKER_01: And if it occurred just before, you decrease the weight.
+
+157
+00:15:43,932 --> 00:15:52,105
+Speaker SPEAKER_01: And remarkably, it's a period of just a few milliseconds around the time of the presynaptic spike that determines whether the weight is decreased or increased.
+
+158
+00:15:53,114 --> 00:16:00,025
+Speaker SPEAKER_01: And most people interpret that as you're looking for a causal relationship between the incoming spike and the outgoing spike.
+
+159
+00:16:01,107 --> 00:16:10,565
+Speaker SPEAKER_01: But you can also interpret it by saying that the STDP is just a derivative filter applied to the post-synaptic spike train.
+
+160
+00:16:11,846 --> 00:16:15,714
+Speaker SPEAKER_01: And the weight change depends on the derivative of the post-synaptic spike train.
+
+161
+00:16:16,794 --> 00:16:18,278
+Speaker SPEAKER_01: It's a very different interpretation
+
+162
+00:16:18,645 --> 00:16:23,312
+Speaker SPEAKER_01: And the derivative interpretation depends on thinking about many examples with stochastic noise in them.
+
+163
+00:16:23,613 --> 00:16:27,238
+Speaker SPEAKER_01: And averaged over many examples, it behaves exactly like a derivative filter.
+
+164
+00:16:28,860 --> 00:16:29,981
+Speaker SPEAKER_01: OK, next slide, please.
+
+165
+00:16:38,352 --> 00:16:46,965
+Speaker SPEAKER_01: So there's one problem with all this, which is if the top-down weights are the transpose of the bottom-up weights, as they are in an RBM, then everything works fine.
+
+166
+00:16:47,384 --> 00:16:52,350
+Speaker SPEAKER_01: And when you do these two top-down passes, you get to simulate backpropagation.
+
+167
+00:16:53,373 --> 00:16:59,783
+Speaker SPEAKER_01: It's important that when you do the top-down passes, you can actually reconstruct what's below.
+
+168
+00:16:59,822 --> 00:17:03,908
+Speaker SPEAKER_01: So that means at the top of your system, you don't just want a class label coming out.
+
+169
+00:17:04,710 --> 00:17:15,365
+Speaker SPEAKER_01: You want a representation that contains the class label, and that's the bit you're going to correct with the target, but also contains enough other stuff so you can reconstruct the input.
+
+170
+00:17:15,835 --> 00:17:25,125
+Speaker SPEAKER_01: So your top-level representation needs to be the label plus the other information needed to reconstruct the input, like if it's an object, like the pose of the object.
+
+171
+00:17:25,886 --> 00:17:39,243
+Speaker SPEAKER_01: Okay, and with that provision, you can do backprop like this, but it needs symmetric weights, or it appears to need symmetric weights, so that the backward pass is using the transpose of the weights used in the forward pass.
+
+172
+00:17:40,685 --> 00:17:44,289
+Speaker SPEAKER_01: Next slide, please.
+
+173
+00:17:44,776 --> 00:17:48,339
+Speaker SPEAKER_01: When I thought about all this in 2007, that seemed to be an insuperable obstacle.
+
+174
+00:17:49,481 --> 00:17:52,885
+Speaker SPEAKER_01: Oh, I'm gonna skip this one.
+
+175
+00:17:53,385 --> 00:17:54,047
+Speaker SPEAKER_01: Next slide, please.
+
+176
+00:17:55,749 --> 00:17:58,271
+Speaker SPEAKER_01: This is just showing how you turn the target into a rate of change.
+
+177
+00:18:01,875 --> 00:18:04,159
+Speaker SPEAKER_01: And this is showing that it really does do back prop.
+
+178
+00:18:04,179 --> 00:18:11,728
+Speaker SPEAKER_01: So if you think about, look at that neuron I, the black arrows are what you use on the first forward pass.
+
+179
+00:18:12,214 --> 00:18:15,196
+Speaker SPEAKER_01: And then the green arrows are what you start using top down.
+
+180
+00:18:15,238 --> 00:18:32,951
+Speaker SPEAKER_01: And if you have autoencoders that are working, then when you replace the black input to i with the green input to i, the green input to i is going to be yk times wki plus yj times wji.
+
+181
+00:18:32,991 --> 00:18:42,119
+Speaker SPEAKER_01: And if yk and yj are changing, then the green input is gonna have some rate of change which depends on the rate of change of yj and yk.
+
+182
+00:18:43,653 --> 00:18:47,036
+Speaker SPEAKER_01: And you can now ask, well, what's the rate of change of the output of i going to be?
+
+183
+00:18:47,997 --> 00:18:57,826
+Speaker SPEAKER_01: And the rate of change of the output of i is going to be the rate of change of its input times the derivative of the output with respect to the input for i. And that is exactly the backprop rule.
+
+184
+00:18:57,846 --> 00:18:58,607
+Speaker SPEAKER_01: That's what's interesting.
+
+185
+00:18:59,229 --> 00:19:13,643
+Speaker SPEAKER_01: If you reconstruct using an autoencoder, and the things you're reconstructing with are changing, then the rate of change of the output of the reconstruction is exactly what you need so that you can back propagate
+
+186
+00:19:14,095 --> 00:19:17,337
+Speaker SPEAKER_01: the error derivatives in the form of the rate of change of the outputs.
+
+187
+00:19:18,798 --> 00:19:19,799
+Speaker SPEAKER_01: OK, next slide, please.
+
+188
+00:19:23,544 --> 00:19:24,444
+Speaker SPEAKER_01: I'm near the end now.
+
+189
+00:19:27,647 --> 00:19:29,209
+Speaker SPEAKER_01: So the problem is the symmetric weights.
+
+190
+00:19:29,249 --> 00:19:31,592
+Speaker SPEAKER_01: That's the one thing I couldn't figure out how to solve.
+
+191
+00:19:33,113 --> 00:19:35,035
+Speaker SPEAKER_01: How will it work if the weights aren't symmetric?
+
+192
+00:19:35,776 --> 00:19:38,458
+Speaker SPEAKER_01: And on the face of it, it's just not going to work if the weights aren't symmetric.
+
+193
+00:19:38,478 --> 00:19:39,919
+Speaker SPEAKER_01: You're going to get the wrong derivatives.
+
+194
+00:19:39,939 --> 00:19:41,260
+Speaker SPEAKER_01: And I tried it, and it didn't work.
+
+195
+00:19:41,840 --> 00:19:43,663
+Speaker SPEAKER_01: I talked a bit about functional symmetry.
+
+196
+00:19:44,048 --> 00:19:45,569
+Speaker SPEAKER_01: But I couldn't get it to work.
+
+197
+00:19:47,673 --> 00:19:54,984
+Speaker SPEAKER_01: And then a year or two ago, Tim Lillicrap and some of his co-workers in Oxford noticed something amazing.
+
+198
+00:19:55,586 --> 00:19:56,287
+Speaker SPEAKER_01: Next slide, please.
+
+199
+00:20:02,236 --> 00:20:07,324
+Speaker SPEAKER_01: What they noticed was that the top-down weights don't have to be the same as the bottom-up weights.
+
+200
+00:20:08,306 --> 00:20:11,810
+Speaker SPEAKER_01: If you run backprop and you don't use the transpose of the feedforward
+
+201
+00:20:12,314 --> 00:20:14,778
+Speaker SPEAKER_01: You just use fixed random top-down weights.
+
+202
+00:20:17,481 --> 00:20:19,124
+Speaker SPEAKER_01: Initially, nothing happens.
+
+203
+00:20:19,885 --> 00:20:25,855
+Speaker SPEAKER_01: Obviously, initially, what's back-propagated doesn't encode the error at all.
+
+204
+00:20:25,875 --> 00:20:27,336
+Speaker SPEAKER_01: But then something very interesting happens.
+
+205
+00:20:27,978 --> 00:20:35,328
+Speaker SPEAKER_01: The forward weights adapt so that the backward weights will be carrying the error.
+
+206
+00:20:35,348 --> 00:20:40,396
+Speaker SPEAKER_01: Basically, in machine learning, there's two kinds of behavior that ideas have.
+
+207
+00:20:40,613 --> 00:20:43,215
+Speaker SPEAKER_01: Some ideas want to work, and some ideas want not to work.
+
+208
+00:20:44,417 --> 00:20:46,381
+Speaker SPEAKER_01: And this is an idea that wants to work.
+
+209
+00:20:46,560 --> 00:20:49,003
+Speaker SPEAKER_01: That is, you're given these random backwards weights.
+
+210
+00:20:49,505 --> 00:20:54,171
+Speaker SPEAKER_01: And by magic, the forwards weights adapt so the backwards weights are now doing more or less the right thing.
+
+211
+00:20:55,011 --> 00:20:57,055
+Speaker SPEAKER_01: They're closer to the pseudo-inverse than the transpose.
+
+212
+00:20:58,696 --> 00:21:02,461
+Speaker SPEAKER_01: But if you run backprop in this kind of system, it takes a little while to get off the ground.
+
+213
+00:21:02,501 --> 00:21:03,523
+Speaker SPEAKER_01: And then it works just fine.
+
+214
+00:21:04,084 --> 00:21:08,410
+Speaker SPEAKER_01: And when I say it works just fine, you can run a big net like this.
+
+215
+00:21:08,778 --> 00:21:10,160
+Speaker SPEAKER_01: It's important that the net be quite big.
+
+216
+00:21:10,240 --> 00:21:12,344
+Speaker SPEAKER_01: Narrow bottlenecks, this doesn't work well with.
+
+217
+00:21:13,445 --> 00:21:19,736
+Speaker SPEAKER_01: But with big, wide nets, it gives performance very similar to standard backprop.
+
+218
+00:21:19,756 --> 00:21:25,305
+Speaker SPEAKER_01: And it only takes about twice as long, sometimes less than twice as long, sometimes almost as fast as standard backprop.
+
+219
+00:21:25,625 --> 00:21:27,969
+Speaker SPEAKER_01: So it's not exactly backprop, but it works.
+
+220
+00:21:28,450 --> 00:21:30,012
+Speaker SPEAKER_01: It does do supervised learning very nicely.
+
+221
+00:21:30,753 --> 00:21:31,996
+Speaker SPEAKER_01: So that solves the last problem.
+
+222
+00:21:33,137 --> 00:21:34,599
+Speaker SPEAKER_01: Next slide, please.
+
+223
+00:21:42,291 --> 00:21:55,109
+Speaker SPEAKER_01: So I've got an analogy for people who do machine learning, which is, in variational inference, we make up how we're going to do the inference, or we make up a restriction on the distribution we're going to use.
+
+224
+00:21:56,692 --> 00:22:08,127
+Speaker SPEAKER_01: And it looks like that might be a very bad thing to do, because the true distribution, the true posterior distribution over the latent variables or over the weights, might be very different from the one that we've supposed that was a nice, simple one.
+
+225
+00:22:09,089 --> 00:22:12,213
+Speaker SPEAKER_01: But the magic of variational inference is the generative model
+
+226
+00:22:12,463 --> 00:22:15,488
+Speaker SPEAKER_01: will then adapt to make our way of doing inference more correct.
+
+227
+00:22:16,690 --> 00:22:24,941
+Speaker SPEAKER_01: And so in feedback alignment, which is what Tim Lillacrap calls using random feedback weights, what happens is the same thing.
+
+228
+00:22:25,040 --> 00:22:29,046
+Speaker SPEAKER_01: The forwards weights adapt to make these backwards weights work.
+
+229
+00:22:30,387 --> 00:22:32,530
+Speaker SPEAKER_01: Now, of course, the backwards weights don't have to be fixed.
+
+230
+00:22:32,830 --> 00:22:35,535
+Speaker SPEAKER_01: They can be weights in one of these loopy autoencoders.
+
+231
+00:22:35,996 --> 00:22:36,916
+Speaker SPEAKER_01: So they can learn, too.
+
+232
+00:22:37,297 --> 00:22:39,180
+Speaker SPEAKER_01: And the forwards weights will keep trying to track them.
+
+233
+00:22:39,346 --> 00:22:42,410
+Speaker SPEAKER_01: so that they are carrying back something that looks very like the derivatives.
+
+234
+00:22:44,232 --> 00:22:46,115
+Speaker SPEAKER_01: We don't fully understand this yet.
+
+235
+00:22:46,856 --> 00:22:50,342
+Speaker SPEAKER_01: I have lots and lots of different explanations of why it works.
+
+236
+00:22:50,903 --> 00:22:58,913
+Speaker SPEAKER_01: And having lots and lots of explanations may seem good if you want to integrate across posteriors, but actually it's a sign that you don't really understand what's going on.
+
+237
+00:23:01,237 --> 00:23:06,104
+Speaker SPEAKER_01: Okay, so it works, but we don't really fully understand why feedback and alignment works so well.
+
+238
+00:23:07,987 --> 00:23:08,728
+Speaker SPEAKER_01: Next slide, please.
+
+239
+00:23:20,892 --> 00:23:22,294
+Speaker SPEAKER_01: So I just want to summarize.
+
+240
+00:23:22,334 --> 00:23:31,707
+Speaker SPEAKER_01: It's easy to get a supervision signal in a neural net.
+
+241
+00:23:31,727 --> 00:23:33,549
+Speaker SPEAKER_01: There's all sorts of possibilities for that.
+
+242
+00:23:34,530 --> 00:23:38,537
+Speaker SPEAKER_01: It doesn't have to sort of be injected into the middle of the cortex by a teacher.
+
+243
+00:23:40,359 --> 00:23:42,442
+Speaker SPEAKER_01: The fact that neurons send spikes isn't a problem.
+
+244
+00:23:42,903 --> 00:23:44,444
+Speaker SPEAKER_01: In fact, it's just a great regularizer.
+
+245
+00:23:46,248 --> 00:23:49,211
+Speaker SPEAKER_01: If we represent error derivatives as temporal derivatives,
+
+246
+00:23:49,646 --> 00:23:54,692
+Speaker SPEAKER_01: then we can get a neuron to send, in the same axon, the error derivative backwards and the signal forwards.
+
+247
+00:23:56,255 --> 00:24:00,319
+Speaker SPEAKER_01: And if we do that, we ought to see spike-time-dependent plasticity.
+
+248
+00:24:00,520 --> 00:24:06,887
+Speaker SPEAKER_01: That's really the signature that backpropagation is using temporal derivatives as error derivatives.
+
+249
+00:24:06,907 --> 00:24:16,820
+Speaker SPEAKER_01: And the problem that you'd have thought each bottom-up connection needs to have a corresponding top-down connection with the same weight turns out to be a non-problem for reasons we don't fully understand.
+
+250
+00:24:17,161 --> 00:24:19,384
+Speaker SPEAKER_01: But it works just fine if you don't have that.
+
+251
+00:24:19,751 --> 00:24:22,576
+Speaker SPEAKER_01: the forwards weights will adapt to make the backwards weights work nicely.
+
+252
+00:24:23,837 --> 00:24:39,038
+Speaker SPEAKER_01: So I've got one last comment on the final slide, which is that this funny representational idea of using error derivatives to represent temporal derivatives has a huge consequence.
+
+253
+00:24:39,097 --> 00:24:46,468
+Speaker SPEAKER_01: It means you can't use the temporal derivative of a neuron to represent the temporal derivative of what the neuron represents.
+
+254
+00:24:47,393 --> 00:24:54,461
+Speaker SPEAKER_01: So if you've got a neuron that represents the position of something, you can't use the rate of change of the output of that neuron to represent the velocity of something.
+
+255
+00:24:55,201 --> 00:25:03,853
+Speaker SPEAKER_01: That's the obvious way to represent a velocity, but it's not going to work if you've already decided that temporal derivatives are error derivatives.
+
+256
+00:25:03,873 --> 00:25:13,203
+Speaker SPEAKER_01: And if you look at the right kind of brain damage, you find people who can see the positions of things, and they can see that the position's changed, but they don't see them moving.
+
+257
+00:25:13,243 --> 00:25:16,928
+Speaker SPEAKER_01: They have no sense of velocity.
+
+258
+00:25:17,346 --> 00:25:27,517
+Speaker SPEAKER_01: The idea of temporal derivatives as coding error derivatives explains a couple of things, like why you can't use position neurons to represent velocity by their rate of change.
+
+259
+00:25:28,097 --> 00:25:33,143
+Speaker SPEAKER_01: It explains why you get spike time-dependent plasticity, and explains how you might be able to do backprop in the brain.
+
+260
+00:25:33,762 --> 00:25:37,606
+Speaker SPEAKER_01: Now, it's early days yet to make this really stick in neuroscience terms.
+
+261
+00:25:38,508 --> 00:25:43,874
+Speaker SPEAKER_01: But what I want to do is cast doubt on what neuroscientists say, which is that you couldn't possibly do backprop in the brain.
+
+262
+00:25:44,614 --> 00:25:47,336
+Speaker SPEAKER_01: I think you actually could, and evolution must have figured out a way to do it.
+
+263
+00:25:47,974 --> 00:26:04,536
+Speaker SPEAKER_01: and I'm finished.
+
+264
+00:26:04,556 --> 00:26:05,898
+Speaker SPEAKER_02: We have time for a couple questions.
+
+265
+00:26:14,721 --> 00:26:19,469
+Speaker SPEAKER_00: So can you make any predictions on the graph structure you might expect to see in a brain?
+
+266
+00:26:19,548 --> 00:26:21,653
+Speaker SPEAKER_00: So look at a simple, something like C. elegans.
+
+267
+00:26:21,732 --> 00:26:24,616
+Speaker SPEAKER_00: Is there some loops in there that you could predict and then find?
+
+268
+00:26:24,656 --> 00:26:26,840
+Speaker SPEAKER_01: OK.
+
+269
+00:26:26,941 --> 00:26:35,173
+Speaker SPEAKER_01: I've been thinking about basically the human brain, or the brain of primates.
+
+270
+00:26:35,193 --> 00:26:35,294
+Speaker SPEAKER_01: Oops.
+
+271
+00:26:35,314 --> 00:26:36,715
+Speaker SPEAKER_01: I think we're both talking at the same time.
+
+272
+00:26:39,319 --> 00:26:42,585
+Speaker SPEAKER_01: I've been thinking about the human brain and sensory pathways in the human brain.
+
+273
+00:26:42,750 --> 00:26:46,836
+Speaker SPEAKER_01: I'm not convinced that the same kind of learning goes on in much lower organisms.
+
+274
+00:26:47,616 --> 00:26:59,332
+Speaker SPEAKER_01: So I think in insects, for example, it's maybe a much dumber system than it is in our brains.
+
+275
+00:27:00,433 --> 00:27:05,160
+Speaker SPEAKER_01: So I sort of want to remain open on the question of whether something like C. elegans might be able to do back prop.
+
+276
+00:27:05,819 --> 00:27:07,122
+Speaker SPEAKER_01: I'm not sure I believe that.
+
+277
+00:27:13,395 --> 00:27:14,237
+Speaker SPEAKER_02: Jeff, I have a question.
+
+278
+00:27:15,877 --> 00:27:16,117
+Speaker SPEAKER_02: OK.
+
+279
+00:27:16,419 --> 00:27:30,330
+Speaker SPEAKER_02: So in a situation where you don't have to update the matrices that you're using on the reverse pass, is there a sort of computational opportunity there for, say, distributed training of neural networks?
+
+280
+00:27:31,893 --> 00:27:32,993
+Speaker SPEAKER_02: Less communication costs, that is?
+
+281
+00:27:34,654 --> 00:27:36,876
+Speaker SPEAKER_01: I haven't actually thought about that.
+
+282
+00:27:38,699 --> 00:27:42,001
+Speaker SPEAKER_01: I haven't thought about that issue.
+
+283
+00:27:42,691 --> 00:27:44,894
+Speaker SPEAKER_01: Sorry, the line isn't full duplex.
+
+284
+00:27:46,757 --> 00:27:49,741
+Speaker SPEAKER_01: So I think it's a very interesting question.
+
+285
+00:27:49,761 --> 00:28:00,017
+Speaker SPEAKER_01: It'd be very nice if you could use fixed backward weights and you pay a bit in that it's not quite as fast as backprop, but you win a lot in that you don't have to be updating the backwards weights.
+
+286
+00:28:00,076 --> 00:28:04,804
+Speaker SPEAKER_01: But since you still have to be updating the forwards weights, I'm not convinced that I'd have to think about it.
+
+287
+00:28:04,824 --> 00:28:08,209
+Speaker SPEAKER_01: I don't see a way of making a lot of use of that to parallelize things.
+
+288
+00:28:11,597 --> 00:28:21,429
+Speaker SPEAKER_03: Hi Jeff, you suggested that your autoencoders have to be lossless, that you not only encode the label but enough information to reconstruct the image.
+
+289
+00:28:22,170 --> 00:28:26,755
+Speaker SPEAKER_03: That seems like quite an expensive requirement for the brain to be able to do that all the way up.
+
+290
+00:28:27,935 --> 00:28:38,247
+Speaker SPEAKER_03: Do you see any way that you could be more lossy and still get back prop?
+
+291
+00:28:39,289 --> 00:28:40,872
+Speaker SPEAKER_01: Yeah, I think I've realized what's happening.
+
+292
+00:28:40,892 --> 00:28:46,118
+Speaker SPEAKER_01: There's a big delay between the visual input I'm getting from John Winn speaking and my sound for John Winn.
+
+293
+00:28:47,661 --> 00:28:57,653
+Speaker SPEAKER_01: OK, so assuming I got the whole question, it turns out that this method is actually very robust.
+
+294
+00:28:58,114 --> 00:29:07,086
+Speaker SPEAKER_01: And if you make the top level not be sufficient to reconstruct the level below, it still works pretty well.
+
+295
+00:29:07,707 --> 00:29:12,853
+Speaker SPEAKER_01: It helps to have extra outputs in the top level that are representing things like pose.
+
+296
+00:29:13,993 --> 00:29:17,798
+Speaker SPEAKER_01: But if you just use the label at the top level, it still works, just not quite as well.
+
+297
+00:29:20,121 --> 00:29:25,506
+Speaker SPEAKER_01: So I think, actually, it can tolerate lossy autoencoding pretty well.
+
+298
+00:29:26,386 --> 00:29:29,911
+Speaker SPEAKER_01: We haven't done the experiments to figure out exactly how well it can tolerate it.
+
+299
+00:29:30,352 --> 00:29:36,178
+Speaker SPEAKER_01: And I completely agree with the sentiment that you don't want to have to encode all that sort of noise
+
+300
+00:29:36,817 --> 00:29:39,358
+Speaker SPEAKER_01: in lower levels all the way up the system.
+
+301
+00:29:39,378 --> 00:30:05,625
+Speaker SPEAKER_04: But I think it's going to be fairly robust to that.
+
+302
+00:30:06,262 --> 00:30:11,509
+Speaker SPEAKER_04: As you know, the connections from the higher levels are very diffuse.
+
+303
+00:30:11,628 --> 00:30:14,613
+Speaker SPEAKER_04: They're in the upper layers of the cortex, and they spread out very far and wide.
+
+304
+00:30:15,093 --> 00:30:20,880
+Speaker SPEAKER_04: What kind of precision do you require in the signal that comes down from the top levels?
+
+305
+00:30:22,982 --> 00:30:23,383
+Speaker SPEAKER_01: OK.
+
+306
+00:30:23,563 --> 00:30:36,117
+Speaker SPEAKER_01: So I can say a little bit about that, which is that if you take fully connected nets, which of course isn't very realistic, and you make the forward connections and the backward connections,
+
+307
+00:30:36,419 --> 00:30:37,961
+Speaker SPEAKER_01: completely not overlap.
+
+308
+00:30:38,961 --> 00:30:51,917
+Speaker SPEAKER_01: So you put in, for example, one quarter of the possible forward connections, and then you put in one quarter of the possible backward connections, but making sure there's no overlap between forward connections and backwards connections.
+
+309
+00:30:52,659 --> 00:30:56,163
+Speaker SPEAKER_01: So you never have a pair of neurons which are connected forwards and connected backwards.
+
+310
+00:30:56,864 --> 00:30:58,125
+Speaker SPEAKER_01: The algorithm works just fine.
+
+311
+00:30:58,826 --> 00:31:01,869
+Speaker SPEAKER_01: That doesn't phase it at all.
+
+312
+00:31:02,170 --> 00:31:06,375
+Speaker SPEAKER_01: it hinges on the fact there's redundancy in the representations in each layer.
+
+313
+00:31:07,356 --> 00:31:16,969
+Speaker SPEAKER_01: So you can get the information you need backwards by looking at other neurons, not just the neuron that you would have thought you had to look at in the layer above to figure out how to do it.
+
+314
+00:31:17,891 --> 00:31:25,500
+Speaker SPEAKER_01: So as long as there's redundancy in the representation, so as long as you have quite wide layers, it works with no overlap between the feedforward and feedback connections.
+
+315
+00:31:26,642 --> 00:31:28,785
+Speaker SPEAKER_01: That's not a proper answer because you'd want to know
+
+316
+00:31:29,035 --> 00:31:32,298
+Speaker SPEAKER_01: and what happens locally and whether it pays to make things more diffuse.
+
+317
+00:31:33,079 --> 00:31:53,083
+Speaker SPEAKER_01: I think the reason for making things more diffuse is probably related to where the supervision signal comes from, because I really believe in this idea that the supervision signal, which is going to be happening at every level, is the agreement between the bottom-up activity you extract for a neuron and the top-down prediction from a wider context.
+
+318
+00:31:53,743 --> 00:31:55,566
+Speaker SPEAKER_01: And so I think that's why you want the
+
+319
+00:31:56,103 --> 00:32:01,628
+Speaker SPEAKER_01: feedback connections to be more diffuse, because they have to carry things from a wider context, so you're gonna compare with the bottom-up.
+
+320
+00:32:03,912 --> 00:32:05,614
+Speaker SPEAKER_01: I guess that's all I have to say about that now.
+
+321
+00:32:05,673 --> 00:32:10,720
+Speaker SPEAKER_01: It requires a lot more experiments to know what's the ideal diffuseness.
+
+322
+00:32:11,140 --> 00:32:23,493
+Speaker SPEAKER_01: And also, we haven't done the experiments to show that this supervised learning of agreement between bottom-up and top-down predictions is a good way to do supervision at all levels of the system.
+
+323
+00:32:26,713 --> 00:32:27,221
+Speaker SPEAKER_02: Thanks, Jeff.
+
+324
+00:32:27,526 --> 00:32:29,130
+Speaker SPEAKER_02: Let's all thank Jeff again.
+

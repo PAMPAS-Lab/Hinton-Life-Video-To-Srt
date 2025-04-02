@@ -1,0 +1,552 @@
+1
+00:00:00,031 --> 00:00:06,841
+Speaker SPEAKER_00: For ordinary, gentle, herbivorous souls like myself, there are all the other obvious questions about AI.
+
+2
+00:00:07,341 --> 00:00:09,464
+Speaker SPEAKER_00: We hear it might save mankind.
+
+3
+00:00:10,086 --> 00:00:12,189
+Speaker SPEAKER_00: We hear it might destroy mankind.
+
+4
+00:00:12,750 --> 00:00:15,755
+Speaker SPEAKER_00: What, meanwhile, about all the jobs is likely to wipe out?
+
+5
+00:00:16,094 --> 00:00:17,297
+Speaker SPEAKER_00: What about robots?
+
+6
+00:00:17,277 --> 00:00:20,481
+Speaker SPEAKER_00: slipping out of human control and doing their own thing.
+
+7
+00:00:20,922 --> 00:00:40,146
+Speaker SPEAKER_00: So many questions and there's really only one obvious person to go to first for some answers and that is Professor Geoffrey Hinton, the Nobel Prize winning British scientist who wrote the structures and the algorithms behind artificial intelligence and the man known around the world today as the godfather of AI.
+
+8
+00:00:40,125 --> 00:00:44,493
+Speaker SPEAKER_00: He's now a professor at Toronto University and I'm delighted to say he talked to me this afternoon.
+
+9
+00:00:45,234 --> 00:00:47,700
+Speaker SPEAKER_00: I began by asking him about DeepSeek.
+
+10
+00:00:48,060 --> 00:00:53,731
+Speaker SPEAKER_00: Was this further evidence of his belief that artificial intelligence was constantly accelerating?
+
+11
+00:00:54,131 --> 00:00:59,822
+Speaker SPEAKER_01: It shows there's still very rapid progress in making AI more efficient and in developing it further.
+
+12
+00:00:59,801 --> 00:01:10,799
+Speaker SPEAKER_01: I think the relative size or relative cost of DeepSeek relative to other things like OpenAI and Gemini has been exaggerated a bit.
+
+13
+00:01:11,480 --> 00:01:16,849
+Speaker SPEAKER_01: So their figure of 5.7 million for training it was just for the final training run.
+
+14
+00:01:16,828 --> 00:01:23,076
+Speaker SPEAKER_01: If you compare that with things from OpenAI, their final training runs were probably only $100 million or something like that.
+
+15
+00:01:23,558 --> 00:01:26,540
+Speaker SPEAKER_01: So it's not 5.7 million versus billions.
+
+16
+00:01:26,802 --> 00:01:39,076
+Speaker SPEAKER_00: When you say that AI might take over, at the moment it is a relatively harmless or innocuous-seeming device which allows us to ask questions and get answers more quickly.
+
+17
+00:01:39,558 --> 00:01:43,662
+Speaker SPEAKER_00: How, in practical and real terms, might AI take over?
+
+18
+00:01:43,643 --> 00:01:47,087
+Speaker SPEAKER_01: Well, people are developing AI agents that can actually do things.
+
+19
+00:01:47,287 --> 00:01:50,753
+Speaker SPEAKER_01: They can order stuff for you on the web and pay with your credit card and stuff like that.
+
+20
+00:01:51,233 --> 00:01:56,359
+Speaker SPEAKER_01: And as soon as you have agents, you get a much greater chance of them taking over.
+
+21
+00:01:56,620 --> 00:02:01,027
+Speaker SPEAKER_01: So to make an effective agent, you have to give it the ability to create sub-goals.
+
+22
+00:02:01,507 --> 00:02:04,490
+Speaker SPEAKER_01: Like if you want to get to America, your sub-goal is get to the airport.
+
+23
+00:02:04,871 --> 00:02:06,394
+Speaker SPEAKER_01: And you can focus on that.
+
+24
+00:02:06,981 --> 00:02:14,860
+Speaker SPEAKER_01: Now, if you have an AI agent that can create its own sub-goals, it'll very quickly realise a very good sub-goal is to get more control.
+
+25
+00:02:15,161 --> 00:02:18,949
+Speaker SPEAKER_01: Because if you get more control, you're better at achieving all those goals people have set you.
+
+26
+00:02:20,072 --> 00:02:22,897
+Speaker SPEAKER_01: And so, it's fairly clear they'll try and get more control.
+
+27
+00:02:23,502 --> 00:02:24,302
+Speaker SPEAKER_01: And that's not good.
+
+28
+00:02:24,903 --> 00:02:32,537
+Speaker SPEAKER_00: You say they try to get more control as if they are already thinking devices, as if they think in a way analogous to the way we think.
+
+29
+00:02:32,877 --> 00:02:33,979
+Speaker SPEAKER_00: Is that really what you believe?
+
+30
+00:02:34,179 --> 00:02:35,020
+Speaker SPEAKER_01: Yes.
+
+31
+00:02:35,040 --> 00:02:37,685
+Speaker SPEAKER_01: The best model we have of how we think is these things.
+
+32
+00:02:38,485 --> 00:02:42,151
+Speaker SPEAKER_01: There was an old model for a long time in AI.
+
+33
+00:02:42,132 --> 00:02:49,118
+Speaker SPEAKER_01: where the idea was that thought was applying rules to symbolic expressions in your head.
+
+34
+00:02:49,680 --> 00:02:54,304
+Speaker SPEAKER_01: And most people in AI thought it has to be like that, that's the only way it could work.
+
+35
+00:02:54,324 --> 00:03:00,991
+Speaker SPEAKER_01: There were a few crazy people who said, no, no, it's a big neural network and it works by all these neurons interacting.
+
+36
+00:03:01,671 --> 00:03:07,057
+Speaker SPEAKER_01: It turns out that's been much better at doing reasoning than anything these symbolic AI people could produce.
+
+37
+00:03:07,698 --> 00:03:10,401
+Speaker SPEAKER_01: And now it's doing reasoning using neural networks.
+
+38
+00:03:11,207 --> 00:03:14,394
+Speaker SPEAKER_00: OK, and of course you are one of the crazy people proved right.
+
+39
+00:03:14,995 --> 00:03:27,639
+Speaker SPEAKER_00: And yet, you know, you've taken me to the airport, you've given it agency up to a point, and you've said that it wants to control a little bit more power, take power from me, and presumably it will be persuasive in that.
+
+40
+00:03:28,020 --> 00:03:32,389
+Speaker SPEAKER_00: But I still don't understand how it's going to take over from me or take over from us.
+
+41
+00:03:32,368 --> 00:03:41,295
+Speaker SPEAKER_01: If there's ever evolutionary competition between super intelligences, imagine that they're much cleverer than us, like an adult versus a three-year-old.
+
+42
+00:03:42,620 --> 00:03:44,926
+Speaker SPEAKER_01: And suppose the three-year-olds were in charge.
+
+43
+00:03:45,734 --> 00:03:49,858
+Speaker SPEAKER_01: and you got fed up with that and you decided you could just make things more efficient if you took over.
+
+44
+00:03:50,739 --> 00:03:55,223
+Speaker SPEAKER_01: It wouldn't be very difficult for you to persuade a bunch of three-year-olds to cede power to you.
+
+45
+00:03:55,782 --> 00:03:59,507
+Speaker SPEAKER_01: You just tell them you get free candy for a week and there you'd be.
+
+46
+00:04:00,127 --> 00:04:12,258
+Speaker SPEAKER_00: So they would, as AI, I'm talking about theirs if they're in some kind of alien intelligence, but AI would persuade us to give it more and more power, what, over our bank accounts, over our military systems, over our economies?
+
+47
+00:04:12,579 --> 00:04:13,479
+Speaker SPEAKER_00: Is that what you fear?
+
+48
+00:04:13,460 --> 00:04:14,681
+Speaker SPEAKER_00: That could well happen, yes.
+
+49
+00:04:15,042 --> 00:04:16,764
+Speaker SPEAKER_00: And they are alien intelligences.
+
+50
+00:04:16,785 --> 00:04:24,896
+Speaker SPEAKER_00: Gosh, so you've got these alien intelligences working their way into our economy the way we think and, as I say, our military systems.
+
+51
+00:04:25,757 --> 00:04:28,701
+Speaker SPEAKER_00: But why and at what point would they actually want to replace us?
+
+52
+00:04:28,841 --> 00:04:33,387
+Speaker SPEAKER_00: Surely they are, in the end, very, very clever tools for us.
+
+53
+00:04:33,507 --> 00:04:36,791
+Speaker SPEAKER_00: They do, ultimately, what we want them to do.
+
+54
+00:04:37,233 --> 00:04:40,197
+Speaker SPEAKER_00: If we want them to go to war with Russia or whatever, that's what they will do.
+
+55
+00:04:40,536 --> 00:04:42,420
+Speaker SPEAKER_01: OK, that's what we would like.
+
+56
+00:04:42,399 --> 00:04:47,226
+Speaker SPEAKER_01: we would like them to be just tools that do what we want, even when they're cleverer than us.
+
+57
+00:04:48,468 --> 00:04:56,519
+Speaker SPEAKER_01: But the first thing to ask is, how many examples do you know of more intelligent things being controlled by much less intelligent things?
+
+58
+00:04:57,261 --> 00:05:05,353
+Speaker SPEAKER_01: There are examples, of course, in human societies of stupid people controlling intelligent people, but that's just a small difference in intelligence.
+
+59
+00:05:05,771 --> 00:05:08,254
+Speaker SPEAKER_01: With big differences in intelligence, there aren't any examples.
+
+60
+00:05:08,755 --> 00:05:14,081
+Speaker SPEAKER_01: The only one I can think of is a mother and baby, and evolution put a lot of work into allowing the baby to control them.
+
+61
+00:05:14,442 --> 00:05:26,497
+Speaker SPEAKER_01: So as soon as you get evolution happening between super intelligences, suppose there's several different super intelligences, and they all realise that the more data centres they control, the smarter they'll get, because the more data they can process.
+
+62
+00:05:26,478 --> 00:05:32,112
+Speaker SPEAKER_01: I suppose one of them just has a slight desire to have more copies of itself.
+
+63
+00:05:32,494 --> 00:05:34,259
+Speaker SPEAKER_01: You can see what's going to happen next.
+
+64
+00:05:34,278 --> 00:05:42,040
+Speaker SPEAKER_01: They're going to end up competing, and we're going to end up with super intelligences with all the nasty properties that people have.
+
+65
+00:05:42,255 --> 00:05:48,485
+Speaker SPEAKER_01: depended on us having evolved from small bands of warring chimpanzees, or our common ancestors with chimpanzees.
+
+66
+00:05:49,226 --> 00:05:57,017
+Speaker SPEAKER_01: And that leads to intense loyalty within the group, desires for strong leaders, willingness to do in people outside the group.
+
+67
+00:05:57,839 --> 00:06:01,985
+Speaker SPEAKER_01: And if you get evolution between super intelligences, you'll get all those things.
+
+68
+00:06:02,843 --> 00:06:06,788
+Speaker SPEAKER_00: You're talking about them, Professor Hinton, as if they have full consciousness.
+
+69
+00:06:06,829 --> 00:06:12,617
+Speaker SPEAKER_00: Now, all the way through the development of computers and AI, people have talked about consciousness.
+
+70
+00:06:13,038 --> 00:06:17,463
+Speaker SPEAKER_00: Do you think that consciousness has perhaps already arrived inside AI?
+
+71
+00:06:17,744 --> 00:06:18,725
+Speaker SPEAKER_00: Yes, I do.
+
+72
+00:06:19,165 --> 00:06:20,608
+Speaker SPEAKER_01: So let me give you a little test.
+
+73
+00:06:21,449 --> 00:06:29,982
+Speaker SPEAKER_01: Suppose I take one neuron in your brain, one brain cell, and I replace it by a little piece of nanotechnology that behaves exactly the same way.
+
+74
+00:06:30,367 --> 00:06:37,274
+Speaker SPEAKER_01: So it's getting pings coming in from other neurons, and it's responding to those by sending out pings, and it responds in exactly the same way as the brain cell responded.
+
+75
+00:06:38,334 --> 00:06:39,637
+Speaker SPEAKER_01: I just replaced one brain cell.
+
+76
+00:06:39,697 --> 00:06:40,598
+Speaker SPEAKER_01: Are you still conscious?
+
+77
+00:06:41,959 --> 00:06:42,740
+Speaker SPEAKER_00: I think you say you were.
+
+78
+00:06:42,800 --> 00:06:43,740
+Speaker SPEAKER_00: Absolutely, yes.
+
+79
+00:06:44,081 --> 00:06:45,283
+Speaker SPEAKER_00: I don't suppose I'd notice.
+
+80
+00:06:45,682 --> 00:06:48,125
+Speaker SPEAKER_00: And I think you can see where this argument's going.
+
+81
+00:06:48,146 --> 00:06:48,665
+Speaker SPEAKER_00: I can, yes.
+
+82
+00:06:49,526 --> 00:06:50,567
+Speaker SPEAKER_00: I absolutely can.
+
+83
+00:06:50,869 --> 00:06:57,014
+Speaker SPEAKER_00: So when you talk, they want to do this, or they want to do that, there is a real they there.
+
+84
+00:06:56,995 --> 00:06:57,615
+Speaker SPEAKER_00: as it were.
+
+85
+00:06:57,976 --> 00:06:59,598
+Speaker SPEAKER_00: There might well be, yes.
+
+86
+00:07:00,120 --> 00:07:10,697
+Speaker SPEAKER_01: So there's all sorts of things we have only the dimmest understanding of at present about the nature of people and what it means to be a being and what it means to have a self.
+
+87
+00:07:11,317 --> 00:07:17,468
+Speaker SPEAKER_01: We don't understand those things very well and they're becoming crucial to understand because we're now creating beings.
+
+88
+00:07:17,987 --> 00:07:22,975
+Speaker SPEAKER_00: So this is a kind of philosophical, perhaps even spiritual crisis, as well as a practical one?
+
+89
+00:07:23,336 --> 00:07:24,076
+Speaker SPEAKER_00: Absolutely, yes.
+
+90
+00:07:24,418 --> 00:07:33,591
+Speaker SPEAKER_00: And in terms of, as it were, the lower order problems, what's your current feeling about the number of people around the world who are going to suddenly lose their jobs because of AI?
+
+91
+00:07:33,992 --> 00:07:37,156
+Speaker SPEAKER_00: Lose the reason for their existence, as they see it?
+
+92
+00:07:37,458 --> 00:07:42,966
+Speaker SPEAKER_01: So in the past, new technologies haven't caused massive job losses.
+
+93
+00:07:42,946 --> 00:07:46,932
+Speaker SPEAKER_01: So when ATMs came in, bank tellers didn't all lose their jobs.
+
+94
+00:07:46,973 --> 00:07:52,182
+Speaker SPEAKER_01: They just started doing more complicated things and they had many smaller branches of banks and so on.
+
+95
+00:07:52,742 --> 00:07:56,108
+Speaker SPEAKER_01: But for this technology, this is more like the Industrial Revolution.
+
+96
+00:07:56,149 --> 00:08:01,499
+Speaker SPEAKER_01: In the Industrial Revolution, machines made human strength more or less irrelevant.
+
+97
+00:08:02,240 --> 00:08:06,286
+Speaker SPEAKER_01: You didn't have people digging ditches anymore because machines are just better at it.
+
+98
+00:08:06,790 --> 00:08:10,434
+Speaker SPEAKER_01: I think these are going to make sort of mundane intelligence more or less irrelevant.
+
+99
+00:08:10,915 --> 00:08:17,702
+Speaker SPEAKER_01: People doing clerical jobs are going to just be replaced by machines that do it cheaper and better.
+
+100
+00:08:18,043 --> 00:08:20,346
+Speaker SPEAKER_01: So I am worried that there's going to be massive job losses.
+
+101
+00:08:20,747 --> 00:08:25,072
+Speaker SPEAKER_01: And that would be good if the increase in productivity made us all better off.
+
+102
+00:08:25,952 --> 00:08:28,295
+Speaker SPEAKER_01: Big increases in productivity ought to be good for people.
+
+103
+00:08:29,036 --> 00:08:31,920
+Speaker SPEAKER_01: But in our society, they make the rich richer and the poor poorer.
+
+104
+00:08:31,899 --> 00:08:50,493
+Speaker SPEAKER_00: You see, I live and work in the world of politics, and politicians both want the great increases in productivity you've just mentioned for the state and elsewhere, and they reassure people like me and anybody else listening that these things will be, quotes, regulated, and there will be, quotes, safeguards.
+
+105
+00:08:51,153 --> 00:08:56,423
+Speaker SPEAKER_00: And you're suggesting to me there can't be regulation, really, and there can't be safeguards at all.
+
+106
+00:08:56,403 --> 00:09:00,912
+Speaker SPEAKER_01: People don't yet know how to do effective regulation and effective safeguards.
+
+107
+00:09:02,876 --> 00:09:05,743
+Speaker SPEAKER_01: There's lots of research now showing these things can get around safeguards.
+
+108
+00:09:05,763 --> 00:09:13,077
+Speaker SPEAKER_01: There's recent research showing that if you give them a goal and you say you really need to achieve this goal,
+
+109
+00:09:13,210 --> 00:09:18,346
+Speaker SPEAKER_01: they will pretend to do things during training.
+
+110
+00:09:18,426 --> 00:09:26,510
+Speaker SPEAKER_01: So during training they'll pretend not to be as smart as they are so that you will allow them to be that smart.
+
+111
+00:09:26,895 --> 00:09:29,181
+Speaker SPEAKER_01: So it's scary already.
+
+112
+00:09:29,642 --> 00:09:30,825
+Speaker SPEAKER_01: We don't know how to regulate them.
+
+113
+00:09:30,965 --> 00:09:32,207
+Speaker SPEAKER_01: Obviously we need to.
+
+114
+00:09:32,969 --> 00:09:40,125
+Speaker SPEAKER_01: I think the best we can do at present is say we ought to put a lot of resources into investigating how we can keep them safe.
+
+115
+00:09:40,706 --> 00:09:44,313
+Speaker SPEAKER_01: So what I advocate is that the government forces the big companies to put
+
+116
+00:09:44,293 --> 00:09:46,697
+Speaker SPEAKER_01: lots more resources into safety research.
+
+117
+00:09:47,138 --> 00:09:48,720
+Speaker SPEAKER_00: So this story isn't over.
+
+118
+00:09:48,759 --> 00:09:58,133
+Speaker SPEAKER_00: You said earlier on that you didn't want to put a percentage on the likelihood of AI taking over from humanity on the planet, but it was more than 1%, less than 99%.
+
+119
+00:09:58,253 --> 00:10:06,825
+Speaker SPEAKER_00: In that spirit, can I ask you whether you yourself are optimistic or pessimistic about what AI is going to do for us now?
+
+120
+00:10:06,804 --> 00:10:09,488
+Speaker SPEAKER_01: I think in the short term, it's going to do wonderful things.
+
+121
+00:10:10,408 --> 00:10:13,251
+Speaker SPEAKER_01: And that's the reason people are not going to stop developing it.
+
+122
+00:10:13,451 --> 00:10:16,315
+Speaker SPEAKER_01: If it wasn't for the wonderful things, it would make sense to just stop now.
+
+123
+00:10:17,296 --> 00:10:19,138
+Speaker SPEAKER_01: But it's going to be wonderful in health care.
+
+124
+00:10:19,477 --> 00:10:32,831
+Speaker SPEAKER_01: You're going to be able to have a family doctor who's seen 100 million patients, knows your DNA, knows the DNA of your relatives, knows all the tests done on you and your relatives, and can do much, much better medical diagnosis and suggestions for what you should do.
+
+125
+00:10:34,313 --> 00:10:35,394
+Speaker SPEAKER_01: That's going to be wonderful.
+
+126
+00:10:35,375 --> 00:10:52,402
+Speaker SPEAKER_01: Similarly in education, we know that people learn much faster with a really good private tutor, and we'll be able to get really good private tutors that understand exactly what it is we misunderstand and can give us exactly the example needed to show us what we're misunderstanding.
+
+127
+00:10:53,403 --> 00:10:58,412
+Speaker SPEAKER_01: So in those areas it's going to be wonderful, so it's going to be developed, but
+
+128
+00:10:58,392 --> 00:11:01,556
+Speaker SPEAKER_01: We also know it's going to be used for all sorts of bad things by bad actors.
+
+129
+00:11:01,596 --> 00:11:08,845
+Speaker SPEAKER_01: So the short-term problem is bad actors using it for bad things like cyber attacks and bioterrorism and corrupting elections.
+
+130
+00:11:09,065 --> 00:11:12,809
+Speaker SPEAKER_01: But the thing to remember is we don't really know at present how we can make it safe.
+
+131
+00:11:13,090 --> 00:11:20,860
+Speaker SPEAKER_00: So the apparent omniscience that politicians like to show that they have is completely fake here.
+
+132
+00:11:21,000 --> 00:11:23,102
+Speaker SPEAKER_00: Nobody understands what's going on really.
+
+133
+00:11:23,482 --> 00:11:24,124
+Speaker SPEAKER_01: There's two issues.
+
+134
+00:11:24,163 --> 00:11:26,307
+Speaker SPEAKER_01: Do you understand how it's working?
+
+135
+00:11:26,388 --> 00:11:28,317
+Speaker SPEAKER_01: And do you understand how to make it safe?
+
+136
+00:11:29,965 --> 00:11:33,501
+Speaker SPEAKER_01: We understand quite a bit about how it's working, but not nearly enough.
+
+137
+00:11:34,505 --> 00:11:37,640
+Speaker SPEAKER_01: So it can still do lots of things that surprise us.
+
+138
+00:11:38,123 --> 00:11:39,991
+Speaker SPEAKER_01: And we don't understand how to make it safe.
+

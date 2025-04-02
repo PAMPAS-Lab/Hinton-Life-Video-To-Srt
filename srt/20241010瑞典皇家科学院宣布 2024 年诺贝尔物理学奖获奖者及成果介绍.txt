@@ -1,0 +1,804 @@
+1
+00:00:00,031 --> 00:00:07,421
+Speaker SPEAKER_09: Welcome to this press conference and the Royal Swedish Academy of Sciences where we will present this year's Nobel Prize in Physics.
+
+2
+00:00:08,862 --> 00:00:19,557
+Speaker SPEAKER_09: We will keep to our tradition and begin the presentation in Swedish and then continue in English and you are of course welcome to ask questions in either language later on.
+
+3
+00:00:21,664 --> 00:00:23,266
+Speaker SPEAKER_09: My name is Hans Ellergren.
+
+4
+00:00:23,567 --> 00:00:27,150
+Speaker SPEAKER_09: I'm the Secretary General of the Royal Swedish Academy of Sciences.
+
+5
+00:00:28,111 --> 00:00:34,499
+Speaker SPEAKER_09: And to my right is Professor Ellen Mons, Chair of the Nobel Committee for Physics.
+
+6
+00:00:34,518 --> 00:00:42,127
+Speaker SPEAKER_09: And to my left is Professor Anders Yderbeck, member of the Nobel Committee in Physics and expert in this field.
+
+7
+00:00:46,490 --> 00:00:50,034
+Speaker SPEAKER_09: This year's prize is about machines that learn.
+
+8
+00:00:54,335 --> 00:01:20,545
+Speaker SPEAKER_09: The Royal Swedish Academy of Sciences has today decided to award the 2024 Nobel Prize in Physics to John Hopfield, Princeton University, USA, and Geoffrey Hinton, University of Toronto, Canada, for foundational discoveries and inventions that enable machine learning with artificial neural networks.
+
+9
+00:01:22,634 --> 00:01:26,177
+Speaker SPEAKER_09: Professor Ellen Moons will now give us a short summary of the prize.
+
+10
+00:01:26,899 --> 00:01:27,179
+Speaker SPEAKER_09: Please.
+
+11
+00:01:28,561 --> 00:01:28,921
+Speaker SPEAKER_01: Thank you.
+
+12
+00:01:31,224 --> 00:01:35,349
+Speaker SPEAKER_01: Learning is a fascinating ability of the human brain.
+
+13
+00:01:36,310 --> 00:01:42,778
+Speaker SPEAKER_01: We can recognize images and speech and associate them with memories and past experiences.
+
+14
+00:01:43,739 --> 00:01:49,266
+Speaker SPEAKER_01: Billions of neurons wired together give us unique cognitive abilities.
+
+15
+00:01:50,798 --> 00:01:57,709
+Speaker SPEAKER_01: Artificial neural networks are inspired by this network of neurons in our brains.
+
+16
+00:01:59,332 --> 00:02:06,444
+Speaker SPEAKER_01: This year's laureates for the Nobel Prize in Physics, John Hopfield and Geoffrey Hinton,
+
+17
+00:02:06,677 --> 00:02:24,534
+Speaker SPEAKER_01: used fundamental concepts from statistical physics to design artificial neural networks that function as associative memories and find patterns in large data sets.
+
+18
+00:02:24,514 --> 00:02:37,332
+Speaker SPEAKER_01: These artificial neural networks have been used to advance research across physics topics as diverse as particle physics, material science, and astrophysics.
+
+19
+00:02:38,574 --> 00:02:41,258
+Speaker SPEAKER_01: They have also become part of our daily lives.
+
+20
+00:02:42,259 --> 00:02:46,506
+Speaker SPEAKER_01: For instance, in facial recognition and language translation.
+
+21
+00:02:46,957 --> 00:03:05,068
+Speaker SPEAKER_01: The laureates' discoveries and inventions form the building blocks of machine learning that can aid humans in making faster and more reliable decisions, for instance, when diagnosing medical conditions.
+
+22
+00:03:06,735 --> 00:03:16,889
+Speaker SPEAKER_01: However, while machine learning has enormous benefits, its rapid development has also raised concerns about our future.
+
+23
+00:03:18,070 --> 00:03:31,747
+Speaker SPEAKER_01: Collectively, humans carry the responsibility for using this new technology in a safe and ethical way, for the greatest benefit of humankind.
+
+24
+00:03:33,668 --> 00:03:34,330
+Speaker SPEAKER_09: Thank you.
+
+25
+00:03:35,394 --> 00:03:38,002
+Speaker SPEAKER_09: Professor Ebeck, are you ready to give a more detailed presentation?
+
+26
+00:03:38,947 --> 00:03:39,146
+Speaker SPEAKER_09: Thank you.
+
+27
+00:03:39,168 --> 00:03:39,468
+Speaker SPEAKER_09: Please.
+
+28
+00:03:45,991 --> 00:03:46,092
+Speaker SPEAKER_10: Yeah.
+
+29
+00:03:46,662 --> 00:03:52,536
+Speaker SPEAKER_10: So this year's Nobel Prize in physics is about artificial neural networks.
+
+30
+00:03:53,960 --> 00:03:59,171
+Speaker SPEAKER_10: Today we know that this is a powerful computational approach.
+
+31
+00:03:59,913 --> 00:04:04,485
+Speaker SPEAKER_10: This was not evident 50 years ago.
+
+32
+00:04:04,465 --> 00:04:17,057
+Speaker SPEAKER_10: But it was known that we mammals are very good at pattern recognition by some sort of computation in our brains.
+
+33
+00:04:19,199 --> 00:04:33,612
+Speaker SPEAKER_10: And this sparked an interest in understanding the collective properties of networks of simplified neurons
+
+34
+00:04:33,591 --> 00:04:44,228
+Speaker SPEAKER_10: connected by couplings with a strength that could become weaker or that could become stronger.
+
+35
+00:04:44,810 --> 00:05:01,235
+Speaker SPEAKER_10: And the idea would then be to determine the strength of the couplings to achieve a certain function and doing that by training the network on many examples.
+
+36
+00:05:15,913 --> 00:05:38,732
+Speaker SPEAKER_10: A net breakthrough came in 1982 when John Hopfield presented a dynamic network which could store and retrieve memories, associative memories.
+
+37
+00:05:38,711 --> 00:05:45,665
+Speaker SPEAKER_10: The memory had simple binary 01 nodes, all nodes connected, pairwise connected.
+
+38
+00:05:48,151 --> 00:05:56,146
+Speaker SPEAKER_10: The states that remained unchanged with time were identified as memories.
+
+39
+00:05:59,468 --> 00:06:10,262
+Speaker SPEAKER_10: Moreover, it was possible to introduce an energy similar to energies one has in studying magnetic systems in physics.
+
+40
+00:06:11,444 --> 00:06:18,995
+Speaker SPEAKER_10: And that energy had the property that it was low in the states corresponding to memories.
+
+41
+00:06:23,093 --> 00:06:32,648
+Speaker SPEAKER_10: Metaphorically, the memories were located in valleys of an energy landscape.
+
+42
+00:06:33,927 --> 00:06:49,005
+Speaker SPEAKER_10: When starting from a distorted pattern with higher energy, the network would slide down in energy to a nearby valley.
+
+43
+00:06:49,826 --> 00:06:59,800
+Speaker SPEAKER_10: And by this process, the distorted pattern could be corrected.
+
+44
+00:07:04,976 --> 00:07:25,077
+Speaker SPEAKER_10: In follow-up work, John Hopfield also showed that this network was robust in the sense that the binary nodes could be replaced with analog ones, and he also showed how the network could be used to solve difficult optimization problems.
+
+45
+00:07:25,057 --> 00:07:44,416
+Speaker SPEAKER_10: The creation and explorations of this network by John Holm Hopfield was a milestone in our understanding of the computational abilities of artificial neural networks.
+
+46
+00:07:50,336 --> 00:08:01,355
+Speaker SPEAKER_10: Another important discovery came soon afterwards by Geoffrey Hinton and Terence Sienopski.
+
+47
+00:08:03,098 --> 00:08:14,016
+Speaker SPEAKER_10: They created a stochastic version of the Hopfield network based on statistical physics and called the Boltzmann machine.
+
+48
+00:08:16,206 --> 00:08:25,076
+Speaker SPEAKER_10: So here, the focus is on statistical distributions of patents rather than individual patents.
+
+49
+00:08:26,418 --> 00:08:29,583
+Speaker SPEAKER_10: It is a generative model.
+
+50
+00:08:30,303 --> 00:08:37,471
+Speaker SPEAKER_10: Once trained, it can be used to generate new instances from the learned distribution.
+
+51
+00:08:37,451 --> 00:08:47,734
+Speaker SPEAKER_10: It had the same basic structure as Hopfield's network, but there were two types of nodes, hidden and visible ones.
+
+52
+00:08:48,355 --> 00:08:55,090
+Speaker SPEAKER_10: And the hidden nodes were there to make it possible for the network to learn more general distributions.
+
+53
+00:08:57,230 --> 00:09:06,860
+Speaker SPEAKER_10: So, while theoretically interesting, in practice, the Boltzmann machine was initially of limited use.
+
+54
+00:09:06,879 --> 00:09:11,264
+Speaker SPEAKER_10: It was prohibitively demanding computationally.
+
+55
+00:09:12,144 --> 00:09:26,460
+Speaker SPEAKER_10: However, a version with fewer couplings called the restricted Boltzmann machine developed into a versatile tool, and I will soon mention it again.
+
+56
+00:09:31,333 --> 00:09:37,701
+Speaker SPEAKER_10: So far I talked about recurrent networks with feedback connections.
+
+57
+00:09:38,402 --> 00:09:52,278
+Speaker SPEAKER_10: Many of today's deep learning methods involve feed-forward networks where information flow from an input layer to an output layer via hidden layers.
+
+58
+00:09:52,259 --> 00:10:08,486
+Speaker SPEAKER_10: In the 1980s, Hinton showed how such a network with hidden layers could be trained.
+
+59
+00:10:08,868 --> 00:10:16,782
+Speaker SPEAKER_10: And in that process, he also elucidated the important function of hidden layers.
+
+60
+00:10:17,605 --> 00:10:31,609
+Speaker SPEAKER_10: Then in the 1990s, there were applications of multi-layer networks, successful applications, for example, for the classification of handwritten digits.
+
+61
+00:10:32,811 --> 00:10:42,346
+Speaker SPEAKER_10: But the networks that one could train had relatively few couplings between consecutive layers.
+
+62
+00:10:44,115 --> 00:10:54,177
+Speaker SPEAKER_10: It remained a challenge to train more general deep structures with high connectivity between the layers.
+
+63
+00:10:56,283 --> 00:11:01,371
+Speaker SPEAKER_10: Here, in fact, Manny gave up, but Hinton did not.
+
+64
+00:11:02,113 --> 00:11:09,164
+Speaker SPEAKER_10: And Hinton overcame this barrier by using this restricted Boltzmann machine.
+
+65
+00:11:09,184 --> 00:11:17,919
+Speaker SPEAKER_10: He used it to pre-train deep structures, and by this method,
+
+66
+00:11:17,899 --> 00:11:29,697
+Speaker SPEAKER_10: He succeeded in implementing examples of deep and dense structures, which was a breakthrough toward deep learning.
+
+67
+00:11:37,677 --> 00:11:55,461
+Speaker SPEAKER_10: Finally, so now I have talked about physics, how physics has been a driving force behind innovation and development in artificial neural network.
+
+68
+00:11:55,961 --> 00:12:06,856
+Speaker SPEAKER_10: It's also interesting to see how physics as a research field is benefiting from these methods.
+
+69
+00:12:06,836 --> 00:12:18,259
+Speaker SPEAKER_10: And one example, well-established example here is data analysis in particle physics and astrophysics.
+
+70
+00:12:19,400 --> 00:12:29,200
+Speaker SPEAKER_10: An increasingly important application is in modeling materials.
+
+71
+00:12:29,179 --> 00:12:37,130
+Speaker SPEAKER_10: For example, to search for novel, more efficient solar cells.
+
+72
+00:12:38,932 --> 00:12:49,246
+Speaker SPEAKER_10: Yet another example is in explicit physics-based climate modeling to enable higher resolution.
+
+73
+00:12:51,927 --> 00:13:07,321
+Speaker SPEAKER_10: Finally, I want to mention two successful applications outside the physics area, protein structure prediction and analysis of medical images.
+
+74
+00:13:10,488 --> 00:13:11,590
+Speaker SPEAKER_10: Thank you for your attention.
+
+75
+00:13:13,020 --> 00:13:14,322
+Speaker SPEAKER_09: Thank you, Professor Irbeck.
+
+76
+00:13:15,464 --> 00:13:22,091
+Speaker SPEAKER_09: I think we might have John Hopfield or Jeff Hinton with us on the phone.
+
+77
+00:13:24,375 --> 00:13:25,716
+Speaker SPEAKER_09: Good morning, Professor Hinton.
+
+78
+00:13:27,578 --> 00:13:28,078
+Speaker SPEAKER_09: Good morning.
+
+79
+00:13:28,279 --> 00:13:32,485
+Speaker SPEAKER_09: Please accept our warmest congratulations to receiving the Nobel Prize in Physics.
+
+80
+00:13:34,847 --> 00:13:35,589
+Speaker SPEAKER_02: Thank you very much.
+
+81
+00:13:36,429 --> 00:13:37,610
+Speaker SPEAKER_09: How do you feel right now?
+
+82
+00:13:40,087 --> 00:13:41,649
+Speaker SPEAKER_02: I'm flabbergasted.
+
+83
+00:13:41,870 --> 00:13:44,591
+Speaker SPEAKER_02: I had no idea this would happen.
+
+84
+00:13:44,611 --> 00:13:45,673
+Speaker SPEAKER_02: I'm very surprised.
+
+85
+00:13:48,235 --> 00:13:48,836
+Speaker SPEAKER_09: I could imagine.
+
+86
+00:13:49,677 --> 00:13:56,263
+Speaker SPEAKER_09: I'm sitting here in this beautiful session hall of the Royal Swedish Academy of Sciences here at the press conference.
+
+87
+00:13:56,543 --> 00:14:01,488
+Speaker SPEAKER_09: There are many interested journalists from both the Swedish and the international press.
+
+88
+00:14:02,389 --> 00:14:04,831
+Speaker SPEAKER_09: Would you be ready to take some questions from them?
+
+89
+00:14:06,692 --> 00:14:06,972
+Speaker SPEAKER_09: Yes.
+
+90
+00:14:08,826 --> 00:14:10,369
+Speaker SPEAKER_09: Yes, please.
+
+91
+00:14:10,389 --> 00:14:11,230
+Speaker SPEAKER_09: Sveriges Television.
+
+92
+00:14:12,110 --> 00:14:12,552
+Speaker SPEAKER_04: Thank you.
+
+93
+00:14:12,692 --> 00:14:18,779
+Speaker SPEAKER_04: My warmest congratulations to your achievements and to this year's Nobel Prize in Physics.
+
+94
+00:14:18,840 --> 00:14:25,008
+Speaker SPEAKER_04: My name is Susan Ritzen and my question comes from Swedish television.
+
+95
+00:14:25,067 --> 00:14:32,116
+Speaker SPEAKER_04: I know many of our viewers, also lay people, are very curious about the discoveries awarded here today.
+
+96
+00:14:32,096 --> 00:14:45,778
+Speaker SPEAKER_04: I wonder, do you remember when you realized your breakthrough, awarded today, if you can bring us back in time briefly, and what were the reasons for, or the inspiration for these revelations?
+
+97
+00:14:48,601 --> 00:14:55,352
+Speaker SPEAKER_02: So, I remember a couple of occasions with two of my mentors.
+
+98
+00:14:56,053 --> 00:15:00,179
+Speaker SPEAKER_02: So I have an enormous debt to David Rommelhart and Terry Sanofsky,
+
+99
+00:15:01,038 --> 00:15:12,230
+Speaker SPEAKER_02: With David Remelhardt, we rediscovered the back propagation algorithm, and that was in the beginning of 1982.
+
+100
+00:15:12,530 --> 00:15:22,863
+Speaker SPEAKER_02: And with Terry Sinofsky, Terry and I discovered a learning algorithm for Hopfield nets that had hidden units.
+
+101
+00:15:24,065 --> 00:15:29,390
+Speaker SPEAKER_02: And I remember very well going to a meeting in Rochester
+
+102
+00:15:29,945 --> 00:15:31,826
+Speaker SPEAKER_02: where John Hopfield talked.
+
+103
+00:15:32,788 --> 00:15:40,856
+Speaker SPEAKER_02: And I first learned about the Hopfield energy function for neural networks.
+
+104
+00:15:41,857 --> 00:15:50,846
+Speaker SPEAKER_02: And after that, Terry and I worked previously on how to generalize neural networks to have hidden units.
+
+105
+00:15:52,089 --> 00:15:58,956
+Speaker SPEAKER_02: And at the beginning of 1982, we came up with a learning algorithm.
+
+106
+00:15:59,812 --> 00:16:04,361
+Speaker SPEAKER_02: for Baltimore Machines which are hot field nets with hidden units.
+
+107
+00:16:06,145 --> 00:16:13,299
+Speaker SPEAKER_02: So the most exciting times were with David Rammelhart on back propagation and Terry Sinofsky on Baltimore Machines.
+
+108
+00:16:16,125 --> 00:16:16,767
+Speaker SPEAKER_09: Thank you.
+
+109
+00:16:16,787 --> 00:16:18,269
+Speaker SPEAKER_09: Okay, more questions.
+
+110
+00:16:21,176 --> 00:16:21,736
+Speaker SPEAKER_09: First here.
+
+111
+00:16:23,471 --> 00:16:26,375
+Speaker SPEAKER_00: Hello, Bogumił Radajewski from the Polish television.
+
+112
+00:16:26,495 --> 00:16:27,177
+Speaker SPEAKER_00: Congratulations.
+
+113
+00:16:27,738 --> 00:16:36,450
+Speaker SPEAKER_00: The question I have is a little bit about the future because obviously we are very excited about what neural networks and machine learning can do now.
+
+114
+00:16:37,331 --> 00:16:42,979
+Speaker SPEAKER_00: But what we're even more excited is the prospect of what they could do in the future.
+
+115
+00:16:43,279 --> 00:16:52,972
+Speaker SPEAKER_00: What are your predictions about the degree of influence that this technology is going to have on our civilization?
+
+116
+00:16:54,774 --> 00:16:56,677
+Speaker SPEAKER_02: I think it will have a huge influence.
+
+117
+00:16:56,697 --> 00:16:59,038
+Speaker SPEAKER_02: It will be comparable with the Industrial Revolution.
+
+118
+00:16:59,820 --> 00:17:06,385
+Speaker SPEAKER_02: But instead of exceeding people in physical strength, it's going to exceed people in intellectual ability.
+
+119
+00:17:07,666 --> 00:17:11,790
+Speaker SPEAKER_02: We have no experience of what it's like to have things smarter than us.
+
+120
+00:17:12,852 --> 00:17:16,556
+Speaker SPEAKER_02: And it's going to be wonderful in many respects.
+
+121
+00:17:16,816 --> 00:17:22,281
+Speaker SPEAKER_02: In areas like health care, it's going to give us much better health care in almost all interests.
+
+122
+00:17:22,301 --> 00:17:23,803
+Speaker SPEAKER_02: It's going to make them more efficient.
+
+123
+00:17:24,458 --> 00:17:29,924
+Speaker SPEAKER_02: people are going to be able to do the same amount of work with an AI assistant in much less time.
+
+124
+00:17:29,984 --> 00:17:45,124
+Speaker SPEAKER_02: It'll mean huge improvements in productivity, but we also have to worry about a number of possible bad consequences, particularly the threat of these things getting out of control.
+
+125
+00:17:45,144 --> 00:17:50,230
+Speaker SPEAKER_09: I think first we have here and then there.
+
+126
+00:17:52,521 --> 00:17:55,828
+Speaker SPEAKER_07: Hi, Simon Campanello with Dagens Nyheter.
+
+127
+00:17:55,909 --> 00:17:57,070
+Speaker SPEAKER_07: Congratulations on the prize.
+
+128
+00:17:58,253 --> 00:18:11,400
+Speaker SPEAKER_07: My question is, last year you said in an interview with New York Times that you regret part of your life's work because of the risks with artificial intelligence.
+
+129
+00:18:12,000 --> 00:18:13,904
+Speaker SPEAKER_07: How do you feel about today?
+
+130
+00:18:16,096 --> 00:18:42,930
+Speaker SPEAKER_02: um there's two kinds of regret there's regrets where you feel guilty because you did something you knew you shouldn't have done and then there's regret where you did something that you would do again in the same circumstances but it may in the end not turn out well um i that second kind of regret i have in the same circumstances i would do the same again but i am worried that the overall consequence of this might be um
+
+131
+00:18:43,518 --> 00:18:46,422
+Speaker SPEAKER_02: systems more intelligent than us that eventually take control.
+
+132
+00:18:49,946 --> 00:18:50,406
+Speaker SPEAKER_08: Yes, please.
+
+133
+00:18:55,433 --> 00:18:57,155
+Speaker SPEAKER_03: Hi, congratulations on the prize.
+
+134
+00:18:57,215 --> 00:19:05,166
+Speaker SPEAKER_03: My name is Anna-Louise Meigner-Arn and I'm from TV4, a Swedish TV channel.
+
+135
+00:19:05,186 --> 00:19:12,276
+Speaker SPEAKER_03: I would like to know, you developed this Boltzmann machine and
+
+136
+00:19:13,218 --> 00:19:39,359
+Speaker SPEAKER_03: I wonder what type of AI has come out of it, like GPT, or how you see breast cancer in x-rays, or how you make funny
+
+137
+00:19:39,593 --> 00:19:51,865
+Speaker SPEAKER_03: pictures in Dali, what kind of AI do your research, do build on your research?
+
+138
+00:19:51,885 --> 00:19:55,190
+Speaker SPEAKER_02: So there were two different learning algorithms I was involved in.
+
+139
+00:19:55,789 --> 00:20:00,355
+Speaker SPEAKER_02: One was the Boltzmann machine, which was a learning algorithm for Hopfield nets with hidden units.
+
+140
+00:20:01,455 --> 00:20:07,643
+Speaker SPEAKER_02: And we did eventually find a practical version of that, but that's not what's led to the
+
+141
+00:20:07,807 --> 00:20:10,330
+Speaker SPEAKER_02: main progress currently in neural nets.
+
+142
+00:20:10,691 --> 00:20:13,574
+Speaker SPEAKER_02: That's the backpropagation algorithm.
+
+143
+00:20:14,634 --> 00:20:20,701
+Speaker SPEAKER_02: And this is a way to get a neural net to learn anything.
+
+144
+00:20:21,702 --> 00:20:34,355
+Speaker SPEAKER_02: And it's the backpropagation algorithm that's led to the huge surge in AI applications and in the ability to recognize images and understand speech and to deal with natural language.
+
+145
+00:20:35,737 --> 00:20:41,863
+Speaker SPEAKER_02: It's not the Boltzmann machine that did that, it's the backpropagation algorithm.
+
+146
+00:20:41,883 --> 00:20:42,903
+Speaker SPEAKER_09: More questions?
+
+147
+00:20:47,167 --> 00:20:50,891
+Speaker SPEAKER_06: Yeah, one here, please.
+
+148
+00:20:50,911 --> 00:20:52,113
+Speaker SPEAKER_06: Hi, my name is Bill.
+
+149
+00:20:52,452 --> 00:20:54,714
+Speaker SPEAKER_06: I'm from the Swedish paper Nyteknik.
+
+150
+00:20:56,016 --> 00:20:58,519
+Speaker SPEAKER_06: Do you have any favorite AI tool that you use?
+
+151
+00:21:02,481 --> 00:21:05,305
+Speaker SPEAKER_02: I actually use GPT-4 quite a lot.
+
+152
+00:21:05,757 --> 00:21:10,305
+Speaker SPEAKER_02: Whenever I want to know the answer to anything, I just go and ask GPT-4.
+
+153
+00:21:11,165 --> 00:21:21,002
+Speaker SPEAKER_02: I don't totally trust it because it can hallucinate, but on almost everything, it's a not very good expert, and that's very useful.
+
+154
+00:21:25,130 --> 00:21:26,230
+Speaker SPEAKER_09: Okay.
+
+155
+00:21:27,653 --> 00:21:29,135
+Speaker SPEAKER_09: I don't see any more.
+
+156
+00:21:29,576 --> 00:21:31,359
+Speaker SPEAKER_09: Is there one more hand there, please, in the back?
+
+157
+00:21:33,954 --> 00:21:37,659
+Speaker SPEAKER_05: Yes, hello, congratulations, Paul Rees from Al Jazeera English.
+
+158
+00:21:38,760 --> 00:21:43,125
+Speaker SPEAKER_05: Could you just give us a sense of where you were when you got the call, how it affected you?
+
+159
+00:21:43,165 --> 00:21:47,991
+Speaker SPEAKER_05: Is this a day you have in your diary just in case you get that call or is it a bolt from the blue?
+
+160
+00:21:50,255 --> 00:21:51,435
+Speaker SPEAKER_02: It was a bolt from the blue.
+
+161
+00:21:52,076 --> 00:22:00,586
+Speaker SPEAKER_02: I'm in a cheap hotel in California that doesn't have an internet connection and doesn't have a very good phone connection.
+
+162
+00:22:01,765 --> 00:22:06,070
+Speaker SPEAKER_02: I was going to get an MRI scan today, but I think I'll have to cancel that.
+
+163
+00:22:10,738 --> 00:22:11,058
+Speaker SPEAKER_09: Okay.
+
+164
+00:22:11,078 --> 00:22:14,983
+Speaker SPEAKER_09: This seems to be the last question from the press for you, Professor Hinton.
+
+165
+00:22:17,407 --> 00:22:17,929
+Speaker SPEAKER_09: Thank you.
+
+166
+00:22:18,189 --> 00:22:18,569
+Speaker SPEAKER_09: Thank you.
+
+167
+00:22:18,609 --> 00:22:21,134
+Speaker SPEAKER_09: And once again, our warmest congratulations.
+
+168
+00:22:21,193 --> 00:22:27,142
+Speaker SPEAKER_09: We look forward to see you here in Stockholm in December for the Nobel prize ceremony.
+
+169
+00:22:29,224 --> 00:22:29,645
+Speaker SPEAKER_09: Thank you.
+
+170
+00:22:32,106 --> 00:22:32,567
+Speaker SPEAKER_09: Okay.
+
+171
+00:22:35,010 --> 00:22:44,986
+Speaker SPEAKER_09: So let's move on to more questions about the physics prize and the research involved, or if you want to ask the committee members questions about their work.
+
+172
+00:22:45,006 --> 00:22:48,490
+Speaker SPEAKER_09: And again, questions are welcome in either English or Swedish.
+
+173
+00:22:54,378 --> 00:22:54,839
+Speaker SPEAKER_08: Please.
+
+174
+00:22:55,748 --> 00:23:04,204
+Speaker SPEAKER_03: Yes, if these two scientists wouldn't have existed, would we have like GPT then?
+
+175
+00:23:07,030 --> 00:23:09,336
+Speaker SPEAKER_09: Professor Mons, do you want to address that?
+
+176
+00:23:10,160 --> 00:23:15,269
+Speaker SPEAKER_01: That's a very difficult question to answer because it's hard to imagine.
+
+177
+00:23:15,329 --> 00:23:23,866
+Speaker SPEAKER_01: They have contributed, of course, enormously very early in the progress of this technology.
+
+178
+00:23:24,387 --> 00:23:31,762
+Speaker SPEAKER_01: So, in the 80s, these first steps were taken.
+
+179
+00:23:31,742 --> 00:23:50,240
+Speaker SPEAKER_01: Later on, other scientists have built upon these developments, so in a sense it may have been difficult without those groundbreaking first discoveries and inventions.
+
+180
+00:23:50,271 --> 00:24:03,498
+Speaker SPEAKER_04: I'm thinking since John J. Hopfield is not here, I was wondering a little bit about what makes you most, what do you think is the most exciting part of his discoveries?
+
+181
+00:24:04,619 --> 00:24:05,923
+Speaker SPEAKER_09: Professor Ibeck, do you want to address that?
+
+182
+00:24:08,307 --> 00:24:11,232
+Speaker SPEAKER_10: When it comes to his network, he was
+
+183
+00:24:12,682 --> 00:24:28,128
+Speaker SPEAKER_10: Parts of it had been discussed earlier, but he was able to put pieces together to create a network with a clear function and clear principles for how it worked.
+
+184
+00:24:28,148 --> 00:24:31,955
+Speaker SPEAKER_10: And it meant a lot in the field.
+
+185
+00:24:38,837 --> 00:24:40,480
+Speaker SPEAKER_09: One more question here.
+
+186
+00:24:40,500 --> 00:24:40,961
+Speaker SPEAKER_04: Oh, sorry.
+
+187
+00:24:41,061 --> 00:24:41,301
+Speaker SPEAKER_04: Yes.
+
+188
+00:24:41,461 --> 00:24:47,632
+Speaker SPEAKER_04: I also wonder about the worries that Jeffrey Hinton expressed.
+
+189
+00:24:48,192 --> 00:24:51,679
+Speaker SPEAKER_04: What are your worries about this technology?
+
+190
+00:24:53,701 --> 00:24:55,023
+Speaker SPEAKER_09: Professor Mons, you want to address?
+
+191
+00:24:56,371 --> 00:25:14,666
+Speaker SPEAKER_01: Well, these type of worries are expressed a lot and discussed in the scientific community... ...and I think it is very good that they are discussed and it contributes to the knowledge about machine learning in the society.
+
+192
+00:25:14,646 --> 00:25:26,619
+Speaker SPEAKER_01: I think it's important that as many people as possible... learn about the mechanisms of machine learning... so that it's not just in the hands of a few individuals.
+
+193
+00:25:28,721 --> 00:25:37,310
+Speaker SPEAKER_01: So, I think, of course, Professor Hinton is one of many... who express their views on this.
+
+194
+00:25:38,373 --> 00:25:44,298
+Speaker SPEAKER_01: And, yeah, I think that's very good.
+
+195
+00:25:46,067 --> 00:25:59,451
+Speaker SPEAKER_09: Maybe I can add that there are of course many discoveries and inventions over the time that has been potentially possible to misuse, but it's sort of a common responsibility for a society to have regulations to avoid that to happen.
+
+196
+00:25:59,813 --> 00:26:03,839
+Speaker SPEAKER_09: And I think that would apply too when it comes to artificial intelligence.
+
+197
+00:26:11,498 --> 00:26:13,963
+Speaker SPEAKER_09: I think that is it actually.
+
+198
+00:26:14,003 --> 00:26:15,186
+Speaker SPEAKER_09: Time is running out.
+
+199
+00:26:16,349 --> 00:26:20,299
+Speaker SPEAKER_09: Thank you for your interest in participating in this press conference.
+
+200
+00:26:20,319 --> 00:26:24,912
+Speaker SPEAKER_09: We hope to see you again here tomorrow when we will present the Nobel Prize in Chemistry.
+
+201
+00:26:25,614 --> 00:26:26,115
+Speaker SPEAKER_09: Thank you.
+

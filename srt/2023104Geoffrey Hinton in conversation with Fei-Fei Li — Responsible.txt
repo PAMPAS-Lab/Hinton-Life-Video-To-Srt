@@ -1,0 +1,5004 @@
+1
+00:00:03,946 --> 00:00:05,368
+Speaker SPEAKER_01: Well, good afternoon, everyone.
+
+2
+00:00:05,387 --> 00:00:08,711
+Speaker SPEAKER_01: Gotta love the buzz in the room here today.
+
+3
+00:00:08,772 --> 00:00:21,527
+Speaker SPEAKER_01: Welcome to the Mars Discovery District, this wonderful complex, for this very special Radical AI Founders event, co-hosted by the University of Toronto.
+
+4
+00:00:21,547 --> 00:00:26,975
+Speaker SPEAKER_01: My name is Merrick Gertler, and it's my great privilege to serve as president of the University of Toronto.
+
+5
+00:00:27,856 --> 00:00:33,143
+Speaker SPEAKER_01: Before we begin, I want to acknowledge the land on which the University of Toronto operates.
+
+6
+00:00:33,122 --> 00:00:39,759
+Speaker SPEAKER_01: For thousands of years, it has been the traditional land of the Huron-Wendat, the Seneca, and the Mississaugas of the Credit.
+
+7
+00:00:40,661 --> 00:00:50,186
+Speaker SPEAKER_01: Today, this meeting place is still the home to many Indigenous people from across Turtle Island, and we are very grateful to have the opportunity to work and to gather on this land.
+
+8
+00:00:51,600 --> 00:01:11,162
+Speaker SPEAKER_01: Well, I am truly delighted to welcome you all to this discussion between Geoffrey Hinton, University Professor Emeritus at the University of Toronto, known to many as the godfather of deep learning, and Fei-Fei Li, the inaugural Sequoia Professor in Computer Science at Stanford University, where she is co-director of Human-Centered AI Institute.
+
+9
+00:01:12,623 --> 00:01:20,831
+Speaker SPEAKER_01: I want to thank Radical Ventures and the other event partners for joining with U of T to create this rare and special opportunity.
+
+10
+00:01:22,516 --> 00:01:32,887
+Speaker SPEAKER_01: Thanks in large part to the groundbreaking work of Professor Hinton and his colleagues, the University of Toronto has been at the forefront of the academic AI community for decades.
+
+11
+00:01:33,787 --> 00:01:50,025
+Speaker SPEAKER_01: Deep learning is one of the primary breakthroughs propelling the AI boom, and many of its key developments were pioneered by Professor Hinton and his students at U of T. This tradition of excellence, this long tradition, continues into the present.
+
+12
+00:01:50,325 --> 00:02:02,277
+Speaker SPEAKER_01: Our faculty, students, and graduates, together with partners at the Vector Institute and at universities around the world, are advancing machine learning and driving innovation.
+
+13
+00:02:03,269 --> 00:02:13,683
+Speaker SPEAKER_01: Later this fall, our faculty, staff, students and partners will begin moving into phase one of the beautiful new Schwartz-Riesman Innovation Campus just across the street.
+
+14
+00:02:13,704 --> 00:02:20,935
+Speaker SPEAKER_01: You may have noticed a rather striking building at the corner with the official opening planned for early next year.
+
+15
+00:02:20,974 --> 00:02:29,546
+Speaker SPEAKER_01: This facility will accelerate innovation and discovery by creating Canada's largest university-based innovation hub.
+
+16
+00:02:30,860 --> 00:02:48,782
+Speaker SPEAKER_01: Made possible by a generous and visionary gift from Heather Reisman and Jerry Schwartz, the Innovation Campus will be a focal point for AI thought leadership, hosting both the Schwartz-Reisman Institute for Technology and Society, led by Professor Gillian Hadfield, and the Vector Institute.
+
+17
+00:02:50,805 --> 00:02:58,555
+Speaker SPEAKER_01: It's already clear that artificial intelligence and machine learning are driving innovation and value creation across the economy.
+
+18
+00:02:59,361 --> 00:03:06,332
+Speaker SPEAKER_01: They are also transforming research in fields like drug discovery, medical diagnostics, and the search for advanced materials.
+
+19
+00:03:07,936 --> 00:03:14,406
+Speaker SPEAKER_01: Of course, at the same time, there are growing concerns over the role that AI will play in shaping humanity's future.
+
+20
+00:03:15,307 --> 00:03:24,002
+Speaker SPEAKER_01: So today's conversation clearly addresses a timely and important topic, and I am so pleased that you have all joined us on this momentous occasion.
+
+21
+00:03:24,420 --> 00:03:28,765
+Speaker SPEAKER_01: So without further ado, let me now introduce today's moderator, Jordan Jacobs.
+
+22
+00:03:29,986 --> 00:03:38,276
+Speaker SPEAKER_01: Jordan is managing partner and co-founder of Radical Ventures, a leading venture capital firm supporting AI-based ventures here in Toronto and around the world.
+
+23
+00:03:39,356 --> 00:03:48,926
+Speaker SPEAKER_01: Earlier, he co-founded Layer6 AI and served as co-CEO prior to its acquisition by TD Bank Group, which he joined as chief AI officer.
+
+24
+00:03:50,002 --> 00:04:01,580
+Speaker SPEAKER_01: Jordan serves as a director of the Canadian Institute for Advanced Research, and he was among the founders of the Vector Institute, a concept that he dreamed up with Tommy Putnam, Jeff Hinton, Ed Clark, and a few others.
+
+25
+00:04:02,461 --> 00:04:05,825
+Speaker SPEAKER_01: So distinguished guests, please join me in welcoming Jordan Jacobs.
+
+26
+00:04:16,382 --> 00:04:16,601
+Unknown Speaker: Come on up.
+
+27
+00:04:17,677 --> 00:04:18,920
+Speaker SPEAKER_10: Thanks very much, Meric.
+
+28
+00:04:19,060 --> 00:04:23,129
+Speaker SPEAKER_10: I wanted to start by thanking a number of people who have helped to make this possible today.
+
+29
+00:04:24,089 --> 00:04:31,685
+Speaker SPEAKER_10: University of Toronto, Meric, Melanie Wooden, Dean of Arts and Science, and a number of partners that have brought this to fruition.
+
+30
+00:04:31,764 --> 00:04:40,362
+Speaker SPEAKER_10: So this is the first in our annual four-part series of founder AI masterclasses that we run at Radical.
+
+31
+00:04:40,341 --> 00:04:42,163
+Speaker SPEAKER_10: This is the third year we've done it.
+
+32
+00:04:42,223 --> 00:04:44,005
+Speaker SPEAKER_10: Today's the first one of this year.
+
+33
+00:04:44,045 --> 00:04:46,108
+Speaker SPEAKER_10: We do it in person and online.
+
+34
+00:04:46,148 --> 00:04:48,670
+Speaker SPEAKER_10: So we've got thousands of people watching this online.
+
+35
+00:04:48,711 --> 00:04:52,494
+Speaker SPEAKER_10: So if you decide you need to start coughing, maybe head outside.
+
+36
+00:04:54,475 --> 00:04:57,119
+Speaker SPEAKER_10: We do that in partnership with the Vector Institute.
+
+37
+00:04:57,338 --> 00:05:04,846
+Speaker SPEAKER_10: And thank them very much for their participation and support with the Alberta Machine Intelligence Institute in Alberta.
+
+38
+00:05:04,826 --> 00:05:08,091
+Speaker SPEAKER_10: and with Stanford HAI, thanks to Fei-Fei.
+
+39
+00:05:08,492 --> 00:05:11,497
+Speaker SPEAKER_10: So thank you, all of you, for being excellent partners.
+
+40
+00:05:11,817 --> 00:05:13,920
+Speaker SPEAKER_10: We're hoping that this is going to be a really interesting discussion.
+
+41
+00:05:13,939 --> 00:05:21,651
+Speaker SPEAKER_10: This is the first time that Jeff and Fei-Fei, who I like to think of as friends and I get to talk to, but this is the first time they're doing this publicly together.
+
+42
+00:05:21,730 --> 00:05:23,514
+Speaker SPEAKER_10: So it's, I think, going to be a really interesting conversation.
+
+43
+00:05:24,735 --> 00:05:28,641
+Speaker SPEAKER_10: Let me quickly do some deeper
+
+44
+00:05:28,620 --> 00:05:30,843
+Speaker SPEAKER_10: explanations of their background.
+
+45
+00:05:31,685 --> 00:05:34,529
+Speaker SPEAKER_10: Jeff is often called the godfather of artificial intelligence.
+
+46
+00:05:34,771 --> 00:05:35,971
+Speaker SPEAKER_10: He's won the Turing Award.
+
+47
+00:05:36,473 --> 00:05:52,418
+Speaker SPEAKER_10: He is a professor emeritus at the University of Toronto, co-founder of the Vector Institute, also mentored in a lot of the people who have gone on to be leaders in AI globally, including at big companies and many of the top research labs in the world in academia.
+
+48
+00:05:52,398 --> 00:06:03,773
+Speaker SPEAKER_10: So when we say godfather, it really is, there are many kind of children and grandchildren of Jeff who are leading the world in AI, and that all comes back to Toronto.
+
+49
+00:06:05,435 --> 00:06:12,944
+Speaker SPEAKER_10: Fei-Fei is the founding director of the Stanford Institute for Human-Centered AI, a professor at Stanford.
+
+50
+00:06:13,466 --> 00:06:20,514
+Speaker SPEAKER_10: She's an elected member of the National Academy of Engineering in the US, the National Academy of Medicine, and the American Academy of Arts and Science.
+
+51
+00:06:20,495 --> 00:06:28,987
+Speaker SPEAKER_10: During a sabbatical from Stanford in 2017-18, she stepped into her role as a Vice President at Google, as Chief Scientist of AIML at Google Cloud.
+
+52
+00:06:30,329 --> 00:06:37,939
+Speaker SPEAKER_10: There's many, many other things we can say about Feifei, but she also has an amazing number of students who have gone on to be leaders in the field globally.
+
+53
+00:06:38,781 --> 00:06:46,232
+Speaker SPEAKER_10: And really importantly, and so for those of you who haven't heard yet, Feifei has a book coming out in a couple of weeks.
+
+54
+00:06:46,752 --> 00:06:49,016
+Speaker SPEAKER_10: It's coming out on November 7th.
+
+55
+00:06:49,596 --> 00:06:54,286
+Speaker SPEAKER_10: It's called The Worlds I See, Curiosity, Exploration, and Discovery at the Dawn of AI.
+
+56
+00:06:55,026 --> 00:06:55,468
+Speaker SPEAKER_10: I've read it.
+
+57
+00:06:55,649 --> 00:06:56,410
+Speaker SPEAKER_10: It's fantastic.
+
+58
+00:06:57,331 --> 00:06:58,473
+Speaker SPEAKER_10: You should all go out and buy it.
+
+59
+00:06:58,634 --> 00:07:07,149
+Speaker SPEAKER_10: I'll read you the back cover slip that Jeff wrote, because it's much better than what I can say about it.
+
+60
+00:07:07,290 --> 00:07:10,295
+Speaker SPEAKER_10: So here's Jeff's description.
+
+61
+00:07:10,867 --> 00:07:17,213
+Speaker SPEAKER_10: Fei-Fei Lee was the first computer vision researcher to truly understand the power of big data, and her work opened the floodgates for deep learning.
+
+62
+00:07:17,773 --> 00:07:29,144
+Speaker SPEAKER_10: She delivers an urgent, clear-eyed account of the awesome potential and danger of the AI technology that she helped to unleash, and her call for action and collective responsibility is desperately needed at this pivotal moment in history.
+
+63
+00:07:29,764 --> 00:07:34,127
+Speaker SPEAKER_10: So I urge you all to go and pre-order the book and read it as soon as it comes out.
+
+64
+00:07:34,848 --> 00:07:39,473
+Speaker SPEAKER_10: With that, thanks, Fei-Fei and Jeff, for joining us.
+
+65
+00:07:46,675 --> 00:07:56,468
+Speaker SPEAKER_10: Okay, so I think it's not an exaggeration to say that without these two people, the modern age of AI does not exist, certainly not in the way that it's played out.
+
+66
+00:07:56,747 --> 00:08:01,254
+Speaker SPEAKER_10: So let's go back to what I think is the big bang moment, AlexNet, ImageNet.
+
+67
+00:08:01,954 --> 00:08:07,502
+Speaker SPEAKER_10: Maybe Jeff, do you want to take us through from your perspective that moment, which is 11 years ago now?
+
+68
+00:08:07,533 --> 00:08:21,860
+Speaker SPEAKER_12: Okay, so in 2012, two of my very smart graduate students won a competition, a public competition, and showed that deep neural networks could do much better than the existing technology.
+
+69
+00:08:21,879 --> 00:08:26,249
+Speaker SPEAKER_12: Now, this wouldn't have been possible without a big data set that you could train them on.
+
+70
+00:08:26,269 --> 00:08:30,216
+Speaker SPEAKER_12: Up to that point, there hadn't been a big data set of labeled images.
+
+71
+00:08:30,415 --> 00:08:33,583
+Speaker SPEAKER_12: And Fei-Fei was responsible for that data set.
+
+72
+00:08:33,884 --> 00:08:39,902
+Speaker SPEAKER_12: And I'd like to start by asking Fei-Fei whether there were any problems in putting together that data set.
+
+73
+00:08:42,126 --> 00:08:43,288
+Speaker SPEAKER_05: Well, thank you, Jeff.
+
+74
+00:08:43,369 --> 00:08:44,429
+Speaker SPEAKER_05: And thank you, Jordan.
+
+75
+00:08:44,509 --> 00:08:47,094
+Speaker SPEAKER_05: And thank you, University of Toronto, for this.
+
+76
+00:08:47,193 --> 00:08:48,897
+Speaker SPEAKER_05: It's really fun to be here.
+
+77
+00:08:49,397 --> 00:08:52,942
+Speaker SPEAKER_05: So yes, the data set that, Jeff, you're mentioning is called ImageNet.
+
+78
+00:08:53,302 --> 00:09:03,417
+Speaker SPEAKER_05: And I began building it 2007 and spent the next three years, pretty much, with my graduate students building it.
+
+79
+00:09:04,158 --> 00:09:07,342
+Speaker SPEAKER_05: And you asked me, was there a problem building it?
+
+80
+00:09:07,363 --> 00:09:10,868
+Speaker SPEAKER_05: Where do I even begin?
+
+81
+00:09:10,847 --> 00:09:19,097
+Speaker SPEAKER_05: Even at the conception of this project, I was told that it really was a bad idea.
+
+82
+00:09:19,118 --> 00:09:22,501
+Speaker SPEAKER_05: I was a young assistant professor.
+
+83
+00:09:22,642 --> 00:09:27,087
+Speaker SPEAKER_05: I remember it was my first year, actually, as assistant professor at Princeton.
+
+84
+00:09:27,107 --> 00:09:36,619
+Speaker SPEAKER_05: And for example, a very respected mentor of mine in the field, if you know the academic jargon,
+
+85
+00:09:36,599 --> 00:09:50,884
+Speaker SPEAKER_05: these are the people who will be writing my tenure evaluations, actually told me, really out of their good heart, that please don't do this after I told them what this plan is back in 2007.
+
+86
+00:09:50,924 --> 00:09:54,952
+Speaker SPEAKER_12: So that would have been jitendra, right?
+
+87
+00:09:55,614 --> 00:09:59,080
+Speaker SPEAKER_05: The advice was that
+
+88
+00:10:00,258 --> 00:10:03,821
+Speaker SPEAKER_05: you might have trouble getting tenure if you do this.
+
+89
+00:10:04,881 --> 00:10:17,754
+Speaker SPEAKER_05: And then I also try to invite other collaborators and nobody in machine learning or AI wanted to even go close to this project.
+
+90
+00:10:18,534 --> 00:10:20,135
+Speaker SPEAKER_05: And of course, no funding.
+
+91
+00:10:20,937 --> 00:10:24,159
+Speaker SPEAKER_10: Right.
+
+92
+00:10:24,179 --> 00:10:27,682
+Speaker SPEAKER_10: Describe ImageNet to us for the people who are not familiar with what it was.
+
+93
+00:10:27,966 --> 00:10:38,580
+Speaker SPEAKER_05: Yeah, so ImageNet was conceived around 2006, 2007, and the reason I conceived ImageNet was actually twofold.
+
+94
+00:10:38,980 --> 00:10:46,090
+Speaker SPEAKER_05: One is that, and Jeff, I think we share similar background, I was trained as a scientist.
+
+95
+00:10:46,169 --> 00:10:49,573
+Speaker SPEAKER_05: To me, doing science is chasing after North Stars.
+
+96
+00:10:50,075 --> 00:10:56,302
+Speaker SPEAKER_05: And in the field of AI, especially visual intelligence, for me, object recognition, the ability
+
+97
+00:10:56,283 --> 00:11:06,054
+Speaker SPEAKER_05: for computers to recognize there's a table in the picture or there's a chair is called object recognition has to be a North Star problem in our field.
+
+98
+00:11:06,535 --> 00:11:11,062
+Speaker SPEAKER_05: And I feel that we need to really put a dent in this problem.
+
+99
+00:11:11,381 --> 00:11:13,524
+Speaker SPEAKER_05: So I want to define that North Star problem.
+
+100
+00:11:13,684 --> 00:11:16,269
+Speaker SPEAKER_05: That was one aspect of ImageNet.
+
+101
+00:11:16,288 --> 00:11:25,259
+Speaker SPEAKER_05: Second aspect of ImageNet was recognizing that machine learning was really going in circles a little bit at that time that we were making really
+
+102
+00:11:25,746 --> 00:11:31,315
+Speaker SPEAKER_05: intricate models without the kind of data to drive the machine learning.
+
+103
+00:11:31,355 --> 00:11:36,120
+Speaker SPEAKER_05: Of course, in our jargon, it's really the generalization problem, right?
+
+104
+00:11:36,140 --> 00:11:45,394
+Speaker SPEAKER_05: And I recognize that we really need to hit a reset and rethink about machine learning from a data-driven point of view.
+
+105
+00:11:45,433 --> 00:11:51,601
+Speaker SPEAKER_05: So I wanted to go crazy and make a data set that no one has ever seen in terms of its
+
+106
+00:11:52,054 --> 00:11:55,821
+Speaker SPEAKER_05: quantity and diversity and everything.
+
+107
+00:11:55,941 --> 00:12:13,505
+Speaker SPEAKER_05: So ImageNet, after three years, was a curated data set of internet images that's totaled 15 million images across 22,000 concepts, object category concepts.
+
+108
+00:12:13,966 --> 00:12:16,610
+Speaker SPEAKER_05: And that was the data set.
+
+109
+00:12:17,350 --> 00:12:28,163
+Speaker SPEAKER_12: Just for comparison, at the same time in Toronto, we were making a data set called CIFAR-10 that had 10 different classes and 60,000 images, and it was a lot of work.
+
+110
+00:12:28,903 --> 00:12:33,308
+Speaker SPEAKER_12: It was generously paid for by CIFAR at five cents an image.
+
+111
+00:12:35,370 --> 00:12:38,355
+Speaker SPEAKER_10: And so you turned the data set into a competition.
+
+112
+00:12:38,956 --> 00:12:44,201
+Speaker SPEAKER_10: Just walk us through a little bit of what that meant, and then we'll kind of fast forward to 2012.
+
+113
+00:12:44,467 --> 00:12:44,768
+Speaker SPEAKER_05: Right.
+
+114
+00:12:45,668 --> 00:12:47,812
+Speaker SPEAKER_05: So we made the data set in 2009.
+
+115
+00:12:48,972 --> 00:12:56,642
+Speaker SPEAKER_05: We barely made it into a poster in an academic conference, and no one paid attention.
+
+116
+00:12:57,142 --> 00:12:59,184
+Speaker SPEAKER_05: So I was a little desperate at that time.
+
+117
+00:12:59,946 --> 00:13:04,890
+Speaker SPEAKER_05: And I believe this is the way to go, and we open sourced it.
+
+118
+00:13:05,351 --> 00:13:07,354
+Speaker SPEAKER_05: But even with open source,
+
+119
+00:13:08,683 --> 00:13:11,707
+Speaker SPEAKER_05: it wasn't really picking up.
+
+120
+00:13:11,727 --> 00:13:18,755
+Speaker SPEAKER_05: So my students and I thought, well, let's get a little more drive up the competition.
+
+121
+00:13:18,775 --> 00:13:27,866
+Speaker SPEAKER_05: Let's create a competition to invite the worldwide research community to participate in this problem of object recognition through ImageNet.
+
+122
+00:13:27,886 --> 00:13:36,716
+Speaker SPEAKER_05: So we made an ImageNet competition, and the first feedback we got from our friends and colleagues is it's too big.
+
+123
+00:13:37,000 --> 00:13:44,105
+Speaker SPEAKER_05: And at that time you can not fit it into a hard drive, let alone memory.
+
+124
+00:13:44,667 --> 00:13:57,899
+Speaker SPEAKER_05: So we actually created a smaller data set called the image that challenge data set, which is only 1 million images across 1000 categories instead of 22,000 category.
+
+125
+00:13:58,278 --> 00:14:03,003
+Speaker SPEAKER_05: And that was unleashed in 2010, I think.
+
+126
+00:14:03,504 --> 00:14:07,006
+Speaker SPEAKER_05: You guys noticed it in 2011, right?
+
+127
+00:14:06,986 --> 00:14:14,620
+Speaker SPEAKER_12: And so in my lab, we already had deep neural networks working quite well for speech recognition.
+
+128
+00:14:15,702 --> 00:14:21,552
+Speaker SPEAKER_12: And then Ilya Sutskever said, what we've got really ought to be able to win the ImageNet competition.
+
+129
+00:14:22,124 --> 00:14:25,530
+Speaker SPEAKER_12: And he tried to convince me that we should do that.
+
+130
+00:14:25,591 --> 00:14:27,635
+Speaker SPEAKER_12: And I said, well, you know, it's an awful lot of data.
+
+131
+00:14:28,317 --> 00:14:35,251
+Speaker SPEAKER_12: And he tried to convince his friend, Alex Krzyzewski, and Alex wasn't really interested.
+
+132
+00:14:36,313 --> 00:14:40,503
+Speaker SPEAKER_12: So Ilya actually pre-processed all the data to put it in just the form Alex needed.
+
+133
+00:14:40,523 --> 00:14:42,748
+Speaker SPEAKER_05: You shrunk the size of the images.
+
+134
+00:14:42,727 --> 00:14:44,450
+Speaker SPEAKER_12: Yes, he shrunk the images a bit.
+
+135
+00:14:45,091 --> 00:14:46,072
+Speaker SPEAKER_05: Yeah, I remember.
+
+136
+00:14:46,153 --> 00:14:50,259
+Speaker SPEAKER_12: And got it pre-processed just right for Alex, and then Alex eventually agreed to do it.
+
+137
+00:14:51,039 --> 00:15:03,037
+Speaker SPEAKER_12: Meanwhile, in Yann LeCun's lab in New York, Yann was desperately trying to get his students and postdocs to work on this data set, because he said, the first person to apply convolutional nets to this data set is going to win.
+
+138
+00:15:03,096 --> 00:15:05,399
+Speaker SPEAKER_12: And none of his students were interested.
+
+139
+00:15:05,419 --> 00:15:06,721
+Speaker SPEAKER_12: They were all busy doing other things.
+
+140
+00:15:07,543 --> 00:15:10,827
+Speaker SPEAKER_12: And so Alex and India got on with it.
+
+141
+00:15:11,634 --> 00:15:21,091
+Speaker SPEAKER_12: We discovered by running on the previous year's competition that we were doing much better than the other techniques, and so we knew we were going to win the 2012 competition.
+
+142
+00:15:22,014 --> 00:15:32,513
+Speaker SPEAKER_12: And then there was this political problem, which is we thought if we showed that neural networks win this competition, the computer vision people
+
+143
+00:15:32,594 --> 00:15:38,679
+Speaker SPEAKER_12: Jitendra in particular, will say, well, that just shows it's not a very good dataset.
+
+144
+00:15:40,162 --> 00:15:45,427
+Speaker SPEAKER_12: So we had to get them to agree ahead of time that if we won the competition, we'd have proved that neural networks worked.
+
+145
+00:15:45,888 --> 00:15:59,461
+Speaker SPEAKER_12: So I actually called up Jitendra, and we talked about datasets we might run on, and my objective was to get Jitendra to agree that if we could do ImageNet, then neural nets really worked.
+
+146
+00:15:59,442 --> 00:16:09,030
+Speaker SPEAKER_12: and after some discussion and him telling me to do other datasets, we eventually agreed, okay, if we could do ImageNet, then we'd have shown neural nets work.
+
+147
+00:16:09,051 --> 00:16:15,037
+Speaker SPEAKER_12: Jitendra remembers it as he suggested ImageNet, and he was the one who told us to do it, but it was actually a bit the other way around.
+
+148
+00:16:15,057 --> 00:16:20,201
+Speaker SPEAKER_12: And we did it, and it was amazing.
+
+149
+00:16:20,322 --> 00:16:27,187
+Speaker SPEAKER_12: We got just over half the error rate of the standard techniques, and the standard techniques had been tuned for many years by very good researchers,
+
+150
+00:16:27,623 --> 00:16:34,618
+Speaker SPEAKER_05: I remember standard technique at that time, the previous year is support vector machine with sparsification.
+
+151
+00:16:36,000 --> 00:16:46,121
+Speaker SPEAKER_05: So you guys submitted your competition results, I think it was late August or early September.
+
+152
+00:16:46,337 --> 00:16:57,817
+Speaker SPEAKER_05: And I remember either getting a phone call or getting an email late one evening from my students who was running this, because we hold the test data.
+
+153
+00:16:58,337 --> 00:17:00,261
+Speaker SPEAKER_05: We were running on the server side.
+
+154
+00:17:00,822 --> 00:17:07,653
+Speaker SPEAKER_05: The goal is that we have to process all the entries so that we select the winners, and then by
+
+155
+00:17:08,241 --> 00:17:23,044
+Speaker SPEAKER_05: I think it was beginning of October that year that Computer Vision Fields International Conference, ICCV 2012, was happening in Florence, Italy.
+
+156
+00:17:23,505 --> 00:17:27,330
+Speaker SPEAKER_05: We already booked a workshop, annual workshop at the conference.
+
+157
+00:17:27,671 --> 00:17:30,115
+Speaker SPEAKER_05: We will be announcing the winner.
+
+158
+00:17:30,095 --> 00:17:37,723
+Speaker SPEAKER_05: It's the third year, so a couple of weeks before we have to process the winning, the teams.
+
+159
+00:17:38,404 --> 00:17:44,192
+Speaker SPEAKER_05: Because it was the third year, and frankly, the previous two years' results didn't excite me.
+
+160
+00:17:44,972 --> 00:17:50,700
+Speaker SPEAKER_05: And I was a nursing mother at that time, so I decided not to go to the third year.
+
+161
+00:17:50,720 --> 00:17:52,382
+Speaker SPEAKER_05: So I didn't book any tickets.
+
+162
+00:17:53,021 --> 00:17:55,224
+Speaker SPEAKER_05: I'm just like, too far for me.
+
+163
+00:17:55,744 --> 00:17:57,412
+Speaker SPEAKER_05: And then the results came in.
+
+164
+00:17:57,451 --> 00:18:02,311
+Speaker SPEAKER_05: That evening phone call or email, I really don't remember, came in.
+
+165
+00:18:02,352 --> 00:18:04,741
+Speaker SPEAKER_05: And I remember...
+
+166
+00:18:05,178 --> 00:18:10,684
+Speaker SPEAKER_05: I remember saying to myself, darn it, Jeff, now I have to get a ticket to Italy.
+
+167
+00:18:11,205 --> 00:18:23,001
+Speaker SPEAKER_05: Because I knew that was a very significant moment, especially with a convolutional neural network, which I learned as a graduate student as a classic algorithm.
+
+168
+00:18:23,021 --> 00:18:27,928
+Speaker SPEAKER_05: And of course, by that time, there was only middle seats in economy class.
+
+169
+00:18:27,907 --> 00:18:34,978
+Speaker SPEAKER_05: flying from San Francisco to Florence with a one-stop layover.
+
+170
+00:18:34,998 --> 00:18:43,530
+Speaker SPEAKER_05: So it was a grueling trip to go to Florence, but I wanted to be there.
+
+171
+00:18:43,790 --> 00:18:44,692
+Speaker SPEAKER_05: But you didn't come.
+
+172
+00:18:45,472 --> 00:18:49,799
+Speaker SPEAKER_12: No, I didn't.
+
+173
+00:18:49,819 --> 00:18:52,784
+Speaker SPEAKER_12: Well, it was a grueling trip.
+
+174
+00:18:52,804 --> 00:18:55,688
+Speaker SPEAKER_05: But did you know that would be a historical moment?
+
+175
+00:18:55,836 --> 00:18:59,044
+Speaker SPEAKER_12: Yes, I did, actually.
+
+176
+00:18:59,605 --> 00:19:00,826
+Speaker SPEAKER_05: But you sent Alex.
+
+177
+00:19:01,008 --> 00:19:02,029
+Speaker SPEAKER_12: Alex, yes.
+
+178
+00:19:02,711 --> 00:19:04,394
+Speaker SPEAKER_12: Who ignored all your advice, right?
+
+179
+00:19:04,515 --> 00:19:09,605
+Speaker SPEAKER_05: Who ignored my email for multiple times because I was like, Alex, this is so cool.
+
+180
+00:19:09,625 --> 00:19:12,832
+Speaker SPEAKER_05: Please do this visualization, this visualization.
+
+181
+00:19:13,292 --> 00:19:13,953
+Speaker SPEAKER_05: He ignored me.
+
+182
+00:19:14,394 --> 00:19:16,680
+Speaker SPEAKER_05: But Yann LeCun came.
+
+183
+00:19:16,660 --> 00:19:24,369
+Speaker SPEAKER_05: And it was because for those of you who have attended these academic conference workshops tend to book these smaller rooms.
+
+184
+00:19:24,891 --> 00:19:29,477
+Speaker SPEAKER_05: We booked a very small room, probably just the middle section here.
+
+185
+00:19:29,958 --> 00:19:35,545
+Speaker SPEAKER_05: And I remember Yang had to stand in the back of the room because it was really packed.
+
+186
+00:19:36,365 --> 00:19:42,213
+Speaker SPEAKER_05: And Alex eventually showed up because I was really nervous that he wasn't even going to show up.
+
+187
+00:19:42,775 --> 00:19:45,417
+Speaker SPEAKER_05: But as you predicted,
+
+188
+00:19:45,397 --> 00:19:48,821
+Speaker SPEAKER_05: At that workshop, ImageNow was being attacked.
+
+189
+00:19:50,484 --> 00:19:57,433
+Speaker SPEAKER_05: At that workshop, there were people vocally attacking, this is a bad dataset.
+
+190
+00:19:58,375 --> 00:19:58,935
+Speaker SPEAKER_12: In the room.
+
+191
+00:19:59,355 --> 00:19:59,916
+Speaker SPEAKER_12: In the room.
+
+192
+00:19:59,936 --> 00:20:00,837
+Speaker SPEAKER_12: During the presentation.
+
+193
+00:20:00,917 --> 00:20:01,218
+Speaker SPEAKER_05: In the room.
+
+194
+00:20:01,278 --> 00:20:04,722
+Speaker SPEAKER_12: But not Jitendra, because Jitendra had already agreed that it counted.
+
+195
+00:20:05,902 --> 00:20:08,505
+Speaker SPEAKER_05: I don't think Jitendra was in the room, I don't remember.
+
+196
+00:20:09,026 --> 00:20:23,664
+Speaker SPEAKER_05: But I remember it was such a strange moment for me because as a machine learning researcher, I knew history was in the making, yet ImageNet was being attacked.
+
+197
+00:20:23,704 --> 00:20:28,330
+Speaker SPEAKER_05: It was just a very strange, it was exciting moment.
+
+198
+00:20:28,592 --> 00:20:33,478
+Speaker SPEAKER_05: And then I had to hop in the middle seat and get back to San Francisco because then the next morning,
+
+199
+00:20:33,593 --> 00:20:37,278
+Speaker SPEAKER_10: So you've mentioned a few people that I want to come back to later.
+
+200
+00:20:37,318 --> 00:20:45,874
+Speaker SPEAKER_10: So Ilya, who's founder and chief scientist at OpenAI, and Yann LeCun, who subsequently went on to be head of AI at Facebook, now Meta.
+
+201
+00:20:46,674 --> 00:20:50,201
+Speaker SPEAKER_10: And there's a number of other interesting people in the mix.
+
+202
+00:20:51,041 --> 00:20:58,555
+Speaker SPEAKER_10: But before we go forward and kind of see what that boom moment created, let's just go back for a little bit.
+
+203
+00:20:59,277 --> 00:21:07,730
+Speaker SPEAKER_10: Both of you started in this with a very specific goal in mind that is individual and, I think, iconoclastic.
+
+204
+00:21:07,851 --> 00:21:13,119
+Speaker SPEAKER_10: And you had to persevere through the moments that you just described, but throughout your careers.
+
+205
+00:21:13,461 --> 00:21:15,063
+Speaker SPEAKER_10: Can you just go back, Jeff, maybe, and start?
+
+206
+00:21:15,503 --> 00:21:18,990
+Speaker SPEAKER_10: Give us a background to why did you want to get into AI in the first place?
+
+207
+00:21:20,236 --> 00:21:23,182
+Speaker SPEAKER_12: I did psychology as an undergraduate.
+
+208
+00:21:23,763 --> 00:21:24,786
+Speaker SPEAKER_12: I didn't do very well at it.
+
+209
+00:21:25,807 --> 00:21:31,299
+Speaker SPEAKER_12: And I decided they were never going to figure out how the mind worked unless they figured out how the brain worked.
+
+210
+00:21:32,461 --> 00:21:35,628
+Speaker SPEAKER_12: And so I wanted to figure out how the brain worked.
+
+211
+00:21:35,608 --> 00:21:38,972
+Speaker SPEAKER_12: and I wanted to have an actual model that worked.
+
+212
+00:21:38,992 --> 00:21:42,056
+Speaker SPEAKER_12: So you can think of understanding the brain as building a bridge.
+
+213
+00:21:42,115 --> 00:21:54,250
+Speaker SPEAKER_12: There's experimental data and things you can learn from experimental data, and there's things that will do the computations you want, things that will recognize objects, and they were very different.
+
+214
+00:21:55,310 --> 00:22:03,759
+Speaker SPEAKER_12: And I think of it as you want to build this bridge between the data and the competence, the ability to do the task,
+
+215
+00:22:03,824 --> 00:22:12,253
+Speaker SPEAKER_12: And I always saw myself as starting at the end of things that work, but trying to make them more and more like the brain, but still work.
+
+216
+00:22:12,273 --> 00:22:21,144
+Speaker SPEAKER_12: Other people tried to stay with things justified by empirical data and try and have theories that might work.
+
+217
+00:22:22,164 --> 00:22:23,507
+Speaker SPEAKER_12: But we're trying to build that bridge.
+
+218
+00:22:23,787 --> 00:22:25,608
+Speaker SPEAKER_12: And not many people were trying to build a bridge.
+
+219
+00:22:25,650 --> 00:22:30,355
+Speaker SPEAKER_12: Terry Sanofsky was trying to build a bridge from the other end, and so we got along very well.
+
+220
+00:22:30,942 --> 00:22:35,433
+Speaker SPEAKER_12: A lot of people trying to do computer vision just wanted something that worked.
+
+221
+00:22:35,453 --> 00:22:37,298
+Speaker SPEAKER_12: They didn't care about the brain.
+
+222
+00:22:37,318 --> 00:22:45,541
+Speaker SPEAKER_12: And a lot of people who care about the brain wanted to understand how neurons work and so on, but didn't want to think much about the nature of the computations.
+
+223
+00:22:46,078 --> 00:22:55,107
+Speaker SPEAKER_12: And I still see it as we have to build this bridge by getting people who know about the data and people who know about what works to connect.
+
+224
+00:22:56,869 --> 00:23:04,116
+Speaker SPEAKER_12: So my aim was always to make things that could do vision, but do vision in the way that people do it.
+
+225
+00:23:05,397 --> 00:23:11,023
+Speaker SPEAKER_10: Okay, so we're going to come back to that because I want to ask you about the most recent developments and how you think that they relate to the brain.
+
+226
+00:23:11,865 --> 00:23:14,247
+Speaker SPEAKER_10: Feifei, you and so Jeff, just to
+
+227
+00:23:14,917 --> 00:23:16,900
+Speaker SPEAKER_10: it kind of put a framework on where you started.
+
+228
+00:23:17,641 --> 00:23:22,406
+Speaker SPEAKER_10: UK to the US to Canada by mid to late 80, you come to Canada in 87.
+
+229
+00:23:22,446 --> 00:23:32,559
+Speaker SPEAKER_10: Along that route, funding and interest in neural nets and the way the approaches that you're taking kind of goes like this, but I'd say mostly like this.
+
+230
+00:23:34,082 --> 00:23:34,522
+Speaker SPEAKER_10: Up and down.
+
+231
+00:23:36,484 --> 00:23:39,568
+Speaker SPEAKER_10: Fei-Fei, you started your life in a very different place.
+
+232
+00:23:40,309 --> 00:23:42,833
+Speaker SPEAKER_10: Can you walk us through a little bit of how you came to AI?
+
+233
+00:23:43,623 --> 00:24:07,133
+Speaker SPEAKER_05: Yeah, so I started my life in China, and when I was 15-year-old, my parents and I came to Persepolis, New Jersey, so I became a new immigrant, and where I started was first English and second language classes, because I didn't speak the language, and just working in, you know,
+
+234
+00:24:07,113 --> 00:24:10,597
+Speaker SPEAKER_05: laundries and restaurants and so on.
+
+235
+00:24:11,157 --> 00:24:14,281
+Speaker SPEAKER_05: But I had a passion for physics.
+
+236
+00:24:14,702 --> 00:24:16,625
+Speaker SPEAKER_05: I don't know how it got into my head.
+
+237
+00:24:17,405 --> 00:24:23,193
+Speaker SPEAKER_05: And I wanted to go to Princeton because all I know was Einstein was there.
+
+238
+00:24:24,174 --> 00:24:26,298
+Speaker SPEAKER_05: And I got into Princeton.
+
+239
+00:24:26,317 --> 00:24:29,442
+Speaker SPEAKER_05: He wasn't there by the time I got into Princeton.
+
+240
+00:24:29,422 --> 00:24:32,125
+Speaker SPEAKER_05: You're not that old.
+
+241
+00:24:32,365 --> 00:24:33,807
+Speaker SPEAKER_05: But there was a statue of him.
+
+242
+00:24:34,468 --> 00:24:46,561
+Speaker SPEAKER_05: And the one thing I learned in physics, beyond all the math and all that, is really the audacity to ask the craziest questions.
+
+243
+00:24:47,142 --> 00:24:57,453
+Speaker SPEAKER_05: Like the smallest particles of the atom world, or the boundary of space, time, and beginning of universe,
+
+244
+00:24:57,433 --> 00:25:07,154
+Speaker SPEAKER_05: And along the way, I discover Bring as a third year Roger Penrose and those books.
+
+245
+00:25:08,857 --> 00:25:12,605
+Speaker SPEAKER_05: Yeah, you might have opinions, but at least I've read those books.
+
+246
+00:25:13,788 --> 00:25:15,392
+Speaker SPEAKER_12: It was probably better you didn't.
+
+247
+00:25:18,140 --> 00:25:21,624
+Speaker SPEAKER_05: Well, he at least got me interested in brain.
+
+248
+00:25:21,644 --> 00:25:29,775
+Speaker SPEAKER_05: And by the time I was graduating, I wanted to ask the most audacious question as a scientist.
+
+249
+00:25:30,194 --> 00:25:38,645
+Speaker SPEAKER_05: And to me, the absolute most fascinating, audacious question of my generation, that was 2000, was intelligence.
+
+250
+00:25:38,625 --> 00:25:48,684
+Speaker SPEAKER_05: So I went to Caltech to get pretty much a dual PhD in neuroscience with Christoph Koch and in AI with Pietro Parona.
+
+251
+00:25:49,046 --> 00:25:53,934
+Speaker SPEAKER_05: So I so echo, Jeff, what you said about Bridge because
+
+252
+00:25:53,914 --> 00:26:13,508
+Speaker SPEAKER_05: Because that five years allowed me to work on computational neuroscience and look at how the mind works, as well as to work on the computational side and try to build that computer program that can mimic the human brain.
+
+253
+00:26:13,567 --> 00:26:15,131
+Speaker SPEAKER_05: So that's my journey.
+
+254
+00:26:15,391 --> 00:26:16,393
+Speaker SPEAKER_05: It starts from physics.
+
+255
+00:26:16,713 --> 00:26:19,939
+Speaker SPEAKER_10: OK, so your journeys intersect at ImageNet 2012.
+
+256
+00:26:20,019 --> 00:26:22,826
+Speaker SPEAKER_05: By the way, I met Jeff when I was a graduate student.
+
+257
+00:26:22,846 --> 00:26:23,488
+Speaker SPEAKER_12: Right, I remember.
+
+258
+00:26:23,508 --> 00:26:25,112
+Speaker SPEAKER_12: I used to go visit Pietro's lab.
+
+259
+00:26:25,231 --> 00:26:26,114
+Speaker SPEAKER_05: Yeah.
+
+260
+00:26:26,134 --> 00:26:29,221
+Speaker SPEAKER_12: In fact, he actually offered me a job at Caltech when I was 70.
+
+261
+00:26:31,086 --> 00:26:32,368
+Speaker SPEAKER_05: You would have been my advisor.
+
+262
+00:26:33,050 --> 00:26:34,914
+Speaker SPEAKER_12: No, not when I was 70.
+
+263
+00:26:38,644 --> 00:26:38,703
+Unknown Speaker: OK.
+
+264
+00:26:39,140 --> 00:26:41,563
+Speaker SPEAKER_10: OK, so we intersected at ImageNet.
+
+265
+00:26:41,583 --> 00:26:46,068
+Speaker SPEAKER_10: For those in the field, everyone knows that ImageNet is this Bing Bang moment.
+
+266
+00:26:46,548 --> 00:26:57,022
+Speaker SPEAKER_10: And subsequent to that, first the big tech companies come in and basically start buying up your students and you, and to get them into the companies.
+
+267
+00:26:57,042 --> 00:26:59,826
+Speaker SPEAKER_10: I think they were the first ones to realize the potential of this.
+
+268
+00:27:01,127 --> 00:27:02,549
+Speaker SPEAKER_10: I would like to talk about that for a moment.
+
+269
+00:27:02,789 --> 00:27:05,973
+Speaker SPEAKER_10: But kind of fast forwarding, I think
+
+270
+00:27:05,953 --> 00:27:12,721
+Speaker SPEAKER_10: It's only now, since ChatGPT, that the rest of the world is catching up to the power of AI, because finally you can play with it.
+
+271
+00:27:12,741 --> 00:27:16,205
+Speaker SPEAKER_10: You can experience it in the boardroom, they can talk about it, and then go home.
+
+272
+00:27:16,267 --> 00:27:22,835
+Speaker SPEAKER_10: And then the 10-year-old kid has just written a dinosaur essay for fifth grade with ChatGPT.
+
+273
+00:27:22,855 --> 00:27:27,921
+Speaker SPEAKER_10: So that kind of transcending experience of everyone being able to play with it, I think, has been a huge shift.
+
+274
+00:27:27,941 --> 00:27:31,404
+Speaker SPEAKER_10: But in the period in between, which is 10 years,
+
+275
+00:27:31,974 --> 00:27:40,926
+Speaker SPEAKER_10: there is kind of this explosive growth of AI inside the big tech companies, and everyone else is not really noticing what's going on.
+
+276
+00:27:41,468 --> 00:27:47,817
+Speaker SPEAKER_10: Can you just talk us through your own experience, because you experienced it kind of a ground zero post ImageNet.
+
+277
+00:27:49,578 --> 00:27:57,269
+Speaker SPEAKER_12: It's difficult for us to get into the frame of everybody else not realizing what was going on, because we realized what was going on.
+
+278
+00:27:58,570 --> 00:27:59,231
+Speaker SPEAKER_12: So,
+
+279
+00:28:00,258 --> 00:28:06,284
+Speaker SPEAKER_12: a lot of the universities you'd have thought would be right at the forefront were very slow in picking up on it.
+
+280
+00:28:06,364 --> 00:28:08,767
+Speaker SPEAKER_12: So MIT, for example, and Berkeley.
+
+281
+00:28:09,207 --> 00:28:19,017
+Speaker SPEAKER_12: I remember going to a talk in Berkeley in, I think, 2013, when already AI was being very successful in computer vision.
+
+282
+00:28:19,657 --> 00:28:25,542
+Speaker SPEAKER_12: And afterwards, a graduate student came up to me, and he said, I've been here like four years, and this is the first talk I've heard about neural networks.
+
+283
+00:28:25,563 --> 00:28:26,403
+Speaker SPEAKER_12: They're really interesting.
+
+284
+00:28:27,204 --> 00:28:29,067
+Speaker SPEAKER_05: Well, he should have gone to Stanford.
+
+285
+00:28:29,366 --> 00:28:32,392
+Speaker SPEAKER_12: Probably, probably.
+
+286
+00:28:33,192 --> 00:28:34,694
+Speaker SPEAKER_12: But the same with MIT.
+
+287
+00:28:34,976 --> 00:28:45,932
+Speaker SPEAKER_12: They were rigidly against having neural nets, and the ImageNet moment started to wear them down, and now they're big proponents of neural nets.
+
+288
+00:28:46,433 --> 00:28:55,729
+Speaker SPEAKER_12: But it's hard to imagine now, but around 2010 or 2011, there was the computer vision people
+
+289
+00:28:56,468 --> 00:29:00,011
+Speaker SPEAKER_12: very good computer vision people, were really adamantly against neural nets.
+
+290
+00:29:00,471 --> 00:29:07,200
+Speaker SPEAKER_12: They were so against it that, for example, one of the main journals, the IEEE Pattern Recognition... PAMI.
+
+291
+00:29:07,579 --> 00:29:13,066
+Speaker SPEAKER_12: PAMI, had a policy not to referee papers on neural nets at one point.
+
+292
+00:29:13,366 --> 00:29:13,946
+Speaker SPEAKER_12: Just send them back.
+
+293
+00:29:13,967 --> 00:29:14,528
+Speaker SPEAKER_12: Don't referee them.
+
+294
+00:29:14,548 --> 00:29:15,148
+Speaker SPEAKER_12: It's a waste of time.
+
+295
+00:29:15,169 --> 00:29:16,911
+Speaker SPEAKER_12: It shouldn't be in PAMI.
+
+296
+00:29:17,912 --> 00:29:22,797
+Speaker SPEAKER_12: And Yann LeCun sent a paper to a conference where he had a neural net
+
+297
+00:29:22,861 --> 00:29:30,229
+Speaker SPEAKER_12: that was better at identifying, at doing segmentation of pedestrians than the state-of-the-art, and it was rejected.
+
+298
+00:29:30,910 --> 00:29:50,251
+Speaker SPEAKER_12: And one of the reasons it was rejected was one of the referees said, this tells us nothing about vision, because they had this view of how computer vision works, which is you study the nature of the problem of vision, you formulate an algorithm that will solve it, you figure out how to implement that algorithm, and then you publish a paper.
+
+299
+00:29:50,484 --> 00:29:54,532
+Speaker SPEAKER_05: I have to defend my field, not everybody.
+
+300
+00:29:55,233 --> 00:30:00,403
+Speaker SPEAKER_12: So there are people who are... But most of them were adamantly against neural nets.
+
+301
+00:30:00,865 --> 00:30:07,718
+Speaker SPEAKER_12: And then something remarkable happened after the ImageNet competition, which is they all changed within about a year.
+
+302
+00:30:07,698 --> 00:30:14,007
+Speaker SPEAKER_12: All the people who have been the biggest critics of neural nets started doing neural nets, much to our chagrin.
+
+303
+00:30:14,027 --> 00:30:15,108
+Speaker SPEAKER_12: Some of them did it better than us.
+
+304
+00:30:16,730 --> 00:30:20,797
+Speaker SPEAKER_12: So Zisserman in Oxford, for example, made a better neural net very quickly.
+
+305
+00:30:22,359 --> 00:30:26,986
+Speaker SPEAKER_12: But they behaved like scientists ought to behave, which is they had this strong belief this stuff was rubbish.
+
+306
+00:30:27,666 --> 00:30:32,253
+Speaker SPEAKER_12: Because of ImageNet, we could eventually show that it wasn't, and then they changed.
+
+307
+00:30:32,233 --> 00:30:34,217
+Speaker SPEAKER_12: So that was very comforting.
+
+308
+00:30:34,237 --> 00:30:42,728
+Speaker SPEAKER_10: And just to carry it forward, so what you're trying to show, you're trying to label using the neural nets these 15 million images accurately.
+
+309
+00:30:43,249 --> 00:30:46,292
+Speaker SPEAKER_10: You've got them all labeled in the background so you can measure it.
+
+310
+00:30:47,114 --> 00:30:51,839
+Speaker SPEAKER_10: The error rate when you did it dropped from 26% the year before, I think, to 16% or so?
+
+311
+00:30:52,300 --> 00:30:52,942
+Speaker SPEAKER_12: I think it was 15.3.
+
+312
+00:30:53,041 --> 00:30:53,162
+Speaker SPEAKER_12: OK.
+
+313
+00:30:55,003 --> 00:30:56,767
+Speaker SPEAKER_10: And then it subsequently keeps dropping.
+
+314
+00:30:56,787 --> 00:30:57,667
+Speaker SPEAKER_12: 15.32.
+
+315
+00:30:59,098 --> 00:31:02,124
+Speaker SPEAKER_12: Which randomization?
+
+316
+00:31:02,144 --> 00:31:04,626
+Speaker SPEAKER_10: Jeff doesn't forget things.
+
+317
+00:31:05,729 --> 00:31:11,778
+Speaker SPEAKER_10: And then subsequent years, people are using more powerful neural nets, and it continues to drop to the point where it surpasses.
+
+318
+00:31:11,798 --> 00:31:19,589
+Speaker SPEAKER_05: 2015, so there is a very smart Canadian undergrad who joined my lab.
+
+319
+00:31:19,630 --> 00:31:21,192
+Speaker SPEAKER_05: His name is Andrej Kapathy.
+
+320
+00:31:22,074 --> 00:31:28,363
+Speaker SPEAKER_05: And he got bored one summer and said, I want to measure how humans do.
+
+321
+00:31:28,343 --> 00:31:30,046
+Speaker SPEAKER_05: So you should go read his blog.
+
+322
+00:31:30,586 --> 00:31:37,378
+Speaker SPEAKER_05: So he had all these human doing image that test parties.
+
+323
+00:31:37,519 --> 00:31:41,946
+Speaker SPEAKER_05: He had to bribe them with pizza, I think, with my students in the lab.
+
+324
+00:31:41,987 --> 00:31:47,836
+Speaker SPEAKER_05: And they got to a accuracy about 5%.
+
+325
+00:31:47,817 --> 00:31:48,657
+Speaker SPEAKER_05: Was it 5 or 3.5?
+
+326
+00:31:48,678 --> 00:31:48,758
+Speaker SPEAKER_05: 3.
+
+327
+00:31:48,778 --> 00:31:51,521
+Speaker SPEAKER_05: 3.5, I think.
+
+328
+00:31:51,842 --> 00:31:54,085
+Speaker SPEAKER_10: So humans basically make mistakes about 3% of the time.
+
+329
+00:31:54,125 --> 00:31:54,525
+Speaker SPEAKER_05: Right.
+
+330
+00:31:55,286 --> 00:31:59,372
+Speaker SPEAKER_05: And then I think 2016, I think ResNet passed it.
+
+331
+00:32:00,192 --> 00:32:00,953
+Speaker SPEAKER_05: It was ResNet.
+
+332
+00:32:02,275 --> 00:32:06,240
+Speaker SPEAKER_05: It's that year's winning algorithm passed the human performance.
+
+333
+00:32:06,740 --> 00:32:13,849
+Speaker SPEAKER_10: And then ultimately you had to retire the competition because it was so much better than humans that it... We had to retire because we ran out of funding.
+
+334
+00:32:14,770 --> 00:32:14,871
+Speaker SPEAKER_10: Okay.
+
+335
+00:32:15,559 --> 00:32:17,983
+Speaker SPEAKER_10: It's a different reason, a bad reason.
+
+336
+00:32:18,003 --> 00:32:18,905
+Speaker SPEAKER_05: We still run out of funding.
+
+337
+00:32:19,226 --> 00:32:28,821
+Speaker SPEAKER_12: Incidentally, that student started life at the University of Toronto, where he went to your lab, and then he went to be head of research at Tesla.
+
+338
+00:32:29,603 --> 00:32:31,846
+Speaker SPEAKER_05: Okay, first of all, he came to
+
+339
+00:32:31,826 --> 00:32:34,171
+Speaker SPEAKER_05: Stanford to be a PhD student.
+
+340
+00:32:34,912 --> 00:32:41,723
+Speaker SPEAKER_05: And yesterday night we were talking, actually there was a breakthrough dissertation in the middle of this.
+
+341
+00:32:42,144 --> 00:32:45,550
+Speaker SPEAKER_05: And then he became part of the founding team of OpenAI.
+
+342
+00:32:45,991 --> 00:32:46,893
+Speaker SPEAKER_12: But then he went to Tesla, right?
+
+343
+00:32:46,913 --> 00:32:48,154
+Speaker SPEAKER_05: And then he went to Tesla.
+
+344
+00:32:48,276 --> 00:32:52,643
+Speaker SPEAKER_12: And then he thought better of it.
+
+345
+00:32:52,762 --> 00:32:56,028
+Speaker SPEAKER_05: But I do want to answer your question of that 10 years.
+
+346
+00:32:56,481 --> 00:32:58,744
+Speaker SPEAKER_10: Well, there's a couple of developments along the way.
+
+347
+00:32:58,925 --> 00:32:59,185
+Speaker SPEAKER_05: Right.
+
+348
+00:32:59,266 --> 00:32:59,946
+Speaker SPEAKER_10: Transformers.
+
+349
+00:33:00,407 --> 00:33:00,647
+Speaker SPEAKER_05: Right.
+
+350
+00:33:01,008 --> 00:33:05,434
+Speaker SPEAKER_10: So the Transformer paper is written, the research is done in a paper written inside Google.
+
+351
+00:33:05,955 --> 00:33:18,634
+Speaker SPEAKER_10: Another Canadian is a co-author there, Aiden Gomez, who's now the CEO and co-founder of Cohere, who I think was a 20-year-old intern at Google Brain when co-authored the paper.
+
+352
+00:33:19,875 --> 00:33:23,721
+Speaker SPEAKER_10: So there's a tradition of Canadians being involved in these breakthroughs.
+
+353
+00:33:24,442 --> 00:33:27,759
+Speaker SPEAKER_10: Jeff, you were at Google when the paper was written.
+
+354
+00:33:27,980 --> 00:33:32,782
+Speaker SPEAKER_10: Was there an awareness inside Google of how important this would be?
+
+355
+00:33:32,948 --> 00:33:34,190
+Speaker SPEAKER_12: I don't think there was.
+
+356
+00:33:34,269 --> 00:33:38,877
+Speaker SPEAKER_12: Maybe the authors knew, but it took me several years to realize how important it was.
+
+357
+00:33:39,298 --> 00:33:43,226
+Speaker SPEAKER_12: And at Google, people didn't realize how important it was until BERT.
+
+358
+00:33:43,246 --> 00:33:51,601
+Speaker SPEAKER_12: So BERT used Transformers, and BERT then became a lot better at a lot of natural language processing benchmarks for a lot of different tasks.
+
+359
+00:33:52,623 --> 00:33:55,647
+Speaker SPEAKER_12: And that's when people realized Transformers were special.
+
+360
+00:33:56,067 --> 00:33:59,592
+Speaker SPEAKER_05: So 2017, the transport former paper was published.
+
+361
+00:33:59,952 --> 00:34:04,199
+Speaker SPEAKER_05: I also joined Google and I think you and I actually met on my first week.
+
+362
+00:34:05,099 --> 00:34:10,367
+Speaker SPEAKER_05: I think most of 2017 and 2018 was neural architecture search.
+
+363
+00:34:11,148 --> 00:34:13,552
+Speaker SPEAKER_05: I think that was Google's bet.
+
+364
+00:34:14,253 --> 00:34:16,858
+Speaker SPEAKER_05: And there was a lot of GPUs being used.
+
+365
+00:34:17,478 --> 00:34:20,623
+Speaker SPEAKER_05: So it was a different bet.
+
+366
+00:34:20,755 --> 00:34:24,621
+Speaker SPEAKER_12: So just to explain that, neural architecture search essentially means this.
+
+367
+00:34:26,443 --> 00:34:33,835
+Speaker SPEAKER_12: You get yourself a whole lot of GPUs, and you just try lots of different architectures to see which works best, and you automate that.
+
+368
+00:34:34,195 --> 00:34:37,260
+Speaker SPEAKER_12: It's basically automated evolution for neural net architectures.
+
+369
+00:34:37,280 --> 00:34:38,742
+Speaker SPEAKER_05: It's like hyperparameter tuning.
+
+370
+00:34:38,762 --> 00:34:39,704
+Speaker SPEAKER_12: Yeah.
+
+371
+00:34:39,724 --> 00:34:44,572
+Speaker SPEAKER_12: And it led to some quite big improvements, but nothing like transformers.
+
+372
+00:34:45,434 --> 00:34:48,619
+Speaker SPEAKER_12: And transformers were a huge improvement for natural language.
+
+373
+00:34:48,920 --> 00:34:52,788
+Speaker SPEAKER_05: Neural net architecture search was mostly done on ImageNet.
+
+374
+00:34:52,807 --> 00:34:55,032
+Speaker SPEAKER_10: So I'll tell you our experience of Transformer.
+
+375
+00:34:55,072 --> 00:34:57,076
+Speaker SPEAKER_10: So we were doing our company layer six at the time.
+
+376
+00:34:57,096 --> 00:35:01,865
+Speaker SPEAKER_10: I think we saw a pre-read of the paper and
+
+377
+00:35:02,335 --> 00:35:14,733
+Speaker SPEAKER_10: We were in the middle of a fundraising and a bunch of acquisition offers and read the paper and, I mean, not just me, but my partner, Tommy, who had studied with you, and Max Volkovs, who came out of the group lab.
+
+378
+00:35:15,454 --> 00:35:19,059
+Speaker SPEAKER_10: And we thought this is the next iteration of neural nets.
+
+379
+00:35:19,539 --> 00:35:24,646
+Speaker SPEAKER_10: We should sell the company, start a venture fund, and invest in these companies that are going to be using transformers.
+
+380
+00:35:24,626 --> 00:35:28,518
+Speaker SPEAKER_10: So we figured it would take five years to get adopted beyond Google.
+
+381
+00:35:28,659 --> 00:35:34,175
+Speaker SPEAKER_10: And then from that moment forward, it would be 10 years for all the software in the world to get replaced or embedded with this technology.
+
+382
+00:35:35,257 --> 00:35:39,530
+Speaker SPEAKER_10: We made that decision five years and two weeks before ChatGPT came out.
+
+383
+00:35:39,967 --> 00:35:50,320
+Speaker SPEAKER_10: So I'm glad to see we were good at predicting, but I have to give credit to my co-founders who I thought I understood what the paper was, but they were able to explain it fully.
+
+384
+00:35:50,380 --> 00:35:51,721
+Speaker SPEAKER_12: I should just correct you on one thing.
+
+385
+00:35:52,121 --> 00:35:53,824
+Speaker SPEAKER_12: I don't think Tommy ever studied with me.
+
+386
+00:35:53,864 --> 00:36:00,952
+Speaker SPEAKER_12: He wanted to come study with me, but a colleague in my department told him if he came to work with me, that would be the end of his career, and he should go do something else.
+
+387
+00:36:01,893 --> 00:36:07,239
+Speaker SPEAKER_10: So he took the classes, and this is my partner who in the late
+
+388
+00:36:07,219 --> 00:36:21,885
+Speaker SPEAKER_10: 90s, was doing a master's at U of T, and he wanted to go study with Jeff, studied neural nets, and his girlfriend, now wife's father, who was an engineering professor, said, don't do that, neural nets are a dead end.
+
+389
+00:36:21,905 --> 00:36:27,675
+Speaker SPEAKER_10: So instead, he took the classes, but wrote his thesis in cryptocurrency.
+
+390
+00:36:29,865 --> 00:36:35,490
+Speaker SPEAKER_10: So OK, so are you still going to talk about the 10 years?
+
+391
+00:36:35,530 --> 00:36:37,400
+Speaker SPEAKER_05: Because I think there's something important.
+
+392
+00:36:37,721 --> 00:36:39,268
+Speaker SPEAKER_10: Yeah, so go ahead.
+
+393
+00:36:39,367 --> 00:36:43,070
+Speaker SPEAKER_05: So I do think there's something important the world overlooked.
+
+394
+00:36:43,311 --> 00:36:56,684
+Speaker SPEAKER_05: This 10 years between ImageNet, AlexNet, and ChatGPT, most of the world sees this as a tech 10 years, or we see it as a tech 10 years.
+
+395
+00:36:57,244 --> 00:36:59,608
+Speaker SPEAKER_05: In the big tech, there's things brewing.
+
+396
+00:36:59,748 --> 00:37:04,472
+Speaker SPEAKER_05: I mean, it took sequence to sequence, transformer, but things are brewing.
+
+397
+00:37:05,054 --> 00:37:07,416
+Speaker SPEAKER_05: But I do think,
+
+398
+00:37:07,396 --> 00:37:15,088
+Speaker SPEAKER_05: For me personally and for the world, it's also a transformation between tech to society.
+
+399
+00:37:15,568 --> 00:37:33,335
+Speaker SPEAKER_05: I actually think personally I grew from a scientist to a humanist in this 10 years because having joined Google for that two years in the middle of the Transformer papers, I begin to see the societal implication of this technology.
+
+400
+00:37:33,315 --> 00:37:41,719
+Speaker SPEAKER_05: It was post AlphaGo moment, and very quickly we got to the AlphaFold moment.
+
+401
+00:37:42,280 --> 00:37:45,550
+Speaker SPEAKER_05: It was where bias, it was creeping out.
+
+402
+00:37:46,012 --> 00:37:48,338
+Speaker SPEAKER_05: There was privacy issues.
+
+403
+00:37:48,318 --> 00:37:53,465
+Speaker SPEAKER_05: And then we're starting to see the beginning of disinformation and misinformation.
+
+404
+00:37:54,085 --> 00:38:02,878
+Speaker SPEAKER_05: And then we're starting to see the talks of job within a small circle, not within a big public discourse.
+
+405
+00:38:03,639 --> 00:38:06,202
+Speaker SPEAKER_05: It was when I grew personally anxious.
+
+406
+00:38:06,402 --> 00:38:10,527
+Speaker SPEAKER_05: I feel, you know, 2018,
+
+407
+00:38:11,706 --> 00:38:14,992
+Speaker SPEAKER_05: Oh, it was also right after Cambridge Analytica.
+
+408
+00:38:15,532 --> 00:38:23,545
+Speaker SPEAKER_05: So that huge implication of technology, not AI per se, but it's algorithm driven technology on election.
+
+409
+00:38:24,106 --> 00:38:30,277
+Speaker SPEAKER_05: That's when I had to make a personal decision of staying at Google or come back to Stanford.
+
+410
+00:38:30,396 --> 00:38:33,461
+Speaker SPEAKER_05: And I knew the only reason I would come back to Stanford
+
+411
+00:38:33,442 --> 00:38:40,952
+Speaker SPEAKER_05: was starting this Human Center AI Institute to really, really understand the human side of this technology.
+
+412
+00:38:41,012 --> 00:38:54,753
+Speaker SPEAKER_05: So I think this is a very important 10 years, even though it's kind of not in the eyes of the public, but this technology is starting to really creep into the rest of our lives.
+
+413
+00:38:54,992 --> 00:39:03,144
+Speaker SPEAKER_05: And of course, 2022, it's all shown under the daylight how profound this is.
+
+414
+00:39:03,344 --> 00:39:16,711
+Speaker SPEAKER_10: There's an interesting footnote to what happened during that period as well, which is ultimately you and Ilya and Alex joined Google, but before that, there was a big Canadian
+
+415
+00:39:17,164 --> 00:39:21,172
+Speaker SPEAKER_10: company that had the opportunity to get access to this technology.
+
+416
+00:39:21,873 --> 00:39:24,456
+Speaker SPEAKER_10: I've heard this story, but I don't think it's ever been shared publicly.
+
+417
+00:39:24,496 --> 00:39:26,159
+Speaker SPEAKER_10: Maybe do you want to share that story for a second?
+
+418
+00:39:26,681 --> 00:39:39,661
+Speaker SPEAKER_12: Okay, so the technology that we were using for the ImageNet, we developed it in 2009 for doing speech recognition, for doing the acoustic modeling bit of speech recognition.
+
+419
+00:39:39,641 --> 00:39:47,572
+Speaker SPEAKER_12: So you can take the sound wave and you can make a thing called a spectrogram, which just tells you at each time how much energy there is at each frequency.
+
+420
+00:39:48,034 --> 00:39:49,675
+Speaker SPEAKER_12: So you're probably used to seeing the spectrograms.
+
+421
+00:39:50,677 --> 00:40:00,811
+Speaker SPEAKER_12: And what you'd like to do is look at a spectrogram and make guesses about which part of which phoneme is being expressed by the middle frame of the spectrogram.
+
+422
+00:40:00,831 --> 00:40:09,565
+Speaker SPEAKER_12: And two students, George Dahl and another student who I shared with Gerald Penn called
+
+423
+00:40:11,248 --> 00:40:12,369
+Speaker SPEAKER_12: Abdo.
+
+424
+00:40:13,050 --> 00:40:14,452
+Speaker SPEAKER_12: He had a longer name.
+
+425
+00:40:14,793 --> 00:40:18,338
+Speaker SPEAKER_12: We all called him Abdo, who was a speech expert.
+
+426
+00:40:18,358 --> 00:40:19,619
+Speaker SPEAKER_12: George was a learning expert.
+
+427
+00:40:20,221 --> 00:40:30,293
+Speaker SPEAKER_12: Over the summer of 2009, they made a model that was better than what 30 years of speech research had been able to produce, and big, big teams working on speech research.
+
+428
+00:40:30,713 --> 00:40:34,739
+Speaker SPEAKER_12: And the model was slightly better, not as big as the ImageNet gap, but it was better.
+
+429
+00:40:36,081 --> 00:40:39,045
+Speaker SPEAKER_12: And that model
+
+430
+00:40:40,375 --> 00:40:52,335
+Speaker SPEAKER_12: was then ported to IBM and to Microsoft by George went to Microsoft and Abdo went to IBM, and those big speech groups started using neural nets then.
+
+431
+00:40:53,378 --> 00:40:59,329
+Speaker SPEAKER_12: And I had a third student who had been working on something else called Navdeep, Navdeep Jaitley, and
+
+432
+00:41:00,034 --> 00:41:27,577
+Speaker SPEAKER_12: He wanted to take this speech technology to a big company, but he wanted to stay in Canada for complicated visa reasons, and so we got in touch with BlackBerry, RIM, and we said, we've got this new way of doing speech recognition, and it works better than the existing technology, and we'd like a student to come to you over the summer and show you how to use it, and then you can have the best speech recognition in your cell phone.
+
+433
+00:41:28,250 --> 00:41:34,661
+Speaker SPEAKER_12: And they said, after some discussions, a fairly senior gap like we said, we're not interested.
+
+434
+00:41:35,742 --> 00:41:39,148
+Speaker SPEAKER_12: So our attempt to give it to Canadian industry failed.
+
+435
+00:41:40,170 --> 00:41:45,498
+Speaker SPEAKER_12: And so then Navdeep took it to Google.
+
+436
+00:41:46,222 --> 00:41:48,824
+Speaker SPEAKER_12: And Google were the first to get it into a product.
+
+437
+00:41:48,925 --> 00:42:05,385
+Speaker SPEAKER_12: So in 2012, around the same time as we won the ImageNet competition, George and Abdo's speech recognition acoustic model was in, there was a lot of work making it a good product and making it have low latency and so on.
+
+438
+00:42:06,166 --> 00:42:07,909
+Speaker SPEAKER_12: That came out in the Android.
+
+439
+00:42:07,889 --> 00:42:12,554
+Speaker SPEAKER_12: And there was a moment when the Android suddenly became as good as Siri at speech recognition.
+
+440
+00:42:12,576 --> 00:42:13,617
+Speaker SPEAKER_12: And that was a neural net.
+
+441
+00:42:14,157 --> 00:42:18,844
+Speaker SPEAKER_12: And I think for the people high up in the big companies, that was another ingredient.
+
+442
+00:42:19,264 --> 00:42:26,715
+Speaker SPEAKER_12: They saw it get this dramatic result for vision, but they also saw that it was already out in a product for speech recognition and was working very well there, too.
+
+443
+00:42:27,476 --> 00:42:31,601
+Speaker SPEAKER_12: So I think that combination of it does speech, it does vision, clearly it's going to do everything.
+
+444
+00:42:33,590 --> 00:42:35,054
+Speaker SPEAKER_12: We won't say any more about blackberry.
+
+445
+00:42:35,094 --> 00:42:44,757
+Speaker SPEAKER_12: It was a shame that Canadian industry didn't, you know, I think we might have still had blackberries if that happened.
+
+446
+00:42:44,777 --> 00:42:46,501
+Speaker SPEAKER_10: All right, we'll leave that one there.
+
+447
+00:42:47,782 --> 00:42:57,373
+Speaker SPEAKER_10: I've heard this story before, but I thought it was important for the rest of the world to know some of what went on behind the scenes, why this technology didn't stay in Canada even though it was offered for free.
+
+448
+00:42:59,056 --> 00:43:00,818
+Speaker SPEAKER_10: Okay, so let's advance forward.
+
+449
+00:43:01,438 --> 00:43:03,722
+Speaker SPEAKER_10: We now have post-transformers.
+
+450
+00:43:04,322 --> 00:43:07,507
+Speaker SPEAKER_10: Google is starting to use this and develop it in a number of different ways.
+
+451
+00:43:08,228 --> 00:43:16,759
+Speaker SPEAKER_10: OpenAI, where your former student Ilya had left Google, been a founder of OpenAI with Elon Musk and Sam Altman, Greg Brockman, and a few others.
+
+452
+00:43:17,498 --> 00:43:23,326
+Speaker SPEAKER_10: Ilya is the chief scientist, and Andre, your student, as a co-founder.
+
+453
+00:43:23,525 --> 00:43:34,599
+Speaker SPEAKER_10: So they are working together, a very small team, to basically take, well, initially the idea was we're gonna build AGI, and artificial general intelligence.
+
+454
+00:43:35,380 --> 00:43:43,472
+Speaker SPEAKER_10: Ultimately, the transformer paper comes out, they start to adopt, at some point, transformers, and they start to make extraordinary
+
+455
+00:43:43,739 --> 00:43:51,791
+Speaker SPEAKER_10: gains internally, that they're not really sharing publicly, in what they're able to do in language understanding and a number of other things.
+
+456
+00:43:51,851 --> 00:43:54,436
+Speaker SPEAKER_10: They had efforts going on in robotics that spun out.
+
+457
+00:43:54,536 --> 00:43:58,822
+Speaker SPEAKER_10: Peter Abbeel ended up spinning out Covariant, a company we subsequently invested in, and other things.
+
+458
+00:43:59,664 --> 00:44:03,250
+Speaker SPEAKER_10: So the language part of it advances and advances and advances.
+
+459
+00:44:03,905 --> 00:44:07,170
+Speaker SPEAKER_10: people outside opening, I don't really know to the extent what's going on.
+
+460
+00:44:07,210 --> 00:44:11,315
+Speaker SPEAKER_10: And then chat GPT comes out November 30th last year.
+
+461
+00:44:11,657 --> 00:44:13,119
+Speaker SPEAKER_10: So 10 months ago.
+
+462
+00:44:13,440 --> 00:44:18,086
+Speaker SPEAKER_05: GPT2 caught the attention of some of us.
+
+463
+00:44:18,507 --> 00:44:20,309
+Speaker SPEAKER_05: I think actually,
+
+464
+00:44:20,289 --> 00:44:34,704
+Speaker SPEAKER_05: I think by the time GPT-2 came out, my colleague Percy Leung, NLP professor at Stanford, I remember he came to me and said, Fei-Fei, I have a whole different
+
+465
+00:44:35,831 --> 00:44:39,275
+Speaker SPEAKER_05: realization of how important this technology is.
+
+466
+00:44:39,376 --> 00:44:47,324
+Speaker SPEAKER_05: So to the credit of Percy, he immediately asked HAI to set up a center to study this.
+
+467
+00:44:47,545 --> 00:44:53,192
+Speaker SPEAKER_05: And I don't know if this is contentious in Toronto.
+
+468
+00:44:53,211 --> 00:44:58,177
+Speaker SPEAKER_05: Stanford is the university that coined the term foundation models.
+
+469
+00:44:58,157 --> 00:45:06,869
+Speaker SPEAKER_05: And some people call it LLM, large language model, but going beyond language, we call it a foundation model.
+
+470
+00:45:06,929 --> 00:45:18,463
+Speaker SPEAKER_05: We created the Center of Research for Foundation Model before, I think, before 3.5 came out, so definitely before Chad GPT.
+
+471
+00:45:18,503 --> 00:45:22,106
+Speaker SPEAKER_10: Just describe what a foundation model is, just for those who are not familiar.
+
+472
+00:45:22,592 --> 00:45:24,014
+Speaker SPEAKER_05: That's actually a great question.
+
+473
+00:45:24,135 --> 00:45:28,079
+Speaker SPEAKER_05: Foundation modeling, some people feel it has to have transformer in it.
+
+474
+00:45:28,599 --> 00:45:29,960
+Speaker SPEAKER_05: I don't know if you feel that.
+
+475
+00:45:29,981 --> 00:45:32,523
+Speaker SPEAKER_12: No, it just has to be a very big model trained on a huge amount of data.
+
+476
+00:45:32,543 --> 00:45:34,987
+Speaker SPEAKER_05: Very large, pre-trained with huge amount of data.
+
+477
+00:45:35,447 --> 00:45:42,215
+Speaker SPEAKER_05: And I think one of the most important thing of a foundation model is the generalizability of multiple tasks.
+
+478
+00:45:42,715 --> 00:45:46,079
+Speaker SPEAKER_05: You're not training it, for example, machine translation.
+
+479
+00:45:46,398 --> 00:45:50,523
+Speaker SPEAKER_05: So in NLP, machine translation is a very important task.
+
+480
+00:45:50,503 --> 00:45:55,769
+Speaker SPEAKER_05: But the kind of foundation model like GPT is able to do machine translation.
+
+481
+00:45:55,889 --> 00:46:00,576
+Speaker SPEAKER_05: It's able to do conversation, summarization, and blah, blah, blah.
+
+482
+00:46:00,596 --> 00:46:01,836
+Speaker SPEAKER_05: So that's a foundation model.
+
+483
+00:46:01,876 --> 00:46:04,721
+Speaker SPEAKER_05: And we're seeing that now in multimodality.
+
+484
+00:46:04,820 --> 00:46:08,125
+Speaker SPEAKER_05: We're seeing that in vision, in robotics, in video, and so on.
+
+485
+00:46:08,144 --> 00:46:10,047
+Speaker SPEAKER_05: So we created that.
+
+486
+00:46:10,527 --> 00:46:11,469
+Speaker SPEAKER_05: But you're right.
+
+487
+00:46:11,548 --> 00:46:17,956
+Speaker SPEAKER_05: The public sees this in, what did you say, October 30th?
+
+488
+00:46:18,135 --> 00:46:18,956
+Speaker SPEAKER_10: November, I think.
+
+489
+00:46:18,976 --> 00:46:19,498
+Speaker SPEAKER_12: November.
+
+490
+00:46:19,478 --> 00:46:36,938
+Speaker SPEAKER_12: One other very important thing about foundation models, which is for a long time in cognitive science, the general opinion was that these neural nets, if you give them enough training data, they can do complicated things, but they need an awful lot of training data.
+
+491
+00:46:36,958 --> 00:46:40,103
+Speaker SPEAKER_12: They need to see thousands of cats.
+
+492
+00:46:40,791 --> 00:46:43,918
+Speaker SPEAKER_12: And people are much more statistically efficient.
+
+493
+00:46:44,079 --> 00:46:47,786
+Speaker SPEAKER_12: That is, they can learn to do these things on much less data.
+
+494
+00:46:47,806 --> 00:46:58,327
+Speaker SPEAKER_12: And people don't say that so much anymore because what they were really doing was comparing what an MIT undergraduate can learn to do on a limited amount of data.
+
+495
+00:46:58,527 --> 00:47:03,016
+Speaker SPEAKER_12: with what a neural net that starts with random weights can learn to do on a limited amount of data.
+
+496
+00:47:03,597 --> 00:47:13,057
+Speaker SPEAKER_12: And if you want to make a fair comparison, you take a foundation model, that is, a neural net that's been trained on lots and lots of stuff, and then you give it a completely new task.
+
+497
+00:47:13,659 --> 00:47:17,768
+Speaker SPEAKER_12: And you ask, how much data does it need to learn this completely new task?
+
+498
+00:47:18,710 --> 00:47:21,733
+Speaker SPEAKER_12: And that's called few-shot learning because it doesn't take much.
+
+499
+00:47:22,432 --> 00:47:26,536
+Speaker SPEAKER_12: And then you discover these things are statistically efficient.
+
+500
+00:47:26,737 --> 00:47:32,001
+Speaker SPEAKER_12: That is, they compare quite favorably with people in how much data they need to learn to do a new task.
+
+501
+00:47:32,702 --> 00:47:40,889
+Speaker SPEAKER_12: So the old kind of innatist idea that we come with lots of innate knowledge and that makes us far superior to these things who just learn everything from data.
+
+502
+00:47:41,530 --> 00:47:47,315
+Speaker SPEAKER_12: People have pretty much given up on that now because if you take a foundation model that had no innate knowledge but a lot of experience,
+
+503
+00:47:47,295 --> 00:47:50,320
+Speaker SPEAKER_12: and then you give it a new task, it learns pretty efficiently.
+
+504
+00:47:50,360 --> 00:47:51,762
+Speaker SPEAKER_12: It doesn't need huge amounts of data.
+
+505
+00:47:53,324 --> 00:47:59,172
+Speaker SPEAKER_05: You know, my PhD is in one-shot learning, but it's very interesting.
+
+506
+00:47:59,293 --> 00:48:08,126
+Speaker SPEAKER_05: Even in Bayesian framework, you could pre-train, but it's only in the neural network kind of pre-training really can get you this multitask.
+
+507
+00:48:08,246 --> 00:48:09,387
+Speaker SPEAKER_10: Right.
+
+508
+00:48:10,027 --> 00:48:15,092
+Speaker SPEAKER_10: OK, so this basically gets productized in ChatGPT.
+
+509
+00:48:15,733 --> 00:48:21,278
+Speaker SPEAKER_10: The world experiences it, which is only 10 months ago, although for some of us it feels like much longer.
+
+510
+00:48:21,478 --> 00:48:21,900
+Speaker SPEAKER_06: Forever.
+
+511
+00:48:22,079 --> 00:48:32,210
+Speaker SPEAKER_10: Because suddenly you had this big bang that happened a long time ago that I think for a long time no one really saw the results of it.
+
+512
+00:48:32,951 --> 00:48:39,358
+Speaker SPEAKER_10: Suddenly, I mean, my comparison would be there's planets that have formed and stars that are visible, and everyone can experience
+
+513
+00:48:39,338 --> 00:48:42,144
+Speaker SPEAKER_10: the result of what happened 10 years before and then transformed, etc.
+
+514
+00:48:42,806 --> 00:48:49,824
+Speaker SPEAKER_10: So, the world suddenly becomes very excited about what I think feels to a lot of people like magic.
+
+515
+00:48:51,128 --> 00:48:52,251
+Speaker SPEAKER_10: Something that they can touch.
+
+516
+00:48:52,501 --> 00:49:09,990
+Speaker SPEAKER_10: and they can experience and give them back a feedback in whatever way they're asking for it, whether they're putting in text prompts and asking for an image to be created or video or text and asking for more text to come back and answer things that you would never be able to expect and getting those unexpected answers.
+
+517
+00:49:10,472 --> 00:49:12,635
+Speaker SPEAKER_10: So it feels a little bit like magic.
+
+518
+00:49:13,324 --> 00:49:18,231
+Speaker SPEAKER_10: My personal view is that we've always moved the goal line in AI.
+
+519
+00:49:18,693 --> 00:49:20,494
+Speaker SPEAKER_10: AI is always the thing that we couldn't do.
+
+520
+00:49:20,574 --> 00:49:21,416
+Speaker SPEAKER_10: It's always the magic.
+
+521
+00:49:21,436 --> 00:49:23,619
+Speaker SPEAKER_10: And as soon as we get there, then we say, that's not AI at all.
+
+522
+00:49:24,119 --> 00:49:26,202
+Speaker SPEAKER_10: There's people around that say, that's not AI at all.
+
+523
+00:49:26,222 --> 00:49:28,445
+Speaker SPEAKER_10: We moved the goal line.
+
+524
+00:49:29,146 --> 00:49:32,130
+Speaker SPEAKER_10: In this case, what was your reaction when it came out?
+
+525
+00:49:33,032 --> 00:49:37,719
+Speaker SPEAKER_10: I know part of your reaction is you quit Google and decided to do different things.
+
+526
+00:49:37,778 --> 00:49:40,463
+Speaker SPEAKER_10: But when you first saw it, what did you think?
+
+527
+00:49:40,730 --> 00:49:44,318
+Speaker SPEAKER_12: Well, like Fei-Fei said, GPT-2 made a big impression on us all.
+
+528
+00:49:45,161 --> 00:49:46,844
+Speaker SPEAKER_12: And then there was a steady progression.
+
+529
+00:49:47,184 --> 00:49:56,206
+Speaker SPEAKER_12: Also, I'd seen things within Google before GPT-4 and GPT-3.5 that were just as good like Palm.
+
+530
+00:49:56,373 --> 00:50:00,657
+Speaker SPEAKER_12: So, that in itself didn't make a big difference.
+
+531
+00:50:00,677 --> 00:50:05,423
+Speaker SPEAKER_12: It was more Palm made an impression on me within Google, because Palm could explain why a joke was funny.
+
+532
+00:50:05,985 --> 00:50:12,793
+Speaker SPEAKER_12: And I'd always just use that as a, you know, we'll know that it really gets it when it can explain why a joke is funny.
+
+533
+00:50:13,172 --> 00:50:14,074
+Speaker SPEAKER_12: And Palm could do that.
+
+534
+00:50:15,235 --> 00:50:17,398
+Speaker SPEAKER_12: Not for every joke, but for a lot of jokes.
+
+535
+00:50:17,418 --> 00:50:22,784
+Speaker SPEAKER_12: Incidentally, these things are quite good now at explaining why jokes are funny, but they're terrible at telling jokes.
+
+536
+00:50:22,764 --> 00:50:27,257
+Speaker SPEAKER_12: And there's a reason, which is they generate text one word at a time.
+
+537
+00:50:28,059 --> 00:50:35,440
+Speaker SPEAKER_12: So if you ask them to tell a joke, what they do is they're trying to tell a joke, so they're going to try and tell stuff that sounds like a joke.
+
+538
+00:50:36,222 --> 00:50:37,887
+Speaker SPEAKER_12: So they say, you know,
+
+539
+00:50:37,867 --> 00:50:42,735
+Speaker SPEAKER_12: A priest and a badger went into a bar, and that sounds a bit like the beginning of a joke.
+
+540
+00:50:43,297 --> 00:50:47,244
+Speaker SPEAKER_12: And they keep going, telling stuff that sounds like the beginning of a joke.
+
+541
+00:50:47,583 --> 00:50:49,867
+Speaker SPEAKER_12: But then they get to the point where they need the punchline.
+
+542
+00:50:50,248 --> 00:50:51,311
+Speaker SPEAKER_12: And, of course, they haven't thought ahead.
+
+543
+00:50:51,351 --> 00:50:52,994
+Speaker SPEAKER_12: They haven't thought what's going to be the punchline.
+
+544
+00:50:53,253 --> 00:50:55,358
+Speaker SPEAKER_12: They're just trying to make it sound like they're leading to a joke.
+
+545
+00:50:55,657 --> 00:51:01,007
+Speaker SPEAKER_12: And then they give you a pathetically weak punchline, because they have to come up with some punchline.
+
+546
+00:51:01,730 --> 00:51:07,099
+Speaker SPEAKER_12: So although they can explain jokes because they get to see the whole joke before they say anything, they can't tell jokes.
+
+547
+00:51:07,400 --> 00:51:08,282
+Speaker SPEAKER_12: But we'll fix that.
+
+548
+00:51:09,583 --> 00:51:12,730
+Speaker SPEAKER_10: Okay, so I was going to ask you if comedian is a job of the future or not.
+
+549
+00:51:12,750 --> 00:51:18,780
+Speaker SPEAKER_10: Do you think it's going to... Probably not.
+
+550
+00:51:18,800 --> 00:51:19,061
+Speaker SPEAKER_10: All right.
+
+551
+00:51:19,101 --> 00:51:19,762
+Speaker SPEAKER_10: So anyway.
+
+552
+00:51:21,545 --> 00:51:23,027
+Speaker SPEAKER_10: But what was your reaction to it?
+
+553
+00:51:23,528 --> 00:51:26,134
+Speaker SPEAKER_10: Again, you've seen things behind the scenes along the way.
+
+554
+00:51:26,670 --> 00:51:27,956
+Speaker SPEAKER_05: A couple of reaction.
+
+555
+00:51:28,880 --> 00:51:35,331
+Speaker SPEAKER_05: My first reaction is, of all people, I thought I knew the power of data.
+
+556
+00:51:35,985 --> 00:51:40,152
+Speaker SPEAKER_05: And I was still awed by the power of data.
+
+557
+00:51:40,693 --> 00:51:42,715
+Speaker SPEAKER_05: That was a technical reaction.
+
+558
+00:51:42,775 --> 00:51:45,940
+Speaker SPEAKER_05: I was like, darn it, I should have made a bigger image then.
+
+559
+00:51:46,001 --> 00:51:47,362
+Speaker SPEAKER_05: No, but maybe not.
+
+560
+00:51:47,804 --> 00:51:49,186
+Speaker SPEAKER_05: But that was really.
+
+561
+00:51:49,206 --> 00:51:50,807
+Speaker SPEAKER_05: It's too good.
+
+562
+00:51:50,827 --> 00:51:51,889
+Speaker SPEAKER_05: Funding is the problem.
+
+563
+00:51:53,472 --> 00:51:57,858
+Speaker SPEAKER_05: Yeah, so that was for second.
+
+564
+00:51:57,838 --> 00:52:13,338
+Speaker SPEAKER_05: When I saw the public awakening moment to AI with Chad GPT, not just the GPT-2 technology moment, I generally thought, thank goodness we've invested in human-centered AI for the past four years.
+
+565
+00:52:14,000 --> 00:52:21,369
+Speaker SPEAKER_05: Thank goodness we have built a bridge with the policymakers, with the public sector, with the civil society.
+
+566
+00:52:22,369 --> 00:52:24,353
+Speaker SPEAKER_05: We have not done enough.
+
+567
+00:52:24,771 --> 00:52:29,056
+Speaker SPEAKER_05: But thank goodness that that conversation had started.
+
+568
+00:52:29,197 --> 00:52:31,420
+Speaker SPEAKER_05: We were participating in it.
+
+569
+00:52:31,960 --> 00:52:33,862
+Speaker SPEAKER_05: We were leading some part of it.
+
+570
+00:52:34,304 --> 00:52:44,637
+Speaker SPEAKER_05: For example, we as an institute at Stanford were leading the critical national AI research cloud bill that is still going through.
+
+571
+00:52:44,617 --> 00:52:47,320
+Speaker SPEAKER_05: Congress right now.
+
+572
+00:52:48,119 --> 00:52:51,143
+Speaker SPEAKER_05: Not right now, actually.
+
+573
+00:52:51,163 --> 00:52:51,643
+Speaker SPEAKER_05: Senate.
+
+574
+00:52:52,083 --> 00:52:55,146
+Speaker SPEAKER_05: It's by camera, so at least it's moving the Senate.
+
+575
+00:52:56,467 --> 00:53:02,534
+Speaker SPEAKER_05: Because we predicted the societal moment for this attack.
+
+576
+00:53:02,634 --> 00:53:06,317
+Speaker SPEAKER_05: We don't know when it would come, but we knew it would come.
+
+577
+00:53:07,257 --> 00:53:12,682
+Speaker SPEAKER_05: And it was just a sense of urgency, honestly, I feel.
+
+578
+00:53:12,663 --> 00:53:24,447
+Speaker SPEAKER_05: that this is the moment we really have to rise to not only our passion as technologists, but responsibility as humanists.
+
+579
+00:53:25,150 --> 00:53:31,362
+Speaker SPEAKER_10: So you both, I think the common reaction of you both has been we have to think about the
+
+580
+00:53:31,798 --> 00:53:35,809
+Speaker SPEAKER_10: both the opportunities of this, but also the negative consequences of it.
+
+581
+00:53:36,311 --> 00:53:44,914
+Speaker SPEAKER_12: So for me, there was something I realized and didn't realize until very late and what got me much more interested in the societal impact was
+
+582
+00:53:46,092 --> 00:53:48,673
+Speaker SPEAKER_12: Like Fei-Fei said, the power of data.
+
+583
+00:53:48,733 --> 00:54:08,672
+Speaker SPEAKER_12: These big chatbots have seen thousands of times more data than any person could possibly see, and the reason they can do that is because you can make thousands of copies of the same model, and each copy can look at a different subset of the data, and they can get a gradient from that of how to change their parameters, and they can then share all those gradients.
+
+584
+00:54:09,393 --> 00:54:15,880
+Speaker SPEAKER_12: So every copy can benefit from what all the other copies extracted from data, and we can't do that.
+
+585
+00:54:16,534 --> 00:54:20,960
+Speaker SPEAKER_12: If suppose you had 10,000 people and they went out and they read 10,000 different books.
+
+586
+00:54:21,539 --> 00:54:25,364
+Speaker SPEAKER_12: And after they each read one book, all of them know what's in all the books.
+
+587
+00:54:25,945 --> 00:54:27,286
+Speaker SPEAKER_12: We could get to be very smart that way.
+
+588
+00:54:27,445 --> 00:54:28,606
+Speaker SPEAKER_12: And that's what these things are doing.
+
+589
+00:54:29,307 --> 00:54:31,110
+Speaker SPEAKER_12: And so it makes them far superior to us.
+
+590
+00:54:31,610 --> 00:54:35,173
+Speaker SPEAKER_05: There's some schooling that we're trying to do that, but not in a way.
+
+591
+00:54:35,193 --> 00:54:36,876
+Speaker SPEAKER_12: Yeah, but education is just hopeless.
+
+592
+00:54:36,936 --> 00:54:41,039
+Speaker SPEAKER_12: I mean, it's hardly worth paying for.
+
+593
+00:54:42,943 --> 00:54:46,489
+Speaker SPEAKER_05: Except University of Toronto and Sanford.
+
+594
+00:54:48,052 --> 00:54:52,920
+Speaker SPEAKER_10: I've tried to explain to friends that Jeff has a very sarcastic sense of humor, and if you spend enough time around it, you'll get it.
+
+595
+00:54:53,000 --> 00:54:56,085
+Speaker SPEAKER_10: But I'll leave it to you to decide whether that was sarcastic or not.
+
+596
+00:54:56,105 --> 00:55:00,130
+Speaker SPEAKER_12: So the way we exchange knowledge, roughly speaking, this is something of a simplification.
+
+597
+00:55:00,632 --> 00:55:05,519
+Speaker SPEAKER_12: But I produce a sentence, and you figure out what you have to change in your brain so you might have said that.
+
+598
+00:55:06,460 --> 00:55:08,344
+Speaker SPEAKER_12: That is if you trust me.
+
+599
+00:55:09,168 --> 00:55:11,251
+Speaker SPEAKER_12: We can do that with these models, too.
+
+600
+00:55:11,570 --> 00:55:17,639
+Speaker SPEAKER_12: If you want one neural net architecture to know what another architecture knows, which is a completely different architecture, you can't just give it the weights.
+
+601
+00:55:18,139 --> 00:55:19,961
+Speaker SPEAKER_12: So you get one to mimic the output of the other.
+
+602
+00:55:20,123 --> 00:55:21,103
+Speaker SPEAKER_12: That's called distillation.
+
+603
+00:55:21,585 --> 00:55:22,945
+Speaker SPEAKER_12: And that's how we learn from each other.
+
+604
+00:55:23,166 --> 00:55:24,128
+Speaker SPEAKER_12: But it's very inefficient.
+
+605
+00:55:24,208 --> 00:55:26,851
+Speaker SPEAKER_12: It's limited by the bandwidth of a sentence, which is a few hundred bits.
+
+606
+00:55:27,572 --> 00:55:31,597
+Speaker SPEAKER_12: Whereas if you have these models, these digital agents, which have a trillion parameters,
+
+607
+00:55:32,489 --> 00:55:36,132
+Speaker SPEAKER_12: Each of them looks at different bits of data, and then they share the gradients.
+
+608
+00:55:36,152 --> 00:55:37,795
+Speaker SPEAKER_12: They're sharing a trillion numbers.
+
+609
+00:55:38,456 --> 00:55:45,664
+Speaker SPEAKER_12: So you're comparing an ability to share knowledge that's in trillions of numbers with something that's hundreds of bits.
+
+610
+00:55:46,244 --> 00:55:49,429
+Speaker SPEAKER_12: They're just much, much better than us at sharing.
+
+611
+00:55:50,630 --> 00:55:57,297
+Speaker SPEAKER_05: So I guess, Geoff, that... So I agree with you at the technology level, but
+
+612
+00:55:57,581 --> 00:56:03,048
+Speaker SPEAKER_05: It sounded like, for you, that's the moment that got you feeling very negative.
+
+613
+00:56:03,608 --> 00:56:06,313
+Speaker SPEAKER_12: That's the moment I thought, we're history, yeah.
+
+614
+00:56:06,994 --> 00:56:13,621
+Speaker SPEAKER_05: I'm less negative than you, and I'll explain later, but I think that's where we... Actually, let's talk about that.
+
+615
+00:56:14,302 --> 00:56:20,550
+Speaker SPEAKER_10: Explain why you are optimistic, and let's understand why you are more pessimistic.
+
+616
+00:56:21,271 --> 00:56:23,673
+Speaker SPEAKER_12: I'm pessimistic because the pessimists are usually right.
+
+617
+00:56:26,168 --> 00:56:29,032
+Speaker SPEAKER_05: I thought I was a pessimist too.
+
+618
+00:56:29,052 --> 00:56:30,574
+Speaker SPEAKER_05: We have this conversation.
+
+619
+00:56:30,594 --> 00:56:34,398
+Speaker SPEAKER_05: So I don't know if I should be called an optimist.
+
+620
+00:56:34,940 --> 00:56:49,880
+Speaker SPEAKER_05: I think I'm, look, when you came to a country when you're 15 now speaking a single bit of language and starting from zero dollars, there's something very pragmatic in my thinking.
+
+621
+00:56:50,333 --> 00:57:04,554
+Speaker SPEAKER_05: I think technology, our human relationship with technology is a lot messier than an academian typically would predict, because we come to academia in the ivory tower.
+
+622
+00:57:04,655 --> 00:57:06,277
+Speaker SPEAKER_05: We want to make a discovery.
+
+623
+00:57:06,378 --> 00:57:11,244
+Speaker SPEAKER_05: We want to build a piece of technology, but we tend to be purist.
+
+624
+00:57:11,224 --> 00:57:22,443
+Speaker SPEAKER_05: But when a technology like AI hit the ground and reach the societal level, it is inevitably messily entangled with what humans do.
+
+625
+00:57:22,603 --> 00:57:27,713
+Speaker SPEAKER_05: And this is where, maybe you call it optimism, is my sense of humanity.
+
+626
+00:57:28,052 --> 00:57:29,436
+Speaker SPEAKER_05: I believe in humanity.
+
+627
+00:57:29,576 --> 00:57:37,248
+Speaker SPEAKER_05: I believe in not only the resilience of humanity, but also a collective will, the arc of history,
+
+628
+00:57:37,228 --> 00:57:49,561
+Speaker SPEAKER_05: It's dicey sometimes, but if we do the right thing, we have a chance, we have a fighting chance of creating a future that's better.
+
+629
+00:57:49,702 --> 00:57:57,771
+Speaker SPEAKER_05: So what I really feel is not delusional optimism at this point, is actually a sense of urgency of responsibility.
+
+630
+00:57:58,030 --> 00:58:06,239
+Speaker SPEAKER_05: And one thing, Jeff, I think I really hope you do feel positive is you look at the students of this generation.
+
+631
+00:58:06,219 --> 00:58:13,969
+Speaker SPEAKER_05: In my class, I teach a 600 undergrad class every spring on introduction of deep learning and computer vision.
+
+632
+00:58:14,961 --> 00:58:19,146
+Speaker SPEAKER_05: this generation compared to even five years ago is so different.
+
+633
+00:58:19,447 --> 00:58:27,798
+Speaker SPEAKER_05: They walk into our class not only wanting to learn deep learning transformers, gen AI, they want to talk about ethics.
+
+634
+00:58:27,918 --> 00:58:29,300
+Speaker SPEAKER_05: They want to talk about policy.
+
+635
+00:58:29,340 --> 00:58:31,884
+Speaker SPEAKER_05: They want to understand privacy and bias.
+
+636
+00:58:32,405 --> 00:58:37,931
+Speaker SPEAKER_05: And I think that really is where I see that the humanity
+
+637
+00:58:38,164 --> 00:58:41,813
+Speaker SPEAKER_05: rising to the occasion, and I think it's fragile.
+
+638
+00:58:41,833 --> 00:58:45,800
+Speaker SPEAKER_05: I mean, look at what's going on in the world, in Washington.
+
+639
+00:58:46,282 --> 00:58:52,494
+Speaker SPEAKER_05: It's very fragile, but I think if we recognize this moment, there's hope.
+
+640
+00:58:52,998 --> 00:58:54,219
+Speaker SPEAKER_12: So I see the same thing.
+
+641
+00:58:54,239 --> 00:58:58,786
+Speaker SPEAKER_12: I don't teach undergraduates anymore, but I see it in sort of more junior faculty members.
+
+642
+00:58:58,826 --> 00:59:06,536
+Speaker SPEAKER_12: So at the University of Toronto, for example, two of the most brilliant young professors went off to Anthropic to work on alignment.
+
+643
+00:59:07,757 --> 00:59:09,960
+Speaker SPEAKER_12: Roger Grace is coming back again, I hope.
+
+644
+00:59:10,922 --> 00:59:15,847
+Speaker SPEAKER_12: And Ilya, for example, is now full time working on alignment.
+
+645
+00:59:15,967 --> 00:59:18,751
+Speaker SPEAKER_12: So there really is a huge shift now.
+
+646
+00:59:19,153 --> 00:59:29,168
+Speaker SPEAKER_12: And I think I'm unlikely to have ideas that will help solve this problem, but I can encourage these younger people, these younger people around 40.
+
+647
+00:59:30,090 --> 00:59:30,510
+Speaker SPEAKER_05: Thank you.
+
+648
+00:59:33,635 --> 00:59:36,699
+Speaker SPEAKER_12: To work on these ideas, and they really are working on them now, they're taking it seriously.
+
+649
+00:59:36,719 --> 00:59:48,215
+Speaker SPEAKER_05: Yeah, as long as we put the most brilliant minds, like many of you I'm looking in the audience and online, onto this problem, this is where my hope comes from.
+
+650
+00:59:48,769 --> 00:59:56,025
+Speaker SPEAKER_10: So Jeff, you left Google in large part to be able to go and talk about this freely in the way that you wanted to.
+
+651
+00:59:57,168 --> 00:59:59,472
+Speaker SPEAKER_12: And basically- Actually, that's not really true.
+
+652
+00:59:59,492 --> 01:00:01,677
+Speaker SPEAKER_12: That's the media story, and it sounds good.
+
+653
+01:00:02,137 --> 01:00:08,331
+Speaker SPEAKER_12: I left Google because I was old and tired and wanted to retire and watch Netflix.
+
+654
+01:00:08,851 --> 01:00:18,581
+Speaker SPEAKER_12: And I happened to have the opportunity at that time to say some things I've been thinking about responsibility and not have to worry about how Google would respond.
+
+655
+01:00:19,023 --> 01:00:19,844
+Speaker SPEAKER_10: So it's more like that.
+
+656
+01:00:19,923 --> 01:00:21,945
+Speaker SPEAKER_10: If we have time, we'll come back to the Netflix recommendations.
+
+657
+01:00:21,965 --> 01:00:23,547
+Speaker SPEAKER_10: I was going to say.
+
+658
+01:00:23,987 --> 01:00:30,596
+Speaker SPEAKER_10: In the meantime, but you did go out and start speaking pretty significantly in the media.
+
+659
+01:00:30,996 --> 01:00:35,922
+Speaker SPEAKER_10: I think you've both spoken to probably more politicians in the last eight months than in your lives before.
+
+660
+01:00:35,902 --> 01:00:42,934
+Speaker SPEAKER_10: from presidents and prime ministers, right through Congress, Parliament, et cetera.
+
+661
+01:00:45,237 --> 01:00:54,213
+Speaker SPEAKER_10: Jeff, can you explain what your concern was, what you were trying to accomplish in voicing it, and whether you think that has been effective?
+
+662
+01:00:55,135 --> 01:01:00,744
+Speaker SPEAKER_12: Yeah, so people talk about AI risk, but there's a whole bunch of different risks.
+
+663
+01:01:00,994 --> 01:01:06,300
+Speaker SPEAKER_12: So there's a risk that it will take jobs away and not create as many jobs.
+
+664
+01:01:06,800 --> 01:01:09,123
+Speaker SPEAKER_12: And so we'll have a whole underclass of unemployed people.
+
+665
+01:01:09,682 --> 01:01:18,170
+Speaker SPEAKER_12: And we need to worry hard about that because the increase in productivity AI is gonna cause is not gonna get shared with the people who lose their jobs.
+
+666
+01:01:18,210 --> 01:01:20,594
+Speaker SPEAKER_12: Rich people are gonna get richer and poor people are gonna get poorer.
+
+667
+01:01:21,414 --> 01:01:27,119
+Speaker SPEAKER_12: And even if you have basic income, that's not gonna solve the problem of human dignity of many people.
+
+668
+01:01:27,572 --> 01:01:31,389
+Speaker SPEAKER_12: want to have a job to feel they're doing something important.
+
+669
+01:01:31,521 --> 01:01:33,204
+Speaker SPEAKER_12: including academics.
+
+670
+01:01:34,085 --> 01:01:35,867
+Speaker SPEAKER_12: And so that's one problem.
+
+671
+01:01:36,347 --> 01:01:40,072
+Speaker SPEAKER_12: Then there's the problem of fake news, which is a quite different problem.
+
+672
+01:01:40,092 --> 01:01:41,893
+Speaker SPEAKER_12: Then there's the problem of battle robots.
+
+673
+01:01:41,914 --> 01:01:43,335
+Speaker SPEAKER_12: That's a quite different problem again.
+
+674
+01:01:43,376 --> 01:01:48,943
+Speaker SPEAKER_12: All the big defense departments want to make battle robots, and nobody's going to stop them.
+
+675
+01:01:48,963 --> 01:01:49,923
+Speaker SPEAKER_12: And it's going to be horrible.
+
+676
+01:01:50,284 --> 01:01:57,373
+Speaker SPEAKER_12: And maybe eventually, after we've had some wars with battle robots, we'll get something like the Geneva Conventions, like we did with chemical weapons.
+
+677
+01:01:57,853 --> 01:02:00,617
+Speaker SPEAKER_12: It wasn't until after they were used that people could do something about it.
+
+678
+01:02:00,985 --> 01:02:09,452
+Speaker SPEAKER_12: Then there's the existential risk, and the existential risk is what I'm worried about.
+
+679
+01:02:09,472 --> 01:02:18,400
+Speaker SPEAKER_12: And the existential risk is that humanity gets wiped out because we've developed a better form of intelligence that decides to take control.
+
+680
+01:02:19,221 --> 01:02:22,804
+Speaker SPEAKER_12: And if it gets to be much smarter than us, so there's a lot of hypotheses here.
+
+681
+01:02:23,204 --> 01:02:24,346
+Speaker SPEAKER_12: It's a time of huge uncertainty.
+
+682
+01:02:24,385 --> 01:02:29,489
+Speaker SPEAKER_12: You shouldn't take anything I say too seriously.
+
+683
+01:02:29,925 --> 01:02:42,509
+Speaker SPEAKER_12: If we make something much smarter than us, because these digital intelligences can share much better, so it can learn much more, we will inevitably get those smart things to create subcons.
+
+684
+01:02:42,869 --> 01:02:47,157
+Speaker SPEAKER_12: If you want them to do something, in order to do that, they'll figure out, well, you have to do something else first.
+
+685
+01:02:47,177 --> 01:02:50,583
+Speaker SPEAKER_12: Like if you want to go to Europe, you have to get to the airport.
+
+686
+01:02:51,155 --> 01:02:52,599
+Speaker SPEAKER_12: That's a sub-goal.
+
+687
+01:02:52,619 --> 01:02:53,844
+Speaker SPEAKER_12: So they will make sub-goals.
+
+688
+01:02:54,286 --> 01:02:59,563
+Speaker SPEAKER_12: And there's a very obvious sub-goal, which is, if you want to get anything done, get more power.
+
+689
+01:03:00,184 --> 01:03:03,054
+Speaker SPEAKER_12: If you get more control, it's going to be easier to do things.
+
+690
+01:03:03,422 --> 01:03:08,128
+Speaker SPEAKER_12: And so anything that has the ability to create sub-goals will create the sub-goal of getting more control.
+
+691
+01:03:09,170 --> 01:03:13,333
+Speaker SPEAKER_12: And if things much more intelligent than us want to get control, they will.
+
+692
+01:03:13,375 --> 01:03:15,317
+Speaker SPEAKER_12: We won't be able to stop them.
+
+693
+01:03:15,336 --> 01:03:19,161
+Speaker SPEAKER_12: So we somehow have to figure out how we stop them ever wanting to get control.
+
+694
+01:03:20,061 --> 01:03:20,862
+Speaker SPEAKER_12: And there's some hope.
+
+695
+01:03:21,403 --> 01:03:23,306
+Speaker SPEAKER_12: These things didn't evolve.
+
+696
+01:03:23,365 --> 01:03:24,807
+Speaker SPEAKER_12: They're not nasty competitive things.
+
+697
+01:03:24,887 --> 01:03:27,590
+Speaker SPEAKER_12: They're however we make them.
+
+698
+01:03:28,617 --> 01:03:29,518
+Speaker SPEAKER_12: They're immortal.
+
+699
+01:03:30,278 --> 01:03:35,724
+Speaker SPEAKER_12: So with a digital intelligence, you just store the weight somewhere, and you can always run it again on other hardware.
+
+700
+01:03:36,505 --> 01:03:39,809
+Speaker SPEAKER_12: So we've actually discovered the secret of immortality.
+
+701
+01:03:40,391 --> 01:03:41,692
+Speaker SPEAKER_12: The only problem is it's not for us.
+
+702
+01:03:41,791 --> 01:03:43,273
+Speaker SPEAKER_12: We're immortal.
+
+703
+01:03:43,635 --> 01:03:44,856
+Speaker SPEAKER_12: But these other things are immortal.
+
+704
+01:03:45,155 --> 01:03:50,742
+Speaker SPEAKER_12: And that might make them much nicer, because they're not worried about dying, and they don't have to sort of...
+
+705
+01:03:51,331 --> 01:03:57,278
+Speaker SPEAKER_12: Well, they're very like Greek gods, and I have to say something that Elon Musk told me.
+
+706
+01:03:57,318 --> 01:04:00,514
+Speaker SPEAKER_12: This is Elon Musk's belief.
+
+707
+01:04:01,692 --> 01:04:05,376
+Speaker SPEAKER_12: Yes, we are the kind of boot loader for digital intelligence.
+
+708
+01:04:05,476 --> 01:04:10,623
+Speaker SPEAKER_12: We're this relatively dumb form of intelligence that was just smart enough to create computers and AI.
+
+709
+01:04:11,384 --> 01:04:13,465
+Speaker SPEAKER_12: And that's gonna be a much smarter form of intelligence.
+
+710
+01:04:14,327 --> 01:04:19,554
+Speaker SPEAKER_12: And Elon Musk thinks it'll keep us around because the world will be more interesting with people in it than without.
+
+711
+01:04:20,434 --> 01:04:23,117
+Speaker SPEAKER_12: Which seems like a very thin thread to hang your future from.
+
+712
+01:04:23,798 --> 01:04:25,219
+Speaker SPEAKER_12: But it relates to what Faye Faye said.
+
+713
+01:04:25,420 --> 01:04:29,826
+Speaker SPEAKER_12: It's very like the Greek gods model that the gods have people around to have fun with.
+
+714
+01:04:30,666 --> 01:04:34,514
+Speaker SPEAKER_05: Okay, can I comment on that?
+
+715
+01:04:34,534 --> 01:04:35,554
+Speaker SPEAKER_05: Nothing I said was controversial.
+
+716
+01:04:35,815 --> 01:04:36,516
+Speaker SPEAKER_05: No, not at all.
+
+717
+01:04:37,277 --> 01:04:48,878
+Speaker SPEAKER_05: So I want to bucket your four concerns, economy, labor, disinformation, and weaponization, and then the extinction.
+
+718
+01:04:49,239 --> 01:04:50,940
+Speaker SPEAKER_12: I forgot discrimination and bias.
+
+719
+01:04:50,960 --> 01:04:54,226
+Speaker SPEAKER_05: Okay, so I want to bucket them in two buckets.
+
+720
+01:04:54,527 --> 01:05:00,456
+Speaker SPEAKER_05: the Greek god extinction is the extinction bucket.
+
+721
+01:05:00,717 --> 01:05:03,942
+Speaker SPEAKER_05: Everything else I would call catastrophic.
+
+722
+01:05:03,961 --> 01:05:05,423
+Speaker SPEAKER_05: Catastrophic.
+
+723
+01:05:05,463 --> 01:05:08,369
+Speaker SPEAKER_05: Catastrophic danger.
+
+724
+01:05:08,829 --> 01:05:10,010
+Speaker SPEAKER_05: And I want to comment on this.
+
+725
+01:05:10,472 --> 01:05:21,547
+Speaker SPEAKER_05: I think that one thing I really feel is my responsibility as someone in the AI ecosystem is
+
+726
+01:05:22,253 --> 01:05:29,599
+Speaker SPEAKER_05: Making sure we are not talking hyperbolically, especially with public policy makers.
+
+727
+01:05:30,161 --> 01:05:42,731
+Speaker SPEAKER_05: The extinction risk is, Jeff, with all due respect, is a really interesting thought process that academia and think tanks should be working on.
+
+728
+01:05:42,853 --> 01:05:44,454
+Speaker SPEAKER_12: That's what I thought for many years.
+
+729
+01:05:45,094 --> 01:05:49,219
+Speaker SPEAKER_12: I thought it was a long way off in the future, and having philosophers and academics working on it was great.
+
+730
+01:05:49,478 --> 01:05:50,639
+Speaker SPEAKER_12: I think it's much more original.
+
+731
+01:05:50,771 --> 01:05:55,577
+Speaker SPEAKER_05: But this process is not just machines alone.
+
+732
+01:05:55,737 --> 01:05:58,199
+Speaker SPEAKER_05: Humans are in this messy process.
+
+733
+01:05:58,599 --> 01:06:01,282
+Speaker SPEAKER_05: So I think there is a lot of nuance.
+
+734
+01:06:01,362 --> 01:06:04,606
+Speaker SPEAKER_05: For example, we talk about nuclear.
+
+735
+01:06:04,626 --> 01:06:06,347
+Speaker SPEAKER_05: I know nuclear is much more narrow.
+
+736
+01:06:06,728 --> 01:06:14,556
+Speaker SPEAKER_05: But if you think about nuclear, it's not just the theory of fusion or fission or whatever.
+
+737
+01:06:14,856 --> 01:06:19,041
+Speaker SPEAKER_05: It's really obtaining uraniums or plutoniums
+
+738
+01:06:19,021 --> 01:06:22,585
+Speaker SPEAKER_05: the system engineering, the talents, and all that.
+
+739
+01:06:22,625 --> 01:06:24,447
+Speaker SPEAKER_05: I'm sure you watched the movie Oppenheimer.
+
+740
+01:06:24,847 --> 01:06:33,077
+Speaker SPEAKER_05: So here, if we're going towards that way, I think we have a fighting chance, more than a fighting chance, because we are human society.
+
+741
+01:06:33,398 --> 01:06:36,161
+Speaker SPEAKER_05: We're gonna put guardrails, we're gonna work together.
+
+742
+01:06:36,302 --> 01:06:48,976
+Speaker SPEAKER_05: I don't want to paint the picture that tomorrow we're gonna have all these robots, especially in robotic form, in physical form, creating
+
+743
+01:06:48,956 --> 01:06:50,280
+Speaker SPEAKER_05: the machine overlords.
+
+744
+01:06:50,360 --> 01:06:53,806
+Speaker SPEAKER_05: I really think we need to be careful in this.
+
+745
+01:06:53,887 --> 01:06:57,574
+Speaker SPEAKER_05: But I don't disagree with you that this is something we need to be thinking about.
+
+746
+01:06:57,594 --> 01:06:59,456
+Speaker SPEAKER_05: So this is the extinction bucket.
+
+747
+01:06:59,858 --> 01:07:03,965
+Speaker SPEAKER_05: The catastrophic risk bucket, I think it's much more real.
+
+748
+01:07:04,547 --> 01:07:06,931
+Speaker SPEAKER_05: I think we need the smartest people and
+
+749
+01:07:06,911 --> 01:07:08,994
+Speaker SPEAKER_05: the more the merrier to work on.
+
+750
+01:07:09,054 --> 01:07:11,215
+Speaker SPEAKER_05: So just to comment on each one of them.
+
+751
+01:07:11,577 --> 01:07:12,637
+Speaker SPEAKER_05: Weaponization, right?
+
+752
+01:07:12,677 --> 01:07:14,119
+Speaker SPEAKER_05: This is really real.
+
+753
+01:07:14,338 --> 01:07:16,561
+Speaker SPEAKER_05: I completely agree with you.
+
+754
+01:07:16,902 --> 01:07:18,943
+Speaker SPEAKER_05: We need international partnership.
+
+755
+01:07:19,023 --> 01:07:21,126
+Speaker SPEAKER_05: We need potential treaties.
+
+756
+01:07:21,505 --> 01:07:23,648
+Speaker SPEAKER_05: We need to understand the parameters.
+
+757
+01:07:23,788 --> 01:07:32,717
+Speaker SPEAKER_05: And this is, humanity is, as much as I'm optimistic about humanity, I'm also pessimistic about our self-destruction.
+
+758
+01:07:32,697 --> 01:07:36,103
+Speaker SPEAKER_05: ability as well as the destroying each other.
+
+759
+01:07:36,443 --> 01:07:39,028
+Speaker SPEAKER_05: So we've got to get people working on this.
+
+760
+01:07:39,108 --> 01:07:44,639
+Speaker SPEAKER_05: And our friend Stuart Russell and many of the AI experts are talking about this.
+
+761
+01:07:45,340 --> 01:07:49,849
+Speaker SPEAKER_05: And second bucket you talk about is disinformation.
+
+762
+01:07:50,269 --> 01:07:52,173
+Speaker SPEAKER_05: This is again,
+
+763
+01:07:52,153 --> 01:07:58,481
+Speaker SPEAKER_05: I mean, 2024, everybody's watching the US election and how AI will play out.
+
+764
+01:07:59,282 --> 01:08:05,230
+Speaker SPEAKER_05: And I think we have to get on the social media issue.
+
+765
+01:08:05,329 --> 01:08:08,634
+Speaker SPEAKER_05: We have to get on the disinformation issue.
+
+766
+01:08:08,653 --> 01:08:11,538
+Speaker SPEAKER_05: Technically, I'm seeing more work now.
+
+767
+01:08:12,139 --> 01:08:18,126
+Speaker SPEAKER_05: Digital authentication technically is actually a very active area of research.
+
+768
+01:08:18,587 --> 01:08:20,389
+Speaker SPEAKER_05: I think we need to,
+
+769
+01:08:20,707 --> 01:08:21,988
+Speaker SPEAKER_05: We need to invest in this.
+
+770
+01:08:22,069 --> 01:08:23,131
+Speaker SPEAKER_05: I know Adobe is.
+
+771
+01:08:23,351 --> 01:08:24,793
+Speaker SPEAKER_05: I know academia is.
+
+772
+01:08:24,934 --> 01:08:26,195
+Speaker SPEAKER_05: I think we need to.
+
+773
+01:08:26,216 --> 01:08:31,586
+Speaker SPEAKER_05: I hope there's startups actually in this space looking at digital authentication.
+
+774
+01:08:31,865 --> 01:08:33,368
+Speaker SPEAKER_05: But we need also policy.
+
+775
+01:08:33,909 --> 01:08:34,690
+Speaker SPEAKER_05: And then jobs.
+
+776
+01:08:35,773 --> 01:08:37,114
+Speaker SPEAKER_05: I cannot agree more.
+
+777
+01:08:37,856 --> 01:08:42,123
+Speaker SPEAKER_05: Actually, you use the most important work that I think it's really
+
+778
+01:08:42,104 --> 01:08:45,248
+Speaker SPEAKER_05: at the heart of our AI debate is human dignity.
+
+779
+01:08:46,751 --> 01:08:52,019
+Speaker SPEAKER_05: Human dignity is just beyond how much money you make, how many hours you work.
+
+780
+01:08:52,940 --> 01:09:02,796
+Speaker SPEAKER_05: I actually think if we do this right, we're going to move from labor economy to dignity economy in the sense that humans
+
+781
+01:09:02,775 --> 01:09:18,418
+Speaker SPEAKER_05: with the help of machines and collaboratively will be making money because of passion and personalization and expertise rather than just those jobs that are really grueling and grinding.
+
+782
+01:09:18,819 --> 01:09:25,488
+Speaker SPEAKER_05: And this is also why human HAI at Stanford has a founding principle of human augmentation.
+
+783
+01:09:25,829 --> 01:09:28,833
+Speaker SPEAKER_05: We see this in healthcare, one of the biggest
+
+784
+01:09:28,814 --> 01:09:37,329
+Speaker SPEAKER_05: earliest day of ChatGPT, I've got a doctor friend from Stanford Hospital who walked to me and said, Fei-Fei, I want to thank you for ChatGPT.
+
+785
+01:09:37,350 --> 01:09:38,471
+Speaker SPEAKER_05: I said, I didn't do anything.
+
+786
+01:09:38,872 --> 01:09:46,587
+Speaker SPEAKER_05: But he said that we are using a medical summarization tool from GPT because
+
+787
+01:09:46,567 --> 01:09:50,369
+Speaker SPEAKER_05: Because this is a huge burden on our doctors.
+
+788
+01:09:50,449 --> 01:09:52,652
+Speaker SPEAKER_05: It's taking time away from patients.
+
+789
+01:09:52,671 --> 01:09:55,854
+Speaker SPEAKER_05: But because of this, I get more time.
+
+790
+01:09:56,194 --> 01:09:57,737
+Speaker SPEAKER_05: And this is a perfect example.
+
+791
+01:09:57,817 --> 01:09:59,018
+Speaker SPEAKER_05: And we're going to see this more.
+
+792
+01:09:59,057 --> 01:10:02,820
+Speaker SPEAKER_05: We might even see this in blue collar labor.
+
+793
+01:10:02,900 --> 01:10:06,784
+Speaker SPEAKER_05: So we have a chance to make this right.
+
+794
+01:10:07,604 --> 01:10:16,573
+Speaker SPEAKER_05: I would add another concern in the catastrophic concern is actually you talk about power imbalance.
+
+795
+01:10:16,552 --> 01:10:27,323
+Speaker SPEAKER_05: One of the power imbalance I'm seeing right now, and it's exacerbating at a huge speed, is the leaving public sector out.
+
+796
+01:10:27,826 --> 01:10:29,007
+Speaker SPEAKER_05: I don't know about Canada.
+
+797
+01:10:29,529 --> 01:10:31,893
+Speaker SPEAKER_05: Not a single university in the U.S.
+
+798
+01:10:31,932 --> 01:10:36,860
+Speaker SPEAKER_05: today can train a chat GPT in terms of the compute power.
+
+799
+01:10:37,561 --> 01:10:42,729
+Speaker SPEAKER_05: And I think combining all universities of U.S.
+
+800
+01:10:42,750 --> 01:10:49,902
+Speaker SPEAKER_05: GPT, A100 or H100, probably nobody has it, but A100 cannot train a chat GPT.
+
+801
+01:10:49,881 --> 01:11:02,336
+Speaker SPEAKER_05: But this is where we still have unique data for curing cancer, for fighting climate change, for economics and legal studies.
+
+802
+01:11:02,877 --> 01:11:05,179
+Speaker SPEAKER_05: We need to invest in public sector.
+
+803
+01:11:05,279 --> 01:11:09,765
+Speaker SPEAKER_05: If we don't do it now, we're going to fail an entire generation.
+
+804
+01:11:10,104 --> 01:11:12,868
+Speaker SPEAKER_05: And we're going to leave that power imbalance.
+
+805
+01:11:12,847 --> 01:11:15,752
+Speaker SPEAKER_05: in such a dangerous way.
+
+806
+01:11:16,153 --> 01:11:17,494
+Speaker SPEAKER_05: So I do agree with you.
+
+807
+01:11:17,655 --> 01:11:23,645
+Speaker SPEAKER_05: I think we've got so many catastrophic risks and we need to get on this.
+
+808
+01:11:23,725 --> 01:11:28,273
+Speaker SPEAKER_05: This is why we need to work with policy makers and civil society.
+
+809
+01:11:29,194 --> 01:11:36,546
+Speaker SPEAKER_05: So I don't know if I'm saying this in an optimistic tone or in a pessimistic, I sound more pessimistic to myself now.
+
+810
+01:11:36,565 --> 01:11:39,210
+Speaker SPEAKER_05: But I do think there's a lot of work
+
+811
+01:11:39,847 --> 01:11:58,949
+Speaker SPEAKER_10: Well, optimistically, since you've both been very vocal about this over the last six, eight months, there has been a huge shift, both as Jeff, as you said, key researchers going and focusing on these issues, and then public and policy shifting in a way that governments are actually taking it seriously.
+
+812
+01:11:59,051 --> 01:12:08,742
+Speaker SPEAKER_10: So, I mean, you're advising the White House and US government, you've spoken to them as well, and you've sat with the prime minister or multiple prime ministers
+
+813
+01:12:09,127 --> 01:12:17,198
+Speaker SPEAKER_10: maybe, and they're listening, right, in a way that they wouldn't have necessarily 10 months ago, 12 months ago.
+
+814
+01:12:18,020 --> 01:12:20,724
+Speaker SPEAKER_10: Are you optimistic about the direction that that is going?
+
+815
+01:12:22,167 --> 01:12:29,738
+Speaker SPEAKER_12: I'm optimistic that people have understood that there's this whole bunch of problems, both the catastrophic risk and the existential risk.
+
+816
+01:12:29,757 --> 01:12:31,881
+Speaker SPEAKER_12: And I agree with Fei-Fei completely.
+
+817
+01:12:31,921 --> 01:12:33,543
+Speaker SPEAKER_12: The catastrophic risks are more urgent.
+
+818
+01:12:34,125 --> 01:12:37,750
+Speaker SPEAKER_12: In particular, 2024 is very urgent.
+
+819
+01:12:39,703 --> 01:12:42,713
+Speaker SPEAKER_12: I am quite optimistic that people are listening now, yes.
+
+820
+01:12:42,734 --> 01:12:43,898
+Speaker SPEAKER_05: Yes, I agree.
+
+821
+01:12:43,957 --> 01:12:52,988
+Speaker SPEAKER_05: I think they're listening, but I do want to say, first of all, who are you listening from?
+
+822
+01:12:53,862 --> 01:13:01,551
+Speaker SPEAKER_05: Again, I see asymmetry between public sector and private sector, and even in private sector, who are you listening from?
+
+823
+01:13:01,570 --> 01:13:06,597
+Speaker SPEAKER_05: It shouldn't just be big tech and celebrity startups.
+
+824
+01:13:06,698 --> 01:13:10,823
+Speaker SPEAKER_05: There is a lot of agriculture sector, education sector.
+
+825
+01:13:10,983 --> 01:13:16,630
+Speaker SPEAKER_05: A second is, then, after all this noise,
+
+826
+01:13:16,609 --> 01:13:18,274
+Speaker SPEAKER_05: What is a good policy?
+
+827
+01:13:18,394 --> 01:13:22,363
+Speaker SPEAKER_05: We talk about regulation versus no regulation.
+
+828
+01:13:23,045 --> 01:13:26,453
+Speaker SPEAKER_05: I actually don't know where Canada sits.
+
+829
+01:13:26,493 --> 01:13:30,622
+Speaker SPEAKER_05: America innovates and Europe regulates.
+
+830
+01:13:30,903 --> 01:13:31,885
+Speaker SPEAKER_05: Where's Canada?
+
+831
+01:13:31,864 --> 01:13:32,666
+Speaker SPEAKER_10: How about you in between?
+
+832
+01:13:33,006 --> 01:13:33,528
+Speaker SPEAKER_05: OK, good.
+
+833
+01:13:33,587 --> 01:13:34,770
+Speaker SPEAKER_05: Good for you.
+
+834
+01:13:34,789 --> 01:13:44,307
+Speaker SPEAKER_05: So I actually think we need both incentivization policy, building public sector, unlocking the power of data.
+
+835
+01:13:44,347 --> 01:13:49,738
+Speaker SPEAKER_05: We have so much data that is locked in our government, whether it's
+
+836
+01:13:49,717 --> 01:13:59,652
+Speaker SPEAKER_05: forest fire data, wildlife data, traffic data, climate data, and that's incentivization.
+
+837
+01:13:59,712 --> 01:14:02,815
+Speaker SPEAKER_05: And then there's good regulation.
+
+838
+01:14:03,356 --> 01:14:09,786
+Speaker SPEAKER_05: For example, we're very vocal about
+
+839
+01:14:09,765 --> 01:14:12,390
+Speaker SPEAKER_05: You have to be so careful in regulating.
+
+840
+01:14:12,411 --> 01:14:13,372
+Speaker SPEAKER_05: Where do you regulate?
+
+841
+01:14:13,512 --> 01:14:14,615
+Speaker SPEAKER_05: Upstream?
+
+842
+01:14:14,655 --> 01:14:15,317
+Speaker SPEAKER_05: Downstream?
+
+843
+01:14:15,356 --> 01:14:20,648
+Speaker SPEAKER_05: One of the most urgent regulation points to me is where rubber meets the road.
+
+844
+01:14:21,248 --> 01:14:26,519
+Speaker SPEAKER_05: It's when technology is now in the form of a product or service.
+
+845
+01:14:26,960 --> 01:14:28,804
+Speaker SPEAKER_05: It's going to meet people.
+
+846
+01:14:28,783 --> 01:14:38,177
+Speaker SPEAKER_05: whether it's through medicine, food, financial services, transportation, and then you've got this current framework.
+
+847
+01:14:38,217 --> 01:14:49,054
+Speaker SPEAKER_05: They're not far from perfect, but we need to empower this existing framework and update them rather than
+
+848
+01:14:49,725 --> 01:14:59,060
+Speaker SPEAKER_05: wasting time and possibly making the wrong decision of creating entirely new regulatory framework when we have the existing ones.
+
+849
+01:15:00,341 --> 01:15:06,171
+Speaker SPEAKER_10: Okay, so we are almost out of time for the discussion part, but we're gonna have a long session of Q&A.
+
+850
+01:15:06,731 --> 01:15:11,059
+Speaker SPEAKER_10: Before we started though, I'll ask two last questions.
+
+851
+01:15:11,274 --> 01:15:16,484
+Speaker SPEAKER_10: One is, I mean, our view is this technology is going to impact virtually everything.
+
+852
+01:15:16,664 --> 01:15:20,372
+Speaker SPEAKER_10: And some of the positive impacts are extraordinary.
+
+853
+01:15:20,993 --> 01:15:24,100
+Speaker SPEAKER_10: It is going to help cure diseases like cancer and diabetes and others.
+
+854
+01:15:24,399 --> 01:15:26,063
+Speaker SPEAKER_10: It's going to help mitigate climate change.
+
+855
+01:15:27,185 --> 01:15:29,288
+Speaker SPEAKER_10: There's just an enormous number of things.
+
+856
+01:15:29,310 --> 01:15:30,391
+Speaker SPEAKER_10: Invent new materials.
+
+857
+01:15:31,493 --> 01:15:34,279
+Speaker SPEAKER_10: I see over here someone who's focused on that.
+
+858
+01:15:34,259 --> 01:15:38,445
+Speaker SPEAKER_10: that can help in the energy sector and aerospace and pharmaceuticals.
+
+859
+01:15:39,226 --> 01:15:41,270
+Speaker SPEAKER_10: And that's a big effort at University of Toronto.
+
+860
+01:15:42,471 --> 01:15:48,081
+Speaker SPEAKER_10: But there's this entire world of new things that could not be done before that now can be done.
+
+861
+01:15:49,863 --> 01:15:57,574
+Speaker SPEAKER_10: So it's basically advancing science in a way that was part of either fiction or imagination before.
+
+862
+01:15:59,257 --> 01:16:01,161
+Speaker SPEAKER_10: Are you optimistic about that part of it?
+
+863
+01:16:01,867 --> 01:16:03,680
+Speaker SPEAKER_12: I think we're both very optimistic about that.
+
+864
+01:16:03,699 --> 01:16:07,707
+Speaker SPEAKER_12: I think we both believe it's going to have a huge impact on almost every field.
+
+865
+01:16:08,903 --> 01:16:29,561
+Speaker SPEAKER_10: So I think for those in this room who are actually studying, it's an incredibly exciting moment to be coming into it because there's the opportunity to get involved in limiting the negatives, the negative consequences, but also to participate in creating all those opportunities to solve some of the problems that have been, you know, they've been with us as long as we've been around as a species.
+
+866
+01:16:29,582 --> 01:16:37,829
+Speaker SPEAKER_10: So there's, I think, at least from our perspective, this really is one of the most extraordinary moments in human history.
+
+867
+01:16:37,810 --> 01:16:44,716
+Speaker SPEAKER_10: I hope that those of you who are embarking on your careers actually go out and go after the most ambitious things.
+
+868
+01:16:45,636 --> 01:16:52,382
+Speaker SPEAKER_10: You can also work on optimizing advertising and other things, or making more Netflix shows, which is great.
+
+869
+01:16:53,043 --> 01:16:54,385
+Speaker SPEAKER_10: But also- Definitely like that.
+
+870
+01:16:54,404 --> 01:16:54,625
+Speaker SPEAKER_10: Yes.
+
+871
+01:16:56,065 --> 01:16:58,448
+Speaker SPEAKER_10: So would my mom, who I think is exhausted Netflix.
+
+872
+01:17:00,250 --> 01:17:05,994
+Speaker SPEAKER_10: If there's a Turkish or Korean show out there, she's seen the very last episode of all.
+
+873
+01:17:05,975 --> 01:17:18,201
+Speaker SPEAKER_10: For those of you who are embarking on the career, my recommendation is try and think of the biggest possible challenge and what you could use this technology to help solve that is incredibly ambitious.
+
+874
+01:17:19,403 --> 01:17:24,895
+Speaker SPEAKER_10: You have both done that and kind of fought against barriers all the way along to achieve that.
+
+875
+01:17:25,145 --> 01:17:33,159
+Speaker SPEAKER_10: There's a room full of people and a lot of people online and others who will see this subsequently, I think, who are at the beginning stages of making those decisions.
+
+876
+01:17:33,980 --> 01:17:36,586
+Speaker SPEAKER_10: I'm guessing you would encourage them to do that too, right?
+
+877
+01:17:36,645 --> 01:17:40,774
+Speaker SPEAKER_10: Think as big as possible and go after the biggest, hardest challenges.
+
+878
+01:17:41,395 --> 01:17:42,475
+Speaker SPEAKER_05: Absolutely.
+
+879
+01:17:42,496 --> 01:17:43,658
+Speaker SPEAKER_05: I mean, embrace this.
+
+880
+01:17:43,738 --> 01:17:49,023
+Speaker SPEAKER_05: But I also would encourage, this is a new chapter of this technology.
+
+881
+01:17:49,064 --> 01:18:04,801
+Speaker SPEAKER_05: Even if you see yourself as a technologist and a scientist, don't forget there is also a humanist in you, because you need both to make this positive change for the world.
+
+882
+01:18:06,662 --> 01:18:10,186
+Speaker SPEAKER_10: OK, last question, and then we'll get into Q&A from the audience.
+
+883
+01:18:11,500 --> 01:18:16,547
+Speaker SPEAKER_10: Are we at a point where these machines have understanding and intelligence?
+
+884
+01:18:18,610 --> 01:18:20,092
+Speaker SPEAKER_05: Wow, that's the last question.
+
+885
+01:18:20,914 --> 01:18:22,797
+Speaker SPEAKER_05: How many hours do we have?
+
+886
+01:18:24,060 --> 01:18:24,300
+Speaker SPEAKER_10: Yes.
+
+887
+01:18:26,323 --> 01:18:29,648
+Speaker SPEAKER_10: OK, I'll come back to the yes.
+
+888
+01:18:29,667 --> 01:18:30,048
+Speaker SPEAKER_05: No.
+
+889
+01:18:41,943 --> 01:18:44,452
+Speaker SPEAKER_10: OK, do we have questions from the audience?
+
+890
+01:18:46,198 --> 01:18:47,323
+Speaker SPEAKER_10: I'll start on the far side.
+
+891
+01:18:47,844 --> 01:18:48,567
+Speaker SPEAKER_10: Do you want to stand up?
+
+892
+01:18:48,646 --> 01:18:50,755
+Speaker SPEAKER_10: And you're going to be given a mic.
+
+893
+01:18:53,350 --> 01:18:54,572
+Speaker SPEAKER_04: Hi, thanks.
+
+894
+01:18:54,612 --> 01:18:55,372
+Speaker SPEAKER_04: My name's Ellie.
+
+895
+01:18:56,333 --> 01:18:58,556
+Speaker SPEAKER_04: This is awesome, and thank you so much.
+
+896
+01:18:59,637 --> 01:19:06,407
+Speaker SPEAKER_04: Jeff, your work really inspired me as a U of T student to study cognitive science, and it's just amazing to hear both of you speak.
+
+897
+01:19:07,668 --> 01:19:08,329
+Speaker SPEAKER_04: I have a question.
+
+898
+01:19:08,390 --> 01:19:19,645
+Speaker SPEAKER_04: You mentioned the challenges for education and for enabling universities to empower students to use this technology and learn.
+
+899
+01:19:19,625 --> 01:19:33,578
+Speaker SPEAKER_04: You also mentioned, Feifei, the opportunity for this to become a dignity economy and empower people to just focus on personalization and passion and their expertise.
+
+900
+01:19:34,497 --> 01:19:47,369
+Speaker SPEAKER_04: I'm wondering if either of you have a perspective on the challenge that could emerge with overuse and over-reliance on AI, especially for kids and students as they're
+
+901
+01:19:47,350 --> 01:19:54,505
+Speaker SPEAKER_04: on their education career and they need to be building skills and using their brain and exercising the meat sack in their head.
+
+902
+01:19:54,564 --> 01:20:04,667
+Speaker SPEAKER_04: Our brains don't just continue to work and not accrue cobwebs if they're not learning.
+
+903
+01:20:04,646 --> 01:20:19,890
+Speaker SPEAKER_04: Yeah, I wonder your thoughts on burnout and over-reliance and just what happens around de-scaling and the ability to learn to paint when you can use stable diffusion or learn to write like Shakespeare when you can have ChatGBT do it for you.
+
+904
+01:20:20,291 --> 01:20:29,625
+Speaker SPEAKER_04: And then as those systems progress and can accrue greater insights and more complex problem-solving, how that impacts our ability to do the same.
+
+905
+01:20:29,993 --> 01:20:38,123
+Speaker SPEAKER_12: So I have one very little thought about that, which is when pocket calculators first came out, people said kids will forget how to do arithmetic.
+
+906
+01:20:39,204 --> 01:20:41,649
+Speaker SPEAKER_12: And that didn't turn out to be a major problem.
+
+907
+01:20:41,729 --> 01:20:45,073
+Speaker SPEAKER_12: I think kids probably did forget how to do arithmetic, but they got pocket calculators.
+
+908
+01:20:46,654 --> 01:20:51,702
+Speaker SPEAKER_12: But it's maybe not a very good analogy, because pocket calculators weren't smarter than them.
+
+909
+01:20:51,962 --> 01:20:56,287
+Speaker SPEAKER_12: Kids could forget doing arithmetic and go off and do real math.
+
+910
+01:20:56,268 --> 01:20:57,869
+Speaker SPEAKER_12: But with this stuff, I don't know.
+
+911
+01:20:58,871 --> 01:21:07,640
+Speaker SPEAKER_12: For myself, I found it's actually made me much more curious about the world, because I couldn't bear to go to a library and spend half an hour finding the relevant book and look something up.
+
+912
+01:21:08,282 --> 01:21:15,671
+Speaker SPEAKER_12: And now I can just ask ChatGPT anything, and it'll tell me the answer, and I'll believe it, which maybe isn't the right thing to do.
+
+913
+01:21:17,432 --> 01:21:21,077
+Speaker SPEAKER_12: But it's actually made me more curious about the world, because I can get the answers more quickly.
+
+914
+01:21:27,082 --> 01:21:31,506
+Speaker SPEAKER_12: Yeah, but normally I ask questions about plumbing and things like that.
+
+915
+01:21:33,157 --> 01:21:36,640
+Speaker SPEAKER_05: So I'll answer this with a very quick story.
+
+916
+01:21:36,661 --> 01:21:37,801
+Speaker SPEAKER_05: I don't know about you guys.
+
+917
+01:21:37,902 --> 01:21:41,947
+Speaker SPEAKER_05: Ever since I've become Stanford professor, I'm always so curious.
+
+918
+01:21:41,987 --> 01:21:48,134
+Speaker SPEAKER_05: There's a mysterious office in the university, which is the Office of College Admission.
+
+919
+01:21:48,635 --> 01:21:50,756
+Speaker SPEAKER_05: To me, they're the most mysterious people.
+
+920
+01:21:50,877 --> 01:21:58,305
+Speaker SPEAKER_05: And I never know where they are, who they are, where they sit, till I got a phone call earlier this year.
+
+921
+01:21:58,746 --> 01:22:02,690
+Speaker SPEAKER_05: And of course, they wanted to talk to me about Chad GPT and college admission.
+
+922
+01:22:02,671 --> 01:22:09,438
+Speaker SPEAKER_05: And of course, the question is related to, do we allow this in the application process?
+
+923
+01:22:09,518 --> 01:22:13,863
+Speaker SPEAKER_05: And now that there is ChatGPT, how to do admission?
+
+924
+01:22:14,302 --> 01:22:18,527
+Speaker SPEAKER_05: So I went home and I was talking to my 11-year-old.
+
+925
+01:22:18,768 --> 01:22:23,432
+Speaker SPEAKER_05: I said, well, I got this phone call and there's this college admission question.
+
+926
+01:22:25,213 --> 01:22:27,716
+Speaker SPEAKER_05: What do we do with ChatGPT and
+
+927
+01:22:27,697 --> 01:22:35,690
+Speaker SPEAKER_05: And students, what if a student wrote the best application, should we use in chat GPT and blah, blah, blah.
+
+928
+01:22:35,711 --> 01:22:37,634
+Speaker SPEAKER_05: And then I said, what would you do?
+
+929
+01:22:37,895 --> 01:22:41,780
+Speaker SPEAKER_05: I asked my 11-year-old, and he said, let me think about it.
+
+930
+01:22:41,881 --> 01:22:46,729
+Speaker SPEAKER_05: He actually went back and slept on this, or I don't know what happened.
+
+931
+01:22:46,770 --> 01:22:50,716
+Speaker SPEAKER_05: The next day, in the morning, he said, I have an answer.
+
+932
+01:22:51,153 --> 01:22:52,073
+Speaker SPEAKER_05: I said, what's your answer?
+
+933
+01:22:52,234 --> 01:23:00,268
+Speaker SPEAKER_05: He said, I think Stanford should admit the top 2,000 students who knows how to use chat GPT the most.
+
+934
+01:23:02,150 --> 01:23:05,555
+Speaker SPEAKER_05: It was actually, at the beginning, I thought that was such a silly answer, right?
+
+935
+01:23:06,037 --> 01:23:11,966
+Speaker SPEAKER_05: It's actually a really interesting answer, is kids already are seeing this as a tool.
+
+936
+01:23:13,068 --> 01:23:18,476
+Speaker SPEAKER_05: And they're seeing their relationship with this tool as an enabling, empowering tool.
+
+937
+01:23:18,457 --> 01:23:23,505
+Speaker SPEAKER_05: Clearly, my 11-year-old had no idea how to measure that, what that means and blah, blah, blah.
+
+938
+01:23:23,905 --> 01:23:28,554
+Speaker SPEAKER_05: But I think that's how we should see it in education and we should update our education.
+
+939
+01:23:28,594 --> 01:23:33,381
+Speaker SPEAKER_05: We cannot shut the tool outside of our education like what Jeff said.
+
+940
+01:23:33,721 --> 01:23:40,092
+Speaker SPEAKER_05: We need to embrace it and educate humans so that they know how to use the tool to their benefits.
+
+941
+01:23:40,511 --> 01:23:43,055
+Speaker SPEAKER_10: Incidentally, I've met Fei-Fei's 11-year-old son.
+
+942
+01:23:43,635 --> 01:23:45,657
+Speaker SPEAKER_10: He might be the president of Stanford by the time he's 18.
+
+943
+01:23:45,697 --> 01:23:48,279
+Speaker SPEAKER_05: If Stanford still exists.
+
+944
+01:23:50,242 --> 01:23:53,185
+Speaker SPEAKER_10: Let's go to this side of the room in the far corner.
+
+945
+01:24:00,832 --> 01:24:05,176
+Speaker SPEAKER_11: I want to ask about, we have really good foundation models right now.
+
+946
+01:24:05,197 --> 01:24:10,502
+Speaker SPEAKER_11: But in many of the applications, we need a real-time performance of the model.
+
+947
+01:24:11,055 --> 01:24:23,476
+Speaker SPEAKER_11: How do you see this area of future going, this area of research going in the future of, you know, using the abilities of this expert foundation model to train, you know, fast, smaller models?
+
+948
+01:24:24,458 --> 01:24:27,663
+Speaker SPEAKER_11: There's a question.
+
+949
+01:24:28,420 --> 01:24:30,443
+Speaker SPEAKER_05: Well, you're talking about the inference, right?
+
+950
+01:24:30,503 --> 01:24:48,132
+Speaker SPEAKER_05: We need to start thinking about the performance, the inference, and also make, fit the model on devices, depending on which, well, I mean, without getting into the technical details, all this research, as well as, you know, like, even outside of research, it's happening.
+
+951
+01:24:48,453 --> 01:24:50,917
+Speaker SPEAKER_05: It's, you wanna talk about?
+
+952
+01:24:51,926 --> 01:24:53,670
+Speaker SPEAKER_05: I thought, okay, you don't want to talk.
+
+953
+01:24:55,412 --> 01:24:55,613
+Speaker SPEAKER_05: Okay.
+
+954
+01:24:55,854 --> 01:24:55,953
+Speaker SPEAKER_05: Okay.
+
+955
+01:24:55,974 --> 01:25:00,681
+Speaker SPEAKER_05: It's happening, but I mean, it'll take a while, but yeah.
+
+956
+01:25:00,702 --> 01:25:02,243
+Speaker SPEAKER_10: We talk about things he invests.
+
+957
+01:25:03,506 --> 01:25:04,667
+Speaker SPEAKER_06: That's true.
+
+958
+01:25:04,688 --> 01:25:08,194
+Speaker SPEAKER_10: I can't, I can't talk about it until the company says that it's okay to talk about it.
+
+959
+01:25:08,213 --> 01:25:10,117
+Speaker SPEAKER_10: That's okay.
+
+960
+01:25:10,137 --> 01:25:11,038
+Speaker SPEAKER_10: Let's go back in the middle.
+
+961
+01:25:12,121 --> 01:25:12,822
+Speaker SPEAKER_10: Just right here.
+
+962
+01:25:23,314 --> 01:25:24,576
+Speaker SPEAKER_08: Yeah, hi, my name is Ariel.
+
+963
+01:25:24,615 --> 01:25:28,381
+Speaker SPEAKER_08: I'm a third year inter-sci students majoring in machine learning at U of T as well.
+
+964
+01:25:28,761 --> 01:25:30,443
+Speaker SPEAKER_08: And then that conversation was pretty great.
+
+965
+01:25:30,483 --> 01:25:32,706
+Speaker SPEAKER_08: And then thank you, Prof. Hinton and Prof. Lee.
+
+966
+01:25:33,225 --> 01:25:38,391
+Speaker SPEAKER_08: I just have a question that maybe a lot of undergrad or grad students are interested in this where in this room.
+
+967
+01:25:38,511 --> 01:25:49,203
+Speaker SPEAKER_08: So just like in your like 20s, like what drove you to be like a researcher and like what drove you into the area of academia and AI?
+
+968
+01:25:49,184 --> 01:26:05,622
+Speaker SPEAKER_08: because I'm kind of like confused right now like should I continue with like industry or like a like a direct entry PhD or like just like I take a master and then go back to industry and I have like one more question that usually what do you look for like if I apply
+
+969
+01:26:05,603 --> 01:26:09,006
+Speaker SPEAKER_08: for like a direct entry PhD to your lab?
+
+970
+01:26:09,667 --> 01:26:12,751
+Speaker SPEAKER_08: Is that like GPA or publication or recommendation letters?
+
+971
+01:26:12,770 --> 01:26:15,333
+Speaker SPEAKER_08: Could you just like elaborate a bit more on that?
+
+972
+01:26:15,354 --> 01:26:15,833
+Speaker SPEAKER_08: Thank you.
+
+973
+01:26:16,074 --> 01:26:21,000
+Speaker SPEAKER_10: I think there are about 300 people in the room and about 6,000 online who want to ask that question to you, Fei-Fei.
+
+974
+01:26:21,380 --> 01:26:22,100
+Speaker SPEAKER_05: You want to start?
+
+975
+01:26:23,282 --> 01:26:25,465
+Speaker SPEAKER_05: You're in your 20s.
+
+976
+01:26:25,484 --> 01:26:31,070
+Speaker SPEAKER_12: Oh, I got interested in how the brain works when I was a teenager because I had a very smart friend at school who
+
+977
+01:26:32,265 --> 01:26:36,932
+Speaker SPEAKER_12: came into school one day and talked about holograms and how maybe memories in the brain were like holograms.
+
+978
+01:26:37,873 --> 01:26:39,176
+Speaker SPEAKER_12: And I basically said, what's a hologram?
+
+979
+01:26:40,037 --> 01:26:43,582
+Speaker SPEAKER_12: And ever since then, I've been interested in how the brain works.
+
+980
+01:26:45,425 --> 01:26:48,770
+Speaker SPEAKER_12: So it was just luckily having a very smart friend at school.
+
+981
+01:26:51,052 --> 01:26:57,042
+Speaker SPEAKER_05: I'm going to be very shamelessly, if you read my book, that's actually what the book is about.
+
+982
+01:26:58,810 --> 01:26:59,890
+Speaker SPEAKER_12: It's a very good book.
+
+983
+01:27:00,872 --> 01:27:01,391
+Speaker SPEAKER_05: Thank you.
+
+984
+01:27:01,412 --> 01:27:02,052
+Speaker SPEAKER_05: No, seriously.
+
+985
+01:27:02,113 --> 01:27:07,118
+Speaker SPEAKER_05: Actually, I told Jordan and Jeff, there are so many AI books about technology.
+
+986
+01:27:07,217 --> 01:27:20,789
+Speaker SPEAKER_05: And when I started writing this book about AI technology, I want to write a journey, especially to the young people, especially to the young people of all walks of life, not just a certain look.
+
+987
+01:27:21,371 --> 01:27:27,095
+Speaker SPEAKER_05: And that book talks about the journey of a young,
+
+988
+01:27:27,076 --> 01:27:30,859
+Speaker SPEAKER_05: girl, you know, and in different settings.
+
+989
+01:27:31,564 --> 01:27:36,411
+Speaker SPEAKER_05: realizing or coming to understand her own dream and realizing her dream.
+
+990
+01:27:36,530 --> 01:27:39,135
+Speaker SPEAKER_05: And it's not very different from what Jeff said.
+
+991
+01:27:39,475 --> 01:27:40,657
+Speaker SPEAKER_05: It starts with a passion.
+
+992
+01:27:41,537 --> 01:27:45,703
+Speaker SPEAKER_05: It really did start with a passion, a passion against all other voices.
+
+993
+01:27:45,743 --> 01:27:56,658
+Speaker SPEAKER_05: The passion might come from a friend, it might come from a movie you see, it might come from a book you read, or it might come from the best subject in school that you felt most fun, whatever it is.
+
+994
+01:27:57,679 --> 01:28:00,002
+Speaker SPEAKER_05: And in the students I hire,
+
+995
+01:28:02,158 --> 01:28:15,197
+Speaker SPEAKER_05: I look for that passion, I look for ambition, a healthy ambition of wanting to make a change, not wanting to get a degree per se.
+
+996
+01:28:15,216 --> 01:28:25,229
+Speaker SPEAKER_05: And of course, technically speaking, I look for good technical background, not just test scores, but
+
+997
+01:28:25,582 --> 01:28:29,670
+Speaker SPEAKER_05: Honestly, I would have never got into my own lab.
+
+998
+01:28:33,055 --> 01:28:34,979
+Speaker SPEAKER_05: The standard today is so high.
+
+999
+01:28:35,060 --> 01:28:42,573
+Speaker SPEAKER_05: So by the time you apply for a PhD or a graduate school program, you probably have some track record.
+
+1000
+01:28:43,095 --> 01:28:43,314
+Speaker SPEAKER_05: Some.
+
+1001
+01:28:43,756 --> 01:28:45,378
+Speaker SPEAKER_05: It doesn't have to.
+
+1002
+01:28:45,359 --> 01:28:51,104
+Speaker SPEAKER_05: Of course, if it's Jeff's student, I'll take them without even asking question.
+
+1003
+01:28:51,123 --> 01:28:58,550
+Speaker SPEAKER_05: But even if you, and I'm saying this not only to U of T student, to every student online, you can have a very different background.
+
+1004
+01:28:58,670 --> 01:29:01,212
+Speaker SPEAKER_05: You can come from an underprivileged background.
+
+1005
+01:29:01,233 --> 01:29:05,716
+Speaker SPEAKER_05: What I look for is not where you are, but the journey you take.
+
+1006
+01:29:05,997 --> 01:29:10,381
+Speaker SPEAKER_05: That track record shows the journey you take, shows your passion and conviction.
+
+1007
+01:29:11,561 --> 01:29:14,404
+Speaker SPEAKER_10: Having read the book, I will say that it is,
+
+1008
+01:29:15,295 --> 01:29:19,399
+Speaker SPEAKER_10: It is a very surprising journey, I think, to most people who will read it.
+
+1009
+01:29:20,340 --> 01:29:23,403
+Speaker SPEAKER_10: And just a plug, if you're in Canada, go buy it at Indigo.
+
+1010
+01:29:23,762 --> 01:29:26,284
+Speaker SPEAKER_10: You can go to indigo.ca and pre-order the book.
+
+1011
+01:29:29,707 --> 01:29:35,493
+Speaker SPEAKER_10: But I think that people will be surprised and really enjoy reading and understanding that experience.
+
+1012
+01:29:35,514 --> 01:29:38,275
+Speaker SPEAKER_10: And you'll get a very good understanding answering that question.
+
+1013
+01:29:38,596 --> 01:29:38,896
+Speaker SPEAKER_07: Thank you.
+
+1014
+01:29:39,497 --> 01:29:41,019
+Speaker SPEAKER_10: OK, there's about 50 hands up.
+
+1015
+01:29:41,880 --> 01:29:44,442
+Speaker SPEAKER_10: All right, let's go over here right in the corner.
+
+1016
+01:29:51,002 --> 01:29:52,286
+Speaker SPEAKER_09: Hey, thank you for the great talk.
+
+1017
+01:29:52,567 --> 01:29:53,168
+Speaker SPEAKER_09: My name's Shalev.
+
+1018
+01:29:53,208 --> 01:29:54,292
+Speaker SPEAKER_09: I'm at Vector Institute.
+
+1019
+01:29:54,632 --> 01:29:55,676
+Speaker SPEAKER_09: We're going to Sheila McIlrath.
+
+1020
+01:29:57,180 --> 01:29:59,846
+Speaker SPEAKER_09: So I think benchmarks are very important.
+
+1021
+01:30:00,067 --> 01:30:01,350
+Speaker SPEAKER_09: Benchmarks are like questions.
+
+1022
+01:30:01,411 --> 01:30:05,922
+Speaker SPEAKER_09: ImageNet was basically a question, and then people are trying to answer it with models.
+
+1023
+01:30:06,055 --> 01:30:08,797
+Speaker SPEAKER_09: And so right now, LLMs are very hard to evaluate.
+
+1024
+01:30:08,978 --> 01:30:14,024
+Speaker SPEAKER_09: And generalist agents that take actions are even, it's so hard to start thinking about how to evaluate those.
+
+1025
+01:30:14,703 --> 01:30:17,027
+Speaker SPEAKER_09: So my question is about questions.
+
+1026
+01:30:17,127 --> 01:30:18,207
+Speaker SPEAKER_09: It's about these benchmarks.
+
+1027
+01:30:18,748 --> 01:30:19,409
+Speaker SPEAKER_09: So two things.
+
+1028
+01:30:19,729 --> 01:30:30,881
+Speaker SPEAKER_09: One, if you sat down with GPT-5, GPT-6, GPT-7, and you had five minutes to play with it, what questions would you ask that would tell you this is the next generation of these models?
+
+1029
+01:30:30,862 --> 01:30:33,885
+Speaker SPEAKER_09: And the second is more of a comprehensive benchmark.
+
+1030
+01:30:33,904 --> 01:30:40,070
+Speaker SPEAKER_09: What is the more comprehensive, not five minutes, benchmark that we need in order to evaluate LLMs or generalist agents?
+
+1031
+01:30:40,091 --> 01:30:43,194
+Speaker SPEAKER_09: You can choose which one you want to, I guess, think about or answer.
+
+1032
+01:30:43,914 --> 01:30:44,114
+Speaker SPEAKER_12: Okay.
+
+1033
+01:30:44,135 --> 01:30:44,395
+Speaker SPEAKER_12: Thank you.
+
+1034
+01:30:44,836 --> 01:30:45,756
+Speaker SPEAKER_12: Thank you for your question.
+
+1035
+01:30:45,796 --> 01:30:46,697
+Speaker SPEAKER_12: It's a very good question.
+
+1036
+01:30:47,118 --> 01:30:50,100
+Speaker SPEAKER_12: I will answer a different question that's just vaguely related.
+
+1037
+01:30:50,140 --> 01:30:53,885
+Speaker SPEAKER_12: So this issue arose with GPT-4.
+
+1038
+01:30:54,664 --> 01:30:56,447
+Speaker SPEAKER_12: How do you tell whether it's smart?
+
+1039
+01:30:57,068 --> 01:31:11,586
+Speaker SPEAKER_12: And in particular, I was talking to someone called Hector Levesque, who used to be a faculty member in computer science, and has beliefs that are almost the diametric opposite of mine, but is extremely intellectually honest.
+
+1040
+01:31:12,587 --> 01:31:19,555
+Speaker SPEAKER_12: And so he was kind of amazed that GPT-4 worked, and he wanted to know how it could possibly work.
+
+1041
+01:31:20,036 --> 01:31:21,277
+Speaker SPEAKER_12: And so we spent time talking about that.
+
+1042
+01:31:21,837 --> 01:31:26,703
+Speaker SPEAKER_12: And then I got him to give me some questions to ask it.
+
+1043
+01:31:27,157 --> 01:31:32,636
+Speaker SPEAKER_12: And he gave me a series of questions to ask it, so we could decide whether it understood.
+
+1044
+01:31:32,676 --> 01:31:35,185
+Speaker SPEAKER_12: So the question was, does it really understand what it's saying?
+
+1045
+01:31:35,586 --> 01:31:38,938
+Speaker SPEAKER_12: Or is it just using some fancy statistics to predict the next word?
+
+1046
+01:31:39,863 --> 01:31:47,091
+Speaker SPEAKER_12: One comment about that is the only way you can predict the next word really well is to understand what the person said.
+
+1047
+01:31:47,452 --> 01:31:49,293
+Speaker SPEAKER_12: So you have to understand in order to predict.
+
+1048
+01:31:49,795 --> 01:31:51,657
+Speaker SPEAKER_12: But you can predict quite well without understanding.
+
+1049
+01:31:51,676 --> 01:31:53,559
+Speaker SPEAKER_12: So does GPT-4 really understand?
+
+1050
+01:31:54,220 --> 01:32:00,568
+Speaker SPEAKER_12: So a question Hector came up with was, the rooms in my house are painted white or yellow or blue.
+
+1051
+01:32:01,609 --> 01:32:04,212
+Speaker SPEAKER_12: I want all the rooms to be white.
+
+1052
+01:32:04,292 --> 01:32:05,212
+Speaker SPEAKER_12: What should I do?
+
+1053
+01:32:06,390 --> 01:32:09,516
+Speaker SPEAKER_12: And I knew it would be able to do that, so I made the question more difficult.
+
+1054
+01:32:10,238 --> 01:32:13,003
+Speaker SPEAKER_12: So I said, the rooms in my house are painted white or yellow or blue.
+
+1055
+01:32:13,043 --> 01:32:16,530
+Speaker SPEAKER_12: Yellow paint fades to white within a year.
+
+1056
+01:32:16,570 --> 01:32:19,596
+Speaker SPEAKER_12: In two years' time, I'd like all the rooms to be white.
+
+1057
+01:32:19,636 --> 01:32:20,838
+Speaker SPEAKER_12: What should I do?
+
+1058
+01:32:21,172 --> 01:32:23,496
+Speaker SPEAKER_12: Oh, and I said and why.
+
+1059
+01:32:23,756 --> 01:32:25,398
+Speaker SPEAKER_12: If you say and why, it'll give you the explanation.
+
+1060
+01:32:25,417 --> 01:32:26,698
+Speaker SPEAKER_12: ChatGPT just solved it.
+
+1061
+01:32:26,738 --> 01:32:29,783
+Speaker SPEAKER_12: It said you should paint the blue rooms white.
+
+1062
+01:32:30,564 --> 01:32:34,427
+Speaker SPEAKER_12: It said you don't need to worry about the yellow rooms, because they'll fade to white.
+
+1063
+01:32:35,208 --> 01:32:37,030
+Speaker SPEAKER_12: It turns out it's very sensitive to the wording.
+
+1064
+01:32:37,310 --> 01:32:43,318
+Speaker SPEAKER_12: If you don't use fade, but you use change, I got a complaint from somebody who said, I tried, and it didn't work.
+
+1065
+01:32:43,779 --> 01:32:46,101
+Speaker SPEAKER_12: And they used change instead of fade.
+
+1066
+01:32:46,122 --> 01:32:50,926
+Speaker SPEAKER_12: And the point is, we understand fade to mean change color and stay changed.
+
+1067
+01:32:51,159 --> 01:32:54,786
+Speaker SPEAKER_12: But if you say change, it would change color, but it might change back.
+
+1068
+01:32:55,266 --> 01:32:57,350
+Speaker SPEAKER_12: So it doesn't give the same answer if you change rather than fade.
+
+1069
+01:32:57,369 --> 01:32:58,492
+Speaker SPEAKER_12: It's very sensitive to the wording.
+
+1070
+01:33:01,015 --> 01:33:03,279
+Speaker SPEAKER_12: But that convinced me it really did understand.
+
+1071
+01:33:03,340 --> 01:33:05,323
+Speaker SPEAKER_12: And there's other things it's done.
+
+1072
+01:33:06,003 --> 01:33:12,914
+Speaker SPEAKER_12: So there's a nice question that people came up with recently that many chatbots don't get right.
+
+1073
+01:33:13,317 --> 01:33:21,207
+Speaker SPEAKER_12: and some people don't get right, but GPT-4 gets right, which is... So, you see, I'm answering the question, does GPT-4 understand?
+
+1074
+01:33:21,469 --> 01:33:24,073
+Speaker SPEAKER_12: Which does have some relation to what you asked, right?
+
+1075
+01:33:26,815 --> 01:33:28,439
+Speaker SPEAKER_12: So, the question goes like this.
+
+1076
+01:33:29,380 --> 01:33:30,601
+Speaker SPEAKER_12: Sally has three brothers.
+
+1077
+01:33:31,923 --> 01:33:33,787
+Speaker SPEAKER_12: Each of her brothers has two sisters.
+
+1078
+01:33:34,587 --> 01:33:36,010
+Speaker SPEAKER_12: How many sisters does Sally have?
+
+1079
+01:33:37,131 --> 01:33:38,432
+Speaker SPEAKER_12: And most chatbots get that wrong.
+
+1080
+01:33:40,697 --> 01:33:41,738
+Speaker SPEAKER_05: What about humans?
+
+1081
+01:33:42,088 --> 01:33:50,801
+Speaker SPEAKER_12: Well, I just gave a fireside chat in Las Vegas, and the interviewer asked me for an example of things the chatbots got wrong.
+
+1082
+01:33:51,141 --> 01:33:54,266
+Speaker SPEAKER_12: So I gave him this example, and he said six.
+
+1083
+01:33:56,369 --> 01:33:58,393
+Speaker SPEAKER_12: And that was kind of embarrassing.
+
+1084
+01:33:58,752 --> 01:34:00,114
+Speaker SPEAKER_05: We won't ask his name.
+
+1085
+01:34:00,376 --> 01:34:01,216
+Speaker SPEAKER_05: No, just kidding.
+
+1086
+01:34:01,237 --> 01:34:01,436
+Speaker SPEAKER_12: No.
+
+1087
+01:34:02,998 --> 01:34:04,180
+Speaker SPEAKER_12: So people get it wrong.
+
+1088
+01:34:04,341 --> 01:34:07,506
+Speaker SPEAKER_12: Yeah.
+
+1089
+01:34:07,704 --> 01:34:12,011
+Speaker SPEAKER_12: I don't see how you can get that right without being able to do a certain amount of reasoning.
+
+1090
+01:34:12,091 --> 01:34:13,233
+Speaker SPEAKER_12: It's got to sort of build a model.
+
+1091
+01:34:13,814 --> 01:34:21,426
+Speaker SPEAKER_12: And Andrew Ng has these examples where playing Othello, even if you just give it strings as input, it builds a model of the board internally.
+
+1092
+01:34:22,728 --> 01:34:24,250
+Speaker SPEAKER_12: So I think they really do understand.
+
+1093
+01:34:25,972 --> 01:34:30,259
+Speaker SPEAKER_10: And to take that a step further, is that understanding across the line into intelligence?
+
+1094
+01:34:31,121 --> 01:34:32,042
+Speaker SPEAKER_10: You said yes.
+
+1095
+01:34:32,949 --> 01:34:33,229
+Speaker SPEAKER_12: Yeah.
+
+1096
+01:34:33,671 --> 01:34:35,953
+Speaker SPEAKER_12: I mean, I accept the Turing test for intelligence.
+
+1097
+01:34:36,253 --> 01:34:40,399
+Speaker SPEAKER_12: People only started rejecting the Turing test when we passed it.
+
+1098
+01:34:40,420 --> 01:34:42,662
+Speaker SPEAKER_10: So that's the moving goal line that I was talking about.
+
+1099
+01:34:43,623 --> 01:34:43,904
+Speaker SPEAKER_10: Okay.
+
+1100
+01:34:44,284 --> 01:34:44,865
+Speaker SPEAKER_10: Do you want to answer?
+
+1101
+01:34:44,905 --> 01:34:46,849
+Speaker SPEAKER_05: I want to quickly answer.
+
+1102
+01:34:46,868 --> 01:34:49,811
+Speaker SPEAKER_05: First of all, also applaud you for asking such a good question.
+
+1103
+01:34:49,893 --> 01:34:51,734
+Speaker SPEAKER_05: I'm going to answer
+
+1104
+01:34:51,884 --> 01:35:04,597
+Speaker SPEAKER_05: in addition to Jeff's, because I think what Jeff is trying to push is really how do we assess the fundamental intelligence level of these big models.
+
+1105
+01:35:04,958 --> 01:35:06,619
+Speaker SPEAKER_05: But there are a couple of other dimensions.
+
+1106
+01:35:07,280 --> 01:35:15,430
+Speaker SPEAKER_05: One is, again, Stanford, HAI's Center for Research of Foundation Model, is creating these evaluation metrics, right?
+
+1107
+01:35:15,449 --> 01:35:17,131
+Speaker SPEAKER_05: You're probably reading the paper.
+
+1108
+01:35:17,112 --> 01:35:19,255
+Speaker SPEAKER_05: papers by Percy Helm and all that.
+
+1109
+01:35:19,916 --> 01:35:29,208
+Speaker SPEAKER_05: I think also this technology is getting so deep that some of the benchmark is more messier than what you think the ImageNet benchmark.
+
+1110
+01:35:29,509 --> 01:35:39,002
+Speaker SPEAKER_05: For example, in collaboration with government now, for example, NIST, the US National Institute for Standard
+
+1111
+01:35:38,981 --> 01:35:39,903
+Speaker SPEAKER_05: What's the T?
+
+1112
+01:35:40,224 --> 01:35:40,864
+Speaker SPEAKER_05: Technology.
+
+1113
+01:35:40,885 --> 01:35:42,067
+Speaker SPEAKER_05: And the technology.
+
+1114
+01:35:42,688 --> 01:35:43,649
+Speaker SPEAKER_05: Testing or something.
+
+1115
+01:35:44,009 --> 01:35:54,204
+Speaker SPEAKER_05: You know, we need to start benchmarking against societally relevant issues, not just core fundamental capability.
+
+1116
+01:35:54,685 --> 01:36:02,577
+Speaker SPEAKER_05: One more thing I want to open your aperture a little bit is that beyond the LLMs, there are so many
+
+1117
+01:36:02,859 --> 01:36:10,912
+Speaker SPEAKER_05: towards the future of AI that we actually haven't built good benchmarks for yet.
+
+1118
+01:36:11,052 --> 01:36:14,118
+Speaker SPEAKER_05: I mean, again, my lab is doing some of the robotic learning one.
+
+1119
+01:36:14,418 --> 01:36:18,265
+Speaker SPEAKER_05: Google just released the paper yesterday on robotic learning.
+
+1120
+01:36:18,545 --> 01:36:22,692
+Speaker SPEAKER_05: So there is a lot more research coming up in this space.
+
+1121
+01:36:24,341 --> 01:36:26,104
+Speaker SPEAKER_10: OK, I know we have a lot of questions online.
+
+1122
+01:36:26,364 --> 01:36:32,315
+Speaker SPEAKER_10: I'm going to maybe take another few in the room, and then maybe someone from Radical could read out a question or two from online.
+
+1123
+01:36:33,497 --> 01:36:39,608
+Speaker SPEAKER_10: OK, in the room, let's go for one that's not too far away from the last one.
+
+1124
+01:36:39,768 --> 01:36:41,110
+Speaker SPEAKER_10: Here, just right here.
+
+1125
+01:36:46,338 --> 01:36:48,443
+Speaker SPEAKER_10: Here's the mic coming.
+
+1126
+01:36:52,996 --> 01:37:00,993
+Speaker SPEAKER_02: Hello, I'm Vishwam, and I'm a graduate student at University of Guelph, and I'm doing my thesis in AI and agriculture.
+
+1127
+01:37:01,474 --> 01:37:11,814
+Speaker SPEAKER_02: So building upon something you mentioned that universities don't have enough funding to train kind of foundation models, right?
+
+1128
+01:37:11,795 --> 01:37:12,716
+Speaker SPEAKER_02: Same question.
+
+1129
+01:37:12,775 --> 01:37:15,139
+Speaker SPEAKER_02: So I want to work in AI and agriculture.
+
+1130
+01:37:15,760 --> 01:37:16,640
+Speaker SPEAKER_02: I am passionate about it.
+
+1131
+01:37:16,961 --> 01:37:19,243
+Speaker SPEAKER_02: But I don't have enough resources to do that.
+
+1132
+01:37:19,724 --> 01:37:23,548
+Speaker SPEAKER_02: I might think of a very good architecture, but I can't train it.
+
+1133
+01:37:24,170 --> 01:37:28,054
+Speaker SPEAKER_02: So maybe I can go to industry, then pitch them this idea.
+
+1134
+01:37:28,135 --> 01:37:30,556
+Speaker SPEAKER_02: Then I don't have the control over the idea.
+
+1135
+01:37:31,037 --> 01:37:33,020
+Speaker SPEAKER_02: I don't know how they are going to apply it.
+
+1136
+01:37:33,560 --> 01:37:38,466
+Speaker SPEAKER_02: So do you have some advice on how to handle the situation?
+
+1137
+01:37:39,228 --> 01:37:41,109
+Speaker SPEAKER_10: So if you can get me.
+
+1138
+01:37:41,090 --> 01:37:41,992
+Speaker SPEAKER_10: You're a startup.
+
+1139
+01:37:42,833 --> 01:37:43,997
+Speaker SPEAKER_10: That's what we're here for.
+
+1140
+01:37:44,056 --> 01:37:46,481
+Speaker SPEAKER_10: Sorry, I'll let you answer.
+
+1141
+01:37:46,962 --> 01:37:57,006
+Speaker SPEAKER_12: If you can get your hands on an open source foundation model, you can fine-tune one of those models with much less resources than it took to build the model.
+
+1142
+01:37:57,025 --> 01:37:59,993
+Speaker SPEAKER_12: So universities can still do fine-tuning of those models.
+
+1143
+01:38:01,119 --> 01:38:13,037
+Speaker SPEAKER_05: That's a very pragmatic answer for now, but this is where we have been really talking to the higher education leaders as well as policy makers, invest in public sector.
+
+1144
+01:38:13,377 --> 01:38:16,060
+Speaker SPEAKER_05: We've got to have a national research cloud.
+
+1145
+01:38:16,442 --> 01:38:20,427
+Speaker SPEAKER_05: I don't know if Canada has national research cloud, but we're pushing the US.
+
+1146
+01:38:20,927 --> 01:38:22,791
+Speaker SPEAKER_05: We need to bring in
+
+1147
+01:38:22,770 --> 01:38:29,082
+Speaker SPEAKER_05: the researchers like you to be able to access the National Research Cloud.
+
+1148
+01:38:29,261 --> 01:38:45,048
+Speaker SPEAKER_05: But you do have an advantage by not being a company is that you have more opportunity to get your hands on unique data sets, data sets especially for public good, and play up that card.
+
+1149
+01:38:45,029 --> 01:38:55,800
+Speaker SPEAKER_05: you could work with government agencies or communities or whatever, because public sector still has the trust, you know, and take advantage of that.
+
+1150
+01:38:55,819 --> 01:38:59,224
+Speaker SPEAKER_05: But for now, yes, fine-tune on open-source models.
+
+1151
+01:39:00,145 --> 01:39:00,625
+Speaker SPEAKER_05: Thank you so much.
+
+1152
+01:39:01,105 --> 01:39:02,648
+Speaker SPEAKER_10: Okay, we're going to take a couple questions.
+
+1153
+01:39:02,688 --> 01:39:11,577
+Speaker SPEAKER_10: We have thousands of people watching online, watch parties at Stanford and elsewhere, so let's see if we can get a question from some people online.
+
+1154
+01:39:17,328 --> 01:39:19,716
+Speaker SPEAKER_10: Leah's going to ask this question on behalf of someone online.
+
+1155
+01:39:19,796 --> 01:39:24,051
+Speaker SPEAKER_10: By the way, she's done an enormous amount of work to make this happen, along with Aaron Brindle.
+
+1156
+01:39:24,091 --> 01:39:25,617
+Speaker SPEAKER_10: So thank you both.
+
+1157
+01:39:31,856 --> 01:39:32,658
+Speaker SPEAKER_03: All right, thank you.
+
+1158
+01:39:32,679 --> 01:39:38,953
+Speaker SPEAKER_03: So we do have hundreds of AI researchers online, and they're folks who are building AI-first companies.
+
+1159
+01:39:39,092 --> 01:39:43,422
+Speaker SPEAKER_03: And so the first most upvoted question was from Ben Saunders, or Sanders.
+
+1160
+01:39:44,064 --> 01:39:50,018
+Speaker SPEAKER_03: He's currently CEO of an AI startup, and his colleague was actually a student of Geoffrey Hinton's in 2008.
+
+1161
+01:39:49,997 --> 01:39:53,064
+Speaker SPEAKER_03: And he has asked about building responsibly.
+
+1162
+01:39:53,083 --> 01:39:55,568
+Speaker SPEAKER_03: And a lot of these questions have to do about building responsibly.
+
+1163
+01:39:56,208 --> 01:40:04,545
+Speaker SPEAKER_03: And they're thinking about what measures can help them as teams be proper stewards for good versus bad, and what it actually means to be a steward.
+
+1164
+01:40:07,250 --> 01:40:09,052
+Speaker SPEAKER_05: Great question.
+
+1165
+01:40:10,265 --> 01:40:21,856
+Speaker SPEAKER_05: Responsible AI framework, there's a lot of framework and I think somebody has estimated a few years ago there were like 300 framework from state, nation state, all the way to corporate.
+
+1166
+01:40:21,877 --> 01:40:29,904
+Speaker SPEAKER_05: I think it's really important for every company to build a responsible framework.
+
+1167
+01:40:29,925 --> 01:40:34,770
+Speaker SPEAKER_05: There is a lot you can borrow, even Radical is making
+
+1168
+01:40:34,750 --> 01:40:47,305
+Speaker SPEAKER_05: making one and create the value framework that you believe in and recognize that AI product is a system.
+
+1169
+01:40:47,425 --> 01:41:03,103
+Speaker SPEAKER_05: So from the upstream defining problem, data set, data integrity, how you build models, the deployment and create a multi-stakeholder ecosystem or multi-stakeholder
+
+1170
+01:41:03,082 --> 01:41:11,792
+Speaker SPEAKER_05: whatever team to help you to build this responsible framework and also create partnerships.
+
+1171
+01:41:11,912 --> 01:41:24,185
+Speaker SPEAKER_05: Partnerships with public sector like academia like us, partnership with the civil society that worries about different dimensions from privacy to bias to this.
+
+1172
+01:41:24,706 --> 01:41:27,588
+Speaker SPEAKER_05: So really try to take
+
+1173
+01:41:27,569 --> 01:41:36,786
+Speaker SPEAKER_05: Both have a point of view as a company, but also be part of the ecosystem and partners with people who have this knowledge.
+
+1174
+01:41:37,546 --> 01:41:40,792
+Speaker SPEAKER_05: So that's my current suggestion.
+
+1175
+01:41:40,813 --> 01:41:42,596
+Speaker SPEAKER_10: I'll add to that.
+
+1176
+01:41:42,617 --> 01:41:45,983
+Speaker SPEAKER_12: No, that was a much better answer than I could have given, so.
+
+1177
+01:41:46,002 --> 01:41:47,045
+Speaker SPEAKER_10: I'll just add a little bit.
+
+1178
+01:41:47,085 --> 01:41:51,011
+Speaker SPEAKER_10: To Fei-Fei's point about working with people who are interested in this, I think
+
+1179
+01:41:51,515 --> 01:41:56,641
+Speaker SPEAKER_10: There are people in the investment community who are thinking and leading on this.
+
+1180
+01:41:57,444 --> 01:42:03,412
+Speaker SPEAKER_10: In our case, Radical, we've written into every single term sheet an obligation for the company to adopt responsible AI.
+
+1181
+01:42:05,314 --> 01:42:08,099
+Speaker SPEAKER_10: Initially when we did that, some of the lawyers who read it were like, what is this?
+
+1182
+01:42:08,158 --> 01:42:09,902
+Speaker SPEAKER_10: And tried to cross it out, but we put it back in.
+
+1183
+01:42:10,643 --> 01:42:15,750
+Speaker SPEAKER_10: But we're also, we've been working on a responsible AI investing framework that we are going to release
+
+1184
+01:42:15,916 --> 01:42:20,140
+Speaker SPEAKER_10: pretty broadly, and we've done this in partnership with a number of different organizations around the world.
+
+1185
+01:42:21,082 --> 01:42:26,027
+Speaker SPEAKER_10: We've met with 7,000 AI companies in the last four years, and I think we've invested in about 40.
+
+1186
+01:42:26,226 --> 01:42:34,095
+Speaker SPEAKER_10: So we've seen a lot and tried to build a framework that others can use going forward, and we'll open source it so we can develop it and make it better.
+
+1187
+01:42:34,195 --> 01:42:40,302
+Speaker SPEAKER_10: But I think there's a lot that individual companies can do by just reaching out to others who are thinking in a like-minded way.
+
+1188
+01:42:41,025 --> 01:42:42,006
+Speaker SPEAKER_10: Do you want to ask another question?
+
+1189
+01:42:42,167 --> 01:42:42,528
+Speaker SPEAKER_03: Yeah, great.
+
+1190
+01:42:42,547 --> 01:42:46,233
+Speaker SPEAKER_03: There's so many questions, so we'll only get to a couple of them, unfortunately.
+
+1191
+01:42:46,252 --> 01:42:56,427
+Speaker SPEAKER_03: But playing off of that, a lot of these questions have to do with the relationship with industry, considering how big of a role industry and the private sector is now playing in model development.
+
+1192
+01:42:56,908 --> 01:43:05,380
+Speaker SPEAKER_03: And some folks are even asking, should researchers and different engineering roles also be taking management courses today?
+
+1193
+01:43:08,953 --> 01:43:15,421
+Speaker SPEAKER_12: I have to tell you a story of when I was at Google.
+
+1194
+01:43:16,181 --> 01:43:23,009
+Speaker SPEAKER_12: I managed a small group, and we got reports every six months from the people who worked for us.
+
+1195
+01:43:23,909 --> 01:43:36,384
+Speaker SPEAKER_12: And one of the reports I got was, Jeff is very nice to work for, but he might benefit from taking a management course.
+
+1196
+01:43:36,764 --> 01:43:38,286
+Speaker SPEAKER_12: But then he wouldn't be Jeff.
+
+1197
+01:43:40,662 --> 01:43:42,203
+Speaker SPEAKER_12: That's how I feel about management courses.
+
+1198
+01:43:49,256 --> 01:43:52,581
+Speaker SPEAKER_05: I don't have a better story than that.
+
+1199
+01:43:52,600 --> 01:43:54,103
+Speaker SPEAKER_10: We have about a minute and a half left.
+
+1200
+01:43:54,163 --> 01:43:57,509
+Speaker SPEAKER_10: So maybe let's do one more in the room if we can.
+
+1201
+01:43:59,591 --> 01:44:00,052
+Speaker SPEAKER_10: Let's see.
+
+1202
+01:44:00,092 --> 01:44:01,135
+Speaker SPEAKER_10: Do you want to take?
+
+1203
+01:44:01,515 --> 01:44:02,155
+Speaker SPEAKER_10: Yeah.
+
+1204
+01:44:02,216 --> 01:44:02,978
+Speaker SPEAKER_10: No, beside you.
+
+1205
+01:44:03,438 --> 01:44:03,759
+Speaker SPEAKER_10: Sorry.
+
+1206
+01:44:06,603 --> 01:44:07,024
+Speaker SPEAKER_10: All right.
+
+1207
+01:44:08,033 --> 01:44:10,717
+Speaker SPEAKER_10: We'll hopefully ask quickly, and then we'll get a quick answer.
+
+1208
+01:44:10,738 --> 01:44:11,137
+Speaker SPEAKER_07: Thank you.
+
+1209
+01:44:12,060 --> 01:44:12,900
+Speaker SPEAKER_07: It's a pleasure to be here.
+
+1210
+01:44:13,001 --> 01:44:14,304
+Speaker SPEAKER_07: Good to see you, Fei-Fei.
+
+1211
+01:44:14,323 --> 01:44:15,565
+Speaker SPEAKER_07: My name's Elizabeth Gao.
+
+1212
+01:44:15,685 --> 01:44:16,426
+Speaker SPEAKER_07: I work at Cohere.
+
+1213
+01:44:16,847 --> 01:44:28,707
+Speaker SPEAKER_07: So my question is, from a private sector perspective, we work with everybody to take NLP, large language models, to the broader society.
+
+1214
+01:44:28,688 --> 01:44:42,515
+Speaker SPEAKER_07: On the specific public sectors and research institutions, universities, who has a lot of talent, a lot of data, what is the best way to find the mutual kind of beneficial relationship that we can contribute and they can contribute?
+
+1215
+01:44:42,835 --> 01:44:44,037
+Speaker SPEAKER_07: Thank you.
+
+1216
+01:44:44,198 --> 01:44:45,279
+Speaker SPEAKER_12: Give them some money.
+
+1217
+01:44:53,613 --> 01:44:55,676
+Speaker SPEAKER_05: Or H100s.
+
+1218
+01:44:56,779 --> 01:44:57,860
+Speaker SPEAKER_05: We'll take H100.
+
+1219
+01:44:58,121 --> 01:45:00,145
+Speaker SPEAKER_05: But look, it's very important.
+
+1220
+01:45:00,324 --> 01:45:06,456
+Speaker SPEAKER_05: I advocate for public sector investment, but I also actually probably more so advocate for partnership.
+
+1221
+01:45:06,596 --> 01:45:12,346
+Speaker SPEAKER_05: We need government, private sector, and public sector to work together.
+
+1222
+01:45:12,327 --> 01:45:19,238
+Speaker SPEAKER_05: The past four years at Stanford HAI, this is one of the main things we have done is create an industry ecosystem.
+
+1223
+01:45:19,840 --> 01:45:22,985
+Speaker SPEAKER_05: And there's a lot of details we can talk offline.
+
+1224
+01:45:23,145 --> 01:45:29,356
+Speaker SPEAKER_05: But if I'm talking to university leaders or higher education, is that I
+
+1225
+01:45:29,337 --> 01:45:31,099
+Speaker SPEAKER_05: I think we need to embrace that.
+
+1226
+01:45:31,158 --> 01:45:32,962
+Speaker SPEAKER_05: We need to embrace that responsibly.
+
+1227
+01:45:32,981 --> 01:45:38,029
+Speaker SPEAKER_05: Some people will have different ways of calling it, but I think this ecosystem is so important.
+
+1228
+01:45:38,088 --> 01:45:39,390
+Speaker SPEAKER_05: Both sides are important.
+
+1229
+01:45:39,810 --> 01:45:40,993
+Speaker SPEAKER_05: Create that partnership.
+
+1230
+01:45:41,393 --> 01:45:44,497
+Speaker SPEAKER_05: Be the responsible partner for each other.
+
+1231
+01:45:44,997 --> 01:45:46,980
+Speaker SPEAKER_05: And resource is a big thing.
+
+1232
+01:45:48,542 --> 01:45:49,944
+Speaker SPEAKER_05: We would appreciate that.
+
+1233
+01:45:51,122 --> 01:45:51,703
+Speaker SPEAKER_10: Thank you.
+
+1234
+01:45:51,724 --> 01:45:53,608
+Speaker SPEAKER_10: OK, with that, we're exactly out of time.
+
+1235
+01:45:54,970 --> 01:45:55,832
+Speaker SPEAKER_10: I want to thank you both.
+
+1236
+01:45:56,432 --> 01:46:04,247
+Speaker SPEAKER_10: I feel very privileged always to be able to call you both friends, and Feifei, you a partner, and Jeff, you an investor, and have these conversations privately with you.
+
+1237
+01:46:04,328 --> 01:46:08,996
+Speaker SPEAKER_10: So it's great to get you both together and let other people hear what you have to say.
+
+1238
+01:46:09,015 --> 01:46:11,000
+Speaker SPEAKER_10: So thank you both so much for doing this.
+
+1239
+01:46:12,342 --> 01:46:14,667
+Speaker SPEAKER_10: Hopefully, it was as informative for you as it was for me.
+
+1240
+01:46:23,759 --> 01:46:28,387
+Speaker SPEAKER_10: And we'll turn it over to Melanie Wooden, Dean of Arts and Science at U of T. Thank you so much, Jordan.
+
+1241
+01:46:28,828 --> 01:46:40,992
+Speaker SPEAKER_00: So Jeff and Fei-Fei and Jordan, on behalf of everyone in the room tonight here in Mars and the thousands joining us online, we are deeply grateful for such a profound conversation this evening.
+
+1242
+01:46:41,899 --> 01:46:52,175
+Speaker SPEAKER_00: I can say, and I think many of us know, that being part of a university community offers a never-ending set of opportunities for engaging conversations and lectures.
+
+1243
+01:46:52,295 --> 01:46:56,360
+Speaker SPEAKER_00: And as Dean of the Faculty of Arts and Science, I have the pleasure of attending many of them.
+
+1244
+01:46:57,082 --> 01:47:03,029
+Speaker SPEAKER_00: But I can say without reservation that tonight's conversation was truly unparalleled.
+
+1245
+01:47:03,010 --> 01:47:07,060
+Speaker SPEAKER_00: And of course, this conversation couldn't be more timely.
+
+1246
+01:47:07,702 --> 01:47:13,475
+Speaker SPEAKER_00: Jeff, when you shared your concerns with the world about the threats of superintelligence,
+
+1247
+01:47:13,860 --> 01:47:27,564
+Speaker SPEAKER_00: We all listened, and we all did what we could to try and understand this complex issue, whether it's reading opinion pieces, watching your video, or reading long-form journalism, we really tried to understand what you were telling us.
+
+1248
+01:47:28,204 --> 01:47:37,640
+Speaker SPEAKER_00: So to hear directly from you and from Fei-Fei, who spent so many years now leading the way in human-centered AI, is really truly powerful.
+
+1249
+01:47:37,621 --> 01:47:47,157
+Speaker SPEAKER_00: So with that, thank you both and thank you everyone here for attending this afternoon and big thanks to Radical Ventures and the other partners that made tonight possible.
+
+1250
+01:47:47,176 --> 01:47:55,270
+Speaker SPEAKER_00: And so with that, the talk is concluded and we invite those of you that are here with us in person to join us out in the foyer for some light refreshments.
+
+1251
+01:47:55,511 --> 01:47:56,472
+Speaker SPEAKER_00: Thanks for joining us.
+

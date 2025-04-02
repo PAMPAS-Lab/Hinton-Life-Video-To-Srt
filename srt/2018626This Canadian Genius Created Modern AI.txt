@@ -1,0 +1,364 @@
+1
+00:00:02,561 --> 00:00:06,495
+Speaker SPEAKER_03: This is Jeff Hinton.
+
+2
+00:00:07,378 --> 00:00:12,977
+Speaker SPEAKER_03: Because of a back condition, he hasn't been able to sit down for more than 12 years.
+
+3
+00:00:14,137 --> 00:00:14,958
+Speaker SPEAKER_02: I hate standing.
+
+4
+00:00:15,019 --> 00:00:17,382
+Speaker SPEAKER_02: I'd much rather sit down, but if I sit down, I have a disc that comes out.
+
+5
+00:00:18,402 --> 00:00:18,643
+Speaker SPEAKER_02: Okay.
+
+6
+00:00:19,123 --> 00:00:21,507
+Speaker SPEAKER_03: Well, at least now standing desks are fashionable.
+
+7
+00:00:21,527 --> 00:00:22,687
+Speaker SPEAKER_03: Yeah, but I was ahead.
+
+8
+00:00:23,489 --> 00:00:25,911
+Speaker SPEAKER_03: I was standing when they weren't fashionable.
+
+9
+00:00:27,814 --> 00:00:33,140
+Speaker SPEAKER_03: Since he can't sit in a car or on a bus, Hinton walks everywhere.
+
+10
+00:00:39,628 --> 00:00:42,491
+Speaker SPEAKER_03: The walk says a lot about Hinton and his resolve.
+
+11
+00:00:43,146 --> 00:00:55,420
+Speaker SPEAKER_03: For nearly 40 years, Hinton has been trying to get computers to learn like people do, a quest almost everyone thought was crazy or at least hopeless, right up until the moment it revolutionized the field.
+
+12
+00:00:56,881 --> 00:00:58,743
+Speaker SPEAKER_02: Google thinks this is the future of the company.
+
+13
+00:00:58,765 --> 00:01:00,326
+Speaker SPEAKER_02: Amazon thinks it's the future of the company.
+
+14
+00:01:00,807 --> 00:01:02,128
+Speaker SPEAKER_02: Apple thinks it's the future of the company.
+
+15
+00:01:02,609 --> 00:01:06,072
+Speaker SPEAKER_02: My own department thinks this stuff's probably nonsense and we shouldn't be doing any more of it.
+
+16
+00:01:09,195 --> 00:01:12,579
+Speaker SPEAKER_02: So I talked everybody into it except my own department.
+
+17
+00:01:19,765 --> 00:01:27,096
+Speaker SPEAKER_03: You obviously grew up in the UK, and you had this very prestigious family full of famous mathematicians and economists.
+
+18
+00:01:27,177 --> 00:01:29,421
+Speaker SPEAKER_03: And I was curious what it was like for you.
+
+19
+00:01:29,460 --> 00:01:31,364
+Speaker SPEAKER_02: Yeah, there was a lot of pressure.
+
+20
+00:01:32,745 --> 00:01:36,552
+Speaker SPEAKER_02: I think by the time I was about seven, I realized I was going to have to get a PhD.
+
+21
+00:01:38,656 --> 00:01:41,260
+Speaker SPEAKER_03: Did you rebel against that, or you went along with it?
+
+22
+00:01:41,280 --> 00:01:42,602
+Speaker SPEAKER_02: I dropped out every so often.
+
+23
+00:01:42,843 --> 00:01:44,305
+Speaker SPEAKER_02: I became a carpenter for a while.
+
+24
+00:01:46,629 --> 00:01:53,061
+Speaker SPEAKER_03: Jeff Hinton pretty early on became obsessed with this idea of figuring out how the mind works.
+
+25
+00:01:55,325 --> 00:02:09,752
+Speaker SPEAKER_03: He started off getting into physiology, the anatomy of how the brain works, then he got into psychology, and then finally he settled on more of a computer science approach to modeling the brain and got into artificial intelligence.
+
+26
+00:02:10,896 --> 00:02:17,205
+Speaker SPEAKER_02: My feeling is, if you want to understand a really complicated device, like a brain, you should build one.
+
+27
+00:02:18,247 --> 00:02:20,891
+Speaker SPEAKER_02: I mean, you could look at cars and you could think you could understand cars.
+
+28
+00:02:20,931 --> 00:02:26,239
+Speaker SPEAKER_02: When you try and build a car, you suddenly discover that there's this stuff that has to go under the hood, otherwise it doesn't work.
+
+29
+00:02:26,319 --> 00:02:26,460
+Speaker SPEAKER_02: Yeah.
+
+30
+00:02:28,562 --> 00:02:38,877
+Speaker SPEAKER_03: As Jeff was starting to think about these ideas, he got inspired by some AI researchers across the pond, specifically this guy, Frank Rosenblatt.
+
+31
+00:02:39,752 --> 00:02:45,401
+Speaker SPEAKER_01: Rosenblatt, in the late 1950s, developed what he called a perceptron.
+
+32
+00:02:45,421 --> 00:02:51,012
+Speaker SPEAKER_01: And it was a neural network, a computing system that would mimic the brain.
+
+33
+00:02:53,014 --> 00:02:57,241
+Speaker SPEAKER_00: The basic idea is a collection of small units called neurons.
+
+34
+00:02:57,562 --> 00:03:03,431
+Speaker SPEAKER_00: These are little computing units, but they're actually modeled on the way that the human brain does its computation.
+
+35
+00:03:04,372 --> 00:03:12,024
+Speaker SPEAKER_00: They take incoming data, like we do from our senses, and they actually learn, so the neural net can learn to make decisions over time.
+
+36
+00:03:15,368 --> 00:03:25,242
+Speaker SPEAKER_03: Rosenblatt's hope was that you could feed a neural network a bunch of data, like pictures of men and women, and it would eventually learn how to tell them apart, just like humans do.
+
+37
+00:03:28,567 --> 00:03:29,788
+Speaker SPEAKER_03: There was just one problem.
+
+38
+00:03:30,629 --> 00:03:31,831
+Speaker SPEAKER_01: It didn't work very well.
+
+39
+00:03:32,943 --> 00:03:37,550
+Speaker SPEAKER_01: Rosenblatt, his neural network was a single layer of neurons.
+
+40
+00:03:38,651 --> 00:03:41,736
+Speaker SPEAKER_01: And it was limited in what it could do, extremely limited.
+
+41
+00:03:42,878 --> 00:03:48,548
+Speaker SPEAKER_01: And a colleague of his wrote a book in the late 60s that showed these limitations.
+
+42
+00:03:51,451 --> 00:03:56,439
+Speaker SPEAKER_01: And it kind of put the whole area of research into a deep freeze for a good 10 years.
+
+43
+00:03:57,562 --> 00:03:59,084
+Speaker SPEAKER_01: No one wanted to work in this area.
+
+44
+00:03:59,144 --> 00:04:00,806
+Speaker SPEAKER_01: They were sure it would never work.
+
+45
+00:04:01,764 --> 00:04:03,787
+Speaker SPEAKER_03: Well, almost no one.
+
+46
+00:04:05,027 --> 00:04:07,069
+Speaker SPEAKER_02: It was just obvious to me that it was the right way to go.
+
+47
+00:04:08,031 --> 00:04:14,075
+Speaker SPEAKER_02: The brain's a big neural network, and so it has to be that stuff like this can work, because it works in our brains.
+
+48
+00:04:15,037 --> 00:04:16,358
+Speaker SPEAKER_02: There's just never any doubt about that.
+
+49
+00:04:16,798 --> 00:04:25,065
+Speaker SPEAKER_03: Now, what do you think it was inside of you that kept you wanting to pursue this when everyone else was giving up, just that you thought it was the right direction to go?
+
+50
+00:04:25,526 --> 00:04:26,648
+Speaker SPEAKER_02: Know that everyone else was wrong.
+
+51
+00:04:26,728 --> 00:04:30,050
+Speaker SPEAKER_02: OK.
+
+52
+00:04:31,464 --> 00:04:37,934
+Speaker SPEAKER_03: Pinton decides he's got an idea of how these neural nets might work, and he's going to pursue it no matter what.
+
+53
+00:04:39,696 --> 00:04:43,581
+Speaker SPEAKER_03: For a little while, he's bouncing around research institutions in the US.
+
+54
+00:04:44,622 --> 00:04:50,992
+Speaker SPEAKER_03: He kind of gets fed up that most of them are funded by the Defense Department, and he starts looking for somewhere else he can go.
+
+55
+00:04:51,012 --> 00:04:54,096
+Speaker SPEAKER_03: I didn't want to take Defense Department money.
+
+56
+00:04:54,776 --> 00:05:00,004
+Speaker SPEAKER_02: I sort of didn't like the idea that this stuff was going to be used for purposes that I didn't think were good.
+
+57
+00:05:01,182 --> 00:05:05,665
+Speaker SPEAKER_03: He suddenly hears that Canada might be interested in funding artificial intelligence.
+
+58
+00:05:06,487 --> 00:05:12,213
+Speaker SPEAKER_02: And that was very attractive, that I could go off to this civilized town and just get on with it.
+
+59
+00:05:12,233 --> 00:05:13,613
+Speaker SPEAKER_02: So I came to the University of Toronto.
+
+60
+00:05:15,276 --> 00:05:21,541
+Speaker SPEAKER_02: And then in the mid-'80s, we discovered how to make more complicated neural nets so they could solve those problems that the simple ones couldn't solve.
+
+61
+00:05:21,581 --> 00:05:29,028
+Speaker SPEAKER_01: He and his collaborators developed a multi-layered neural network, a deep neural network.
+
+62
+00:05:29,937 --> 00:05:32,521
+Speaker SPEAKER_01: And this started to work in a lot of ways.
+
+63
+00:05:34,103 --> 00:05:42,338
+Speaker SPEAKER_01: Using a neural network, a guy named Dean Pomerleau built a self-driving car in the late 80s, and it drove on public roads.
+
+64
+00:05:42,358 --> 00:05:49,992
+Speaker SPEAKER_01: Jan Le Coon in the 90s built a system that could recognize handwritten digits, and this ended up being used commercially.
+
+65
+00:05:51,173 --> 00:05:52,637
+Speaker SPEAKER_01: But again, they hit a ceiling.
+
+66
+00:05:56,245 --> 00:06:00,252
+Speaker SPEAKER_02: It didn't work quite well enough because we didn't have enough data and we didn't have enough compute power.
+
+67
+00:06:01,274 --> 00:06:06,884
+Speaker SPEAKER_02: And people in AI and computer science decided neural networks was wishful thinking, basically.
+
+68
+00:06:08,365 --> 00:06:09,809
+Speaker SPEAKER_02: So it was a big disappointment.
+
+69
+00:06:09,869 --> 00:06:20,767
+Speaker SPEAKER_03: Through the 90s into the 2000s, Jeff was one of only a handful of people on the planet who are still pursuing this technology.
+
+70
+00:06:22,654 --> 00:06:27,062
+Speaker SPEAKER_03: He would show up at academic conferences and be banished to the back rooms.
+
+71
+00:06:27,122 --> 00:06:31,327
+Speaker SPEAKER_03: He was treated as really like a pariah.
+
+72
+00:06:31,348 --> 00:06:36,735
+Speaker SPEAKER_03: Was there like a time when you thought this just wasn't going to work and you did have some self-doubt?
+
+73
+00:06:37,237 --> 00:06:37,357
+Speaker SPEAKER_02: No.
+
+74
+00:06:37,476 --> 00:06:40,362
+Speaker SPEAKER_02: I mean, there were many times when I thought, I'm not going to make this work.
+
+75
+00:06:42,644 --> 00:06:45,168
+Speaker SPEAKER_03: But Jeff was consumed by this and couldn't stop.
+
+76
+00:06:46,464 --> 00:06:55,478
+Speaker SPEAKER_03: He just kept pursuing the idea that computers could learn until about 2006, when the world catches up to Hinton's ideas.
+
+77
+00:07:00,725 --> 00:07:03,069
+Speaker SPEAKER_02: Computers are now a lot faster.
+
+78
+00:07:03,088 --> 00:07:05,892
+Speaker SPEAKER_02: And now it's behaving like I thought it would behave in the mid-80s.
+
+79
+00:07:06,192 --> 00:07:07,975
+Speaker SPEAKER_02: It's solving everything.
+
+80
+00:07:07,995 --> 00:07:16,067
+Speaker SPEAKER_03: The arrival of super-fast chips and the massive amounts of data produced on the internet gave Hinton's algorithms a magical boost.
+
+81
+00:07:17,767 --> 00:07:20,653
+Speaker SPEAKER_03: Suddenly, computers could identify what was in an image.
+
+82
+00:07:21,774 --> 00:07:26,423
+Speaker SPEAKER_03: Then, they could recognize speech and translate from one language to another.
+
+83
+00:07:27,766 --> 00:07:34,238
+Speaker SPEAKER_03: By 2012, words like neural nets and machine learning were popping up on the front page of the New York Times.
+
+84
+00:07:35,201 --> 00:07:39,709
+Speaker SPEAKER_03: You have to go all these years and then all of a sudden, you know, in this span of a few months,
+
+85
+00:07:40,516 --> 00:07:41,476
+Speaker SPEAKER_03: It just takes off.
+
+86
+00:07:41,497 --> 00:07:45,942
+Speaker SPEAKER_03: Did it finally feel like, aha, the world has finally come to my vision?
+
+87
+00:07:45,963 --> 00:07:49,247
+Speaker SPEAKER_03: It was sort of a relief that people finally came to their senses.
+
+88
+00:07:54,052 --> 00:07:58,918
+Speaker SPEAKER_03: For Hinton, this was clearly a redemptive moment after decades of toil.
+
+89
+00:08:00,880 --> 00:08:03,824
+Speaker SPEAKER_03: And for Canada, it meant something even bigger.
+
+90
+00:08:05,887 --> 00:08:10,151
+Speaker SPEAKER_03: Hinton and his students put the country on the map as an AI superpower.
+
+91
+00:08:11,177 --> 00:08:26,233
+Speaker SPEAKER_03: Something no one and no computer could ever have predicted.
+

@@ -1,0 +1,1328 @@
+1
+00:00:16,702 --> 00:00:42,222
+Speaker SPEAKER_01: It is now my pleasure and great honor to introduce our second speaker, Geoffrey Hinton.
+
+2
+00:00:43,500 --> 00:00:47,767
+Speaker SPEAKER_01: Geoffrey Hinton was born in London, UK in 1947.
+
+3
+00:00:48,207 --> 00:00:53,956
+Speaker SPEAKER_01: He received a bachelor degree in experimental psychology from Cambridge University in 1970.
+
+4
+00:00:53,975 --> 00:01:03,450
+Speaker SPEAKER_01: 1978, he was awarded a PhD in artificial intelligence from the University of Edinburgh.
+
+5
+00:01:04,477 --> 00:01:16,269
+Speaker SPEAKER_01: After post-doctoral research, he worked for five years as a faculty member in computer science at Carnegie Mellon University in Pittsburgh.
+
+6
+00:01:17,331 --> 00:01:29,504
+Speaker SPEAKER_01: In 1987, he was appointed professor of computer science at the University of Toronto, Canada, where he presently is emeritus professor.
+
+7
+00:01:30,548 --> 00:01:40,266
+Speaker SPEAKER_01: Between 2013 and 2023, he shared his time between academic research and Google Brain.
+
+8
+00:01:41,628 --> 00:01:52,066
+Speaker SPEAKER_01: Please join me in welcoming Geoffrey Hinton to the stage to tell us about the developments that led to this year's Nobel Prize in Physics.
+
+9
+00:02:09,715 --> 00:02:11,938
+Speaker SPEAKER_00: So today I'm going to do something very foolish.
+
+10
+00:02:12,580 --> 00:02:18,248
+Speaker SPEAKER_00: I'm going to try and describe a complicated technical idea for a general audience without using any equations.
+
+11
+00:02:20,413 --> 00:02:26,582
+Speaker SPEAKER_00: So first I have to explain Hopfield nets and I'm going to explain the version with binary neurons that have states of 1 or 0.
+
+12
+00:02:27,525 --> 00:02:35,318
+Speaker SPEAKER_00: So on the right there you'll see a little Hopfield net and the most important thing is the neurons have symmetrically weighted connections between them.
+
+13
+00:02:38,234 --> 00:02:43,260
+Speaker SPEAKER_00: The global state of a whole network is called a configuration, just so we seem a bit like physics.
+
+14
+00:02:44,323 --> 00:02:48,027
+Speaker SPEAKER_00: And each configuration has a goodness.
+
+15
+00:02:48,829 --> 00:02:56,520
+Speaker SPEAKER_00: And the goodness of configuration is simply the sum of all pairs of neurons that are both on, of the weights between them.
+
+16
+00:02:56,941 --> 00:03:02,068
+Speaker SPEAKER_00: So those weights in red boxes, you add those up and you get four, hopefully.
+
+17
+00:03:02,628 --> 00:03:06,435
+Speaker SPEAKER_00: That's the goodness of that configuration of the network.
+
+18
+00:03:06,414 --> 00:03:08,758
+Speaker SPEAKER_00: and the energy is just minus the goodness.
+
+19
+00:03:11,844 --> 00:03:14,210
+Speaker SPEAKER_00: So these networks will settle to energy minima.
+
+20
+00:03:14,469 --> 00:03:25,150
+Speaker SPEAKER_00: The whole point of a Hopfield net is that each neuron can locally compute what it needs to do in order to reduce the energy, where energy is badness.
+
+21
+00:03:26,344 --> 00:03:33,968
+Speaker SPEAKER_00: So if the total weighted input coming from other active neurons is positive, the neuron should turn on.
+
+22
+00:03:34,951 --> 00:03:39,104
+Speaker SPEAKER_00: If the total weighted input coming from other active neurons is negative, it should turn off.
+
+23
+00:03:40,638 --> 00:03:48,348
+Speaker SPEAKER_00: And if each neuron just keeps using that rule and we pick them at random and keep applying that rule, we will eventually settle to an energy minimum.
+
+24
+00:03:48,368 --> 00:03:52,394
+Speaker SPEAKER_00: So the configuration on the right there is actually an energy minimum.
+
+25
+00:03:52,413 --> 00:03:54,217
+Speaker SPEAKER_00: It has an energy of minus 4.
+
+26
+00:03:54,236 --> 00:03:58,483
+Speaker SPEAKER_00: And if you take any neuron there, the ones that are on want to stay on.
+
+27
+00:03:58,522 --> 00:03:59,925
+Speaker SPEAKER_00: They get total positive input.
+
+28
+00:04:00,224 --> 00:04:01,486
+Speaker SPEAKER_00: The ones that are off want to stay off.
+
+29
+00:04:01,546 --> 00:04:02,707
+Speaker SPEAKER_00: They get total negative input.
+
+30
+00:04:03,368 --> 00:04:05,312
+Speaker SPEAKER_00: But it's not the only energy minimum.
+
+31
+00:04:05,629 --> 00:04:14,682
+Speaker SPEAKER_00: A Hopfield net can have many energy minima, and where it ends up depends on where you started, and also on the sequence of random decisions you make.
+
+32
+00:04:17,245 --> 00:04:19,850
+Speaker SPEAKER_00: Sorry, the sequence of random decisions about which neuron to update.
+
+33
+00:04:22,273 --> 00:04:23,814
+Speaker SPEAKER_00: So that's a better energy minimum.
+
+34
+00:04:24,216 --> 00:04:30,704
+Speaker SPEAKER_00: Now we've turned on the triangle of units on the right, and that's got a goodness of 3 plus 3 minus 1 is 5.
+
+35
+00:04:31,346 --> 00:04:34,589
+Speaker SPEAKER_00: And so an energy minus 5, that's a better minimum.
+
+36
+00:04:36,257 --> 00:04:43,252
+Speaker SPEAKER_00: Now, Hopfield proposed that a good way to use such networks is to make the energy minima correspond to memories.
+
+37
+00:04:44,033 --> 00:04:49,744
+Speaker SPEAKER_00: And then using that binary decision rule about whether you should turn on your on or off, that can clean up incomplete memories.
+
+38
+00:04:50,444 --> 00:04:56,476
+Speaker SPEAKER_00: So you start with a partial memory and then you just keep applying this decision rule and it will clean it up.
+
+39
+00:04:56,456 --> 00:05:02,803
+Speaker SPEAKER_00: So, settling to energy minima, when they represent memories, is a way of having a content-addressable memory.
+
+40
+00:05:03,764 --> 00:05:09,930
+Speaker SPEAKER_00: You can access an item in the memory by just turning on some of the item and then using this rule and it'll fill it out.
+
+41
+00:05:12,653 --> 00:05:19,560
+Speaker SPEAKER_00: Terry Sanofsky and I, Terry was a student of Upfield's, proposed a different use for these kinds of nets.
+
+42
+00:05:20,322 --> 00:05:25,586
+Speaker SPEAKER_00: Instead of using them to store memories, we could use them to construct interpretations of sensory input.
+
+43
+00:05:26,663 --> 00:05:28,326
+Speaker SPEAKER_00: So the idea is you have a net.
+
+44
+00:05:28,805 --> 00:05:31,230
+Speaker SPEAKER_00: It has both visible neurons and hidden neurons.
+
+45
+00:05:31,250 --> 00:05:35,637
+Speaker SPEAKER_00: The visible neurons are where you show it a sensory input, maybe a binary image.
+
+46
+00:05:36,778 --> 00:05:40,264
+Speaker SPEAKER_00: The hidden neurons are where it constructs the interpretation of that sensory input.
+
+47
+00:05:42,848 --> 00:05:47,514
+Speaker SPEAKER_00: And the energy of a configuration of the network represents the badness of the interpretation.
+
+48
+00:05:47,875 --> 00:05:49,819
+Speaker SPEAKER_00: So we want low energy interpretations.
+
+49
+00:05:51,149 --> 00:05:53,351
+Speaker SPEAKER_00: So I'm going to give you a concrete example.
+
+50
+00:05:53,892 --> 00:05:56,016
+Speaker SPEAKER_00: Consider that ambiguous line drawing at the top.
+
+51
+00:05:56,697 --> 00:05:58,360
+Speaker SPEAKER_00: People have two ways of seeing that.
+
+52
+00:05:59,461 --> 00:06:02,507
+Speaker SPEAKER_00: There's interpretation one, which is normally what you see first.
+
+53
+00:06:02,826 --> 00:06:04,108
+Speaker SPEAKER_00: There's another interpretation.
+
+54
+00:06:04,589 --> 00:06:10,800
+Speaker SPEAKER_00: And when you see it as a convex object, that's clearly a different 3D interpretation of the same 2D line drawing.
+
+55
+00:06:10,819 --> 00:06:15,586
+Speaker SPEAKER_00: So could we make one of these networks come up with two different interpretations of the same line drawing?
+
+56
+00:06:16,815 --> 00:06:21,382
+Speaker SPEAKER_00: Well, we need to start by thinking what a line in an image tells you about 3D edges.
+
+57
+00:06:22,805 --> 00:06:25,168
+Speaker SPEAKER_00: So that green line is the image plane.
+
+58
+00:06:25,228 --> 00:06:30,776
+Speaker SPEAKER_00: Imagine you're looking through a window and you're drawing the edges in the scene out there in the world on the window.
+
+59
+00:06:31,357 --> 00:06:34,641
+Speaker SPEAKER_00: So that little black line is a line in the image.
+
+60
+00:06:35,903 --> 00:06:40,129
+Speaker SPEAKER_00: And the two red lines are the lines of sight that come from your eye through the ends of that line.
+
+61
+00:06:41,072 --> 00:06:44,697
+Speaker SPEAKER_00: And if you ask, well, what edge in the world could have caused that?
+
+62
+00:06:44,963 --> 00:06:46,845
+Speaker SPEAKER_00: Well, there's many edges that could have caused it.
+
+63
+00:06:47,346 --> 00:06:49,569
+Speaker SPEAKER_00: There's one edge that could have caused that 2D line.
+
+64
+00:06:50,069 --> 00:06:52,853
+Speaker SPEAKER_00: But there's another one, and there's another one, and there's another one.
+
+65
+00:06:53,452 --> 00:06:56,177
+Speaker SPEAKER_00: All of these edges will cause the same line in the image.
+
+66
+00:06:56,797 --> 00:07:02,144
+Speaker SPEAKER_00: So the problem of vision is to go backwards from the single line in the image to figure out which of these edges is really out there.
+
+67
+00:07:04,947 --> 00:07:09,252
+Speaker SPEAKER_00: You can only see one of them at a time, if objects are opaque, because they all get in each other's way.
+
+68
+00:07:09,853 --> 00:07:13,737
+Speaker SPEAKER_00: So you know that that line in the image has to depict one of these edges, but you don't know which one.
+
+69
+00:07:14,932 --> 00:07:22,009
+Speaker SPEAKER_00: we could build a network where we started off by turning the lines into activations of line neurons.
+
+70
+00:07:22,951 --> 00:07:24,353
+Speaker SPEAKER_00: So let's suppose we already have that.
+
+71
+00:07:24,613 --> 00:07:31,709
+Speaker SPEAKER_00: We have a large number of neurons to represent lines in the image, and we turn on just a few of them to represent the lines in this particular image.
+
+72
+00:07:32,264 --> 00:07:35,507
+Speaker SPEAKER_00: Now each of those lines could depict a number of different 3D edges.
+
+73
+00:07:36,589 --> 00:07:43,098
+Speaker SPEAKER_00: So what we do is we connect that line neuron to a whole bunch of 3D edge neurons with excitatory connections.
+
+74
+00:07:43,158 --> 00:07:44,060
+Speaker SPEAKER_00: Those are the green ones.
+
+75
+00:07:44,521 --> 00:07:46,463
+Speaker SPEAKER_00: But we know we can only see one of those at a time.
+
+76
+00:07:46,884 --> 00:07:49,548
+Speaker SPEAKER_00: So we make those edge neurons inhibit each other.
+
+77
+00:07:50,249 --> 00:07:53,432
+Speaker SPEAKER_00: So now we've captured a lot about the sort of optics of perception.
+
+78
+00:07:54,915 --> 00:07:57,158
+Speaker SPEAKER_00: We do that for all of our line neurons.
+
+79
+00:07:57,947 --> 00:08:01,615
+Speaker SPEAKER_00: And now the question is, which of those edge neurons should we turn on?
+
+80
+00:08:02,315 --> 00:08:04,158
+Speaker SPEAKER_00: For that, we need more information.
+
+81
+00:08:04,740 --> 00:08:07,103
+Speaker SPEAKER_00: And there's certain principles we use in interpreting images.
+
+82
+00:08:07,706 --> 00:08:14,737
+Speaker SPEAKER_00: If you see two lines in an image, you assume that if they join in the image, they join in depth where they join.
+
+83
+00:08:14,757 --> 00:08:18,504
+Speaker SPEAKER_00: That is, they're at the same depth where the two lines join in the image.
+
+84
+00:08:18,485 --> 00:08:21,269
+Speaker SPEAKER_00: So, we can put in extra connections for that.
+
+85
+00:08:22,012 --> 00:08:32,650
+Speaker SPEAKER_00: We could put in a connection between every pair of 3D edge neurons that join in depth at the point where they have the same end.
+
+86
+00:08:33,893 --> 00:08:37,178
+Speaker SPEAKER_00: We could put in a stronger connection if they join at right angles.
+
+87
+00:08:37,299 --> 00:08:40,745
+Speaker SPEAKER_00: We really like to see images in which things join at right angles.
+
+88
+00:08:40,725 --> 00:08:54,005
+Speaker SPEAKER_00: So we put in a whole bunch of connections like that, and now what we hope is, if we set the connection strengths right, that we've got a network which has two alternative states it can settle to, corresponding to those two alternative interpretations of the Necker cube.
+
+89
+00:08:55,248 --> 00:08:58,312
+Speaker SPEAKER_00: This gives rise to two main problems.
+
+90
+00:08:58,293 --> 00:09:09,184
+Speaker SPEAKER_00: The first problem, if we're going to use hidden neurons to come up with interpretations of images represented in the states of the visible neurons, is the search issue.
+
+91
+00:09:10,245 --> 00:09:12,649
+Speaker SPEAKER_00: How do we avoid getting trapped in local optima?
+
+92
+00:09:12,668 --> 00:09:17,214
+Speaker SPEAKER_00: We might settle to a rather poor interpretation and not be able to jump out of it to a better interpretation.
+
+93
+00:09:18,294 --> 00:09:20,297
+Speaker SPEAKER_00: And the second problem is learning.
+
+94
+00:09:21,379 --> 00:09:27,085
+Speaker SPEAKER_00: I sort of implied I'd put in all those connections by hand, but we'd like a neural network to put in all those connections.
+
+95
+00:09:29,782 --> 00:09:36,923
+Speaker SPEAKER_00: So, the search problem we solve, more or less, by making the neurons noisy.
+
+96
+00:09:37,222 --> 00:09:56,010
+Speaker SPEAKER_00: So if you have deterministic neurons, like in a standard Hopfield net, if the system settled into one energy minimum, like A, so the ball there is the configuration of the whole system, it can't get from A to B because the decision rule for the neurons only allows things to go downhill in energy.
+
+97
+00:09:56,672 --> 00:09:58,674
+Speaker SPEAKER_00: And the graph on the right is the decision rule.
+
+98
+00:09:58,695 --> 00:10:00,618
+Speaker SPEAKER_00: If the input's positive, turn on.
+
+99
+00:10:00,918 --> 00:10:02,421
+Speaker SPEAKER_00: If the input's negative, turn off.
+
+100
+00:10:04,460 --> 00:10:08,386
+Speaker SPEAKER_00: We would like to be able to get from A to B, but that means we have to go uphill in energy.
+
+101
+00:10:08,988 --> 00:10:12,835
+Speaker SPEAKER_00: And the solution to that is to have noisy neurons, stochastic binary neurons.
+
+102
+00:10:13,515 --> 00:10:15,198
+Speaker SPEAKER_00: They still only have binary states.
+
+103
+00:10:15,239 --> 00:10:18,926
+Speaker SPEAKER_00: Their states are either 1 or 0, but they're probabilistic.
+
+104
+00:10:19,586 --> 00:10:23,153
+Speaker SPEAKER_00: If they get a big positive input, they almost always turn on.
+
+105
+00:10:23,193 --> 00:10:25,658
+Speaker SPEAKER_00: With a big negative input, they almost always turn off.
+
+106
+00:10:25,638 --> 00:10:30,144
+Speaker SPEAKER_00: But if the input is soft, if it's somewhere near zero, then they behave probabilistically.
+
+107
+00:10:30,384 --> 00:10:32,808
+Speaker SPEAKER_00: If it's positive, they usually turn on, but occasionally turn off.
+
+108
+00:10:33,250 --> 00:10:36,595
+Speaker SPEAKER_00: And if it's a small negative input, they usually turn off, but occasionally turn on.
+
+109
+00:10:37,576 --> 00:10:39,219
+Speaker SPEAKER_00: But they don't have real values.
+
+110
+00:10:39,239 --> 00:10:43,004
+Speaker SPEAKER_00: They're always binary, but they make just these probabilistic decisions.
+
+111
+00:10:44,825 --> 00:10:55,399
+Speaker SPEAKER_00: And so now if we want to interpret a binary image using these hidden neurons, what we do is we clamp the binary image on the visible units.
+
+112
+00:10:55,759 --> 00:10:57,763
+Speaker SPEAKER_00: That specifies what the input is.
+
+113
+00:10:58,543 --> 00:11:00,246
+Speaker SPEAKER_00: And then we pick a hidden neuron at random.
+
+114
+00:11:00,988 --> 00:11:05,173
+Speaker SPEAKER_00: We look at the total input it's getting from the other active hidden neurons.
+
+115
+00:11:05,573 --> 00:11:07,176
+Speaker SPEAKER_00: And we start them all off in random states.
+
+116
+00:11:08,038 --> 00:11:10,942
+Speaker SPEAKER_00: And if it gets total positive input, we probably turn it on.
+
+117
+00:11:10,981 --> 00:11:14,105
+Speaker SPEAKER_00: But we might just turn it off if it's only a small positive input.
+
+118
+00:11:14,086 --> 00:11:21,975
+Speaker SPEAKER_00: So we keep implementing this rule of turn them on if they're big positive input, off if they're big negative input, but if they're soft, make probabilistic decisions.
+
+119
+00:11:22,655 --> 00:11:29,504
+Speaker SPEAKER_00: And if we go round and we keep picking hidden neurons and doing that, the system will eventually approach what's called thermal equilibrium.
+
+120
+00:11:30,044 --> 00:11:33,028
+Speaker SPEAKER_00: That's a difficult concept for non-physicists and I'll explain it later.
+
+121
+00:11:34,049 --> 00:11:41,258
+Speaker SPEAKER_00: Once it's reached thermal equilibrium, the states of the hidden neurons are then an interpretation of that input.
+
+122
+00:11:42,519 --> 00:11:53,548
+Speaker SPEAKER_00: So in the case of that line drawing, the hidden neurons, you hopefully have one hidden neuron turned on for each line unit, and you get an interpretation which will be one of those two interpretations of the Necker cube.
+
+123
+00:11:53,568 --> 00:11:57,980
+Speaker SPEAKER_00: And what we hope is that the low energy interpretations will be good interpretations of the data.
+
+124
+00:12:00,221 --> 00:12:20,761
+Speaker SPEAKER_00: So for this line drawing, if we could learn the right weights between the 2D line neurons and the 3D edge neurons, and learn the right weights between the 3D edge neurons, then hopefully the low energy states of the network would correspond to good interpretations, namely seeing 3D rectangular objects.
+
+125
+00:12:23,206 --> 00:12:24,408
+Speaker SPEAKER_00: So thermal equilibrium.
+
+126
+00:12:25,570 --> 00:12:29,496
+Speaker SPEAKER_00: It's not what you first expect, which is that the system is settled to a stable state.
+
+127
+00:12:30,919 --> 00:12:33,445
+Speaker SPEAKER_00: What's stabilized is not the state of the system.
+
+128
+00:12:33,946 --> 00:12:37,491
+Speaker SPEAKER_00: What's stabilized is a far more abstract thing that's hard to think about.
+
+129
+00:12:37,532 --> 00:12:41,940
+Speaker SPEAKER_00: It's the probability distribution over configurations of the system.
+
+130
+00:12:41,919 --> 00:12:45,144
+Speaker SPEAKER_00: That's very hard for a normal person to think about.
+
+131
+00:12:45,163 --> 00:12:48,928
+Speaker SPEAKER_00: It settles to a particular distribution called the Boltzmann distribution.
+
+132
+00:12:49,490 --> 00:12:59,682
+Speaker SPEAKER_00: And in the Boltzmann distribution, the probability, once it's settled to thermal equilibrium, of finding the system in a particular configuration is determined solely by the energy of that configuration.
+
+133
+00:13:00,123 --> 00:13:03,668
+Speaker SPEAKER_00: And you have more probability of finding it in lower energy configurations.
+
+134
+00:13:04,268 --> 00:13:09,615
+Speaker SPEAKER_00: So thermal equilibrium, the good states, the low energy states, are more probable than the bad states.
+
+135
+00:13:10,844 --> 00:13:17,619
+Speaker SPEAKER_00: Now to think about thermal equilibrium, there's a trick physicists use and it allows ordinary people to understand this concept.
+
+136
+00:13:18,600 --> 00:13:19,001
+Speaker SPEAKER_00: Hopefully.
+
+137
+00:13:20,905 --> 00:13:26,138
+Speaker SPEAKER_00: You just imagine a very large ensemble, gazillions of them, of identical networks.
+
+138
+00:13:26,158 --> 00:13:28,182
+Speaker SPEAKER_00: You have these gazillion Hopfield networks.
+
+139
+00:13:28,562 --> 00:13:30,927
+Speaker SPEAKER_00: They all have exactly the same weights.
+
+140
+00:13:30,908 --> 00:13:43,990
+Speaker SPEAKER_00: So they're the same system essentially, but you start them all off in different random states and they all make their own independent random decisions and there'll be a certain fraction of the systems that have each configuration.
+
+141
+00:13:44,530 --> 00:13:47,735
+Speaker SPEAKER_00: And to begin with that fraction will just depend on how you started them off.
+
+142
+00:13:47,716 --> 00:13:50,922
+Speaker SPEAKER_00: Maybe you start them off randomly, so all configurations are equally likely.
+
+143
+00:13:51,482 --> 00:13:57,494
+Speaker SPEAKER_00: And in this huge ensemble, you'll get equal numbers of systems in every possible configuration.
+
+144
+00:13:57,975 --> 00:14:03,804
+Speaker SPEAKER_00: But then you start running this algorithm of update neurons in such a way that they tend to lower the energy, but occasionally like to go up.
+
+145
+00:14:04,726 --> 00:14:11,479
+Speaker SPEAKER_00: And gradually what will happen is, the fraction of the systems in any one configuration will stabilize.
+
+146
+00:14:11,458 --> 00:14:14,443
+Speaker SPEAKER_00: So any one system will be jumping between configurations.
+
+147
+00:14:15,066 --> 00:14:19,312
+Speaker SPEAKER_00: But the fraction of all the systems in a particular configuration will be stable.
+
+148
+00:14:20,115 --> 00:14:25,043
+Speaker SPEAKER_00: So one system may leave a configuration, but other systems will go into that configuration.
+
+149
+00:14:25,323 --> 00:14:26,505
+Speaker SPEAKER_00: This is called detailed balance.
+
+150
+00:14:26,966 --> 00:14:28,870
+Speaker SPEAKER_00: And the fraction of systems will stay stable.
+
+151
+00:14:30,133 --> 00:14:33,619
+Speaker SPEAKER_00: That's it for the physics.
+
+152
+00:14:33,970 --> 00:14:36,572
+Speaker SPEAKER_00: So let's imagine generating an image now.
+
+153
+00:14:36,813 --> 00:14:39,076
+Speaker SPEAKER_00: Not interpreting an image, but generating an image.
+
+154
+00:14:39,797 --> 00:14:45,563
+Speaker SPEAKER_00: To generate an image, you start by picking random states for all of the neurons, the hidden neurons and the visible neurons.
+
+155
+00:14:46,966 --> 00:14:51,412
+Speaker SPEAKER_00: Then you pick a hidden or visible neuron, and you update its state using the usual stochastic rule.
+
+156
+00:14:51,432 --> 00:14:53,614
+Speaker SPEAKER_00: If it's got lots of positive input, probably turn it on.
+
+157
+00:14:53,975 --> 00:14:55,657
+Speaker SPEAKER_00: Lots of negative input, probably turn it off.
+
+158
+00:14:56,017 --> 00:14:58,379
+Speaker SPEAKER_00: If it's soft, it behaves a bit stochastically.
+
+159
+00:14:59,120 --> 00:15:00,702
+Speaker SPEAKER_00: And you keep doing that.
+
+160
+00:15:02,320 --> 00:15:16,534
+Speaker SPEAKER_00: And if you keep doing that repeatedly until the systems approach thermal equilibrium, then you look at the states of the visible units and that's now an image generated by this network from the distribution it believes in.
+
+161
+00:15:16,815 --> 00:15:22,581
+Speaker SPEAKER_00: The Boltzmann distribution in which low energy configurations are much more likely than high energy configurations.
+
+162
+00:15:23,162 --> 00:15:31,551
+Speaker SPEAKER_00: But it believes in many possible alternative images and you can pick one of them, one of the things it believes in by running this process.
+
+163
+00:15:32,797 --> 00:15:33,238
+Speaker SPEAKER_00: Okay.
+
+164
+00:15:35,581 --> 00:15:38,183
+Speaker SPEAKER_00: So, now what's the aim of learning in a Boltzmann machine?
+
+165
+00:15:38,725 --> 00:15:47,917
+Speaker SPEAKER_00: The aim of learning in a Boltzmann machine is to make it so when the network's generating images, think of it as dreaming, it's just randomly imagining things.
+
+166
+00:15:49,178 --> 00:15:57,690
+Speaker SPEAKER_00: When it's generating images, those images look like the images it perceives when it's doing perception on real images.
+
+167
+00:15:57,669 --> 00:16:06,384
+Speaker SPEAKER_00: If we can achieve that then the states of the hidden neurons will actually be a good way to interpret the real images.
+
+168
+00:16:06,945 --> 00:16:09,249
+Speaker SPEAKER_00: They'll capture the underlying causes of the image.
+
+169
+00:16:09,590 --> 00:16:10,431
+Speaker SPEAKER_00: At least that's the hope.
+
+170
+00:16:11,011 --> 00:16:12,894
+Speaker SPEAKER_00: Another way of saying that is
+
+171
+00:16:12,875 --> 00:16:23,758
+Speaker SPEAKER_00: Learning the weights in the network is equivalent to figuring out how to use those hidden neurons so that the network will generate images that look like the real images.
+
+172
+00:16:24,600 --> 00:16:26,443
+Speaker SPEAKER_00: That seems like an extremely hard problem.
+
+173
+00:16:26,745 --> 00:16:29,230
+Speaker SPEAKER_00: Everybody thought that's going to be very complicated.
+
+174
+00:16:29,210 --> 00:16:35,177
+Speaker SPEAKER_00: It turns out, Terry and I had an outrageously optimistic approach.
+
+175
+00:16:37,219 --> 00:16:58,203
+Speaker SPEAKER_00: The question is, could you start with a neural net, a Hopfield net, this stochastic kind of Hopfield net, that has lots of hidden neurons, and they just have random weights between them, and they have random weights connecting them to the visible neurons, so it's a big random neural net, and then you just show it lots of images, and we're hoping for something that seems ridiculous, which is that
+
+176
+00:16:59,197 --> 00:17:06,604
+Speaker SPEAKER_00: on perceiving lots of real images, it will create all the connections between the hidden units and between the hidden units and the visible units.
+
+177
+00:17:07,144 --> 00:17:15,252
+Speaker SPEAKER_00: It'll weight those connections correctly so that it comes up with sensible interpretations of images in terms of causes like 3D edges that join at right angles.
+
+178
+00:17:16,713 --> 00:17:18,175
+Speaker SPEAKER_00: That sounds very optimistic.
+
+179
+00:17:19,017 --> 00:17:22,961
+Speaker SPEAKER_00: And you might have thought that the learning algorithm to do that would be very complicated.
+
+180
+00:17:23,701 --> 00:17:28,326
+Speaker SPEAKER_00: The amazing thing about Boltzmann machines is there's a very simple learning algorithm that will do that.
+
+181
+00:17:29,909 --> 00:17:34,096
+Speaker SPEAKER_00: This was discovered by Tarasovsky and me in 1983.
+
+182
+00:17:34,395 --> 00:17:38,222
+Speaker SPEAKER_00: And the learning algorithm goes like this.
+
+183
+00:17:38,923 --> 00:17:39,846
+Speaker SPEAKER_00: It has two phases.
+
+184
+00:17:40,606 --> 00:17:41,488
+Speaker SPEAKER_00: There's a wake phase.
+
+185
+00:17:42,189 --> 00:17:44,913
+Speaker SPEAKER_00: That's the phase when the network is being presented with images.
+
+186
+00:17:45,255 --> 00:17:47,377
+Speaker SPEAKER_00: You clamp an image on the visible units.
+
+187
+00:17:47,357 --> 00:17:51,064
+Speaker SPEAKER_00: You let the hidden units rattle around and settle down to thermal equilibrium.
+
+188
+00:17:52,164 --> 00:18:05,526
+Speaker SPEAKER_00: And then, once the hidden units are in thermal equilibrium with the visible neurons, for every pair of connected neurons, either two hiddens or a visible and a hidden, if they're both on, you add a small amount to the weight between them.
+
+189
+00:18:06,046 --> 00:18:08,150
+Speaker SPEAKER_00: That's a pretty simple learning rule.
+
+190
+00:18:08,470 --> 00:18:11,694
+Speaker SPEAKER_00: That's a learning rule that people who believe in Donald Hebb would like.
+
+191
+00:18:14,105 --> 00:18:15,166
+Speaker SPEAKER_00: Then there's a sleep phase.
+
+192
+00:18:15,768 --> 00:18:20,996
+Speaker SPEAKER_00: Obviously, if you just run the wake phase, the weights will only get bigger.
+
+193
+00:18:21,576 --> 00:18:24,862
+Speaker SPEAKER_00: And pretty soon, they'll all be positive, and all the neurons will turn on all the time.
+
+194
+00:18:25,262 --> 00:18:26,023
+Speaker SPEAKER_00: That's not much good.
+
+195
+00:18:26,945 --> 00:18:28,567
+Speaker SPEAKER_00: You need to combine it with a sleep phase.
+
+196
+00:18:28,969 --> 00:18:32,674
+Speaker SPEAKER_00: And in the sleep phase, you can think of the network as dreaming.
+
+197
+00:18:33,035 --> 00:18:38,964
+Speaker SPEAKER_00: You're settling to thermal equilibrium by updating the states of all the neurons, the hidden ones and the visible ones.
+
+198
+00:18:38,944 --> 00:18:47,839
+Speaker SPEAKER_00: And once you've done that and reached thermal equilibrium, for every pair of connected neurons, if they're both on, you subtract a small amount from the weight between them.
+
+199
+00:18:48,480 --> 00:18:50,203
+Speaker SPEAKER_00: That's a pretty simple learning algorithm.
+
+200
+00:18:51,025 --> 00:18:52,969
+Speaker SPEAKER_00: And it's pretty amazing that it does the right thing.
+
+201
+00:18:54,852 --> 00:18:56,835
+Speaker SPEAKER_00: So, on average,
+
+202
+00:18:57,607 --> 00:19:07,329
+Speaker SPEAKER_00: That learning algorithm changes the weights so as to increase the probability that the images the network generates when it's dreaming will look like the images it sees when it's perceiving.
+
+203
+00:19:08,311 --> 00:19:11,398
+Speaker SPEAKER_00: And not for the general audience, so you mustn't read this next two lines.
+
+204
+00:19:12,602 --> 00:19:15,448
+Speaker SPEAKER_00: For statisticians and machine learning people,
+
+205
+00:19:15,428 --> 00:19:26,310
+Speaker SPEAKER_00: What that algorithm is doing is, in expectation, that means it's doing it very noisily and often does the wrong thing, but on average, in expectation, it follows the gradient of the log likelihood.
+
+206
+00:19:26,791 --> 00:19:35,631
+Speaker SPEAKER_00: That is, in expectation, what it's doing is making it more likely that the network will generate, when it's dreaming, the kinds of images it sees when it's awake.
+
+207
+00:19:36,521 --> 00:19:45,784
+Speaker SPEAKER_00: Or to put it another way, the weights change so that the images the network finds plausible, low energy images, resemble the images that it sees when it's awake.
+
+208
+00:19:46,444 --> 00:19:53,923
+Speaker SPEAKER_00: And what the learning is doing, of course, what's happening in that learning algorithm is in the wake, you're lowering the energy
+
+209
+00:19:53,903 --> 00:19:58,790
+Speaker SPEAKER_00: of the whole configurations of the network, that it derives that when it sees real data.
+
+210
+00:19:59,152 --> 00:20:02,376
+Speaker SPEAKER_00: And when it's asleep, you're raising the energy of those configurations.
+
+211
+00:20:02,917 --> 00:20:08,587
+Speaker SPEAKER_00: So what you're trying to make it do is believe in what you see when you're awake and unbelieve in what you dream when you're asleep.
+
+212
+00:20:11,807 --> 00:20:23,622
+Speaker SPEAKER_00: Okay, so if you ask what the process of settling to thermal equilibrium achieves, it achieves something amazing, which is that everything that one weight in the network needs to know about all the other weights.
+
+213
+00:20:23,982 --> 00:20:27,251
+Speaker SPEAKER_00: And to know how to change one weight, you need to know something about all the other weights.
+
+214
+00:20:27,231 --> 00:20:28,093
+Speaker SPEAKER_00: They all interact.
+
+215
+00:20:28,614 --> 00:20:33,122
+Speaker SPEAKER_00: But everything you need to know shows up in the difference between two correlations.
+
+216
+00:20:33,803 --> 00:20:44,801
+Speaker SPEAKER_00: It shows up in the difference between how often the two neurons are on together when the network's observing data, and how often they're on together when the network isn't observing data, when it's streaming.
+
+217
+00:20:44,781 --> 00:20:52,151
+Speaker SPEAKER_00: And somehow those correlations measured in those two situations tell a weight everything it needs to know about all the other weights.
+
+218
+00:20:52,832 --> 00:21:03,443
+Speaker SPEAKER_00: The reason that's surprising is because in an algorithm like backpropagation, which is what all the neural nets now actually use, you require a backward pass to convey information about the other weights.
+
+219
+00:21:04,005 --> 00:21:08,410
+Speaker SPEAKER_00: And that backward pass behaves very differently from the forward pass.
+
+220
+00:21:08,390 --> 00:21:13,178
+Speaker SPEAKER_00: In the forward pass, you're communicating activities of neurons to later layers of neurons.
+
+221
+00:21:13,759 --> 00:21:16,663
+Speaker SPEAKER_00: In the backward pass, you're conveying sensitivities.
+
+222
+00:21:16,703 --> 00:21:19,989
+Speaker SPEAKER_00: You're conveying a different kind of quantity altogether.
+
+223
+00:21:20,028 --> 00:21:24,717
+Speaker SPEAKER_00: And that makes back propagation rather implausible as a theory of how the brain works.
+
+224
+00:21:25,438 --> 00:21:31,848
+Speaker SPEAKER_00: And so when Terry came up with this theory, this learning procedure for Boltzmann machines,
+
+225
+00:21:31,828 --> 00:21:39,340
+Speaker SPEAKER_00: We were completely convinced that must be how the brain works and we decided we were going to get the Nobel Prize in physiology or medicine.
+
+226
+00:21:40,201 --> 00:21:48,234
+Speaker SPEAKER_00: It never occurred to us that if it wasn't how the brain works we could get the Nobel Prize in physics.
+
+227
+00:21:50,205 --> 00:21:52,229
+Speaker SPEAKER_00: OK, there's only one problem.
+
+228
+00:21:53,009 --> 00:21:59,599
+Speaker SPEAKER_00: And the problem is that settling to thermal equilibrium is a very slow process for very big networks with large weights.
+
+229
+00:22:00,020 --> 00:22:01,502
+Speaker SPEAKER_00: If the weights are very small, you can do it quickly.
+
+230
+00:22:01,522 --> 00:22:04,607
+Speaker SPEAKER_00: But when the weights are big, after it's learned some stuff, it's very slow.
+
+231
+00:22:05,348 --> 00:22:08,252
+Speaker SPEAKER_00: So actually, Boltzmann machines are a wonderful romantic idea.
+
+232
+00:22:08,292 --> 00:22:12,720
+Speaker SPEAKER_00: They're this beautifully simple learning algorithm.
+
+233
+00:22:12,700 --> 00:22:14,305
+Speaker SPEAKER_00: which is doing something very complicated.
+
+234
+00:22:14,325 --> 00:22:20,324
+Speaker SPEAKER_00: It's constructing these whole networks of hidden units that interpret the data by using a very simple algorithm.
+
+235
+00:22:20,644 --> 00:22:22,852
+Speaker SPEAKER_00: And the only thing is that they're just much too slow.
+
+236
+00:22:23,634 --> 00:22:26,202
+Speaker SPEAKER_00: So that was that for Boltzmann machines.
+
+237
+00:22:27,414 --> 00:22:29,258
+Speaker SPEAKER_00: And the lecture should really have ended there.
+
+238
+00:22:29,498 --> 00:22:41,454
+Speaker SPEAKER_00: But 17 years later, I realized that if you restrict Boltzmann machines a lot and just have hidden units that aren't connected to each other, then you can get a much faster learning algorithm.
+
+239
+00:22:42,516 --> 00:22:47,262
+Speaker SPEAKER_00: So if there's no connection between the hidden neurons, then the wake phase becomes very simple.
+
+240
+00:22:48,121 --> 00:22:51,587
+Speaker SPEAKER_00: What you do is you clamp an input on the visible units to represent an image.
+
+241
+00:22:52,388 --> 00:22:56,056
+Speaker SPEAKER_00: And then in parallel now, you can update all the hidden neurons.
+
+242
+00:22:57,417 --> 00:22:59,201
+Speaker SPEAKER_00: And you've now reached thermal equilibrium.
+
+243
+00:22:59,221 --> 00:23:00,403
+Speaker SPEAKER_00: You just update them all once.
+
+244
+00:23:00,845 --> 00:23:06,234
+Speaker SPEAKER_00: They just look at the visible input and randomly pick one of their two states based on how much input they're getting.
+
+245
+00:23:06,255 --> 00:23:08,578
+Speaker SPEAKER_00: And now you're at thermal equilibrium in one step.
+
+246
+00:23:09,221 --> 00:23:10,482
+Speaker SPEAKER_00: That's great.
+
+247
+00:23:10,462 --> 00:23:14,386
+Speaker SPEAKER_00: For the hidden neurons, you still have a problem.
+
+248
+00:23:14,468 --> 00:23:26,701
+Speaker SPEAKER_00: In the sleep phase, you have to put the network in some random state, update the hidden neurons, update the visible neurons, update the hidden neurons, update the visible neurons, and you have to go on a long time to reach thermal equilibrium.
+
+249
+00:23:27,061 --> 00:23:28,604
+Speaker SPEAKER_00: And so the algorithm is still hopeless.
+
+250
+00:23:29,203 --> 00:23:30,625
+Speaker SPEAKER_00: But it turns out there's a shortcut.
+
+251
+00:23:31,287 --> 00:23:38,394
+Speaker SPEAKER_00: The shortcut doesn't quite do the right thing, which is embarrassing, but it works pretty well in practice.
+
+252
+00:23:38,375 --> 00:23:39,876
+Speaker SPEAKER_00: So the shortcut works like this.
+
+253
+00:23:40,637 --> 00:23:42,500
+Speaker SPEAKER_00: You put data on the visible units.
+
+254
+00:23:42,700 --> 00:23:43,361
+Speaker SPEAKER_00: That's an image.
+
+255
+00:23:44,382 --> 00:23:46,763
+Speaker SPEAKER_00: And then you update all the hidden neurons in parallel.
+
+256
+00:23:47,644 --> 00:23:50,107
+Speaker SPEAKER_00: And they've now reached thermally equilibrium with the data.
+
+257
+00:23:51,028 --> 00:23:55,994
+Speaker SPEAKER_00: You now update all the visible units and you get what we call a reconstruction.
+
+258
+00:23:56,675 --> 00:23:58,637
+Speaker SPEAKER_00: It's going to be like the data but not quite the same.
+
+259
+00:23:59,499 --> 00:24:01,580
+Speaker SPEAKER_00: Now you update all the hidden units again.
+
+260
+00:24:02,371 --> 00:24:03,132
+Speaker SPEAKER_00: And then you stop.
+
+261
+00:24:03,152 --> 00:24:03,551
+Speaker SPEAKER_00: That's it.
+
+262
+00:24:03,592 --> 00:24:04,051
+Speaker SPEAKER_00: You're done.
+
+263
+00:24:04,071 --> 00:24:18,724
+Speaker SPEAKER_00: And the way you do learning is you measure how often the neurons i and j, the visible neuron i and the hidden neuron j, are on together when you're showing it data and it's reached equilibrium with data.
+
+264
+00:24:19,325 --> 00:24:25,510
+Speaker SPEAKER_00: And you measure how often they're on together when you're showing it reconstructions and it's reached equilibrium with the reconstruction.
+
+265
+00:24:26,090 --> 00:24:28,692
+Speaker SPEAKER_00: And that difference is your learning algorithm.
+
+266
+00:24:29,034 --> 00:24:31,955
+Speaker SPEAKER_00: You just change the weights in proportion to that difference.
+
+267
+00:24:32,392 --> 00:24:34,457
+Speaker SPEAKER_00: And that actually works pretty well.
+
+268
+00:24:34,836 --> 00:24:36,260
+Speaker SPEAKER_00: And it's much, much faster.
+
+269
+00:24:36,441 --> 00:24:38,826
+Speaker SPEAKER_00: It's fast enough to make Boltzmann machines finally practical.
+
+270
+00:24:39,708 --> 00:24:44,038
+Speaker SPEAKER_00: So, okay.
+
+271
+00:24:44,676 --> 00:24:59,192
+Speaker SPEAKER_00: So Netflix actually used restricted Boltzmann machines combined with other methods to decide which new movies to suggest you look at based on the preferences of all sorts of other users who are a bit like you.
+
+272
+00:24:59,232 --> 00:25:00,834
+Speaker SPEAKER_00: And they actually worked.
+
+273
+00:25:00,854 --> 00:25:01,815
+Speaker SPEAKER_00: They won the competition.
+
+274
+00:25:02,036 --> 00:25:08,962
+Speaker SPEAKER_00: This combination of Boltzmann machines and these other methods won the Netflix competition for how well can you predict what users will like.
+
+275
+00:25:10,866 --> 00:25:24,141
+Speaker SPEAKER_00: But of course, with just hidden neurons that aren't connected to each other, you can't build layers of feature detectors, which are what you need for doing, recognizing objects in images or recognizing words in speech.
+
+276
+00:25:24,540 --> 00:25:29,826
+Speaker SPEAKER_00: And it looks like this is strong restriction of having just one layer of hidden units without connections between them.
+
+277
+00:25:30,788 --> 00:25:32,088
+Speaker SPEAKER_00: But actually, you can get around that.
+
+278
+00:25:33,530 --> 00:25:37,515
+Speaker SPEAKER_00: So, what you can do is you can stack these restricted bots and machines.
+
+279
+00:25:38,170 --> 00:25:43,837
+Speaker SPEAKER_00: What you do is you take your data, you show the restricted Boltzmann machine, RBM, the data.
+
+280
+00:25:44,539 --> 00:25:55,134
+Speaker SPEAKER_00: It has just one hidden layer and using this contrast divergence algorithm that just goes up and down and up again, you learn some weights so that the hidden units capture structure in the data.
+
+281
+00:25:56,017 --> 00:26:00,903
+Speaker SPEAKER_00: The hidden units turn into feature detectors that capture commonly correlated things in the data.
+
+282
+00:26:02,048 --> 00:26:09,997
+Speaker SPEAKER_00: Then, you take those hidden activity patterns, the binary activity patterns in the hidden units, and you treat those as data.
+
+283
+00:26:10,757 --> 00:26:24,132
+Speaker SPEAKER_00: So you just copy those into another RBM, and they're the data for the other RBM, and that second RBM looks at these features that have captured correlations in the data, and it captures correlations between those features.
+
+284
+00:26:24,873 --> 00:26:28,696
+Speaker SPEAKER_00: And you keep going like that, so you're capturing more and more complicated correlations.
+
+285
+00:26:29,268 --> 00:26:31,392
+Speaker SPEAKER_00: And so you can learn the second set of weights, W2.
+
+286
+00:26:32,032 --> 00:26:34,238
+Speaker SPEAKER_00: And you can do it as many times as you like.
+
+287
+00:26:34,258 --> 00:26:35,400
+Speaker SPEAKER_00: Let's learn the third set of weights.
+
+288
+00:26:36,742 --> 00:26:45,640
+Speaker SPEAKER_00: So now we've got a bunch of separate Boltzmann machines, each of which is finding structure among the hidden units of the previous Boltzmann machine.
+
+289
+00:26:45,771 --> 00:26:53,522
+Speaker SPEAKER_00: Then what you can do is you can stack up these Boltzmann machines and just treat them as a feedforward net.
+
+290
+00:26:53,603 --> 00:26:55,464
+Speaker SPEAKER_00: So ignore the fact the connections are symmetrical.
+
+291
+00:26:56,006 --> 00:27:04,978
+Speaker SPEAKER_00: Just use the connections in one direction now, because you've got a way of getting, in your first hidden layer, you've extracted features that capture correlations in the raw data.
+
+292
+00:27:04,958 --> 00:27:12,267
+Speaker SPEAKER_00: And then in your second hidden layer, you've extracted features that capture correlations in the features extracted in the first hidden layer, and so on.
+
+293
+00:27:12,907 --> 00:27:16,632
+Speaker SPEAKER_00: So you're getting more and more abstract features, correlations among correlations.
+
+294
+00:27:18,034 --> 00:27:25,923
+Speaker SPEAKER_00: Once you've stacked them up like that, then you can just add a final hidden layer, like this, and you can do supervised learning.
+
+295
+00:27:25,983 --> 00:27:30,789
+Speaker SPEAKER_00: That is, now you can start telling it about the names of things, like cat and dog.
+
+296
+00:27:31,211 --> 00:27:33,192
+Speaker SPEAKER_00: Those are the class labels.
+
+297
+00:27:33,173 --> 00:27:35,696
+Speaker SPEAKER_00: And you're going to have to learn the weights to those class labels.
+
+298
+00:27:36,317 --> 00:27:41,467
+Speaker SPEAKER_00: But you start with this network that you've initialized by learning a stack of Boltzmann machines.
+
+299
+00:27:42,087 --> 00:27:43,410
+Speaker SPEAKER_00: And two beautiful things happen.
+
+300
+00:27:43,830 --> 00:27:50,521
+Speaker SPEAKER_00: The first beautiful thing is, if you initialize this way, the network learns much faster than if you initialize with random weights.
+
+301
+00:27:50,961 --> 00:27:56,852
+Speaker SPEAKER_00: Because it's already learned a whole bunch of sensible features for modeling structure in the data.
+
+302
+00:27:56,832 --> 00:28:01,298
+Speaker SPEAKER_00: It hasn't learned anything about what things are called, but it's learned about the structure in the data.
+
+303
+00:28:01,558 --> 00:28:03,982
+Speaker SPEAKER_00: And then learning what things are called is relatively quick.
+
+304
+00:28:05,144 --> 00:28:12,134
+Speaker SPEAKER_00: Just like with small children, they don't have to be told, that's a cow, 2,000 times before they know that's a cow.
+
+305
+00:28:12,915 --> 00:28:17,963
+Speaker SPEAKER_00: They figure out the concept of cow for themselves, and then their mother says, that's a cow, and they've got it.
+
+306
+00:28:19,226 --> 00:28:21,169
+Speaker SPEAKER_00: Well, maybe twice.
+
+307
+00:28:23,781 --> 00:28:29,288
+Speaker SPEAKER_00: So, it makes it much faster to learn, for example, to recognize objects and images.
+
+308
+00:28:30,848 --> 00:28:33,092
+Speaker SPEAKER_00: It also makes the networks generalize much better.
+
+309
+00:28:33,432 --> 00:28:37,957
+Speaker SPEAKER_00: Because they've done most of the learning without using labels, they don't need many labels now.
+
+310
+00:28:38,517 --> 00:28:44,784
+Speaker SPEAKER_00: They're not extracting all the information from the labels, they're extracting the information from the correlations in the data.
+
+311
+00:28:45,825 --> 00:28:50,430
+Speaker SPEAKER_00: And that makes them generalize much better with needing far fewer labels.
+
+312
+00:28:51,742 --> 00:28:52,903
+Speaker SPEAKER_00: So that was all very nice.
+
+313
+00:28:53,925 --> 00:29:13,109
+Speaker SPEAKER_00: And between about 2006 and 2011, people were using, particularly in my lab and Yoshua Bengio's lab and Jan's lab, people were using stacks of RBMs to pre-train feedforward neural networks and then they would apply backpropagation.
+
+314
+00:29:13,089 --> 00:29:26,210
+Speaker SPEAKER_00: And in 2009, two students in my lab, George Dahl and Abdulrahman Mohamed, showed that this technique worked a little bit better than the best existing techniques for recognizing fragments of phonemes in speech.
+
+315
+00:29:27,551 --> 00:29:31,538
+Speaker SPEAKER_00: And that then changed the speech recognition community.
+
+316
+00:29:31,518 --> 00:29:45,490
+Speaker SPEAKER_00: my graduate students went off to the various leading speech groups, and in 2012, things based on exactly this, stacked up, restricted both machines, went into production at Google, and they got better speech recognition.
+
+317
+00:29:45,549 --> 00:29:50,099
+Speaker SPEAKER_00: Suddenly, the speech recognition on the Android got a lot better.
+
+318
+00:29:51,548 --> 00:30:06,569
+Speaker SPEAKER_00: Unfortunately for Boltzmann machines, once we'd shown that these deep neural networks really worked very well if you pre-trained them with stacks of restricted Boltzmann machines, people find other ways of initializing the weights and they no longer use stacks of Boltzmann machines.
+
+319
+00:30:06,549 --> 00:30:09,433
+Speaker SPEAKER_00: But if you're a chemist, you know that enzymes are useful things.
+
+320
+00:30:10,134 --> 00:30:23,029
+Speaker SPEAKER_00: And even though RBMs are no longer used, they allowed us to make the transition from thinking that deep neural networks would never work to seeing that deep neural networks actually could be made to work rather easily if you initialize them this way.
+
+321
+00:30:24,112 --> 00:30:26,474
+Speaker SPEAKER_00: Once you've made the transition, you don't need the enzyme anymore.
+
+322
+00:30:26,875 --> 00:30:29,959
+Speaker SPEAKER_00: So think of them as historical enzymes.
+
+323
+00:30:31,221 --> 00:30:43,900
+Speaker SPEAKER_00: The idea of using unlearning during sleep, though, to get an algorithm that's more biologically plausible and avoids the backward-past-the-back propagation, I still think there's a lot of mileage in that idea.
+
+324
+00:30:44,461 --> 00:30:54,836
+Speaker SPEAKER_00: And I'm still optimistic that when we do eventually understand how the brain learns, it will turn out to involve using sleep to do unlearning.
+
+325
+00:30:56,318 --> 00:30:57,380
+Speaker SPEAKER_00: So I'm still optimistic.
+
+326
+00:30:58,461 --> 00:30:59,423
+Speaker SPEAKER_00: And I think I'm done.
+
+327
+00:31:30,654 --> 00:31:31,796
+Speaker SPEAKER_01: Very nice.
+
+328
+00:31:31,817 --> 00:31:32,835
+Speaker SPEAKER_01: Thank you very much.
+
+329
+00:31:53,538 --> 00:32:02,484
+Speaker SPEAKER_01: So please join me now in welcoming both laureates on the stage to jointly receive our warmest applause.
+
+330
+00:32:30,307 --> 00:32:33,299
+Speaker SPEAKER_01: Maybe you would like to step forward and in front.
+
+331
+00:32:33,961 --> 00:32:35,809
+Speaker SPEAKER_01: Maybe you would like to go in front here.
+
+332
+00:32:35,829 --> 00:32:36,673
+Speaker SPEAKER_01: Yeah.
+

@@ -1,0 +1,512 @@
+1
+00:00:00,031 --> 00:00:04,716
+Speaker SPEAKER_00: This week, Google jumped into the AI arms race with the launch of BARD.
+
+2
+00:00:05,158 --> 00:00:10,564
+Speaker SPEAKER_00: The chatbot will compete with OpenAI's ChatGBT, which is funded by Microsoft.
+
+3
+00:00:10,685 --> 00:00:21,038
+Speaker SPEAKER_00: In a few short months, these chatbots have wowed users with the ability to answer complicated questions, draft emails and speeches, plan custom vacations, and much more.
+
+4
+00:00:21,457 --> 00:00:29,228
+Speaker SPEAKER_00: But as it improves, this technology offers immense promise and significant, some say, existential danger.
+
+5
+00:00:29,207 --> 00:00:36,719
+Speaker SPEAKER_00: Brooke Silva Braga traveled to Toronto, one of AI's leading research hubs, to meet some of the people building this brave new world.
+
+6
+00:00:37,578 --> 00:00:43,604
+Speaker SPEAKER_04: So yeah, so this is an experimental preview of a chatbot we've been working on powered by our generative language model.
+
+7
+00:00:43,784 --> 00:00:44,466
+Speaker SPEAKER_02: Okay.
+
+8
+00:00:44,485 --> 00:00:47,228
+Speaker SPEAKER_02: Nick Frost is a co-founder of Cohere.
+
+9
+00:00:47,710 --> 00:00:56,841
+Speaker SPEAKER_02: Like Google and OpenAI, the Toronto startup has trained massively powerful computers on trillions of words and asked them to talk back.
+
+10
+00:00:57,201 --> 00:01:00,564
+Speaker SPEAKER_02: Can it write, call it a book report.
+
+11
+00:01:00,545 --> 00:01:02,366
+Speaker SPEAKER_02: about War and Peace.
+
+12
+00:01:03,167 --> 00:01:03,848
+Speaker SPEAKER_02: Okay, it can.
+
+13
+00:01:04,308 --> 00:01:07,733
+Speaker SPEAKER_02: War and Peace is a historical novel by Russian author Leo Tolstoy.
+
+14
+00:01:07,972 --> 00:01:15,281
+Speaker SPEAKER_02: In a major leap for computing, these models can understand and create natural language.
+
+15
+00:01:15,301 --> 00:01:15,981
+Speaker SPEAKER_02: It just wrote this.
+
+16
+00:01:16,102 --> 00:01:18,525
+Speaker SPEAKER_02: Yeah, but it's based on all the stuff that it's seen.
+
+17
+00:01:18,924 --> 00:01:21,628
+Speaker SPEAKER_02: The tech had been in research labs for years.
+
+18
+00:01:22,168 --> 00:01:26,834
+Speaker SPEAKER_02: ChatGPT's release last fall... Cheese, oh cheese, so luscious and bold.
+
+19
+00:01:26,853 --> 00:01:29,016
+Speaker SPEAKER_02: ...brought it to an unprepared public.
+
+20
+00:01:28,995 --> 00:01:31,278
+Speaker SPEAKER_02: It's writing me a poem about cheese.
+
+21
+00:01:31,319 --> 00:01:32,801
+Speaker SPEAKER_04: And it's pretty good!
+
+22
+00:01:32,861 --> 00:01:37,987
+Speaker SPEAKER_04: In the old school programming, we would write code to tell a computer what to do.
+
+23
+00:01:38,528 --> 00:01:39,069
+Speaker SPEAKER_04: We still do that.
+
+24
+00:01:39,209 --> 00:01:39,930
+Speaker SPEAKER_04: Lots of people still do that.
+
+25
+00:01:39,990 --> 00:01:44,337
+Speaker SPEAKER_04: But another thing we do now is we write code to tell a computer how to learn what to do.
+
+26
+00:01:44,897 --> 00:01:48,742
+Speaker SPEAKER_04: And the way it learns is being shown many examples of what it should do.
+
+27
+00:01:48,722 --> 00:01:57,632
+Speaker SPEAKER_04: So in the context of large language models, the way that works is we get a huge amount of text and then we show it a few words and we get it to predict the next word.
+
+28
+00:01:58,052 --> 00:02:02,158
+Speaker SPEAKER_04: This simple technique turns out to give you something very useful and very powerful.
+
+29
+00:02:03,099 --> 00:02:11,608
+Speaker SPEAKER_02: So powerful that OpenAI's new GPT-4 does better on the bar exam than 90% of aspiring lawyers.
+
+30
+00:02:11,587 --> 00:02:19,215
+Speaker SPEAKER_02: These models write computer code in seconds and churn out blog posts on any topic that AI programmers haven't banned.
+
+31
+00:02:19,655 --> 00:02:23,057
+Speaker SPEAKER_02: They're becoming the newest arbiters of what ideas are out of bounds.
+
+32
+00:02:23,578 --> 00:02:26,700
+Speaker SPEAKER_02: And while chat apps are the current rage, other forms of AI.
+
+33
+00:02:27,241 --> 00:02:30,283
+Speaker SPEAKER_04: Now you can generate a video with nothing but words.
+
+34
+00:02:30,663 --> 00:02:31,945
+Speaker SPEAKER_02: Will do much, much more.
+
+35
+00:02:32,265 --> 00:02:35,268
+Speaker SPEAKER_02: This is the biggest technological advancement since.
+
+36
+00:02:35,808 --> 00:02:40,633
+Speaker SPEAKER_05: I think it's comparable in scale with the industrial revolution or electricity.
+
+37
+00:02:40,883 --> 00:02:41,489
+Speaker SPEAKER_02: Electricity.
+
+38
+00:02:41,508 --> 00:02:42,195
+Speaker SPEAKER_05: Or maybe the wheel.
+
+39
+00:02:42,962 --> 00:02:44,598
+Speaker SPEAKER_02: Or maybe the wheel.
+
+40
+00:02:45,305 --> 00:02:46,326
+Speaker SPEAKER_02: Yeah.
+
+41
+00:02:46,347 --> 00:02:50,633
+Speaker SPEAKER_02: Jeffrey Hinton is known as a godfather of artificial intelligence.
+
+42
+00:02:50,653 --> 00:03:01,931
+Speaker SPEAKER_02: For the last 10 years, he's helped Google create AI and mentor the industry's rising stars, including OpenAI's chief scientist, Ilya Siskova, and Nick Frost over at Cohere.
+
+43
+00:03:02,453 --> 00:03:12,408
+Speaker SPEAKER_02: In fact, Toronto is a global AI hub today in large part because Hinton moved here 40 years ago when the Canadian government agreed to fund his unusual research.
+
+44
+00:03:12,389 --> 00:03:15,633
+Speaker SPEAKER_05: I was kind of weird because I did this stuff everybody else thought was nonsense.
+
+45
+00:03:15,652 --> 00:03:24,283
+Speaker SPEAKER_02: While others pursuing AI tried to program logic and reasoning into computers, Hinton thought it was better to have them figure things out themselves.
+
+46
+00:03:24,844 --> 00:03:26,687
+Speaker SPEAKER_02: The idea was to mimic the brain.
+
+47
+00:03:27,068 --> 00:03:34,616
+Speaker SPEAKER_02: With lots of practice, these virtual neural networks, illustrated here, would make the right connections to solve a given task.
+
+48
+00:03:35,120 --> 00:03:35,901
+Speaker SPEAKER_02: there were doubters.
+
+49
+00:03:36,361 --> 00:03:43,090
+Speaker SPEAKER_05: The big issue was, could you expect a big neural network that learns by just changing the strengths of the connections?
+
+50
+00:03:43,730 --> 00:03:49,919
+Speaker SPEAKER_05: Could you expect that to just look at data and with no kind of innate prior knowledge, learn how to do things?
+
+51
+00:03:50,299 --> 00:03:53,743
+Speaker SPEAKER_05: People in mainstream AI thought that was completely ridiculous.
+
+52
+00:03:53,764 --> 00:03:55,164
+Speaker SPEAKER_05: It sounds a little ridiculous.
+
+53
+00:03:55,526 --> 00:03:57,709
+Speaker SPEAKER_05: It is a little ridiculous, but it works.
+
+54
+00:03:58,669 --> 00:04:01,092
+Speaker SPEAKER_02: It's all the real.
+
+55
+00:04:02,997 --> 00:04:08,764
+Speaker SPEAKER_02: Only in the last decade or so have computers been powerful enough to prove Hinton was right.
+
+56
+00:04:09,264 --> 00:04:15,073
+Speaker SPEAKER_02: His machine learning ideas applied to different kinds of training data now create all kinds of outputs.
+
+57
+00:04:15,593 --> 00:04:19,619
+Speaker SPEAKER_02: This, of course, isn't Tom Cruise, but a deepfake impersonating him.
+
+58
+00:04:19,778 --> 00:04:22,802
+Speaker SPEAKER_04: I went down to the office because they were making a robot of me.
+
+59
+00:04:22,822 --> 00:04:29,291
+Speaker SPEAKER_02: This isn't Andy Warhol's voice in the recent Netflix documentary, but a clone generated by Resemble AI.
+
+60
+00:04:29,271 --> 00:04:31,915
+Speaker SPEAKER_02: click record, and then read the sentence out loud.
+
+61
+00:04:32,416 --> 00:04:40,529
+Speaker SPEAKER_02: After a few minutes reading training text, Founder Zohab Ahmed had cloned my voice too.
+
+62
+00:04:40,750 --> 00:04:45,317
+Speaker SPEAKER_02: Habitat for Humanity, which helps homeowners build homes alongside volunteers.
+
+63
+00:04:45,658 --> 00:04:47,279
+Speaker SPEAKER_02: Yeah, I definitely hear myself in there.
+
+64
+00:04:47,259 --> 00:04:48,682
+Speaker SPEAKER_02: smile into the camera.
+
+65
+00:04:48,701 --> 00:04:53,028
+Speaker SPEAKER_02: A company called Synthesia had me read a script in front of a green screen.
+
+66
+00:04:53,048 --> 00:04:55,973
+Speaker SPEAKER_02: They used that video to create this digital version of me.
+
+67
+00:04:56,473 --> 00:05:01,040
+Speaker SPEAKER_02: We paired it with Resemble's voice to create a TV reporter who will say anything you type.
+
+68
+00:05:01,821 --> 00:05:04,644
+Speaker SPEAKER_02: The technology will only get better in the years ahead.
+
+69
+00:05:05,206 --> 00:05:08,771
+Speaker SPEAKER_02: Using this tech to spread misinformation seems inevitable.
+
+70
+00:05:08,790 --> 00:05:11,394
+Speaker SPEAKER_02: This is my very first day in Xinguan's agency.
+
+71
+00:05:11,375 --> 00:05:18,144
+Speaker SPEAKER_02: using it to replace journalists and lawyers and accountants and radiologists and novelists and songwriters and painters.
+
+72
+00:05:18,906 --> 00:05:19,826
+Speaker SPEAKER_02: Well, that could happen too.
+
+73
+00:05:20,206 --> 00:05:21,750
+Speaker SPEAKER_02: But it's going to take a whole ton of jobs.
+
+74
+00:05:22,370 --> 00:05:29,079
+Speaker SPEAKER_04: I think it's going to make a whole lot of jobs easier and a whole lot of jobs faster.
+
+75
+00:05:29,430 --> 00:05:30,754
+Speaker SPEAKER_02: I hear your answer in two ways.
+
+76
+00:05:30,973 --> 00:05:33,738
+Speaker SPEAKER_02: One, wow, it's great if it turns out that way.
+
+77
+00:05:34,220 --> 00:05:42,014
+Speaker SPEAKER_02: Two, maybe it's a little scary if the people making this technology haven't come to graps with the potential downfall of what it could do.
+
+78
+00:05:42,435 --> 00:05:47,305
+Speaker SPEAKER_04: Yeah, I think we try our best to think about what the true impact of this technology is.
+
+79
+00:05:47,622 --> 00:05:52,468
+Speaker SPEAKER_02: And the true impact of these advancements is the subject of a high-stakes debate right now.
+
+80
+00:05:53,129 --> 00:06:00,581
+Speaker SPEAKER_02: Will AI quickly zoom past human abilities and become what's thought of as Artificial General Intelligence, or AGI?
+
+81
+00:06:01,122 --> 00:06:05,387
+Speaker SPEAKER_02: Last month, OpenAI's CEO Sam Altman wrote, the risks could be extraordinary.
+
+82
+00:06:05,769 --> 00:06:10,896
+Speaker SPEAKER_02: A misaligned, super-intelligent AGI could cause grievous harm to the world.
+
+83
+00:06:10,875 --> 00:06:15,021
+Speaker SPEAKER_02: But Frost, and others, say Terminator-style worries are overblown.
+
+84
+00:06:15,541 --> 00:06:20,348
+Speaker SPEAKER_02: Large language models are just algorithms that write some smart-sounding words.
+
+85
+00:06:20,869 --> 00:06:23,192
+Speaker SPEAKER_02: They don't understand even basic truths.
+
+86
+00:06:23,612 --> 00:06:24,434
+Speaker SPEAKER_02: What day is it?
+
+87
+00:06:24,494 --> 00:06:25,274
+Speaker SPEAKER_02: It's Monday.
+
+88
+00:06:25,555 --> 00:06:26,036
+Speaker SPEAKER_02: It's Monday.
+
+89
+00:06:26,115 --> 00:06:26,697
+Speaker SPEAKER_04: It just guessed?
+
+90
+00:06:26,836 --> 00:06:27,497
+Speaker SPEAKER_04: It just guessed, yeah.
+
+91
+00:06:27,918 --> 00:06:33,204
+Speaker SPEAKER_04: I don't think the technology we're building today naturally leads to artificial general intelligence.
+
+92
+00:06:33,225 --> 00:06:34,187
+Speaker SPEAKER_04: I don't think we're close to that.
+
+93
+00:06:34,927 --> 00:06:37,490
+Speaker SPEAKER_05: His mentor used to agree.
+
+94
+00:06:37,471 --> 00:06:43,641
+Speaker SPEAKER_05: Until quite recently I thought it was going to be like 20 to 50 years before we had general purpose AI.
+
+95
+00:06:44,083 --> 00:06:46,767
+Speaker SPEAKER_05: Now I think it may be 20 years or less.
+
+96
+00:06:47,209 --> 00:06:48,971
+Speaker SPEAKER_02: Some people think it could be like five.
+
+97
+00:06:49,392 --> 00:06:51,476
+Speaker SPEAKER_05: I wouldn't completely rule that possibility out now.
+
+98
+00:06:51,596 --> 00:06:54,281
+Speaker SPEAKER_05: Whereas a few years ago I would have said no way.
+
+99
+00:06:54,362 --> 00:06:57,726
+Speaker SPEAKER_02: Are we close to the computers coming up with their own ideas for improving themselves?
+
+100
+00:06:58,067 --> 00:06:58,747
+Speaker SPEAKER_05: Yes, we might be.
+
+101
+00:06:59,028 --> 00:07:00,829
+Speaker SPEAKER_02: And then it could just go fast.
+
+102
+00:07:01,190 --> 00:07:02,232
+Speaker SPEAKER_05: That's an issue, right.
+
+103
+00:07:02,291 --> 00:07:04,855
+Speaker SPEAKER_05: We have to think hard about how to control that.
+
+104
+00:07:05,175 --> 00:07:05,454
+Speaker SPEAKER_02: Yeah.
+
+105
+00:07:05,675 --> 00:07:06,016
+Speaker SPEAKER_05: Can we?
+
+106
+00:07:06,456 --> 00:07:06,916
+Speaker SPEAKER_05: We don't know.
+
+107
+00:07:06,937 --> 00:07:08,519
+Speaker SPEAKER_05: We haven't been there yet, but we can try.
+
+108
+00:07:08,559 --> 00:07:09,519
+Speaker SPEAKER_02: OK.
+
+109
+00:07:09,620 --> 00:07:10,880
+Speaker SPEAKER_02: That seems kind of concerning.
+
+110
+00:07:12,223 --> 00:07:12,442
+Speaker SPEAKER_02: Yes.
+
+111
+00:07:13,384 --> 00:07:17,468
+Speaker SPEAKER_02: What do you think the chances are of AI just wiping out humanity?
+
+112
+00:07:18,269 --> 00:07:19,271
+Speaker SPEAKER_05: It's not inconceivable.
+
+113
+00:07:19,790 --> 00:07:20,112
+Speaker SPEAKER_02: OK.
+
+114
+00:07:20,291 --> 00:07:21,432
+Speaker SPEAKER_02: That's all I'll say.
+
+115
+00:07:21,817 --> 00:07:29,910
+Speaker SPEAKER_02: How, Hinton wonders, will we manage a technology that could give a handful of companies or governments such awesome power?
+
+116
+00:07:30,310 --> 00:07:36,399
+Speaker SPEAKER_05: And so I think it's very reasonable for people to be worrying about those issues now, even though it's not going to happen in the next year or two.
+
+117
+00:07:36,899 --> 00:07:39,302
+Speaker SPEAKER_05: People should be thinking about those issues.
+
+118
+00:07:39,322 --> 00:07:45,312
+Speaker SPEAKER_02: For CBS Saturday Morning, still writing his own script for now, Brooke Silva-Braga, Toronto.
+
+119
+00:07:47,029 --> 00:07:48,252
+Speaker SPEAKER_02: Good for you, Brooke.
+
+120
+00:07:48,291 --> 00:07:49,012
+Speaker SPEAKER_01: Yeah, yeah, right.
+
+121
+00:07:49,033 --> 00:07:52,538
+Speaker SPEAKER_01: But two questions, like, why are you building it, one?
+
+122
+00:07:52,978 --> 00:07:56,463
+Speaker SPEAKER_01: And two, why aren't you thinking about the possible impact?
+
+123
+00:07:56,543 --> 00:08:01,872
+Speaker SPEAKER_01: It's this big question mark, and the rest of us have to deal with it.
+
+124
+00:08:01,892 --> 00:08:03,214
+Speaker SPEAKER_01: Building it to try to make life easier.
+
+125
+00:08:03,235 --> 00:08:12,649
+Speaker SPEAKER_03: I thought the bigger question was, when Brooke asked, what do you think of the possibility of AI wiping out humanity, and the guy says, it's not... Not inconceivable, yeah.
+
+126
+00:08:12,629 --> 00:08:13,947
+Speaker SPEAKER_00: I would agree.
+
+127
+00:08:14,130 --> 00:08:15,327
+Speaker SPEAKER_00: My point exactly.
+
+128
+00:08:15,591 --> 00:08:17,255
+Speaker SPEAKER_00: I don't think we can answer that in 10 seconds.
+

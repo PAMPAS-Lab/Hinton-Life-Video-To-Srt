@@ -1,0 +1,156 @@
+1
+00:00:00,031 --> 00:00:03,037
+Speaker SPEAKER_00: That's right, I've never taken a computer science course.
+
+2
+00:00:03,057 --> 00:00:05,844
+Speaker SPEAKER_00: So here's a very good trick that everybody needs to know.
+
+3
+00:00:06,785 --> 00:00:14,022
+Speaker SPEAKER_00: If you know nothing about a topic, get yourself made a professor of it and nobody will ever ask you again if you actually know anything about it.
+
+4
+00:00:22,137 --> 00:00:25,440
+Speaker SPEAKER_00: So actually I got involved in the field when I was at high school.
+
+5
+00:00:25,460 --> 00:00:32,249
+Speaker SPEAKER_00: I got interested in how the brain might work and I had a very smart friend who learned about holograms when they first came out.
+
+6
+00:00:32,268 --> 00:00:37,195
+Speaker SPEAKER_00: With a hologram, you can take a hologram and you can chop a corner off and you don't lose a corner of the image.
+
+7
+00:00:37,695 --> 00:00:39,277
+Speaker SPEAKER_00: The whole image just gets slightly blurrier.
+
+8
+00:00:39,779 --> 00:00:43,603
+Speaker SPEAKER_00: The representation of any one part of the image is spread over the whole hologram.
+
+9
+00:00:43,622 --> 00:00:48,228
+Speaker SPEAKER_00: I got interested in this idea that the brain might have representations distributed over lots of neurons.
+
+10
+00:00:49,154 --> 00:00:51,655
+Speaker SPEAKER_00: Then I went to university and I studied physiology.
+
+11
+00:00:52,116 --> 00:00:55,238
+Speaker SPEAKER_00: Then I switched to philosophy and then I switched to psychology.
+
+12
+00:00:55,560 --> 00:01:01,204
+Speaker SPEAKER_00: Then I went into AI because I decided at that point, you're never going to understand psychology unless you understand the brain.
+
+13
+00:01:05,549 --> 00:01:18,299
+Speaker SPEAKER_00: In 2009, two graduate students at U of T applied some work I've been doing on a new learning algorithm to the problem of recognizing speech and
+
+14
+00:01:18,701 --> 00:01:33,875
+Speaker SPEAKER_00: It was clear then to people who knew a lot about speech recognition that if two graduate students over a summer could produce something better than the existing technology, then with a significant amount of development work, it would become much better than the existing technology.
+
+15
+00:01:34,415 --> 00:01:35,596
+Speaker SPEAKER_00: And that's exactly what happened.
+
+16
+00:01:36,096 --> 00:01:40,700
+Speaker SPEAKER_00: The other systems then started using neural nets too.
+
+17
+00:01:41,361 --> 00:01:46,344
+Speaker SPEAKER_00: That was a big success for a new kind of neural net that was developed in Toronto.
+
+18
+00:01:46,926 --> 00:01:48,507
+Speaker SPEAKER_00: In the old days,
+
+19
+00:01:48,655 --> 00:01:54,631
+Speaker SPEAKER_00: There was what's now called good old-fashioned artificial intelligence, which most people doing AI still believe in.
+
+20
+00:01:54,650 --> 00:02:01,668
+Speaker SPEAKER_00: And the basic idea was that human reasoning is the core of intelligence.
+
+21
+00:02:01,867 --> 00:02:07,376
+Speaker SPEAKER_00: And to understand human reasoning, we better somehow get something like logic into the computer.
+
+22
+00:02:08,139 --> 00:02:11,844
+Speaker SPEAKER_00: And then the computer would reason away, and maybe we could make it reason like people.
+
+23
+00:02:12,686 --> 00:02:17,835
+Speaker SPEAKER_00: It's quite tricky to reason like people, mainly because people don't do most of their thinking by reasoning.
+
+24
+00:02:18,776 --> 00:02:21,260
+Speaker SPEAKER_00: So the alternative view was that
+
+25
+00:02:21,443 --> 00:02:28,629
+Speaker SPEAKER_00: we should look at biology and we should try and make systems that work roughly like the brain.
+
+26
+00:02:29,550 --> 00:02:32,573
+Speaker SPEAKER_00: And the brain doesn't do most of its thinking by reasoning.
+
+27
+00:02:33,153 --> 00:02:34,534
+Speaker SPEAKER_00: It uses things like analogies.
+
+28
+00:02:35,096 --> 00:02:38,718
+Speaker SPEAKER_00: It's a great big neural network that has huge amounts of knowledge in the connections.
+
+29
+00:02:39,400 --> 00:02:42,763
+Speaker SPEAKER_00: It's got so much knowledge in it that you couldn't possibly program it all in by hand.
+
+30
+00:02:43,423 --> 00:02:50,590
+Speaker SPEAKER_00: So the key question became, how could you take a great big neural network and get it to learn stuff from data?
+
+31
+00:02:52,949 --> 00:02:56,193
+Speaker SPEAKER_00: is very important to fund basic curiosity-driven science.
+
+32
+00:02:56,592 --> 00:02:58,855
+Speaker SPEAKER_00: That's where the really big progress comes from.
+
+33
+00:02:59,475 --> 00:03:03,441
+Speaker SPEAKER_00: The huge breakthroughs don't come from money designed for applications.
+
+34
+00:03:05,402 --> 00:03:13,070
+Speaker SPEAKER_00: Obviously, though, if basic curiosity-driven science has led to something that's really working, then you should exploit it.
+
+35
+00:03:13,091 --> 00:03:22,921
+Speaker SPEAKER_00: And so the Vector Institute is mainly about exploiting this technology for deep learning that is really working well at present,
+
+36
+00:03:23,272 --> 00:03:26,117
+Speaker SPEAKER_00: can presumably be improved a lot by more basic research.
+
+37
+00:03:27,441 --> 00:03:32,770
+Speaker SPEAKER_00: Scientists do their best work when they're working on something that really interests them.
+
+38
+00:03:32,790 --> 00:03:35,796
+Speaker SPEAKER_00: You've got to give scientists the freedom to work on what they believe in.
+
+39
+00:03:36,718 --> 00:03:41,467
+Speaker SPEAKER_00: That's when you're going to get the real good stuff.
+

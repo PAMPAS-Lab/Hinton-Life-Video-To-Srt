@@ -1,0 +1,416 @@
+1
+00:00:01,042 --> 00:00:01,544
+Speaker SPEAKER_00: Welcome back.
+
+2
+00:00:01,564 --> 00:00:04,950
+Speaker SPEAKER_00: We want to get back to our exclusive interview with Jeffrey Hinton.
+
+3
+00:00:05,030 --> 00:00:05,972
+Speaker SPEAKER_00: The leading A.I.
+
+4
+00:00:06,032 --> 00:00:11,260
+Speaker SPEAKER_00: researcher has dedicated his career to better understanding the future of intelligence.
+
+5
+00:00:11,281 --> 00:00:17,772
+Speaker SPEAKER_00: And increasingly, Hinton is urging lawmakers to insist big tech companies spend more on A.I.
+
+6
+00:00:17,992 --> 00:00:18,434
+Speaker SPEAKER_00: safety.
+
+7
+00:00:18,734 --> 00:00:21,739
+Speaker SPEAKER_00: His conviction is tied to the speed at which A.I.
+
+8
+00:00:21,839 --> 00:00:25,887
+Speaker SPEAKER_00: is getting smarter and the potential risks associated with that.
+
+9
+00:00:25,867 --> 00:00:32,569
+Speaker SPEAKER_00: In this next part of our conversation, we started by asking Hinton about the chances of AI becoming smarter than humans.
+
+10
+00:00:34,185 --> 00:00:40,652
+Speaker SPEAKER_01: Almost every decent researcher I know believes that, in the long run, it'll get more intelligent than us.
+
+11
+00:00:40,912 --> 00:00:42,435
+Speaker SPEAKER_01: It's not going to stop at our intelligence.
+
+12
+00:00:42,734 --> 00:00:46,920
+Speaker SPEAKER_01: A few people believe that, because it's training on data from us at present.
+
+13
+00:00:47,720 --> 00:00:53,106
+Speaker SPEAKER_01: But most of the researchers I know are fairly confident it will get more intelligent than us.
+
+14
+00:00:53,746 --> 00:00:56,369
+Speaker SPEAKER_01: So the real question is, how long will that take?
+
+15
+00:00:56,929 --> 00:00:59,332
+Speaker SPEAKER_01: And when it does, will we still be able to keep control?
+
+16
+00:01:00,612 --> 00:01:05,504
+Speaker SPEAKER_01: I think there's like a 50-50 chance it'll get more intelligent than us in the next 20 years.
+
+17
+00:01:07,147 --> 00:01:18,655
+Speaker SPEAKER_00: And in terms of us having to grapple with control, again, what does that look like in terms of our own role in the society that we help to create?
+
+18
+00:01:18,837 --> 00:01:20,218
+Speaker SPEAKER_01: Nobody really knows.
+
+19
+00:01:20,418 --> 00:01:22,061
+Speaker SPEAKER_01: We've never confronted this before.
+
+20
+00:01:22,341 --> 00:01:24,766
+Speaker SPEAKER_01: We've never had to deal with things more intelligent than us.
+
+21
+00:01:25,947 --> 00:01:32,737
+Speaker SPEAKER_01: And so people should be very uncertain about what it's going to look like.
+
+22
+00:01:33,438 --> 00:01:42,533
+Speaker SPEAKER_01: And it would seem very wise to do lots of empirical experiments when it's slightly less smart than us, so we still have a chance of staying in control.
+
+23
+00:01:42,513 --> 00:02:00,927
+Speaker SPEAKER_01: And I think the government, for example, should insist that the big companies do lots of safety experiments, spend considerable resources, like a third of their compute resources, on doing safety experiments, while these things are still not as intelligent as us, to see how they might evade control and what we could do about it.
+
+24
+00:02:00,906 --> 00:02:02,909
+Speaker SPEAKER_01: And I think that's a lot of the debate at OpenAI.
+
+25
+00:02:03,370 --> 00:02:09,219
+Speaker SPEAKER_01: The people interested in safety, like Ilya Sutskever, wanted significant resources to be spent on safety.
+
+26
+00:02:09,759 --> 00:02:14,007
+Speaker SPEAKER_01: People interested in profits, like Sam Altman, didn't want to spend too many resources on that.
+
+27
+00:02:14,907 --> 00:02:19,354
+Speaker SPEAKER_00: Do we have a sense on where that spending lies right now?
+
+28
+00:02:19,395 --> 00:02:20,637
+Speaker SPEAKER_00: The spending on safety?
+
+29
+00:02:21,138 --> 00:02:21,358
+Speaker SPEAKER_01: Yes.
+
+30
+00:02:22,278 --> 00:02:24,502
+Speaker SPEAKER_01: Hugely more on development than on safety.
+
+31
+00:02:26,145 --> 00:02:28,027
+Speaker SPEAKER_01: Because these are profit-driven companies.
+
+32
+00:02:28,969 --> 00:02:36,122
+Speaker SPEAKER_00: What do you make of the fact that there's been so much wealth created so quickly in this area?
+
+33
+00:02:36,181 --> 00:02:40,689
+Speaker SPEAKER_00: How does that complicate the story of safety in your opinion?
+
+34
+00:02:41,610 --> 00:02:45,938
+Speaker SPEAKER_01: Well, it makes it clear to the big companies that they want to go full speed ahead.
+
+35
+00:02:46,759 --> 00:02:54,993
+Speaker SPEAKER_01: And there's a big race on between Microsoft and Google and possibly Amazon and possibly Nvidia and possibly
+
+36
+00:02:56,002 --> 00:02:57,444
+Speaker SPEAKER_01: the other big companies, meta.
+
+37
+00:02:58,325 --> 00:03:03,492
+Speaker SPEAKER_01: If any one of those pulled out, the others will keep going.
+
+38
+00:03:04,253 --> 00:03:12,025
+Speaker SPEAKER_01: So you've got the standard competitive dynamics of capitalism, where people are trying to make profits in the fairly short term, and they're going full speed ahead.
+
+39
+00:03:12,686 --> 00:03:17,592
+Speaker SPEAKER_01: And I think the only thing that can slow that down is strict government regulation.
+
+40
+00:03:17,611 --> 00:03:20,256
+Speaker SPEAKER_01: I think governments are the only things powerful enough to slow that down.
+
+41
+00:03:20,793 --> 00:03:26,010
+Speaker SPEAKER_00: And governments obviously represent their respective countries.
+
+42
+00:03:26,070 --> 00:03:28,659
+Speaker SPEAKER_00: What's been your observation on
+
+43
+00:03:29,990 --> 00:03:39,026
+Speaker SPEAKER_00: not only government efforts so far, but the coordination of governments around the world on an issue that doesn't just relate to one territory.
+
+44
+00:03:39,486 --> 00:03:41,891
+Speaker SPEAKER_01: There has been some coordination, and that's very encouraging.
+
+45
+00:03:42,832 --> 00:03:46,901
+Speaker SPEAKER_01: For many things, like autonomous lethal weapons, there's going to be competition.
+
+46
+00:03:47,301 --> 00:03:48,302
+Speaker SPEAKER_01: They're not going to coordinate.
+
+47
+00:03:49,384 --> 00:03:53,532
+Speaker SPEAKER_01: The US isn't going to share with Russia its plans for autonomous lethal weapons.
+
+48
+00:03:53,513 --> 00:04:01,872
+Speaker SPEAKER_01: But there's this one issue of will these things get superintelligent and take over from us when we're all in the same boat?
+
+49
+00:04:02,794 --> 00:04:08,486
+Speaker SPEAKER_01: None of these countries want superintelligence to take over and that will force them to cooperate.
+
+50
+00:04:09,008 --> 00:04:11,674
+Speaker SPEAKER_01: So even at the height of the Cold War,
+
+51
+00:04:11,653 --> 00:04:19,165
+Speaker SPEAKER_01: the Soviet Union and the US could cooperate on trying to prevent a global nuclear war, because it wasn't in either of their interests.
+
+52
+00:04:19,786 --> 00:04:28,939
+Speaker SPEAKER_01: So there's this, of the many problems of AI, there's just this one where you're likely to get good cooperation, which is, how do we prevent them taking over?
+
+53
+00:04:29,800 --> 00:04:35,028
+Speaker SPEAKER_00: Should we be thinking about this in the same way that you would think about a nuclear threat?
+
+54
+00:04:35,408 --> 00:04:35,629
+Speaker SPEAKER_01: Yes.
+
+55
+00:04:36,610 --> 00:04:38,853
+Speaker SPEAKER_01: I mean, I think that's a good way to think about it.
+
+56
+00:04:39,295 --> 00:04:41,458
+Speaker SPEAKER_01: There is, however, one big difference.
+
+57
+00:04:41,725 --> 00:04:44,389
+Speaker SPEAKER_01: that nuclear weapons are only good for destruction.
+
+58
+00:04:45,250 --> 00:04:47,173
+Speaker SPEAKER_01: They tried using them for things like fracking.
+
+59
+00:04:47,572 --> 00:04:48,615
+Speaker SPEAKER_01: It didn't work out too well.
+
+60
+00:04:49,115 --> 00:04:51,499
+Speaker SPEAKER_01: They did that in the 60s, peaceful uses of atom bombs.
+
+61
+00:04:52,439 --> 00:04:53,442
+Speaker SPEAKER_01: That didn't work out so good.
+
+62
+00:04:53,942 --> 00:04:55,103
+Speaker SPEAKER_01: They're basically for destruction.
+
+63
+00:04:55,343 --> 00:04:57,427
+Speaker SPEAKER_01: Whereas AI has a huge upside.
+
+64
+00:04:57,848 --> 00:05:02,615
+Speaker SPEAKER_01: It's wonderful for lots of things, not just answering questions and making fancy images.
+
+65
+00:05:03,076 --> 00:05:05,538
+Speaker SPEAKER_01: It's going to be extremely useful in medicine.
+
+66
+00:05:05,519 --> 00:05:12,069
+Speaker SPEAKER_01: Imagine if you could go to your family doctor, and she'd already seen 100 million patients and remembered things about them.
+
+67
+00:05:12,850 --> 00:05:13,732
+Speaker SPEAKER_01: That would be a big win.
+
+68
+00:05:14,372 --> 00:05:23,367
+Speaker SPEAKER_01: Also, she knew everything about your genome and your whole history of medical tests, which your current doctor probably doesn't swat up on before she sees you.
+
+69
+00:05:25,170 --> 00:05:27,173
+Speaker SPEAKER_01: That would be a much, much better family doctor.
+
+70
+00:05:28,064 --> 00:05:35,136
+Speaker SPEAKER_01: And so, at present in the States, about 200,000 people a year, or maybe more, die because of bad medical diagnoses.
+
+71
+00:05:36,338 --> 00:05:43,449
+Speaker SPEAKER_01: Already AI, combined with a doctor, is much better than a doctor alone, because AI can suggest things the doctor didn't think of.
+
+72
+00:05:44,511 --> 00:05:52,704
+Speaker SPEAKER_01: And so, it can have a huge win in terms of preventing bad medical diagnoses, in terms of
+
+73
+00:05:54,322 --> 00:05:57,595
+Speaker SPEAKER_01: much better treatments, much better understanding of medical images.
+
+74
+00:05:57,976 --> 00:05:59,040
+Speaker SPEAKER_01: That's coming fairly quickly.
+
+75
+00:06:00,266 --> 00:06:01,913
+Speaker SPEAKER_01: So there's this huge upside to it.
+
+76
+00:06:02,656 --> 00:06:04,904
+Speaker SPEAKER_01: In fact, anywhere where you want to predict something.
+
+77
+00:06:05,137 --> 00:06:09,583
+Speaker SPEAKER_01: neural nets can do a good job of predicting, probably much better than the previous technology.
+
+78
+00:06:10,684 --> 00:06:16,490
+Speaker SPEAKER_01: So it's hugely important to companies, and that's why it's not going to be stopped.
+
+79
+00:06:17,012 --> 00:06:20,555
+Speaker SPEAKER_01: The idea we should just pause, that was never realistic.
+
+80
+00:06:21,476 --> 00:06:28,345
+Speaker SPEAKER_01: We have to figure out how can we make a superintelligence not want to take over.
+
+81
+00:06:29,826 --> 00:06:32,089
+Speaker SPEAKER_00: And that's what governments should be focused on right now?
+
+82
+00:06:32,129 --> 00:06:33,632
+Speaker SPEAKER_01: That's one of the many things.
+
+83
+00:06:33,651 --> 00:06:49,471
+Speaker SPEAKER_01: They should be focused on lots of other things, too, like how we prevent AI-designed bioweapons, how we prevent AI-designed cyber attacks, how we prevent AI-designed fake videos from determining elections.
+
+84
+00:06:49,451 --> 00:06:50,615
+Speaker SPEAKER_01: There's lots of other risks.
+
+85
+00:06:50,975 --> 00:06:56,389
+Speaker SPEAKER_01: How we deal with all the job losses that are going to be caused if AI is really as successful as these big companies think it will be.
+
+86
+00:06:57,471 --> 00:07:00,738
+Speaker SPEAKER_01: Those are all other distinct risks with distinct solutions.
+
+87
+00:07:01,701 --> 00:07:07,495
+Speaker SPEAKER_01: I've just tended to focus on the existential threat because that's something that many people thought wasn't real.
+
+88
+00:07:08,115 --> 00:07:22,975
+Speaker SPEAKER_00: I just wonder, is there a suggestion or a solution that you might present that would find a way to balance these trade-offs from the opportunity that this technology presents, which you've outlined, versus these significant risks?
+
+89
+00:07:23,495 --> 00:07:31,086
+Speaker SPEAKER_01: The closest I've come to that is the idea that government should mandate that the big companies spend a lot of their resources on safety.
+
+90
+00:07:31,747 --> 00:07:32,869
+Speaker SPEAKER_01: That's the best I can think of.
+
+91
+00:07:32,928 --> 00:07:34,730
+Speaker SPEAKER_01: It's not very good, but it's the best I can think of.
+
+92
+00:07:34,913 --> 00:07:37,456
+Speaker SPEAKER_00: And your view right now is that they simply are not doing that.
+
+93
+00:07:37,476 --> 00:07:38,678
+Speaker SPEAKER_01: No, they're not mandating that.
+
+94
+00:07:39,259 --> 00:07:47,831
+Speaker SPEAKER_01: There's some legislation proposed in California, where the Californian Attorney General can sue big companies.
+
+95
+00:07:47,851 --> 00:07:49,053
+Speaker SPEAKER_01: So that's the first with teeth.
+
+96
+00:07:49,774 --> 00:07:56,785
+Speaker SPEAKER_01: It can sue big companies if they don't do sensible safety tests and report the results to the California government.
+
+97
+00:07:59,369 --> 00:08:02,153
+Speaker SPEAKER_01: That's still quite weak, but it's better than nothing.
+
+98
+00:08:03,077 --> 00:08:12,226
+Speaker SPEAKER_00: What is the time frame, in your opinion, on getting the regulatory, the government approach right?
+
+99
+00:08:13,185 --> 00:08:14,588
+Speaker SPEAKER_01: It's fairly urgent.
+
+100
+00:08:15,290 --> 00:08:17,413
+Speaker SPEAKER_01: We may need it to be right in five years' time.
+
+101
+00:08:19,016 --> 00:08:20,980
+Speaker SPEAKER_01: Progress has been very slow so far.
+
+102
+00:08:21,420 --> 00:08:28,733
+Speaker SPEAKER_01: So, for example, in Britain they had this Bletchley conference with a lot of publicity where they all agreed that we need to worry about AI safety.
+
+103
+00:08:29,334 --> 00:08:33,761
+Speaker SPEAKER_01: And then the British government decided, we're not actually going to do anything because it might interfere with innovation.
+
+104
+00:08:34,764 --> 00:08:37,489
+Speaker SPEAKER_01: Just treat that as, that's again safety versus profits.
+
