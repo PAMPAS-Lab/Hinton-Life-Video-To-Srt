@@ -4,7 +4,8 @@
 - **标题**：Recent Developments in Deep Learning  
 - **时间**：2010年于MIT  
 - **主讲人**：Geoffrey Hinton  
-- **核心主题**：介绍受限玻尔兹曼机(RBM)的创新改进与三阶交互模型  
+- **核心主题**：介绍受限玻尔兹曼机(RBM)的创新改进与三阶交互模型
+- **视频链接**: [链接文本](https://www.youtube.com/watch?v=VdIURAu1-aU)  
 - **技术突破**：提出因子化三阶玻尔兹曼机，实现运动建模与语音识别突破
 
 ## 🎯 核心技术演进
