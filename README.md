@@ -1,5 +1,5 @@
 # Hinton-Life-Video-To-Srt
-```markdown
+
 ## 2024
 - [2024/20241010 瑞典皇家科学院宣布 2024 年诺贝尔物理学奖获奖者及成果介绍](./2024/20241010瑞典皇家科学院宣布%202024%20年诺贝尔物理学奖获奖者及成果介绍.md)
 - [2024/20241012 Geoffrey Hinton Calls It Unfortunate That Ilya Found Out Sam Altman Was Profit-Driven](./2024/20241012Geoffrey%20Hinton%20Calls%20It%20Unfortunate%20That%20Ilya%20Found%20Out%20Sam%20Altman%20Was%20Profit-Driven.md)
@@ -87,4 +87,4 @@
 
 ## 2007
 - [2007/2007124 The Next Generation of Neural Networks](./2007/2007124The%20Next%20Generation%20of%20Neural%20Networks.md)
-```
+
