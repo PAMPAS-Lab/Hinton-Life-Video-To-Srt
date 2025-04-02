@@ -1,0 +1,2372 @@
+1
+00:00:00,318 --> 00:00:05,626
+Speaker SPEAKER_02: Good morning, good afternoon, and good evening, depending on where you are in the world.
+
+2
+00:00:06,647 --> 00:00:09,772
+Speaker SPEAKER_02: First, welcome to SIGAR 2020.
+
+3
+00:00:10,794 --> 00:00:18,745
+Speaker SPEAKER_02: It is my great pleasure and honor to introduce our first keynote speaker, Professor Geoffrey Kinton.
+
+4
+00:00:18,765 --> 00:00:20,667
+Speaker SPEAKER_02: I believe everybody knows Professor Kinton.
+
+5
+00:00:21,408 --> 00:00:29,801
+Speaker SPEAKER_02: He is a Turing Award winner, the most cited computer scientist, and is considered as a gold medal of deep learning.
+
+6
+00:00:30,219 --> 00:00:38,231
+Speaker SPEAKER_02: Professor Hinton received his PhD in Artificial Intelligence from University of Edinburgh in 1978.
+
+7
+00:00:40,154 --> 00:00:58,320
+Speaker SPEAKER_02: After five years as a faculty member at the CMU, he become a fellow of the Canadian Institute for Advanced Research, and then moved to the Department of Computer Science at University of Toronto, where he's now an eminent distinguished professor.
+
+8
+00:00:58,924 --> 00:01:08,018
+Speaker SPEAKER_02: He's also Vice President and Engineering Fellow at Google and Chief Scientific Advisor of Vector Institute.
+
+9
+00:01:08,938 --> 00:01:20,234
+Speaker SPEAKER_02: The first time I got to know Professor Hinton was through Karen Spock Jones, where I studied for my PhD in the United Kingdom in 1990s.
+
+10
+00:01:20,316 --> 00:01:24,882
+Speaker SPEAKER_02: Professor Hinton is internationally distinguished for his work on deep learning.
+
+11
+00:01:25,385 --> 00:01:38,001
+Speaker SPEAKER_02: He was one of the researcher who introduced the backpropagation algorithm and then the first to use backpropagation for learning world imbibing.
+
+12
+00:01:38,021 --> 00:01:53,079
+Speaker SPEAKER_02: His other contribution to neural network research include Belzman machines, distributed representation, time delay neural net, mixture of expert, variation learning and deep learning.
+
+13
+00:01:54,680 --> 00:02:10,140
+Speaker SPEAKER_02: Together with Yann LeCun and Yoshua Bengio, Professor Hinton won the 2018 Turing Award for conceptual and engineering breakthroughs that have made deep neural network a critical component of computing.
+
+14
+00:02:10,842 --> 00:02:16,849
+Speaker SPEAKER_02: In 2018, he was awarded a Companion of the Order of Canada.
+
+15
+00:02:18,513 --> 00:02:22,358
+Speaker SPEAKER_02: Finally, let's warmly welcome Professor Hinton
+
+16
+00:02:24,127 --> 00:02:29,413
+Speaker SPEAKER_01: Okay, thank you very much for that generous introduction and welcome to the conference.
+
+17
+00:02:30,574 --> 00:02:41,128
+Speaker SPEAKER_01: I'm gonna talk about the future of neural networks, but in order to do that, I'm gonna talk quite a lot about the past of neural networks.
+
+18
+00:02:41,149 --> 00:02:43,412
+Speaker SPEAKER_01: In particular, I'm gonna talk about unsupervised learning.
+
+19
+00:02:45,033 --> 00:02:46,695
+Speaker SPEAKER_01: So there's various types of learning task.
+
+20
+00:02:47,056 --> 00:02:51,602
+Speaker SPEAKER_01: The most obvious is supervised learning where you learn to predict an output when given an input vector.
+
+21
+00:02:52,104 --> 00:02:56,310
+Speaker SPEAKER_01: There's reinforcement learning, where you learn to select an action, like which move to play at go.
+
+22
+00:02:57,412 --> 00:03:02,418
+Speaker SPEAKER_01: And then there's unsupervised learning, where the aim is to discover good internal representations of the input.
+
+23
+00:03:04,120 --> 00:03:07,604
+Speaker SPEAKER_01: It's much harder to find this mathematically, what you mean by good representation.
+
+24
+00:03:10,868 --> 00:03:14,112
+Speaker SPEAKER_01: First of all, I'm going to explain why I believe we need unsupervised learning.
+
+25
+00:03:15,189 --> 00:03:24,503
+Speaker SPEAKER_01: If you look at people, which is after all what we're trying to compete with, we have about 10 to the 14 synapses and we only live for about 10 to the nine seconds.
+
+26
+00:03:27,268 --> 00:03:32,876
+Speaker SPEAKER_01: So that means explicit labels or payoffs can't possibly provide enough information to train all those synapses.
+
+27
+00:03:33,477 --> 00:03:35,780
+Speaker SPEAKER_01: We have about 10 to the five synapses per second.
+
+28
+00:03:38,123 --> 00:03:41,568
+Speaker SPEAKER_01: Now there's some arguments against the idea that we learn all those synapses.
+
+29
+00:03:42,324 --> 00:03:45,008
+Speaker SPEAKER_01: One argument is what if they're innate rather than learned?
+
+30
+00:03:46,229 --> 00:03:48,973
+Speaker SPEAKER_01: Well, it's hard to see how they could be innate.
+
+31
+00:03:50,056 --> 00:03:56,625
+Speaker SPEAKER_01: That's appealing to evolution and evolution is a much less efficient algorithm than backpropagation.
+
+32
+00:03:56,645 --> 00:03:57,825
+Speaker SPEAKER_01: What if they're highly redundant?
+
+33
+00:03:59,168 --> 00:04:01,972
+Speaker SPEAKER_01: Well, we pay a big cost for having a large brain.
+
+34
+00:04:02,432 --> 00:04:05,157
+Speaker SPEAKER_01: In particular, women pay a big cost for us having a large brain.
+
+35
+00:04:05,858 --> 00:04:09,042
+Speaker SPEAKER_01: And so it's very unlikely that we're wasting capacity.
+
+36
+00:04:11,991 --> 00:04:15,657
+Speaker SPEAKER_01: We operate in the regime of huge models trained on not much data.
+
+37
+00:04:16,098 --> 00:04:18,081
+Speaker SPEAKER_01: That's very unlike conventional statistics.
+
+38
+00:04:19,644 --> 00:04:22,809
+Speaker SPEAKER_01: For us, experience is expensive and synapses are cheap.
+
+39
+00:04:22,829 --> 00:04:29,500
+Speaker SPEAKER_01: So we need to look at learning algorithms that can use not much experience and a lot of parameters.
+
+40
+00:04:32,824 --> 00:04:38,774
+Speaker SPEAKER_01: If you look at the objective functions people have used for unsupervised learning, there's maximum likelihood, which is the obvious one.
+
+41
+00:04:39,463 --> 00:04:47,252
+Speaker SPEAKER_01: And that means adjusting the parameters of a generative model to maximize the probability that the model would generate the observed data.
+
+42
+00:04:48,994 --> 00:05:07,091
+Speaker SPEAKER_01: A simple example of that is fitting a mixture of Gaussians to a data distribution, where you try and find the means and variances and mixing proportions of the Gaussians, so that if you pick one of the Gaussians according to the mixing proportions, and then generate a point from that Gaussian, you're as likely as possible to generate things that look like the data.
+
+43
+00:05:08,776 --> 00:05:12,060
+Speaker SPEAKER_01: Then there's autoencoders, which aren't exactly maximum likelihood.
+
+44
+00:05:12,742 --> 00:05:18,769
+Speaker SPEAKER_01: And what they're trying to do is find an economical representation that allows the data to be reconstructed.
+
+45
+00:05:22,055 --> 00:05:28,002
+Speaker SPEAKER_01: And then there's one I'm going to talk about a lot in the second half of this talk, which is spatial or temporal coherence.
+
+46
+00:05:29,524 --> 00:05:33,670
+Speaker SPEAKER_01: And the idea is to extract properties that are coherent across space or time.
+
+47
+00:05:35,033 --> 00:05:37,415
+Speaker SPEAKER_01: And this is definitely different from maximum likelihood learning.
+
+48
+00:05:40,112 --> 00:05:41,475
+Speaker SPEAKER_01: So let's start with autoencoders.
+
+49
+00:05:42,576 --> 00:05:48,682
+Speaker SPEAKER_01: Autoencoders are a way of using a supervised learning algorithm to implement unsupervised learning.
+
+50
+00:05:50,185 --> 00:05:55,610
+Speaker SPEAKER_01: So we have a network in which data comes in at the bottom and the output of the network is a reconstruction.
+
+51
+00:05:56,211 --> 00:05:59,076
+Speaker SPEAKER_01: And the aim of learning is to make the reconstruction be the same as the data.
+
+52
+00:06:00,898 --> 00:06:07,925
+Speaker SPEAKER_01: The network has an encoder, which takes the data and converts it into a code vector.
+
+53
+00:06:08,884 --> 00:06:14,870
+Speaker SPEAKER_01: Often you'd like that code vector to be small, or sometimes you'd like it to be a vector that's probable under some prior distribution.
+
+54
+00:06:16,531 --> 00:06:21,297
+Speaker SPEAKER_01: And then we have a decoder that takes the code vector and tries to reconstruct the data.
+
+55
+00:06:22,057 --> 00:06:24,420
+Speaker SPEAKER_01: So the decode is a conditional generative model.
+
+56
+00:06:24,939 --> 00:06:28,783
+Speaker SPEAKER_01: It's given the code vector, and then it tries to generate data that looks like the real data.
+
+57
+00:06:32,887 --> 00:06:37,812
+Speaker SPEAKER_01: For about 20 years, people thought that it was very difficult to train deep autoencoders.
+
+58
+00:06:38,973 --> 00:06:46,903
+Speaker SPEAKER_01: So the idea was around from the beginning of the popularity of backpropagation in the mid-1980s, but nobody could get it to work in deep networks.
+
+59
+00:06:47,545 --> 00:06:48,447
+Speaker SPEAKER_01: And the question is why?
+
+60
+00:06:48,487 --> 00:06:51,891
+Speaker SPEAKER_01: Well, we were using the wrong type of neuron.
+
+61
+00:06:52,471 --> 00:06:59,141
+Speaker SPEAKER_01: We were using sigmoid units or tanh units rather than rectified linear units, which are much easier to train in deep nets.
+
+62
+00:07:01,281 --> 00:07:03,064
+Speaker SPEAKER_01: We also initialized the weights badly.
+
+63
+00:07:03,644 --> 00:07:11,355
+Speaker SPEAKER_01: It's very important if you want to train a deep net to scale the weights when you initialize them so the back-propagated gradients don't explode or vanish.
+
+64
+00:07:13,137 --> 00:07:14,399
+Speaker SPEAKER_01: But also computers were slow.
+
+65
+00:07:15,439 --> 00:07:20,485
+Speaker SPEAKER_01: They weren't quite slow enough to excuse the fact that we couldn't get them to work, but they were slow nevertheless.
+
+66
+00:07:20,526 --> 00:07:31,120
+Speaker SPEAKER_01: In 2006, Ruslan Salakutinov and I introduced a way of training deep autoencoders
+
+67
+00:07:32,567 --> 00:07:34,490
+Speaker SPEAKER_01: And it was a very simple way to train them.
+
+68
+00:07:34,951 --> 00:07:37,774
+Speaker SPEAKER_01: And it involves stacking up a bunch of shallow autoencoders.
+
+69
+00:07:39,757 --> 00:07:46,387
+Speaker SPEAKER_01: So you start by training a shallow autoencoder that takes the data's input.
+
+70
+00:07:47,848 --> 00:07:52,074
+Speaker SPEAKER_01: It has a hidden layer of feature detectors, which you can think of as a code layer initially.
+
+71
+00:07:53,055 --> 00:07:56,040
+Speaker SPEAKER_01: And it tries to learn feature detectors that allow it to reconstruct the data.
+
+72
+00:07:57,401 --> 00:07:58,744
+Speaker SPEAKER_01: Once it's done that,
+
+73
+00:07:59,180 --> 00:08:03,608
+Speaker SPEAKER_01: you take the activities of the feature detectors, and you treat them as data, and you do it again.
+
+74
+00:08:03,629 --> 00:08:06,675
+Speaker SPEAKER_01: And once it's done that, you do it again.
+
+75
+00:08:06,714 --> 00:08:08,439
+Speaker SPEAKER_01: And you can do it for as many times as you like.
+
+76
+00:08:09,560 --> 00:08:14,310
+Speaker SPEAKER_01: And so without using any labels, this will pre-train lots of layers of feature detectors.
+
+77
+00:08:14,932 --> 00:08:16,716
+Speaker SPEAKER_01: This is called unsupervised pre-training.
+
+78
+00:08:21,151 --> 00:08:29,420
+Speaker SPEAKER_01: So each new autoencoder is treating the activities of the feature detectors you've already learned as its data, and it's learning to encode them further.
+
+79
+00:08:31,564 --> 00:08:38,831
+Speaker SPEAKER_01: Now, the interesting thing about the algorithm we came up with was, first of all, that it revived deep learning in 2006.
+
+80
+00:08:39,033 --> 00:08:40,934
+Speaker SPEAKER_01: People then started training deep nets.
+
+81
+00:08:43,577 --> 00:08:44,700
+Speaker SPEAKER_01: It had some interesting math.
+
+82
+00:08:45,039 --> 00:08:48,423
+Speaker SPEAKER_01: If the shallow autoencoders are things called restricted Boltzmann machines,
+
+83
+00:08:49,450 --> 00:09:01,043
+Speaker SPEAKER_01: then there's some math showing that every time you add a new shallow autoencoder to the stack, you get a new variational bound on the log probability of your model generating the data.
+
+84
+00:09:01,643 --> 00:09:05,027
+Speaker SPEAKER_01: And that variational bound is better than the previous variational bound.
+
+85
+00:09:07,769 --> 00:09:13,416
+Speaker SPEAKER_00: As with much fancy math, it's completely irrelevant in practice, but it's very good for selling the idea.
+
+86
+00:09:17,783 --> 00:09:22,150
+Speaker SPEAKER_00: Since then, people have developed more sophisticated kinds of deep autoencoder.
+
+87
+00:09:25,417 --> 00:09:40,264
+Speaker SPEAKER_01: In a greedily learned stack of shallow autoencoders, there's no pressure for the feature detectors you extract early on to be the feature detectors you're really gonna need for representations you're gonna extract later on.
+
+88
+00:09:43,129 --> 00:09:46,873
+Speaker SPEAKER_01: To overcome this problem, we can learn a deep autoencoder end-to-end.
+
+89
+00:09:47,553 --> 00:09:53,119
+Speaker SPEAKER_01: That's what people had always tried in the past, and it never worked because we were using the wrong kinds of units and not initializing it properly.
+
+90
+00:09:54,279 --> 00:09:57,743
+Speaker SPEAKER_01: But with faster computing and better units, that now works very well.
+
+91
+00:09:58,464 --> 00:10:02,467
+Speaker SPEAKER_01: It may be a problem for biology to do that, but for computers, it's not a problem.
+
+92
+00:10:04,789 --> 00:10:07,952
+Speaker SPEAKER_01: And there've recently been major advances in learning deep autoencoders.
+
+93
+00:10:10,774 --> 00:10:12,596
+Speaker SPEAKER_01: So in 2013,
+
+94
+00:10:13,167 --> 00:10:16,711
+Speaker SPEAKER_01: Welling and Kingma introduced variational autoencoders.
+
+95
+00:10:18,231 --> 00:10:29,482
+Speaker SPEAKER_01: And the idea of these is you'll have an encoder shown on the left there that takes data and converts it into a real valued code vector.
+
+96
+00:10:33,267 --> 00:10:39,072
+Speaker SPEAKER_01: And then you have a decoder that takes the real value code vector and reconstructs the data.
+
+97
+00:10:40,437 --> 00:10:43,181
+Speaker SPEAKER_01: And the aim of the encoder is twofold.
+
+98
+00:10:44,022 --> 00:10:51,311
+Speaker SPEAKER_01: It wants to find a code that can maximize the probability of that code under a prior distribution.
+
+99
+00:10:52,152 --> 00:10:58,721
+Speaker SPEAKER_01: So the idea is in that real value code space, you have a prior distribution, which is normally a Gaussian.
+
+100
+00:10:59,881 --> 00:11:06,090
+Speaker SPEAKER_01: And the encoder is trying to find codes near the mean of that Gaussian, codes that are probable under the Gaussian.
+
+101
+00:11:06,626 --> 00:11:10,451
+Speaker SPEAKER_01: but it's also trying to find codes that will allow it to reconstruct the data.
+
+102
+00:11:12,554 --> 00:11:18,621
+Speaker SPEAKER_01: The decoder takes the code and tries to reconstruct the data accurately.
+
+103
+00:11:19,744 --> 00:11:23,828
+Speaker SPEAKER_01: And it does that using a variational approximation that I'm not gonna go into.
+
+104
+00:11:24,710 --> 00:11:35,283
+Speaker SPEAKER_01: But by using a clever mathematical trick, Willing and King were able to get all the derivatives they need to train a variational autoencoder
+
+105
+00:11:35,634 --> 00:11:43,486
+Speaker SPEAKER_01: both to have a high probability of reconstructing the data from the code and to produce codes that themselves have a high probability under the prior.
+
+106
+00:11:45,028 --> 00:11:50,677
+Speaker SPEAKER_01: I'm not gonna talk more about variational autoencoders, but they're currently one of the best methods of doing unsupervised learning.
+
+107
+00:11:53,061 --> 00:11:55,245
+Speaker SPEAKER_01: I will talk more about a method called BERT.
+
+108
+00:11:56,886 --> 00:12:03,297
+Speaker SPEAKER_01: So BERT is a deep autoencoder that's trained to fill in missing words in a sentence.
+
+109
+00:12:04,356 --> 00:12:13,767
+Speaker SPEAKER_01: It's actually very relevant to information retrieval, because BERT extracts extremely good representations of words, and they should be very good for understanding documents.
+
+110
+00:12:14,668 --> 00:12:18,552
+Speaker SPEAKER_01: And as we'll see, they're certainly very good for building a model of what's in documents.
+
+111
+00:12:22,976 --> 00:12:29,884
+Speaker SPEAKER_01: So in BERT, you have many layers, and in every layer, you have an embedding of each of the input words.
+
+112
+00:12:30,764 --> 00:12:33,908
+Speaker SPEAKER_01: So when a word comes in, it's converted into a vector,
+
+113
+00:12:34,342 --> 00:12:37,886
+Speaker SPEAKER_01: and you'll have that vector representation of word in the first hidden layer.
+
+114
+00:12:37,907 --> 00:12:41,370
+Speaker SPEAKER_01: And in the second hidden layer, you'll have a better vector representation of that word.
+
+115
+00:12:42,071 --> 00:12:46,495
+Speaker SPEAKER_01: And the representations of the words of a given word will get better as you go through the network.
+
+116
+00:12:49,177 --> 00:13:00,789
+Speaker SPEAKER_01: In fact, the representation in layer L plus one is learned and is produced by comparing the embedding of that word in layer L
+
+117
+00:13:01,309 --> 00:13:11,644
+Speaker SPEAKER_01: with the embeddings of the other words in the sentence of layer L. And those comparisons are done by a complicated form of attention called a transformer, which I'll now try and explain.
+
+118
+00:13:12,504 --> 00:13:13,466
+Speaker SPEAKER_01: It's a very clever idea.
+
+119
+00:13:14,748 --> 00:13:22,879
+Speaker SPEAKER_01: And the embedding of the words you get just before the network tries to output the words,
+
+120
+00:13:23,111 --> 00:13:36,813
+Speaker SPEAKER_01: which includes, of course, filling in words that were missing, that final embedding turns out to be a very good representation of words to use for things like modeling the content of sentences and for many different natural language tasks.
+
+121
+00:13:36,833 --> 00:13:40,438
+Speaker SPEAKER_01: And I'll show you one thing it's been used for where it works extremely well.
+
+122
+00:13:44,144 --> 00:13:50,335
+Speaker SPEAKER_01: So if you have a standard one-dimensional convolutional neural network for representing strings of words,
+
+123
+00:13:51,192 --> 00:14:05,270
+Speaker SPEAKER_01: At one level, you'll have these vectors that represent the words in the sentence, and you'll get a vector to represent those words at the next level up by combining information via weight matrices from the words at the level below.
+
+124
+00:14:07,594 --> 00:14:14,482
+Speaker SPEAKER_01: So you simply look at all the words that are nearby you in the level below,
+
+125
+00:14:15,172 --> 00:14:21,437
+Speaker SPEAKER_01: and you combine those representations into a better representation of your word at the next level up.
+
+126
+00:14:23,679 --> 00:14:26,182
+Speaker SPEAKER_01: BERT does the same thing, but with attention.
+
+127
+00:14:28,105 --> 00:14:29,285
+Speaker SPEAKER_01: So BERT looks like this.
+
+128
+00:14:30,687 --> 00:14:40,437
+Speaker SPEAKER_01: In order to combine the representations of the words at the bottom level there, to make a new representation of the word in that particular column at the higher level,
+
+129
+00:14:42,003 --> 00:14:46,509
+Speaker SPEAKER_01: we're going to use something that actually looks a bit like information retrieval.
+
+130
+00:14:47,990 --> 00:14:57,522
+Speaker SPEAKER_01: Each word via some learned weight matrix is gonna produce a query vector, a key vector and a value vector.
+
+131
+00:15:00,206 --> 00:15:09,376
+Speaker SPEAKER_01: And then for each word at level L, you're gonna take his query vector and you're gonna compare it with the key vectors of all the other words.
+
+132
+00:15:11,077 --> 00:15:32,115
+Speaker SPEAKER_01: And when you find a good match between the query vector and the key vector, when the exponential of that product, that scalar product of the query vector and key vector is big, then you're going to allow the value vector at that nearby location to influence your representation in the next level up.
+
+133
+00:15:32,136 --> 00:15:35,162
+Speaker SPEAKER_01: So for example, if I'm the word June,
+
+134
+00:15:36,711 --> 00:15:52,357
+Speaker SPEAKER_01: And I'll produce a query vector, and the query vector will be good at matching the names of months, but it'll also be good at matching women's names, at least in English.
+
+135
+00:15:53,552 --> 00:16:03,028
+Speaker SPEAKER_01: And so it will select relevant words in the rest of the sentence and use those relevant words to modify the representation of June.
+
+136
+00:16:03,849 --> 00:16:10,399
+Speaker SPEAKER_01: If there's several other women's names in the sentence, the representation will become more like the representation of a woman's name.
+
+137
+00:16:10,458 --> 00:16:17,168
+Speaker SPEAKER_01: And if there's several other months in the sentence, it will become more like the representation of a month.
+
+138
+00:16:17,188 --> 00:16:18,851
+Speaker SPEAKER_01: So it'll be refined by the context.
+
+139
+00:16:21,633 --> 00:16:33,567
+Speaker SPEAKER_01: So this is like information retrieval, except that the queries and values and keys are all learned, and they're all learned by backpropagation, the error that it makes in filling in missing words.
+
+140
+00:16:38,712 --> 00:16:42,477
+Speaker SPEAKER_01: So you can use this kind of neural net for language modeling.
+
+141
+00:16:42,498 --> 00:16:48,585
+Speaker SPEAKER_01: What you do is you first pre-train word fragment embeddings using transformers.
+
+142
+00:16:48,970 --> 00:17:06,888
+Speaker SPEAKER_01: That is, you take sentences, or actually pieces of text quite a lot longer than sentences, thousands of fragments long, and you put them through many levels of this autoencoder, which is learning all these keys and values and queries so that the word representations get refined.
+
+143
+00:17:07,750 --> 00:17:13,635
+Speaker SPEAKER_01: And just before the output, you get representations that have been refined very carefully by lots of context.
+
+144
+00:17:14,135 --> 00:17:17,880
+Speaker SPEAKER_01: And so they're very good representations of those input word fragments.
+
+145
+00:17:22,602 --> 00:17:29,009
+Speaker SPEAKER_01: Then what you do is you use those representations of word fragments in another neural net.
+
+146
+00:17:29,630 --> 00:17:36,217
+Speaker SPEAKER_01: And this other neural net is trained to predict the next word fragment from many previous word fragments.
+
+147
+00:17:37,898 --> 00:17:42,684
+Speaker SPEAKER_01: So it's an autoregressive model that looks at previous word fragments and tries to predict the next word fragment.
+
+148
+00:17:43,826 --> 00:17:45,627
+Speaker SPEAKER_01: But it doesn't look at the raw word fragments.
+
+149
+00:17:45,708 --> 00:17:50,212
+Speaker SPEAKER_01: It looks at the representations of those word fragments produced by Bert.
+
+150
+00:17:50,377 --> 00:17:53,241
+Speaker SPEAKER_01: and they're going to work much better than the raw word fragments.
+
+151
+00:17:57,829 --> 00:18:11,069
+Speaker SPEAKER_01: After training this language model, you can see what it believes, or you can see how much it understands by giving it an initial word sequence, then getting it to predict the probability distribution for the next fragment.
+
+152
+00:18:15,116 --> 00:18:27,315
+Speaker SPEAKER_01: So the way you do that is you give it a context, it predicts the probability distribution for the next word fragment, and then if you want to generate from the model, you just pick from that distribution.
+
+153
+00:18:28,415 --> 00:18:38,391
+Speaker SPEAKER_01: So if it says the probability, there's a probability of 0.5 that the word the comes next, then with probability 0.5, you pick the word the.
+
+154
+00:18:39,619 --> 00:18:45,465
+Speaker SPEAKER_01: And then you tell the network, actually the correct word was the, what do you think comes after that?
+
+155
+00:18:46,646 --> 00:18:50,270
+Speaker SPEAKER_01: And it'll give you a new probability distribution for the next word.
+
+156
+00:18:51,071 --> 00:18:54,515
+Speaker SPEAKER_01: For example, it might say, there's a probability of 0.1 that it's cat.
+
+157
+00:18:55,496 --> 00:19:01,001
+Speaker SPEAKER_01: And so you pick from that new distribution and with a probability of 0.1, you pick the word cat.
+
+158
+00:19:01,542 --> 00:19:04,965
+Speaker SPEAKER_01: So if you pick the word cat, you say to it, okay, the next word was cat.
+
+159
+00:19:05,366 --> 00:19:06,807
+Speaker SPEAKER_01: What do you think comes next?
+
+160
+00:19:07,480 --> 00:19:17,294
+Speaker SPEAKER_01: And so you can play this game where you get it to guess a distribution for what comes next, you pick from that distribution, you tell it it was right, and then you say, okay, what comes next?
+
+161
+00:19:18,434 --> 00:19:20,759
+Speaker SPEAKER_01: And that way you can get it to produce long strings of words.
+
+162
+00:19:22,160 --> 00:19:23,541
+Speaker SPEAKER_01: And it's amazing what it produces.
+
+163
+00:19:24,784 --> 00:19:33,596
+Speaker SPEAKER_01: And you can keep going until, for example, you get to a full stop, or you can keep going even after a full stop.
+
+164
+00:19:33,615 --> 00:19:35,479
+Speaker SPEAKER_01: You can keep going for as long as you like.
+
+165
+00:19:38,429 --> 00:20:06,781
+Speaker SPEAKER_01: So what I'm gonna show you now is if you take BERT and you train it on billions of words of text, and then you take the embeddings produced by BERT, a very big version of BERT, and you train a language model that has 175 billion parameters on this very big set of text,
+
+166
+00:20:08,382 --> 00:20:12,188
+Speaker SPEAKER_01: And that training took over 1,000 petaflop days.
+
+167
+00:20:13,590 --> 00:20:14,692
+Speaker SPEAKER_01: That's a long time.
+
+168
+00:20:14,712 --> 00:20:19,760
+Speaker SPEAKER_01: 1,000 petaflop days is an amount of computation that was inconceivable until quite recently.
+
+169
+00:20:21,483 --> 00:20:24,628
+Speaker SPEAKER_01: And so once you've done that, you can get it, for example, to generate news articles.
+
+170
+00:20:25,069 --> 00:20:26,392
+Speaker SPEAKER_01: You can get it to generate all sorts of things.
+
+171
+00:20:26,833 --> 00:20:27,954
+Speaker SPEAKER_01: It knows about all sorts of things.
+
+172
+00:20:28,455 --> 00:20:31,520
+Speaker SPEAKER_01: But let's just focus on one particularly nice example.
+
+173
+00:20:32,951 --> 00:20:36,035
+Speaker SPEAKER_01: It was given the beginning of a news article.
+
+174
+00:20:36,055 --> 00:20:39,397
+Speaker SPEAKER_01: So it was told the title is United Methodists Agree to Historic Split.
+
+175
+00:20:40,138 --> 00:20:44,042
+Speaker SPEAKER_01: The subtitle is Those Who Oppose Gay Marriage Will Form Their Own Denomination.
+
+176
+00:20:45,144 --> 00:20:48,666
+Speaker SPEAKER_01: And then the article is, and now it has to start producing words.
+
+177
+00:20:49,228 --> 00:20:51,730
+Speaker SPEAKER_01: And it produces them one word fragment at a time.
+
+178
+00:20:52,250 --> 00:20:59,778
+Speaker SPEAKER_01: And each time it guesses a word fragment or gives you a distribution, you pick from the distribution, you tell it it was right, and you say, okay, what's the next word fragment?
+
+179
+00:21:00,778 --> 00:21:02,200
+Speaker SPEAKER_01: And here's what it produces.
+
+180
+00:21:06,009 --> 00:21:07,412
+Speaker SPEAKER_01: Now, this is cherry-picked.
+
+181
+00:21:07,531 --> 00:21:11,978
+Speaker SPEAKER_01: This is one of the best examples from this great big GPT-3.
+
+182
+00:21:13,059 --> 00:21:21,192
+Speaker SPEAKER_01: But what's interesting is most people are unable to decide whether that's a genuine news article or it was made up by Bert.
+
+183
+00:21:21,811 --> 00:21:23,335
+Speaker SPEAKER_01: It kind of passes the Turing test.
+
+184
+00:21:25,798 --> 00:21:27,540
+Speaker SPEAKER_01: It's full of lots and lots of common sense.
+
+185
+00:21:27,980 --> 00:21:30,444
+Speaker SPEAKER_01: Notice that linguistically, it only uses words.
+
+186
+00:21:30,505 --> 00:21:33,189
+Speaker SPEAKER_01: It's perfectly capable of generating non-words, but it doesn't.
+
+187
+00:21:34,210 --> 00:21:35,612
+Speaker SPEAKER_01: It knows how to use quotes.
+
+188
+00:21:36,587 --> 00:21:43,875
+Speaker SPEAKER_01: It has coherence, that is sentences that come later on refer back to earlier sentences.
+
+189
+00:21:44,835 --> 00:21:46,057
+Speaker SPEAKER_01: The whole thing makes a lot of sense.
+
+190
+00:21:47,538 --> 00:21:56,726
+Speaker SPEAKER_01: So this is just an example of what can now be done by first training with unsupervised learning using BERT, and then training a huge language model.
+
+191
+00:21:58,708 --> 00:22:00,849
+Speaker SPEAKER_01: It's the only really impressive example I'm gonna give.
+
+192
+00:22:01,549 --> 00:22:06,595
+Speaker SPEAKER_01: I'm gonna now go back to the underlying ideas about how do we do unsupervised learning.
+
+193
+00:22:09,645 --> 00:22:18,157
+Speaker SPEAKER_01: So variational autoencoders and BERT are better than the greedily stacked autoencoders that Ruslan Salakutinov and I introduced.
+
+194
+00:22:18,178 --> 00:22:27,751
+Speaker SPEAKER_01: And it's because the end-to-end learning ensures that the hidden units in earlier layers learn to extract features that are needed by later layers.
+
+195
+00:22:28,472 --> 00:22:30,134
+Speaker SPEAKER_01: That's what backpropagation is good at.
+
+196
+00:22:31,583 --> 00:22:40,351
+Speaker SPEAKER_01: And I believe the brain must have a way of adapting the feature detectors in earlier layers, so they extract what's needed by the feature detectors in later layers.
+
+197
+00:22:43,273 --> 00:22:47,017
+Speaker SPEAKER_01: Stacked autoencoders that learn greedily don't have any incentive to do that.
+
+198
+00:22:47,538 --> 00:22:55,825
+Speaker SPEAKER_01: When they're learning the early feature detectors, they're not taking into consideration representations at later layers, because those representations haven't been learned yet.
+
+199
+00:22:56,346 --> 00:23:01,269
+Speaker SPEAKER_01: You can fine tune them later on to do that, but in the unsupervised learning, they don't do that.
+
+200
+00:23:04,320 --> 00:23:05,729
+Speaker SPEAKER_01: So the question is, can we fix this?
+
+201
+00:23:08,141 --> 00:23:12,001
+Speaker SPEAKER_01: And one question is, does the fix really require backpropagation through multiple layers?
+
+202
+00:23:12,926 --> 00:23:24,663
+Speaker SPEAKER_01: For the last few years, I've been very keen to find a way of doing unsupervised learning in deep nets that doesn't require backpropagation through multiple layers, because I don't believe that's what the brain does.
+
+203
+00:23:25,404 --> 00:23:36,101
+Speaker SPEAKER_01: I've tried very hard to come up with ways the brain might do it and invented some fairly complicated schemes with other people, but I don't really believe the brain is backpropagating through many layers.
+
+204
+00:23:40,047 --> 00:23:41,449
+Speaker SPEAKER_01: So here's an obvious fix.
+
+205
+00:23:42,474 --> 00:23:52,205
+Speaker SPEAKER_01: And most of the rest of this talk is going to be about why this obvious fix doesn't work and how the obvious fix can be refined so that it does work.
+
+206
+00:23:52,226 --> 00:24:08,365
+Speaker SPEAKER_01: And the obvious fix is to learn each layer of features so that they're good at reconstructing what's in the layer below, but also they're easy for the layer above to reconstruct.
+
+207
+00:24:08,969 --> 00:24:11,653
+Speaker SPEAKER_01: So we're just going to consider the layer below and the layer above.
+
+208
+00:24:12,194 --> 00:24:14,279
+Speaker SPEAKER_01: It means we're going to have to learn all the layers at the same time.
+
+209
+00:24:15,422 --> 00:24:20,231
+Speaker SPEAKER_01: And we're going to try and make features which are good at reconstructing the layer below.
+
+210
+00:24:20,271 --> 00:24:27,385
+Speaker SPEAKER_01: That's the greedy autoencoder objective function, but also easy for the layer above to reconstruct.
+
+211
+00:24:27,987 --> 00:24:30,893
+Speaker SPEAKER_01: That is, they fit in with what the layer above would naturally predict.
+
+212
+00:24:33,623 --> 00:24:35,305
+Speaker SPEAKER_01: This has a very pleasing interpretation.
+
+213
+00:24:36,086 --> 00:24:43,213
+Speaker SPEAKER_01: The layer above is gonna make a top-down prediction, and that top-down prediction is gonna supervise the learning of the bottom-up connections.
+
+214
+00:24:44,796 --> 00:24:53,566
+Speaker SPEAKER_01: The bottom-up connections are going to produce a representation, and that representation is gonna act as a target for the top-down prediction.
+
+215
+00:24:55,268 --> 00:24:57,150
+Speaker SPEAKER_01: So what's produced bottom-up?
+
+216
+00:24:57,619 --> 00:25:06,573
+Speaker SPEAKER_01: is acting as a target for learning top-down predictions, and the top-down predictions are acting as a target for learning what to produce bottom-up.
+
+217
+00:25:09,217 --> 00:25:11,059
+Speaker SPEAKER_01: Bottom-up and top-down are supervising each other.
+
+218
+00:25:13,784 --> 00:25:17,390
+Speaker SPEAKER_01: So let me show you an example of that, of using contextual agreement as a teacher.
+
+219
+00:25:18,632 --> 00:25:22,096
+Speaker SPEAKER_01: If you consider a sentence like, she scrummed him with the frying pan.
+
+220
+00:25:24,601 --> 00:25:26,884
+Speaker SPEAKER_01: Hopefully you've never heard the word scrum before,
+
+221
+00:25:27,691 --> 00:25:33,839
+Speaker SPEAKER_01: You suspect it's a verb because of where it is in the sentence and the ending on it, but you have no idea what it means initially.
+
+222
+00:25:34,881 --> 00:25:39,887
+Speaker SPEAKER_01: But after you've seen that one sentence, most people have a pretty good idea of what it means.
+
+223
+00:25:40,308 --> 00:25:44,174
+Speaker SPEAKER_01: It means something like, she hit him over the head with the frying pan.
+
+224
+00:25:44,194 --> 00:25:48,059
+Speaker SPEAKER_01: Now, maybe that's just the Western culture I live in where people do things like that.
+
+225
+00:25:50,262 --> 00:25:54,288
+Speaker SPEAKER_01: But you get a pretty good sense of the meaning of a word from a single sentence.
+
+226
+00:25:55,315 --> 00:25:56,876
+Speaker SPEAKER_01: You don't need thousands of examples.
+
+227
+00:25:57,699 --> 00:26:05,190
+Speaker SPEAKER_01: And that's what's appealing about using top-down predictions as teachers for what you extract bottom-up.
+
+228
+00:26:05,549 --> 00:26:07,573
+Speaker SPEAKER_01: You can learn from one or a few examples.
+
+229
+00:26:09,876 --> 00:26:11,159
+Speaker SPEAKER_01: The same thing happens in vision.
+
+230
+00:26:12,480 --> 00:26:16,767
+Speaker SPEAKER_01: A more global context predicts what you should see in part of the image.
+
+231
+00:26:17,868 --> 00:26:23,938
+Speaker SPEAKER_01: And that top-down prediction allows you to train your neural net to extract what you should be seeing there.
+
+232
+00:26:29,015 --> 00:26:35,025
+Speaker SPEAKER_01: So for many years, I've been trying to train stacks of shallow autoencoders in this way.
+
+233
+00:26:35,425 --> 00:26:41,016
+Speaker SPEAKER_01: I returned to it about once every five years, and it's just recently started working.
+
+234
+00:26:43,239 --> 00:26:44,761
+Speaker SPEAKER_01: The reason it doesn't work easily
+
+235
+00:26:46,143 --> 00:26:52,813
+Speaker SPEAKER_01: is because you can easily make a top-down prediction agree with what you extract bottom-up by making both of them be zero.
+
+236
+00:26:53,713 --> 00:27:01,365
+Speaker SPEAKER_01: So the objective function that says make top-down predictions and things you extract bottom-up agree is not a very good objective function.
+
+237
+00:27:01,384 --> 00:27:03,949
+Speaker SPEAKER_01: It causes things to spiral in towards zero.
+
+238
+00:27:04,907 --> 00:27:11,295
+Speaker SPEAKER_01: The bottom-up predictions will always, sorry, the bottom-up extractions will always undershoot the top-down predictions.
+
+239
+00:27:11,836 --> 00:27:14,077
+Speaker SPEAKER_01: That's the best way to minimize the squared error if you're not sure.
+
+240
+00:27:14,679 --> 00:27:17,922
+Speaker SPEAKER_01: You try or a cross-entropy error.
+
+241
+00:27:17,942 --> 00:27:20,085
+Speaker SPEAKER_01: You undershoot the things you're trying to predict.
+
+242
+00:27:20,765 --> 00:27:25,349
+Speaker SPEAKER_01: But the top-down predictions will also try and undershoot the bottom-up extractions.
+
+243
+00:27:25,990 --> 00:27:27,553
+Speaker SPEAKER_01: So you get these two representations.
+
+244
+00:27:27,633 --> 00:27:29,134
+Speaker SPEAKER_01: Each is learning to undershoot the other.
+
+245
+00:27:29,694 --> 00:27:33,378
+Speaker SPEAKER_01: And it's a death spiral that just spirals into them being zero.
+
+246
+00:27:37,425 --> 00:27:44,553
+Speaker SPEAKER_01: Now, a long time ago, I came up with a way of avoiding that with one of my students by using a better definition of what it means for two things to agree.
+
+247
+00:27:44,593 --> 00:27:54,563
+Speaker SPEAKER_01: Instead of saying they should be equal, you say they should be similar relative to how much they vary over different training cases.
+
+248
+00:27:55,784 --> 00:28:04,512
+Speaker SPEAKER_01: So on a particular training case, you'd like the bottom-up prediction in one part of a neural net to agree with the top-down prediction.
+
+249
+00:28:04,662 --> 00:28:07,684
+Speaker SPEAKER_01: the thing you extract bottom up to agree with the top-down prediction from the layer above.
+
+250
+00:28:09,607 --> 00:28:15,253
+Speaker SPEAKER_01: But you'd like it to disagree with the top-down predictions on other cases, on other training cases.
+
+251
+00:28:15,835 --> 00:28:17,896
+Speaker SPEAKER_01: In other words, you don't want it to be a trivial agreement.
+
+252
+00:28:18,538 --> 00:28:20,980
+Speaker SPEAKER_00: You want it to be an agreement that's specific to that case.
+
+253
+00:28:26,988 --> 00:28:30,872
+Speaker SPEAKER_00: So I'll return to that way of training
+
+254
+00:28:32,624 --> 00:28:37,613
+Speaker SPEAKER_01: stacks of shallow autoencoders after I've discussed a different way of doing unsupervised learning.
+
+255
+00:28:40,857 --> 00:28:45,326
+Speaker SPEAKER_01: So this is a radical alternative to both autoencoders and generative models.
+
+256
+00:28:46,428 --> 00:28:54,260
+Speaker SPEAKER_01: Instead of trying to explain every detail of the sensory input, we're just going to focus on extracting properties that are spatially or temporally coherent.
+
+257
+00:28:58,477 --> 00:29:02,001
+Speaker SPEAKER_00: Unlike autoencoders, that allows us to ignore noise.
+
+258
+00:29:02,643 --> 00:29:06,469
+Speaker SPEAKER_01: If there's some pixels that are pure noise, they're of no real interest.
+
+259
+00:29:07,611 --> 00:29:12,178
+Speaker SPEAKER_01: If you're trying to reconstruct the data, you have to code those pixels so that you can reconstruct them.
+
+260
+00:29:13,460 --> 00:29:18,667
+Speaker SPEAKER_01: But if you're just looking for things that are spatially or temporally coherent, and they're not, you can just ignore them.
+
+261
+00:29:21,090 --> 00:29:25,377
+Speaker SPEAKER_01: So Becker and Hinton introduced a way of extracting spatially coherent properties.
+
+262
+00:29:26,944 --> 00:29:40,704
+Speaker SPEAKER_01: The idea is to maximize the explicit mutual information between the representations extracted from two non-overlapping patches of the input.
+
+263
+00:29:40,724 --> 00:29:56,749
+Speaker SPEAKER_01: If A and B are scalar variables that we've extracted from the two patches, the mutual information between A and B, one way of expressing it, is the log of the variance of the difference between A and B minus the log of the variance of the sum.
+
+264
+00:29:57,791 --> 00:30:08,186
+Speaker SPEAKER_01: So what that says is you'd like A and B to vary a lot and to be very different on different training cases, but on the same training case, you'd like A and B to be very similar.
+
+265
+00:30:09,449 --> 00:30:18,061
+Speaker SPEAKER_01: So that variance of A minus B is the variance of A minus B on a given training case compared with the variance of A plus B over training cases.
+
+266
+00:30:20,184 --> 00:30:23,508
+Speaker SPEAKER_01: If the A and B are vectors, you can just generalize that.
+
+267
+00:30:24,108 --> 00:30:43,890
+Speaker SPEAKER_01: So it generalizes to the log of the determinant of the covariance matrix of A minus B, minus the log of the determinant of the covariance matrix of A plus B. So we tried this on a simple example that was motivated by randoms dot stereograms, which were invented by Jules.
+
+268
+00:30:44,931 --> 00:30:48,314
+Speaker SPEAKER_01: So you take an image and you just fill it with random dots.
+
+269
+00:30:48,334 --> 00:30:49,955
+Speaker SPEAKER_01: So it has no structure.
+
+270
+00:30:50,627 --> 00:30:56,617
+Speaker SPEAKER_01: And then you take another image and you make it just be a shifted version of the first image, a horizontally shifted version.
+
+271
+00:30:57,799 --> 00:31:02,728
+Speaker SPEAKER_01: So the only structure in the image pair is the shift between the two images.
+
+272
+00:31:03,910 --> 00:31:06,073
+Speaker SPEAKER_01: Now we were using very small computers a long time ago.
+
+273
+00:31:06,673 --> 00:31:11,582
+Speaker SPEAKER_01: So we just took a one-dimensional strip from the left image and a one-dimensional strip from the right image.
+
+274
+00:31:12,865 --> 00:31:15,588
+Speaker SPEAKER_01: And we scattered random dots on the left image
+
+275
+00:31:16,008 --> 00:31:19,834
+Speaker SPEAKER_01: And then we looked at the right image, which is a translated version of the left image.
+
+276
+00:31:20,394 --> 00:31:29,969
+Speaker SPEAKER_01: And you can see that if you look at two neighboring patches of the image, then they have the same disparity.
+
+277
+00:31:30,430 --> 00:31:32,553
+Speaker SPEAKER_01: The offset between left and right strips is the same.
+
+278
+00:31:34,375 --> 00:31:43,990
+Speaker SPEAKER_01: So if you train a neural network that looks at the left-hand patch to extract a variable, and you train a copy of that neural network to look at the right-hand patch and extract a variable,
+
+279
+00:31:45,083 --> 00:31:47,846
+Speaker SPEAKER_01: The only spatially coherent property is disparity.
+
+280
+00:31:48,507 --> 00:31:49,867
+Speaker SPEAKER_01: So that's what they have to extract.
+
+281
+00:31:50,449 --> 00:31:51,369
+Speaker SPEAKER_01: And indeed that works.
+
+282
+00:31:54,492 --> 00:32:02,301
+Speaker SPEAKER_01: We got it to work on that simple case and also on a number of more complicated cases where it deals with curved surfaces and discontinuities in the surfaces and so on.
+
+283
+00:32:03,583 --> 00:32:10,550
+Speaker SPEAKER_01: But there's a very nasty problem with that way of getting things to agree by maximizing mutual information.
+
+284
+00:32:12,151 --> 00:32:15,034
+Speaker SPEAKER_01: It's making the assumption that the variables are Gaussian distributed.
+
+285
+00:32:15,895 --> 00:32:22,983
+Speaker SPEAKER_01: And that assumption doesn't cause much problem if you're only learning a linear mapping, if you're optimizing a linear function.
+
+286
+00:32:23,644 --> 00:32:27,469
+Speaker SPEAKER_01: But as soon as you optimize a nonlinear function, it causes bad things to happen.
+
+287
+00:32:29,412 --> 00:32:34,176
+Speaker SPEAKER_01: Those problems are most easily visualized by looking at another method that does the same thing.
+
+288
+00:32:34,198 --> 00:32:38,782
+Speaker SPEAKER_00: So I'm going to spend some time describing this other method.
+
+289
+00:32:41,799 --> 00:32:53,372
+Speaker SPEAKER_01: So local linear embedding, which was published by Saul and Roris in Science in 2000, and has lots of citations, displays high dimensional data in a two dimensional map.
+
+290
+00:32:54,452 --> 00:32:58,477
+Speaker SPEAKER_01: It forces points that are close together in high D to be close to each other in the map.
+
+291
+00:32:59,738 --> 00:33:04,542
+Speaker SPEAKER_01: And it prevents the whole map from collapsing by enforcing a global covariance constraint.
+
+292
+00:33:05,703 --> 00:33:10,028
+Speaker SPEAKER_01: It says that the covariance of all the map points should be the identity matrix.
+
+293
+00:33:10,048 --> 00:33:11,470
+Speaker SPEAKER_01: In other words, they have to be spread out.
+
+294
+00:33:13,188 --> 00:33:20,577
+Speaker SPEAKER_01: Now, when you do that, that global constraint that the covariance ought to be the identity matrix, it sounds innocuous.
+
+295
+00:33:20,657 --> 00:33:24,262
+Speaker SPEAKER_01: It sounds like it would just spread the data out, but it does terrible things.
+
+296
+00:33:25,724 --> 00:33:29,871
+Speaker SPEAKER_01: And it's getting over those terrible things that will be the main content of the rest of this talk.
+
+297
+00:33:32,474 --> 00:33:35,719
+Speaker SPEAKER_01: So if you look at the representations
+
+298
+00:33:36,998 --> 00:33:46,106
+Speaker SPEAKER_01: produced by LLE, that is the locations where it puts images of digits in a 2D map.
+
+299
+00:33:46,126 --> 00:33:50,230
+Speaker SPEAKER_01: The 2D map looks like this, where the colors are the classes of the digits.
+
+300
+00:33:51,313 --> 00:33:54,756
+Speaker SPEAKER_01: And you'll see that it has not found the natural classes.
+
+301
+00:33:55,717 --> 00:34:06,448
+Speaker SPEAKER_01: In fact, you'll see some weird things, like you've got long strings of data that are basically one-dimensional rather than two-dimensional.
+
+302
+00:34:07,491 --> 00:34:08,713
+Speaker SPEAKER_01: They're almost one dimensional.
+
+303
+00:34:09,414 --> 00:34:12,099
+Speaker SPEAKER_01: And these long strings are almost orthogonal to one another.
+
+304
+00:34:12,860 --> 00:34:14,503
+Speaker SPEAKER_01: It's not at all what we wanted it to do.
+
+305
+00:34:14,543 --> 00:34:23,199
+Speaker SPEAKER_01: It's doing something else, but it's doing that other thing because it's cheating on that identity covariance constraint.
+
+306
+00:34:23,259 --> 00:34:26,985
+Speaker SPEAKER_01: It's achieving the constraint by using a method that we didn't intend.
+
+307
+00:34:29,547 --> 00:34:32,590
+Speaker SPEAKER_01: So here's what's happened if you use a method that doesn't cheat.
+
+308
+00:34:33,132 --> 00:34:36,617
+Speaker SPEAKER_01: This is a method called t-SNE that's based on a method called SNE.
+
+309
+00:34:36,657 --> 00:34:39,920
+Speaker SPEAKER_01: And SNE is based on trying to fix what was wrong with LLE.
+
+310
+00:34:41,342 --> 00:34:49,034
+Speaker SPEAKER_01: And you can see there's enough information in the input intensities of the digits to find the natural clusters.
+
+311
+00:34:50,755 --> 00:34:52,918
+Speaker SPEAKER_01: So the colors here correspond to different digit classes.
+
+312
+00:34:53,440 --> 00:34:57,626
+Speaker SPEAKER_01: And you can see that it finds pretty good clusters.
+
+313
+00:34:57,646 --> 00:34:59,367
+Speaker SPEAKER_00: So what went wrong with LLE?
+
+314
+00:35:03,989 --> 00:35:13,679
+Speaker SPEAKER_01: Well, it's that that global covariance constraint can be achieved whilst not really achieving what you wanted it for.
+
+315
+00:35:15,661 --> 00:35:24,471
+Speaker SPEAKER_01: And to explain that, I'm gonna go back to a technique that came before SNE and was motivated by LLE, and it's called linear relational embedding.
+
+316
+00:35:25,431 --> 00:35:30,536
+Speaker SPEAKER_01: It was work done by Alberto Pacanaro and me in 2000 or 2001.
+
+317
+00:35:31,867 --> 00:35:36,815
+Speaker SPEAKER_01: And it's the first place I know where people used a contrastive loss to stop things from collapsing.
+
+318
+00:35:38,117 --> 00:35:49,876
+Speaker SPEAKER_01: So what we were trying to do is produce embeddings for vectors and embeddings for matrices so that we could use vectors and matrices to model relational data.
+
+319
+00:35:51,958 --> 00:35:57,367
+Speaker SPEAKER_01: We would have a bunch of relational facts like the mother of John is Victoria.
+
+320
+00:35:58,951 --> 00:36:09,003
+Speaker SPEAKER_01: And what we wanted to do was learn a vector J to represent John and a vector V to represent Victoria and a matrix M to represent mother of.
+
+321
+00:36:10,146 --> 00:36:20,820
+Speaker SPEAKER_01: So that when we multiplied mother of by John to get MJ, we will get a vector that was close to Victoria and far from all the other vectors.
+
+322
+00:36:22,322 --> 00:36:23,422
+Speaker SPEAKER_01: So we want MJ.
+
+323
+00:36:25,798 --> 00:36:29,762
+Speaker SPEAKER_01: to be closer to V than to the vectors representing other objects.
+
+324
+00:36:30,903 --> 00:36:33,206
+Speaker SPEAKER_01: Our objective function looks like this.
+
+325
+00:36:36,150 --> 00:36:47,422
+Speaker SPEAKER_01: The first term says the vector that we get when we multiply J by N should be similar to the vector for V. And we're measuring the squared distance between them.
+
+326
+00:36:48,682 --> 00:36:55,570
+Speaker SPEAKER_01: The second term says that for all vectors, in particular all other vectors K,
+
+327
+00:36:57,034 --> 00:37:12,039
+Speaker SPEAKER_01: the vector that we get for mj should be far away from k. And the thing about expressing it like that is, it's no good just making one of the vectors be very far away.
+
+328
+00:37:13,561 --> 00:37:19,532
+Speaker SPEAKER_01: As soon as one of the vectors k is very far away from mj, that squared term will be very big.
+
+329
+00:37:20,221 --> 00:37:26,248
+Speaker SPEAKER_01: And because it's e to the minus that squared term, the overall term will be practically zero.
+
+330
+00:37:26,688 --> 00:37:28,251
+Speaker SPEAKER_01: So it won't really contribute to that sum.
+
+331
+00:37:28,610 --> 00:37:31,193
+Speaker SPEAKER_01: And there's no point making k any further away from mj.
+
+332
+00:37:31,974 --> 00:37:36,579
+Speaker SPEAKER_01: What you need to do is take the k's that are close to mj and make those further away.
+
+333
+00:37:37,061 --> 00:37:38,081
+Speaker SPEAKER_01: They're the real competition.
+
+334
+00:37:41,505 --> 00:37:48,894
+Speaker SPEAKER_01: So what the second term does is try to push the wrong answers away, but only those wrong answers that are close.
+
+335
+00:37:50,342 --> 00:37:52,726
+Speaker SPEAKER_01: And that's much better than this global covariance constraint.
+
+336
+00:37:53,065 --> 00:37:59,514
+Speaker SPEAKER_01: The global covariance constraint will be perfectly happy if you made one wrong answer a very big distance away.
+
+337
+00:37:59,554 --> 00:38:03,398
+Speaker SPEAKER_01: And that's what's causing those one-dimensional strings to be strung out.
+
+338
+00:38:07,282 --> 00:38:13,931
+Speaker SPEAKER_01: Now it turns out that linear relational embedding and its cost function can be turned into stochastic neighbor embedding.
+
+339
+00:38:14,572 --> 00:38:19,657
+Speaker SPEAKER_01: So this is work I did with Sam Roweis to overcome the problems of linear,
+
+340
+00:38:20,143 --> 00:38:21,206
+Speaker SPEAKER_01: local linear embedding.
+
+341
+00:38:23,088 --> 00:38:29,056
+Speaker SPEAKER_01: And the way you turn linear relational embedding into cascade neighbor embedding is to say there only is one relation.
+
+342
+00:38:29,737 --> 00:38:30,840
+Speaker SPEAKER_01: There's only one matrix.
+
+343
+00:38:31,380 --> 00:38:33,302
+Speaker SPEAKER_01: It's the identity matrix.
+
+344
+00:38:33,322 --> 00:38:36,789
+Speaker SPEAKER_01: And all we want to do is make one vector similar to another vector.
+
+345
+00:38:37,869 --> 00:38:41,695
+Speaker SPEAKER_01: But I'm going to tell you which other vectors each vector should be similar to.
+
+346
+00:38:47,324 --> 00:38:49,947
+Speaker SPEAKER_00: So what I'm going to do is take some high dimensional data
+
+347
+00:38:52,088 --> 00:38:55,650
+Speaker SPEAKER_01: And I'm gonna look at the distances between pairs of data points.
+
+348
+00:38:57,012 --> 00:39:07,521
+Speaker SPEAKER_01: I'm gonna say the data points that are close together are similar, but I'm gonna measure that similarity by e to the minus the squared distance between the data points.
+
+349
+00:39:11,286 --> 00:39:14,969
+Speaker SPEAKER_01: And so I'm gonna turn proximity into probability.
+
+350
+00:39:16,130 --> 00:39:17,451
+Speaker SPEAKER_00: And then I'm gonna throw away the data.
+
+351
+00:39:17,471 --> 00:39:19,193
+Speaker SPEAKER_01: I'm just gonna hang on to those probabilities.
+
+352
+00:39:22,597 --> 00:39:45,447
+Speaker SPEAKER_01: And now I'm going to try and find how to arrange points in a map, so low-dimensional points like yi rather than the high-dimensional point xi, so that when I use that same function, e to the minus the squared distance, in the low-dimensional map, I can model the similarities that I found in the high-dimensional data.
+
+353
+00:39:46,489 --> 00:39:47,829
+Speaker SPEAKER_01: I'll show you a picture of that in a minute.
+
+354
+00:39:48,831 --> 00:39:51,474
+Speaker SPEAKER_01: So we're learning the 2D locations of the map points.
+
+355
+00:39:52,568 --> 00:40:09,065
+Speaker SPEAKER_01: So the probability that one of the map points would pick one of the other map points if it was asked to pick a neighbor in the 2D space matches the probabilities if you asked one of the high dimensional data points to pick a neighbor and it picked in proportion to how close things were.
+
+356
+00:40:11,807 --> 00:40:12,809
+Speaker SPEAKER_01: So here's a picture of it.
+
+357
+00:40:13,289 --> 00:40:16,432
+Speaker SPEAKER_01: In the high dimensional space, you might have a data point I.
+
+358
+00:40:16,969 --> 00:40:20,793
+Speaker SPEAKER_01: And we're going to compute the probability that it will pick each of its possible neighbors.
+
+359
+00:40:21,494 --> 00:40:46,554
+Speaker SPEAKER_01: And we're going to say that probability is proportional to e to the minus the squared distance, which is equivalent to saying the probability is proportional to the density of that other point, like k or j, under a Gaussian centered at i. So that's how we get the high dimensional probabilities that I would pick j. And then we're going to try and arrange the low dimensional points to model that.
+
+360
+00:40:50,769 --> 00:40:55,594
+Speaker SPEAKER_00: So the high dimensional probabilities are just this contrastive function.
+
+361
+00:40:57,036 --> 00:41:03,722
+Speaker SPEAKER_01: If you take logs of that, you'll get the contrastive function I gave you before to get the log probability.
+
+362
+00:41:05,262 --> 00:41:09,567
+Speaker SPEAKER_01: And once we've got those high dimensional probabilities, we then throw all the data away.
+
+363
+00:41:10,527 --> 00:41:12,809
+Speaker SPEAKER_01: Or maybe someone just gave us probabilities in the first place.
+
+364
+00:41:13,650 --> 00:41:19,596
+Speaker SPEAKER_01: Maybe if they gave us the probabilities of two words co-occurring in a sentence, that would do instead of the high dimensional data.
+
+365
+00:41:22,123 --> 00:41:26,329
+Speaker SPEAKER_01: And then we move points about in a low dimensional space.
+
+366
+00:41:26,889 --> 00:41:30,474
+Speaker SPEAKER_01: So we're gonna move the point I around and the point K around and the point J around.
+
+367
+00:41:32,416 --> 00:41:47,574
+Speaker SPEAKER_01: In order to get probabilities like Q, the probability that I would pick J as its neighbor, if I picks a neighbor in this low dimensional space using the density under a Gaussian in the low dimensional space,
+
+368
+00:41:48,483 --> 00:41:51,045
+Speaker SPEAKER_01: And we want the QJIs to model the PJIs.
+
+369
+00:41:51,425 --> 00:41:56,652
+Speaker SPEAKER_01: We want the probabilities that we get from the low-dimensional map to model the probabilities we had in the high-dimensional space.
+
+370
+00:41:58,253 --> 00:42:14,891
+Speaker SPEAKER_01: And so our cost is the sum over all the data points of the Kullback-Liebler divergence between the probability of picking neighbors that you get for point I in the high-dimensional space, that's P, and the probability that you get in the low-dimensional space.
+
+371
+00:42:16,034 --> 00:42:17,275
+Speaker SPEAKER_00: And that can be expanded out.
+
+372
+00:42:20,630 --> 00:42:33,610
+Speaker SPEAKER_01: And it turns out, to minimize that cost, what you want to do is, if Pij is high in the high-dimensional space, if they're close together, it's important to have them close together in the low-dimensional space.
+
+373
+00:42:34,251 --> 00:42:41,003
+Speaker SPEAKER_01: If they're far apart in the high-dimensional space, so Pij is very small, you can have them very far apart or quite far apart in the low-dimensional space.
+
+374
+00:42:41,262 --> 00:42:42,385
+Speaker SPEAKER_01: It doesn't really matter much.
+
+375
+00:42:45,824 --> 00:42:55,199
+Speaker SPEAKER_01: Okay, so widely separated points in high D have a mild preference for being widely separated in low D, but as soon as they're fairly separated, separating them all doesn't matter much.
+
+376
+00:42:55,900 --> 00:43:00,027
+Speaker SPEAKER_01: And this is very different from using that global covariance constraint that LLE used.
+
+377
+00:43:02,289 --> 00:43:12,827
+Speaker SPEAKER_01: So that's what SNE produces, stochastic neighbor embedding, if you try and get it to embed the digits from zero to four, based on the Euclidean distances between their images.
+
+378
+00:43:14,561 --> 00:43:19,427
+Speaker SPEAKER_01: And it produces quite a good embedding that gets the natural clusters, but it doesn't really get gaps between them.
+
+379
+00:43:20,608 --> 00:43:22,911
+Speaker SPEAKER_01: There's one very amusing thing it did, which I'll show you.
+
+380
+00:43:24,934 --> 00:43:27,976
+Speaker SPEAKER_01: I took this as evidence that God was in favor of SNE.
+
+381
+00:43:30,059 --> 00:43:35,806
+Speaker SPEAKER_01: If you look there, on the borderline between twos and threes, it's put two and a half.
+
+382
+00:43:39,190 --> 00:43:41,413
+Speaker SPEAKER_00: Okay.
+
+383
+00:43:42,389 --> 00:43:50,219
+Speaker SPEAKER_01: Now, t-SNE is just a version of stochastic neighbor embedding where you use a t-distribution in the low dimensional space instead of a Gaussian distribution.
+
+384
+00:43:50,699 --> 00:43:53,882
+Speaker SPEAKER_01: And what that does is allows you to get bigger gaps between the clusters.
+
+385
+00:43:55,425 --> 00:43:59,250
+Speaker SPEAKER_01: So it creates more room in the 2D, which compensates for the lower dimensionality of 2D.
+
+386
+00:43:59,630 --> 00:44:02,012
+Speaker SPEAKER_01: There's not as much room in 2D as in high dimensional space.
+
+387
+00:44:03,514 --> 00:44:04,876
+Speaker SPEAKER_01: That allows gaps between clusters.
+
+388
+00:44:04,896 --> 00:44:09,963
+Speaker SPEAKER_01: And so just to remind you, this has nice gaps between clusters, whereas SNE itself doesn't.
+
+389
+00:44:11,224 --> 00:44:11,485
+Speaker SPEAKER_01: Okay.
+
+390
+00:44:14,856 --> 00:44:20,003
+Speaker SPEAKER_01: So I want to talk a bit more about why the covariance constraint doesn't work when we optimize a nonlinear function.
+
+391
+00:44:21,485 --> 00:44:28,014
+Speaker SPEAKER_01: A linear mapping can't change the ratio between entropy and variance.
+
+392
+00:44:29,157 --> 00:44:31,320
+Speaker SPEAKER_01: It can't change how Gaussian the distribution is.
+
+393
+00:44:32,541 --> 00:44:38,931
+Speaker SPEAKER_01: So if I want to optimize a linear mapping to maximize entropy, I can simply maximize variance.
+
+394
+00:44:39,471 --> 00:44:43,496
+Speaker SPEAKER_01: For a multidimensional thing, I can maximize the log of the determinant of the covariance.
+
+395
+00:44:46,344 --> 00:44:48,668
+Speaker SPEAKER_01: but that goes hopelessly wrong for nonlinear mappings.
+
+396
+00:44:51,010 --> 00:44:56,257
+Speaker SPEAKER_01: A nonlinear mapping can generate a distribution that has two widely separated but extremely tight clusters.
+
+397
+00:44:57,320 --> 00:45:01,806
+Speaker SPEAKER_01: That distribution has an entropy of about one bit, but it's got high variance.
+
+398
+00:45:02,847 --> 00:45:07,273
+Speaker SPEAKER_01: So as soon as you go for nonlinear mappings, you completely decouple entropy from variance.
+
+399
+00:45:10,121 --> 00:45:17,110
+Speaker SPEAKER_01: Similarly, if you have two one-dimensional strings of points that form a cross, you can have a high 2D covariance, but very low entropy.
+
+400
+00:45:17,130 --> 00:45:18,753
+Speaker SPEAKER_01: And that's what you saw in LLE.
+
+401
+00:45:20,275 --> 00:45:25,802
+Speaker SPEAKER_01: And that's why you will never have nonlinear versions of canonical correlation analysis or linear discriminant analysis.
+
+402
+00:45:26,862 --> 00:45:31,168
+Speaker SPEAKER_01: Both of those methods are maximizing variance in order to maximize entropy.
+
+403
+00:45:32,250 --> 00:45:37,876
+Speaker SPEAKER_01: And you can use variance as a stand-in for entropy if you're only learning linear mappings.
+
+404
+00:45:37,896 --> 00:45:39,858
+Speaker SPEAKER_01: But as soon as you learn a nonlinear mapping,
+
+405
+00:45:40,581 --> 00:45:41,583
+Speaker SPEAKER_01: the two get decoupled.
+
+406
+00:45:42,903 --> 00:45:47,849
+Speaker SPEAKER_01: And that was why the work I did with Sue Becker didn't work nearly as well as we hoped.
+
+407
+00:45:48,228 --> 00:45:51,952
+Speaker SPEAKER_01: It kept going wrong because of this decoupling between entropy and variance.
+
+408
+00:45:53,233 --> 00:46:00,360
+Speaker SPEAKER_01: Now people have published papers about nonlinear correlation, canonical correlation analysis or nonlinear linear discriminant analysis.
+
+409
+00:46:01,181 --> 00:46:05,465
+Speaker SPEAKER_01: And basically they're not really doing nonlinear canonical correlation analysis.
+
+410
+00:46:05,827 --> 00:46:10,251
+Speaker SPEAKER_01: They're applying a nonlinear transformation to the data and then doing linear canonical correlation analysis.
+
+411
+00:46:12,070 --> 00:46:20,257
+Speaker SPEAKER_01: Okay, so Ruslan Salakutinov and I tried using these contrastive loss
+
+412
+00:46:21,081 --> 00:46:24,728
+Speaker SPEAKER_01: with the kind of approach that Sue Becker and I were using to extract representations.
+
+413
+00:46:25,429 --> 00:46:26,871
+Speaker SPEAKER_01: And it worked, but not very well.
+
+414
+00:46:26,911 --> 00:46:28,474
+Speaker SPEAKER_01: And that was because computers were slow.
+
+415
+00:46:29,215 --> 00:46:32,260
+Speaker SPEAKER_01: And regretfully, we didn't publish anything, which was entirely our fault.
+
+416
+00:46:33,121 --> 00:46:42,958
+Speaker SPEAKER_01: So other people later on rediscovered the idea, and they used contrastive losses to discover representations that were coherent across space or time.
+
+417
+00:46:43,559 --> 00:46:44,440
+Speaker SPEAKER_01: In this case, it was time.
+
+418
+00:46:44,840 --> 00:46:46,684
+Speaker SPEAKER_01: And they got very impressive results.
+
+419
+00:46:46,900 --> 00:47:03,777
+Speaker SPEAKER_01: I'm going to finish by showing you some work done in my lab that uses the contrastive loss that originally came from the work by Alberto Pacanaro and I, but it didn't really come from there because we didn't
+
+420
+00:47:03,893 --> 00:47:05,134
+Speaker SPEAKER_01: make a big song and dance about it.
+
+421
+00:47:05,153 --> 00:47:09,557
+Speaker SPEAKER_01: We used it for t-SNE, but we didn't manage to convince the community that was a loss to use.
+
+422
+00:47:10,099 --> 00:47:12,661
+Speaker SPEAKER_01: And so the community had to reinvent it for itself in 2018.
+
+423
+00:47:13,862 --> 00:47:15,302
+Speaker SPEAKER_01: So we can't really take credit for it.
+
+424
+00:47:16,905 --> 00:47:18,867
+Speaker SPEAKER_01: I guess we would if we were Schmidt Tuber, but we're not.
+
+425
+00:47:22,949 --> 00:47:33,579
+Speaker SPEAKER_01: So this loss is now very popular and it can be used to get very good representations using unsupervised learning.
+
+426
+00:47:35,128 --> 00:47:39,793
+Speaker SPEAKER_01: So I'm gonna finish by talking about something called SimClear developed by Ting Chen in my lab.
+
+427
+00:47:43,699 --> 00:47:53,190
+Speaker SPEAKER_01: He showed that you can extract representations from patches of images that are very good representations of what's going on in the whole image, but it requires huge amounts of computation.
+
+428
+00:47:53,210 --> 00:47:54,891
+Speaker SPEAKER_00: So it couldn't have been done until very recently.
+
+429
+00:47:58,635 --> 00:48:01,980
+Speaker SPEAKER_01: The way SimClear works is it takes an image X
+
+430
+00:48:02,719 --> 00:48:06,565
+Speaker SPEAKER_01: It then does two different crops of the image, Xi and Xj.
+
+431
+00:48:08,588 --> 00:48:21,847
+Speaker SPEAKER_01: It then applies a deep net, the kind of residual convolutional neural net used for image classification, to get a representation H. All of this is so far unsupervised.
+
+432
+00:48:21,867 --> 00:48:26,052
+Speaker SPEAKER_01: Hi for one crop and Hj for the other crop.
+
+433
+00:48:26,594 --> 00:48:30,498
+Speaker SPEAKER_01: It then applies another transformation to the representation.
+
+434
+00:48:30,597 --> 00:48:38,947
+Speaker SPEAKER_01: to get a vector, which I'll call an embedding vector, and it tries to make those embedding vectors agree in the contrastive sense.
+
+435
+00:48:40,427 --> 00:48:52,081
+Speaker SPEAKER_01: That is, within each mini-batch, it tries to make the embedding vectors for crops of images that come from the same image agree, that is, be similar.
+
+436
+00:48:52,467 --> 00:49:00,485
+Speaker SPEAKER_01: And it tries to make embedding vectors that come from crops of different images disagree, but disagree in that contrastive sense.
+
+437
+00:49:00,545 --> 00:49:02,490
+Speaker SPEAKER_01: So if they already disagree a lot, it doesn't worry.
+
+438
+00:49:02,952 --> 00:49:06,942
+Speaker SPEAKER_01: But if they agree a lot and they come from different images, it tries to make them more different.
+
+439
+00:49:07,503 --> 00:49:10,510
+Speaker SPEAKER_01: And that's what stops things collapsing.
+
+440
+00:49:12,920 --> 00:49:16,143
+Speaker SPEAKER_01: One thing Ting discovered is that's not sufficient.
+
+441
+00:49:17,023 --> 00:49:23,949
+Speaker SPEAKER_01: If you just take two different crops of the same image, you can normally tell they come from the same image because they have the same color histograms.
+
+442
+00:49:24,630 --> 00:49:28,934
+Speaker SPEAKER_01: And so the first thing SimClear will do is learn to extract the color histogram.
+
+443
+00:49:29,414 --> 00:49:38,003
+Speaker SPEAKER_01: And if you want it to do something better than that, what you have to do is mess up the colors in a different way in each of the crops.
+
+444
+00:49:38,503 --> 00:49:41,847
+Speaker SPEAKER_01: And then it can't use the color histogram, and it will discover something more interesting.
+
+445
+00:49:44,054 --> 00:49:47,376
+Speaker SPEAKER_01: So Ting discovered he could get very good representations from SimClear.
+
+446
+00:49:48,739 --> 00:49:54,925
+Speaker SPEAKER_01: You do unsupervised learning this way, and then you train a linear classifier on top of the representation.
+
+447
+00:49:55,445 --> 00:49:57,146
+Speaker SPEAKER_01: That is the layer before the end here.
+
+448
+00:49:57,807 --> 00:50:00,130
+Speaker SPEAKER_01: That was another thing Ting discovered made it work much better.
+
+449
+00:50:02,773 --> 00:50:06,215
+Speaker SPEAKER_01: And what you get is very good unsupervised learning.
+
+450
+00:50:07,177 --> 00:50:14,043
+Speaker SPEAKER_01: So what I'm showing you here is how well SimClear works compared with other methods from six months ago.
+
+451
+00:50:15,525 --> 00:50:25,230
+Speaker SPEAKER_01: And the way you evaluate them is you take the representations that they learn unsupervised, and then you apply a linear classifier on ImageNet to see how well you do.
+
+452
+00:50:25,250 --> 00:50:28,518
+Speaker SPEAKER_01: And SimClear does better than the other methods.
+
+453
+00:50:29,400 --> 00:50:32,487
+Speaker SPEAKER_01: Since then, the other methods have improved, but SimClear has also improved.
+
+454
+00:50:33,514 --> 00:50:48,311
+Speaker SPEAKER_01: And what you notice is that if you use a big SimClear net, it extracts representations that are as good as the representations learned in 2012 by the AlexNet that made a big revolution by showing supervised learning on ImageNet can do very good classification.
+
+455
+00:50:50,873 --> 00:51:02,947
+Speaker SPEAKER_01: So simply applying a linear classifier, just one layer of weights to the unsupervised representations extracted by SimClear does as well as supervised learning
+
+456
+00:51:05,458 --> 00:51:08,402
+Speaker SPEAKER_00: but you have to use a deeper net and you have to use more parameters.
+
+457
+00:51:10,706 --> 00:51:22,461
+Speaker SPEAKER_01: Alternatively, you can take the representation extracted unsupervised by SimClear, and then you can fine tune the whole net, but only 1% of the labels.
+
+458
+00:51:23,643 --> 00:51:27,889
+Speaker SPEAKER_01: And now SimClear again, does as well as the 2012 AlexNet.
+
+459
+00:51:28,914 --> 00:51:42,690
+Speaker SPEAKER_01: So basically what's happened in the eight years since 2012 is by using much more computation and much bigger nets, much deeper nets and much wider nets, we can now get the same performance with only 1% of the data labels.
+
+460
+00:51:43,632 --> 00:51:49,860
+Speaker SPEAKER_01: And that's because we can do effective unsupervised learning.
+
+461
+00:51:49,880 --> 00:51:50,219
+Speaker SPEAKER_01: Okay.
+
+462
+00:51:51,121 --> 00:51:54,043
+Speaker SPEAKER_01: I was going to say more things, but I've run out of time.
+
+463
+00:51:55,005 --> 00:51:56,708
+Speaker SPEAKER_01: So I will leave it there.
+
+464
+00:51:57,929 --> 00:51:58,769
+Speaker SPEAKER_00: That's the end of my talk.
+
+465
+00:52:00,438 --> 00:52:04,063
+Speaker SPEAKER_00: Thank you.
+
+466
+00:52:04,083 --> 00:52:05,847
+Speaker SPEAKER_00: I'm going to try and unshare my screen now.
+
+467
+00:52:10,034 --> 00:52:13,559
+Speaker SPEAKER_03: A visionary talk, and now it's Q&A time.
+
+468
+00:52:14,400 --> 00:52:16,123
+Speaker SPEAKER_03: The first question from Thorsten.
+
+469
+00:52:16,905 --> 00:52:18,809
+Speaker SPEAKER_03: Professor Thorsten, could you?
+
+470
+00:52:18,829 --> 00:52:20,771
+Speaker SPEAKER_04: Yeah.
+
+471
+00:52:20,811 --> 00:52:21,052
+Speaker SPEAKER_04: Thank you.
+
+472
+00:52:21,072 --> 00:52:23,255
+Speaker SPEAKER_04: That was a fascinating talk.
+
+473
+00:52:24,467 --> 00:52:29,291
+Speaker SPEAKER_04: Many of the techniques that you talked about would be extremely useful in recommender systems.
+
+474
+00:52:29,371 --> 00:52:38,280
+Speaker SPEAKER_04: For example, recommender system for this conference that would learn about the semantic relationships between the papers and the interests of the authors and participants.
+
+475
+00:52:39,400 --> 00:52:50,431
+Speaker SPEAKER_04: But typically, these systems also have additional constraints like policy rules, for example, that we want to feature student papers at this conference.
+
+476
+00:52:50,451 --> 00:52:54,153
+Speaker SPEAKER_04: Or if you go to company settings, there may be business policies
+
+477
+00:52:55,061 --> 00:53:01,550
+Speaker SPEAKER_04: Now, one could, of course, have second stages that would take care of these policies.
+
+478
+00:53:01,652 --> 00:53:15,592
+Speaker SPEAKER_04: But can you think of, you know, or do you envision that it would at some point be possible to just have a kind of end to end deep network solution where you could feed the policies, as well as the data.
+
+479
+00:53:16,353 --> 00:53:19,197
+Speaker SPEAKER_04: So rules that would be fulfilled as well.
+
+480
+00:53:20,257 --> 00:53:21,579
+Speaker SPEAKER_01: I think that should be possible.
+
+481
+00:53:21,840 --> 00:53:27,510
+Speaker SPEAKER_01: But what you're going to have to do is you're going to have to put your policies into the objective function that gets optimized.
+
+482
+00:53:28,092 --> 00:53:35,106
+Speaker SPEAKER_01: And typically what happens when you do that is you discover that what you thought was your policy wasn't actually your policy.
+
+483
+00:53:35,586 --> 00:53:38,974
+Speaker SPEAKER_01: Then you discover that by seeing weird counterexamples.
+
+484
+00:53:38,954 --> 00:53:40,478
+Speaker SPEAKER_01: And so it's an iterative process.
+
+485
+00:53:41,199 --> 00:53:51,041
+Speaker SPEAKER_01: You try and formalize your policy as we want to get, we want to recommend things, but we want to preferentially recommend things by students.
+
+486
+00:53:51,903 --> 00:53:54,550
+Speaker SPEAKER_01: And so you give some preferential weight to a student.
+
+487
+00:53:54,530 --> 00:53:59,635
+Speaker SPEAKER_01: And then you discover that, well, actually, no, there's this very well-known student.
+
+488
+00:54:00,117 --> 00:54:02,659
+Speaker SPEAKER_01: And now all the things you recommended by this well-known student.
+
+489
+00:54:02,679 --> 00:54:03,820
+Speaker SPEAKER_01: So you didn't really mean that.
+
+490
+00:54:04,202 --> 00:54:10,349
+Speaker SPEAKER_01: What you meant was you want to recommend things by, preferentially recommend things by students who aren't already well-known.
+
+491
+00:54:11,891 --> 00:54:17,617
+Speaker SPEAKER_01: But as long as you're willing to go through all those cycles of gradually refining what your policy really is,
+
+492
+00:54:18,661 --> 00:54:27,315
+Speaker SPEAKER_01: which you don't actually know until you see things, because we think we can make rules about what our policies are, but you then see counter examples and you have to refine them.
+
+493
+00:54:27,355 --> 00:54:33,644
+Speaker SPEAKER_01: As long as you're willing to do that, which is where a lot of work is, then I think you could make end-to-end recommender systems that do that, yes.
+
+494
+00:54:35,266 --> 00:54:35,608
+Speaker SPEAKER_03: Thank you.
+
+495
+00:54:37,952 --> 00:54:45,023
+Speaker SPEAKER_03: Okay, the next question, Professor Ai Jing An, could you please ask your question?
+
+496
+00:54:46,740 --> 00:54:49,606
+Speaker SPEAKER_01: Let's go on to another question and come back to him when he's figured.
+
+497
+00:54:49,626 --> 00:54:50,447
+Speaker SPEAKER_03: Okay.
+
+498
+00:54:50,527 --> 00:54:57,057
+Speaker SPEAKER_03: So here is the one question, you know, by text from Professor Han Barst.
+
+499
+00:54:57,978 --> 00:54:59,561
+Speaker SPEAKER_03: She raised this question through text.
+
+500
+00:55:00,422 --> 00:55:09,538
+Speaker SPEAKER_03: His question to Professor Hinton is, why do you believe that brain does not learn while backpropagation?
+
+501
+00:55:10,860 --> 00:55:11,922
+Speaker SPEAKER_01: Okay.
+
+502
+00:55:12,172 --> 00:55:17,179
+Speaker SPEAKER_01: Yes, over many years, I keep changing my beliefs about this.
+
+503
+00:55:18,360 --> 00:55:25,751
+Speaker SPEAKER_01: So to begin with, I thought probably it doesn't because it's hard to see how we could get the information to come back through many layers in real time.
+
+504
+00:55:26,873 --> 00:55:30,338
+Speaker SPEAKER_01: So when you're doing perception, you need to pipeline things, right?
+
+505
+00:55:31,219 --> 00:55:35,585
+Speaker SPEAKER_01: Video is coming in and you can't just stop and go backwards to get derivatives.
+
+506
+00:55:36,045 --> 00:55:37,507
+Speaker SPEAKER_01: You need to deal with things in real time.
+
+507
+00:55:38,588 --> 00:55:41,233
+Speaker SPEAKER_01: So that's one argument against doing back propagation.
+
+508
+00:55:41,280 --> 00:55:47,106
+Speaker SPEAKER_01: I don't really believe the arguments neuroscientists come up with, which say it's sort of impossible for the brain to do.
+
+509
+00:55:48,668 --> 00:55:50,248
+Speaker SPEAKER_01: If the brain needed to do it, it could do it.
+
+510
+00:55:51,710 --> 00:55:53,010
+Speaker SPEAKER_01: But I think there are alternatives.
+
+511
+00:55:53,452 --> 00:56:00,797
+Speaker SPEAKER_01: And more recently, then I went through a period of thinking the brain must do back propagation, because that's the right way to learn early feature detectors.
+
+512
+00:56:01,818 --> 00:56:10,646
+Speaker SPEAKER_01: And then when work from Google and from open AI started producing really powerful language models,
+
+513
+00:56:11,284 --> 00:56:22,594
+Speaker SPEAKER_01: like the really big models from Google and GPT-3 from OpenAI, I became suspicious because those language models use very few parameters.
+
+514
+00:56:23,275 --> 00:56:30,242
+Speaker SPEAKER_01: Like the language model from OpenAI only uses 175 billion parameters.
+
+515
+00:56:30,943 --> 00:56:38,710
+Speaker SPEAKER_01: Now you might think 175 billion is a lot, but that's only about a fifth of a CC of brain tissue.
+
+516
+00:56:39,449 --> 00:56:44,581
+Speaker SPEAKER_01: And with a fifth of a cc of brain tissue, it seems to be able to learn a huge amount of information.
+
+517
+00:56:46,224 --> 00:56:53,862
+Speaker SPEAKER_01: Another way of saying it is the GPT-3 model would show up as just a few voxels in a brain scan.
+
+518
+00:56:55,327 --> 00:57:00,177
+Speaker SPEAKER_01: And I don't believe just a few voxels have all that information in them.
+
+519
+00:57:00,197 --> 00:57:07,750
+Speaker SPEAKER_01: So I think backpropagation running for a thousand petaflop days is actually a more effective algorithm than the brain's got.
+
+520
+00:57:08,550 --> 00:57:14,501
+Speaker SPEAKER_01: I think the brain does have a way of getting information back through many layers, but maybe it doesn't do it in real time.
+
+521
+00:57:14,481 --> 00:57:18,228
+Speaker SPEAKER_01: And maybe it's not as effective as backpropagation.
+
+522
+00:57:18,427 --> 00:57:19,610
+Speaker SPEAKER_01: So that's what I currently believe.
+
+523
+00:57:20,231 --> 00:57:30,106
+Speaker SPEAKER_01: And in fact, at the end of this week, I'm going to give a talk at the Cognitive Science Conference, which is very similar to the talk I gave here, but it has less detail than I gave here.
+
+524
+00:57:30,867 --> 00:57:36,235
+Speaker SPEAKER_01: But in the last part of it, I briefly outline how I think the brain might be able to do something other than backpropagation.
+
+525
+00:57:36,856 --> 00:57:37,637
+Speaker SPEAKER_01: And I'll leave it at that.
+
+526
+00:57:41,025 --> 00:57:42,927
+Speaker SPEAKER_02: There's some question from the audience.
+
+527
+00:57:43,228 --> 00:57:45,010
+Speaker SPEAKER_02: Maybe Yi, you can read it.
+
+528
+00:57:46,512 --> 00:57:51,719
+Speaker SPEAKER_03: Yeah, one more question from Kevin.
+
+529
+00:57:53,320 --> 00:57:57,246
+Speaker SPEAKER_03: The question is, any ALP models are trained by tax corpors?
+
+530
+00:57:57,766 --> 00:58:03,273
+Speaker SPEAKER_03: The question is, Professor Hendon, do you think we can train ALP models by vision?
+
+531
+00:58:04,675 --> 00:58:06,476
+Speaker SPEAKER_03: I think the question is.
+
+532
+00:58:06,523 --> 00:58:12,971
+Speaker SPEAKER_01: Yeah, I have two people who work in my lab called Jamie Kiros and William Chan.
+
+533
+00:58:14,032 --> 00:58:23,443
+Speaker SPEAKER_01: And they kindly put my name on a paper, which I didn't have much to do with, which is learning better representations for words by also using vision.
+
+534
+00:58:23,503 --> 00:58:35,956
+Speaker SPEAKER_01: So their idea was take the word and do image search, and then try and find embedding in Google, and then try and find embeddings
+
+535
+00:58:36,088 --> 00:58:45,101
+Speaker SPEAKER_01: that are good for both the typical image for that word and the text that contains that word.
+
+536
+00:58:45,561 --> 00:58:47,983
+Speaker SPEAKER_01: And they showed that they could get slightly better embeddings that way.
+
+537
+00:58:48,764 --> 00:58:49,967
+Speaker SPEAKER_01: The system was called PictureBook.
+
+538
+00:58:50,768 --> 00:59:05,606
+Speaker SPEAKER_01: And yes, I believe that it's very impressive what GPT-3 can do, but I think it would be able to do even better if it was hearing sentences describing scenes that it was seeing.
+
+539
+00:59:05,586 --> 00:59:10,632
+Speaker SPEAKER_01: And more recently, the same technique, or very similar techniques, have been applied to images.
+
+540
+00:59:11,152 --> 00:59:12,875
+Speaker SPEAKER_01: And they're very good now at completing images.
+
+541
+00:59:13,476 --> 00:59:20,864
+Speaker SPEAKER_01: Instead of you giving them some text and then giving you the next bit of text, you can give them part of an image, and they will fill in the rest of the image.
+
+542
+00:59:21,545 --> 00:59:23,126
+Speaker SPEAKER_01: And it's extremely impressive what it does.
+
+543
+00:59:23,786 --> 00:59:25,048
+Speaker SPEAKER_01: And so clearly, it can do both.
+
+544
+00:59:25,228 --> 00:59:28,952
+Speaker SPEAKER_01: It can learn to do both images and text combined.
+
+545
+00:59:29,452 --> 00:59:31,615
+Speaker SPEAKER_01: And that ought to be better for learning what's really going on.
+
+546
+00:59:32,797 --> 00:59:35,340
+Speaker SPEAKER_01: It's amazing you can learn anything from just text by itself.
+
+547
+00:59:36,804 --> 00:59:40,547
+Speaker SPEAKER_02: Okay, yeah, I found one question from audience.
+
+548
+00:59:40,849 --> 00:59:41,789
+Speaker SPEAKER_02: It's a bit long.
+
+549
+00:59:42,389 --> 00:59:44,472
+Speaker SPEAKER_02: Should I read it or you read it?
+
+550
+00:59:44,492 --> 00:59:45,032
+Speaker SPEAKER_02: Okay Okay.
+
+551
+00:59:45,893 --> 00:59:46,393
+Speaker SPEAKER_03: Okay.
+
+552
+00:59:47,153 --> 00:59:54,460
+Speaker SPEAKER_02: Yeah Professor Hinton, do you think that IR problems are more subjective?
+
+553
+00:59:54,481 --> 01:00:06,811
+Speaker SPEAKER_02: Such as people can have different opinions about IR systems result than they can have judge Judging the content of an image or the translation of a sentence
+
+554
+01:00:07,822 --> 01:00:16,016
+Speaker SPEAKER_02: so that there isn't much progress of the deep neural networks in this area compared to the NLP and the computer vision.
+
+555
+01:00:18,061 --> 01:00:20,945
+Speaker SPEAKER_01: Okay, so I sort of have two things to say about that.
+
+556
+01:00:21,586 --> 01:00:29,121
+Speaker SPEAKER_01: The first thing is, if you do good work in one area, like how to get neural networks to learn things,
+
+557
+01:00:30,045 --> 01:00:33,329
+Speaker SPEAKER_01: particularly if you win an award, people then think you're an expert on everything.
+
+558
+01:00:33,750 --> 01:00:35,271
+Speaker SPEAKER_01: And I'm not an expert on IR.
+
+559
+01:00:36,032 --> 01:00:42,039
+Speaker SPEAKER_01: So I was slightly embarrassed to be talking to this conference because I don't really know that much about IR.
+
+560
+01:00:43,601 --> 01:00:45,983
+Speaker SPEAKER_01: So you shouldn't believe my opinion too much.
+
+561
+01:00:46,545 --> 01:00:56,255
+Speaker SPEAKER_01: My primitive view about IR is that if you want to retrieve information from documents, you really ought to understand what's in the document.
+
+562
+01:00:56,235 --> 01:01:02,083
+Speaker SPEAKER_01: So there's all sorts of tricks at looking at frequencies, particularly frequencies of rare words in documents.
+
+563
+01:01:02,623 --> 01:01:04,545
+Speaker SPEAKER_01: And you can do quite surprisingly well with that.
+
+564
+01:01:05,367 --> 01:01:07,349
+Speaker SPEAKER_01: And then you can use kind of bag of words models.
+
+565
+01:01:08,070 --> 01:01:14,358
+Speaker SPEAKER_01: But it's clear that if you really want to do good information retrieval, you have to understand what's in the document.
+
+566
+01:01:15,099 --> 01:01:20,346
+Speaker SPEAKER_01: My fundamental belief is that neural nets are going to lead us to be able to understand what's in documents.
+
+567
+01:01:20,826 --> 01:01:23,829
+Speaker SPEAKER_01: And that's going to lead to much more sophisticated information retrieval.
+
+568
+01:01:24,603 --> 01:01:39,121
+Speaker SPEAKER_01: So although I don't know much about IR, it seems to me, I'd like to be able to ask a question like, find me a document in which Mike Pence says something that's clearly false, and he says it because of his religious beliefs.
+
+569
+01:01:41,003 --> 01:01:54,440
+Speaker SPEAKER_01: Now, you can look at a document that says something about religion and something about Mike Pence and something about false, but unless you understand what's going on in the document, you're not gonna be able to produce just the right answers to that.
+
+570
+01:01:55,518 --> 01:01:58,380
+Speaker SPEAKER_01: But I'll leave it at that because I'm not an expert on information retrieval.
+
+571
+01:01:59,282 --> 01:02:02,706
+Speaker SPEAKER_03: Okay, Professor Hinton, the last not the least question.
+
+572
+01:02:04,367 --> 01:02:07,652
+Speaker SPEAKER_03: So one question is, what is your idea?
+
+573
+01:02:07,692 --> 01:02:15,539
+Speaker SPEAKER_03: How can we incorporate causality into the deep learning framework?
+
+574
+01:02:16,360 --> 01:02:19,605
+Speaker SPEAKER_01: Yes, I've had this debate for a very long time with Judea Pearl.
+
+575
+01:02:20,405 --> 01:02:22,268
+Speaker SPEAKER_01: And
+
+576
+01:02:24,661 --> 01:02:32,369
+Speaker SPEAKER_01: I think his work is very important and I think causality is very important, but I think it's a higher level thing.
+
+577
+01:02:33,130 --> 01:02:41,880
+Speaker SPEAKER_01: So my basic approach to it is there's the sort of basic mechanisms for learning in these neural networks, for learning big distributed representations.
+
+578
+01:02:43,681 --> 01:02:49,588
+Speaker SPEAKER_01: And then there's higher level structure that emerges like building causal models.
+
+579
+01:02:50,664 --> 01:02:55,289
+Speaker SPEAKER_01: And I don't believe that causality is going to be a very low-level thing in these nets.
+
+580
+01:02:55,309 --> 01:02:57,972
+Speaker SPEAKER_01: I think we're going to get nets that are good at finding structure in data.
+
+581
+01:02:59,193 --> 01:03:08,382
+Speaker SPEAKER_01: And the causal models of the kind that people interested in graphical models like to produce are much higher-level constructs.
+
+582
+01:03:09,063 --> 01:03:10,784
+Speaker SPEAKER_01: They'll be implemented in neural nets.
+
+583
+01:03:11,284 --> 01:03:16,070
+Speaker SPEAKER_01: But I think it's a mistake to think that the neural nets themselves are going to look like the causal models.
+
+584
+01:03:17,231 --> 01:03:19,693
+Speaker SPEAKER_01: I think they're going to implement causal models at a higher level.
+
+585
+01:03:20,922 --> 01:03:21,463
+Speaker SPEAKER_01: Okay.
+
+586
+01:03:22,545 --> 01:03:23,146
+Speaker SPEAKER_03: Okay.
+
+587
+01:03:23,186 --> 01:03:23,887
+Speaker SPEAKER_03: Thank you very much.
+
+588
+01:03:23,907 --> 01:03:31,242
+Speaker SPEAKER_03: I noticed that there are new questions that keep coming, but it's running out of time.
+
+589
+01:03:31,704 --> 01:03:37,956
+Speaker SPEAKER_03: So let's thank Professor Hinton again for his very visionary talk and question answering session.
+
+590
+01:03:38,257 --> 01:03:39,018
+Speaker SPEAKER_03: Thank you very much.
+
+591
+01:03:39,840 --> 01:03:40,181
+Speaker SPEAKER_01: Thank you.
+
+592
+01:03:40,762 --> 01:03:41,224
+Speaker SPEAKER_01: Thank you.
+
+593
+01:03:41,985 --> 01:03:42,306
+Speaker SPEAKER_01: Thank you.
+

@@ -1,0 +1,1720 @@
+1
+00:00:01,786 --> 00:00:05,562
+Speaker SPEAKER_00: Welcome, Jeff, and thank you for doing this interview with deeplearning.ai.
+
+2
+00:00:07,451 --> 00:00:09,079
+Speaker SPEAKER_00: Thank you for inviting me.
+
+3
+00:00:09,311 --> 00:00:38,137
+Speaker SPEAKER_00: I think that at this point you more than anyone else on this planet has invented so many of the ideas behind deep learning and a lot of people have been calling you the godfather of deep learning although it wasn't until we were just chatting a few minutes ago that I realized you think I'm the first one to call you that which I'm quite happy to have done but what I want to ask is many people know you as a legend I want to ask about your personal story behind a legend
+
+4
+00:00:38,118 --> 00:00:44,689
+Speaker SPEAKER_00: So how did you get involved in, going way back, how did you get involved in AI and machine learning and neural networks?
+
+5
+00:00:46,051 --> 00:00:51,279
+Speaker SPEAKER_02: So when I was at high school, I had a classmate who was always better than me at everything.
+
+6
+00:00:52,540 --> 00:00:53,823
+Speaker SPEAKER_02: He was a brilliant mathematician.
+
+7
+00:00:54,704 --> 00:01:00,154
+Speaker SPEAKER_02: And he came into school one day and said, did you know the brain uses holograms?
+
+8
+00:01:01,676 --> 00:01:05,221
+Speaker SPEAKER_02: And I guess that was about 1966.
+
+9
+00:01:05,826 --> 00:01:07,368
+Speaker SPEAKER_02: And I said, sort of, what's a hologram?
+
+10
+00:01:07,388 --> 00:01:12,275
+Speaker SPEAKER_02: And he explained that in a hologram, you can chop off half of it and you still get the whole picture.
+
+11
+00:01:13,036 --> 00:01:15,840
+Speaker SPEAKER_02: And the memories in the brain might be distributed over the whole brain.
+
+12
+00:01:16,680 --> 00:01:24,852
+Speaker SPEAKER_02: And so I guess he'd read about Lashley's experiments where you chop out bits of a rat's brain and discover it's very hard to find one bit where it stores one particular memory.
+
+13
+00:01:27,975 --> 00:01:32,120
+Speaker SPEAKER_02: So that's what first got me interested in how does the brain store memories?
+
+14
+00:01:33,367 --> 00:01:38,493
+Speaker SPEAKER_02: And then when I went to university, I started off studying physiology and physics.
+
+15
+00:01:39,655 --> 00:01:43,379
+Speaker SPEAKER_02: I think when I was at Cambridge, I was the only undergraduate doing physiology and physics.
+
+16
+00:01:44,260 --> 00:01:52,191
+Speaker SPEAKER_02: And then I gave up on that and tried to do philosophy, because I thought that might give me more insight.
+
+17
+00:01:52,432 --> 00:01:59,540
+Speaker SPEAKER_02: But that seemed to me actually lacking in ways of distinguishing when they said something false.
+
+18
+00:02:00,581 --> 00:02:02,665
+Speaker SPEAKER_02: And so then I switched to psychology.
+
+19
+00:02:03,269 --> 00:02:08,094
+Speaker SPEAKER_02: And in psychology, they had very, very simple theories.
+
+20
+00:02:08,515 --> 00:02:12,099
+Speaker SPEAKER_02: And it seemed to me it was sort of hopelessly inadequate for explaining what the brain was doing.
+
+21
+00:02:12,860 --> 00:02:14,824
+Speaker SPEAKER_02: So then I took some time off and became a carpenter.
+
+22
+00:02:15,664 --> 00:02:18,027
+Speaker SPEAKER_02: And then I decided I'd try AI.
+
+23
+00:02:18,628 --> 00:02:21,992
+Speaker SPEAKER_02: And I went off to Edinburgh to study AI with Longit Higgins.
+
+24
+00:02:22,854 --> 00:02:24,977
+Speaker SPEAKER_02: And he had done very nice work on neural networks.
+
+25
+00:02:25,418 --> 00:02:30,424
+Speaker SPEAKER_02: And he'd just given up on neural networks, and been very impressed by Winograd's thesis.
+
+26
+00:02:30,961 --> 00:02:36,828
+Speaker SPEAKER_02: So when I arrived, he thought I was kind of doing this old fashioned stuff and I ought to start on symbolic AI.
+
+27
+00:02:37,449 --> 00:02:40,592
+Speaker SPEAKER_02: And we had a lot of fights about that, but I just kept on doing what I believed in.
+
+28
+00:02:41,413 --> 00:02:42,254
+Speaker SPEAKER_02: And then what?
+
+29
+00:02:43,516 --> 00:02:49,463
+Speaker SPEAKER_02: I eventually got a PhD in AI, and then I couldn't get a job in Britain.
+
+30
+00:02:51,507 --> 00:02:56,152
+Speaker SPEAKER_02: But I saw this very nice advertisement for Sloan Fellowships in California.
+
+31
+00:02:57,593 --> 00:02:58,975
+Speaker SPEAKER_02: And I managed to get one of those.
+
+32
+00:02:59,377 --> 00:03:00,478
+Speaker SPEAKER_02: And I went to California.
+
+33
+00:03:00,762 --> 00:03:02,223
+Speaker SPEAKER_02: and everything was different there.
+
+34
+00:03:04,106 --> 00:03:09,253
+Speaker SPEAKER_02: So in Britain, neural nets was regarded as kind of silly.
+
+35
+00:03:09,294 --> 00:03:19,870
+Speaker SPEAKER_02: And in California, Don Norman and David Ronald Hart were very open to ideas about neural nets.
+
+36
+00:03:19,930 --> 00:03:26,179
+Speaker SPEAKER_02: It was the first time I'd been somewhere where thinking about how the brain works and thinking about how that might relate to psychology,
+
+37
+00:03:26,479 --> 00:03:28,542
+Speaker SPEAKER_02: was seen as a very positive thing.
+
+38
+00:03:28,902 --> 00:03:30,304
+Speaker SPEAKER_02: And it was a lot of fun there.
+
+39
+00:03:30,324 --> 00:03:32,646
+Speaker SPEAKER_02: In particular, collaborating with David Rommelhardt was great.
+
+40
+00:03:33,106 --> 00:03:33,427
+Speaker SPEAKER_02: I see.
+
+41
+00:03:33,448 --> 00:03:33,647
+Speaker SPEAKER_00: Right.
+
+42
+00:03:33,728 --> 00:03:42,997
+Speaker SPEAKER_00: So this is when you were at UCSD and you and Rommelhardt, around, what, 1982, wound up writing the seminal backdrop paper, right?
+
+43
+00:03:43,337 --> 00:03:45,520
+Speaker SPEAKER_00: Actually, it was more complicated than that.
+
+44
+00:03:46,801 --> 00:03:48,343
+Speaker SPEAKER_02: What happened?
+
+45
+00:03:48,364 --> 00:03:55,812
+Speaker SPEAKER_02: In, I think, early 1982, David Rommelhardt and me
+
+46
+00:03:56,197 --> 00:04:02,227
+Speaker SPEAKER_02: and Ron Williams, between us developed the backprop algorithm.
+
+47
+00:04:02,426 --> 00:04:04,550
+Speaker SPEAKER_02: It was mainly David Rumelhart's idea.
+
+48
+00:04:05,772 --> 00:04:08,796
+Speaker SPEAKER_02: We discovered later that many other people have invented it.
+
+49
+00:04:09,558 --> 00:04:14,646
+Speaker SPEAKER_02: David Parker had invented it, probably after us, but before we published.
+
+50
+00:04:16,290 --> 00:04:21,478
+Speaker SPEAKER_02: Paul Werbos had published it already quite a few years earlier, but nobody had paid it much attention.
+
+51
+00:04:22,031 --> 00:04:25,357
+Speaker SPEAKER_02: And there were other people who developed very similar algorithms.
+
+52
+00:04:25,416 --> 00:04:30,985
+Speaker SPEAKER_02: It's not clear what's meant by backprop, but using the chain rule to get derivatives was not a novel idea.
+
+53
+00:04:32,447 --> 00:04:39,317
+Speaker SPEAKER_00: Why do you think it was your paper that helped so much the community latch on to backprop?
+
+54
+00:04:39,377 --> 00:04:44,324
+Speaker SPEAKER_00: It feels like your paper marked an inflection in the acceptance of this algorithm, whoever accepted it.
+
+55
+00:04:45,446 --> 00:04:49,812
+Speaker SPEAKER_02: So we managed to get a paper into Nature in 1986.
+
+56
+00:04:50,112 --> 00:04:53,216
+Speaker SPEAKER_02: And I did quite a lot of political work to get the paper accepted.
+
+57
+00:04:53,858 --> 00:04:59,807
+Speaker SPEAKER_02: I figured out that one of the referees was probably going to be Stuart Sutherland, who was a well-known psychologist in Britain.
+
+58
+00:05:00,408 --> 00:05:03,994
+Speaker SPEAKER_02: And I went and talked to him for a long time and explained to him exactly what was going on.
+
+59
+00:05:04,754 --> 00:05:11,985
+Speaker SPEAKER_02: And he was very impressed by the fact that we showed that backprop could learn representations for words.
+
+60
+00:05:12,266 --> 00:05:18,516
+Speaker SPEAKER_02: And you could look at those representations, which were little vectors, and you could understand the meaning of the individual features.
+
+61
+00:05:19,120 --> 00:05:34,016
+Speaker SPEAKER_02: So we actually trained it on little triples of words about family trees, like Mary has mother Victoria, and you'd give it the first two words and it would have to predict the last word.
+
+62
+00:05:34,838 --> 00:05:48,012
+Speaker SPEAKER_02: And after you trained it, you could see all sorts of features in the representations of the individual words, like the nationality of the person and their generation they were, which branch of the family tree they were in and so on.
+
+63
+00:05:48,398 --> 00:05:50,759
+Speaker SPEAKER_02: That was what made Stuart Sutherland really impressed with it.
+
+64
+00:05:50,800 --> 00:05:52,581
+Speaker SPEAKER_02: And I think that was why the paper got accepted.
+
+65
+00:05:53,201 --> 00:06:00,889
+Speaker SPEAKER_00: Very early word embeddings and you're already seeing features, learned features of semantic meanings emerge from the training algorithm.
+
+66
+00:06:01,670 --> 00:06:01,910
+Speaker SPEAKER_02: Yes.
+
+67
+00:06:02,050 --> 00:06:12,098
+Speaker SPEAKER_02: So from a psychologist's point of view, what was interesting was it unified two completely different strands of ideas about what knowledge was like.
+
+68
+00:06:13,000 --> 00:06:17,764
+Speaker SPEAKER_02: So there was the old psychologist's view that a concept is just a big bundle of features.
+
+69
+00:06:18,165 --> 00:06:19,427
+Speaker SPEAKER_02: And there's lots of evidence for that.
+
+70
+00:06:20,048 --> 00:06:29,141
+Speaker SPEAKER_02: And then there was the AI view of the time, which is a far more structuralist view, which was that a concept is how it relates to other concepts.
+
+71
+00:06:29,661 --> 00:06:34,127
+Speaker SPEAKER_02: And to capture a concept, you'd have to do something like a graph structure, or maybe a semantic net.
+
+72
+00:06:35,029 --> 00:06:48,088
+Speaker SPEAKER_02: And what this back propagation example showed was you could give it the information that would go into a graph structure, or in this case, a family tree, and it could convert that information into features
+
+73
+00:06:48,591 --> 00:06:55,600
+Speaker SPEAKER_02: such a way that it could then use the features to derive new consistent information, i.e.
+
+74
+00:06:55,680 --> 00:06:56,201
+Speaker SPEAKER_02: generalize.
+
+75
+00:06:56,723 --> 00:07:11,562
+Speaker SPEAKER_02: But the crucial thing was this to and fro between the graphical representation, or the tree-structured representation of the family tree, and a representation of the people as big feature vectors, and the fact that you could, from the
+
+76
+00:07:12,216 --> 00:07:18,269
+Speaker SPEAKER_02: graph-like representation you could get to the feature vectors, and from the feature vectors you could get more of the graph-like representation.
+
+77
+00:07:18,288 --> 00:07:19,250
+Speaker SPEAKER_02: So this is 1986.
+
+78
+00:07:19,269 --> 00:07:33,718
+Speaker SPEAKER_02: In the early 90s, Bengio showed that you could actually take real data, you could take English text and apply the same techniques there and get embeddings for real words from English text.
+
+79
+00:07:34,271 --> 00:07:36,314
+Speaker SPEAKER_00: And that impressed people a lot.
+
+80
+00:07:37,196 --> 00:07:44,906
+Speaker SPEAKER_00: I guess recently we've been talking a lot about how fast computers like GPUs and supercomputers is driving deep learning.
+
+81
+00:07:45,005 --> 00:07:52,937
+Speaker SPEAKER_00: I didn't realize that back in between 1986 and the early 90s, it sounds like between you and Danjo, there was already the beginnings of this trend.
+
+82
+00:07:53,838 --> 00:07:55,220
+Speaker SPEAKER_02: Yes, there was a huge advance.
+
+83
+00:07:55,360 --> 00:08:03,891
+Speaker SPEAKER_02: I mean, in 1986, I was using a Lisp machine, which was less than a tenth of a megaflop.
+
+84
+00:08:04,629 --> 00:08:10,596
+Speaker SPEAKER_02: And by about 1993 or thereabouts, people were seeing like 10 megaflops.
+
+85
+00:08:11,057 --> 00:08:12,478
+Speaker SPEAKER_02: So it was a factor of 100.
+
+86
+00:08:13,000 --> 00:08:16,584
+Speaker SPEAKER_02: And that's the point at which it was easy to use because computers were just getting faster.
+
+87
+00:08:16,884 --> 00:08:22,870
+Speaker SPEAKER_00: Over the past several decades, you've invented so many pieces of neural networks and deep learning.
+
+88
+00:08:23,351 --> 00:08:28,478
+Speaker SPEAKER_00: I'm actually curious of all of the things you've invented, which are the ones you're still most excited about today?
+
+89
+00:08:30,043 --> 00:08:34,750
+Speaker SPEAKER_02: So I think the most beautiful one is the work I did with Terry Sinofsky on Baltimore machines.
+
+90
+00:08:35,871 --> 00:08:45,965
+Speaker SPEAKER_02: So we discovered there was this really, really simple learning algorithm that applied to great big densely connected nets where you could only see a few of the nodes.
+
+91
+00:08:46,785 --> 00:08:59,341
+Speaker SPEAKER_02: So it would learn hidden representations and it was a very simple algorithm and it looked like the kind of thing you should be able to get in a brain because each synapse only needed to know about the behavior of the two neurons it was directly connected to.
+
+92
+00:09:00,166 --> 00:09:04,490
+Speaker SPEAKER_02: And the information that was propagated was the same.
+
+93
+00:09:04,551 --> 00:09:08,294
+Speaker SPEAKER_02: There were two different phases, which we called wake and sleep.
+
+94
+00:09:08,414 --> 00:09:12,078
+Speaker SPEAKER_02: But in the two different phases, you're propagating information in just the same way.
+
+95
+00:09:12,578 --> 00:09:18,085
+Speaker SPEAKER_02: Whereas in something like back propagation, there's a forward pass and a backward pass, and they work differently.
+
+96
+00:09:18,105 --> 00:09:19,687
+Speaker SPEAKER_02: They're sending different kinds of signals.
+
+97
+00:09:21,028 --> 00:09:21,408
+Speaker SPEAKER_02: Right.
+
+98
+00:09:21,427 --> 00:09:23,831
+Speaker SPEAKER_02: So I think that's the most beautiful thing.
+
+99
+00:09:24,471 --> 00:09:28,535
+Speaker SPEAKER_02: And for many years, it looked like just like a curiosity because it looked like it was much too slow.
+
+100
+00:09:29,342 --> 00:09:37,340
+Speaker SPEAKER_02: But then later on, I got rid of a little bit of the beauty, and instead of letting things settle down, just use one iteration in a somewhat simpler net.
+
+101
+00:09:37,902 --> 00:09:42,731
+Speaker SPEAKER_02: And that gave restricted Boltzmann machines, which actually worked effectively in practice.
+
+102
+00:09:42,792 --> 00:09:45,057
+Speaker SPEAKER_02: So in the Netflix competition, for example,
+
+103
+00:09:45,255 --> 00:09:48,701
+Speaker SPEAKER_02: restricted Boltzmann machines were one of the ingredients of the winning entry.
+
+104
+00:09:49,282 --> 00:10:01,100
+Speaker SPEAKER_00: In fact, a lot of the recent resurgence of neural network deep learning starting about, I guess, 2007 was the restricted Boltzmann machine and deep restricted Boltzmann machine work that you and your lab did.
+
+105
+00:10:02,222 --> 00:10:04,927
+Speaker SPEAKER_02: Yes, so that's another of the pieces of work I'm very happy with.
+
+106
+00:10:05,427 --> 00:10:11,297
+Speaker SPEAKER_02: The idea of that you could train a restricted Boltzmann machine which just have one layer of hidden features,
+
+107
+00:10:11,934 --> 00:10:13,836
+Speaker SPEAKER_02: and you could learn one layer of features.
+
+108
+00:10:14,357 --> 00:10:17,441
+Speaker SPEAKER_02: And then you could treat those features as data and do it again.
+
+109
+00:10:17,480 --> 00:10:22,066
+Speaker SPEAKER_02: And then you could treat the new features you'd learned as data and do it again as many times as you liked.
+
+110
+00:10:23,648 --> 00:10:25,509
+Speaker SPEAKER_02: So that was nice, it worked in practice.
+
+111
+00:10:26,331 --> 00:10:34,379
+Speaker SPEAKER_02: And then Yiwei Tei realized that the whole thing could be treated as a single model, but it was a weird kind of model.
+
+112
+00:10:34,919 --> 00:10:37,722
+Speaker SPEAKER_02: It was a model where at the top you had a restricted Boltzmann machine,
+
+113
+00:10:38,311 --> 00:10:45,817
+Speaker SPEAKER_02: But below that, you had a sigmoid belief net, which was something that Radford Neal had invented many years earlier.
+
+114
+00:10:46,298 --> 00:10:47,620
+Speaker SPEAKER_02: So it was a directed model.
+
+115
+00:10:48,541 --> 00:10:55,988
+Speaker SPEAKER_02: And what we'd managed to come up with by training these restricted BOS machines was an efficient way of doing inference in sigmoid belief nets.
+
+116
+00:10:57,149 --> 00:11:07,879
+Speaker SPEAKER_02: So around that time, there were people doing neural nets who would use densely connected nets, but didn't have any good ways of doing probabilistic inference in them.
+
+117
+00:11:08,585 --> 00:11:18,953
+Speaker SPEAKER_02: And you had people doing graphical models, like Mike Jordan, who could do inference properly, but only in sparsely connected nets.
+
+118
+00:11:20,154 --> 00:11:31,245
+Speaker SPEAKER_02: And what we managed to show was there's a way of learning these deep belief nets, so that there's an approximate form of inference, that's very fast, it just happens in a single forward pass.
+
+119
+00:11:32,105 --> 00:11:33,907
+Speaker SPEAKER_02: And that was a very beautiful result.
+
+120
+00:11:34,347 --> 00:11:38,270
+Speaker SPEAKER_02: And you could guarantee that each time you learned an extra layer of features,
+
+121
+00:11:39,230 --> 00:11:40,110
+Speaker SPEAKER_02: there was a bound.
+
+122
+00:11:40,672 --> 00:11:45,177
+Speaker SPEAKER_02: Each time you learned a new layer, you got a new bound, and the new bound was always better than the old bound.
+
+123
+00:11:45,557 --> 00:11:50,263
+Speaker SPEAKER_00: Yeah, or the variational bound showing that as you add layers, the, yes, yeah, I remember that.
+
+124
+00:11:50,283 --> 00:11:52,625
+Speaker SPEAKER_02: So that was the second thing that I was really excited by.
+
+125
+00:11:53,086 --> 00:11:58,133
+Speaker SPEAKER_02: And I guess the third thing was the work I did with Bradford Neal on variational methods.
+
+126
+00:11:58,994 --> 00:12:05,400
+Speaker SPEAKER_02: It turns out people in statistics had done similar work earlier, but we didn't know about that.
+
+127
+00:12:07,984 --> 00:12:08,544
+Speaker SPEAKER_02: So
+
+128
+00:12:09,267 --> 00:12:14,273
+Speaker SPEAKER_02: we managed to make EM work a whole lot better by showing you didn't need to do a perfect E-step.
+
+129
+00:12:14,293 --> 00:12:15,754
+Speaker SPEAKER_02: You could do an approximate E-step.
+
+130
+00:12:16,056 --> 00:12:20,461
+Speaker SPEAKER_02: And EM was a big algorithm in statistics, and we'd showed a big generalization of it.
+
+131
+00:12:21,101 --> 00:12:36,961
+Speaker SPEAKER_02: And in particular, in 1993, I guess, with Van Kamp, I did a paper that was, I think, the first variational Bayes paper, where we showed that you could actually do a version of Bayesian learning that was far more tractable
+
+132
+00:12:37,600 --> 00:12:40,073
+Speaker SPEAKER_02: by approximating the true posterior with a Gaussian.
+
+133
+00:12:41,240 --> 00:12:43,009
+Speaker SPEAKER_02: And you could do that in a neural net.
+
+134
+00:12:43,592 --> 00:12:45,383
+Speaker SPEAKER_02: And I was very excited by that.
+
+135
+00:12:45,750 --> 00:12:46,292
+Speaker SPEAKER_00: I see.
+
+136
+00:12:46,312 --> 00:12:46,491
+Speaker SPEAKER_00: Wow.
+
+137
+00:12:46,611 --> 00:12:46,831
+Speaker SPEAKER_00: Right.
+
+138
+00:12:46,951 --> 00:12:47,393
+Speaker SPEAKER_00: Yep.
+
+139
+00:12:47,413 --> 00:12:53,678
+Speaker SPEAKER_00: I think I remember all of these papers, the Neal and Hinton, approximate EM paper, right?
+
+140
+00:12:53,698 --> 00:12:55,220
+Speaker SPEAKER_00: Spent many hours reading over that.
+
+141
+00:12:55,961 --> 00:13:07,851
+Speaker SPEAKER_00: And I think, you know, some of the algorithms you use today or some of the algorithms that lots of people use almost every day are what things like dropouts or I guess value activations came from your group?
+
+142
+00:13:09,793 --> 00:13:10,495
+Speaker SPEAKER_02: Yes and no.
+
+143
+00:13:10,754 --> 00:13:14,138
+Speaker SPEAKER_02: So other people have thought about rectified linear units.
+
+144
+00:13:14,658 --> 00:13:26,119
+Speaker SPEAKER_02: And we actually did some work with restricted Boltzmann machines showing that a ReLU was almost exactly equivalent to a whole stack of logistic units.
+
+145
+00:13:26,139 --> 00:13:28,582
+Speaker SPEAKER_02: And that's one of the things that helped ReLUs catch on.
+
+146
+00:13:29,034 --> 00:13:30,618
+Speaker SPEAKER_00: I was really curious about that.
+
+147
+00:13:30,697 --> 00:13:38,230
+Speaker SPEAKER_00: The ReLU paper had a lot of math showing that this function can be approximated to this really complicated formula.
+
+148
+00:13:38,812 --> 00:13:48,207
+Speaker SPEAKER_00: Did you do that math so your paper would get accepted into an academic conference or did all that math really influence the development of max of 0 and x?
+
+149
+00:13:49,623 --> 00:13:55,129
+Speaker SPEAKER_02: That was one of the cases where actually the math was important to the development of the idea.
+
+150
+00:13:55,629 --> 00:13:59,653
+Speaker SPEAKER_02: So I knew about rectified linear units, obviously, and I knew about logistic units.
+
+151
+00:14:00,274 --> 00:14:05,139
+Speaker SPEAKER_02: And because of the work on Boltzmann machines, all of the basic work was done using logistic units.
+
+152
+00:14:06,059 --> 00:14:11,585
+Speaker SPEAKER_02: And so the question was, could the learning algorithm work in something with rectified linear units?
+
+153
+00:14:12,505 --> 00:14:19,072
+Speaker SPEAKER_02: And by showing the rectified linear units were almost exactly equivalent to a stack of logistic units,
+
+154
+00:14:19,592 --> 00:14:22,596
+Speaker SPEAKER_02: we showed that all the math would go through.
+
+155
+00:14:24,519 --> 00:14:35,451
+Speaker SPEAKER_00: I see, and it provided the inspiration, but today tons of people use ReLU and it just works without necessarily needing to understand the same motivation.
+
+156
+00:14:36,393 --> 00:14:47,085
+Speaker SPEAKER_02: Yeah, one thing I noticed later when I went to Google, I guess in 2014, I gave a talk at Google about using ReLUs and
+
+157
+00:14:47,673 --> 00:14:49,496
+Speaker SPEAKER_02: initializing with the identity matrix.
+
+158
+00:14:49,937 --> 00:14:58,354
+Speaker SPEAKER_02: Because the nice thing about ReLUs is if you keep replicating the hidden layers and you initialize with the identity, it just copies the pattern in the layer below.
+
+159
+00:14:58,413 --> 00:15:07,572
+Speaker SPEAKER_02: And so I was showing that you could train networks with 300 hidden layers and you could train them really efficiently if you initialize with the identity.
+
+160
+00:15:07,956 --> 00:15:11,120
+Speaker SPEAKER_02: But I didn't pursue that any further, and I really regret not pursuing that.
+
+161
+00:15:11,321 --> 00:15:18,889
+Speaker SPEAKER_02: We published one paper with Kwok Lee showing you could initialize recurrent, and Navdeep Jaitley, showing you could initialize recurrent nets like that.
+
+162
+00:15:19,529 --> 00:15:27,058
+Speaker SPEAKER_02: But I should have pursued it further because later on, these residual networks were really that kind of thing.
+
+163
+00:15:27,818 --> 00:15:29,902
+Speaker SPEAKER_00: Over the years, I've heard you talk a lot about the brain.
+
+164
+00:15:29,922 --> 00:15:33,186
+Speaker SPEAKER_00: I've heard you talk about the relationship between backprop and the brain.
+
+165
+00:15:33,725 --> 00:15:35,347
+Speaker SPEAKER_00: What are your current thoughts on that?
+
+166
+00:15:36,576 --> 00:15:39,321
+Speaker SPEAKER_02: I'm actually working on a paper on that right now.
+
+167
+00:15:40,102 --> 00:15:43,467
+Speaker SPEAKER_02: I guess my main thought is this.
+
+168
+00:15:44,489 --> 00:15:54,885
+Speaker SPEAKER_02: If it turns out the backprop is a really good algorithm for doing learning, then for sure, evolution could have figured out how to implement it.
+
+169
+00:15:56,307 --> 00:15:59,813
+Speaker SPEAKER_02: I mean, you have cells that can turn into either eyeballs or teeth.
+
+170
+00:16:00,575 --> 00:16:01,976
+Speaker SPEAKER_02: Now, if cells can do that,
+
+171
+00:16:02,210 --> 00:16:04,793
+Speaker SPEAKER_02: they can for sure implement backpropagation.
+
+172
+00:16:05,374 --> 00:16:08,177
+Speaker SPEAKER_02: And presumably there's huge selective pressure for it.
+
+173
+00:16:09,138 --> 00:16:13,121
+Speaker SPEAKER_02: So I think the neuroscientist idea that it doesn't look plausible is just silly.
+
+174
+00:16:13,743 --> 00:16:15,565
+Speaker SPEAKER_02: There may be some subtle implementation of it.
+
+175
+00:16:16,144 --> 00:16:21,250
+Speaker SPEAKER_02: And I think the brain probably has something that may not be exactly backpropagation, but it's quite close to it.
+
+176
+00:16:21,912 --> 00:16:25,576
+Speaker SPEAKER_02: And over the years, I've come up with a number of ideas about how this might work.
+
+177
+00:16:26,177 --> 00:16:31,001
+Speaker SPEAKER_02: So in 1987, working with Jay McClelland,
+
+178
+00:16:31,740 --> 00:16:45,715
+Speaker SPEAKER_02: I came up with the recirculation algorithm where the idea is you send information around a loop and you try to make it so that things don't change as information goes around this loop.
+
+179
+00:16:46,495 --> 00:16:57,966
+Speaker SPEAKER_02: So the simplest version would be you have input units and hidden units and you send information from the input to the hidden and then back to the input and then back to the hidden and then back to the input and so on.
+
+180
+00:16:58,506 --> 00:16:59,587
+Speaker SPEAKER_02: And what you want
+
+181
+00:17:00,142 --> 00:17:04,588
+Speaker SPEAKER_02: You want to train an autoencoder, but you want to train it without having to do backpropagation.
+
+182
+00:17:05,510 --> 00:17:09,698
+Speaker SPEAKER_02: So you just train it to try and get rid of all variation in the activities.
+
+183
+00:17:10,499 --> 00:17:24,461
+Speaker SPEAKER_02: So the idea is that the learning rule for a synapse is change the weight in proportion to the presynaptic input and in proportion to the rate of change of the postsynaptic input.
+
+184
+00:17:24,964 --> 00:17:30,551
+Speaker SPEAKER_02: But in recirculation, you're trying to make the post-synaptic input, you're trying to make the old one be good and the new one be bad.
+
+185
+00:17:31,493 --> 00:17:32,855
+Speaker SPEAKER_02: So you're changing it in that direction.
+
+186
+00:17:34,156 --> 00:17:40,105
+Speaker SPEAKER_02: And we invented this algorithm before neuroscientists had come up with spike-time-dependent plasticity.
+
+187
+00:17:40,125 --> 00:17:48,695
+Speaker SPEAKER_02: Spike-time-dependent plasticity is actually the same algorithm but the other way around, where the new thing is good and the old thing is bad in the learning rule.
+
+188
+00:17:49,557 --> 00:17:54,042
+Speaker SPEAKER_02: So you're changing the weight in proportion to the presynaptic activity times
+
+189
+00:17:54,428 --> 00:17:57,772
+Speaker SPEAKER_02: the new post-synaptic activity minus the old one.
+
+190
+00:18:00,336 --> 00:18:19,688
+Speaker SPEAKER_02: Later on, I realized in 2007 that if you took a stack of restricted Boltzmann machines and you trained it up, after it was trained, you then had exactly the right conditions for implementing backpropagation by just trying to reconstruct.
+
+191
+00:18:19,748 --> 00:18:21,651
+Speaker SPEAKER_02: If you looked at the reconstruction error
+
+192
+00:18:22,441 --> 00:18:29,069
+Speaker SPEAKER_02: that reconstruction error would actually tell you the derivative of the discriminative performance.
+
+193
+00:18:30,131 --> 00:18:38,442
+Speaker SPEAKER_02: And at the first deep learning workshop at NIPS in 2007, I gave a talk about that, that was almost completely ignored.
+
+194
+00:18:40,164 --> 00:18:47,074
+Speaker SPEAKER_02: Later on, Yoshio Bengio took up the idea and has actually done quite a lot more work on that.
+
+195
+00:18:47,615 --> 00:18:49,376
+Speaker SPEAKER_02: And I've been doing more work on it myself.
+
+196
+00:18:49,643 --> 00:19:05,208
+Speaker SPEAKER_02: And I think this idea that if you have a stack of autoencoders, then you can get derivatives by sending activity backwards and looking at reconstruction errors is a really interesting idea, may well be how the brain does it.
+
+197
+00:19:05,848 --> 00:19:14,863
+Speaker SPEAKER_00: One other topic that I know you've thought a lot about and that I hear you're still working on is how to deal with multiple time scales in deep learning.
+
+198
+00:19:15,243 --> 00:19:17,186
+Speaker SPEAKER_00: So can you share your thoughts on that?
+
+199
+00:19:17,757 --> 00:19:21,580
+Speaker SPEAKER_02: Yeah, so actually, that goes back to my first year as a graduate student.
+
+200
+00:19:22,181 --> 00:19:26,786
+Speaker SPEAKER_02: The first talk I ever gave was about using what I called fast weights.
+
+201
+00:19:27,326 --> 00:19:32,310
+Speaker SPEAKER_02: So weights that adapt rapidly, but decay rapidly, and therefore can hold short term memory.
+
+202
+00:19:33,172 --> 00:19:39,377
+Speaker SPEAKER_02: And I showed in a very simple system in 1973, that you could do true recursion with those weights.
+
+203
+00:19:39,857 --> 00:19:47,645
+Speaker SPEAKER_02: And what I mean by true recursion is that the neurons that are used for representing things,
+
+204
+00:19:48,250 --> 00:19:51,795
+Speaker SPEAKER_02: get reused for representing things in the recursive call.
+
+205
+00:19:53,557 --> 00:19:57,683
+Speaker SPEAKER_02: And the weights that are used for representing knowledge get reused in the recursive call.
+
+206
+00:19:58,605 --> 00:20:04,815
+Speaker SPEAKER_02: And so that leaves the question of when you pop out of a recursive call, how do you remember what it was you're in the middle of doing?
+
+207
+00:20:04,875 --> 00:20:05,676
+Speaker SPEAKER_02: Where's that memory?
+
+208
+00:20:06,116 --> 00:20:08,320
+Speaker SPEAKER_02: Because you use the neurons for the recursive call.
+
+209
+00:20:09,362 --> 00:20:16,333
+Speaker SPEAKER_02: And the answer is you can put that memory into fast weights, and you can recover the activity states of the neurons from those fast weights.
+
+210
+00:20:17,089 --> 00:20:23,781
+Speaker SPEAKER_02: And more recently, working with Jimmy Barr, we actually got a paper in NIPS about using fast weights for recursion like that.
+
+211
+00:20:25,565 --> 00:20:27,868
+Speaker SPEAKER_02: So that was quite a big gap.
+
+212
+00:20:28,569 --> 00:20:37,726
+Speaker SPEAKER_02: The first model was unpublished in 1973, and then Jimmy Barr's model was in 2015, I think, or 2016.
+
+213
+00:20:37,746 --> 00:20:40,329
+Speaker SPEAKER_02: So it's about 40 years later.
+
+214
+00:20:40,984 --> 00:20:49,356
+Speaker SPEAKER_00: And I guess one other idea I've heard you talk about for quite a few years now, over five years, I think, is capsules.
+
+215
+00:20:49,817 --> 00:20:50,980
+Speaker SPEAKER_00: Where are you with that?
+
+216
+00:20:52,561 --> 00:21:01,816
+Speaker SPEAKER_02: OK, so I'm back to the state I'm used to being in, which is I have this idea I really believe in, and nobody else believes it.
+
+217
+00:21:02,636 --> 00:21:04,920
+Speaker SPEAKER_02: And I submit papers about it, and they all get rejected.
+
+218
+00:21:06,762 --> 00:21:09,507
+Speaker SPEAKER_02: But I really believe in this idea, and I'm just going to keep pushing it.
+
+219
+00:21:10,229 --> 00:21:16,459
+Speaker SPEAKER_02: So it hinges on, there's a couple of key ideas.
+
+220
+00:21:17,200 --> 00:21:19,845
+Speaker SPEAKER_02: One is about how you represent multidimensional entities.
+
+221
+00:21:21,567 --> 00:21:30,863
+Speaker SPEAKER_02: And you can represent multidimensional entities by just a little vector of activities, as long as you know there's only one of them.
+
+222
+00:21:30,883 --> 00:21:37,333
+Speaker SPEAKER_02: So the idea is in each region of the image, you'll assume there's at most one of a particular kind of feature.
+
+223
+00:21:38,376 --> 00:21:46,467
+Speaker SPEAKER_02: And then you'll use a bunch of neurons and their activities will represent the different aspects of that feature.
+
+224
+00:21:47,488 --> 00:21:50,491
+Speaker SPEAKER_02: Like within that region, exactly what are its X and Y coordinates?
+
+225
+00:21:50,531 --> 00:21:51,653
+Speaker SPEAKER_02: What orientation is it at?
+
+226
+00:21:52,034 --> 00:21:53,134
+Speaker SPEAKER_02: How fast is it moving?
+
+227
+00:21:53,234 --> 00:21:53,915
+Speaker SPEAKER_02: What color is it?
+
+228
+00:21:53,935 --> 00:21:54,537
+Speaker SPEAKER_02: How bright is it?
+
+229
+00:21:54,576 --> 00:21:55,258
+Speaker SPEAKER_02: And stuff like that.
+
+230
+00:21:55,878 --> 00:22:04,249
+Speaker SPEAKER_02: So you can use a whole bunch of neurons to represent different dimensions of the same thing, provided there's only one of them.
+
+231
+00:22:05,848 --> 00:22:11,039
+Speaker SPEAKER_02: that's a very different way of doing representation from what we're normally used to in neural nets.
+
+232
+00:22:11,119 --> 00:22:15,348
+Speaker SPEAKER_02: Normally in neural nets we just have a great big layer and all the units go off and do whatever they do.
+
+233
+00:22:15,809 --> 00:22:20,560
+Speaker SPEAKER_02: But you don't think of bundling them up into little groups that represent different coordinates of the same thing.
+
+234
+00:22:21,983 --> 00:22:24,869
+Speaker SPEAKER_02: So I think there should be this extra structure.
+
+235
+00:22:25,188 --> 00:22:27,790
+Speaker SPEAKER_02: And then the other part, the other idea that goes with that.
+
+236
+00:22:28,171 --> 00:22:36,901
+Speaker SPEAKER_00: So this means in the distributed representation, you partition the representation to have different subsets to represent, right?
+
+237
+00:22:37,080 --> 00:22:39,423
+Speaker SPEAKER_02: I call each of those subsets a capsule.
+
+238
+00:22:39,443 --> 00:22:44,670
+Speaker SPEAKER_02: And the idea is a capsule is able to represent an instance of a feature, but only one.
+
+239
+00:22:44,730 --> 00:22:49,895
+Speaker SPEAKER_02: And it represents all the different properties of that feature.
+
+240
+00:22:50,145 --> 00:22:57,532
+Speaker SPEAKER_02: So it's a feature that has lots of properties, as opposed to a normal neuron in a normal neural net, which just has one scalar property.
+
+241
+00:22:59,513 --> 00:23:11,444
+Speaker SPEAKER_02: And then what you can do if you've got that, is you can do something that normal neural nets are very bad at, which is you can do what I call rooting by agreement.
+
+242
+00:23:12,326 --> 00:23:20,153
+Speaker SPEAKER_02: So let's suppose you want to do segmentation, and you have something that might be a mouth and something else that might be a nose,
+
+243
+00:23:21,077 --> 00:23:24,242
+Speaker SPEAKER_02: and you want to know if you should put them together to make one thing.
+
+244
+00:23:24,303 --> 00:23:32,837
+Speaker SPEAKER_02: So the idea is you'd have a capsule for a mouth that has the parameters of the mouth, and you have a capsule for a nose that has the parameters of the nose.
+
+245
+00:23:33,878 --> 00:23:42,032
+Speaker SPEAKER_02: And then to decide whether to put them together or not, you get each of them to vote for what the parameters should be for a face.
+
+246
+00:23:43,234 --> 00:23:47,000
+Speaker SPEAKER_02: Now if the mouth and the nose are in the right spatial relationship, they will agree
+
+247
+00:23:47,909 --> 00:23:58,630
+Speaker SPEAKER_02: So when you get two capsules at one level voting for the same set of parameters at the next level up, you can assume they're probably right because agreement in a high dimensional space is very unlikely.
+
+248
+00:24:00,393 --> 00:24:06,846
+Speaker SPEAKER_02: And that's a very different way of doing filtering than what we normally use in neural nets.
+
+249
+00:24:09,510 --> 00:24:10,051
+Speaker SPEAKER_02: So
+
+250
+00:24:11,247 --> 00:24:19,243
+Speaker SPEAKER_02: I think this routing by agreement is going to be crucial for getting neural nets to generalize much better from limited data.
+
+251
+00:24:19,984 --> 00:24:29,424
+Speaker SPEAKER_02: I think it'd be very good at dealing with changes in viewpoint, very good at doing segmentation, and I'm hoping it'll be much more statistically efficient than what we currently do in neural nets.
+
+252
+00:24:29,759 --> 00:24:35,846
+Speaker SPEAKER_02: which is if you want to deal with changes in viewpoint, you just give it a whole bunch of changes in viewpoint and train it on them all.
+
+253
+00:24:35,865 --> 00:24:37,028
+Speaker SPEAKER_02: I see, right, right.
+
+254
+00:24:37,528 --> 00:24:42,515
+Speaker SPEAKER_00: So rather than FIFO-only supervised learning, you can learn this in some different way.
+
+255
+00:24:43,496 --> 00:24:50,163
+Speaker SPEAKER_02: Well, I've still planned to do it with supervised learning, but the mechanics of the forward pass are very different.
+
+256
+00:24:51,005 --> 00:24:55,851
+Speaker SPEAKER_02: It's not a pure forward pass in the sense that there's little bits of iteration going on.
+
+257
+00:24:56,303 --> 00:25:03,950
+Speaker SPEAKER_02: where you think you found a mouth and you think you found a nose and you do a little bit of iteration to decide whether they should really go together to make a face.
+
+258
+00:25:04,529 --> 00:25:04,769
+Speaker SPEAKER_02: I see.
+
+259
+00:25:06,192 --> 00:25:08,874
+Speaker SPEAKER_02: And you could do backprops for all that iteration.
+
+260
+00:25:09,434 --> 00:25:09,954
+Speaker SPEAKER_00: I see, great.
+
+261
+00:25:10,075 --> 00:25:11,516
+Speaker SPEAKER_02: So you can train it all discriminatively.
+
+262
+00:25:11,957 --> 00:25:12,978
+Speaker SPEAKER_00: I see, great.
+
+263
+00:25:14,798 --> 00:25:17,181
+Speaker SPEAKER_02: And we're working on that now at my group in Toronto.
+
+264
+00:25:17,701 --> 00:25:20,604
+Speaker SPEAKER_02: So I now have a little Google team in Toronto, part of the brain team.
+
+265
+00:25:20,944 --> 00:25:21,404
+Speaker SPEAKER_02: I see, yep.
+
+266
+00:25:22,885 --> 00:25:23,467
+Speaker SPEAKER_02: I see, great.
+
+267
+00:25:23,507 --> 00:25:24,807
+Speaker SPEAKER_02: And that's what I'm excited about right now.
+
+268
+00:25:25,176 --> 00:25:25,657
+Speaker SPEAKER_00: Oh, I see.
+
+269
+00:25:25,678 --> 00:25:25,978
+Speaker SPEAKER_00: Great.
+
+270
+00:25:26,018 --> 00:25:26,117
+Speaker SPEAKER_00: Yeah.
+
+271
+00:25:26,137 --> 00:25:28,119
+Speaker SPEAKER_00: Look forward to that paper when that comes out.
+
+272
+00:25:29,922 --> 00:25:30,021
+Speaker SPEAKER_02: Yeah.
+
+273
+00:25:30,041 --> 00:25:30,643
+Speaker SPEAKER_02: If it comes out.
+
+274
+00:25:33,405 --> 00:25:36,209
+Speaker SPEAKER_00: You've worked in deep learning for several decades.
+
+275
+00:25:36,249 --> 00:25:41,994
+Speaker SPEAKER_00: I'm actually really curious, how has your thinking, your understanding of AI changed over these years?
+
+276
+00:25:43,797 --> 00:25:54,828
+Speaker SPEAKER_02: So I guess a lot of my intellectual history has been around backpropagation and how to use backpropagation, how to make use of its power.
+
+277
+00:25:56,699 --> 00:26:02,627
+Speaker SPEAKER_02: So to begin with in the mid 80s we were using it for discriminative learning and it was working well.
+
+278
+00:26:03,528 --> 00:26:17,069
+Speaker SPEAKER_02: I then decided by the early 90s that actually most human learning was going to be unsupervised learning and I got much more interested in unsupervised learning and that's when I worked on things like the wake-sleep algorithm.
+
+279
+00:26:17,454 --> 00:26:21,499
+Speaker SPEAKER_00: And your comments at that time really influenced my thinking as well.
+
+280
+00:26:21,618 --> 00:26:28,286
+Speaker SPEAKER_00: So when I was leading Google Brain, our first project, I spent a lot of work on unsupervised learning because of your influence.
+
+281
+00:26:29,086 --> 00:26:29,347
+Speaker SPEAKER_02: Right.
+
+282
+00:26:30,107 --> 00:26:32,570
+Speaker SPEAKER_02: And I may have misled you.
+
+283
+00:26:32,871 --> 00:26:37,236
+Speaker SPEAKER_02: That is, in the long run, I think unsupervised learning is going to be absolutely crucial.
+
+284
+00:26:38,436 --> 00:26:40,759
+Speaker SPEAKER_02: But you have to sort of face reality.
+
+285
+00:26:41,740 --> 00:26:45,825
+Speaker SPEAKER_02: And what's worked over the last 10 years or so
+
+286
+00:26:46,125 --> 00:26:54,097
+Speaker SPEAKER_02: is supervised learning, discriminative training, where you have labels, or you're trying to predict the next thing in a series, so that acts as the label.
+
+287
+00:26:55,078 --> 00:26:56,761
+Speaker SPEAKER_02: And that's worked incredibly well.
+
+288
+00:26:57,943 --> 00:27:04,673
+Speaker SPEAKER_02: And I still believe that unsupervised learning is going to be crucial.
+
+289
+00:27:05,314 --> 00:27:06,395
+Speaker SPEAKER_02: And things will work
+
+290
+00:27:06,712 --> 00:27:11,377
+Speaker SPEAKER_02: incredibly much better than they do now when we get that working properly, but we haven't yet.
+
+291
+00:27:12,238 --> 00:27:12,759
+Speaker SPEAKER_00: Yeah, yep.
+
+292
+00:27:13,199 --> 00:27:19,285
+Speaker SPEAKER_00: I think many of the senior people in deep learning, including myself, remain very excited about it.
+
+293
+00:27:19,305 --> 00:27:24,851
+Speaker SPEAKER_00: It's just none of us really have almost any idea how to do it yet.
+
+294
+00:27:24,871 --> 00:27:25,832
+Speaker SPEAKER_00: Maybe you do.
+
+295
+00:27:25,852 --> 00:27:26,471
+Speaker SPEAKER_00: I don't feel like I do.
+
+296
+00:27:26,511 --> 00:27:32,798
+Speaker SPEAKER_02: Well, um, variational autoencoders, where you use the re-parameterization trick, seem to me a really nice idea.
+
+297
+00:27:33,659 --> 00:27:34,240
+Speaker SPEAKER_02: And
+
+298
+00:27:34,439 --> 00:27:38,203
+Speaker SPEAKER_02: Generative adversarial nets also seem to me to be a really nice idea.
+
+299
+00:27:38,505 --> 00:27:45,493
+Speaker SPEAKER_02: I think generative adversarial nets are one of the sort of biggest ideas in deep learning that's really new.
+
+300
+00:27:46,015 --> 00:27:49,519
+Speaker SPEAKER_02: I'm hoping I can make capsules that successful.
+
+301
+00:27:49,559 --> 00:27:54,166
+Speaker SPEAKER_02: But right now, generative adversarial nets, I think, have been a big breakthrough.
+
+302
+00:27:55,028 --> 00:28:03,720
+Speaker SPEAKER_00: What happened to sparsity and slow features, which were two of the other principles for building unsupervised models?
+
+303
+00:28:04,779 --> 00:28:07,021
+Speaker SPEAKER_02: I was never as big on sparsity as you were.
+
+304
+00:28:09,984 --> 00:28:13,929
+Speaker SPEAKER_02: But slow features, I think, is a mistake.
+
+305
+00:28:16,010 --> 00:28:16,991
+Speaker SPEAKER_02: You shouldn't say slow.
+
+306
+00:28:17,011 --> 00:28:21,016
+Speaker SPEAKER_02: The basic idea is right, but you shouldn't go for features that don't change.
+
+307
+00:28:21,135 --> 00:28:23,739
+Speaker SPEAKER_02: You should go for features that change in predictable ways.
+
+308
+00:28:24,138 --> 00:28:29,163
+Speaker SPEAKER_02: So here's a sort of basic principle about how you model anything.
+
+309
+00:28:31,886 --> 00:28:34,128
+Speaker SPEAKER_02: You take your measurements.
+
+310
+00:28:35,189 --> 00:28:43,903
+Speaker SPEAKER_02: and you apply nonlinear transformations to your measurements until you get to a representation as a state vector in which the action is linear.
+
+311
+00:28:45,946 --> 00:29:00,150
+Speaker SPEAKER_02: So you don't just pretend it's linear like you do with Kalman filters, but you actually find a transformation from the observables to the underlying variables where linear operations like matrix multiplies on the underlying variables will do the work.
+
+312
+00:29:00,603 --> 00:29:10,748
+Speaker SPEAKER_02: So, for example, if you want to change viewpoints, if you want to produce an image from another viewpoint, what you should do is go from the pixels to coordinates
+
+313
+00:29:11,065 --> 00:29:22,042
+Speaker SPEAKER_02: And once you've got to the coordinate representation, which is the kind of thing I'm hoping Capsules will find, um, you can then do a matrix multiply to change viewpoint, and then you can map it back to pixels.
+
+314
+00:29:22,482 --> 00:29:22,624
+Speaker SPEAKER_02: Right.
+
+315
+00:29:22,644 --> 00:29:23,505
+Speaker SPEAKER_00: That's why you did all that.
+
+316
+00:29:23,525 --> 00:29:24,987
+Speaker SPEAKER_02: I think that's a very, very general principle.
+
+317
+00:29:25,428 --> 00:29:27,991
+Speaker SPEAKER_00: That's why you did all that work on phase synthesis, right?
+
+318
+00:29:28,011 --> 00:29:34,001
+Speaker SPEAKER_00: We take a phase and compresses a very low dimensional vector and so you can fiddle with that and get back to other phases.
+
+319
+00:29:35,298 --> 00:29:37,661
+Speaker SPEAKER_02: I had a student who worked on that.
+
+320
+00:29:37,701 --> 00:29:39,463
+Speaker SPEAKER_02: I didn't do much work on that myself.
+
+321
+00:29:40,526 --> 00:29:46,914
+Speaker SPEAKER_00: I'm sure you still get asked all the time, if someone wants to break into deep learning, what should they do?
+
+322
+00:29:47,315 --> 00:29:48,297
+Speaker SPEAKER_00: What advice would you have?
+
+323
+00:29:48,396 --> 00:29:59,752
+Speaker SPEAKER_00: I'm sure you've given a lot of advice to people in one-on-one settings, but for the global audience of people watching this video, what advice would you have for them to get into deep learning?
+
+324
+00:29:59,953 --> 00:30:05,000
+Speaker SPEAKER_02: My advice is read the literature, but don't read too much of it.
+
+325
+00:30:05,403 --> 00:30:10,871
+Speaker SPEAKER_02: So this is advice I got from my advisor, which is very unlike what most people say.
+
+326
+00:30:11,352 --> 00:30:16,799
+Speaker SPEAKER_02: Most people say you should spend several years reading the literature and then you should start working on your own ideas.
+
+327
+00:30:17,840 --> 00:30:30,599
+Speaker SPEAKER_02: And that may be true for some researchers, but for creative researchers, I think what you want to do is read a little bit of the literature and notice something that you think everybody is doing wrong.
+
+328
+00:30:31,458 --> 00:30:33,019
+Speaker SPEAKER_02: I'm contrarian in that sense.
+
+329
+00:30:33,579 --> 00:30:35,561
+Speaker SPEAKER_02: You look at it and it just doesn't feel right.
+
+330
+00:30:36,923 --> 00:30:38,844
+Speaker SPEAKER_02: And then figure out how to do it right.
+
+331
+00:30:40,125 --> 00:30:43,808
+Speaker SPEAKER_02: And then when people tell you that's no good, just keep at it.
+
+332
+00:30:44,608 --> 00:30:52,496
+Speaker SPEAKER_02: And I have a very good principle for helping people keep at it, which is either your intuitions are good or they're not.
+
+333
+00:30:53,277 --> 00:30:56,660
+Speaker SPEAKER_02: If your intuitions are good, you should follow them and you'll eventually be successful.
+
+334
+00:30:57,380 --> 00:31:00,282
+Speaker SPEAKER_02: If your intuitions are not good, it doesn't matter what you do.
+
+335
+00:31:02,457 --> 00:31:05,642
+Speaker SPEAKER_00: Right, inspiring advice, so might as well go for it.
+
+336
+00:31:06,682 --> 00:31:08,306
+Speaker SPEAKER_02: You might as well trust your intuitions.
+
+337
+00:31:08,546 --> 00:31:10,509
+Speaker SPEAKER_02: There's no point not trusting them.
+
+338
+00:31:11,270 --> 00:31:13,192
+Speaker SPEAKER_00: I see, yeah.
+
+339
+00:31:13,473 --> 00:31:24,130
+Speaker SPEAKER_00: I usually advise people to not just read but replicate published papers and maybe that puts a natural limiter on how many you could do because replicating results is pretty time-consuming.
+
+340
+00:31:25,192 --> 00:31:30,539
+Speaker SPEAKER_02: Yes, it's true that when you try and replicate a published paper you discover all the little tricks necessary to make it to work.
+
+341
+00:31:31,414 --> 00:31:34,577
+Speaker SPEAKER_02: The other advice I have is never stop programming.
+
+342
+00:31:35,419 --> 00:31:41,306
+Speaker SPEAKER_02: Because if you give a student something to do, if they're a bad student, they'll come back and say it didn't work.
+
+343
+00:31:41,885 --> 00:31:47,593
+Speaker SPEAKER_02: And the reason it didn't work would be some little decision they made that they didn't realize was crucial.
+
+344
+00:31:48,333 --> 00:31:55,201
+Speaker SPEAKER_02: And if you give it to a good student, like Yi Wai Tei, for example, you can give him anything and he'll come back and he'll say it worked.
+
+345
+00:31:55,922 --> 00:31:57,202
+Speaker SPEAKER_02: I remember doing this once.
+
+346
+00:31:57,654 --> 00:31:58,875
+Speaker SPEAKER_02: And I said, but wait a minute, EY.
+
+347
+00:31:59,777 --> 00:32:02,780
+Speaker SPEAKER_02: Since we last talked, I realized you couldn't possibly work for the following reason.
+
+348
+00:32:03,602 --> 00:32:05,763
+Speaker SPEAKER_02: And EY said, oh, yeah, well, I realized that right away.
+
+349
+00:32:05,784 --> 00:32:07,065
+Speaker SPEAKER_02: So I assumed you didn't mean that.
+
+350
+00:32:08,066 --> 00:32:09,508
+Speaker SPEAKER_00: I see.
+
+351
+00:32:09,528 --> 00:32:10,269
+Speaker SPEAKER_00: Yeah, that's good.
+
+352
+00:32:11,470 --> 00:32:12,711
+Speaker SPEAKER_00: Yeah.
+
+353
+00:32:12,731 --> 00:32:14,133
+Speaker SPEAKER_00: Let's see.
+
+354
+00:32:14,272 --> 00:32:18,317
+Speaker SPEAKER_00: Any other advice for people that want to break into AI and deep learning?
+
+355
+00:32:21,260 --> 00:32:26,666
+Speaker SPEAKER_02: I think that's basically read enough so you start developing intuitions and then trust your intuitions.
+
+356
+00:32:27,845 --> 00:32:57,480
+Speaker SPEAKER_02: and go for it and don't be too worried if everybody else says it's nonsense and I guess there's no way to know if others are right or wrong when they say it's nonsense but you just have to go for it and then find out right but there is one way there's one thing which is if you think it's a really good idea and other people tell you it's complete nonsense then you know you're really on to something so one example of that is when Radford and I first came up with variational methods
+
+357
+00:32:58,607 --> 00:33:05,839
+Speaker SPEAKER_02: I sent mail explaining it to a former student of mine called Peter Brown, who knew a lot about EM.
+
+358
+00:33:06,921 --> 00:33:11,769
+Speaker SPEAKER_02: And he showed it to people who worked with him called the Della Pietra brothers.
+
+359
+00:33:11,949 --> 00:33:13,050
+Speaker SPEAKER_02: They were twins, I think.
+
+360
+00:33:13,231 --> 00:33:18,138
+Speaker SPEAKER_02: And he then told me later what they said.
+
+361
+00:33:19,280 --> 00:33:24,108
+Speaker SPEAKER_02: And they said to him, either this guy's drunk or he's just stupid.
+
+362
+00:33:25,067 --> 00:33:52,542
+Speaker SPEAKER_02: so they really really thought it was nonsense now it could have been partly the way i explained it because i explained it in intuitive terms but when people when you have what you think is a good idea and other people think it's complete rubbish that's the sign of a really good idea oh i see that's your role yeah oh and and and research topics you know new grad students should work on what capsules and maybe unsupervised learning any other
+
+363
+00:33:54,126 --> 00:34:09,748
+Speaker SPEAKER_02: One good piece of advice for new grad students is see if you can find an advisor who has beliefs similar to yours, because if you work on stuff that your advisor feels deeply about, you'll get a lot of good advice and time from your advisor.
+
+364
+00:34:10,449 --> 00:34:16,978
+Speaker SPEAKER_02: If you work on stuff your advisor is not interested in, all you'll get is, you'll get some advice, but it won't be nearly so useful.
+
+365
+00:34:18,527 --> 00:34:21,972
+Speaker SPEAKER_00: And last one on advice for learners.
+
+366
+00:34:22,673 --> 00:34:31,125
+Speaker SPEAKER_00: How do you feel about people entering a PhD program versus joining, you know, a top company or top research group in a corporation?
+
+367
+00:34:33,228 --> 00:34:34,429
+Speaker SPEAKER_02: Yeah, it's complicated.
+
+368
+00:34:34,849 --> 00:34:44,782
+Speaker SPEAKER_02: I think right now what's happening is there aren't enough academics trained in deep learning to educate all the people we need educated in universities.
+
+369
+00:34:45,284 --> 00:34:47,606
+Speaker SPEAKER_02: There just isn't the faculty bandwidth there.
+
+370
+00:34:48,311 --> 00:35:16,597
+Speaker SPEAKER_02: um but i think that's going to be temporary i think what's happened is depart most departments are being very slow to understand the kind of revolution that's going on i kind of agree with you that it's it's not quite a second industrial revolution but it's something on nearly that scale and there's a huge sea change going on basically because our relationship to computers has changed instead of programming them we now show them and they figure it out
+
+371
+00:35:17,135 --> 00:35:19,217
+Speaker SPEAKER_02: That's a completely different way of using computers.
+
+372
+00:35:19,697 --> 00:35:23,722
+Speaker SPEAKER_02: And computer science departments are built around the idea of programming computers.
+
+373
+00:35:24,143 --> 00:35:32,092
+Speaker SPEAKER_02: And they don't understand that sort of this showing computers is going to be as big as programming computers.
+
+374
+00:35:32,572 --> 00:35:37,858
+Speaker SPEAKER_02: And so they don't understand that half the people in the department should be people who get computers to do things by showing them.
+
+375
+00:35:38,458 --> 00:35:38,739
+Speaker SPEAKER_02: I see.
+
+376
+00:35:39,500 --> 00:35:39,740
+Speaker SPEAKER_00: Right.
+
+377
+00:35:39,760 --> 00:35:45,387
+Speaker SPEAKER_02: So my own department refuses to acknowledge that
+
+378
+00:35:45,670 --> 00:35:47,652
+Speaker SPEAKER_02: it should have lots and lots of people doing this.
+
+379
+00:35:48,052 --> 00:35:52,039
+Speaker SPEAKER_02: It thinks they've got a couple and maybe a few more, but not too many.
+
+380
+00:35:53,300 --> 00:35:59,228
+Speaker SPEAKER_02: In that situation, you have to rely on the big companies to do quite a lot of the training.
+
+381
+00:35:59,768 --> 00:36:02,793
+Speaker SPEAKER_02: So Google is now training people we call brain residents.
+
+382
+00:36:03,635 --> 00:36:06,918
+Speaker SPEAKER_02: I suspect the universities will eventually catch up.
+
+383
+00:36:07,387 --> 00:36:08,128
+Speaker SPEAKER_00: I see.
+
+384
+00:36:08,148 --> 00:36:08,429
+Speaker SPEAKER_00: Right.
+
+385
+00:36:08,449 --> 00:36:11,572
+Speaker SPEAKER_00: In fact, uh, maybe a lot of students have figured this out.
+
+386
+00:36:11,592 --> 00:36:19,880
+Speaker SPEAKER_00: A lot of top PhD programs, you know, over half the PhD applicants are actually wanting to work on showing rather than programming.
+
+387
+00:36:19,900 --> 00:36:20,661
+Speaker SPEAKER_00: Yes.
+
+388
+00:36:20,681 --> 00:36:21,202
+Speaker SPEAKER_00: Yeah.
+
+389
+00:36:21,222 --> 00:36:21,322
+Speaker SPEAKER_00: Cool.
+
+390
+00:36:21,342 --> 00:36:22,063
+Speaker SPEAKER_00: Yeah.
+
+391
+00:36:22,083 --> 00:36:22,503
+Speaker SPEAKER_00: Yeah.
+
+392
+00:36:22,523 --> 00:36:35,438
+Speaker SPEAKER_00: In fact, you know, to give credit where it's due, where- whereas, uh, deeplearning.ai is creating a deep learning specialization, far as I know, the first deep learning MOOC was actually yours, uh, taught on Coursera back in 2012 as well.
+
+393
+00:36:35,418 --> 00:36:42,157
+Speaker SPEAKER_00: And, and, and somewhat strangely, that's when you first published the RMSProp algorithm, which also took off.
+
+394
+00:36:43,581 --> 00:36:43,922
+Speaker SPEAKER_02: Right.
+
+395
+00:36:44,182 --> 00:36:44,583
+Speaker SPEAKER_02: Yes.
+
+396
+00:36:45,052 --> 00:36:53,244
+Speaker SPEAKER_02: Well, as you know, that was because you invited me to do the MOOC, and then when I was very dubious about doing it, you kept pushing me to do it.
+
+397
+00:36:54,106 --> 00:36:56,829
+Speaker SPEAKER_02: So it was very good that I did, although it was a lot of work.
+
+398
+00:36:57,550 --> 00:36:59,474
+Speaker SPEAKER_00: Yes, and thank you for doing that.
+
+399
+00:36:59,514 --> 00:37:10,150
+Speaker SPEAKER_00: I remember you complaining to me how much work it was, and you staying up late at night, but I think, you know, many, many learners have benefited from your first MOOC, and I'm still very grateful to you for it.
+
+400
+00:37:10,534 --> 00:37:12,737
+Speaker SPEAKER_00: That's good, yeah.
+
+401
+00:37:12,757 --> 00:37:19,505
+Speaker SPEAKER_00: Over the years, I've seen you embroiled in debates about paradigms for AI and whether there's been a paradigm shift for AI.
+
+402
+00:37:20,326 --> 00:37:22,088
+Speaker SPEAKER_00: Can you share your thoughts on that?
+
+403
+00:37:23,650 --> 00:37:24,451
+Speaker SPEAKER_02: Yes, happily.
+
+404
+00:37:25,952 --> 00:37:34,463
+Speaker SPEAKER_02: So I think in the early days, back in the 50s, people like von Neumann and Turing didn't believe in symbolic AI.
+
+405
+00:37:34,802 --> 00:37:36,905
+Speaker SPEAKER_02: They were far more inspired by the brain.
+
+406
+00:37:36,945 --> 00:37:40,068
+Speaker SPEAKER_02: Unfortunately, they both died much too young.
+
+407
+00:37:40,876 --> 00:38:09,077
+Speaker SPEAKER_02: um and their voice wasn't heard and in the early days of AI people were completely convinced that the representations you needed for intelligence were symbolic expressions of some kind sort of cleaned up logic um where you could do non-monotonic things and not quite logic but something like logic and that the essence of intelligence was reasoning what's happened now is there's a completely different view which is that
+
+408
+00:38:09,833 --> 00:38:13,797
+Speaker SPEAKER_02: What a thought is, is just a great big vector of neural activity.
+
+409
+00:38:15,340 --> 00:38:17,943
+Speaker SPEAKER_02: So contrast that with a thought being a symbolic expression.
+
+410
+00:38:18,963 --> 00:38:23,429
+Speaker SPEAKER_02: And I think the people who thought that thoughts were symbolic expressions just made a huge mistake.
+
+411
+00:38:24,510 --> 00:38:27,414
+Speaker SPEAKER_02: What comes in is a string of words.
+
+412
+00:38:28,135 --> 00:38:30,097
+Speaker SPEAKER_02: And what comes out is a string of words.
+
+413
+00:38:31,418 --> 00:38:35,422
+Speaker SPEAKER_02: And because of that, strings of words are the obvious way to represent things.
+
+414
+00:38:35,864 --> 00:38:38,507
+Speaker SPEAKER_02: So they thought what must be in between was a string of words.
+
+415
+00:38:38,824 --> 00:38:40,967
+Speaker SPEAKER_02: or something like a string of words.
+
+416
+00:38:41,608 --> 00:38:43,750
+Speaker SPEAKER_02: And I think what's in between is nothing like a string of words.
+
+417
+00:38:44,530 --> 00:38:55,820
+Speaker SPEAKER_02: I think the idea that thoughts must be in some kind of language is as silly as the idea that understanding the layout of a spatial scene must be in pixels.
+
+418
+00:38:55,840 --> 00:39:02,367
+Speaker SPEAKER_02: Pixels come in, and if we had a dot matrix printer attached to us, then pixels will come out.
+
+419
+00:39:03,568 --> 00:39:05,210
+Speaker SPEAKER_02: But what's in between isn't pixels.
+
+420
+00:39:06,490 --> 00:39:07,211
+Speaker SPEAKER_02: And so I think
+
+421
+00:39:07,512 --> 00:39:18,548
+Speaker SPEAKER_02: thoughts are just these great big vectors, and the big vectors have causal powers, they cause other big vectors, and that's utterly unlike the standard AI view that thoughts are symbolic expressions.
+
+422
+00:39:19,369 --> 00:39:20,972
+Speaker SPEAKER_00: I see, yep.
+
+423
+00:39:20,992 --> 00:39:24,978
+Speaker SPEAKER_00: I guess AI is certainly coming around to this new point of view these days.
+
+424
+00:39:24,998 --> 00:39:25,458
+Speaker SPEAKER_00: Some of it.
+
+425
+00:39:25,900 --> 00:39:30,887
+Speaker SPEAKER_00: I think a lot of people in AI still think thoughts have to be symbolic expressions.
+
+426
+00:39:31,389 --> 00:39:33,054
+Speaker SPEAKER_00: Thank you very much for doing this interview.
+
+427
+00:39:33,094 --> 00:39:39,126
+Speaker SPEAKER_00: It's fascinating to hear how deep learning has evolved over the years, as well as how you're still helping drive it into the future.
+
+428
+00:39:39,166 --> 00:39:40,009
+Speaker SPEAKER_00: So thank you, Jeff.
+
+429
+00:39:41,030 --> 00:39:42,653
+Speaker SPEAKER_00: Well, thank you for giving me this opportunity.
+
+430
+00:39:43,195 --> 00:39:43,476
+Speaker SPEAKER_00: Thank you.
+

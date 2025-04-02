@@ -1,0 +1,3064 @@
+1
+00:00:23,301 --> 00:00:33,036
+Speaker SPEAKER_08: So it's my pleasure to introduce you to Geoff Hinton, who's a pioneer in machine learning, in neural nets, and more recently in deep architectures.
+
+2
+00:00:33,136 --> 00:00:35,198
+Speaker SPEAKER_08: And I think that's going to be the topic of today.
+
+3
+00:00:35,899 --> 00:00:37,642
+Speaker SPEAKER_08: So Geoff, over to you.
+
+4
+00:00:38,362 --> 00:00:38,643
+Speaker SPEAKER_01: OK.
+
+5
+00:00:39,405 --> 00:00:41,046
+Speaker SPEAKER_01: So I gave a talk here a couple of years ago.
+
+6
+00:00:41,087 --> 00:00:45,654
+Speaker SPEAKER_01: And the first 10 minutes or so will be an overview of what I said there.
+
+7
+00:00:46,173 --> 00:00:48,718
+Speaker SPEAKER_01: And then I'll talk about the new stuff.
+
+8
+00:00:51,600 --> 00:01:02,622
+Speaker SPEAKER_01: The new stuff consists of a better learning module and I'll show you it learns better at all sorts of different things like learning how images transform, learning how people walk, and learning object recognition.
+
+9
+00:01:06,569 --> 00:01:13,317
+Speaker SPEAKER_01: So the basic learning module consists of some variables that represent things like pixels, and these will be binary variables for now.
+
+10
+00:01:13,998 --> 00:01:17,843
+Speaker SPEAKER_01: Some variables that represent, these are latent variables, they're also going to be binary.
+
+11
+00:01:18,846 --> 00:01:22,751
+Speaker SPEAKER_01: And there's a bipartite connectivity, so these guys don't connect to each other.
+
+12
+00:01:23,352 --> 00:01:29,521
+Speaker SPEAKER_01: And that makes it very easy if I give you the states of the visible variables to infer the states of the hidden variables.
+
+13
+00:01:30,040 --> 00:01:34,246
+Speaker SPEAKER_01: They're all independent given the visible variables because it's an undirected graph.
+
+14
+00:01:34,227 --> 00:01:44,647
+Speaker SPEAKER_01: And the inference procedure just says, the probability of turning on hidden unit Hj given this visible vector V is the logistic function of the total input it gets from the visible units.
+
+15
+00:01:45,347 --> 00:01:46,891
+Speaker SPEAKER_01: So, very simple to infer the hidden variables.
+
+16
+00:01:48,033 --> 00:01:51,459
+Speaker SPEAKER_01: Given the hidden variables, we can also infer the visible variables very simply.
+
+17
+00:01:51,692 --> 00:02:04,090
+Speaker SPEAKER_01: And if we want to, if we put some weights on the connections and we want to know what this model believes, we can just go backwards and forwards inferring all the hidden variables in parallel, then all the visible ones, do that for a long time and then you'll see examples of the kinds of things it likes to believe.
+
+18
+00:02:04,751 --> 00:02:08,858
+Speaker SPEAKER_01: And the aim of learning is going to be to get it to like to believe the kinds of things that actually happen.
+
+19
+00:02:12,313 --> 00:02:16,278
+Speaker SPEAKER_01: So this thing is governed by an energy function that is given the weights on the connections.
+
+20
+00:02:16,438 --> 00:02:25,811
+Speaker SPEAKER_01: The energy of a visible plus a hidden vector is the sum over all connections of the weight if both the visible and hidden unit are active.
+
+21
+00:02:26,312 --> 00:02:28,935
+Speaker SPEAKER_01: So when a pixel and a feature detector are active, you add in the weight.
+
+22
+00:02:29,575 --> 00:02:31,717
+Speaker SPEAKER_01: And if it's a big positive weight, that's low energy which is good.
+
+23
+00:02:31,919 --> 00:02:32,819
+Speaker SPEAKER_01: So it's a happy network.
+
+24
+00:02:33,841 --> 00:02:34,942
+Speaker SPEAKER_01: This has nice derivatives.
+
+25
+00:02:35,002 --> 00:02:39,367
+Speaker SPEAKER_01: If you differentiate with respect to the weights, you get this product of the visible and hidden activity.
+
+26
+00:02:39,348 --> 00:02:46,724
+Speaker SPEAKER_01: And so that derivative is going to show up a lot in the learning, because that derivative is how you change the energy of a combined configuration of visible and hidden units.
+
+27
+00:02:51,228 --> 00:02:58,795
+Speaker SPEAKER_01: the probability of a combined configuration given the energy function is e to the minus the energy of that combined configuration normalized by the partition function.
+
+28
+00:02:59,576 --> 00:03:07,365
+Speaker SPEAKER_01: And if you want to know the probability of a particular visible vector, you have to sum over all the hidden vectors that might go with it and that's the probability of visible vector.
+
+29
+00:03:07,925 --> 00:03:20,138
+Speaker SPEAKER_01: If you want to change the weights to make this probability higher, you obviously need to lower the energies of combinations of visible vector and the hidden vector that would like to go with it and raise the energies of all other combinations
+
+30
+00:03:20,117 --> 00:03:21,378
+Speaker SPEAKER_01: so you decrease the competition.
+
+31
+00:03:25,423 --> 00:03:42,457
+Speaker SPEAKER_01: The correct maximum likelihood learning rule, that is, if I want to change the weights so as to increase the log probability that this network would generate the vector V when I let it just sort of fantasize the things it likes to believe in, is a nice simple form.
+
+32
+00:03:42,937 --> 00:03:44,599
+Speaker SPEAKER_01: It's just the difference of two correlations.
+
+33
+00:03:45,199 --> 00:03:49,264
+Speaker SPEAKER_01: So even though it depends on all the other weights, it shows up as this difference of correlations.
+
+34
+00:03:50,391 --> 00:03:57,842
+Speaker SPEAKER_01: And what you do is you take your data, you activate the hidden units, the stochastic binary units.
+
+35
+00:03:57,861 --> 00:03:59,784
+Speaker SPEAKER_01: You then reconstruct, activate, reconstruct, activate.
+
+36
+00:03:59,805 --> 00:04:01,006
+Speaker SPEAKER_01: So this is a Markov chain.
+
+37
+00:04:01,387 --> 00:04:03,389
+Speaker SPEAKER_01: You run it for a long time until you forgot where you started.
+
+38
+00:04:04,150 --> 00:04:07,335
+Speaker SPEAKER_01: And then you measure the correlation there, compare it with the correlation here.
+
+39
+00:04:08,075 --> 00:04:17,427
+Speaker SPEAKER_01: And what you're really doing is saying, by changing the weights in proportion to that, I'm lowering the energy of this visible vector with whatever hidden vector it shows.
+
+40
+00:04:18,050 --> 00:04:22,939
+Speaker SPEAKER_01: And by doing the opposite here, I'm raising the energy of things I fantasize.
+
+41
+00:04:23,740 --> 00:04:27,908
+Speaker SPEAKER_01: And so, what I'm trying to do is believe in the data and not believe in what the model believes in.
+
+42
+00:04:29,209 --> 00:04:34,860
+Speaker SPEAKER_01: Eventually, this correlation will be the same as that one in which case nothing will happen because it will believe in the data, hopefully.
+
+43
+00:04:37,456 --> 00:04:43,464
+Speaker SPEAKER_01: It turns out you can get a much quicker learning algorithm where you just go up and down and up again and you take this difference of correlations.
+
+44
+00:04:45,266 --> 00:04:49,994
+Speaker SPEAKER_01: Justifying that is hard but the main justification is it works and it's quick.
+
+45
+00:04:54,281 --> 00:04:58,586
+Speaker SPEAKER_01: The reason these modules are interesting, the main reason they're interesting is you can stack them up.
+
+46
+00:04:59,360 --> 00:05:01,807
+Speaker SPEAKER_01: that is for complicated reasons I'm not going to go into.
+
+47
+00:05:01,827 --> 00:05:09,673
+Speaker SPEAKER_01: It works very well to train a module, then take the activities of the feature detectors, treat them as though they were
+
+48
+00:05:10,074 --> 00:05:11,677
+Speaker SPEAKER_01: and train another module on top of that.
+
+49
+00:05:12,579 --> 00:05:17,204
+Speaker SPEAKER_01: So the first module is trying to model what's going on in the pixels by using these feature detectors.
+
+50
+00:05:17,745 --> 00:05:19,588
+Speaker SPEAKER_01: And the feature detectors will tend to be highly correlated.
+
+51
+00:05:20,250 --> 00:05:23,675
+Speaker SPEAKER_01: The second model is trying to model the correlations among feature detectors.
+
+52
+00:05:24,334 --> 00:05:29,603
+Speaker SPEAKER_01: And you can guarantee that if you do that right, every time you go up a level, you get a better model of the data.
+
+53
+00:05:29,887 --> 00:05:32,108
+Speaker SPEAKER_01: Actually, you can guarantee that the first time you go up a level.
+
+54
+00:05:32,810 --> 00:05:37,875
+Speaker SPEAKER_01: For further levels, all you can guarantee is that there's a bound on how good your model of the data is.
+
+55
+00:05:38,636 --> 00:05:42,740
+Speaker SPEAKER_01: And every time you add another level, that bound improves if you add it right.
+
+56
+00:05:43,701 --> 00:05:55,894
+Speaker SPEAKER_01: Having got this guarantee that something good is happening as we add more levels, we then violate all the conditions of the mathematics and just add more levels in sort of ad hoc way because we know good things are going to happen and then we justify it by the fact that good things do happen.
+
+57
+00:06:01,122 --> 00:06:06,668
+Speaker SPEAKER_01: This allows us to learn many layers of feature detectors entirely unsupervised just to model the structure in the data.
+
+58
+00:06:07,449 --> 00:06:14,177
+Speaker SPEAKER_01: Once we've done that, you can't get that accepted in a machine learning conference because you have to do discrimination to be accepted in a machine learning conference.
+
+59
+00:06:14,577 --> 00:06:23,990
+Speaker SPEAKER_01: So once you've done that, you add some decision units to the top and you learn the connections discriminatively between the top layer of features and the decision units.
+
+60
+00:06:24,569 --> 00:06:28,394
+Speaker SPEAKER_01: And then if you want, you can go back and fine tune all of the connections using back propagation.
+
+61
+00:06:29,235 --> 00:06:35,766
+Speaker SPEAKER_01: that overcomes the limit of backpropagation which is there's not much information in the label and it can only learn on labeled data.
+
+62
+00:06:36,327 --> 00:06:38,911
+Speaker SPEAKER_01: These things can learn on large amounts of unlabeled data.
+
+63
+00:06:39,733 --> 00:06:49,810
+Speaker SPEAKER_01: After they've learned, then you add these units at the top and backpropagate from a small amount of labeled data and that's not designing the feature detectors anymore.
+
+64
+00:06:50,312 --> 00:06:54,276
+Speaker SPEAKER_01: as you probably know at Google, designing feature detectors is the art of things.
+
+65
+00:06:54,817 --> 00:07:00,584
+Speaker SPEAKER_01: And you'd like to design feature detectors based on what's in the data, not based on having to produce labeled data.
+
+66
+00:07:01,245 --> 00:07:04,988
+Speaker SPEAKER_01: So the idea of back propagation was design your feature detectors so you're good at getting the right answer.
+
+67
+00:07:05,550 --> 00:07:09,995
+Speaker SPEAKER_01: The idea here is design your feature detectors to be good at modeling whatever's going on in the data.
+
+68
+00:07:10,956 --> 00:07:15,161
+Speaker SPEAKER_01: Once you've done that, just ever so slightly fine tune them so you're better at getting the right answer.
+
+69
+00:07:15,420 --> 00:07:18,244
+Speaker SPEAKER_01: But don't try and use the answer to design feature detectors.
+
+70
+00:07:21,059 --> 00:07:31,836
+Speaker SPEAKER_01: And Yoshua Bengio's lab has done lots of work showing that this gives you better minima than just doing back propagation and what's more minima in a completely different part of the space.
+
+71
+00:07:36,403 --> 00:07:46,880
+Speaker SPEAKER_01: So just to summarize this section, I think this is the most important slide in the talk because it says what's wrong with nearly all machine learning up to a few years ago.
+
+72
+00:07:47,317 --> 00:07:51,141
+Speaker SPEAKER_01: What people in machine learning would try and do is learn the mapping from an image to a label.
+
+73
+00:07:51,963 --> 00:07:56,369
+Speaker SPEAKER_01: And that would be a fine thing to do if you thought that images and labels arose in the following way.
+
+74
+00:07:57,129 --> 00:08:00,954
+Speaker SPEAKER_01: The stuff and it gives rise to images and then the images give rise to the labels.
+
+75
+00:08:01,375 --> 00:08:03,478
+Speaker SPEAKER_01: And given the image, the labels don't depend on the stuff.
+
+76
+00:08:04,459 --> 00:08:05,641
+Speaker SPEAKER_01: But you don't really believe that.
+
+77
+00:08:05,721 --> 00:08:08,985
+Speaker SPEAKER_01: You only believe that if the label is something like the parity of the pixels in the image.
+
+78
+00:08:09,886 --> 00:08:16,615
+Speaker SPEAKER_01: What you really believe is the stuff, it gives rise to images and then the labels that go with images are because of the stuff, not because of the image.
+
+79
+00:08:17,168 --> 00:08:19,153
+Speaker SPEAKER_01: So there's a cow in a field and you say cow.
+
+80
+00:08:20,194 --> 00:08:26,911
+Speaker SPEAKER_01: Now, if I just say cow to you, you don't know whether the cow is brown or black or upright or dead or far away.
+
+81
+00:08:26,932 --> 00:08:30,079
+Speaker SPEAKER_01: If I show you an image of the cow, you know all those things.
+
+82
+00:08:31,000 --> 00:08:32,605
+Speaker SPEAKER_01: So this is a very high bandwidth path.
+
+83
+00:08:32,966 --> 00:08:34,570
+Speaker SPEAKER_01: This is a very low bandwidth path.
+
+84
+00:08:35,326 --> 00:08:40,732
+Speaker SPEAKER_01: And the right way to associate labels with images is to first learn to invert this high bandwidth path.
+
+85
+00:08:41,072 --> 00:08:43,697
+Speaker SPEAKER_01: And we can clearly do that because vision works basically.
+
+86
+00:08:43,716 --> 00:08:45,359
+Speaker SPEAKER_01: To first order, you look out there and you see things.
+
+87
+00:08:45,759 --> 00:08:49,303
+Speaker SPEAKER_01: And it's not like it might be a cow, it might be an elephant, it might be a lecture theater.
+
+88
+00:08:49,965 --> 00:08:51,527
+Speaker SPEAKER_01: Basically, you get it right nearly all the time.
+
+89
+00:08:52,888 --> 00:08:54,389
+Speaker SPEAKER_01: And so, we can invert that pathway.
+
+90
+00:08:54,691 --> 00:08:57,153
+Speaker SPEAKER_01: Having learned to do that, we can then learn what things are called.
+
+91
+00:08:58,556 --> 00:09:03,662
+Speaker SPEAKER_01: But you get the concept of a cow not from the name but from seeing what's going on in the world.
+
+92
+00:09:04,013 --> 00:09:06,514
+Speaker SPEAKER_01: And that's what we're doing, and then later associating the label.
+
+93
+00:09:11,049 --> 00:09:17,677
+Speaker SPEAKER_01: Now, I need to do one slight modification to the basic module, which is I had binary units as the observables.
+
+94
+00:09:18,119 --> 00:09:21,163
+Speaker SPEAKER_01: Now, we want to have linear units with Gaussian noise.
+
+95
+00:09:21,783 --> 00:09:23,385
+Speaker SPEAKER_01: So we just change the energy function a bit.
+
+96
+00:09:23,926 --> 00:09:27,691
+Speaker SPEAKER_01: And the energy now says, I've got a kind of parabolic containment here.
+
+97
+00:09:28,072 --> 00:09:31,716
+Speaker SPEAKER_01: Each of these linear visible units has a bias which is like its mean.
+
+98
+00:09:31,975 --> 00:09:33,217
+Speaker SPEAKER_01: And it would like to sit here.
+
+99
+00:09:33,639 --> 00:09:35,660
+Speaker SPEAKER_01: And moving away from that costs it an energy.
+
+100
+00:09:36,241 --> 00:09:38,745
+Speaker SPEAKER_01: The parabola is the negative log of a Gaussian.
+
+101
+00:09:38,725 --> 00:09:39,527
+Speaker SPEAKER_01: so it costs it.
+
+102
+00:09:40,008 --> 00:09:49,669
+Speaker SPEAKER_01: And then the input that comes from the hidden units, this is just VI, HJ, WIJ, but the Vs have to be scaled by the standard deviation of the Gaussian there.
+
+103
+00:09:52,135 --> 00:09:56,986
+Speaker SPEAKER_01: The, if I ask, if I differentiate that with respect to a visible activity,
+
+104
+00:09:57,135 --> 00:10:02,846
+Speaker SPEAKER_01: then what I get is HJWIJ divided by the sigma I. And that's like an energy gradient.
+
+105
+00:10:03,586 --> 00:10:12,081
+Speaker SPEAKER_01: And what the visible unit does when you reconstruct is it tries to compromise between wanting to sit around here and wanting to satisfy this energy gradient.
+
+106
+00:10:12,482 --> 00:10:14,927
+Speaker SPEAKER_01: So it goes to the place where these two gradients are equal and opposite.
+
+107
+00:10:15,528 --> 00:10:19,195
+Speaker SPEAKER_01: And you have, that's the most likely value and then you have Gaussian noise around there.
+
+108
+00:10:20,102 --> 00:10:29,422
+Speaker SPEAKER_01: So, with that small modification, we can now deal with real value data with binary latent variables and we have an efficient learning algorithm that's an approximation of maximum likelihood.
+
+109
+00:10:30,403 --> 00:10:33,650
+Speaker SPEAKER_01: And so, we can apply it to something.
+
+110
+00:10:33,671 --> 00:10:37,317
+Speaker SPEAKER_01: So, there's a nice speech recognition task that's been well organized by the speech people.
+
+111
+00:10:37,923 --> 00:10:40,467
+Speaker SPEAKER_01: where there's an old database called Timit.
+
+112
+00:10:41,210 --> 00:10:47,581
+Speaker SPEAKER_01: It's got a very well-defined task for phone recognition where what you have to do is you're given a short window of speech.
+
+113
+00:10:48,202 --> 00:10:55,037
+Speaker SPEAKER_01: You have to predict the distribution, the probability for the central frame of the various different phones.
+
+114
+00:10:55,017 --> 00:10:59,464
+Speaker SPEAKER_01: Actually, each phone is modeled by a three-state HMM sort of beginning, middle, and end.
+
+115
+00:11:00,085 --> 00:11:05,674
+Speaker SPEAKER_01: So you have to predict for each frame, is it the beginning, middle, or end of each of the possible phones?
+
+116
+00:11:06,115 --> 00:11:07,498
+Speaker SPEAKER_01: There's 183 of those things.
+
+117
+00:11:08,158 --> 00:11:16,873
+Speaker SPEAKER_01: If you give it a good distribution there that sort of focuses on the right thing, then all the post-processing will give you back
+
+118
+00:11:17,157 --> 00:11:20,363
+Speaker SPEAKER_01: where the phoneme boundary should be and what your phone error rate is.
+
+119
+00:11:20,703 --> 00:11:21,664
+Speaker SPEAKER_01: And that's all very standard.
+
+120
+00:11:22,225 --> 00:11:23,528
+Speaker SPEAKER_01: Some people use tri-phone models.
+
+121
+00:11:24,850 --> 00:11:26,975
+Speaker SPEAKER_01: We're using bi-phone models which isn't quite as powerful.
+
+122
+00:11:29,219 --> 00:11:33,466
+Speaker SPEAKER_01: So now we can test how good we are at taking 11 frames of speech.
+
+123
+00:11:34,187 --> 00:11:40,600
+Speaker SPEAKER_01: It's 10 milliseconds per frame but each frame is looking at like 25 milliseconds of speech and predicting the phone at the middle frame.
+
+124
+00:11:42,115 --> 00:11:45,567
+Speaker SPEAKER_01: we use the standard speech representation which is Mel-Capsule coefficients.
+
+125
+00:11:46,049 --> 00:11:48,659
+Speaker SPEAKER_01: There's 13 of those and then their differences and differences and differences.
+
+126
+00:11:50,245 --> 00:11:52,615
+Speaker SPEAKER_01: And we feed them into one of these deep nets.
+
+127
+00:11:54,350 --> 00:11:59,638
+Speaker SPEAKER_01: So, here's your input, 11 frames of 39 coefficients.
+
+128
+00:11:59,658 --> 00:12:04,245
+Speaker SPEAKER_01: And then, I was away when the student did this and he actually believed what I said.
+
+129
+00:12:04,304 --> 00:12:06,548
+Speaker SPEAKER_01: So he thought adding lots and lots of hidden layers was a good idea.
+
+130
+00:12:06,769 --> 00:12:07,529
+Speaker SPEAKER_01: I'd have stopped at two.
+
+131
+00:12:07,890 --> 00:12:11,154
+Speaker SPEAKER_01: But he added lots of hidden layers, all unsupervised.
+
+132
+00:12:11,615 --> 00:12:16,583
+Speaker SPEAKER_01: So all these green connections are learned without any use of the labels.
+
+133
+00:12:18,426 --> 00:12:22,753
+Speaker SPEAKER_01: He used a bottleneck there, so the number of red connections would be relatively small.
+
+134
+00:12:24,657 --> 00:12:28,068
+Speaker SPEAKER_01: These have to be learned using discriminative information.
+
+135
+00:12:28,976 --> 00:12:41,349
+Speaker SPEAKER_01: And now you back propagate the correct answers through this whole net for about a day on a GPU board or a month on a core and it does very well.
+
+136
+00:12:41,769 --> 00:12:55,744
+Speaker SPEAKER_01: That is the best phone error rate you got was 23 percent but the important thing is whatever configuration you used, however many hidden layers as long as there were plenty and whatever width and whether you use this bottleneck or not, it gets between 23 and 24 percent.
+
+137
+00:12:55,724 --> 00:12:59,932
+Speaker SPEAKER_01: So, it's very robust to the exact details of how many layers and how wide they are.
+
+138
+00:13:00,673 --> 00:13:08,687
+Speaker SPEAKER_01: And the best previous result on Timit for things that didn't use speaker adaptation was 24.4 percent and that was averaging together lots of models.
+
+139
+00:13:09,870 --> 00:13:17,445
+Speaker SPEAKER_03: So, this is good.
+
+140
+00:13:17,898 --> 00:13:22,744
+Speaker SPEAKER_01: So, we're only training one, two, three, one, two, three.
+
+141
+00:13:23,205 --> 00:13:25,168
+Speaker SPEAKER_01: We're training, you know, about 20 million weights.
+
+142
+00:13:26,089 --> 00:13:33,798
+Speaker SPEAKER_01: Twenty million weights is about two percent of a cubic millimeter of cortex.
+
+143
+00:13:35,020 --> 00:13:35,341
+Speaker SPEAKER_01: Okay.
+
+144
+00:13:35,380 --> 00:13:36,643
+Speaker SPEAKER_01: So, this is a tiny brain.
+
+145
+00:13:36,964 --> 00:13:38,826
+Speaker SPEAKER_01: Well, that's probably all you need for phoneme recognition.
+
+146
+00:13:40,730 --> 00:13:48,989
+Speaker SPEAKER_02: with the differences and double differences of the MFCCs if you're going into a thing that could learn to do that itself if it wanted to?
+
+147
+00:13:49,009 --> 00:13:51,333
+Speaker SPEAKER_01: That's a very good question and could you ask that again at the end?
+
+148
+00:13:51,816 --> 00:13:58,991
+Speaker SPEAKER_01: It's an extremely good question because the reason they put the differences and double differences is so they can model the data with a diagonal covariance
+
+149
+00:13:58,971 --> 00:14:01,075
+Speaker SPEAKER_01: matrix, diagonal covariance model.
+
+150
+00:14:01,956 --> 00:14:12,409
+Speaker SPEAKER_01: And you can't model the fact that over time, two things tend to be very much the same without modeling covariances unless you actually put the differences into the data and you model the differences directly.
+
+151
+00:14:12,711 --> 00:14:15,354
+Speaker SPEAKER_01: So it allows you to use a model that can't cope with covariances.
+
+152
+00:14:16,315 --> 00:14:27,190
+Speaker SPEAKER_01: Later on, we're going to show you a model that can cope with covariances and then we're going to do what Dick Lyons always said you should do, which is throw away the malcapital representation and use a better representation of speech.
+
+153
+00:14:28,384 --> 00:14:28,705
+Speaker SPEAKER_01: Yeah.
+
+154
+00:14:28,985 --> 00:14:30,167
+Speaker SPEAKER_01: You said that to me last time I visited.
+
+155
+00:14:34,953 --> 00:14:35,173
+Speaker SPEAKER_01: Smart guy.
+
+156
+00:14:35,193 --> 00:14:35,333
+Speaker SPEAKER_01: Okay.
+
+157
+00:14:36,235 --> 00:14:38,658
+Speaker SPEAKER_01: So, the new idea is to use a better kind of module.
+
+158
+00:14:39,320 --> 00:14:41,001
+Speaker SPEAKER_01: This module already works pretty well, right?
+
+159
+00:14:41,602 --> 00:14:43,125
+Speaker SPEAKER_01: You know, it does well at phoneme recognition.
+
+160
+00:14:43,144 --> 00:14:44,125
+Speaker SPEAKER_01: It does well at lots of other things.
+
+161
+00:14:45,148 --> 00:14:47,431
+Speaker SPEAKER_01: It can't model multiplicative interactions very well.
+
+162
+00:14:48,032 --> 00:14:53,298
+Speaker SPEAKER_01: It can model anything with enough training data, but it's not happy modeling multipliers.
+
+163
+00:14:53,339 --> 00:14:56,383
+Speaker SPEAKER_01: And multipliers are all over the place.
+
+164
+00:14:57,932 --> 00:15:00,034
+Speaker SPEAKER_01: I'll show you a bunch of places where you need multiplies.
+
+165
+00:15:03,418 --> 00:15:05,822
+Speaker SPEAKER_01: Here's the sort of main example of why you need multiplies.
+
+166
+00:15:06,602 --> 00:15:15,873
+Speaker SPEAKER_01: Suppose I want to, from a high level description of an object, the name of the shape and its pose, its size, position, orientation.
+
+167
+00:15:16,212 --> 00:15:21,139
+Speaker SPEAKER_01: Suppose I want to generate the parts of an object and I want them to be related correctly to each other.
+
+168
+00:15:22,789 --> 00:15:30,639
+Speaker SPEAKER_01: I could use very accurate top-down model that says, knowing the square, knowing these post-parameters, I generate each piece in exactly the right position.
+
+169
+00:15:31,061 --> 00:15:32,302
+Speaker SPEAKER_01: That would require high bandwidth.
+
+170
+00:15:33,163 --> 00:15:39,250
+Speaker SPEAKER_01: Or I could be sloppy and I could say, I'm going to generate this side and that sort of is a representation of a distribution of where this side might be.
+
+171
+00:15:40,131 --> 00:15:43,416
+Speaker SPEAKER_01: And I'll generate corners and other sides and they're all a bit sloppy.
+
+172
+00:15:43,817 --> 00:15:47,480
+Speaker SPEAKER_01: And if I picked one thing from each distribution, it wouldn't make a nice square.
+
+173
+00:15:48,523 --> 00:15:52,628
+Speaker SPEAKER_01: But I could also top-down specify how these things should be pieced together.
+
+174
+00:15:53,366 --> 00:15:56,714
+Speaker SPEAKER_01: In effect, I can specify a Markov random field that says what goes with what.
+
+175
+00:15:57,515 --> 00:16:02,567
+Speaker SPEAKER_01: And then I can clean this up knowing these distributions and pick a square like that.
+
+176
+00:16:03,168 --> 00:16:11,004
+Speaker SPEAKER_01: Of course, I might sometimes pick a square that's a slightly different orientation or a slightly different size, but it'll be a nice clean square because I know how things go together.
+
+177
+00:16:11,726 --> 00:16:16,134
+Speaker SPEAKER_01: And so that's a much more powerful kind of generative model and that's what we want to learn to do.
+
+178
+00:16:16,897 --> 00:16:26,095
+Speaker SPEAKER_01: And so we're going to need hidden units up here to specify interactions between visible units here as opposed to just specifying input to visible units.
+
+179
+00:16:28,259 --> 00:16:34,730
+Speaker SPEAKER_01: There's an analogy for this which is if I'm an officer and there's a bunch of soldiers and I want them to stand in a square,
+
+180
+00:16:34,929 --> 00:16:40,422
+Speaker SPEAKER_01: I could get out my GPS and I could say, soldier number one, stand at these GPS coordinates.
+
+181
+00:16:40,501 --> 00:16:42,787
+Speaker SPEAKER_01: And soldier number two, stand at these GPS coordinates.
+
+182
+00:16:43,347 --> 00:16:45,874
+Speaker SPEAKER_01: And if I use enough digits, I'll get a nice neat rectangle.
+
+183
+00:16:46,775 --> 00:16:48,840
+Speaker SPEAKER_01: Or I could say, soldier number one, stand roughly around here.
+
+184
+00:16:48,879 --> 00:16:55,234
+Speaker SPEAKER_01: And then soldier number two, hold your arm out and stand this distance from soldier number one.
+
+185
+00:16:55,990 --> 00:16:58,215
+Speaker SPEAKER_01: and that's a much better way to get a neat rectangle.
+
+186
+00:16:58,335 --> 00:16:59,898
+Speaker SPEAKER_01: It requires far less communication.
+
+187
+00:17:00,359 --> 00:17:05,470
+Speaker SPEAKER_01: So what you're doing is you're downloading roughly where people should stand and then how they should relate to each other.
+
+188
+00:17:06,050 --> 00:17:08,777
+Speaker SPEAKER_01: But you have to specify the relations not just where they should be.
+
+189
+00:17:10,380 --> 00:17:13,846
+Speaker SPEAKER_01: And that's what we'd like in a powerful hierarchical generative model.
+
+190
+00:17:17,928 --> 00:17:27,400
+Speaker SPEAKER_01: So, we're going to aim to get units in one layer to say how units in the layer below should laterally interact when you're generating.
+
+191
+00:17:29,462 --> 00:17:34,269
+Speaker SPEAKER_01: It's going to turn out, you don't need to worry about those lateral interactions when you're recognizing, when you're generating, you do.
+
+192
+00:17:36,833 --> 00:17:41,538
+Speaker SPEAKER_01: To do that, we're going to need things called third order Boltzmann machines which have three-way interactions.
+
+193
+00:17:44,319 --> 00:17:52,752
+Speaker SPEAKER_01: So, Terry Sinofsky pointed out a long time ago that we have an energy function like this where this was V and this was H, but these are just binary variables.
+
+194
+00:17:53,634 --> 00:17:57,901
+Speaker SPEAKER_01: And we could probably write down an energy function like this where three things interact and we have a three-way weight.
+
+195
+00:17:58,961 --> 00:18:03,808
+Speaker SPEAKER_01: And if you think about these three things now, K, the state of K is acting like a switch.
+
+196
+00:18:04,009 --> 00:18:10,159
+Speaker SPEAKER_01: When K is on, you effectively have this weight between I and J. When K is off, this weight disappears.
+
+197
+00:18:11,944 --> 00:18:14,127
+Speaker SPEAKER_01: and it happens every which way because it's symmetric.
+
+198
+00:18:15,390 --> 00:18:21,018
+Speaker SPEAKER_01: So using an energy function like this, we can allow one thing to specify how two other things should interact.
+
+199
+00:18:22,519 --> 00:18:26,145
+Speaker SPEAKER_01: So each hidden unit can specify a whole Markov random field over the pixels if you want.
+
+200
+00:18:27,146 --> 00:18:30,612
+Speaker SPEAKER_01: But that sort of begins to make you worry because a Markov random field has a lot of parameters in it.
+
+201
+00:18:31,472 --> 00:18:39,505
+Speaker SPEAKER_01: And if you start counting indices here, if you have N of these and N of those and N of those, you get N cubed of these parameters, which is rather a lot.
+
+202
+00:18:42,421 --> 00:18:46,106
+Speaker SPEAKER_01: If you were willing to use NQ parameters, you can now make networks that look like this.
+
+203
+00:18:46,607 --> 00:18:50,535
+Speaker SPEAKER_01: Suppose I have two images and I want to model how images transform over time.
+
+204
+00:18:51,777 --> 00:18:54,281
+Speaker SPEAKER_01: And let's suppose I'm just moving random dots around.
+
+205
+00:18:54,301 --> 00:18:57,247
+Speaker SPEAKER_01: I have a pattern of random dots and I translate it.
+
+206
+00:18:57,267 --> 00:19:03,196
+Speaker SPEAKER_01: Well, if I see that dot and I see that dot, that's some evidence for a particular translation.
+
+207
+00:19:04,290 --> 00:19:13,240
+Speaker SPEAKER_01: And so if I put a big positive weight there, this triangle is meant to represent that big three-way weight, then when this and this are on, they'll say it's very good to have this guy on.
+
+208
+00:19:13,881 --> 00:19:15,623
+Speaker SPEAKER_01: That'll be a nice low energy state.
+
+209
+00:19:15,643 --> 00:19:20,807
+Speaker SPEAKER_01: If I also see this pair of dots, I'll get more votes that this guy should be on and I'll turn this guy on.
+
+210
+00:19:22,650 --> 00:19:27,915
+Speaker SPEAKER_01: If however this pixel went to here, I'll vote for this guy and if this pixel also went to there, I'll vote for this guy.
+
+211
+00:19:27,935 --> 00:19:32,019
+Speaker SPEAKER_01: So these guys are going to represent coherent translations of the image.
+
+212
+00:19:32,624 --> 00:19:40,294
+Speaker SPEAKER_01: and it's going to be able to use these three-way weights to take two images and extract hidden units that represent the coherent translation.
+
+213
+00:19:40,755 --> 00:19:46,722
+Speaker SPEAKER_01: It'll also be able to take the pre-image and the translation and compute which pixels should be on here.
+
+214
+00:19:51,269 --> 00:19:53,551
+Speaker SPEAKER_01: Now, what we're going to do is take that basic model
+
+215
+00:19:53,818 --> 00:19:54,861
+Speaker SPEAKER_01: and we're going to factorize it.
+
+216
+00:19:54,921 --> 00:19:58,827
+Speaker SPEAKER_01: We're going to say, I've got these three-way weights and I've got too many of them.
+
+217
+00:19:59,368 --> 00:20:05,079
+Speaker SPEAKER_01: So I'm going to represent each three-way weight as the product of three two-way things.
+
+218
+00:20:06,903 --> 00:20:12,232
+Speaker SPEAKER_01: I'm going to introduce these factors and each factor is going to have these
+
+219
+00:20:13,106 --> 00:20:20,182
+Speaker SPEAKER_01: these many parameters which is just per factor, it's just a linear number of parameters.
+
+220
+00:20:20,803 --> 00:20:25,712
+Speaker SPEAKER_01: If I have about N factors, I end up with only N squared of these weights.
+
+221
+00:20:27,215 --> 00:20:31,625
+Speaker SPEAKER_01: And if you think about how pixels transform in an image, they don't do random permutations.
+
+222
+00:20:31,726 --> 00:20:33,849
+Speaker SPEAKER_01: It's not that this pixel goes there and that one goes here.
+
+223
+00:20:34,673 --> 00:20:36,255
+Speaker SPEAKER_01: pixels do sort of consistent things.
+
+224
+00:20:36,454 --> 00:20:43,201
+Speaker SPEAKER_01: So I don't really need NQ parameters because I'm just trying to model these fairly consistent transformations which is a limited number.
+
+225
+00:20:43,541 --> 00:20:45,242
+Speaker SPEAKER_01: And I should be able to do it with many less parameters.
+
+226
+00:20:45,884 --> 00:20:46,904
+Speaker SPEAKER_01: And this is a way to do that.
+
+227
+00:20:47,986 --> 00:20:51,930
+Speaker SPEAKER_01: So that's going to be our new energy function, leaving out the bias terms.
+
+228
+00:20:56,954 --> 00:21:02,200
+Speaker SPEAKER_01: One way of thinking about how I'm modeling a weight is I want this tensor of three-way
+
+229
+00:21:03,849 --> 00:21:08,134
+Speaker SPEAKER_01: If I take an outer product of two vectors like this, I'll get a matrix that has rank one.
+
+230
+00:21:08,756 --> 00:21:12,000
+Speaker SPEAKER_01: If I take a three-way outer product, I'll get a tensor that has rank one.
+
+231
+00:21:13,342 --> 00:21:19,569
+Speaker SPEAKER_01: And if I now add up a bunch of tensors like that, so each factor now, each F, specifies a rank one tensor.
+
+232
+00:21:19,829 --> 00:21:24,435
+Speaker SPEAKER_01: By adding up a bunch of them, I can model any tensor I like if I use N squared factors.
+
+233
+00:21:24,776 --> 00:21:31,765
+Speaker SPEAKER_01: If I use only N factors, I can model nice regular tensors but I can't model arbitrary permutations and that's what we want.
+
+234
+00:21:36,013 --> 00:21:37,696
+Speaker SPEAKER_01: If you ask, how does inference work now?
+
+235
+00:21:38,077 --> 00:21:39,941
+Speaker SPEAKER_01: Inference is still very simple in this model.
+
+236
+00:21:40,622 --> 00:21:41,463
+Speaker SPEAKER_01: So here's a factor.
+
+237
+00:21:42,786 --> 00:21:45,431
+Speaker SPEAKER_01: Here's the weights connecting it to, say, the pre-image.
+
+238
+00:21:45,451 --> 00:21:47,273
+Speaker SPEAKER_01: Here's the weights connecting it to the post-image.
+
+239
+00:21:47,974 --> 00:21:49,858
+Speaker SPEAKER_01: Here's the weights connecting it to the hidden units.
+
+240
+00:21:51,240 --> 00:21:52,943
+Speaker SPEAKER_01: And to do inference, what I do is this.
+
+241
+00:21:53,826 --> 00:21:55,167
+Speaker SPEAKER_01: Suppose I only had that one factor.
+
+242
+00:21:56,269 --> 00:21:59,035
+Speaker SPEAKER_01: I would multiply the pixels by these weights
+
+243
+00:21:59,707 --> 00:22:03,272
+Speaker SPEAKER_01: add all that up, so I get a sum at this vertex.
+
+244
+00:22:03,733 --> 00:22:06,057
+Speaker SPEAKER_01: I do the same here, I get a sum at this vertex.
+
+245
+00:22:06,077 --> 00:22:10,224
+Speaker SPEAKER_01: Then I multiply these two sums together to get a message that I'm going to send to the hidden units.
+
+246
+00:22:10,925 --> 00:22:15,133
+Speaker SPEAKER_01: And as that message goes to the hidden unit, I multiply it by the weight on that connection.
+
+247
+00:22:15,721 --> 00:22:26,994
+Speaker SPEAKER_01: And so what the hidden unit will see is this weight times the product of these two sums and that is the derivative of the energy with respect to the state of this hidden unit, which is what it needs to know to decide whether to be on or off.
+
+248
+00:22:27,816 --> 00:22:30,358
+Speaker SPEAKER_01: It wants to go into whatever state will lower the energy.
+
+249
+00:22:30,378 --> 00:22:34,203
+Speaker SPEAKER_01: And all the hidden units remain independent even though I've got these multipliers now.
+
+250
+00:22:35,526 --> 00:22:38,670
+Speaker SPEAKER_01: So this is much better than putting in another stochastic binary unit here.
+
+251
+00:22:39,191 --> 00:22:44,277
+Speaker SPEAKER_01: If I put a stochastic binary unit in here, the hidden units will cease to be independent and inference will get tough.
+
+252
+00:22:44,813 --> 00:22:49,559
+Speaker SPEAKER_01: But this way, with a deterministic factor that's taking a product of these two sums, inference remains easy.
+
+253
+00:22:53,164 --> 00:22:54,567
+Speaker SPEAKER_01: The learning also remains easy.
+
+254
+00:22:55,848 --> 00:23:08,086
+Speaker SPEAKER_01: So this is the message that goes from factor F to hidden unit H. And that message is the product that we got at those two lower vertices, the product of the sums that you compute on the pre-image and the post-image.
+
+255
+00:23:09,265 --> 00:23:27,949
+Speaker SPEAKER_01: And the way you learn the weight on the connection from factor F to hidden unit H is by changing the weight so as to lower the energy when you're looking at data and raise the energy when you're constructing things from the model or just reconstructing things from the hidden units you got from data.
+
+256
+00:23:28,942 --> 00:23:31,105
+Speaker SPEAKER_01: And those energy derivatives just look like this.
+
+257
+00:23:31,164 --> 00:23:36,391
+Speaker SPEAKER_01: They're just the product of the state of the hidden unit and the message that goes to it when you're looking at data.
+
+258
+00:23:36,810 --> 00:23:41,175
+Speaker SPEAKER_01: And the state of the hidden unit and the message that goes to it when you're looking at samples from the model or reconstructions.
+
+259
+00:23:42,076 --> 00:23:43,699
+Speaker SPEAKER_01: So, it's still a nice pairwise learning rule.
+
+260
+00:23:44,119 --> 00:23:45,582
+Speaker SPEAKER_01: So, everything is pairwise still.
+
+261
+00:23:49,046 --> 00:23:50,227
+Speaker SPEAKER_01: So, you might fit it in your brain.
+
+262
+00:23:52,509 --> 00:23:58,797
+Speaker SPEAKER_01: Now, if we look at what one of these factors does when I show random dot patterns that
+
+263
+00:23:59,417 --> 00:24:03,122
+Speaker SPEAKER_01: then we can look at the weights connecting it to the pre-image.
+
+264
+00:24:04,123 --> 00:24:07,807
+Speaker SPEAKER_01: And that's a pattern of weights where white is a big positive weight, black is a big negative weight.
+
+265
+00:24:08,548 --> 00:24:10,931
+Speaker SPEAKER_01: So that would have learned a grating connecting it to the pre-image.
+
+266
+00:24:11,550 --> 00:24:13,753
+Speaker SPEAKER_01: And this will have learned a grating connecting it to the post-image.
+
+267
+00:24:14,413 --> 00:24:16,876
+Speaker SPEAKER_01: And with a hundred factors, I'll show you what Roland learned.
+
+268
+00:24:20,820 --> 00:24:23,644
+Speaker SPEAKER_01: So those are the hundred factors connecting.
+
+269
+00:24:25,365 --> 00:24:27,888
+Speaker SPEAKER_01: These are the receptive fields of the factors in the pre-image.
+
+270
+00:24:29,269 --> 00:24:30,912
+Speaker SPEAKER_01: And remember, it's looking at translating dots.
+
+271
+00:24:32,212 --> 00:24:34,875
+Speaker SPEAKER_01: And these are the factors in the post image.
+
+272
+00:24:36,238 --> 00:24:40,522
+Speaker SPEAKER_01: And you see, it's basically learned the Fourier basis and it's learned to translate things by about 90 degrees.
+
+273
+00:24:41,584 --> 00:24:43,226
+Speaker SPEAKER_01: And that's a very good way of handling translation.
+
+274
+00:24:44,366 --> 00:24:48,971
+Speaker SPEAKER_01: Mathematicians say things like, the Fourier basis is the natural basis for modeling translation.
+
+275
+00:24:49,813 --> 00:24:52,896
+Speaker SPEAKER_01: I don't really know what that means but this learned the Fourier basis so I'm happy.
+
+276
+00:24:55,400 --> 00:24:57,521
+Speaker SPEAKER_01: If you give it rotations, it'll learn a different basis.
+
+277
+00:24:58,700 --> 00:25:00,382
+Speaker SPEAKER_01: So this is the basis it learns for rotations.
+
+278
+00:25:02,065 --> 00:25:03,767
+Speaker SPEAKER_01: You see it learns about yin and yang here.
+
+279
+00:25:05,970 --> 00:25:07,471
+Speaker SPEAKER_01: Oops.
+
+280
+00:25:07,491 --> 00:25:10,675
+Speaker SPEAKER_01: Okay.
+
+281
+00:25:10,695 --> 00:25:11,798
+Speaker SPEAKER_01: That's the basis for rotations.
+
+282
+00:25:15,682 --> 00:25:24,555
+Speaker SPEAKER_01: One other thing you could do is train it just on single dot patterns that are translating in a coherent way and then test it
+
+283
+00:25:24,721 --> 00:25:28,776
+Speaker SPEAKER_01: on two overlaid dot patterns that are translating different directions.
+
+284
+00:25:29,357 --> 00:25:30,422
+Speaker SPEAKER_01: It's never seen that before.
+
+285
+00:25:30,442 --> 00:25:36,282
+Speaker SPEAKER_01: It's only been trained on coherent motion, but we're going to test it on what's called transparent motion.
+
+286
+00:25:37,646 --> 00:25:41,192
+Speaker SPEAKER_01: In order to see what it thinks, remember we're training unsupervised.
+
+287
+00:25:41,212 --> 00:25:42,174
+Speaker SPEAKER_01: There's no labels anywhere.
+
+288
+00:25:42,255 --> 00:25:43,557
+Speaker SPEAKER_01: We never tell it what the motions are.
+
+289
+00:25:44,078 --> 00:25:45,601
+Speaker SPEAKER_01: We need some way of seeing what it's thinking.
+
+290
+00:25:46,282 --> 00:25:52,252
+Speaker SPEAKER_01: So we add a second hidden layer that looks at the hidden units representing transformations and it's fairly sparse.
+
+291
+00:25:52,894 --> 00:25:57,563
+Speaker SPEAKER_01: So the units in that second hidden layer will be tuned to particular directions of motion.
+
+292
+00:25:57,796 --> 00:26:07,287
+Speaker SPEAKER_01: And then to see what it's thinking, we take the directions those units like, weighted by how active those units are, and that'll tell you what direction it thinks it's seeing.
+
+293
+00:26:08,387 --> 00:26:19,020
+Speaker SPEAKER_01: Now, when you show it transparent motion and you look at those units in the second hidden layer, if the two motions are within about 30 degrees, it sees a single motion at the average direction.
+
+294
+00:26:19,701 --> 00:26:24,326
+Speaker SPEAKER_01: If they're beyond about 30 degrees, it sees two different motions and what's more, they're repelled from each other.
+
+295
+00:26:24,863 --> 00:26:28,807
+Speaker SPEAKER_01: That's exactly what happens with people and so this is exactly how the brain works.
+
+296
+00:26:32,513 --> 00:26:32,673
+Speaker SPEAKER_01: Okay.
+
+297
+00:26:35,096 --> 00:26:39,824
+Speaker SPEAKER_01: There's going to be a lot of that kind of reasoning in this talk.
+
+298
+00:26:39,844 --> 00:26:41,486
+Speaker SPEAKER_01: I'm going to go on to time series models now.
+
+299
+00:26:42,507 --> 00:26:46,252
+Speaker SPEAKER_01: So we'd like to model not just static images, for example.
+
+300
+00:26:46,272 --> 00:26:47,173
+Speaker SPEAKER_01: We'd like to model video.
+
+301
+00:26:47,574 --> 00:26:49,257
+Speaker SPEAKER_01: To begin with, we're going to try something a bit simpler.
+
+302
+00:26:51,460 --> 00:26:53,082
+Speaker SPEAKER_01: When people do time series models,
+
+303
+00:26:54,174 --> 00:26:59,028
+Speaker SPEAKER_01: you would nearly always like to have a distributed non-linear representation, but that's hard to learn.
+
+304
+00:26:59,971 --> 00:27:09,298
+Speaker SPEAKER_01: So people tend to do dumb things like hidden Markov models or linear dynamical systems which either give up on the distributed or on the
+
+305
+00:27:09,463 --> 00:27:12,169
+Speaker SPEAKER_01: non-linear but are easy to do inference.
+
+306
+00:27:13,010 --> 00:27:21,386
+Speaker SPEAKER_01: What we're going to come up with is something that has the distributed and the non-linear and is easy to do inference but the learning algorithm isn't quite right but it's good enough.
+
+307
+00:27:21,727 --> 00:27:23,490
+Speaker SPEAKER_01: It's just an approximation to maximum likelihood.
+
+308
+00:27:24,192 --> 00:27:27,979
+Speaker SPEAKER_01: And the inference also is ignoring the future and just basing things on the past.
+
+309
+00:27:32,616 --> 00:27:36,962
+Speaker SPEAKER_01: So here's a basic module, and this is with just two-way interactions.
+
+310
+00:27:37,865 --> 00:27:41,048
+Speaker SPEAKER_01: This is the restricted bolts machine with visible units and hidden units.
+
+311
+00:27:42,090 --> 00:27:45,455
+Speaker SPEAKER_01: Here are the previous visible frames.
+
+312
+00:27:46,376 --> 00:27:47,838
+Speaker SPEAKER_01: These are all going to be linear units.
+
+313
+00:27:48,779 --> 00:27:56,912
+Speaker SPEAKER_01: And so these blue connections are conditioning the current visible values on previous observed values in a linear way.
+
+314
+00:27:57,353 --> 00:27:58,994
+Speaker SPEAKER_01: So that's called an autoregressive model.
+
+315
+00:28:01,304 --> 00:28:03,727
+Speaker SPEAKER_01: The hidden units here are going to be binary hidden units.
+
+316
+00:28:04,027 --> 00:28:06,069
+Speaker SPEAKER_01: They're also conditioned on the previous visible frames.
+
+317
+00:28:07,451 --> 00:28:09,133
+Speaker SPEAKER_01: And learning is easy in this model.
+
+318
+00:28:09,713 --> 00:28:18,423
+Speaker SPEAKER_01: What you do is you take your observed data and then given the current visible frame and given the previous visible frames, you get input to the hidden units.
+
+319
+00:28:18,765 --> 00:28:24,431
+Speaker SPEAKER_01: They're all independent given the data so you can separately decide what states they should be in.
+
+320
+00:28:25,152 --> 00:28:28,476
+Speaker SPEAKER_01: Once you fix states for them, you now reconstruct
+
+321
+00:28:28,642 --> 00:28:35,950
+Speaker SPEAKER_01: the current frame using the input you're getting from previous frames and using the top down input you're getting from the hidden units.
+
+322
+00:28:35,970 --> 00:28:44,078
+Speaker SPEAKER_01: After reconstructing, you then activate the hidden units again and you take the difference in the pairwise statistics with data here and with reconstructions here to learn these weights.
+
+323
+00:28:44,778 --> 00:28:52,587
+Speaker SPEAKER_01: And you take the difference on activities of these guys with data and with reconstructions to get a signal that you can use to learn these weights or these weights.
+
+324
+00:28:53,608 --> 00:28:57,432
+Speaker SPEAKER_01: So, learning is straightforward and it just depends on differences.
+
+325
+00:28:58,897 --> 00:29:00,078
+Speaker SPEAKER_01: and you can learn a model like this.
+
+326
+00:29:00,278 --> 00:29:09,287
+Speaker SPEAKER_01: After you've learned it, you can generate from the model by taking some previous frames.
+
+327
+00:29:11,048 --> 00:29:17,433
+Speaker SPEAKER_01: These inputs, the conditioning inputs, in effect, fix the biases of these to depend on the previous frames.
+
+328
+00:29:17,473 --> 00:29:18,815
+Speaker SPEAKER_01: So it's sort of dynamic biases.
+
+329
+00:29:19,375 --> 00:29:27,082
+Speaker SPEAKER_01: And then with these biases fixed, you just go backwards and forwards for a while and then pick a frame there and that's your next frame you generated.
+
+330
+00:29:27,122 --> 00:29:28,482
+Speaker SPEAKER_01: Then you keep going.
+
+331
+00:29:28,817 --> 00:29:31,724
+Speaker SPEAKER_01: So we can generate from the model once it's learned so we can see what it believes.
+
+332
+00:29:37,380 --> 00:29:37,621
+Speaker SPEAKER_01: Sorry?
+
+333
+00:29:38,021 --> 00:29:42,512
+Speaker SPEAKER_00: No, we're going to go back more steps in time.
+
+334
+00:29:43,455 --> 00:29:45,560
+Speaker SPEAKER_01: I just got lazy with the PowerPoint.
+
+335
+00:29:50,991 --> 00:29:54,176
+Speaker SPEAKER_01: Now, one direction we could go from here is to do higher level models.
+
+336
+00:29:54,758 --> 00:30:03,393
+Speaker SPEAKER_01: That is having learned this model where these hidden units are all independent given the data, we could say, well, what I've done is I've turned visible frames into hidden frames now.
+
+337
+00:30:04,394 --> 00:30:12,949
+Speaker SPEAKER_01: And it turns out you can get a better model if you take these hidden frames and model what's going on here and now you put in conditioning connections between the hidden frames
+
+338
+00:30:13,215 --> 00:30:18,468
+Speaker SPEAKER_01: and more hidden units that don't have conditioning connection, that don't interact with other hidden units and you learn this model.
+
+339
+00:30:19,048 --> 00:30:27,406
+Speaker SPEAKER_01: And you can prove that if you do this right, then you'll get a better model of the original sequences or you'll improve a bound on the model of the original sequences.
+
+340
+00:30:28,229 --> 00:30:29,412
+Speaker SPEAKER_01: So you can learn lots of layers like that.
+
+341
+00:30:29,612 --> 00:30:31,236
+Speaker SPEAKER_01: And when you have more layers, it generates better.
+
+342
+00:30:31,717 --> 00:30:33,299
+Speaker SPEAKER_01: But I'm going to go in a different direction
+
+343
+00:30:36,367 --> 00:30:39,111
+Speaker SPEAKER_01: I'm going to show you how to do it with three-way connections.
+
+344
+00:30:39,771 --> 00:30:42,536
+Speaker SPEAKER_01: And we're going to apply it to motion capture data.
+
+345
+00:30:42,556 --> 00:30:44,617
+Speaker SPEAKER_01: So you put reflective markers on the joints.
+
+346
+00:30:44,637 --> 00:30:46,019
+Speaker SPEAKER_01: You have lots of infrared cameras.
+
+347
+00:30:46,059 --> 00:30:47,481
+Speaker SPEAKER_01: You figure out where the joints are in space.
+
+348
+00:30:48,002 --> 00:30:50,987
+Speaker SPEAKER_01: You know the shape of the body, so you go backwards through that to figure out the joint angles.
+
+349
+00:30:51,788 --> 00:31:01,599
+Speaker SPEAKER_01: And then a frame of data is going to consist of 50 numbers, about 50 numbers, which are joint angles and the translations and rotations of the base of the spine.
+
+350
+00:31:03,013 --> 00:31:06,857
+Speaker SPEAKER_01: Okay, so imagine we've got one of those mannequins you see in art shop windows.
+
+351
+00:31:07,337 --> 00:31:14,705
+Speaker SPEAKER_01: We've got a pin stuck in the base of his spine and we can move him around and rotate him using this pin and he can also wiggle his legs and arms.
+
+352
+00:31:15,507 --> 00:31:15,866
+Speaker SPEAKER_01: Okay?
+
+353
+00:31:16,768 --> 00:31:24,015
+Speaker SPEAKER_01: And what we want him to do is as we move him around, we want him to wiggle his legs and arms so his foot appears to be stationary on the ground and he appears to be walking.
+
+354
+00:31:24,675 --> 00:31:29,780
+Speaker SPEAKER_01: And he'd better wiggle his leg just right as we translate his pelvis, otherwise his foot will appear to skid on the ground.
+
+355
+00:31:33,557 --> 00:31:34,558
+Speaker SPEAKER_01: And we're going to model him.
+
+356
+00:31:35,820 --> 00:31:42,371
+Speaker SPEAKER_01: We can do a hierarchical model like I just showed you or we can do a three-way model like this where we condition on six earlier frames.
+
+357
+00:31:43,532 --> 00:31:44,693
+Speaker SPEAKER_01: Here's the current visible frame.
+
+358
+00:31:44,713 --> 00:31:49,101
+Speaker SPEAKER_01: Here's your basic Boltzmann machine except that it's now one of these three-way things where these are factors.
+
+359
+00:31:50,142 --> 00:31:52,065
+Speaker SPEAKER_01: And we have a one of N style variable.
+
+360
+00:31:52,486 --> 00:31:54,788
+Speaker SPEAKER_01: So we have data and we tell it the style when we're training it.
+
+361
+00:31:55,289 --> 00:31:57,472
+Speaker SPEAKER_01: So that's sort of semi-supervised.
+
+362
+00:31:59,056 --> 00:32:03,642
+Speaker SPEAKER_01: it learns to convert that one of N representation into a bunch of real value features.
+
+363
+00:32:04,001 --> 00:32:08,126
+Speaker SPEAKER_01: And then it uses these real value features as one of the inputs to a factor.
+
+364
+00:32:08,928 --> 00:32:21,284
+Speaker SPEAKER_01: And what the factors are really doing is saying, these real value features are modulating the weight matrices that you use for conditioning and also this weight matrix that you use in your thoroughly nonlinear model.
+
+365
+00:32:22,345 --> 00:32:25,088
+Speaker SPEAKER_01: So, these are modulating an autoregressive model.
+
+366
+00:32:25,308 --> 00:32:26,750
+Speaker SPEAKER_01: That's very different from
+
+367
+00:32:27,490 --> 00:32:29,133
+Speaker SPEAKER_01: switching between autoregressive models.
+
+368
+00:32:29,192 --> 00:32:29,954
+Speaker SPEAKER_01: It's much more powerful.
+
+369
+00:32:30,275 --> 00:32:31,798
+Speaker SPEAKER_04: Yeah.
+
+370
+00:32:32,199 --> 00:32:35,806
+Speaker SPEAKER_01: So, we're going to have data of someone walking in various different styles.
+
+371
+00:32:36,125 --> 00:32:39,311
+Speaker SPEAKER_01: A style of walking.
+
+372
+00:32:39,373 --> 00:32:46,967
+Speaker SPEAKER_04: Yeah.
+
+373
+00:32:48,230 --> 00:32:49,011
+Speaker SPEAKER_04: Yes.
+
+374
+00:32:49,112 --> 00:32:51,576
+Speaker SPEAKER_04: Is there anything in the model that cares about that relative?
+
+375
+00:32:51,596 --> 00:32:52,779
+Speaker SPEAKER_01: Yeah, yeah.
+
+376
+00:32:52,799 --> 00:32:56,688
+Speaker SPEAKER_01: The weights on the connections will tell you which frame it's coming from, right?
+
+377
+00:32:56,748 --> 00:32:59,053
+Speaker SPEAKER_01: In the earlier model, there were two blue lines.
+
+378
+00:32:59,313 --> 00:33:03,663
+Speaker SPEAKER_01: They're different matrices and they have different weights on them.
+
+379
+00:33:03,682 --> 00:33:05,226
+Speaker SPEAKER_04: There's nothing from two steps previous to one step previous, right?
+
+380
+00:33:05,246 --> 00:33:05,928
+Speaker SPEAKER_04: It skipped all the way?
+
+381
+00:33:05,948 --> 00:33:06,890
+Speaker SPEAKER_01: It just skipped all the way, right.
+
+382
+00:33:07,210 --> 00:33:08,532
+Speaker SPEAKER_04: It just... And it will continue to happen?
+
+383
+00:33:09,019 --> 00:33:09,319
+Speaker SPEAKER_01: Yes.
+
+384
+00:33:10,261 --> 00:33:17,652
+Speaker SPEAKER_01: In other words, there's direct connections from all six previous frames to the current frame for determining the current frame.
+
+385
+00:33:17,711 --> 00:33:23,199
+Speaker SPEAKER_04: And there weren't links from the sixth frame to the fifth or earlier to the fourth?
+
+386
+00:33:23,219 --> 00:33:26,723
+Speaker SPEAKER_01: Well, there were when you were computing what the fifth frame was, right?
+
+387
+00:33:27,243 --> 00:33:29,948
+Speaker SPEAKER_01: But when we're computing this frame, we have direct connections from it.
+
+388
+00:33:31,462 --> 00:33:31,844
+Speaker SPEAKER_01: Okay.
+
+389
+00:33:32,305 --> 00:33:34,268
+Speaker SPEAKER_01: So we're now going to train this model.
+
+390
+00:33:34,808 --> 00:33:37,773
+Speaker SPEAKER_01: It's relatively easy to train, especially on a GPU board.
+
+391
+00:33:37,794 --> 00:33:40,960
+Speaker SPEAKER_01: And then we're going to generate from it so we can see sort of what it learned.
+
+392
+00:33:42,442 --> 00:33:51,057
+Speaker SPEAKER_01: And we can judge if it's doing well by whether the feet slip on the ground.
+
+393
+00:34:06,461 --> 00:34:15,282
+Speaker SPEAKER_05: We'll get there.
+
+394
+00:34:18,150 --> 00:34:19,353
+Speaker SPEAKER_01: Here's a normal walk.
+
+395
+00:34:22,780 --> 00:34:23,121
+Speaker SPEAKER_01: Maybe.
+
+396
+00:34:23,443 --> 00:34:24,284
+Speaker SPEAKER_01: Vista Willing.
+
+397
+00:34:26,661 --> 00:34:27,443
+Speaker SPEAKER_01: Okay.
+
+398
+00:34:27,463 --> 00:34:28,985
+Speaker SPEAKER_01: So that's generated from the model.
+
+399
+00:34:29,025 --> 00:34:38,298
+Speaker SPEAKER_01: He's deciding which direction to turn in and he's deciding, you know, he needs to make the outside leg go further than the inside leg and so on.
+
+400
+00:34:40,842 --> 00:34:53,579
+Speaker SPEAKER_01: If we, we have one model but if we flip the style label to say, gangly teenager, he definitely looks awkward, right?
+
+401
+00:34:53,599 --> 00:34:55,402
+Speaker SPEAKER_01: We've all been there.
+
+402
+00:34:58,132 --> 00:34:59,934
+Speaker SPEAKER_01: I think this is a computer science student.
+
+403
+00:35:01,077 --> 00:35:07,264
+Speaker SPEAKER_01: My main reason for thinking that is if you ask him to do a graceful walk, it looks like this.
+
+404
+00:35:07,324 --> 00:35:09,987
+Speaker SPEAKER_01: And that's definitely C3PO.
+
+405
+00:35:11,449 --> 00:35:20,260
+Speaker SPEAKER_01: Now, I think this was a student, not an actor, but he's very good.
+
+406
+00:35:21,400 --> 00:35:23,163
+Speaker SPEAKER_01: You can ask him to walk softly like a cat.
+
+407
+00:35:24,724 --> 00:35:26,266
+Speaker SPEAKER_01: We're asking the model at present, right?
+
+408
+00:35:28,541 --> 00:35:30,485
+Speaker SPEAKER_01: And the model looks pretty much like the real data.
+
+409
+00:35:30,505 --> 00:35:32,547
+Speaker SPEAKER_01: The real data, obviously, the feet are planted better.
+
+410
+00:35:33,088 --> 00:35:36,391
+Speaker SPEAKER_01: But notice he can slow down and speed up again.
+
+411
+00:35:37,193 --> 00:35:38,974
+Speaker SPEAKER_01: Autoregressive models can't do things like that.
+
+412
+00:35:39,356 --> 00:35:46,724
+Speaker SPEAKER_01: Autoregressive models have a biggest eigenvalue that's either bigger than one, in which case they explode, or it's smaller than one, in which case they die.
+
+413
+00:35:47,186 --> 00:35:51,492
+Speaker SPEAKER_01: And the way you keep them alive is by keep, you keep injecting random noise so they stay alive.
+
+414
+00:35:51,952 --> 00:35:54,996
+Speaker SPEAKER_01: And that's like making a horse walk by taking a dead horse and jiggling it.
+
+415
+00:35:55,155 --> 00:35:58,059
+Speaker SPEAKER_01: It's kind of, it's not good.
+
+416
+00:36:03,322 --> 00:36:05,485
+Speaker SPEAKER_01: Now, he doesn't have any model of the physics.
+
+417
+00:36:06,085 --> 00:36:09,690
+Speaker SPEAKER_01: So, in order to do these kinds of stumbles, there had to be stumbles similar to that in the data.
+
+418
+00:36:10,570 --> 00:36:14,034
+Speaker SPEAKER_01: But when he stopped and which stumble he did when, he's entirely determining.
+
+419
+00:36:19,121 --> 00:36:21,744
+Speaker SPEAKER_01: We could make him do a sexy walk, but you're probably not interested in that.
+
+420
+00:36:24,648 --> 00:36:25,710
+Speaker SPEAKER_01: You want dinosaur to chicken?
+
+421
+00:36:26,911 --> 00:36:27,932
+Speaker SPEAKER_01: Where's dinosaur to chicken?
+
+422
+00:36:29,715 --> 00:36:31,297
+Speaker SPEAKER_01: Oh, no, that's dinosaur and chicken.
+
+423
+00:36:31,797 --> 00:36:32,838
+Speaker SPEAKER_01: That's a blend.
+
+424
+00:36:39,367 --> 00:36:40,429
+Speaker SPEAKER_01: Well, maybe a switch.
+
+425
+00:36:45,400 --> 00:36:47,543
+Speaker SPEAKER_01: He's got quite a lot of foot scape there so it's probably a blend.
+
+426
+00:36:49,789 --> 00:36:54,157
+Speaker SPEAKER_01: This is doing a sexy walk and then you flip the label to normal and then you flip it back to sexy.
+
+427
+00:36:54,818 --> 00:36:58,927
+Speaker SPEAKER_01: It's never seen any transitions but because it's all one model, it can do reasonable transitions.
+
+428
+00:37:10,331 --> 00:37:12,735
+Speaker SPEAKER_02: variables.
+
+429
+00:37:13,394 --> 00:37:18,159
+Speaker SPEAKER_02: Can you decouple those from the one event style and just make up new styles by playing with those?
+
+430
+00:37:18,179 --> 00:37:19,400
+Speaker SPEAKER_01: Yep.
+
+431
+00:37:19,420 --> 00:37:19,501
+Speaker SPEAKER_01: Yep.
+
+432
+00:37:19,521 --> 00:37:22,063
+Speaker SPEAKER_01: Now, you can also give it many more labels when you train it.
+
+433
+00:37:22,083 --> 00:37:26,268
+Speaker SPEAKER_01: You can give it speed, stride length, all sorts of things and then you can control it very well.
+
+434
+00:37:30,532 --> 00:37:30,632
+Speaker SPEAKER_01: Yeah.
+
+435
+00:37:30,652 --> 00:37:31,594
+Speaker SPEAKER_01: Okay.
+
+436
+00:37:31,614 --> 00:37:34,237
+Speaker SPEAKER_01: So, we can learn time series at least for 50 dimensional data.
+
+437
+00:37:34,797 --> 00:37:37,199
+Speaker SPEAKER_01: And obviously, what we want to do is apply that to video.
+
+438
+00:37:37,822 --> 00:37:41,027
+Speaker SPEAKER_01: but we haven't done that yet except for some very simple cases.
+
+439
+00:37:50,440 --> 00:37:53,565
+Speaker SPEAKER_01: The last thing I'm going to show you is the most complicated use of these three-way models.
+
+440
+00:37:56,110 --> 00:38:04,302
+Speaker SPEAKER_01: One way of thinking of it so that it's similar to the previous uses is that we take an image and we make two copies of it but they have to be the same.
+
+441
+00:38:04,956 --> 00:38:11,304
+Speaker SPEAKER_01: And then we insist the weights that go from a factor to this copy are the same as the weights that go from the factor to this copy.
+
+442
+00:38:11,324 --> 00:38:14,086
+Speaker SPEAKER_01: So if I equals J, WIF equals WJF.
+
+443
+00:38:16,489 --> 00:38:17,630
+Speaker SPEAKER_01: Inference is still easy.
+
+444
+00:38:18,210 --> 00:38:27,920
+Speaker SPEAKER_01: In fact, inference here will consist of, you take these pixels times these weights to get a weighted sum and then you square it because this is going to be the same weighted sum.
+
+445
+00:38:27,940 --> 00:38:34,507
+Speaker SPEAKER_01: So inference consists of taking a linear filter, square its output and send it by these weights to the hidden units.
+
+446
+00:38:35,128 --> 00:38:41,577
+Speaker SPEAKER_01: That's exactly the model called the Oriented Energy Model, if you use the right kind of linear filter.
+
+447
+00:38:42,239 --> 00:38:49,668
+Speaker SPEAKER_01: So it's been proposed both by vision people, by Adelson and Bergen a long time ago in the 80s, and by neuroscientists.
+
+448
+00:38:50,349 --> 00:38:59,001
+Speaker SPEAKER_01: So neuroscientists have tried to take simple cells, I point vaguely at that, and look at what polynomial the output is of their input.
+
+449
+00:38:59,682 --> 00:39:03,128
+Speaker SPEAKER_01: And Yang Dan at Berkeley says it's between 1.7 and 2.3.
+
+450
+00:39:04,018 --> 00:39:06,882
+Speaker SPEAKER_01: and that means two, right.
+
+451
+00:39:09,005 --> 00:39:17,115
+Speaker SPEAKER_01: So, this looks quite like models that were proposed for quite different reasons and it just drops out of taking a three-way energy model and factorizing it.
+
+452
+00:39:18,057 --> 00:39:22,983
+Speaker SPEAKER_01: The advantage we have is that we have a learning algorithm for all these weights now and we have a generative model.
+
+453
+00:39:30,775 --> 00:39:33,418
+Speaker SPEAKER_01: So, now we can model covariances between pixels.
+
+454
+00:39:33,871 --> 00:39:36,824
+Speaker SPEAKER_01: And the reason that's good is, well, here's one reason it's good.
+
+455
+00:39:37,909 --> 00:39:41,164
+Speaker SPEAKER_01: Suppose I ask you to define a vertical edge.
+
+456
+00:39:41,565 --> 00:39:45,110
+Speaker SPEAKER_01: Most people will say, well, a vertical edge is something that's light on this side and dark on that side.
+
+457
+00:39:45,610 --> 00:39:48,152
+Speaker SPEAKER_01: Well, no, maybe it's light on this side and dark on that side, but you know.
+
+458
+00:39:48,594 --> 00:39:51,476
+Speaker SPEAKER_01: Well, it could be light up here and dark down there and dark up here and light down there.
+
+459
+00:39:51,536 --> 00:39:51,817
+Speaker SPEAKER_01: Okay.
+
+460
+00:39:52,177 --> 00:39:53,958
+Speaker SPEAKER_01: Or it could be a texture edge.
+
+461
+00:39:54,579 --> 00:39:55,039
+Speaker SPEAKER_01: It's going to come.
+
+462
+00:39:55,059 --> 00:39:58,003
+Speaker SPEAKER_01: Or it might actually be a disparity edge.
+
+463
+00:39:58,143 --> 00:40:00,565
+Speaker SPEAKER_01: Well, there might actually be motion this side and no motion that side.
+
+464
+00:40:00,585 --> 00:40:01,547
+Speaker SPEAKER_01: That's a vertical edge too.
+
+465
+00:40:02,327 --> 00:40:04,250
+Speaker SPEAKER_01: So vertical edge is a big assortment of things.
+
+466
+00:40:05,030 --> 00:40:11,438
+Speaker SPEAKER_01: And what all those statements have in common is a vertical edge is something where you shouldn't do horizontal interpolation.
+
+467
+00:40:11,873 --> 00:40:14,900
+Speaker SPEAKER_01: Generally, in an image, horizontal interpolation works very well.
+
+468
+00:40:15,440 --> 00:40:20,070
+Speaker SPEAKER_01: A pixel is the average of its right and left neighbors, pretty accurately, almost all the time.
+
+469
+00:40:20,090 --> 00:40:22,956
+Speaker SPEAKER_01: Occasionally, it breaks down and the place it breaks down is where there's a vertical edge.
+
+470
+00:40:23,818 --> 00:40:29,510
+Speaker SPEAKER_01: So, a real abstract definition of a vertical edge is a breakdown of horizontal interpolation.
+
+471
+00:40:30,487 --> 00:40:31,909
+Speaker SPEAKER_01: and that's what our models are going to do.
+
+472
+00:40:31,949 --> 00:40:39,336
+Speaker SPEAKER_01: A hidden unit is going to be putting in interpolation and it's actually going to turn off, so it's sort of reverse logic.
+
+473
+00:40:39,697 --> 00:40:41,539
+Speaker SPEAKER_01: When that breaks down, it's going to turn off.
+
+474
+00:40:42,360 --> 00:40:43,521
+Speaker SPEAKER_01: So one way of seeing it is this.
+
+475
+00:40:45,884 --> 00:40:57,396
+Speaker SPEAKER_01: If this hidden unit here is on, it puts in a weight between pixel I and pixel J that's equal to this weight times this weight times this weight.
+
+476
+00:41:00,039 --> 00:41:00,139
+Unknown Speaker: Okay.
+
+477
+00:41:00,557 --> 00:41:04,190
+Speaker SPEAKER_01: Since these, okay, that's enough.
+
+478
+00:41:07,360 --> 00:41:12,576
+Speaker SPEAKER_01: So these are controlling effectively the Markov random field between the pixels so we can model covariances nicely.
+
+479
+00:41:18,614 --> 00:41:25,163
+Speaker SPEAKER_01: because the hidden units are creating correlations between the visible units, reconstruction is now more difficult.
+
+480
+00:41:25,664 --> 00:41:28,628
+Speaker SPEAKER_01: We could reconstruct one image given the other image like we did with motion.
+
+481
+00:41:29,208 --> 00:41:32,974
+Speaker SPEAKER_01: But if you want to reconstruct them both and make them identical, it gets to be harder.
+
+482
+00:41:33,454 --> 00:41:35,737
+Speaker SPEAKER_01: So we have to use a different method called Hybrid Monte Carlo.
+
+483
+00:41:36,039 --> 00:41:41,786
+Speaker SPEAKER_01: Essentially, you start where the data was and let it wander away from where it was but keeping both images the same.
+
+484
+00:41:41,766 --> 00:41:45,010
+Speaker SPEAKER_01: I'm not going to go into Hybrid Monte Carlo, but it works just fine for doing the learning.
+
+485
+00:41:45,692 --> 00:41:48,074
+Speaker SPEAKER_01: And the Hybrid Monte Carlo is used just to get the reconstructions.
+
+486
+00:41:48,635 --> 00:41:50,317
+Speaker SPEAKER_01: And the learning algorithm is just the same as before.
+
+487
+00:41:54,021 --> 00:42:01,190
+Speaker SPEAKER_01: And what we're going to do is we're going to have some hidden units that are using these three-way interactions to model covariances between pixels.
+
+488
+00:42:01,650 --> 00:42:03,492
+Speaker SPEAKER_01: And other hidden units are just modeling the means.
+
+489
+00:42:04,313 --> 00:42:08,179
+Speaker SPEAKER_01: And so we call for meaning covariance, we call this Maccabi M.
+
+490
+00:42:11,364 --> 00:42:15,710
+Speaker SPEAKER_01: Here's an example of what happens after it's learned on black and white images.
+
+491
+00:42:16,431 --> 00:42:17,333
+Speaker SPEAKER_01: Here's an image patch.
+
+492
+00:42:18,715 --> 00:42:25,726
+Speaker SPEAKER_01: Here's its reconstruction of the image patch if you don't add noise, which is very good, from the mean and covariance hidden units.
+
+493
+00:42:26,467 --> 00:42:28,831
+Speaker SPEAKER_01: Here's the stochastic reconstruction which is also pretty good.
+
+494
+00:42:30,492 --> 00:42:31,755
+Speaker SPEAKER_01: But now we're going to do something funny.
+
+495
+00:42:31,795 --> 00:42:38,605
+Speaker SPEAKER_01: We're going to take the activations of the covariance units, the things that are modeling which pixels are the same as which other pixels.
+
+496
+00:42:39,530 --> 00:42:40,452
+Speaker SPEAKER_01: and we're going to keep those.
+
+497
+00:42:41,313 --> 00:42:47,463
+Speaker SPEAKER_01: But we're going to take the activations of the mean unit, so we're going to throw those away and pretend that the means for the pixels look like this.
+
+498
+00:42:48,605 --> 00:42:49,487
+Speaker SPEAKER_01: Well, let's take this one first.
+
+499
+00:42:49,847 --> 00:42:53,934
+Speaker SPEAKER_01: We tell it all pixels have the same value except these which are much darker.
+
+500
+00:42:53,954 --> 00:43:02,449
+Speaker SPEAKER_01: And it now tries to make that information about means fit in with this information about covariances which is that these guys should be the same but very different from these guys.
+
+501
+00:43:03,626 --> 00:43:11,639
+Speaker SPEAKER_01: And so it comes up with a reconstruction that looks like that where you see it's taking this dark stuff and blurred it across this region here.
+
+502
+00:43:11,659 --> 00:43:19,931
+Speaker SPEAKER_01: If we just give it four dots like that and the covariance matrix we got from there, it'll blur those dots out to make an image that looks quite like that one.
+
+503
+00:43:20,704 --> 00:43:33,929
+Speaker SPEAKER_01: So this is very like what's called the kind of watercolor model of images where you know about where the boundaries are and you just sort of roughly sketch in the colors of the regions and it all looks fine to us because we sort of slave the color boundaries to the actual where the edges are.
+
+504
+00:43:36,434 --> 00:43:42,324
+Speaker SPEAKER_01: If you reverse the colors of these, it produces the reverse image because the covariance doesn't care at all about the signs of things.
+
+505
+00:43:45,561 --> 00:43:53,253
+Speaker SPEAKER_01: If you look at the filters that it learns, the mean units, which are for sort of covering in regions, learn these blurry filters.
+
+506
+00:43:53,335 --> 00:43:58,222
+Speaker SPEAKER_01: And by taking some combination of a few dozen of those, you can make more or less whatever colors you like anywhere.
+
+507
+00:43:59,364 --> 00:44:00,266
+Speaker SPEAKER_01: So, they're very blurred.
+
+508
+00:44:00,286 --> 00:44:03,050
+Speaker SPEAKER_01: They're smooth, blurry, and multicolored.
+
+509
+00:44:03,771 --> 00:44:05,554
+Speaker SPEAKER_01: And you can make roughly the right colors.
+
+510
+00:44:06,496 --> 00:44:08,760
+Speaker SPEAKER_01: The covariance units learn something completely different.
+
+511
+00:44:09,541 --> 00:44:10,842
+Speaker SPEAKER_01: So, these are what the filters learn.
+
+512
+00:44:12,898 --> 00:44:17,923
+Speaker SPEAKER_01: And you'll see that those factors, they learn high frequency black and white edges.
+
+513
+00:44:20,266 --> 00:44:26,492
+Speaker SPEAKER_01: And then a small number of them turn into low frequency color edges that are either red, green, or yellow, blue.
+
+514
+00:44:27,373 --> 00:44:37,902
+Speaker SPEAKER_01: And what's more, when you make it from a topographic map using a technique I'll describe on the next slide, you get this color blob, this low frequency color blob in with the low frequency black and white filters.
+
+515
+00:44:38,784 --> 00:44:40,746
+Speaker SPEAKER_01: And that's just what you see in a monkey's brain.
+
+516
+00:44:41,266 --> 00:44:41,706
+Speaker SPEAKER_01: be much.
+
+517
+00:44:41,726 --> 00:44:47,876
+Speaker SPEAKER_01: If you go into a monkey's brain, you see these high frequency filters whose orientation changes smoothly as you go through the cortex tangentially.
+
+518
+00:44:48,579 --> 00:44:50,702
+Speaker SPEAKER_01: And you see these low frequency color blobs.
+
+519
+00:44:51,884 --> 00:44:54,789
+Speaker SPEAKER_01: And most neuroscientists thought that at least must be innate.
+
+520
+00:44:55,530 --> 00:45:02,583
+Speaker SPEAKER_01: What this is saying is, no, just the structure of images is and the idea of forming a topographic map is enough to get this.
+
+521
+00:45:03,284 --> 00:45:04,385
+Speaker SPEAKER_01: That doesn't mean it's not innate.
+
+522
+00:45:04,465 --> 00:45:05,788
+Speaker SPEAKER_01: It just means it doesn't need to be.
+
+523
+00:45:07,911 --> 00:45:17,947
+Speaker SPEAKER_01: So the way we get the topographic map is by this global connectivity from the pixels to the factors.
+
+524
+00:45:18,509 --> 00:45:20,512
+Speaker SPEAKER_01: So the factors really are learning local filters.
+
+525
+00:45:20,773 --> 00:45:24,097
+Speaker SPEAKER_01: And the local filters start off colored and gradually learn to be exactly black and white.
+
+526
+00:45:26,186 --> 00:45:29,873
+Speaker SPEAKER_01: then there's local connectivity between the factors and the hidden units.
+
+527
+00:45:30,375 --> 00:45:36,666
+Speaker SPEAKER_01: So one of these hidden units will connect to a little square of factors and that induces a topography here.
+
+528
+00:45:37,349 --> 00:45:44,802
+Speaker SPEAKER_01: And the energy function is such that when you turn off one of these hidden units to say smoothness no longer applies,
+
+529
+00:45:45,813 --> 00:45:46,994
+Speaker SPEAKER_01: you pay a penalty.
+
+530
+00:45:48,275 --> 00:45:50,358
+Speaker SPEAKER_01: And you'd rather just pay the penalty once.
+
+531
+00:45:50,538 --> 00:45:55,603
+Speaker SPEAKER_01: And so if two factors are going to come on at the same time, it's best to connect them to the same hidden unit.
+
+532
+00:45:55,623 --> 00:45:56,844
+Speaker SPEAKER_01: So you only pay the penalty once.
+
+533
+00:45:57,606 --> 00:46:06,094
+Speaker SPEAKER_01: And so that will cause similar factors to go to similar places in here and we get a topographic map.
+
+534
+00:46:06,114 --> 00:46:08,918
+Speaker SPEAKER_01: For people who know about modeling images,
+
+535
+00:46:09,487 --> 00:46:14,195
+Speaker SPEAKER_01: So far as I know, nobody has yet produced a good model of patches of color images.
+
+536
+00:46:14,797 --> 00:46:17,621
+Speaker SPEAKER_01: That is a generative model that generates stuff that looks like the real data.
+
+537
+00:46:19,085 --> 00:46:22,971
+Speaker SPEAKER_01: So, here's a model that was learned on 16 by 16 color images from the Berkeley database.
+
+538
+00:46:23,592 --> 00:46:26,376
+Speaker SPEAKER_01: And here's things generated from the model.
+
+539
+00:46:26,396 --> 00:46:27,498
+Speaker SPEAKER_01: And they look pretty similar.
+
+540
+00:46:28,260 --> 00:46:29,362
+Speaker SPEAKER_01: Now, it's partly a trick.
+
+541
+00:46:29,422 --> 00:46:33,048
+Speaker SPEAKER_01: It's the color balance here is like the color balance and that makes you think they're similar.
+
+542
+00:46:33,451 --> 00:46:34,793
+Speaker SPEAKER_01: But it's partly real.
+
+543
+00:46:34,972 --> 00:46:39,719
+Speaker SPEAKER_01: I mean, most of these are smooth patches of roughly uniform color, as are most of these.
+
+544
+00:46:40,320 --> 00:46:42,282
+Speaker SPEAKER_01: There's a few more of these that are smoother than those.
+
+545
+00:46:43,164 --> 00:46:45,987
+Speaker SPEAKER_01: But you also get these things where you get fairly sharp edges.
+
+546
+00:46:46,608 --> 00:46:50,432
+Speaker SPEAKER_01: So you get smoothness, then a sharp edge, then more smoothness, like you do in the real data.
+
+547
+00:46:51,014 --> 00:46:52,775
+Speaker SPEAKER_01: You even get things like corners here.
+
+548
+00:46:53,126 --> 00:46:56,614
+Speaker SPEAKER_01: we're not quite there yet, but this is the best model there is of patches of color images.
+
+549
+00:46:57,255 --> 00:47:05,190
+Speaker SPEAKER_01: And it's because it's modeling both the covariance and the means, so it's capable of saying what's the same as what, as well as what the intensities are.
+
+550
+00:47:07,434 --> 00:47:09,177
+Speaker SPEAKER_01: You can apply it for doing recognition.
+
+551
+00:47:10,525 --> 00:47:22,184
+Speaker SPEAKER_01: So this is a difficult object recognition task where there's 80 million unlabeled training images, not all of these classes but of thousands and thousands of classes that were collected by people at MIT.
+
+552
+00:47:22,405 --> 00:47:23,907
+Speaker SPEAKER_01: It's called the Tiny Images Database.
+
+553
+00:47:24,288 --> 00:47:26,251
+Speaker SPEAKER_01: They're 32 by 32 color images.
+
+554
+00:47:26,871 --> 00:47:29,657
+Speaker SPEAKER_01: But it's surprising what you can see in a 32 by 32 color image.
+
+555
+00:47:30,617 --> 00:47:31,739
+Speaker SPEAKER_01: And since
+
+556
+00:47:31,889 --> 00:47:34,833
+Speaker SPEAKER_01: The biggest model we're going to use has about 100 million connections.
+
+557
+00:47:35,253 --> 00:47:39,300
+Speaker SPEAKER_01: That's about 0.1 of a cubic millimeter of cortex in terms of the number of parameters.
+
+558
+00:47:40,101 --> 00:47:45,809
+Speaker SPEAKER_01: And so we have to somehow give our computer model some way of keeping up with the brain which has a lot more hardware.
+
+559
+00:47:46,090 --> 00:47:47,932
+Speaker SPEAKER_01: And so we do it by giving a very small retina.
+
+560
+00:47:48,293 --> 00:47:53,661
+Speaker SPEAKER_01: We say, suppose the input was only 32 by 32, maybe we can actually do something reasonable there.
+
+561
+00:47:55,987 --> 00:47:57,789
+Speaker SPEAKER_01: So as you'll see, there's a lot of variation.
+
+562
+00:47:57,829 --> 00:48:00,032
+Speaker SPEAKER_01: If you look at birds, that's a close-up of an ostrich.
+
+563
+00:48:00,472 --> 00:48:02,215
+Speaker SPEAKER_01: This is a much more typical picture of a bird.
+
+564
+00:48:03,536 --> 00:48:10,405
+Speaker SPEAKER_01: And it's hard to tell the difference in these ten categories, particularly things like deer and horse.
+
+565
+00:48:10,485 --> 00:48:16,492
+Speaker SPEAKER_01: We deliberately chose some very similar categories like truck and car, and deer and horse.
+
+566
+00:48:18,987 --> 00:48:19,907
+Speaker SPEAKER_01: people are pretty good at this.
+
+567
+00:48:19,967 --> 00:48:21,409
+Speaker SPEAKER_01: People won't make very many errors.
+
+568
+00:48:21,871 --> 00:48:23,934
+Speaker SPEAKER_01: That's partly because these were hand labeled by people.
+
+569
+00:48:25,695 --> 00:48:28,460
+Speaker SPEAKER_01: So, but even people make some errors.
+
+570
+00:48:30,161 --> 00:48:36,490
+Speaker SPEAKER_01: We only have 50,000 training examples, 5,000 of each class and 10,000 test examples because we have to hand label them.
+
+571
+00:48:37,050 --> 00:48:39,034
+Speaker SPEAKER_01: But we have a lot of untrained, unlabeled data.
+
+572
+00:48:39,353 --> 00:48:42,057
+Speaker SPEAKER_01: So we can do all this pre-training on lots of unlabeled data.
+
+573
+00:48:42,780 --> 00:48:54,376
+Speaker SPEAKER_01: and then take our covariance units and our mean units and just try doing multinomial logistic regression on top of those or maybe add another hidden layer and do it on top of that.
+
+574
+00:48:56,010 --> 00:49:06,764
+Speaker SPEAKER_01: What Marco Iliaranzato actually did, since he worked in Jan Lekans' lab, he actually took smaller patches, learned a model, and then strode them across the image and replicated them.
+
+575
+00:49:07,286 --> 00:49:08,507
+Speaker SPEAKER_01: So it's sort of semi-convolutional.
+
+576
+00:49:09,068 --> 00:49:18,922
+Speaker SPEAKER_01: And then took the hidden units of all of these little patches and just concatenated them to make a great big vector of 11,000 hidden units, which are both the means and the covariances.
+
+577
+00:49:20,103 --> 00:49:23,588
+Speaker SPEAKER_01: And then we're going to use that as our features and see how well we can do.
+
+578
+00:49:27,043 --> 00:49:30,128
+Speaker SPEAKER_01: and we're going to compare it with various other methods.
+
+579
+00:49:32,992 --> 00:49:39,059
+Speaker SPEAKER_01: So, the sort of first comparison is just take the pixels and do logistic regression on the pixels to decide on the ten classes.
+
+580
+00:49:39,579 --> 00:49:41,021
+Speaker SPEAKER_01: You get 36% right.
+
+581
+00:49:42,224 --> 00:49:50,875
+Speaker SPEAKER_01: If you take gist features which are developed by Toralbo and people at MIT, which are meant to capture what's going on in the image quite well, but they're fairly low dimensional.
+
+582
+00:49:50,972 --> 00:49:53,876
+Speaker SPEAKER_01: you get 54 percent, so they're much better than pixels.
+
+583
+00:49:54,577 --> 00:50:05,572
+Speaker SPEAKER_01: If you take a normal RBM which has linear units with Gaussian noises input variables and then binary hidden units and then use those binary hidden units to do classification, you get 60 percent.
+
+584
+00:50:07,394 --> 00:50:16,726
+Speaker SPEAKER_01: If you use one of these RBMs with both the units like these ones for doing the means and then these units with the three-way interactions for modeling covariances,
+
+585
+00:50:17,467 --> 00:50:20,891
+Speaker SPEAKER_01: you get 69% as long as you use a lot of these factors.
+
+586
+00:50:21,793 --> 00:50:29,545
+Speaker SPEAKER_01: And if you then learn an extra hidden layer of 8,000 units, so notice that times that's 100 million, so there's an extra 100 million connections you learn there.
+
+587
+00:50:29,744 --> 00:50:33,110
+Speaker SPEAKER_01: But that's fine because it's unsupervised and you just learn it on lots of data.
+
+588
+00:50:34,873 --> 00:50:38,398
+Speaker SPEAKER_01: You get up to 72% and that's the best result so far on this database.
+
+589
+00:50:39,378 --> 00:50:40,521
+Speaker SPEAKER_01: One final thing
+
+590
+00:50:44,737 --> 00:50:57,514
+Speaker SPEAKER_01: you can take this model that was developed for image patches and the student who'd be doing phoneme recognition just took that code and applied it to log spectrograms, which is sort of more closer to what Dick would like to see.
+
+591
+00:50:57,554 --> 00:51:04,605
+Speaker SPEAKER_01: You're not using all this malcapsule stuff which is designed to throw away stuff you think you don't need and get rid of lots of correlations.
+
+592
+00:51:05,045 --> 00:51:09,731
+Speaker SPEAKER_01: Instead, you're going to take data that has lots of correlations in, but we got a model that can deal with that stuff now.
+
+593
+00:51:10,538 --> 00:51:29,003
+Speaker SPEAKER_01: And the first thing George tried on February the 20th, which was four layers of a thousand hidden units on top of this, got 22.7% correct, which was the record for phone recognition on the Timit database where you're not trying to do a model adapted to each speaker.
+
+594
+00:51:29,827 --> 00:51:34,751
+Speaker SPEAKER_01: And then, a week later when he'd adapted a bit and used more frames, he was down to 21.6 percent.
+
+595
+00:51:35,632 --> 00:51:38,034
+Speaker SPEAKER_01: So this, all this stuff was designed to do vision.
+
+596
+00:51:38,096 --> 00:51:39,396
+Speaker SPEAKER_01: It wasn't designed to do phonemes.
+
+597
+00:51:40,237 --> 00:51:51,028
+Speaker SPEAKER_01: And if we treat phoneme recognition as just a vision problem on the log spectrogram, we can wipe out the speech guys, at least on small vocabulary.
+
+598
+00:51:51,048 --> 00:51:54,972
+Speaker SPEAKER_01: Another student is now at Microsoft seeing if this will work on big vocabulary as well.
+
+599
+00:51:57,518 --> 00:51:57,777
+Speaker SPEAKER_01: Yes.
+
+600
+00:51:58,159 --> 00:52:00,884
+Speaker SPEAKER_01: Yeah, right.
+
+601
+00:52:00,903 --> 00:52:02,346
+Speaker SPEAKER_03: We, yeah, right.
+
+602
+00:52:02,365 --> 00:52:03,849
+Speaker SPEAKER_03: We can give them new better tools.
+
+603
+00:52:04,068 --> 00:52:05,452
+Speaker SPEAKER_01: We can give them new and better tools.
+
+604
+00:52:07,054 --> 00:52:08,878
+Speaker SPEAKER_01: So, here's phoneme recognition over the years.
+
+605
+00:52:10,039 --> 00:52:13,005
+Speaker SPEAKER_01: Backcrop from the 80s got 26.1% correct.
+
+606
+00:52:13,826 --> 00:52:20,277
+Speaker SPEAKER_01: Over the next 20 years or so, they got that down to 24.4% using methods that weren't neurally inspired.
+
+607
+00:52:20,717 --> 00:52:22,581
+Speaker SPEAKER_01: So, I'll call them artificial.
+
+608
+00:52:24,012 --> 00:52:25,494
+Speaker SPEAKER_01: we've now got down to 21.6%.
+
+609
+00:52:26,016 --> 00:52:27,981
+Speaker SPEAKER_01: An estimate of human performance is about 15%.
+
+610
+00:52:28,922 --> 00:52:31,909
+Speaker SPEAKER_01: I don't know much about how they did this estimate, I'm afraid.
+
+611
+00:52:32,329 --> 00:52:34,835
+Speaker SPEAKER_01: But we're about, we're nearly a third of the way from artificial to real.
+
+612
+00:52:35,858 --> 00:52:37,701
+Speaker SPEAKER_01: So, we need two more ideas and we're there.
+
+613
+00:52:39,485 --> 00:52:40,226
+Speaker SPEAKER_01: Okay, I'm done.
+
+614
+00:52:43,594 --> 00:52:43,994
+Speaker SPEAKER_01: I'm finished.
+
+615
+00:52:54,572 --> 00:52:55,954
+Speaker SPEAKER_03: Yeah.
+
+616
+00:52:55,974 --> 00:53:15,804
+Speaker SPEAKER_03: Your instrument recently announced that you and the students have broken the world record on the MNIST dataset, so you did recognition by simply using a seven-layer feed-forward network trained with backprop, but doing it on a GPU with lots and lots of cycles.
+
+617
+00:53:15,987 --> 00:53:17,548
+Speaker SPEAKER_01: Yes, he did indeed announce that.
+
+618
+00:53:18,170 --> 00:53:22,637
+Speaker SPEAKER_01: What he didn't announce was, he's got a spectacular result.
+
+619
+00:53:22,657 --> 00:53:24,159
+Speaker SPEAKER_01: He gets down to 35 errors.
+
+620
+00:53:25,920 --> 00:53:29,425
+Speaker SPEAKER_01: What he didn't announce was, there's two tricks involved.
+
+621
+00:53:30,347 --> 00:53:34,753
+Speaker SPEAKER_01: One trick is to use a big net with lots of layers and a GPU board.
+
+622
+00:53:35,434 --> 00:53:37,858
+Speaker SPEAKER_01: That trick by itself won't give you 35 errors.
+
+623
+00:53:38,219 --> 00:53:39,800
+Speaker SPEAKER_01: There's a second trick
+
+624
+00:53:39,780 --> 00:53:51,021
+Speaker SPEAKER_01: which was sort of pioneered by people at Microsoft in fact, which is to put a lot of work into producing distortions of the data so you have lots and lots of labeled data.
+
+625
+00:53:52,063 --> 00:53:58,353
+Speaker SPEAKER_01: So you take a labeled image of a two and you distort it in clever ways that make it still look like a two but be translated.
+
+626
+00:53:58,994 --> 00:54:01,619
+Speaker SPEAKER_01: So people can get down to about 40 errors.
+
+627
+00:54:03,253 --> 00:54:03,474
+Speaker SPEAKER_01: Good.
+
+628
+00:54:03,715 --> 00:54:05,521
+Speaker SPEAKER_01: So Dick's already patented that.
+
+629
+00:54:05,541 --> 00:54:09,514
+Speaker SPEAKER_01: So you get down to, you can get down to about 40 errors by doing these distortions.
+
+630
+00:54:09,855 --> 00:54:16,655
+Speaker SPEAKER_01: What he did was even better distortions and more of them and a much bigger net and a GPU and got from 40 to 35.
+
+631
+00:54:17,632 --> 00:54:20,414
+Speaker SPEAKER_01: Which is impressive because it's hard to make any progress there.
+
+632
+00:54:20,434 --> 00:54:22,896
+Speaker SPEAKER_01: But it won't work unless you have lots of labeled data.
+
+633
+00:54:23,536 --> 00:54:26,920
+Speaker SPEAKER_01: And what's the disguised thing is the work went into.
+
+634
+00:54:26,960 --> 00:54:29,181
+Speaker SPEAKER_01: If you look in the paper, it's all very straightforward.
+
+635
+00:54:29,202 --> 00:54:35,226
+Speaker SPEAKER_01: It's just back prop, except when you get to the section of how they generated all this extra labeled data, where there's very careful things.
+
+636
+00:54:35,246 --> 00:54:39,351
+Speaker SPEAKER_01: Like if it's a 1 or a 7, they only rotate it a certain number of degrees.
+
+637
+00:54:39,411 --> 00:54:41,032
+Speaker SPEAKER_01: But if it's something else, they rotate it more degrees.
+
+638
+00:54:41,733 --> 00:54:44,295
+Speaker SPEAKER_01: I'm actually the referee for this paper, but I don't mind him knowing.
+
+639
+00:54:44,876 --> 00:54:47,318
+Speaker SPEAKER_01: I think it's very important work.
+
+640
+00:54:47,297 --> 00:54:54,793
+Speaker SPEAKER_01: but he should emphasize that they had to have labeled data to do that and they had to put work into distortions.
+
+641
+00:54:55,534 --> 00:54:59,704
+Speaker SPEAKER_01: So, for me, the lesson of that paper is, when we had small computers
+
+642
+00:55:00,577 --> 00:55:07,989
+Speaker SPEAKER_01: You should put your effort into things like weight constraints so you don't have too many parameters because you've only got a small computer.
+
+643
+00:55:08,010 --> 00:55:28,981
+Speaker SPEAKER_01: As computers get bigger and faster, you can transfer your effort from instead of tying the weights together like Yam was doing in the early days, put your effort into generating more distortions so you can inject your prior knowledge in the form of distortions and that's much less computationally efficient but with a big computer it's fine and it's more flexible.
+
+644
+00:55:29,452 --> 00:55:31,054
+Speaker SPEAKER_01: So I think that's the lesson of that paper.
+
+645
+00:55:33,496 --> 00:55:41,344
+Speaker SPEAKER_03: I didn't even need to ask a question and you answered it.
+
+646
+00:55:41,364 --> 00:55:41,563
+Speaker SPEAKER_08: Thank you.
+
+647
+00:55:41,684 --> 00:55:44,246
+Speaker SPEAKER_08: Any other non-questions?
+
+648
+00:55:44,266 --> 00:55:52,215
+Speaker SPEAKER_02: So it seems like you've invented some kind of cortex here that has the expected property that if it does vision, it'll do sound.
+
+649
+00:55:53,295 --> 00:55:53,456
+Speaker SPEAKER_02: Yep.
+
+650
+00:55:54,356 --> 00:55:55,998
+Speaker SPEAKER_02: What other problems are you going to apply it to?
+
+651
+00:55:56,688 --> 00:56:03,996
+Speaker SPEAKER_01: Maybe it'd be quicker to say the problems we're not going to apply.
+
+652
+00:56:04,016 --> 00:56:04,737
+Speaker SPEAKER_01: I can't think of any.
+
+653
+00:56:08,641 --> 00:56:13,266
+Speaker SPEAKER_01: I mean, okay, let me say what the main limitation of this is for vision.
+
+654
+00:56:14,768 --> 00:56:18,492
+Speaker SPEAKER_01: We've got at least 10 billion neurons for doing vision with.
+
+655
+00:56:19,773 --> 00:56:21,775
+Speaker SPEAKER_01: Well, at least a billion anyway, probably 10 billion.
+
+656
+00:56:22,715 --> 00:56:32,847
+Speaker SPEAKER_01: And even though we got that many neurons and about 10 to the 13 connections for doing vision, we still have a retina that's got a very small fovea the size of my thumbnail at arm's length.
+
+657
+00:56:33,989 --> 00:56:37,032
+Speaker SPEAKER_01: And so we still take almost everything and don't look at it.
+
+658
+00:56:37,132 --> 00:56:40,818
+Speaker SPEAKER_01: And the essence of vision is not to look at almost everything intelligently.
+
+659
+00:56:42,079 --> 00:56:46,083
+Speaker SPEAKER_01: And that's why you get all these funny illusions where you don't see things.
+
+660
+00:56:47,025 --> 00:56:48,489
+Speaker SPEAKER_01: we have to do that in these models.
+
+661
+00:56:48,548 --> 00:57:01,070
+Speaker SPEAKER_01: These models are completely crazy and all the computer vision is completely crazy, almost all of it, because they take a uniform resolution image and quite a big one like a thousand by a thousand and they try and deal with it all at once with filters all over the image.
+
+662
+00:57:01,753 --> 00:57:07,583
+Speaker SPEAKER_01: And if they're going to do selection, they either do it by running their face detector everywhere
+
+663
+00:57:07,815 --> 00:57:13,541
+Speaker SPEAKER_01: with no intelligence or they do sort of interest point detection at a very low level to decide what to attend to.
+
+664
+00:57:13,561 --> 00:57:23,431
+Speaker SPEAKER_01: What we do is we fixate somewhere, then on the basis of what our retina gives us with these big pixels around the edges and small pixels in the middle, we sort of decide what we're seeing and where to look next.
+
+665
+00:57:23,771 --> 00:57:29,657
+Speaker SPEAKER_01: And by the second or third fixation, we're fixating very intelligently and the essence of it is the vision is sampling.
+
+666
+00:57:30,938 --> 00:57:35,123
+Speaker SPEAKER_01: It's not processing everything and that's completely missing from what I said.
+
+667
+00:57:35,896 --> 00:57:41,230
+Speaker SPEAKER_01: Now, in order to do that, you have to be able to take what you saw and where you saw it and combine them, and that's a multiply.
+
+668
+00:57:41,871 --> 00:57:46,222
+Speaker SPEAKER_01: So this module that can do multiplies is very good at combining what's and where's to integrate information over time.
+
+669
+00:57:46,844 --> 00:57:49,190
+Speaker SPEAKER_01: And that's one of the things we're working on now.
+
+670
+00:57:49,210 --> 00:57:50,574
+Speaker SPEAKER_01: But that's probably the biggest thing missing.
+
+671
+00:57:50,594 --> 00:57:52,639
+Speaker SPEAKER_01: But that is an example of
+
+672
+00:57:52,619 --> 00:57:56,585
+Speaker SPEAKER_01: Having a module is quite good, but now it's never good enough.
+
+673
+00:57:56,706 --> 00:57:59,110
+Speaker SPEAKER_01: So you have to put it together over time and use it many times.
+
+674
+00:57:59,731 --> 00:58:01,695
+Speaker SPEAKER_01: And that's what sequential reasoning and all this stuff are.
+
+675
+00:58:02,416 --> 00:58:07,023
+Speaker SPEAKER_01: So, basically, as soon as people become sequential, we're not modeling that at all.
+
+676
+00:58:07,304 --> 00:58:09,608
+Speaker SPEAKER_01: We're modeling what you can do in 100 milliseconds.
+
+677
+00:58:10,990 --> 00:58:12,112
+Speaker SPEAKER_01: And so that's what's missing.
+
+678
+00:58:12,885 --> 00:58:17,875
+Speaker SPEAKER_01: But I believe that to model that sequential stuff, we need to understand what is the sequence of.
+
+679
+00:58:17,954 --> 00:58:20,139
+Speaker SPEAKER_01: It's the sequence of these very powerful operations.
+
+680
+00:58:21,001 --> 00:58:26,110
+Speaker SPEAKER_01: And we're in a better shape now to try and model sequential AI than we were if we didn't know what a primitive operation is.
+
+681
+00:58:26,371 --> 00:58:33,222
+Speaker SPEAKER_01: If we thought a primitive operation was just deciding whether two symbols are the same, we're going to be out of luck for understanding how people do sequential stuff.
+
+682
+00:58:36,577 --> 00:58:37,458
+Speaker SPEAKER_01: Yeah?
+
+683
+00:58:37,478 --> 00:58:51,920
+Speaker SPEAKER_03: This isn't really a fair question, but since you said you wanted to do everything with these nets, how are you going to do first-order logic, like there exists a dog that every girl has a boy who loves?
+
+684
+00:58:51,940 --> 00:58:53,163
+Speaker SPEAKER_01: Hang on, I'm still processing that.
+
+685
+00:58:54,945 --> 00:58:58,670
+Speaker SPEAKER_01: I'm making the point that people find quantifiers quite difficult.
+
+686
+00:58:58,954 --> 00:59:00,797
+Speaker SPEAKER_03: If you can handle up to three quantifiers.
+
+687
+00:59:00,818 --> 00:59:01,838
+Speaker SPEAKER_01: I would love to do that.
+
+688
+00:59:01,978 --> 00:59:03,862
+Speaker SPEAKER_01: I have not got a clue how to do it.
+
+689
+00:59:04,161 --> 00:59:10,771
+Speaker SPEAKER_01: And you will notice that in old-fashioned AI that you used to point out to neural net people, but you can't do quantifiers, so forget it.
+
+690
+00:59:11,512 --> 00:59:16,759
+Speaker SPEAKER_01: Nowadays, when they all do graphical models, they don't actually mention that anymore because their graphical models have difficulty with it too.
+
+691
+00:59:17,019 --> 00:59:18,101
+Speaker SPEAKER_01: Some people's graphical models do.
+
+692
+00:59:18,121 --> 00:59:18,963
+Speaker SPEAKER_01: Stuart Russell and people do.
+
+693
+00:59:19,943 --> 00:59:20,063
+Speaker SPEAKER_01: Right.
+
+694
+00:59:20,083 --> 00:59:20,724
+Speaker SPEAKER_01: Yeah, some people do.
+
+695
+00:59:20,925 --> 00:59:24,670
+Speaker SPEAKER_01: But most of the graphical models of like five years ago don't do quantifiers either.
+
+696
+00:59:25,492 --> 00:59:28,775
+Speaker SPEAKER_01: And so a pretty good division line would be,
+
+697
+00:59:30,427 --> 00:59:33,449
+Speaker SPEAKER_01: what you can do without having to deal with really sophisticated problems like that.
+
+698
+00:59:33,931 --> 00:59:35,932
+Speaker SPEAKER_01: I would love to know how we deal with that, but I don't.
+
+699
+00:59:37,014 --> 00:59:38,514
+Speaker SPEAKER_01: So, yeah, I'm going to give up on that right now.
+
+700
+00:59:42,880 --> 00:59:46,182
+Speaker SPEAKER_07: Yes.
+
+701
+00:59:49,085 --> 00:59:51,068
+Speaker SPEAKER_01: Yes.
+
+702
+00:59:51,547 --> 00:59:52,588
+Speaker SPEAKER_01: In Timit, that's what we have.
+
+703
+00:59:52,628 --> 00:59:55,152
+Speaker SPEAKER_01: In Timit, all the examples we have labels.
+
+704
+00:59:55,637 --> 00:59:57,599
+Speaker SPEAKER_01: It still is a big win to do the pre-training.
+
+705
+01:00:02,947 --> 01:00:08,114
+Speaker SPEAKER_01: Well, Jürgen Schmidhuber hasn't tried with all his distortions doing pre-training.
+
+706
+01:00:08,134 --> 01:00:12,278
+Speaker SPEAKER_01: Now, I have a student called Vinod Nair who's just produced a thesis where he tries things like that.
+
+707
+01:00:12,338 --> 01:00:24,514
+Speaker SPEAKER_01: He tries distortions on an amnest and he uses special distortions of his own and the fact is distortions help a lot but if you do pre-training that helps some more too.
+
+708
+01:00:24,494 --> 01:00:32,101
+Speaker SPEAKER_01: And Bengio's results, Yoshua Bengio's results suggest that pre-training will get you to a different part of the space even if you have all this label data.
+
+709
+01:00:32,563 --> 01:00:37,447
+Speaker SPEAKER_01: So clearly one thing that needs to be done is to try the pre-training in combined with all these labels.
+
+710
+01:00:37,967 --> 01:00:40,351
+Speaker SPEAKER_01: You don't have to have the pre-training but I bet you it still helps.
+
+711
+01:00:43,293 --> 01:00:45,076
+Speaker SPEAKER_01: And I bet you it's more efficient too.
+
+712
+01:00:45,476 --> 01:00:48,099
+Speaker SPEAKER_01: It's faster because the pre-training is relatively fast.
+
+713
+01:00:48,139 --> 01:00:49,300
+Speaker SPEAKER_01: You don't have to learn a very good model.
+
+714
+01:00:49,559 --> 01:00:51,041
+Speaker SPEAKER_01: You get lots of rich features.
+
+715
+01:00:51,628 --> 01:00:57,577
+Speaker SPEAKER_01: And starting from there, I think you'll do better than he does just starting from random and faster.
+
+716
+01:00:58,778 --> 01:01:00,041
+Speaker SPEAKER_01: That's just a prediction.
+
+717
+01:01:00,061 --> 01:01:01,764
+Speaker SPEAKER_01: You might even get down to 34 errors.
+
+718
+01:01:04,608 --> 01:01:08,032
+Speaker SPEAKER_01: The problem with MNIST is the error rate is so low you can't get significance.
+
+719
+01:01:08,112 --> 01:01:09,233
+Speaker SPEAKER_01: Timid is really nice that way.
+
+720
+01:01:09,273 --> 01:01:21,552
+Speaker SPEAKER_06: They designed it well so you get higher error rates so you can see differences.
+
+721
+01:01:22,054 --> 01:01:31,164
+Speaker SPEAKER_06: Would you get inferences or observations that are beyond the size of the time window you're using?
+
+722
+01:01:32,664 --> 01:01:33,905
+Speaker SPEAKER_01: Sorry, I didn't understand the question.
+
+723
+01:01:35,648 --> 01:01:37,409
+Speaker SPEAKER_06: We have a limited time window.
+
+724
+01:01:37,429 --> 01:01:42,875
+Speaker SPEAKER_06: We have a limited time window.
+
+725
+01:01:42,894 --> 01:01:45,898
+Speaker SPEAKER_06: After training, is there anything in the model that picks up?
+
+726
+01:01:46,838 --> 01:01:47,099
+Speaker SPEAKER_01: Nothing.
+
+727
+01:01:47,418 --> 01:01:47,760
+Speaker SPEAKER_06: Nothing.
+
+728
+01:01:48,019 --> 01:01:48,860
+Speaker SPEAKER_01: Nothing.
+
+729
+01:01:48,880 --> 01:01:51,083
+Speaker SPEAKER_01: It cannot deal with.
+
+730
+01:01:51,434 --> 01:01:56,250
+Speaker SPEAKER_01: It can't model how... Right.
+
+731
+01:01:56,369 --> 01:02:02,489
+Speaker SPEAKER_01: But if sort of what happened 15 time steps ago really tells you what should happen now.
+
+732
+01:02:02,943 --> 01:02:04,425
+Speaker SPEAKER_01: And it only tells you what should happen now.
+
+733
+01:02:04,445 --> 01:02:06,971
+Speaker SPEAKER_01: It doesn't tell you what should happen in the intermediate 14 time steps.
+
+734
+01:02:07,291 --> 01:02:11,860
+Speaker SPEAKER_01: It just contains information across 15 time steps without having a signature at smaller time scales.
+
+735
+01:02:12,641 --> 01:02:13,483
+Speaker SPEAKER_01: You can't pick up on that.
+
+736
+01:02:14,045 --> 01:02:16,208
+Speaker SPEAKER_01: Because it's not got a hidden forward-backward algorithm.
+
+737
+01:02:16,389 --> 01:02:25,085
+Speaker SPEAKER_01: A forward-backward algorithm potentially could pick up on that, although it actually can't.
+
+738
+01:02:25,927 --> 01:02:30,972
+Speaker SPEAKER_06: rules behind the box and comes out the other side and you're not going to be able to.
+
+739
+01:02:30,992 --> 01:02:34,056
+Speaker SPEAKER_01: It's not over a long time scale, no, no.
+
+740
+01:02:34,077 --> 01:02:37,960
+Speaker SPEAKER_01: Unless you say that there's a memory involved where you go back to a previous time.
+
+741
+01:02:37,981 --> 01:02:40,704
+Speaker SPEAKER_01: It gets more complicated, right?
+
+742
+01:02:40,724 --> 01:02:45,230
+Speaker SPEAKER_01: Now, it is true that when you build the multi-level one, which you can do with the three-way connections as well as with the two-way connections.
+
+743
+01:02:45,690 --> 01:02:51,157
+Speaker SPEAKER_01: At every level, you're getting a bigger time span because you get your time window so it's going further back into the past at each level.
+
+744
+01:02:51,797 --> 01:02:53,739
+Speaker SPEAKER_01: So you get a bit like that, but that's just sort of linear.
+
+745
+01:02:56,706 --> 01:03:05,670
+Speaker SPEAKER_05: Can you say, do you have any rules of thumb of how much unlabeled data you need to train each of the different levels and how it would change?
+
+746
+01:03:06,157 --> 01:03:10,903
+Speaker SPEAKER_05: like is it just linear with the number of weights or as you go up levels do things change?
+
+747
+01:03:10,923 --> 01:03:11,083
+Speaker SPEAKER_01: Okay.
+
+748
+01:03:11,103 --> 01:03:28,248
+Speaker SPEAKER_01: So I have one sort of important thing to say about that which is that if you're modeling high dimensional data and you're trying to build an unsupervised model of the data, you need many less training examples than you would have thought if you're used to discriminative learning.
+
+749
+01:03:28,228 --> 01:03:34,375
+Speaker SPEAKER_01: you're doing discriminative learning, there's typically very few bits per training case to constrain the parameters.
+
+750
+01:03:34,815 --> 01:03:42,463
+Speaker SPEAKER_01: The amount of constraint you get on your parameters for a training case is the number of bits it takes to specify the answer, not the number of bits it takes to specify the input.
+
+751
+01:03:42,923 --> 01:03:45,226
+Speaker SPEAKER_01: So with MNIST, you get 3.3 bits per case.
+
+752
+01:03:46,108 --> 01:03:53,054
+Speaker SPEAKER_01: If you're modeling the image, the number of bits per case is the number of bits it takes to specify the image, which is about a hundred bits.
+
+753
+01:03:54,047 --> 01:03:57,295
+Speaker SPEAKER_01: so you need far fewer cases per parameter.
+
+754
+01:03:57,795 --> 01:04:03,586
+Speaker SPEAKER_01: Another way of saying it is, you're modeling much richer things and so each case is giving you much more information.
+
+755
+01:04:04,289 --> 01:04:08,056
+Speaker SPEAKER_01: So actually, we can typically model many more parameters than we have training cases.
+
+756
+01:04:08,938 --> 01:04:10,922
+Speaker SPEAKER_01: And discriminative people aren't used to that.
+
+757
+01:04:11,923 --> 01:04:15,751
+Speaker SPEAKER_01: Many less parameters than we have pixels, many more than training cases.
+
+758
+01:04:16,626 --> 01:04:21,835
+Speaker SPEAKER_01: And in fact, he only used about two million cases for doing the image stuff and it wasn't enough.
+
+759
+01:04:21,894 --> 01:04:22,576
+Speaker SPEAKER_01: It was overfitting.
+
+760
+01:04:22,896 --> 01:04:23,838
+Speaker SPEAKER_01: He should have used more.
+
+761
+01:04:26,420 --> 01:04:31,548
+Speaker SPEAKER_01: But he was fitting a hundred million parameters or something, so.
+
+762
+01:04:31,568 --> 01:04:44,068
+Speaker SPEAKER_01: But the, basically, the only rule of thumb is, many less parameters than the number of, total number of pixels in your training data, but you can typically use many more parameters than the number of training cases.
+
+763
+01:04:44,088 --> 01:04:46,431
+Speaker SPEAKER_01: And you can't do that with normal discriminative learning.
+
+764
+01:04:46,833 --> 01:04:53,545
+Speaker SPEAKER_01: Now, if you do do that, when you start discriminative training, it quickly improves things and then very quickly over fits.
+
+765
+01:04:53,565 --> 01:04:54,686
+Speaker SPEAKER_01: So, you have to stop it early.
+
+766
+01:05:04,885 --> 01:05:06,748
+Speaker SPEAKER_08: Okay.
+

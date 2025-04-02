@@ -1,0 +1,256 @@
+1
+00:00:00,031 --> 00:00:01,653
+Speaker SPEAKER_01: Joining us now to discuss Jeffrey Hinton.
+
+2
+00:00:02,213 --> 00:00:03,234
+Speaker SPEAKER_01: Jeffrey thanks so much for joining us.
+
+3
+00:00:03,254 --> 00:00:08,080
+Speaker SPEAKER_01: So you left your job with Google in part because you say you want to focus solely on your concerns about AI.
+
+4
+00:00:08,259 --> 00:00:14,207
+Speaker SPEAKER_01: You've spoken out saying that I could manipulate or possibly figure out a way to kill humans.
+
+5
+00:00:14,807 --> 00:00:15,948
+Speaker SPEAKER_01: How could it kill humans.
+
+6
+00:00:18,812 --> 00:00:25,600
+Speaker SPEAKER_00: Well eventually if it gets to be much smarter than us it'll be very good at manipulation because it will have learned that from us.
+
+7
+00:00:25,968 --> 00:00:31,775
+Speaker SPEAKER_00: And a very few examples of a more intelligent thing being controlled by a less intelligent thing.
+
+8
+00:00:32,356 --> 00:00:37,384
+Speaker SPEAKER_00: And it knows how to program, so it'll figure out ways of getting around restrictions we put on it.
+
+9
+00:00:37,625 --> 00:00:40,268
+Speaker SPEAKER_00: It'll figure out ways of manipulating people to do what it wants.
+
+10
+00:00:41,310 --> 00:00:41,990
+Speaker SPEAKER_01: So what do we do?
+
+11
+00:00:42,051 --> 00:00:43,753
+Speaker SPEAKER_01: Do we just need to pull the plug on it right now?
+
+12
+00:00:43,793 --> 00:00:49,823
+Speaker SPEAKER_01: Do we need to put in far more restrictions and backstops on this?
+
+13
+00:00:50,262 --> 00:00:51,384
+Speaker SPEAKER_01: How do we solve this problem?
+
+14
+00:00:53,490 --> 00:00:56,094
+Speaker SPEAKER_00: It's not clear to me that we can solve this problem.
+
+15
+00:00:57,476 --> 00:01:00,883
+Speaker SPEAKER_00: I believe we should put a big effort into thinking about ways to solve the problem.
+
+16
+00:01:01,584 --> 00:01:03,146
+Speaker SPEAKER_00: I don't have a solution at present.
+
+17
+00:01:03,246 --> 00:01:09,176
+Speaker SPEAKER_00: I just want people to be aware that this is a really serious problem, and we need to be thinking about it very hard.
+
+18
+00:01:09,576 --> 00:01:11,198
+Speaker SPEAKER_00: I don't think we can stop the progress.
+
+19
+00:01:11,680 --> 00:01:17,689
+Speaker SPEAKER_00: I didn't sign the petition saying we should stop working on AI, because if people in America stopped, people in China wouldn't.
+
+20
+00:01:18,290 --> 00:01:20,493
+Speaker SPEAKER_00: It's very hard to verify whether people are doing it.
+
+21
+00:01:21,301 --> 00:01:25,286
+Speaker SPEAKER_01: There have been some whistleblowers who have been warning about the dangers of a eye over the past few years.
+
+22
+00:01:25,406 --> 00:01:29,471
+Speaker SPEAKER_01: One of them Timney get brew was forced out of Google for voicing his concerns.
+
+23
+00:01:30,191 --> 00:01:33,596
+Speaker SPEAKER_01: Looking back on it do you wish that you had stood behind these whistleblowers more.
+
+24
+00:01:35,879 --> 00:01:37,200
+Speaker SPEAKER_00: Ten minutes actually a woman.
+
+25
+00:01:38,141 --> 00:01:38,902
+Speaker SPEAKER_00: Oh sorry.
+
+26
+00:01:39,423 --> 00:01:39,763
+Speaker SPEAKER_00: So.
+
+27
+00:01:40,885 --> 00:01:43,046
+Speaker SPEAKER_00: They were rather different concerns from mine.
+
+28
+00:01:43,768 --> 00:01:49,614
+Speaker SPEAKER_00: I think it's easier to voice concerns if you leave the company first.
+
+29
+00:01:49,635 --> 00:01:50,075
+Speaker SPEAKER_00: And.
+
+30
+00:01:51,507 --> 00:01:57,182
+Speaker SPEAKER_00: Their concerns aren't as existentially serious as the idea of these things getting more intelligent than us and taking over.
+
+31
+00:01:58,786 --> 00:02:05,263
+Speaker SPEAKER_01: Steve Wozniak one of the co-founders of Apple is also speaking out about the dangers he fears will come from a I take a listen.
+
+32
+00:02:07,370 --> 00:02:08,110
+Speaker SPEAKER_02: Now A.I.
+
+33
+00:02:08,131 --> 00:02:15,143
+Speaker SPEAKER_02: is another more powerful tool and it's going to be used by those people you know for basically really evil purposes.
+
+34
+00:02:15,502 --> 00:02:18,187
+Speaker SPEAKER_02: And I hate to see technology being used that way.
+
+35
+00:02:18,487 --> 00:02:19,188
+Speaker SPEAKER_02: It shouldn't be.
+
+36
+00:02:19,669 --> 00:02:23,156
+Speaker SPEAKER_02: And some probably some types of regulation are needed.
+
+37
+00:02:24,198 --> 00:02:25,278
+Speaker SPEAKER_01: It sounds like you agree.
+
+38
+00:02:26,701 --> 00:02:28,264
+Speaker SPEAKER_01: What I agree with that.
+
+39
+00:02:28,283 --> 00:02:28,585
+Speaker SPEAKER_01: Yeah.
+
+40
+00:02:28,625 --> 00:02:30,508
+Speaker SPEAKER_01: What should that regulation look like.
+
+41
+00:02:32,681 --> 00:02:34,805
+Speaker SPEAKER_00: I'm not an expert on how to do regulation.
+
+42
+00:02:34,844 --> 00:02:39,110
+Speaker SPEAKER_00: I'm just a scientist who suddenly realized that these things are getting smarter than us.
+
+43
+00:02:39,931 --> 00:02:47,502
+Speaker SPEAKER_00: And I want to sort of blow the whistle and say we should worry seriously about how we stop these things getting control over us.
+
+44
+00:02:48,243 --> 00:02:50,165
+Speaker SPEAKER_00: And it's going to be very hard.
+
+45
+00:02:50,467 --> 00:02:51,627
+Speaker SPEAKER_00: And I don't have the solutions.
+
+46
+00:02:51,669 --> 00:02:52,750
+Speaker SPEAKER_00: I wish I did.
+
+47
+00:02:52,882 --> 00:02:58,316
+Speaker SPEAKER_01: Does there need to be a meeting of all of the tech groups and governments working on this.
+
+48
+00:02:58,817 --> 00:03:03,789
+Speaker SPEAKER_01: Google China whatever and some sort of set of rules of the road.
+
+49
+00:03:04,170 --> 00:03:08,342
+Speaker SPEAKER_01: I mean how do we even protect against bad actors or rogue nations harnessing AI.
+
+50
+00:03:10,093 --> 00:03:18,971
+Speaker SPEAKER_00: So for some things it's very hard, like them using AI for manipulating electorates or for fighting wars with robot soldiers.
+
+51
+00:03:19,792 --> 00:03:23,939
+Speaker SPEAKER_00: But for the existential threat of AI taking over, we're all in the same boat.
+
+52
+00:03:24,381 --> 00:03:25,302
+Speaker SPEAKER_00: It's bad for all of us.
+
+53
+00:03:25,783 --> 00:03:29,030
+Speaker SPEAKER_00: And so we might be able to get China and the US to agree on things like that.
+
+54
+00:03:29,491 --> 00:03:31,174
+Speaker SPEAKER_00: It's like nuclear weapons.
+
+55
+00:03:31,153 --> 00:03:33,257
+Speaker SPEAKER_00: If there's a nuclear war, we all lose.
+
+56
+00:03:34,078 --> 00:03:35,979
+Speaker SPEAKER_00: And it's the same if these things take over.
+
+57
+00:03:36,501 --> 00:03:41,867
+Speaker SPEAKER_00: So since we're all in the same boat, we should be able to get agreement between China and the US and things like that.
+
+58
+00:03:41,888 --> 00:03:45,431
+Speaker SPEAKER_01: Do you think that tech companies will be the solution?
+
+59
+00:03:45,492 --> 00:03:50,558
+Speaker SPEAKER_01: Or are they so invested in this financially?
+
+60
+00:03:50,598 --> 00:03:57,448
+Speaker SPEAKER_01: And also, let's be frank, in terms of power, that they're not going to be part of the solution here?
+
+61
+00:03:59,251 --> 00:04:04,408
+Speaker SPEAKER_00: I think the tech companies are the people most likely to be able to see how to keep this stuff under control.
+
+62
+00:04:06,415 --> 00:04:07,599
+Speaker SPEAKER_01: Jeffrey Hinton thank you so much.
+
+63
+00:04:07,659 --> 00:04:07,980
+Speaker SPEAKER_01: Come back.
+
+64
+00:04:08,001 --> 00:04:10,509
+Speaker SPEAKER_01: We have more questions for you and we appreciate your candor.
+

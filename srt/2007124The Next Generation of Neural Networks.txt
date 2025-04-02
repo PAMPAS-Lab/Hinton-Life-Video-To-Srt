@@ -1,0 +1,2892 @@
+1
+00:00:17,580 --> 00:00:20,225
+Speaker SPEAKER_03: It's always fun introducing people who need no introduction.
+
+2
+00:00:21,827 --> 00:00:44,482
+Speaker SPEAKER_04: But for those of you who don't know Jeff and his work, he pretty much created, he helped create the field of machine learning as it now exists and was on the cutting edge back when it was the bleeding edge of statistical machine learning and neural nets when they first made their resurgence for the first time in our lifetime.
+
+3
+00:00:44,463 --> 00:01:03,314
+Speaker SPEAKER_04: and has been a constant force pushing it, pushing the analysis and the field away from just sort of the touchy-feely, let's tweak something until it thinks, and towards getting, building systems that we can understand and that actually do useful things that make our lives better.
+
+4
+00:01:03,295 --> 00:01:12,274
+Speaker SPEAKER_04: So if you read the talk announcement, you've seen all of his many accomplishments and members of various royal societies, et cetera.
+
+5
+00:01:12,293 --> 00:01:13,516
+Speaker SPEAKER_04: So I won't list those.
+
+6
+00:01:13,536 --> 00:01:17,584
+Speaker SPEAKER_04: I think instead of taking up more of his time, I'm just going to hand the microphone over to Jeff.
+
+7
+00:01:19,930 --> 00:01:20,189
+Speaker SPEAKER_04: Thank you.
+
+8
+00:01:25,132 --> 00:01:33,248
+Speaker SPEAKER_02: So the main aim of neural network research is to make computers recognize patterns better by emulating the way the brain does it.
+
+9
+00:01:33,769 --> 00:01:37,096
+Speaker SPEAKER_02: We know the brain learns to extract many layers of features from the sensory data.
+
+10
+00:01:37,558 --> 00:01:42,027
+Speaker SPEAKER_02: We don't know how it does it, so it's a sort of joint enterprise of science and engineering.
+
+11
+00:01:44,385 --> 00:01:47,930
+Speaker SPEAKER_02: The first generation of neural network, I can give you a two-minute history of neural networks.
+
+12
+00:01:48,469 --> 00:01:52,353
+Speaker SPEAKER_02: The first generation were things like perceptrons, where you had hand-coded features.
+
+13
+00:01:53,835 --> 00:01:54,635
+Speaker SPEAKER_02: They didn't adapt.
+
+14
+00:01:55,117 --> 00:01:58,861
+Speaker SPEAKER_02: So you might put an image, the pixels of an image here, have some hand-coded features.
+
+15
+00:01:59,221 --> 00:02:01,423
+Speaker SPEAKER_02: And you'd learn the weights to decision units.
+
+16
+00:02:02,144 --> 00:02:04,406
+Speaker SPEAKER_02: And if you wanted funding, you'd make decision units like that.
+
+17
+00:02:06,128 --> 00:02:10,211
+Speaker SPEAKER_02: These were fundamentally limited in what they could do, as was pointed out in 1969.
+
+18
+00:02:10,552 --> 00:02:12,974
+Speaker SPEAKER_02: And so people stopped doing them.
+
+19
+00:02:14,288 --> 00:02:23,461
+Speaker SPEAKER_02: Then sometime later, people figured out how to change the weights of the feature detectors as well as the weights of the decision units.
+
+20
+00:02:23,480 --> 00:02:25,283
+Speaker SPEAKER_02: So what you would do is take an image here.
+
+21
+00:02:25,683 --> 00:02:27,887
+Speaker SPEAKER_02: You go forwards through a feedforward neural network.
+
+22
+00:02:28,388 --> 00:02:32,052
+Speaker SPEAKER_02: You would compare the answer the network gave with the correct answer.
+
+23
+00:02:32,533 --> 00:02:36,639
+Speaker SPEAKER_02: You take some measure of that discrepancy, and you send it backwards through the net.
+
+24
+00:02:37,000 --> 00:02:42,388
+Speaker SPEAKER_02: And as you go backwards through the net, you compute the derivatives for all of the connection strengths here.
+
+25
+00:02:42,367 --> 00:02:49,075
+Speaker SPEAKER_02: both those ones, and those ones, and those ones, of the discrepancy between the correct answer and what you got.
+
+26
+00:02:49,415 --> 00:02:51,838
+Speaker SPEAKER_02: And you change all these weights to get closer to the correct answer.
+
+27
+00:02:52,359 --> 00:02:55,163
+Speaker SPEAKER_02: That's back propagation, and it's just the chain rule.
+
+28
+00:02:55,323 --> 00:02:59,366
+Speaker SPEAKER_02: It works for nonlinear units, so potentially these can learn very powerful things.
+
+29
+00:03:00,008 --> 00:03:01,330
+Speaker SPEAKER_02: And it was a huge disappointment.
+
+30
+00:03:01,849 --> 00:03:04,393
+Speaker SPEAKER_02: I can say that now because I got something better.
+
+31
+00:03:05,335 --> 00:03:11,961
+Speaker SPEAKER_02: Basically, we thought when we got this that we can now learn anything and we'll get lots of layers of features, object recognition, speech recognition, it'll all be easy.
+
+32
+00:03:14,284 --> 00:03:15,105
+Speaker SPEAKER_02: There's some problems.
+
+33
+00:03:15,645 --> 00:03:17,168
+Speaker SPEAKER_02: It worked for some things.
+
+34
+00:03:17,307 --> 00:03:19,030
+Speaker SPEAKER_02: Yann LeCun can make it work for more or less anything.
+
+35
+00:03:20,912 --> 00:03:23,795
+Speaker SPEAKER_02: But in the hands of other people, it has its limitations.
+
+36
+00:03:24,575 --> 00:03:26,277
+Speaker SPEAKER_02: And something else came along.
+
+37
+00:03:27,620 --> 00:03:32,305
+Speaker SPEAKER_02: So there was a temporary digression called kernel methods where
+
+38
+00:03:33,212 --> 00:03:36,725
+Speaker SPEAKER_02: What you do is, you do perceptrons in a cleverer way.
+
+39
+00:03:37,268 --> 00:03:41,324
+Speaker SPEAKER_02: You take each training example and you turn a training example into a feature.
+
+40
+00:03:41,664 --> 00:03:44,556
+Speaker SPEAKER_02: Basically, the feature is how similar are you to this training example.
+
+41
+00:03:45,413 --> 00:03:53,643
+Speaker SPEAKER_02: And then you have a clever optimization algorithm that decides to throw away some of those features and also decides how to weight the ones it keeps.
+
+42
+00:03:54,182 --> 00:04:02,252
+Speaker SPEAKER_02: But when you're finished, you've just got these fixed features produced according to a fixed recipe that didn't learn and some weights on these features to make your decision.
+
+43
+00:04:02,552 --> 00:04:03,974
+Speaker SPEAKER_02: So it's just a perceptron.
+
+44
+00:04:03,995 --> 00:04:06,358
+Speaker SPEAKER_02: There's a lot of clever math to how you optimize it, but it's just a perceptron.
+
+45
+00:04:06,758 --> 00:04:11,403
+Speaker SPEAKER_02: And what happened was people forgot all of Minsky and Pappert's criticisms about perceptrons not being able to do much.
+
+46
+00:04:11,907 --> 00:04:15,349
+Speaker SPEAKER_02: Also, it worked better than backpropagation in quite a few things, which was deeply embarrassing.
+
+47
+00:04:15,370 --> 00:04:19,454
+Speaker SPEAKER_02: But it says a lot more about how bad backpropagation was than about how good support vector machines are.
+
+48
+00:04:23,036 --> 00:04:27,221
+Speaker SPEAKER_02: So if you ask what's wrong with backpropagation, it requires labeled data.
+
+49
+00:04:27,420 --> 00:04:30,384
+Speaker SPEAKER_02: And some of you here may know it's easier to get data than labels.
+
+50
+00:04:31,305 --> 00:04:36,550
+Speaker SPEAKER_02: If you have it as a model of the brain, you've got about that many parameters, and you live for about that many seconds.
+
+51
+00:04:37,050 --> 00:04:40,192
+Speaker SPEAKER_02: Actually, twice as many, which is important to some of us.
+
+52
+00:04:41,692 --> 00:04:45,175
+Speaker SPEAKER_02: There's not enough information in labels to constrain that many parameters.
+
+53
+00:04:45,274 --> 00:04:48,617
+Speaker SPEAKER_02: You need ten to the five bits or bytes per second.
+
+54
+00:04:48,939 --> 00:04:51,180
+Speaker SPEAKER_02: There's only one place you're going to get that, and that's the sensory input.
+
+55
+00:04:51,821 --> 00:04:54,843
+Speaker SPEAKER_02: So the brain must be building a model of the sensory input, not of these labels.
+
+56
+00:04:55,264 --> 00:04:56,526
+Speaker SPEAKER_02: The labels don't have enough information.
+
+57
+00:04:58,107 --> 00:04:59,629
+Speaker SPEAKER_02: Also, the learning time didn't scale well.
+
+58
+00:05:00,129 --> 00:05:01,310
+Speaker SPEAKER_02: You couldn't learn lots of layers.
+
+59
+00:05:01,329 --> 00:05:03,492
+Speaker SPEAKER_02: The whole point of backpropagation was to learn lots of layers.
+
+60
+00:05:03,752 --> 00:05:06,875
+Speaker SPEAKER_02: And if you gave it, like, ten layers to learn, it would just take forever.
+
+61
+00:05:07,795 --> 00:05:09,757
+Speaker SPEAKER_02: And then there's some neural things I won't talk about.
+
+62
+00:05:11,982 --> 00:05:17,687
+Speaker SPEAKER_02: So if you want to overcome these limitations, we want to keep the efficiency of a gradient method for updating the parameters.
+
+63
+00:05:18,267 --> 00:05:25,095
+Speaker SPEAKER_02: But instead of trying to learn the probability of a label given an image, where you need the labels, we're just going to try and learn the probability of an image.
+
+64
+00:05:25,656 --> 00:05:31,261
+Speaker SPEAKER_02: That is, we're going to try and build a generative model that, if you run it, will produce stuff that looks like the sensory data.
+
+65
+00:05:32,903 --> 00:05:34,944
+Speaker SPEAKER_02: In other words, we're going to try and learn to do computer graphics.
+
+66
+00:05:35,365 --> 00:05:40,790
+Speaker SPEAKER_02: And once we can do that, then computer vision is just going to be inferring how the computer graphics produce this image.
+
+67
+00:05:41,057 --> 00:05:43,120
+Speaker SPEAKER_02: So what kind of a model could the brain be using for that?
+
+68
+00:05:43,160 --> 00:05:48,466
+Speaker SPEAKER_02: The building blocks I'm going to use are a bit like neurons.
+
+69
+00:05:48,485 --> 00:05:50,007
+Speaker SPEAKER_02: They're intended to be a bit like neurons.
+
+70
+00:05:50,088 --> 00:05:53,050
+Speaker SPEAKER_02: They're these binary stochastic neurons that get some input.
+
+71
+00:05:53,711 --> 00:05:58,297
+Speaker SPEAKER_02: They give an output that's either a one or a zero, so it's easy to communicate, and it's probabilistic.
+
+72
+00:05:59,439 --> 00:06:06,425
+Speaker SPEAKER_02: So this is the probability of giving a one as a function of the total input you get, which is your external input plus what you get from other neurons times the weights on the connections.
+
+73
+00:06:08,309 --> 00:06:09,629
+Speaker SPEAKER_02: And we're going to hook those up.
+
+74
+00:06:10,521 --> 00:06:13,367
+Speaker SPEAKER_02: into a little module that I'll call a restricted Boltzmann machine.
+
+75
+00:06:13,968 --> 00:06:18,935
+Speaker SPEAKER_02: This little module here has a layer of pixels and a layer of feature detectors.
+
+76
+00:06:19,396 --> 00:06:23,463
+Speaker SPEAKER_02: So it looks like it's never going to learn lots and lots of layers of feature detectors.
+
+77
+00:06:23,483 --> 00:06:30,976
+Speaker SPEAKER_02: It looks like we've thrown out the baby with the bathwater and we're now just restricted to learning one layer of features, but we'll fix that later.
+
+78
+00:06:32,240 --> 00:06:37,886
+Speaker SPEAKER_02: We're going to have a very restricted connectivity, hence the name, where this is going to be a bipartite graph.
+
+79
+00:06:37,906 --> 00:06:42,310
+Speaker SPEAKER_02: The visible units for now don't connect to each other and the hidden units don't connect to each other.
+
+80
+00:06:43,031 --> 00:06:50,798
+Speaker SPEAKER_02: The advantage of that is, if I tell you the state of the pixels, these become independent and so you can update them independently and in parallel.
+
+81
+00:06:50,819 --> 00:06:55,682
+Speaker SPEAKER_02: So given some pixels and given that you know the weights on the connections, you can update all these units in parallel.
+
+82
+00:06:56,483 --> 00:07:00,187
+Speaker SPEAKER_02: And so you've got your feature activations very simply.
+
+83
+00:07:00,408 --> 00:07:02,230
+Speaker SPEAKER_02: There's no lateral interactions there.
+
+84
+00:07:05,821 --> 00:07:12,557
+Speaker SPEAKER_02: These networks are governed by an energy function, and the energy function
+
+85
+00:07:13,415 --> 00:07:17,821
+Speaker SPEAKER_02: determines the probability of the network adopting particular states just like in a physical system.
+
+86
+00:07:18,281 --> 00:07:23,428
+Speaker SPEAKER_02: These stochastic units will kind of rattle around and they'll tend to enter low energy states and avoid high energy states.
+
+87
+00:07:24,310 --> 00:07:26,072
+Speaker SPEAKER_02: The weights determine the energies linearly.
+
+88
+00:07:26,733 --> 00:07:29,177
+Speaker SPEAKER_02: The probabilities are an exponential function of the energies.
+
+89
+00:07:29,819 --> 00:07:37,009
+Speaker SPEAKER_02: So the probabilities, the log probabilities are a linear function of the weights and that makes learning easy.
+
+90
+00:07:37,815 --> 00:07:42,747
+Speaker SPEAKER_02: There's a very simple algorithm that Terry Sanofsky and me invented in about 1982.
+
+91
+00:07:43,730 --> 00:07:48,139
+Speaker SPEAKER_02: In a general network, you can run it, but it's very, very slow.
+
+92
+00:07:48,360 --> 00:07:51,387
+Speaker SPEAKER_02: In this restricted Boltzmann machine, it's much more efficient.
+
+93
+00:07:53,358 --> 00:07:56,442
+Speaker SPEAKER_02: And I'm just going to show you what the maximum likelihood learning algorithm looks like.
+
+94
+00:07:56,483 --> 00:08:00,007
+Speaker SPEAKER_02: That is, suppose you said, take one of your parameters on your connection.
+
+95
+00:08:00,668 --> 00:08:09,963
+Speaker SPEAKER_02: How do I change that parameter so that when I run this machine in generative mode, in computer graphics mode, it's more likely to generate stuff like the stuff I've observed?
+
+96
+00:08:11,764 --> 00:08:12,786
+Speaker SPEAKER_02: And so here's what you should do.
+
+97
+00:08:13,427 --> 00:08:18,235
+Speaker SPEAKER_02: You should take a data vector, an image, and you should put it here on the visible units.
+
+98
+00:08:19,278 --> 00:08:23,824
+Speaker SPEAKER_02: And then you should let the visible units via their current weights activate the feature detectors.
+
+99
+00:08:24,545 --> 00:08:32,094
+Speaker SPEAKER_02: So you provide input to each feature detector and you now make a stochastic decision about whether the feature detectors should turn on.
+
+100
+00:08:32,434 --> 00:08:34,417
+Speaker SPEAKER_02: Lots of positive input, it almost certainly turns on.
+
+101
+00:08:34,677 --> 00:08:36,620
+Speaker SPEAKER_02: Lots of negative input, it almost certainly turns off.
+
+102
+00:08:37,802 --> 00:08:44,289
+Speaker SPEAKER_02: Then given the binary state of the feature detectors, we now reconstruct the pixels from the feature detectors.
+
+103
+00:08:45,011 --> 00:08:46,355
+Speaker SPEAKER_02: And we just keep going like that.
+
+104
+00:08:47,177 --> 00:08:52,809
+Speaker SPEAKER_02: And if we run this chain for a long time, this is called a Markov chain, and this process is called alternating Gibbs sampling.
+
+105
+00:08:53,370 --> 00:08:57,279
+Speaker SPEAKER_02: If we go backwards and forwards for a long time, we'll get fantasies from the model.
+
+106
+00:08:57,701 --> 00:09:00,607
+Speaker SPEAKER_02: This is the kind of stuff the model would like to produce.
+
+107
+00:09:00,587 --> 00:09:05,316
+Speaker SPEAKER_02: These are the things that the model shows you when it's in its low energy states, given its current parameters.
+
+108
+00:09:05,677 --> 00:09:06,958
+Speaker SPEAKER_02: So that's the sort of stuff it believes in.
+
+109
+00:09:06,999 --> 00:09:08,120
+Speaker SPEAKER_02: This is the data.
+
+110
+00:09:08,701 --> 00:09:12,828
+Speaker SPEAKER_02: And obviously, you want to say to it, believe in the data, not your own fantasies.
+
+111
+00:09:13,429 --> 00:09:19,441
+Speaker SPEAKER_02: And so, we'd like to change the parameters, the weights on the connections, so as to make this more likely and that less likely.
+
+112
+00:09:20,142 --> 00:09:22,004
+Speaker SPEAKER_02: And the way to do that is to say...
+
+113
+00:09:23,351 --> 00:09:36,940
+Speaker SPEAKER_02: Measure how often a pixel I and a feature detector J are on together when I'm showing you the data vector V, and then measure how often they're on together when the model is just fantasizing.
+
+114
+00:09:38,184 --> 00:09:44,692
+Speaker SPEAKER_02: Raise the weights by how often they're on together when it's seeing data and lower the weights by how often they're on together when it's fantasizing.
+
+115
+00:09:45,212 --> 00:09:49,859
+Speaker SPEAKER_02: And what that'll do is it'll make it happier with the data, lower energy, and less happy with its fantasies.
+
+116
+00:09:50,720 --> 00:09:53,503
+Speaker SPEAKER_02: And so it'll, its fantasies will gradually move towards the data.
+
+117
+00:09:53,523 --> 00:10:05,677
+Speaker SPEAKER_02: If its fantasies are just like the data, then these correlations, the probability of pixel line feature detector J being on together in the fantasies will be just the same as in the data and so it'll stop learning.
+
+118
+00:10:06,028 --> 00:10:12,763
+Speaker SPEAKER_02: So it's a very simple local learning rule that a neuron could implement because it just involves knowing the activity of a neuron and the other neuron it connects to.
+
+119
+00:10:13,565 --> 00:10:16,029
+Speaker SPEAKER_02: And that will do maximum likelihood learning, but it's slow.
+
+120
+00:10:16,591 --> 00:10:18,134
+Speaker SPEAKER_02: You have to settle for like a hundred steps.
+
+121
+00:10:19,056 --> 00:10:21,961
+Speaker SPEAKER_02: So I figured out how to make this algorithm go a hundred thousand times faster.
+
+122
+00:10:23,224 --> 00:10:27,413
+Speaker SPEAKER_02: The way you do it is instead of running for a hundred steps, you just run for one step.
+
+123
+00:10:30,126 --> 00:10:33,591
+Speaker SPEAKER_02: So, now you go up, you come down, and you go up again.
+
+124
+00:10:34,533 --> 00:10:37,658
+Speaker SPEAKER_02: And you take this difference in statistics and that's quite efficient to do.
+
+125
+00:10:38,438 --> 00:10:42,283
+Speaker SPEAKER_02: It took me 17 years to figure this out and in that time, computers got a thousand times faster.
+
+126
+00:10:46,230 --> 00:10:57,365
+Speaker SPEAKER_02: So, the change in the weight now is the difference is a learning rate times the difference between statistics measured with the data and statistics measured with reconstructions of the data.
+
+127
+00:10:58,813 --> 00:11:01,298
+Speaker SPEAKER_02: That's not doing maximum likelihood learning, but it works well anyway.
+
+128
+00:11:02,942 --> 00:11:04,446
+Speaker SPEAKER_02: So I'm going to show you a little example.
+
+129
+00:11:05,528 --> 00:11:08,192
+Speaker SPEAKER_02: We're going to take a little image where we're going to have handwritten digits.
+
+130
+00:11:08,253 --> 00:11:09,375
+Speaker SPEAKER_02: This is just a toy example.
+
+131
+00:11:10,116 --> 00:11:11,941
+Speaker SPEAKER_02: We're going to put random weights on the connections.
+
+132
+00:11:13,163 --> 00:11:18,274
+Speaker SPEAKER_02: Then we're going to activate the binary feature detectors, give them the input they're getting from the pixels.
+
+133
+00:11:19,097 --> 00:11:23,044
+Speaker SPEAKER_02: Then we're going to reconstruct the image and initially, we're going to allow the reconstruction.
+
+134
+00:11:23,085 --> 00:11:25,149
+Speaker SPEAKER_02: This will be very different from the data because they're random weights.
+
+135
+00:11:25,970 --> 00:11:36,008
+Speaker SPEAKER_02: And then we're going to activate the feature detectors again and we're going to increment the connections on the data and we're going to decrement the connections on the reconstructions.
+
+136
+00:11:36,749 --> 00:11:43,400
+Speaker SPEAKER_02: And that is now going to learn nice weights for us as I'll show you, nice connection strengths that will make this be a very good model of handwritten twos.
+
+137
+00:11:43,785 --> 00:11:56,972
+Speaker SPEAKER_02: It's important to run the algorithm where you take the data and on the data you increment connection strengths and on your, this is really a sort of screwed up version of the data that's been infected by the prejudices of the model.
+
+138
+00:11:57,494 --> 00:12:03,886
+Speaker SPEAKER_02: So the models kind of interprets the data in terms of its features, then it reconstructs something it would rather see than the data.
+
+139
+00:12:04,205 --> 00:12:13,024
+Speaker SPEAKER_02: Now, you could try running a learning algorithm where you take the data, you interpret it, you imagine the data is what you would like to see, and then you learn on that.
+
+140
+00:12:14,025 --> 00:12:16,932
+Speaker SPEAKER_02: That's the algorithm George Bush runs, and it doesn't work very well.
+
+141
+00:12:20,033 --> 00:12:29,364
+Speaker SPEAKER_02: So after you've been doing some learning on this for not very long, I'm now showing you 25,000 connection strengths.
+
+142
+00:12:29,924 --> 00:12:31,186
+Speaker SPEAKER_02: Each of these is one of the features.
+
+143
+00:12:31,225 --> 00:12:31,706
+Speaker SPEAKER_02: Take this guy.
+
+144
+00:12:31,726 --> 00:12:32,347
+Speaker SPEAKER_02: That's a feature.
+
+145
+00:12:33,188 --> 00:12:38,575
+Speaker SPEAKER_02: And the intensity here shows you the strength of the connection to the pixels.
+
+146
+00:12:39,255 --> 00:12:45,383
+Speaker SPEAKER_02: So this feature really wants to have these pixels off, and it really wants to have these pixels on, and it doesn't care much about the other ones.
+
+147
+00:12:45,503 --> 00:12:46,543
+Speaker SPEAKER_02: Mid gray means zero.
+
+148
+00:12:47,485 --> 00:12:49,567
+Speaker SPEAKER_02: And you can see the features are fairly local.
+
+149
+00:12:50,273 --> 00:12:53,457
+Speaker SPEAKER_02: And these features are now very good at reconstructing 2s.
+
+150
+00:12:55,200 --> 00:12:56,182
+Speaker SPEAKER_02: It was trained on 2s.
+
+151
+00:12:56,682 --> 00:13:03,312
+Speaker SPEAKER_02: So if I show you, show it some 2s it never saw before and get it to reconstruct them, you can see it reconstructs them pretty well.
+
+152
+00:13:05,735 --> 00:13:09,179
+Speaker SPEAKER_02: The funny pixels here which aren't quite right is because I'm using Vista.
+
+153
+00:13:13,446 --> 00:13:18,693
+Speaker SPEAKER_02: So you can see the reconstruction is very like the data and the
+
+154
+00:13:21,205 --> 00:13:27,173
+Speaker SPEAKER_02: It's not quite identical but it's a very good reconstruction for a wide variety of twos and these are ones it didn't see during training.
+
+155
+00:13:28,335 --> 00:13:28,615
+Speaker SPEAKER_02: Okay.
+
+156
+00:13:30,278 --> 00:13:33,302
+Speaker SPEAKER_02: Now, what I'm going to do, that's not that surprising.
+
+157
+00:13:33,341 --> 00:13:36,365
+Speaker SPEAKER_02: If you just copied the pixels and copied them back, you'd get the same thing, right?
+
+158
+00:13:37,307 --> 00:13:38,308
+Speaker SPEAKER_02: So that would work very well.
+
+159
+00:13:38,589 --> 00:13:40,631
+Speaker SPEAKER_02: But now, I'm going to show it something it didn't train on.
+
+160
+00:13:46,871 --> 00:13:52,018
+Speaker SPEAKER_02: And what you have to imagine is that Iraq is made of threes but George Bush thinks it's made of twos.
+
+161
+00:13:53,418 --> 00:13:53,740
+Speaker SPEAKER_02: Okay.
+
+162
+00:13:53,779 --> 00:13:57,724
+Speaker SPEAKER_02: So, here's the real data and this is what George Bush sees.
+
+163
+00:14:00,067 --> 00:14:03,931
+Speaker SPEAKER_02: That's actually inconsistent with my previous joke because it assumes he runs this learning algorithm.
+
+164
+00:14:05,211 --> 00:14:05,732
+Speaker SPEAKER_02: Sorry about that.
+
+165
+00:14:06,212 --> 00:14:06,673
+Speaker SPEAKER_02: Okay.
+
+166
+00:14:06,693 --> 00:14:12,980
+Speaker SPEAKER_02: So, you see that it perverts the data into what it would like to believe which is like what it's trained on.
+
+167
+00:14:13,500 --> 00:14:15,125
+Speaker SPEAKER_02: Okay, that was just a toy example.
+
+168
+00:14:15,765 --> 00:14:21,719
+Speaker SPEAKER_02: Now what we're going to do is train a layer of features like that in the way I just showed you.
+
+169
+00:14:22,240 --> 00:14:26,227
+Speaker SPEAKER_02: We'll get these features that are good at reconstructing the data, at least for the kind of data it's trained on.
+
+170
+00:14:26,850 --> 00:14:32,522
+Speaker SPEAKER_02: And then we're going to take the activations of those features and we're going to make those data and train another layer.
+
+171
+00:14:33,092 --> 00:14:33,514
+Speaker SPEAKER_02: Okay?
+
+172
+00:14:34,134 --> 00:14:35,576
+Speaker SPEAKER_02: And then we're going to keep doing that.
+
+173
+00:14:36,177 --> 00:14:41,423
+Speaker SPEAKER_02: And for reasons that are slightly complicated and I will partially explain, this works extremely well.
+
+174
+00:14:42,144 --> 00:14:44,347
+Speaker SPEAKER_02: You get more and more abstract features as you go up.
+
+175
+00:14:44,908 --> 00:14:51,739
+Speaker SPEAKER_02: And once you've gone up through about three layers, you got very nice abstract features that are very good then for doing things like classification.
+
+176
+00:14:52,318 --> 00:14:54,982
+Speaker SPEAKER_02: But all these features were learned without ever knowing the labels.
+
+177
+00:14:58,118 --> 00:15:07,385
+Speaker SPEAKER_02: It can be proved that every time we add another layer, we get a better model of the training data or to be more precise, we improve a lower bound on how good a model we got of the training data.
+
+178
+00:15:11,168 --> 00:15:13,010
+Speaker SPEAKER_02: So here's a quick explanation of what's going on.
+
+179
+00:15:14,292 --> 00:15:24,660
+Speaker SPEAKER_02: When we learn the weights in this little restricted Boltzmann machine, those weights define the probability of given a vector here, reconstructing a particular vector there.
+
+180
+00:15:24,941 --> 00:15:28,024
+Speaker SPEAKER_02: So that's the probability of a visible vector given a hidden vector.
+
+181
+00:15:28,898 --> 00:15:33,283
+Speaker SPEAKER_02: They also define this whole Markov chain if you went backwards and forwards many times.
+
+182
+00:15:33,764 --> 00:15:41,316
+Speaker SPEAKER_02: So if you went backwards and forwards many times and then look to see what you get here, you'll get some probability distribution over hidden vectors and the weights are defining that.
+
+183
+00:15:42,136 --> 00:15:58,179
+Speaker SPEAKER_02: And so you can think of the weights as defining both a mapping from these vectors of activity over the hidden units to the pixels, to images, that's this term, and the same weights define a prior over these patterns of hidden activities.
+
+184
+00:15:59,240 --> 00:16:10,600
+Speaker SPEAKER_02: When you learn the next level Boltzmann machine up, you're going to say, let's keep this, keep this mapping, and let's learn a better model of the posterior that we got here when we used this mapping.
+
+185
+00:16:11,557 --> 00:16:21,629
+Speaker SPEAKER_02: And you keep replacing the post, the implicit posterior defined by these weights by a better one which is the P of V given H defined by the next Boltzmann machine.
+
+186
+00:16:21,649 --> 00:16:24,113
+Speaker SPEAKER_02: And so what you're really doing is dividing this task into two tasks.
+
+187
+00:16:24,312 --> 00:16:29,539
+Speaker SPEAKER_02: One is, find me a distribution that's a little bit simpler than the data distribution.
+
+188
+00:16:29,820 --> 00:16:31,542
+Speaker SPEAKER_02: Don't go the whole way to try and find a full model.
+
+189
+00:16:31,782 --> 00:16:34,865
+Speaker SPEAKER_02: Just find me something a bit simpler than the data distribution.
+
+190
+00:16:34,846 --> 00:16:36,748
+Speaker SPEAKER_02: That's going to be easier for a Boltzmann machine to model.
+
+191
+00:16:37,328 --> 00:16:38,551
+Speaker SPEAKER_02: That's very non-parametric.
+
+192
+00:16:39,331 --> 00:16:44,477
+Speaker SPEAKER_02: And then find me a parametric mapping from that slightly simpler distribution to the data distribution.
+
+193
+00:16:45,259 --> 00:16:47,221
+Speaker SPEAKER_02: So I call this creeping parameterization.
+
+194
+00:16:47,662 --> 00:16:49,784
+Speaker SPEAKER_02: What you're really doing is it's like taking the shell off an onion.
+
+195
+00:16:50,065 --> 00:16:51,527
+Speaker SPEAKER_02: You got this distribution you want to model.
+
+196
+00:16:52,347 --> 00:16:57,394
+Speaker SPEAKER_02: Let's take off one shell, which is this, and get a very similar distribution.
+
+197
+00:16:57,761 --> 00:17:04,457
+Speaker SPEAKER_02: There's a bit easier to model and some parameters that tell us how to turn this one to this one and then let's go and solve the problem of modeling this distribution.
+
+198
+00:17:05,058 --> 00:17:06,982
+Speaker SPEAKER_02: So that's what's going on when you learn these multiple layers.
+
+199
+00:17:09,709 --> 00:17:13,999
+Speaker SPEAKER_02: After you've learned, say, three layers, you have a model that's a bit surprising.
+
+200
+00:17:14,282 --> 00:17:17,627
+Speaker SPEAKER_02: So, this is the last restricted Boltzmann machine we learned.
+
+201
+00:17:18,048 --> 00:17:21,914
+Speaker SPEAKER_02: So, here we have this sort of model that says, to generate from the model, go backwards and forwards.
+
+202
+00:17:22,676 --> 00:17:30,409
+Speaker SPEAKER_02: But because we just kept the P of V given H for the previous models, this is a directed model where you sort of go chunk, chunk to generate.
+
+203
+00:17:30,809 --> 00:17:38,501
+Speaker SPEAKER_02: So, the right way to generate from this combined model, when you've learned three layers of features, is to take the top two layers and go backwards and forwards for a long
+
+204
+00:17:40,117 --> 00:17:42,299
+Speaker SPEAKER_02: It's fortunate you don't actually need to generate from it.
+
+205
+00:17:42,319 --> 00:17:44,142
+Speaker SPEAKER_02: I'm just telling you how you would if you did.
+
+206
+00:17:44,863 --> 00:17:45,923
+Speaker SPEAKER_02: We want this for perception.
+
+207
+00:17:45,963 --> 00:17:48,906
+Speaker SPEAKER_02: So really, you just need to do perceptual inference, which is chonk, chonk, chonk.
+
+208
+00:17:48,946 --> 00:17:49,567
+Speaker SPEAKER_02: It's very fast.
+
+209
+00:17:50,548 --> 00:17:52,550
+Speaker SPEAKER_02: But to generate, you'd have to go back and forth for a long time.
+
+210
+00:17:53,412 --> 00:17:57,115
+Speaker SPEAKER_02: And then once you've decided on a pattern here, you just go chonk, chonk.
+
+211
+00:17:57,896 --> 00:17:59,238
+Speaker SPEAKER_02: That's very directed and easy.
+
+212
+00:18:00,740 --> 00:18:06,665
+Speaker SPEAKER_02: So I'm now going to learn a particular model of some handwritten digits, but all the digit classes now.
+
+213
+00:18:06,730 --> 00:18:12,297
+Speaker SPEAKER_02: So we're going to put slightly bigger images of handwritten digits from a very standard data set where we know how well other methods do.
+
+214
+00:18:13,679 --> 00:18:21,188
+Speaker SPEAKER_02: In fact, it's a data set on which support vector machines beat back propagation, which was bad news for back propagation, but we're going to reverse that in a minute.
+
+215
+00:18:22,769 --> 00:18:24,992
+Speaker SPEAKER_02: We're going to learn 500 features now instead of 50.
+
+216
+00:18:25,032 --> 00:18:30,460
+Speaker SPEAKER_02: Once we've learned those, we're going to take the data, map it through these weights,
+
+217
+00:18:30,440 --> 00:18:34,425
+Speaker SPEAKER_02: which is just these weights in the opposite direction, and get some feature vectors.
+
+218
+00:18:34,866 --> 00:18:37,049
+Speaker SPEAKER_02: We're going to treat those as data and learn this guy.
+
+219
+00:18:37,871 --> 00:18:39,333
+Speaker SPEAKER_02: Then we're going to take these feature vectors.
+
+220
+00:18:39,794 --> 00:18:41,737
+Speaker SPEAKER_02: We're going to tack on 10 label units.
+
+221
+00:18:41,856 --> 00:18:44,421
+Speaker SPEAKER_02: So now we needed the labels, but I'll get rid of that later.
+
+222
+00:18:45,261 --> 00:18:52,252
+Speaker SPEAKER_02: And so we get a 510-dimensional vector here, and we're going to learn a joint density model of the labels and the features.
+
+223
+00:18:52,653 --> 00:18:55,176
+Speaker SPEAKER_02: We're not trying to get from the features to the labels.
+
+224
+00:18:55,218 --> 00:18:58,201
+Speaker SPEAKER_02: We're trying to say, why do these two things go together?
+
+225
+00:18:58,182 --> 00:19:00,784
+Speaker SPEAKER_02: So we're learning a joint model of both, not a discriminative model.
+
+226
+00:19:02,349 --> 00:19:09,999
+Speaker SPEAKER_02: When we've completed this learning, what we're going to end up with is, the top level here is a Boltzmann machine, and so it has an energy function.
+
+227
+00:19:10,499 --> 00:19:12,000
+Speaker SPEAKER_02: And you can think of that as a landscape.
+
+228
+00:19:12,480 --> 00:19:18,248
+Speaker SPEAKER_02: When the weights are all small here, or close to zero, then the energy landscape is very flat.
+
+229
+00:19:18,868 --> 00:19:21,632
+Speaker SPEAKER_02: All the different configurations here are more or less equally good.
+
+230
+00:19:22,352 --> 00:19:25,675
+Speaker SPEAKER_02: As it learns, it's going to carve ravines in this energy landscape.
+
+231
+00:19:26,356 --> 00:19:29,961
+Speaker SPEAKER_02: If you think of it as a 510 dimensional energy landscape,
+
+232
+00:19:30,363 --> 00:19:43,268
+Speaker SPEAKER_02: These ravines are going to have the property that in the floor of the ravine, there's about ten degrees of freedom and those are the ways in which a digit can vary and still be a good instance of that digit, like a two with a bigger loop or a longer tail.
+
+233
+00:19:43,890 --> 00:19:51,644
+Speaker SPEAKER_02: Up the sides of the ravine, there's like 490 directions and those are the ways in which if you varied the image, it wouldn't be such a good two anymore.
+
+234
+00:19:53,566 --> 00:20:05,053
+Speaker SPEAKER_02: But the nice thing is, it's going to learn long narrow ravines so that one two can be very different from another two and yet connected by this ravine, the ravines capture the manifold.
+
+235
+00:20:05,073 --> 00:20:12,029
+Speaker SPEAKER_02: So it could wander from one to another in a way that it won't wander from a two to a three even though the three might be more similar in pixels to the two.
+
+236
+00:20:14,103 --> 00:20:16,807
+Speaker SPEAKER_02: I want to show you this generative model actually generating.
+
+237
+00:20:17,508 --> 00:20:19,569
+Speaker SPEAKER_02: Before I do that, I want to own up.
+
+238
+00:20:19,611 --> 00:20:42,642
+Speaker SPEAKER_02: We did a little bit of fine-tuning, which actually took longer than the original learning, where you, after you've done that greedy layer-by-layer learning, you do a bit of fine-tuning where you put in images, you do a forward pass, bottom up, with binary states, and when you do this forward pass, you adjust the connection slightly so that what you get in one layer will be better at reconstructing what caused it in the layer below.
+
+239
+00:20:43,751 --> 00:20:47,615
+Speaker SPEAKER_02: Then, you do a few iterations at the top level Boltzmann machine.
+
+240
+00:20:47,634 --> 00:20:49,876
+Speaker SPEAKER_02: You go backwards and forwards a few times to get the learning signal there.
+
+241
+00:20:50,317 --> 00:20:51,558
+Speaker SPEAKER_02: And then you do a down pass.
+
+242
+00:20:52,138 --> 00:20:59,526
+Speaker SPEAKER_02: And during the down pass, you adjust the connections going upwards so that they're better at reconstructing what caused the activity in that layer.
+
+243
+00:21:00,066 --> 00:21:04,529
+Speaker SPEAKER_02: So during the down pass, you know what caused activity because you caused it and you're trying to recover those causes.
+
+244
+00:21:05,290 --> 00:21:07,893
+Speaker SPEAKER_02: That fine tuning helps, but it'll work without it.
+
+245
+00:21:10,255 --> 00:21:12,257
+Speaker SPEAKER_02: So now, I'm going to attempt to show you a movie.
+
+246
+00:21:23,948 --> 00:21:24,769
+Speaker SPEAKER_02: That's not very nice.
+
+247
+00:21:31,218 --> 00:21:31,518
+Speaker SPEAKER_02: Okay.
+
+248
+00:21:31,778 --> 00:21:32,619
+Speaker SPEAKER_02: There's that network.
+
+249
+00:21:33,862 --> 00:21:34,923
+Speaker SPEAKER_02: Here's where we're going to put images.
+
+250
+00:21:35,624 --> 00:21:38,708
+Speaker SPEAKER_02: Here's 500 features, 500 features, 2,000 features, and the 10 labels.
+
+251
+00:21:39,489 --> 00:21:41,090
+Speaker SPEAKER_02: First of all, we'll get it to do some perception.
+
+252
+00:21:42,093 --> 00:21:47,740
+Speaker SPEAKER_02: So I'm going to give it an image and tell it to run forwards.
+
+253
+00:21:49,583 --> 00:21:49,823
+Speaker SPEAKER_02: Oops.
+
+254
+00:21:50,104 --> 00:21:50,324
+Speaker SPEAKER_02: Sorry.
+
+255
+00:21:50,344 --> 00:21:50,904
+Speaker SPEAKER_02: I didn't mean that.
+
+256
+00:21:51,786 --> 00:21:52,487
+Speaker SPEAKER_02: I meant that.
+
+257
+00:21:54,948 --> 00:21:59,574
+Speaker SPEAKER_02: And you'll see these are stochastic, they keep changing, but it's very sure that it's a four.
+
+258
+00:22:00,275 --> 00:22:02,557
+Speaker SPEAKER_02: So those are the identities of these neurons.
+
+259
+00:22:03,258 --> 00:22:07,323
+Speaker SPEAKER_02: It knows that's a four and it has no doubt about it, even though its feature detectives are fluctuating a bit.
+
+260
+00:22:08,444 --> 00:22:12,229
+Speaker SPEAKER_02: If I give it a five, hopefully it'll think it's a five.
+
+261
+00:22:14,251 --> 00:22:15,212
+Speaker SPEAKER_02: Yeah, it doesn't have any doubt.
+
+262
+00:22:16,253 --> 00:22:18,517
+Speaker SPEAKER_02: So now let's be mean to it because that's a lot more fun.
+
+263
+00:22:20,640 --> 00:22:22,321
+Speaker SPEAKER_02: I'm going to give it that.
+
+264
+00:22:26,690 --> 00:22:31,857
+Speaker SPEAKER_02: So it says, so 4, 6, 8, 4, 8, 8, 8, 8, 8, 4.
+
+265
+00:22:32,799 --> 00:22:34,461
+Speaker SPEAKER_02: It can't make up its mind whether it's a 4 or an 8.
+
+266
+00:22:34,521 --> 00:22:36,184
+Speaker SPEAKER_02: And that's pretty reasonable in those circumstances.
+
+267
+00:22:36,865 --> 00:22:39,529
+Speaker SPEAKER_02: It will actually, for that one, say 8 a bit more often than anything else.
+
+268
+00:22:39,951 --> 00:22:41,413
+Speaker SPEAKER_02: So we class it as getting that right.
+
+269
+00:22:41,913 --> 00:22:43,375
+Speaker SPEAKER_02: But it's very unsure whether it's an 8 or a 4.
+
+270
+00:22:43,395 --> 00:22:45,239
+Speaker SPEAKER_02: And just occasionally, it thinks it can be other things like a 2.
+
+271
+00:22:45,439 --> 00:22:46,661
+Speaker SPEAKER_02: But it basically thinks 4 or 8.
+
+272
+00:22:48,104 --> 00:22:49,625
+Speaker SPEAKER_02: I can make it run faster so you can.
+
+273
+00:22:52,896 --> 00:22:54,619
+Speaker SPEAKER_02: It's basically four, eight, and occasional six.
+
+274
+00:22:55,480 --> 00:22:57,044
+Speaker SPEAKER_02: I could give it something like this.
+
+275
+00:23:00,410 --> 00:23:03,694
+Speaker SPEAKER_02: And it thinks basically one or seven and occasionally a four.
+
+276
+00:23:04,537 --> 00:23:08,123
+Speaker SPEAKER_02: Because I programmed this myself, I want to point out that it's very reasonable for this.
+
+277
+00:23:08,542 --> 00:23:09,325
+Speaker SPEAKER_02: This is my baby.
+
+278
+00:23:09,684 --> 00:23:13,050
+Speaker SPEAKER_02: And it's very reasonable for it to think that might be four because, look, you can see the four in there.
+
+279
+00:23:13,811 --> 00:23:16,676
+Speaker SPEAKER_03: Okay.
+
+280
+00:23:17,787 --> 00:23:21,571
+Speaker SPEAKER_02: Now, that was just doing perception but the very same model does generation.
+
+281
+00:23:21,731 --> 00:23:28,101
+Speaker SPEAKER_02: So what I can do is I can fix a top level unit and all I've done is I've fixed the state of one neuron.
+
+282
+00:23:29,663 --> 00:23:32,307
+Speaker SPEAKER_02: There's a million connections there because that's 2,500.
+
+283
+00:23:32,386 --> 00:23:33,528
+Speaker SPEAKER_02: I just fixed this one neuron.
+
+284
+00:23:34,009 --> 00:23:40,317
+Speaker SPEAKER_02: But when I fix that state, then the weights, the 2,000 weights coming out of there to these neurons here.
+
+285
+00:23:40,702 --> 00:23:47,471
+Speaker SPEAKER_02: What they'll do is they'll lower the energy of the ravine for twos and they'll raise the energy of the ravine for all the other guys.
+
+286
+00:23:47,971 --> 00:23:52,115
+Speaker SPEAKER_02: So now we've got this landscape in which you got all these ravines but the two ravine has been lowered.
+
+287
+00:23:52,757 --> 00:23:57,801
+Speaker SPEAKER_02: And if we put it in a random point, it will eventually stumble into the two ravine and then it'll stay there and wander around.
+
+288
+00:23:58,583 --> 00:23:59,463
+Speaker SPEAKER_02: So let's see if we can do that.
+
+289
+00:24:04,690 --> 00:24:09,174
+Speaker SPEAKER_02: So what's really going on here is I'm just going backwards and forwards up here.
+
+290
+00:24:09,356 --> 00:24:10,357
+Speaker SPEAKER_02: Ignore that for now.
+
+291
+00:24:10,377 --> 00:24:16,365
+Speaker SPEAKER_02: I'm going backwards and forwards here and letting it gradually settle until it's into a state that this network's happy with.
+
+292
+00:24:17,387 --> 00:24:20,371
+Speaker SPEAKER_02: So that's his brain state and that doesn't mean much to you.
+
+293
+00:24:20,791 --> 00:24:22,574
+Speaker SPEAKER_02: If you look at that, you don't really know what it means.
+
+294
+00:24:24,656 --> 00:24:29,963
+Speaker SPEAKER_02: So what we're going to do is, as it's settling, we're going to play out the generative model here.
+
+295
+00:24:29,983 --> 00:24:33,828
+Speaker SPEAKER_02: We're going to do computer graphics to see what that would have generated.
+
+296
+00:24:34,180 --> 00:24:38,444
+Speaker SPEAKER_02: And so what you got here is that's what's going on in his brain and this is what's going on in his mind.
+
+297
+00:24:39,145 --> 00:24:40,288
+Speaker SPEAKER_02: So you can see what this is thinking.
+
+298
+00:24:40,949 --> 00:24:42,069
+Speaker SPEAKER_02: And I'm serious about that.
+
+299
+00:24:42,170 --> 00:24:44,073
+Speaker SPEAKER_02: That is, I know it sounds crazy.
+
+300
+00:24:44,492 --> 00:24:54,346
+Speaker SPEAKER_02: When I say to you, I'm seeing a pink elephant, what I mean is, I've got a brain state such that if there were a pink elephant out there, this would be perception.
+
+301
+00:24:54,967 --> 00:24:56,048
+Speaker SPEAKER_02: That's how mental states work.
+
+302
+00:24:56,067 --> 00:25:00,693
+Speaker SPEAKER_02: They're funny because they're hypothetical, not because I made a spooky stuff.
+
+303
+00:25:02,529 --> 00:25:09,117
+Speaker SPEAKER_02: I use this language where the terms refer to things in the world, because I'm saying, what would have to be in the world for this brain state to be perception?
+
+304
+00:25:09,679 --> 00:25:15,346
+Speaker SPEAKER_02: Now, if I've got a generative model, I can take the brain state and say, well, what would have to be in the world for that to be perception?
+
+305
+00:25:15,586 --> 00:25:16,086
+Speaker SPEAKER_02: Well, that.
+
+306
+00:25:16,587 --> 00:25:17,568
+Speaker SPEAKER_02: So that's what it's thinking.
+
+307
+00:25:17,588 --> 00:25:19,090
+Speaker SPEAKER_02: That's its mental state right there.
+
+308
+00:25:19,590 --> 00:25:21,053
+Speaker SPEAKER_02: So you've got brain states and mental states.
+
+309
+00:25:21,493 --> 00:25:22,976
+Speaker SPEAKER_02: And most psychologists won't show you both.
+
+310
+00:25:27,121 --> 00:25:28,082
+Speaker SPEAKER_02: Let's go a bit faster.
+
+311
+00:25:30,576 --> 00:25:34,143
+Speaker SPEAKER_02: And it still hasn't settled into the two ravine, and now it's about in the two ravine.
+
+312
+00:25:34,442 --> 00:25:37,228
+Speaker SPEAKER_02: And now it's just wandering around in that two ravine, and this is what it's thinking.
+
+313
+00:25:39,652 --> 00:25:44,579
+Speaker SPEAKER_02: It knows about all sorts of different twos, and it's very good that it does, because that means it can recognize weird twos.
+
+314
+00:25:48,727 --> 00:25:49,647
+Speaker SPEAKER_02: Let's give it another one.
+
+315
+00:25:52,648 --> 00:25:54,452
+Speaker SPEAKER_02: It hasn't got into the 8 ravine properly yet.
+
+316
+00:25:54,472 --> 00:25:56,337
+Speaker SPEAKER_02: It'll jump out into other ravines because it's not really there.
+
+317
+00:25:56,919 --> 00:25:58,603
+Speaker SPEAKER_02: But by about now, it'll be in the 8 ravine.
+
+318
+00:25:59,546 --> 00:26:02,692
+Speaker SPEAKER_02: And it'll show you all the sorts of different 8s it believes in if you run it long enough.
+
+319
+00:26:02,953 --> 00:26:06,803
+Speaker SPEAKER_02: If you run it for an hour now, it'll probably just stay in the 8 ravine showing you all sorts of different 8s.
+
+320
+00:26:08,146 --> 00:26:09,009
+Speaker SPEAKER_02: OK.
+
+321
+00:26:09,028 --> 00:26:10,792
+Speaker SPEAKER_02: Let's do one more because I like it so much.
+
+322
+00:26:18,484 --> 00:26:20,669
+Speaker SPEAKER_02: Again, it's not really in the 5 ravine properly yet.
+
+323
+00:26:20,828 --> 00:26:21,549
+Speaker SPEAKER_02: Look, there was a 6.
+
+324
+00:26:21,971 --> 00:26:23,472
+Speaker SPEAKER_02: By about now, it's in the 5 ravine.
+
+325
+00:26:24,013 --> 00:26:28,141
+Speaker SPEAKER_02: And it'll show you all sorts of weird 5s, ones without tops and occasional 6s.
+
+326
+00:26:28,721 --> 00:26:31,507
+Speaker SPEAKER_02: And it ends up with a pretty weird one.
+
+327
+00:26:31,527 --> 00:26:32,689
+Speaker SPEAKER_02: But that's definitely a 5.
+
+328
+00:26:32,808 --> 00:26:36,255
+Speaker SPEAKER_02: And it's very good that it knows that that's definitely a 5, because it allows it to recognize things like that.
+
+329
+00:26:38,357 --> 00:26:39,480
+Speaker SPEAKER_02: OK, that's it for the demo.
+
+330
+00:26:47,002 --> 00:26:49,452
+Speaker SPEAKER_02: Ah, how do I get rid of that?
+
+331
+00:26:58,208 --> 00:27:00,511
+Speaker SPEAKER_02: Okay, so here's some examples of things it can recognize.
+
+332
+00:27:01,393 --> 00:27:05,038
+Speaker SPEAKER_02: These are all ones it got right and you can see it recognizes a wide variety of twos.
+
+333
+00:27:05,460 --> 00:27:11,088
+Speaker SPEAKER_02: It recognizes that this is a one despite that and it recognizes this is a seven because of that.
+
+334
+00:27:11,789 --> 00:27:16,999
+Speaker SPEAKER_02: If you try writing a program by hand that'll do that, you'll find it's kind of tricky if you'd never thought of these examples in advance.
+
+335
+00:27:19,823 --> 00:27:22,106
+Speaker SPEAKER_02: If you compare it with support vector machines,
+
+336
+00:27:22,643 --> 00:27:25,589
+Speaker SPEAKER_02: Now what we're doing here is we're taking a pure machine learning task.
+
+337
+00:27:25,609 --> 00:27:28,798
+Speaker SPEAKER_02: We're not giving it any prior knowledge about pixels being next to other pixels.
+
+338
+00:27:29,159 --> 00:27:31,324
+Speaker SPEAKER_02: We're not giving it extra transformations of the data.
+
+339
+00:27:31,744 --> 00:27:34,893
+Speaker SPEAKER_02: So this is without, it's a pure machine learning task without any extra help.
+
+340
+00:27:35,976 --> 00:27:38,442
+Speaker SPEAKER_02: If you give extra help, you can make all the methods a lot better.
+
+341
+00:27:39,163 --> 00:27:43,510
+Speaker SPEAKER_02: But a support vector machine done by DeCoste and Sholkop were very good, got 1.4%.
+
+342
+00:27:43,790 --> 00:27:47,056
+Speaker SPEAKER_02: The best you can do with standard back propagation is about 1.6%.
+
+343
+00:27:47,356 --> 00:27:50,080
+Speaker SPEAKER_02: This gets 1.25%.
+
+344
+00:27:50,862 --> 00:27:53,026
+Speaker SPEAKER_02: And significance here is about a difference of 0.1.
+
+345
+00:27:53,646 --> 00:27:55,148
+Speaker SPEAKER_02: So this is significantly better than that.
+
+346
+00:27:55,769 --> 00:27:57,712
+Speaker SPEAKER_02: K-nearest neighbor gets 3.3%.
+
+347
+00:28:02,012 --> 00:28:08,621
+Speaker SPEAKER_02: Now, I fine-tuned that to be good at generation so I could show you it generating using this sort of up-down algorithm.
+
+348
+00:28:08,641 --> 00:28:10,742
+Speaker SPEAKER_02: But we can also use backpropagation for fine-tuning.
+
+349
+00:28:11,483 --> 00:28:27,784
+Speaker SPEAKER_02: And now that I've got this way of finding features from the sensory data, I can say things like, nobody in their right mind would ever suggest that you would use a local search technique like backpropagation to search some huge nonlinear space by starting with small random weights.
+
+350
+00:28:28,644 --> 00:28:31,327
+Speaker SPEAKER_02: It'll get stuck in local optima.
+
+351
+00:28:32,489 --> 00:28:33,490
+Speaker SPEAKER_02: And that is indeed true.
+
+352
+00:28:33,530 --> 00:28:45,851
+Speaker SPEAKER_02: What we're going to do is we're going to search this huge non-linear space of possible features by finding features in the sensory data and then finding features in the combinations of features we find in the sensory data and keep doing that.
+
+353
+00:28:46,332 --> 00:28:48,154
+Speaker SPEAKER_02: And we'll design our features like that.
+
+354
+00:28:48,415 --> 00:28:49,417
+Speaker SPEAKER_02: So we didn't need labels.
+
+355
+00:28:49,458 --> 00:28:50,920
+Speaker SPEAKER_02: We just needed sensory data.
+
+356
+00:28:51,710 --> 00:28:58,884
+Speaker SPEAKER_02: Once we designed all our features, we can then use back propagation to slightly fine tune them to make the category boundaries be in the right place.
+
+357
+00:28:59,846 --> 00:29:04,817
+Speaker SPEAKER_02: So a pure version of that would be to say, let's learn the same net but without any labels, okay?
+
+358
+00:29:04,836 --> 00:29:06,259
+Speaker SPEAKER_02: So we do all the pre-training like this.
+
+359
+00:29:07,383 --> 00:29:12,874
+Speaker SPEAKER_02: After we pre-trained now, what we're going to do is we're going to attach ten label units to the top.
+
+360
+00:29:13,224 --> 00:29:16,008
+Speaker SPEAKER_02: And we're going to use backpropagation to fine-tune these.
+
+361
+00:29:16,468 --> 00:29:21,452
+Speaker SPEAKER_02: And the fine-tuning is hardly going to change the weights at all, but it's going to make the discrimination performance a lot better.
+
+362
+00:29:22,093 --> 00:29:26,136
+Speaker SPEAKER_02: So this is going to be discriminative fine-tuning and that gets 1.15% errors.
+
+363
+00:29:26,478 --> 00:29:30,781
+Speaker SPEAKER_02: And all the code for doing the pre-training and the fine-tuning is on my webpage if you want to try it.
+
+364
+00:29:34,345 --> 00:29:42,792
+Speaker SPEAKER_02: Now, given that we now know how to get features from data, we can now train things we never used to be able to train with backpropagation.
+
+365
+00:29:43,027 --> 00:30:00,826
+Speaker SPEAKER_02: If you take a net like this where we're going to put in a digit and we're going to try and get out the same digit but we're going to put like eight layers of nonlinearities in between, if you start with small random weights and you back propagate, you get small, small times small, and by the time you get back here, you get small to the power of eight and you don't get any gradient.
+
+366
+00:30:01,847 --> 00:30:08,595
+Speaker SPEAKER_02: If you put in big random weights, you'll get a gradient but you'll have decided in advance where you're going to be in the search space.
+
+367
+00:30:09,082 --> 00:30:11,449
+Speaker SPEAKER_02: What we're going to do is learn this Boltzmann machine here.
+
+368
+00:30:12,191 --> 00:30:16,564
+Speaker SPEAKER_02: After we've learned that, we're going to map the data to get activity patterns and learn this Boltzmann machine.
+
+369
+00:30:16,584 --> 00:30:18,288
+Speaker SPEAKER_02: Then we're going to learn this Boltzmann machine.
+
+370
+00:30:18,308 --> 00:30:21,538
+Speaker SPEAKER_02: Then we're going to learn this Boltzmann machine, but with linear hidden units.
+
+371
+00:30:22,513 --> 00:30:31,789
+Speaker SPEAKER_02: And then what we're going to do is put the transposed weights here, because this is good at reconstructing that, so this should be good, and so on.
+
+372
+00:30:32,550 --> 00:30:34,634
+Speaker SPEAKER_02: And we're going to use that as a starting point.
+
+373
+00:30:35,336 --> 00:30:40,404
+Speaker SPEAKER_02: And then we do back propagation from there, and it'll slightly change all of these weights.
+
+374
+00:30:40,384 --> 00:30:41,887
+Speaker SPEAKER_02: And it'll make this work really well.
+
+375
+00:30:42,248 --> 00:30:52,948
+Speaker SPEAKER_02: And so now what it's done is it's communicated this 28 by 28 image via this bottleneck of 30 units, but using a highly nonlinear transformation to compress it.
+
+376
+00:30:54,049 --> 00:31:00,622
+Speaker SPEAKER_02: If you make everything linear here, you leave out all these layers and make everything linear, this is PCA, principal components, which is a standard way to compress things.
+
+377
+00:31:01,163 --> 00:31:04,147
+Speaker SPEAKER_02: If you put in all these nonlinear layers, it's much better than PCA.
+
+378
+00:31:06,118 --> 00:31:09,042
+Speaker SPEAKER_02: So, this is all done without labels now.
+
+379
+00:31:09,063 --> 00:31:10,104
+Speaker SPEAKER_02: You just give it the digits.
+
+380
+00:31:10,144 --> 00:31:11,246
+Speaker SPEAKER_02: You don't tell it which is which.
+
+381
+00:31:12,387 --> 00:31:14,109
+Speaker SPEAKER_02: These are examples of the real digits.
+
+382
+00:31:15,392 --> 00:31:16,653
+Speaker SPEAKER_02: Just one example of each class.
+
+383
+00:31:17,233 --> 00:31:21,240
+Speaker SPEAKER_02: These are the reconstructions from those 30 activities in the hidden layer.
+
+384
+00:31:21,961 --> 00:31:23,942
+Speaker SPEAKER_02: And you can see they're actually better than the data.
+
+385
+00:31:26,567 --> 00:31:27,969
+Speaker SPEAKER_02: This is a dangerous line of thought.
+
+386
+00:31:30,451 --> 00:31:35,298
+Speaker SPEAKER_02: PCA does this and you can see it's kind of hopeless compared with this method.
+
+387
+00:31:36,240 --> 00:31:37,241
+Speaker SPEAKER_02: At least that's what you're meant to see.
+
+388
+00:31:39,265 --> 00:31:41,107
+Speaker SPEAKER_02: Now, we could apply this to document vectors.
+
+389
+00:31:41,929 --> 00:31:46,455
+Speaker SPEAKER_02: I don't find documents as interesting as digits, but I know some people are interested in them.
+
+390
+00:31:46,476 --> 00:31:52,244
+Speaker SPEAKER_02: You could take a document vector, and you could take the counts of the 2,000 most common words.
+
+391
+00:31:52,684 --> 00:31:55,429
+Speaker SPEAKER_02: And there's a big database like this of 800,000 documents.
+
+392
+00:31:56,530 --> 00:31:57,471
+Speaker SPEAKER_02: And so we took 400,000.
+
+393
+00:31:57,673 --> 00:31:59,275
+Speaker SPEAKER_02: Sorry.
+
+394
+00:31:59,655 --> 00:32:00,215
+Speaker SPEAKER_02: Yeah, I know.
+
+395
+00:32:00,256 --> 00:32:01,238
+Speaker SPEAKER_02: I see people smiling.
+
+396
+00:32:01,759 --> 00:32:02,338
+Speaker SPEAKER_02: Big 800,000.
+
+397
+00:32:02,619 --> 00:32:04,762
+Speaker SPEAKER_02: I'm an academic, OK?
+
+398
+00:32:06,717 --> 00:32:12,284
+Speaker SPEAKER_02: We then train up a neural net like this, where these are my Poisson units.
+
+399
+00:32:12,644 --> 00:32:20,012
+Speaker SPEAKER_02: For those of you who know machine learning, we can use any units in the exponential family, where the log probability is linear in the parameters.
+
+400
+00:32:21,035 --> 00:32:22,676
+Speaker SPEAKER_02: So we train up this to get some features.
+
+401
+00:32:22,737 --> 00:32:23,978
+Speaker SPEAKER_02: We train up this to get some features.
+
+402
+00:32:24,419 --> 00:32:27,643
+Speaker SPEAKER_02: And then we train up this to get just two linear features.
+
+403
+00:32:28,284 --> 00:32:29,565
+Speaker SPEAKER_02: That seems a little excessive.
+
+404
+00:32:29,986 --> 00:32:33,450
+Speaker SPEAKER_02: And obviously, when we reconstruct, we're not going to get quite the right counts.
+
+405
+00:32:33,598 --> 00:32:39,167
+Speaker SPEAKER_02: But, you'll get a, you'll get counts that are much closer to the right counts than the base rates.
+
+406
+00:32:39,709 --> 00:32:46,759
+Speaker SPEAKER_02: So if down here you have a high count for Iraq and Cheney and torture, up here you'll get high counts for similar things.
+
+407
+00:32:48,624 --> 00:32:53,211
+Speaker SPEAKER_02: So, we can turn a document into a point in a two-dimensional space.
+
+408
+00:32:54,540 --> 00:32:57,644
+Speaker SPEAKER_02: And of course, once we got a point in two-dimensional space, we can plot it in 2D.
+
+409
+00:32:58,425 --> 00:33:04,153
+Speaker SPEAKER_02: And for this database, someone had gone through by hand, more or less by hand, and labeled all the documents.
+
+410
+00:33:04,173 --> 00:33:05,554
+Speaker SPEAKER_02: We didn't use the labels, okay?
+
+411
+00:33:06,174 --> 00:33:11,040
+Speaker SPEAKER_02: But now when we plot the point in 2D, we can color the point by the class of the document.
+
+412
+00:33:11,842 --> 00:33:16,768
+Speaker SPEAKER_02: So if you do the standard technique which is latent semantic analysis, which is just a version of PCA.
+
+413
+00:33:17,338 --> 00:33:21,727
+Speaker SPEAKER_02: and you lay out these documents in 2D, that's what you get.
+
+414
+00:33:22,127 --> 00:33:27,577
+Speaker SPEAKER_02: And you can see the green ones are in a slightly different place from these blue ones, but it's a bit of a mess.
+
+415
+00:33:27,597 --> 00:33:29,361
+Speaker SPEAKER_02: If you use our method, it does a little bit better.
+
+416
+00:33:30,864 --> 00:33:31,585
+Speaker SPEAKER_02: You get that.
+
+417
+00:33:33,303 --> 00:33:37,127
+Speaker SPEAKER_02: And so now, if you look at these documents, these are business documents, right?
+
+418
+00:33:37,528 --> 00:33:42,894
+Speaker SPEAKER_02: If you look at these documents here, you can see there's lots of different kinds of documents about accounts and earnings.
+
+419
+00:33:43,295 --> 00:33:52,487
+Speaker SPEAKER_02: Presumably there's an Enron cluster in here somewhere, and it would be very nice to know which other companies are in this Enron cluster.
+
+420
+00:33:52,507 --> 00:33:54,348
+Speaker SPEAKER_02: Okay.
+
+421
+00:33:54,368 --> 00:33:55,951
+Speaker SPEAKER_02: But there's something more interesting you can do.
+
+422
+00:33:55,990 --> 00:33:57,353
+Speaker SPEAKER_02: That's just for visualization.
+
+423
+00:33:58,970 --> 00:34:01,913
+Speaker SPEAKER_02: But now I'm going to show you how to solve the following problem.
+
+424
+00:34:02,335 --> 00:34:03,717
+Speaker SPEAKER_02: Suppose I give you a document.
+
+425
+00:34:04,417 --> 00:34:08,182
+Speaker SPEAKER_02: So this isn't like what I call Google search where you use a few keywords and you find what you want.
+
+426
+00:34:09,945 --> 00:34:14,010
+Speaker SPEAKER_02: This is I give you a document and I ask you to find similar documents to the one I gave you.
+
+427
+00:34:14,791 --> 00:34:15,072
+Speaker SPEAKER_02: Okay?
+
+428
+00:34:15,112 --> 00:34:16,675
+Speaker SPEAKER_02: Documents with similar semantic content.
+
+429
+00:34:17,596 --> 00:34:18,958
+Speaker SPEAKER_02: So I'm using a document as a query.
+
+430
+00:34:21,360 --> 00:34:28,251
+Speaker SPEAKER_02: What we're going to do is we're going to take our big database of documents, a whole million of them, and we're going to train up
+
+431
+00:34:28,315 --> 00:34:32,353
+Speaker SPEAKER_02: this network, and it's going to convert these documents into 30 numbers.
+
+432
+00:34:33,057 --> 00:34:37,077
+Speaker SPEAKER_02: I'm going to use logistic units here, that is numbers that range between 1 and 0.
+
+433
+00:34:37,715 --> 00:34:46,490
+Speaker SPEAKER_02: And we're going to train it as Boltzmann machines, then we're going to back propagate and we'll get intermediate values here that convey lots of information.
+
+434
+00:34:47,313 --> 00:34:49,336
+Speaker SPEAKER_02: And then we're going to start adding noise here.
+
+435
+00:34:49,898 --> 00:34:51,740
+Speaker SPEAKER_02: And we're going to add lots and lots of noise.
+
+436
+00:34:52,563 --> 00:35:00,938
+Speaker SPEAKER_02: Now, if I add lots and lots of noise to something that has an output between zero and one, there's only one way it can transmit a lot of information.
+
+437
+00:35:00,918 --> 00:35:09,289
+Speaker SPEAKER_02: It's got to make the total input that comes from below be either very big and positive, in which case it'll give a one, or very big and negative, in which case it'll give a zero.
+
+438
+00:35:09,670 --> 00:35:11,492
+Speaker SPEAKER_02: And in both those cases, it will resist the noise.
+
+439
+00:35:11,974 --> 00:35:19,463
+Speaker SPEAKER_02: If it uses any intermediate value, the outcome will be determined by the noise, so it won't transmit information, so it won't be very good at getting the right answers.
+
+440
+00:35:19,764 --> 00:35:22,809
+Speaker SPEAKER_04: So the noise is something like Gaussian, it's not binary flipping?
+
+441
+00:35:22,829 --> 00:35:23,690
+Speaker SPEAKER_02: It's Gaussian noise.
+
+442
+00:35:24,351 --> 00:35:28,376
+Speaker SPEAKER_02: And we gradually increase the standard deviation and it's noise in the input to the unit.
+
+443
+00:35:29,284 --> 00:35:34,815
+Speaker SPEAKER_02: And we gradually increase this and we use a funny kind of noise that I didn't want to get into that makes it easier to use conjugate gradient descent.
+
+444
+00:35:35,577 --> 00:35:39,525
+Speaker SPEAKER_02: And what will happen is these will turn into binary units.
+
+445
+00:35:40,166 --> 00:35:46,617
+Speaker SPEAKER_02: So we now have a way of converting the word count vector of a document into a 30-bit binary vector.
+
+446
+00:35:48,521 --> 00:35:51,327
+Speaker SPEAKER_02: And now we can do what I call supermarket search.
+
+447
+00:35:51,425 --> 00:35:55,929
+Speaker SPEAKER_02: So, suppose you want to find things that are like a can of sardines.
+
+448
+00:35:56,750 --> 00:36:01,153
+Speaker SPEAKER_02: What you do is you go to your local supermarket and you say to the cashier, where do you keep the sardines?
+
+449
+00:36:02,014 --> 00:36:04,737
+Speaker SPEAKER_02: And you go to where the sardines are and then you just look around.
+
+450
+00:36:04,797 --> 00:36:09,400
+Speaker SPEAKER_02: And there's all the things similar to sardines because the supermarket arranged things sensibly.
+
+451
+00:36:09,420 --> 00:36:14,764
+Speaker SPEAKER_02: Now, it doesn't quite work because you don't find the anchovies as I discovered when I came to North America.
+
+452
+00:36:14,786 --> 00:36:15,826
+Speaker SPEAKER_02: I couldn't find the anchovies.
+
+453
+00:36:15,846 --> 00:36:17,708
+Speaker SPEAKER_02: They weren't anywhere near the sardines and the tuna.
+
+454
+00:36:18,128 --> 00:36:19,929
+Speaker SPEAKER_02: That's because they're near the pizza toppings.
+
+455
+00:36:21,157 --> 00:36:23,581
+Speaker SPEAKER_02: But that's just because it's a three-dimensional supermarket.
+
+456
+00:36:23,721 --> 00:36:28,228
+Speaker SPEAKER_02: If it was a 30-dimensional supermarket, they could be close to the pizza toppings and close to the sardines.
+
+457
+00:36:29,429 --> 00:36:41,125
+Speaker SPEAKER_02: So what we're going to do is we're going to take a document and using our learned network, we're going to hash it to this 30-bit code.
+
+458
+00:36:41,391 --> 00:36:43,577
+Speaker SPEAKER_02: But this is a hash code that was learned.
+
+459
+00:36:43,637 --> 00:36:44,798
+Speaker SPEAKER_02: It's not some random little thing.
+
+460
+00:36:44,858 --> 00:36:46,762
+Speaker SPEAKER_02: It was learned with lots of machine learning.
+
+461
+00:36:47,083 --> 00:36:51,211
+Speaker SPEAKER_02: So it has the property that similar documents map to similar codes.
+
+462
+00:36:52,394 --> 00:36:54,780
+Speaker SPEAKER_02: So now we can use hashing for doing approximate matches.
+
+463
+00:36:55,240 --> 00:36:58,387
+Speaker SPEAKER_02: Everybody knows hashing is nice and fast and everybody knows it can't do approximate matches.
+
+464
+00:36:58,927 --> 00:37:01,273
+Speaker SPEAKER_02: But with machine learning, you can have both.
+
+465
+00:37:01,827 --> 00:37:11,797
+Speaker SPEAKER_02: So we take our document, we hash it to a code, and in this memory space, at each point in the memory space, we put a pointer to the document that has that code.
+
+466
+00:37:12,978 --> 00:37:16,141
+Speaker SPEAKER_02: And you're engineers, so if two documents have the same code, you can figure out what to do.
+
+467
+00:37:18,264 --> 00:37:23,030
+Speaker SPEAKER_02: So now, with the query document, we just go there, and now we just look around, like in the supermarket.
+
+468
+00:37:23,409 --> 00:37:26,052
+Speaker SPEAKER_02: And the nearby similar documents will have nearby codes.
+
+469
+00:37:26,552 --> 00:37:30,838
+Speaker SPEAKER_02: And so all you need to do to find a similar document is flip a bit.
+
+470
+00:37:30,987 --> 00:37:32,108
+Speaker SPEAKER_02: and do a memory access.
+
+471
+00:37:33,070 --> 00:37:33,250
+Speaker SPEAKER_02: Okay.
+
+472
+00:37:33,269 --> 00:37:34,590
+Speaker SPEAKER_02: That's two machine instructions.
+
+473
+00:37:35,052 --> 00:37:46,085
+Speaker SPEAKER_02: So if you were to have a database of, say, 10 billion documents and I give you one and say, give me 100,000 documents similar to this one for my other search technique I'm going to use that can only cope with 100,000.
+
+474
+00:37:47,306 --> 00:37:48,467
+Speaker SPEAKER_02: You're going to have to do 100,000 times.
+
+475
+00:37:48,547 --> 00:37:52,512
+Speaker SPEAKER_02: You're going to have to flip a bit and do a memory access.
+
+476
+00:37:53,213 --> 00:37:54,956
+Speaker SPEAKER_02: So that's only 200,000 machine instructions.
+
+477
+00:37:54,996 --> 00:38:00,623
+Speaker SPEAKER_02: Only two machine instructions per document is completely independent of the size of your database.
+
+478
+00:38:01,260 --> 00:38:06,190
+Speaker SPEAKER_02: Okay, because you've laid things out like in a supermarket, you've got a document supermarket now in 30D.
+
+479
+00:38:09,637 --> 00:38:21,800
+Speaker SPEAKER_02: So, if you compare it with, well, we've actually only tried it because we're academics on 20-bit codes and a million documents and it works just fine, but nothing could possibly go wrong when you scale it up.
+
+480
+00:38:22,117 --> 00:38:24,541
+Speaker SPEAKER_02: It's actually quite accurate.
+
+481
+00:38:25,561 --> 00:38:30,128
+Speaker SPEAKER_02: That is, if you compare it with a sort of gold standard method, it's about the same accuracy.
+
+482
+00:38:30,467 --> 00:38:40,159
+Speaker SPEAKER_02: And when you now take your short list that you found in this very fast way and you give those guys in the short list to the gold standard method, it works better than the gold standard method alone.
+
+483
+00:38:41,101 --> 00:38:45,527
+Speaker SPEAKER_02: It's much better than locality sensitive hashing both in terms of speed.
+
+484
+00:38:46,164 --> 00:38:49,090
+Speaker SPEAKER_02: We use the code that's on the web for that and it's about 50 times faster.
+
+485
+00:38:50,030 --> 00:38:56,621
+Speaker SPEAKER_02: And in terms of accuracy, locality-sensitive hashing will always be less good than this because it's just a hack for doing this.
+
+486
+00:38:56,882 --> 00:38:59,626
+Speaker SPEAKER_02: And locality-sensitive hashing works on the count vector.
+
+487
+00:39:00,228 --> 00:39:10,485
+Speaker SPEAKER_02: If you work on the count vector, you will never understand the similarity between the document that says Gonzales quits and the document that says Wulfowitz resigns.
+
+488
+00:39:10,465 --> 00:39:12,797
+Speaker SPEAKER_02: They're very similar but not in the word count vector.
+
+489
+00:39:13,480 --> 00:39:17,742
+Speaker SPEAKER_02: But if you've compressed it down to some semantic features, they're very similar documents.
+
+490
+00:39:21,838 --> 00:39:31,498
+Speaker SPEAKER_02: So the summary is that I showed you how to use this simple little Boltzmann machine with the bipartite connections to learn a layer of features.
+
+491
+00:39:32,380 --> 00:39:35,967
+Speaker SPEAKER_02: Then I showed you that if you take those features, you can learn more features.
+
+492
+00:39:36,708 --> 00:39:42,699
+Speaker SPEAKER_02: And as you go up this hierarchy, you get more and more complicated features that are going to be better and better for doing classification.
+
+493
+00:39:44,467 --> 00:39:54,954
+Speaker SPEAKER_02: This produces good generative models that are good at reconstructing data, at producing data like the data you saw, if you fine tune with this sort of up-down algorithm, which has this funny name.
+
+494
+00:39:55,836 --> 00:40:00,469
+Speaker SPEAKER_02: If you want good discriminative models, what you do is then you fine tune with back propagation.
+
+495
+00:40:00,449 --> 00:40:04,614
+Speaker SPEAKER_02: But the good news is, you don't need labels for all your training data.
+
+496
+00:40:04,635 --> 00:40:14,246
+Speaker SPEAKER_02: You can learn all these features on a very big data set and then with just a few million labels or even a few hundred labels, you can back propagate to fine tune it for discrimination.
+
+497
+00:40:14,847 --> 00:40:20,715
+Speaker SPEAKER_02: And that will work much better than, for example, using any machine learning method that just uses the labeled data.
+
+498
+00:40:21,536 --> 00:40:22,197
+Speaker SPEAKER_02: It's a huge win.
+
+499
+00:40:22,358 --> 00:40:24,380
+Speaker SPEAKER_02: You can use the unlabeled data very effectively.
+
+500
+00:40:25,306 --> 00:40:33,440
+Speaker SPEAKER_02: And I've shown you that it can also be used for explicit dimensionality reduction where you go down to a bottleneck and that you can do search for similar things very fast.
+
+501
+00:40:33,961 --> 00:40:36,525
+Speaker SPEAKER_02: And of course, we'd like to apply it to images.
+
+502
+00:40:37,086 --> 00:40:43,077
+Speaker SPEAKER_02: But for images, you have a problem which is in documents, a word is very indicative of what the document's about.
+
+503
+00:40:43,193 --> 00:40:47,342
+Speaker SPEAKER_02: In an image, what's indicative of what the image is about is a recognized object.
+
+504
+00:40:47,983 --> 00:40:55,659
+Speaker SPEAKER_02: And so what we're trying to do now is make it recognize objects so that we can get the objects in the image and then apply the semantic hashing technique.
+
+505
+00:40:55,679 --> 00:40:56,681
+Speaker SPEAKER_02: But we haven't done that yet.
+
+506
+00:40:57,523 --> 00:41:03,295
+Speaker SPEAKER_02: I see I've managed to talk very fast so I can show you a little bit about how we're going to do the image recognition.
+
+507
+00:41:06,396 --> 00:41:16,188
+Speaker SPEAKER_02: Suppose you wanted a generative model which would allow you, a graphics model, to take a type of an object and produce an image of that object.
+
+508
+00:41:16,728 --> 00:41:20,114
+Speaker SPEAKER_02: So I say square and I say what its pose is, its position and orientation.
+
+509
+00:41:21,275 --> 00:41:25,360
+Speaker SPEAKER_02: Then we might have a top-down model that from this and this predicts where the parts might be.
+
+510
+00:41:25,780 --> 00:41:30,545
+Speaker SPEAKER_02: And if it's a kind of sloppy model, it'll say this edge ought to be around about there and this edge ought to be around about there.
+
+511
+00:41:31,186 --> 00:41:35,492
+Speaker SPEAKER_02: And if we pick randomly from these distributions, we'll get a square where the edges don't meet up.
+
+512
+00:41:36,686 --> 00:41:39,990
+Speaker SPEAKER_02: Now, one way we could solve that is to generate very accurately here.
+
+513
+00:41:40,711 --> 00:41:44,737
+Speaker SPEAKER_02: We could say, I'm going to generate each piece just right, but that requires high bandwidth and lots of work.
+
+514
+00:41:45,338 --> 00:41:52,047
+Speaker SPEAKER_02: We're going to generate sloppily, we're going to generate a redundant set of pieces, and then we're going to know how the pieces fit together.
+
+515
+00:41:52,407 --> 00:41:57,092
+Speaker SPEAKER_02: We're going to know a corner must be collinear with an edge, and the edges here must be collinear with corners.
+
+516
+00:41:57,653 --> 00:42:03,842
+Speaker SPEAKER_02: And now, by lateral interactions here, using something called a Markov Random Field, we can get it to settle down to that.
+
+517
+00:42:04,632 --> 00:42:22,302
+Speaker SPEAKER_02: And so now our generative process is, at each level, the level above says where the major pieces should be, roughly, and a level that knows about how these pieces go together, like how eyes and noses and mouths go together, says, okay, the nose should be exactly above the middle of the mouth and the eyes should be at exactly the same height.
+
+518
+00:42:23,063 --> 00:42:24,786
+Speaker SPEAKER_02: The level above doesn't need to specify that.
+
+519
+00:42:25,226 --> 00:42:26,108
+Speaker SPEAKER_02: That's known locally.
+
+520
+00:42:28,893 --> 00:42:30,335
+Speaker SPEAKER_02: So how are we going to learn that?
+
+521
+00:42:31,344 --> 00:42:35,610
+Speaker SPEAKER_02: Well, we're going to introduce lateral interactions between the visible units.
+
+522
+00:42:35,630 --> 00:42:36,331
+Speaker SPEAKER_02: That's fine.
+
+523
+00:42:36,650 --> 00:42:40,534
+Speaker SPEAKER_02: The real crucial thing in these nets is you don't have lateral interactions between the hidden units.
+
+524
+00:42:41,235 --> 00:42:42,157
+Speaker SPEAKER_02: So we can learn that.
+
+525
+00:42:42,197 --> 00:42:58,315
+Speaker SPEAKER_02: And the way we learn that is, we put an image in here, we activate the features, then with the features fixed, providing constant top-down input, we run these lateral interactions to let this network settle down.
+
+526
+00:42:58,666 --> 00:43:03,052
+Speaker SPEAKER_02: And we replace the binary variables by real value variables, so we're doing something called mean field.
+
+527
+00:43:03,653 --> 00:43:06,978
+Speaker SPEAKER_02: We let it settle down to something it's happier with, a reconstruction.
+
+528
+00:43:07,259 --> 00:43:08,942
+Speaker SPEAKER_02: It doesn't need to get all the way to equilibrium.
+
+529
+00:43:08,981 --> 00:43:11,144
+Speaker SPEAKER_02: It just needs to get a bit better than this.
+
+530
+00:43:12,067 --> 00:43:17,635
+Speaker SPEAKER_02: And then, we apply our normal learning algorithm to these correlations and these correlations, like this.
+
+531
+00:43:18,076 --> 00:43:26,849
+Speaker SPEAKER_02: But we can also learn the lateral interactions by saying, take the correlations in the data, minus the correlations in the reconstructions, and that will learn all these lateral interactions.
+
+532
+00:43:29,902 --> 00:43:36,809
+Speaker SPEAKER_02: So now what we're going to do is we're going to learn a network with 400 input units for a 20 by 20 patch of an image.
+
+533
+00:43:37,349 --> 00:43:38,530
+Speaker SPEAKER_02: This is just preliminary work.
+
+534
+00:43:39,811 --> 00:43:41,914
+Speaker SPEAKER_02: When we learn the first network, these aren't connected.
+
+535
+00:43:42,494 --> 00:43:48,840
+Speaker SPEAKER_02: Then when we use these feature activities to learn the second level Boltzmann machine, we connect these together and we learn these and these.
+
+536
+00:43:49,601 --> 00:43:54,327
+Speaker SPEAKER_02: Then when we learn the top Boltzmann machine, we connect these together and we learn these weights and these weights.
+
+537
+00:43:55,907 --> 00:43:58,490
+Speaker SPEAKER_02: When we're finished, we can generate from the model.
+
+538
+00:43:58,740 --> 00:44:07,896
+Speaker SPEAKER_02: And so as a control, what we're going to do is we're going to learn this model on patches of natural images which are notoriously hard things to model because anything could happen in a patch of natural image.
+
+539
+00:44:08,577 --> 00:44:10,338
+Speaker SPEAKER_02: So it's a very hard thing to build a density model of.
+
+540
+00:44:11,041 --> 00:44:16,568
+Speaker SPEAKER_02: We're going to learn it without lateral connections and we get a model that's very like many other models.
+
+541
+00:44:16,849 --> 00:44:19,534
+Speaker SPEAKER_02: When you generate from it, what you get is clouds.
+
+542
+00:44:22,382 --> 00:44:29,731
+Speaker SPEAKER_02: So here's natural image patches and they have the property that there's not much going on and then there's a sudden outbreak of structure like here.
+
+543
+00:44:31,494 --> 00:44:38,342
+Speaker SPEAKER_02: So if you apply a linear filter to these things, the linear filter will usually produce a zero and occasionally produce a huge output.
+
+544
+00:44:39,844 --> 00:44:43,889
+Speaker SPEAKER_02: If you apply a linear filter to these things, it'll produce some kind of Gaussian distribution.
+
+545
+00:44:45,269 --> 00:44:51,697
+Speaker SPEAKER_02: These have exactly the same Fourier spectrum as these, what they don't have is this sort of heavy tailed
+
+546
+00:44:52,353 --> 00:44:57,141
+Speaker SPEAKER_02: distribution where there's not much happening and then a lot happening, and long range structure.
+
+547
+00:44:57,161 --> 00:45:00,786
+Speaker SPEAKER_02: So now what happens if we put in the lateral interactions and do the learning again?
+
+548
+00:45:00,806 --> 00:45:09,920
+Speaker SPEAKER_02: If we put the lateral interactions in, they can say things like, if you have a piece of edge here and you'd like a piece of edge somewhere around here, put it here where it lines up.
+
+549
+00:45:11,083 --> 00:45:13,786
+Speaker SPEAKER_02: So that will make much longer range interactions.
+
+550
+00:45:14,121 --> 00:45:17,927
+Speaker SPEAKER_02: And so now when we generate from the model with lateral interactions, we get that.
+
+551
+00:45:18,809 --> 00:45:21,715
+Speaker SPEAKER_02: And you can see that these are much more like real image patches.
+
+552
+00:45:22,074 --> 00:45:25,119
+Speaker SPEAKER_02: They pass many of the statistical tests for being real image patches.
+
+553
+00:45:26,242 --> 00:45:29,146
+Speaker SPEAKER_02: They've got this kind of much longer range structure.
+
+554
+00:45:29,527 --> 00:45:35,757
+Speaker SPEAKER_02: They've got sort of co-linear things and things at right angles and all sorts of nice structure in them which we didn't have before.
+
+555
+00:45:36,143 --> 00:45:41,052
+Speaker SPEAKER_02: And so we're getting, this is probably the best model there is of natural image patches.
+
+556
+00:45:41,574 --> 00:45:49,170
+Speaker SPEAKER_02: If you ask anybody else who models them, show me samples from your generative model, they say, oh, well, we tried that and they look terrible, so we never publish those.
+
+557
+00:45:50,532 --> 00:45:53,518
+Speaker SPEAKER_02: This is, I think, the first model that generates nice samples from the model.
+
+558
+00:45:53,759 --> 00:45:57,527
+Speaker SPEAKER_02: Zhu has a model that's maybe comparable.
+
+559
+00:45:57,507 --> 00:46:05,018
+Speaker SPEAKER_02: What we'd like to do now is make more layers and we'd also like to have a tension that as you go up, you focus on parts of the image.
+
+560
+00:46:05,559 --> 00:46:12,007
+Speaker SPEAKER_02: And what I want to do is get something, you're given an image, you go up, it's focusing on parts and it gives you a figure at the top.
+
+561
+00:46:12,027 --> 00:46:14,532
+Speaker SPEAKER_02: It gives you what you see which is you look at an image and you see a face.
+
+562
+00:46:15,112 --> 00:46:16,295
+Speaker SPEAKER_02: Then you look again and you see the eye.
+
+563
+00:46:16,675 --> 00:46:18,378
+Speaker SPEAKER_02: Then you look again and you see a group of four people.
+
+564
+00:46:19,018 --> 00:46:24,746
+Speaker SPEAKER_02: And those are the things that come out and those are gonna be like the words that need to go into an image retrieval system.
+
+565
+00:46:24,980 --> 00:46:30,045
+Speaker SPEAKER_02: This is going to run for a long time learning, and then it's going to run for quite a long time on each image, but that's all offline.
+
+566
+00:46:30,826 --> 00:46:43,958
+Speaker SPEAKER_02: OK, I'm done.
+
+567
+00:46:46,701 --> 00:46:49,382
+Speaker SPEAKER_03: It looks like we've got time for questions.
+
+568
+00:46:50,143 --> 00:46:54,547
+Speaker SPEAKER_03: If you have questions, can you please hit the mic in the middle so that the folks out of their offices can hear?
+
+569
+00:46:55,523 --> 00:46:56,605
+Speaker SPEAKER_01: Okay.
+
+570
+00:46:57,065 --> 00:46:57,226
+Speaker SPEAKER_01: Hi.
+
+571
+00:46:57,425 --> 00:47:00,891
+Speaker SPEAKER_01: So, you were saying that this method doesn't require labels.
+
+572
+00:47:01,311 --> 00:47:05,940
+Speaker SPEAKER_01: I was just wondering if it would actually help if you have labels for at least some of your training data.
+
+573
+00:47:06,621 --> 00:47:06,981
+Speaker SPEAKER_02: Oh, yes.
+
+574
+00:47:08,182 --> 00:47:08,804
+Speaker SPEAKER_02: Labels help.
+
+575
+00:47:09,485 --> 00:47:14,132
+Speaker SPEAKER_02: The main thing is to show that you can do a lot without them and therefore you can get much more leverage from a few labels.
+
+576
+00:47:15,255 --> 00:47:15,355
+Unknown Speaker: Yeah.
+
+577
+00:47:16,380 --> 00:47:28,355
+Speaker SPEAKER_02: So for example, in the semantic hashing idea, you could, as you're learning those 30 dimensional codes, you could say, if two things are from the same class and the codes are far apart, introduce a small force pulling them together.
+
+578
+00:47:29,416 --> 00:47:31,418
+Speaker SPEAKER_02: And we've got a paper on that in AI stats last year.
+
+579
+00:47:31,898 --> 00:47:36,923
+Speaker SPEAKER_02: And that will improve the sort of clustering of things in the same class.
+
+580
+00:47:37,824 --> 00:47:40,228
+Speaker SPEAKER_02: But the point is you can do it without knowing the classes as well.
+
+581
+00:47:43,059 --> 00:47:43,740
+Speaker SPEAKER_08: Hi.
+
+582
+00:47:43,760 --> 00:47:49,570
+Speaker SPEAKER_08: So people have built autoencoders for a long time before, and they use regular sigmoid units and use backprop to train them.
+
+583
+00:47:50,010 --> 00:47:51,492
+Speaker SPEAKER_08: But they never worked very well.
+
+584
+00:47:51,512 --> 00:47:51,853
+Speaker SPEAKER_08: Correct.
+
+585
+00:47:53,976 --> 00:48:03,650
+Speaker SPEAKER_08: If we actually had multiple layers of these sigmoid units and trained them in the same fashion as you're doing, one layer at a time, would it work as well as RBMs or not?
+
+586
+00:48:03,681 --> 00:48:05,083
+Speaker SPEAKER_02: OK, that's a very good question.
+
+587
+00:48:05,143 --> 00:48:06,746
+Speaker SPEAKER_02: So it's a bit confusing.
+
+588
+00:48:07,086 --> 00:48:11,753
+Speaker SPEAKER_02: This deep thing with multiple layers trained with RBMs I called a multi-layer autoencoder.
+
+589
+00:48:12,135 --> 00:48:16,422
+Speaker SPEAKER_02: But you could also have a very small autoencoder with one hidden layer that's non-linear and train that up.
+
+590
+00:48:16,942 --> 00:48:18,184
+Speaker SPEAKER_02: And the RBM is just like that.
+
+591
+00:48:18,804 --> 00:48:22,590
+Speaker SPEAKER_02: So you could train these little autoencoders and stack them together and then train the whole thing with backprop.
+
+592
+00:48:23,052 --> 00:48:23,932
+Speaker SPEAKER_02: That's what the question was.
+
+593
+00:48:24,713 --> 00:48:29,201
+Speaker SPEAKER_02: And that will work much better than the old way of training autoencoders, but not quite as well as this.
+
+594
+00:48:29,541 --> 00:48:32,405
+Speaker SPEAKER_02: So Yoshua Bengio has a paper.
+
+595
+00:48:32,385 --> 00:48:35,570
+Speaker SPEAKER_02: where he compared doing autoencoders with doing restricted Boltzmann machines.
+
+596
+00:48:35,630 --> 00:48:39,373
+Speaker SPEAKER_02: And restricted Boltzmann machines work better, especially for things like cluttered backgrounds.
+
+597
+00:48:49,164 --> 00:48:51,907
+Speaker SPEAKER_04: I've got a question, which I get to ask because I'm holding a microphone.
+
+598
+00:48:52,849 --> 00:48:58,494
+Speaker SPEAKER_04: So this morning, we were talking about news, where the problem with news is that
+
+599
+00:48:58,795 --> 00:49:00,416
+Speaker SPEAKER_04: everything changes from day to day.
+
+600
+00:49:00,436 --> 00:49:06,181
+Speaker SPEAKER_04: Do you have any intuition, and this is one of those unfair, what do you think would happen?
+
+601
+00:49:06,601 --> 00:49:15,769
+Speaker SPEAKER_04: Do you have any intuition on how hard it would be to adapt a deep network like this once your input distribution changes or as it continues to change?
+
+602
+00:49:16,050 --> 00:49:20,954
+Speaker SPEAKER_02: Okay, so one good thing about this learning is everything scales linearly with the amount of training data.
+
+603
+00:49:20,994 --> 00:49:24,318
+Speaker SPEAKER_02: There's no quadratic optimization anywhere that's going to screw you for big databases.
+
+604
+00:49:25,139 --> 00:49:28,802
+Speaker SPEAKER_02: The other thing is because it's basically stochastic online learning,
+
+605
+00:49:28,782 --> 00:49:33,931
+Speaker SPEAKER_02: If your distribution changes slightly, you can track that very easily.
+
+606
+00:49:33,971 --> 00:49:34,932
+Speaker SPEAKER_02: You don't have to start again.
+
+607
+00:49:35,614 --> 00:49:51,583
+Speaker SPEAKER_02: So, if it's the case that the news tomorrow has quite a lot in common with the news over the last few months and few years and you just need to change your model a bit rather than start again, then this is very good for going to be good for tracking and it's not going to be as much work as learning it all in the first place.
+
+608
+00:49:51,967 --> 00:49:59,481
+Speaker SPEAKER_02: And in fact, once you've got all these layers of features, basically changing the interactions between high-level features will get you lots of mileage without much work.
+
+609
+00:50:05,384 --> 00:50:09,489
+Speaker SPEAKER_01: So I have another question about the supermarket search.
+
+610
+00:50:09,969 --> 00:50:13,592
+Speaker SPEAKER_01: You were saying you just flip a bit in your hash code.
+
+611
+00:50:15,094 --> 00:50:24,704
+Speaker SPEAKER_01: So what I'm wondering is, one thing that I'm not sure about is, if you flip one of these bits, you might not necessarily get something there.
+
+612
+00:50:24,724 --> 00:50:27,487
+Speaker SPEAKER_01: I mean, how do you know that you're going to find something there?
+
+613
+00:50:27,527 --> 00:50:31,552
+Speaker SPEAKER_01: Then also, maybe, is there some way of finding better bits to flip?
+
+614
+00:50:31,632 --> 00:50:33,534
+Speaker SPEAKER_01: And how do you decide which ones?
+
+615
+00:50:33,987 --> 00:50:39,641
+Speaker SPEAKER_02: So of course, if you make the number of addresses be about the same as the number of documents, the average entity is one.
+
+616
+00:50:40,181 --> 00:50:44,032
+Speaker SPEAKER_02: And if there's nothing there, you flip some more bits.
+
+617
+00:50:44,313 --> 00:50:48,503
+Speaker SPEAKER_02: So yes, you'll get some misses, but that's just a sort of constant.
+
+618
+00:50:48,938 --> 00:50:52,802
+Speaker SPEAKER_02: We can look at actually how evenly spread of addresses it is.
+
+619
+00:50:53,224 --> 00:50:57,989
+Speaker SPEAKER_02: And typically, most of the addresses won't be used, and a typical address will be used like three or four times.
+
+620
+00:50:58,409 --> 00:51:01,353
+Speaker SPEAKER_02: So it's not as uniform as we'd like, but that could all be improved.
+
+621
+00:51:01,954 --> 00:51:03,476
+Speaker SPEAKER_02: And we've only done this once.
+
+622
+00:51:03,516 --> 00:51:08,123
+Speaker SPEAKER_02: We just trained this network once on one data set, and that's all the research we've done so far, really.
+
+623
+00:51:09,083 --> 00:51:12,768
+Speaker SPEAKER_02: If we could get a tiny bit of money from someone, we could make this whole thing work much better.
+
+624
+00:51:18,536 --> 00:51:23,985
+Speaker SPEAKER_07: So one thing that is special about digits is that they evolved in a way that makes them discriminative.
+
+625
+00:51:24,306 --> 00:51:31,998
+Speaker SPEAKER_07: So you would hope, it's not that surprising that in an unsupervised way, you can extract features that are discriminative.
+
+626
+00:51:32,018 --> 00:51:40,831
+Speaker SPEAKER_07: I was wondering what happens with completely other applications where, so clearly when you do unsupervised, you might throw away some very indicative features.
+
+627
+00:51:40,929 --> 00:51:43,672
+Speaker SPEAKER_02: Yeah, so basically there's two kinds of learning.
+
+628
+00:51:43,713 --> 00:51:48,659
+Speaker SPEAKER_02: There's discriminative learning where you take your input and your whole aim in life is to predict the label.
+
+629
+00:51:49,458 --> 00:51:54,744
+Speaker SPEAKER_02: And then there's generative learning where you take your input and your whole aim in life is to understand what's going on in this input.
+
+630
+00:51:55,887 --> 00:52:00,110
+Speaker SPEAKER_02: You want to build a model that explains why you got these inputs and not other inputs.
+
+631
+00:52:01,012 --> 00:52:04,356
+Speaker SPEAKER_02: Now, if you do that generative approach, you need a big computer.
+
+632
+00:52:05,112 --> 00:52:10,018
+Speaker SPEAKER_02: And you're going to explain all sorts of stuff that's completely irrelevant to the task you're interested in.
+
+633
+00:52:10,438 --> 00:52:12,101
+Speaker SPEAKER_02: So, you're going to waste lots of computation.
+
+634
+00:52:13,063 --> 00:52:22,956
+Speaker SPEAKER_02: On the other hand, you're not going to need as much training data because each image is going to contain lots of stuff and you can start building your features without yet using any information in the labels.
+
+635
+00:52:23,838 --> 00:52:30,106
+Speaker SPEAKER_02: So, if you got a very small computer, what you should do is discriminative learning so you don't waste any effort.
+
+636
+00:52:30,762 --> 00:52:38,498
+Speaker SPEAKER_02: If you got a big computer, do generative learning, you'll waste lots of the cycles, but you'll make better use of the limited imaginable data.
+
+637
+00:52:38,518 --> 00:52:43,067
+Speaker SPEAKER_02: That's my claim.
+
+638
+00:52:43,586 --> 00:52:43,947
+Speaker SPEAKER_05: Hi, Jeff.
+
+639
+00:52:44,447 --> 00:52:45,369
+Speaker SPEAKER_05: I have a question.
+
+640
+00:52:45,429 --> 00:52:47,672
+Speaker SPEAKER_05: What happened to regularization?
+
+641
+00:52:47,731 --> 00:52:51,135
+Speaker SPEAKER_05: What kind of regularization is implicit in all of your stages?
+
+642
+00:52:51,856 --> 00:52:53,759
+Speaker SPEAKER_02: OK, so we're using a little bit of weight decay.
+
+643
+00:52:54,480 --> 00:53:01,407
+Speaker SPEAKER_02: And the way we set the weight decay was just we fiddled about for a bit to see what worked on a validation set, the usual method.
+
+644
+00:53:01,427 --> 00:53:03,751
+Speaker SPEAKER_02: And if you don't use any weight decay, it works.
+
+645
+00:53:03,831 --> 00:53:05,472
+Speaker SPEAKER_02: If you use weight decay, it works a bit better.
+
+646
+00:53:05,773 --> 00:53:07,094
+Speaker SPEAKER_02: And it's not crucial how much you use.
+
+647
+00:53:07,135 --> 00:53:08,597
+Speaker SPEAKER_02: So we are using some weight decay here.
+
+648
+00:53:08,916 --> 00:53:10,219
+Speaker SPEAKER_02: But it's not a big deal.
+
+649
+00:53:10,519 --> 00:53:13,827
+Speaker SPEAKER_02: And like I say, all of the code is in MATLAB on my web page.
+
+650
+00:53:14,268 --> 00:53:15,590
+Speaker SPEAKER_02: There's a pointer on my web page.
+
+651
+00:53:15,610 --> 00:53:18,115
+Speaker SPEAKER_02: So you can go and look at all those things and all the little fudges we use.
+
+652
+00:53:18,155 --> 00:53:18,336
+Speaker SPEAKER_05: Right.
+
+653
+00:53:18,436 --> 00:53:24,530
+Speaker SPEAKER_05: But the Boltzmann machine is fundamentally sort of entropic regularization.
+
+654
+00:53:24,590 --> 00:53:28,659
+Speaker SPEAKER_05: And then your little pieces of tuning with weight decay are from the other family.
+
+655
+00:53:28,699 --> 00:53:30,181
+Speaker SPEAKER_05: So you're blending the both.
+
+656
+00:53:30,161 --> 00:53:37,833
+Speaker SPEAKER_02: No, the Boltzmann machine, it's true, there's a lot of regularization comes on from the fact that the hidden units are binary stochastic, so they can't transmit much information.
+
+657
+00:53:38,213 --> 00:53:41,057
+Speaker SPEAKER_02: That does lots of regularization for you compared with a normal autoencoder.
+
+658
+00:53:42,320 --> 00:53:44,784
+Speaker SPEAKER_02: But in addition, we say, don't make the weights too big.
+
+659
+00:53:45,865 --> 00:53:51,514
+Speaker SPEAKER_02: And one reason for that is not just regularization, it's it makes the Markov chain mix faster if you don't make the weights too big.
+
+660
+00:53:53,396 --> 00:53:53,536
+Speaker SPEAKER_02: Thanks.
+
+661
+00:53:55,677 --> 00:54:03,746
+Speaker SPEAKER_06: So, in your example of digits, you actually tell them, tell the algorithm that there are 10 classes.
+
+662
+00:54:03,806 --> 00:54:04,027
+Speaker SPEAKER_06: Yes.
+
+663
+00:54:04,648 --> 00:54:09,594
+Speaker SPEAKER_06: So, I wonder what will, what is the impact if we do not give this number correct.
+
+664
+00:54:11,536 --> 00:54:16,724
+Speaker SPEAKER_06: So, yeah.
+
+665
+00:54:16,744 --> 00:54:17,063
+Speaker SPEAKER_02: Okay.
+
+666
+00:54:17,123 --> 00:54:21,869
+Speaker SPEAKER_02: So, what you can do is you can take this autoencoder that goes down to 30 real numbers.
+
+667
+00:54:22,913 --> 00:54:27,498
+Speaker SPEAKER_02: And not tell it how many classes there are, just give it the images, get these 30 real numbers.
+
+668
+00:54:27,960 --> 00:54:34,208
+Speaker SPEAKER_02: Then you can take this 30 real numbers and apply a dimensionality reduction technique that Sam Roess and I have developed.
+
+669
+00:54:35,210 --> 00:54:41,958
+Speaker SPEAKER_02: And the latest version of that, you can lay them out in 2D and you will get 11 classes.
+
+670
+00:54:44,061 --> 00:54:45,884
+Speaker SPEAKER_02: And it did that without ever knowing any labels.
+
+671
+00:54:45,903 --> 00:54:49,949
+Speaker SPEAKER_02: You'll get just these 11 clusters which is close to 10.
+
+672
+00:54:52,697 --> 00:54:55,864
+Speaker SPEAKER_02: It often thinks that the continental sevens are a separate cluster.
+
+673
+00:54:56,125 --> 00:54:59,050
+Speaker SPEAKER_06: So you're saying this is what you have tried and that's what happened?
+
+674
+00:54:59,211 --> 00:55:01,617
+Speaker SPEAKER_02: I might even have it in this talk somewhere.
+
+675
+00:55:03,561 --> 00:55:04,222
+Speaker SPEAKER_02: I might not, though.
+
+676
+00:55:04,943 --> 00:55:06,306
+Speaker SPEAKER_02: Oh, there you go.
+
+677
+00:55:07,369 --> 00:55:10,655
+Speaker SPEAKER_02: That's pure unsupervised on the digits.
+
+678
+00:55:11,057 --> 00:55:14,402
+Speaker SPEAKER_02: Now, in this case, these are 2s and these are 2s.
+
+679
+00:55:15,003 --> 00:55:17,347
+Speaker SPEAKER_02: In 30D, it's got the clusters.
+
+680
+00:55:17,367 --> 00:55:22,936
+Speaker SPEAKER_02: When you force it down to 2D, it wants to keep the 2s next to each other but it also wants these.
+
+681
+00:55:23,197 --> 00:55:25,961
+Speaker SPEAKER_02: These are the spiky 2s and these are the 7s and it wants those close.
+
+682
+00:55:26,463 --> 00:55:30,309
+Speaker SPEAKER_02: And these are the loopy 2s and these are the 3s and it wants those close.
+
+683
+00:55:30,349 --> 00:55:32,592
+Speaker SPEAKER_02: But it also wants the 3s close to the 8s.
+
+684
+00:55:32,572 --> 00:55:36,338
+Speaker SPEAKER_02: And so in 2D, there just isn't enough space to make 10 clusters.
+
+685
+00:55:36,597 --> 00:55:38,420
+Speaker SPEAKER_02: But look, it made 11 there.
+
+686
+00:55:38,940 --> 00:55:44,568
+Speaker SPEAKER_02: And if I don't cheat and do this in black and white, you can still see this sort of roughly 11 clusters.
+
+687
+00:55:45,548 --> 00:55:48,391
+Speaker SPEAKER_02: So this was pure unsupervised and it found that structure in the data.
+
+688
+00:55:48,713 --> 00:55:55,221
+Speaker SPEAKER_02: So when psychologists tell you, you impose categories on this data, they aren't really there in the world, it's rubbish.
+
+689
+00:55:55,920 --> 00:55:58,023
+Speaker SPEAKER_02: I mean, they're really there.
+
+690
+00:55:58,914 --> 00:56:04,409
+Speaker SPEAKER_06: So the metric number 30, if I choose another number, it will be fine also?
+
+691
+00:56:04,568 --> 00:56:10,364
+Speaker SPEAKER_02: If you choose a smaller number, you might not preserve enough information to be able to keep the classes.
+
+692
+00:56:10,403 --> 00:56:13,331
+Speaker SPEAKER_02: And if you choose a bigger number, then PCA will do better.
+
+693
+00:56:13,351 --> 00:56:15,556
+Speaker SPEAKER_02: So your comparison with PCA won't be as good.
+
+694
+00:56:23,923 --> 00:56:30,920
+Speaker SPEAKER_00: How does the performance of the digit classification vary according to the number of layers you are using?
+
+695
+00:56:31,782 --> 00:56:32,123
+Speaker SPEAKER_02: Okay.
+
+696
+00:56:32,744 --> 00:56:36,632
+Speaker SPEAKER_02: Obviously, using the number of layers I showed you is one of the best numbers to use.
+
+697
+00:56:37,494 --> 00:56:40,342
+Speaker SPEAKER_02: If you use less layers, it works a bit worse.
+
+698
+00:56:41,143 --> 00:56:43,148
+Speaker SPEAKER_02: If you use more layers, it works about the same.
+
+699
+00:56:44,527 --> 00:56:51,215
+Speaker SPEAKER_02: I've now got a very good Dutch student who has the property he doesn't believe a word I say and we will know.
+
+700
+00:56:51,257 --> 00:56:54,380
+Speaker SPEAKER_02: He's using like 40 cluster machines and he's going to get the answer to this.
+
+701
+00:56:54,800 --> 00:57:00,387
+Speaker SPEAKER_02: But so far, I'm right that using less layers isn't as good and he hasn't got to more layers yet.
+
+702
+00:57:00,929 --> 00:57:05,894
+Speaker SPEAKER_02: He's actually made with the same number of layers he can make it work better and we'll see if he makes it work better with more layers.
+
+703
+00:57:07,494 --> 00:57:17,452
+Speaker SPEAKER_09: So, it's clear how to evaluate this model say if you have some labeled data and you can try to see if you predict similarly.
+
+704
+00:57:17,472 --> 00:57:23,744
+Speaker SPEAKER_09: But if you try generative this Boltzmann machines with like especially pairwise interactions in the same levels and so on.
+
+705
+00:57:24,083 --> 00:57:28,592
+Speaker SPEAKER_09: If I gave you another set, can you say how good generatively it is and is it easy?
+
+706
+00:57:28,858 --> 00:57:33,085
+Speaker SPEAKER_09: How do you evaluate that kind of part of it?
+
+707
+00:57:33,106 --> 00:57:36,090
+Speaker SPEAKER_02: So the problem with these Boltzmann machines is there's a partition function.
+
+708
+00:57:36,391 --> 00:57:48,369
+Speaker SPEAKER_02: And what you'd love to do is take your data set, hold out some examples, train your generative model on the training set, and then say, what is the log probability of these held out examples?
+
+709
+00:57:48,603 --> 00:57:50,385
+Speaker SPEAKER_02: And that will be the sort of gold standard.
+
+710
+00:57:50,666 --> 00:57:51,746
+Speaker SPEAKER_02: And that's very hard to do.
+
+711
+00:57:52,047 --> 00:57:54,891
+Speaker SPEAKER_02: You know the log probability up to a constant but you don't know the constant.
+
+712
+00:57:55,592 --> 00:58:13,074
+Speaker SPEAKER_02: So, people in my group are now working very hard at a method for interpolating between Boltzmann machines that allows you to use a Boltzmann machine with zero weights, which is a pretty dumb model, and then gradually change the weights towards the Boltzmann machine that you eventually learned.
+
+713
+00:58:13,661 --> 00:58:18,070
+Speaker SPEAKER_02: And you can get the ratio of the partition functions of all these Boltzmann machines.
+
+714
+00:58:18,431 --> 00:58:20,295
+Speaker SPEAKER_02: So in the end, you can get the partition function.
+
+715
+00:58:20,775 --> 00:58:21,757
+Speaker SPEAKER_02: You can get a pretty good estimate.
+
+716
+00:58:22,298 --> 00:58:26,726
+Speaker SPEAKER_02: This is called, it's a version of annealed importance sampling.
+
+717
+00:58:27,144 --> 00:58:35,474
+Speaker SPEAKER_02: called bridging and we think we're going to be able to get pretty accurate estimates of the partition function now by running for like, you know, a hundred hours.
+
+718
+00:58:35,494 --> 00:58:38,197
+Speaker SPEAKER_02: You do this after you've learned just to show how good you are.
+
+719
+00:58:38,539 --> 00:58:51,735
+Speaker SPEAKER_02: But the other thing you can do is you can generate from the model and you can see that the stuff it generates looks good and you can then take the stuff you generated from the model and you can apply statistical test to that and statistical test to the real data.
+
+720
+00:58:51,715 --> 00:58:55,242
+Speaker SPEAKER_02: And statistical test to the other guy's data, the other guy's generated data.
+
+721
+00:58:55,601 --> 00:58:58,708
+Speaker SPEAKER_02: And if you choose the right statistical test, you can make the other guy's data look terrible.
+
+722
+00:59:05,742 --> 00:59:07,644
+Speaker SPEAKER_04: Okay, I think we're out of time now.
+
+723
+00:59:07,704 --> 00:59:11,192
+Speaker SPEAKER_04: I'd like to thank Jeff again.
+

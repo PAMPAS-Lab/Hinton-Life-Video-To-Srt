@@ -1,0 +1,948 @@
+1
+00:00:01,026 --> 00:00:03,943
+Speaker SPEAKER_02: Google knows what you want to search before you finish typing.
+
+2
+00:00:04,285 --> 00:00:06,798
+Speaker SPEAKER_02: Facebook can tag you automatically in a photograph.
+
+3
+00:00:07,080 --> 00:00:09,230
+Speaker SPEAKER_02: Heck, cars can drive themselves now.
+
+4
+00:00:09,446 --> 00:00:10,968
+Speaker SPEAKER_02: That's not just computers getting better.
+
+5
+00:00:11,048 --> 00:00:13,673
+Speaker SPEAKER_02: That's artificial intelligence getting smarter.
+
+6
+00:00:14,194 --> 00:00:22,126
+Speaker SPEAKER_02: Jeffrey Hinton's three decades of work on deep machine learning helped make it happen, and he joins us now on where AI is today and where it's headed.
+
+7
+00:00:22,185 --> 00:00:28,716
+Speaker SPEAKER_02: He's a professor of computer science at the University of Toronto and a distinguished researcher at Google, and it's great to have you here at TVO.
+
+8
+00:00:28,955 --> 00:00:29,637
+Speaker SPEAKER_02: It's great to be here.
+
+9
+00:00:29,676 --> 00:00:33,042
+Speaker SPEAKER_02: Want to just give us a basic definition of deep learning to start with?
+
+10
+00:00:33,021 --> 00:00:37,631
+Speaker SPEAKER_01: So, your brain has more than 10 billion neurons in it.
+
+11
+00:00:37,993 --> 00:00:38,414
+Speaker SPEAKER_01: Even mine?
+
+12
+00:00:38,914 --> 00:00:39,375
+Speaker SPEAKER_01: Even yours.
+
+13
+00:00:39,456 --> 00:00:39,735
+Speaker SPEAKER_01: Okay.
+
+14
+00:00:40,076 --> 00:00:45,307
+Speaker SPEAKER_01: And the way it works is, at each moment, each neuron has to decide whether to go ping.
+
+15
+00:00:46,210 --> 00:00:49,377
+Speaker SPEAKER_01: And it bases that decision on pings it gets from other neurons.
+
+16
+00:00:49,356 --> 00:00:50,838
+Speaker SPEAKER_01: and it weights those pings.
+
+17
+00:00:51,238 --> 00:00:58,765
+Speaker SPEAKER_01: So some pings it takes a lot of notice of, and these pings tell it either you should go ping or you shouldn't go ping, and it changes those weights.
+
+18
+00:00:59,127 --> 00:01:06,653
+Speaker SPEAKER_01: So by changing how much it listens to other neurons, a neuron can change how it behaves, and that's how you learn everything.
+
+19
+00:01:07,254 --> 00:01:13,079
+Speaker SPEAKER_01: So that just leaves one question which is, what's the principle for changing how much you listen to other neurons?
+
+20
+00:01:13,180 --> 00:01:14,941
+Speaker SPEAKER_01: That's called a learning algorithm.
+
+21
+00:01:15,260 --> 00:01:23,090
+Speaker SPEAKER_01: And deep learning is a learning algorithm for changing how much one neuron will rely on other neurons to decide whether to go ping.
+
+22
+00:01:23,251 --> 00:01:25,353
+Speaker SPEAKER_01: Do I assume there's a shallow learning as well?
+
+23
+00:01:25,855 --> 00:01:26,155
+Speaker SPEAKER_01: Oh, yes.
+
+24
+00:01:26,215 --> 00:01:26,917
+Speaker SPEAKER_01: There's shallow learning.
+
+25
+00:01:26,936 --> 00:01:27,918
+Speaker SPEAKER_01: That's what the other people do.
+
+26
+00:01:28,659 --> 00:01:32,784
+Speaker SPEAKER_01: And that doesn't have lots of layers of neurons between the input and output.
+
+27
+00:01:32,864 --> 00:01:34,066
+Speaker SPEAKER_01: So we're into deep learning here.
+
+28
+00:01:34,126 --> 00:01:38,533
+Speaker SPEAKER_01: How does deep learning mimic how humans learn about the world?
+
+29
+00:01:38,513 --> 00:01:46,765
+Speaker SPEAKER_01: Well, nobody really knows how in the real brain you change the strength of the connections that determine how much one neuron affects another neuron.
+
+30
+00:01:48,206 --> 00:01:52,311
+Speaker SPEAKER_01: But in the 1980s, people came up with a very effective algorithm for doing that.
+
+31
+00:01:53,313 --> 00:01:55,917
+Speaker SPEAKER_01: And it's meant to be a simplified model of the brain.
+
+32
+00:01:57,198 --> 00:01:58,981
+Speaker SPEAKER_01: Nobody knows if the brain actually works like this.
+
+33
+00:01:59,441 --> 00:02:03,507
+Speaker SPEAKER_01: And back in the 80s, people were very suspicious because the algorithm didn't work that well.
+
+34
+00:02:03,487 --> 00:02:08,776
+Speaker SPEAKER_01: But as computers got faster and we got bigger data sets, this algorithm now works really well.
+
+35
+00:02:09,356 --> 00:02:10,378
+Speaker SPEAKER_01: It's used all over the place.
+
+36
+00:02:10,758 --> 00:02:11,800
+Speaker SPEAKER_01: It's used in your cell phone.
+
+37
+00:02:12,481 --> 00:02:16,086
+Speaker SPEAKER_01: And so now it seems like a better bet for what the brain might be up to.
+
+38
+00:02:16,187 --> 00:02:17,508
+Speaker SPEAKER_01: You know who made it up, this algorithm?
+
+39
+00:02:18,531 --> 00:02:23,337
+Speaker SPEAKER_01: It was invented first in about 1970 by some obscure guy.
+
+40
+00:02:24,099 --> 00:02:26,223
+Speaker SPEAKER_01: It was reinvented by lots of people.
+
+41
+00:02:26,824 --> 00:02:30,930
+Speaker SPEAKER_01: And then in the 80s, when computers were fast enough to implement it effectively,
+
+42
+00:02:30,909 --> 00:02:34,514
+Speaker SPEAKER_01: Um, people started using it and showing what it could do.
+
+43
+00:02:35,135 --> 00:02:37,399
+Speaker SPEAKER_01: But computers weren't fast enough to make it really impressive then.
+
+44
+00:02:37,879 --> 00:02:40,663
+Speaker SPEAKER_01: So mainstream AI didn't believe in this algorithm.
+
+45
+00:02:41,504 --> 00:02:49,877
+Speaker SPEAKER_01: What happened a few years ago was computers became fast enough, and suddenly, this algorithm started solving all the problems that mainstream AI couldn't solve.
+
+46
+00:02:50,578 --> 00:02:52,320
+Speaker SPEAKER_01: Like recognizing speech, for example.
+
+47
+00:02:52,341 --> 00:02:59,972
+Speaker SPEAKER_02: Would, uh, would Watson, the computer from Jeopardy, who beat everybody, would that be part of what we're talking about here?
+
+48
+00:03:00,425 --> 00:03:06,574
+Speaker SPEAKER_01: There's little bits of machine learning in Watson, and some of those bits may well use this algorithm, but mostly it's hand programming.
+
+49
+00:03:06,615 --> 00:03:11,081
+Speaker SPEAKER_01: It's a very impressive system, but it involves a huge amount of human labor to make it work.
+
+50
+00:03:11,401 --> 00:03:14,687
+Speaker SPEAKER_01: And the idea of these artificial neural networks is you'll try and learn everything.
+
+51
+00:03:15,528 --> 00:03:19,716
+Speaker SPEAKER_02: I suspect everybody knows who Watson is, but on the chance you don't, let's show a clip and remind everybody.
+
+52
+00:03:19,955 --> 00:03:22,259
+Speaker SPEAKER_02: Here's Watson from Jeopardy, who was awfully good.
+
+53
+00:03:22,760 --> 00:03:23,360
+Speaker SPEAKER_02: Roll the clip, please.
+
+54
+00:03:23,782 --> 00:03:25,604
+Speaker SPEAKER_02: Final frontiers for 1000, Alex.
+
+55
+00:03:25,822 --> 00:03:27,752
+Speaker SPEAKER_00: Tickets aren't needed for this event.
+
+56
+00:03:27,772 --> 00:03:31,713
+Speaker SPEAKER_00: A black hole's boundary from which matter cannot escape.
+
+57
+00:03:31,963 --> 00:03:32,403
+Speaker SPEAKER_00: Watson.
+
+58
+00:03:32,965 --> 00:03:34,385
+Speaker SPEAKER_00: What is Event Horizon?
+
+59
+00:03:34,645 --> 00:03:34,866
+Speaker SPEAKER_00: Yes.
+
+60
+00:03:35,586 --> 00:03:37,248
+Speaker SPEAKER_00: Literary character, APB?
+
+61
+00:03:37,429 --> 00:03:38,189
+Speaker SPEAKER_00: For $200.
+
+62
+00:03:38,689 --> 00:03:43,634
+Speaker SPEAKER_00: Wanted for a 12-year crime spree of eating King Hrothgar's warriors.
+
+63
+00:03:44,254 --> 00:03:46,377
+Speaker SPEAKER_00: Officer Beowulf has been assigned the case.
+
+64
+00:03:47,018 --> 00:03:47,758
+Speaker SPEAKER_00: Watson.
+
+65
+00:03:47,777 --> 00:03:48,739
+Speaker SPEAKER_00: Who is Grendel?
+
+66
+00:03:48,919 --> 00:03:49,139
+Speaker SPEAKER_00: Yes.
+
+67
+00:03:49,639 --> 00:03:51,622
+Speaker SPEAKER_00: Final Frontiers for $200.
+
+68
+00:03:52,301 --> 00:03:58,608
+Speaker SPEAKER_00: It's Michelangelo's fresco on the wall of the Sistine Chapel depicting the saved and the damned.
+
+69
+00:03:59,127 --> 00:03:59,449
+Speaker SPEAKER_00: Watson.
+
+70
+00:04:00,169 --> 00:04:01,450
+Speaker SPEAKER_00: What is Glass Judgment?
+
+71
+00:04:01,510 --> 00:04:01,971
+Speaker SPEAKER_00: Correct.
+
+72
+00:04:02,828 --> 00:04:05,211
+Speaker SPEAKER_02: You know, it's amazing either of the other two guys got anything right.
+
+73
+00:04:05,570 --> 00:04:06,872
+Speaker SPEAKER_02: But I did notice they had something there.
+
+74
+00:04:06,951 --> 00:04:08,013
+Speaker SPEAKER_02: OK, again, let's go through this.
+
+75
+00:04:08,153 --> 00:04:12,758
+Speaker SPEAKER_02: How does the artificial intelligence in Watson compare to deep learning?
+
+76
+00:04:13,538 --> 00:04:18,904
+Speaker SPEAKER_01: So the main difference is in deep learning, you're trying to learn everything with nobody programming it.
+
+77
+00:04:18,925 --> 00:04:24,130
+Speaker SPEAKER_01: The only thing that gets programmed in your computer simulation is the learning algorithm.
+
+78
+00:04:24,151 --> 00:04:28,355
+Speaker SPEAKER_01: Everything inside this neural net gets learned from data, not programmed in by hand.
+
+79
+00:04:28,875 --> 00:04:31,197
+Speaker SPEAKER_01: So they're thinking.
+
+80
+00:04:31,177 --> 00:04:32,680
+Speaker SPEAKER_01: Um, yes, you could say that.
+
+81
+00:04:33,721 --> 00:04:34,242
+Speaker SPEAKER_01: I just did.
+
+82
+00:04:34,603 --> 00:04:34,783
+Speaker SPEAKER_01: Yes.
+
+83
+00:04:34,863 --> 00:04:35,685
+Speaker SPEAKER_01: Is that accurate, though?
+
+84
+00:04:36,146 --> 00:04:37,848
+Speaker SPEAKER_01: It's independent thought in some respects?
+
+85
+00:04:38,048 --> 00:04:40,973
+Speaker SPEAKER_01: You might irritate some philosophers, but, yes, I think they are thinking.
+
+86
+00:04:42,196 --> 00:04:43,819
+Speaker SPEAKER_01: Uh, that's very heavy.
+
+87
+00:04:43,959 --> 00:04:47,384
+Speaker SPEAKER_02: All right, let's... We got an example of this here.
+
+88
+00:04:47,865 --> 00:04:48,507
+Speaker SPEAKER_02: Shall we try this?
+
+89
+00:04:49,649 --> 00:04:52,233
+Speaker SPEAKER_02: Got my trusty, um, device here.
+
+90
+00:04:52,512 --> 00:04:53,435
+Speaker SPEAKER_02: Okay.
+
+91
+00:04:53,454 --> 00:04:56,459
+Speaker SPEAKER_02: This is a Google Translate...
+
+92
+00:04:56,879 --> 00:05:01,403
+Speaker SPEAKER_02: It's programmed for the iPad, which apparently can translate Spanish to English.
+
+93
+00:05:01,442 --> 00:05:02,685
+Speaker SPEAKER_02: That's what it's programmed for right now.
+
+94
+00:05:03,966 --> 00:05:05,586
+Speaker SPEAKER_02: Sheldon, you want to get the camera on this, and we'll try this?
+
+95
+00:05:05,887 --> 00:05:10,492
+Speaker SPEAKER_02: We've got here something that says hola, Spanish for hello.
+
+96
+00:05:10,512 --> 00:05:11,593
+Speaker SPEAKER_02: Now, let's see if this is it.
+
+97
+00:05:12,012 --> 00:05:12,954
+Speaker SPEAKER_02: It's programmed into here.
+
+98
+00:05:13,574 --> 00:05:15,156
+Speaker SPEAKER_02: We're going to put this on top.
+
+99
+00:05:15,175 --> 00:05:16,276
+Speaker SPEAKER_02: Oh, and there it's happening already.
+
+100
+00:05:16,617 --> 00:05:17,017
+Speaker SPEAKER_02: Look at that.
+
+101
+00:05:18,218 --> 00:05:26,447
+Speaker SPEAKER_02: You put the camera above hola, and it instantly translates over and over again to hello.
+
+102
+00:05:27,439 --> 00:05:30,785
+Speaker SPEAKER_02: Can you walk us through how the neural networks are involved?
+
+103
+00:05:30,805 --> 00:05:32,166
+Speaker SPEAKER_02: First of all, what's a neural network?
+
+104
+00:05:32,187 --> 00:05:33,389
+Speaker SPEAKER_02: Because that's what's at play here, right?
+
+105
+00:05:33,730 --> 00:05:37,975
+Speaker SPEAKER_01: OK, so a neural network is a simulation of a whole bunch of neurons.
+
+106
+00:05:37,995 --> 00:05:41,822
+Speaker SPEAKER_01: And it's something that learns by changing the connection strengths between neurons.
+
+107
+00:05:42,603 --> 00:05:43,584
+Speaker SPEAKER_01: And is that what's happening here?
+
+108
+00:05:44,146 --> 00:05:46,949
+Speaker SPEAKER_01: So for recognizing the characters,
+
+109
+00:05:46,930 --> 00:05:56,007
+Speaker SPEAKER_01: It uses a neural net and that neural net is trained on lots and lots of characters from lots of different fonts and with lots of different distortions and noise.
+
+110
+00:05:56,968 --> 00:06:04,803
+Speaker SPEAKER_01: And a neural net is currently the best system for being able to reliably recognize characters that are deformed and noisy.
+
+111
+00:06:04,783 --> 00:06:14,392
+Speaker SPEAKER_02: Now, did this program just translate that because somebody made a code to consider every possible word in Spanish to translate?
+
+112
+00:06:15,134 --> 00:06:17,240
+Speaker SPEAKER_02: Or is this thing thinking?
+
+113
+00:06:18,384 --> 00:06:25,673
+Speaker SPEAKER_01: OK, for this particular program, I think currently it's not using neural nets to do the translation.
+
+114
+00:06:25,694 --> 00:06:28,338
+Speaker SPEAKER_01: It's using neural nets to do the character recognition.
+
+115
+00:06:29,678 --> 00:06:34,324
+Speaker SPEAKER_01: But Google and other people already have neural nets doing translation.
+
+116
+00:06:34,886 --> 00:06:36,127
+Speaker SPEAKER_01: And they're doing translation.
+
+117
+00:06:36,567 --> 00:06:38,589
+Speaker SPEAKER_01: They're not being used online at present.
+
+118
+00:06:39,170 --> 00:06:44,718
+Speaker SPEAKER_01: And when you do Google Translate, it'll look at phrases in one language and translate them to phrases in the other language.
+
+119
+00:06:44,737 --> 00:06:47,802
+Speaker SPEAKER_01: And it has this huge table.
+
+120
+00:06:47,781 --> 00:06:55,654
+Speaker SPEAKER_01: But there's a new way of doing machine translation that's much more interesting that uses neural nets, where it reads the sentence in one language and turns it into a thought.
+
+121
+00:06:56,435 --> 00:07:00,702
+Speaker SPEAKER_01: That is, when I say something, that expresses a thought.
+
+122
+00:07:01,584 --> 00:07:07,494
+Speaker SPEAKER_01: And obviously, the way to do translation is to figure out the thought being expressed in the first language and say the same thing in the second language.
+
+123
+00:07:08,456 --> 00:07:11,781
+Speaker SPEAKER_01: And Google now has translation systems that work like that.
+
+124
+00:07:11,812 --> 00:07:17,658
+Speaker SPEAKER_01: They're about comparable with the existing translation system on a medium-sized training set.
+
+125
+00:07:18,199 --> 00:07:23,704
+Speaker SPEAKER_01: They're not quite as good as the existing system on a really big dataset yet, but they will be.
+
+126
+00:07:24,365 --> 00:07:38,459
+Speaker SPEAKER_01: In a few years' time, we'll be doing machine translation by take the sentence in one language, turn it into a big pattern of neural activity that is the thought behind that sentence, and then say that thought in the other language.
+
+127
+00:07:38,625 --> 00:07:41,790
+Speaker SPEAKER_01: Can it understand nuance when it sees it?
+
+128
+00:07:42,372 --> 00:07:43,814
+Speaker SPEAKER_01: It understands some nuance.
+
+129
+00:07:44,454 --> 00:07:47,158
+Speaker SPEAKER_01: At present, it can use a lot of improvements still.
+
+130
+00:07:48,761 --> 00:07:50,463
+Speaker SPEAKER_01: So there's some things it can't do at present.
+
+131
+00:07:50,704 --> 00:07:56,752
+Speaker SPEAKER_01: Like if I say to you in English, the trophy would not fit in the suitcase because it was too big.
+
+132
+00:07:56,733 --> 00:07:59,877
+Speaker SPEAKER_01: you know the it refers to the trophy because it wouldn't fit.
+
+133
+00:08:00,317 --> 00:08:05,444
+Speaker SPEAKER_01: But if I say the trophy would not fit in the suitcase because it was too small, you know the it refers to the suitcase.
+
+134
+00:08:05,985 --> 00:08:08,747
+Speaker SPEAKER_01: And that's real world knowledge affecting how you translate.
+
+135
+00:08:09,528 --> 00:08:14,975
+Speaker SPEAKER_01: Now if you translate from English to French, in French you just can't say it, you have to choose a gender.
+
+136
+00:08:15,836 --> 00:08:25,069
+Speaker SPEAKER_01: And so we can't translate that English sentence into the French sentence because you need real world knowledge to decide what gender to make that it.
+
+137
+00:08:25,555 --> 00:08:26,375
+Speaker SPEAKER_01: That will happen.
+
+138
+00:08:26,697 --> 00:08:28,759
+Speaker SPEAKER_01: I don't know if it'll happen in a few years or 10 years.
+
+139
+00:08:29,281 --> 00:08:31,764
+Speaker SPEAKER_01: But once that happens, we'll know that it's really understanding.
+
+140
+00:08:32,046 --> 00:08:35,471
+Speaker SPEAKER_01: And it can figure out homonyms without any difficulty?
+
+141
+00:08:35,532 --> 00:08:36,754
+Speaker SPEAKER_01: Stuff like that's no problem.
+
+142
+00:08:36,894 --> 00:08:41,120
+Speaker SPEAKER_01: It's the use of complicated real-world knowledge to disambiguate things.
+
+143
+00:08:42,062 --> 00:08:44,846
+Speaker SPEAKER_01: And it's beginning to be able to do it, but it can't do it properly yet.
+
+144
+00:08:44,826 --> 00:08:49,211
+Speaker SPEAKER_02: Is there one area in particular that you think deep learning is going to change the future?
+
+145
+00:08:50,033 --> 00:08:54,239
+Speaker SPEAKER_01: No, I think it's going to change the future in lots and lots of areas.
+
+146
+00:08:54,678 --> 00:08:55,820
+Speaker SPEAKER_01: So let me give you a few examples.
+
+147
+00:08:56,400 --> 00:09:02,389
+Speaker SPEAKER_01: Over the last few years, it's sort of become the method of choice for recognizing speech.
+
+148
+00:09:03,330 --> 00:09:08,155
+Speaker SPEAKER_01: It's now becoming the method of choice for transcribing speech.
+
+149
+00:09:08,196 --> 00:09:14,243
+Speaker SPEAKER_01: So going all the way from the sound wave to transcription of what's said with just one neural network that does everything.
+
+150
+00:09:14,222 --> 00:09:17,551
+Speaker SPEAKER_01: It's going to become the method of choice for machine translation.
+
+151
+00:09:19,677 --> 00:09:21,341
+Speaker SPEAKER_01: Suppose you want to design a new drug.
+
+152
+00:09:21,861 --> 00:09:29,581
+Speaker SPEAKER_01: You'd like to know, I give you a bunch of candidate molecules and you'd like to know how well they'll bind to some target site.
+
+153
+00:09:29,865 --> 00:09:34,030
+Speaker SPEAKER_01: And you like to predict that rather than doing the experiment, because it's much cheaper to do a prediction than an experiment.
+
+154
+00:09:34,510 --> 00:09:36,854
+Speaker SPEAKER_01: And then you only experiment on the ones that are predicted to work well.
+
+155
+00:09:37,995 --> 00:09:41,158
+Speaker SPEAKER_01: And neural nets recently became the best method of doing that.
+
+156
+00:09:42,039 --> 00:09:47,426
+Speaker SPEAKER_01: If you want to identify a pedestrian in the road, a neural net's definitely the best method of doing that.
+
+157
+00:09:48,366 --> 00:09:50,730
+Speaker SPEAKER_01: So it's all over.
+
+158
+00:09:50,769 --> 00:09:57,577
+Speaker SPEAKER_01: These neural nets, especially the ones using the deep learning algorithms,
+
+159
+00:09:57,557 --> 00:10:00,227
+Speaker SPEAKER_01: are going to be used everywhere.
+
+160
+00:10:00,248 --> 00:10:05,307
+Speaker SPEAKER_01: How many years away do you think we are from a neural network being able to do anything that a brain can do?
+
+161
+00:10:05,658 --> 00:10:06,278
+Speaker SPEAKER_01: I don't know.
+
+162
+00:10:06,318 --> 00:10:08,923
+Speaker SPEAKER_01: It's very hard to predict the future beyond five years.
+
+163
+00:10:08,962 --> 00:10:10,365
+Speaker SPEAKER_01: I don't think it'll happen in the next five years.
+
+164
+00:10:11,125 --> 00:10:15,692
+Speaker SPEAKER_01: Beyond that, it's all a kind of fog, so I'd be very cautious about making a prediction.
+
+165
+00:10:15,711 --> 00:10:18,716
+Speaker SPEAKER_01: Is there anything about this that makes you nervous?
+
+166
+00:10:19,758 --> 00:10:22,041
+Speaker SPEAKER_01: Um, in the very long run, yes.
+
+167
+00:10:22,322 --> 00:10:29,511
+Speaker SPEAKER_01: I mean, obviously, having other super-intelligent beings who are more intelligent than us is something to be nervous about.
+
+168
+00:10:29,812 --> 00:10:33,197
+Speaker SPEAKER_01: It's not gonna happen for a long time, but it is something to be nervous about in the long run.
+
+169
+00:10:33,277 --> 00:10:35,259
+Speaker SPEAKER_01: What aspect of it makes you nervous?
+
+170
+00:10:35,240 --> 00:10:36,361
+Speaker SPEAKER_01: Well, will they be nice to us?
+
+171
+00:10:38,024 --> 00:10:38,926
+Speaker SPEAKER_01: It's just like the movies.
+
+172
+00:10:39,407 --> 00:10:41,049
+Speaker SPEAKER_02: You're worried about that scenario in the movies.
+
+173
+00:10:41,070 --> 00:10:42,392
+Speaker SPEAKER_01: In the very long term, yes.
+
+174
+00:10:42,412 --> 00:10:45,378
+Speaker SPEAKER_01: I think over the next five or ten years, we don't have to worry about it.
+
+175
+00:10:45,898 --> 00:10:52,590
+Speaker SPEAKER_01: Also, the movies always portray it as an individual intelligence.
+
+176
+00:10:52,942 --> 00:11:00,094
+Speaker SPEAKER_01: I think it may be that it goes in a different direction where we sort of develop jointly with these things.
+
+177
+00:11:00,313 --> 00:11:02,437
+Speaker SPEAKER_01: So the things aren't fully autonomous.
+
+178
+00:11:02,456 --> 00:11:03,879
+Speaker SPEAKER_01: They're developed to help us.
+
+179
+00:11:03,919 --> 00:11:05,162
+Speaker SPEAKER_01: They're like personal assistants.
+
+180
+00:11:06,003 --> 00:11:08,486
+Speaker SPEAKER_01: And we'll develop with them.
+
+181
+00:11:08,466 --> 00:11:11,852
+Speaker SPEAKER_01: And it'll be more of a symbiosis than a rivalry.
+
+182
+00:11:12,293 --> 00:11:13,274
+Speaker SPEAKER_01: But we don't know.
+
+183
+00:11:13,294 --> 00:11:14,778
+Speaker SPEAKER_02: Is that an expectation or a hope?
+
+184
+00:11:14,798 --> 00:11:15,278
+Speaker SPEAKER_02: That's a hope.
+
+185
+00:11:15,298 --> 00:11:17,221
+Speaker SPEAKER_02: That sounds like more a hope than an expectation.
+
+186
+00:11:17,743 --> 00:11:18,445
+Speaker SPEAKER_02: Let me read this here.
+
+187
+00:11:18,485 --> 00:11:24,355
+Speaker SPEAKER_02: This is from A Peach and the Daily Beast last December by G. Clay Whitaker, talking about the year AI took the wheel.
+
+188
+00:11:24,575 --> 00:11:27,620
+Speaker SPEAKER_02: Artificial intelligence did more than look at algorithms this year.
+
+189
+00:11:28,182 --> 00:11:31,807
+Speaker SPEAKER_02: And while we've heard about supercomputers and quantum computing for years,
+
+190
+00:11:31,788 --> 00:11:40,043
+Speaker SPEAKER_02: This is the first time that any of that lightning fast, thinking out an answer text started sharing the roads, the roofs, and the responsibilities with you and me.
+
+191
+00:11:40,344 --> 00:11:43,049
+Speaker SPEAKER_02: And people are split over whether that was a good thing.
+
+192
+00:11:44,673 --> 00:11:48,480
+Speaker SPEAKER_02: I do want to pursue this notion of expectation versus hope.
+
+193
+00:11:49,826 --> 00:11:51,490
+Speaker SPEAKER_02: You hope it'll all work out well.
+
+194
+00:11:52,311 --> 00:11:56,837
+Speaker SPEAKER_02: But in the long run, I sense your expectation may not be quite as benign.
+
+195
+00:11:56,898 --> 00:11:57,759
+Speaker SPEAKER_02: Is that fair to say?
+
+196
+00:11:58,299 --> 00:12:02,767
+Speaker SPEAKER_01: I think it's very, very hard to know what will happen beyond a five-year horizon.
+
+197
+00:12:03,347 --> 00:12:06,292
+Speaker SPEAKER_01: So my state of mind is I just don't know what's going to happen.
+
+198
+00:12:07,333 --> 00:12:13,043
+Speaker SPEAKER_01: I think trying to stop the technology would be very hard.
+
+199
+00:12:13,582 --> 00:12:15,986
+Speaker SPEAKER_01: I mean, if you look at automatic teller machines,
+
+200
+00:12:16,674 --> 00:12:20,682
+Speaker SPEAKER_01: My guess is back when they were introduced, people complained about them putting bank tellers out of work.
+
+201
+00:12:21,182 --> 00:12:23,827
+Speaker SPEAKER_01: But I think nobody now would say they were a bad idea.
+
+202
+00:12:24,308 --> 00:12:24,990
+Speaker SPEAKER_01: Even bank tellers?
+
+203
+00:12:25,149 --> 00:12:26,272
+Speaker SPEAKER_01: Even bank tellers.
+
+204
+00:12:26,292 --> 00:12:30,679
+Speaker SPEAKER_01: I mean, their jobs are more interesting because they deal with the tricky cases rather than you just wanted to take $20 out.
+
+205
+00:12:31,520 --> 00:12:31,701
+Speaker SPEAKER_01: Right.
+
+206
+00:12:32,383 --> 00:12:37,451
+Speaker SPEAKER_01: So it's clear that that technology is a force for good.
+
+207
+00:12:37,432 --> 00:12:45,004
+Speaker SPEAKER_01: Um, whether a technology is a force for good or for bad depends a lot on the political system and what the political system decides to do with it.
+
+208
+00:12:45,125 --> 00:12:55,322
+Speaker SPEAKER_02: That's what I wanted to follow up on, because, clearly, things in so many different areas of life are changing so quickly, faster than our political systems are designed to make rules and laws around them.
+
+209
+00:12:55,302 --> 00:13:03,537
+Speaker SPEAKER_02: So, how deeply involved do you think politics has to be or governments have to be in order to deal with the changes that are coming in this sector?
+
+210
+00:13:03,856 --> 00:13:04,999
+Speaker SPEAKER_01: They're going to have to be involved.
+
+211
+00:13:05,139 --> 00:13:15,538
+Speaker SPEAKER_01: So, if you just take driverless cars, it's pretty clear to everybody in the industry, I think, that driverless cars will save a whole lot of lives.
+
+212
+00:13:15,518 --> 00:13:19,106
+Speaker SPEAKER_01: But the politicians are terrified of the first time a driverless car runs somebody down.
+
+213
+00:13:20,831 --> 00:13:28,730
+Speaker SPEAKER_01: So politically, if driverless cars kill a few people, but save tens of thousands of people, that's a problem for the politicians.
+
+214
+00:13:29,270 --> 00:13:33,662
+Speaker SPEAKER_01: But they should just face up to it and say, look, these things are going to make us much safer.
+
+215
+00:13:33,642 --> 00:13:38,408
+Speaker SPEAKER_02: It'll take a brave politician to say, I know two people were killed, but here's the 10,000 we saved.
+
+216
+00:13:38,428 --> 00:13:39,791
+Speaker SPEAKER_02: You can't see the 10,000 saved.
+
+217
+00:13:39,811 --> 00:13:41,052
+Speaker SPEAKER_02: You can certainly see the two killed.
+
+218
+00:13:41,413 --> 00:13:42,134
+Speaker SPEAKER_02: Yeah.
+
+219
+00:13:42,215 --> 00:13:43,296
+Speaker SPEAKER_01: And there's going to be a lot of that.
+
+220
+00:13:43,376 --> 00:13:46,260
+Speaker SPEAKER_01: But it's very clear that driverless cars are going to be a good thing.
+
+221
+00:13:48,063 --> 00:13:48,384
+Speaker SPEAKER_02: OK.
+
+222
+00:13:48,443 --> 00:13:52,409
+Speaker SPEAKER_02: So in conclusion, what kind of impact do you hope deep learning has on our future?
+
+223
+00:13:52,964 --> 00:14:01,674
+Speaker SPEAKER_01: I hope that it, for example, allows Google to read documents and understand what they say and so return much better search results to you.
+
+224
+00:14:02,115 --> 00:14:06,701
+Speaker SPEAKER_01: So you can search by the content of the document rather than by the words in the document.
+
+225
+00:14:06,721 --> 00:14:18,076
+Speaker SPEAKER_01: I hope it will make for intelligent personal assistants who can answer questions in a sensible way and have a sensible conversation as opposed to a conversation that keeps getting derailed.
+
+226
+00:14:19,542 --> 00:14:20,964
+Speaker SPEAKER_01: It'll give us driverless cars.
+
+227
+00:14:21,344 --> 00:14:22,966
+Speaker SPEAKER_01: That's clearly going to come fairly soon.
+
+228
+00:14:23,846 --> 00:14:29,592
+Speaker SPEAKER_01: It'll make computers much easier to use, I think, because you'll be able to just say to your computer, how do I print this damn thing?
+
+229
+00:14:29,613 --> 00:14:32,796
+Speaker SPEAKER_01: And the computer will do it, rather than you have to figure out all these commands.
+
+230
+00:14:33,417 --> 00:14:37,120
+Speaker SPEAKER_01: So it should make, if you're right, it should make our lives better.
+
+231
+00:14:37,522 --> 00:14:42,967
+Speaker SPEAKER_01: Yes, it should be just like automatic telemachines, that we should make that little bit of life better, but it should do that for a lot of things.
+
+232
+00:14:43,928 --> 00:14:44,649
+Speaker SPEAKER_02: Fingers crossed.
+
+233
+00:14:45,110 --> 00:14:45,590
+Speaker SPEAKER_02: Yes.
+
+234
+00:14:45,610 --> 00:14:47,773
+Speaker SPEAKER_02: Geoffrey Hannon, it's good of you to join us at TVO tonight.
+
+235
+00:14:47,793 --> 00:14:48,874
+Speaker SPEAKER_02: Thanks so much.
+
+236
+00:14:50,001 --> 00:14:53,157
+Speaker SPEAKER_00: Help TVO create a better world through the power of learning.
+
+237
+00:14:53,518 --> 00:14:57,395
+Speaker SPEAKER_00: Visit supporttvo.org and make a tax-deductible donation today.
+

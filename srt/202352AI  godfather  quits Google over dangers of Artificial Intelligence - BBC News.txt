@@ -1,0 +1,240 @@
+1
+00:00:00,031 --> 00:00:06,822
+Speaker SPEAKER_00: The man widely seen as the godfather of artificial intelligence has quit his job at Google, warning of the dangers of AI.
+
+2
+00:00:07,123 --> 00:00:15,476
+Speaker SPEAKER_00: Dr. Geoffrey Hinton's pioneering research on deep learning and neural networks has paved the way for current AI systems like ChatGPT.
+
+3
+00:00:16,097 --> 00:00:25,632
+Speaker SPEAKER_00: But in a lengthy interview with the New York Times, Dr. Hinton said he now regretted his work and is worried that AI technology will flood the internet with misinformation.
+
+4
+00:00:26,490 --> 00:00:31,556
+Speaker SPEAKER_00: Google responded in a statement saying, we remain committed to a responsible approach to AI.
+
+5
+00:00:32,037 --> 00:00:35,722
+Speaker SPEAKER_00: Dr. Hinton has been telling the BBC how these systems can know so much.
+
+6
+00:00:36,743 --> 00:00:41,649
+Speaker SPEAKER_02: The kind of intelligence we're developing is very different from the intelligence we have.
+
+7
+00:00:42,331 --> 00:00:45,715
+Speaker SPEAKER_02: We're biological systems, and these are digital systems.
+
+8
+00:00:46,835 --> 00:00:54,085
+Speaker SPEAKER_02: And the big difference is that with digital systems, you have many copies of the same set of weights, the same model of the world.
+
+9
+00:00:54,892 --> 00:00:59,439
+Speaker SPEAKER_02: And all these copies can learn separately, but share their knowledge instantly.
+
+10
+00:01:00,100 --> 00:01:05,751
+Speaker SPEAKER_02: So it's as if you had 10,000 people, and whenever one person learned something, everybody automatically knew it.
+
+11
+00:01:06,852 --> 00:01:11,680
+Speaker SPEAKER_02: And that's how these channels can know so much more than any one person.
+
+12
+00:01:11,700 --> 00:01:15,668
+Speaker SPEAKER_00: Well, Dr. Hinton also told the BBC the rate of progress is worrying.
+
+13
+00:01:16,390 --> 00:01:18,873
+Speaker SPEAKER_02: Right now, what we're seeing is
+
+14
+00:01:19,495 --> 00:01:27,867
+Speaker SPEAKER_02: Things like GPT-4 eclipses a person in the amount of general knowledge it has, and eclipses them by a long way.
+
+15
+00:01:27,908 --> 00:01:32,555
+Speaker SPEAKER_02: In terms of reasoning, it's not as good, but it does already do simple reasoning.
+
+16
+00:01:33,596 --> 00:01:38,504
+Speaker SPEAKER_02: And given the rate of progress, we expect things to get better quite fast.
+
+17
+00:01:39,406 --> 00:01:40,768
+Speaker SPEAKER_02: So we need to worry about that.
+
+18
+00:01:41,328 --> 00:01:44,052
+Speaker SPEAKER_02: Right now, they're not more intelligent than us, as far as I can tell.
+
+19
+00:01:45,375 --> 00:01:46,617
+Speaker SPEAKER_02: But I think they soon may be.
+
+20
+00:01:47,709 --> 00:01:50,915
+Speaker SPEAKER_00: Earlier I spoke to Junaid Mubeen, author of Mathematical Intelligence.
+
+21
+00:01:50,974 --> 00:01:53,058
+Speaker SPEAKER_00: I asked what he makes of the AI warning.
+
+22
+00:01:53,759 --> 00:01:57,325
+Speaker SPEAKER_01: I think this one is to be taken seriously because of where it's coming from.
+
+23
+00:01:57,926 --> 00:02:02,453
+Speaker SPEAKER_01: I wouldn't take Elon Musk's own warnings particularly seriously because he's not an AI expert.
+
+24
+00:02:02,513 --> 00:02:10,866
+Speaker SPEAKER_01: Geoffrey Hinton, on the other hand, is one of the pioneers of artificial intelligence and he's also been very specific in laying out a hierarchy of risks and concerns.
+
+25
+00:02:10,846 --> 00:02:18,739
+Speaker SPEAKER_01: And so he mentions the threats that AI pose to the workforce and to the spread of misinformation.
+
+26
+00:02:19,719 --> 00:02:26,270
+Speaker SPEAKER_01: But the concerns that he's raised around existential risk, I think, are to be taken seriously.
+
+27
+00:02:26,290 --> 00:02:28,854
+Speaker SPEAKER_01: And I think it's important to recognize that
+
+28
+00:02:28,835 --> 00:02:33,419
+Speaker SPEAKER_01: those risks are not premised on AI becoming conscious or gaining sentience.
+
+29
+00:02:33,539 --> 00:02:46,894
+Speaker SPEAKER_01: We're not talking about a Terminator doomday scenario, but it's the idea that these technologies are able to amass information and process information so effectively that if you put them in the hands of bad human actors, they can wreak all kinds of havoc.
+
+30
+00:02:46,913 --> 00:02:48,876
+Speaker SPEAKER_01: And I think that is something we all need to pay attention to.
+
+31
+00:02:49,096 --> 00:02:54,942
+Speaker SPEAKER_00: So tell us a bit more about that, because he referred, didn't he, to bad actors who would use AI for bad things.
+
+32
+00:02:54,961 --> 00:02:57,525
+Speaker SPEAKER_00: So tell us a bit more about what you think he means by that.
+
+33
+00:02:58,163 --> 00:03:05,110
+Speaker SPEAKER_01: So I think one of the challenges with these chatbots is we don't fundamentally understand how they work.
+
+34
+00:03:05,151 --> 00:03:13,580
+Speaker SPEAKER_01: We know that they absorb large amounts of information, and then you can input a prompt, and it will give you an output.
+
+35
+00:03:13,639 --> 00:03:14,800
+Speaker SPEAKER_01: It might write an essay for you.
+
+36
+00:03:14,841 --> 00:03:16,483
+Speaker SPEAKER_01: It might generate an image or a video.
+
+37
+00:03:17,002 --> 00:03:22,128
+Speaker SPEAKER_01: And so the challenge is that as these systems become more complex,
+
+38
+00:03:22,109 --> 00:03:24,372
+Speaker SPEAKER_01: we can issue them with certain tasks.
+
+39
+00:03:24,573 --> 00:03:33,568
+Speaker SPEAKER_01: So I might ask a chatbot to go online and find the cheapest train ticket for me, and I might give it access to my bank account.
+
+40
+00:03:34,008 --> 00:03:40,218
+Speaker SPEAKER_01: And it will be able to carry out that task, and the stakes there seem fairly low.
+
+41
+00:03:40,199 --> 00:03:48,430
+Speaker SPEAKER_01: But you can imagine in a different context, where the stakes are a lot higher, these systems might be weaponized to carry out a whole range of tasks.
+
+42
+00:03:48,449 --> 00:03:51,514
+Speaker SPEAKER_01: And they will execute those tasks in ways that we don't fully understand.
+
+43
+00:03:51,653 --> 00:03:56,881
+Speaker SPEAKER_01: And I think the concern that people like Geoffrey Hinton have is that there could be unintended consequences.
+
+44
+00:03:57,401 --> 00:04:00,366
+Speaker SPEAKER_01: These systems behave in ways that are very different to humans.
+
+45
+00:04:00,907 --> 00:04:04,991
+Speaker SPEAKER_01: So there's no real account for how they will go about achieving their objectives.
+
+46
+00:04:05,393 --> 00:04:09,919
+Speaker SPEAKER_01: And especially if those objectives are rooted in some kind of malicious intent.
+
+47
+00:04:09,899 --> 00:04:29,632
+Speaker SPEAKER_01: So if an authoritarian leader, for example, says to a chatbot system, help me to reassert my grip on a population, there's no role knowing how a very complex computer-based system would go about achieving that, what kinds of manipulations it might employ.
+
+48
+00:04:30,213 --> 00:04:34,742
+Speaker SPEAKER_01: And so the lack of transparency is something that we really need to be concerned about.
+
+49
+00:04:35,346 --> 00:04:50,110
+Speaker SPEAKER_00: A couple of months ago, more than 1,000 tech leaders called for a six-month moratorium on the development of new AI systems because of what they said was the tech posing a profound risk to society and humanity.
+
+50
+00:04:50,250 --> 00:04:52,173
+Speaker SPEAKER_00: I mean, is it too late?
+
+51
+00:04:53,149 --> 00:04:54,071
+Speaker SPEAKER_01: It may well be.
+
+52
+00:04:54,091 --> 00:05:02,504
+Speaker SPEAKER_01: I think we have to adopt some spirit of optimism and recognize that we do have a huge degree of human intelligence as well.
+
+53
+00:05:02,624 --> 00:05:04,206
+Speaker SPEAKER_01: And now more than ever we need to summon that.
+
+54
+00:05:04,286 --> 00:05:11,276
+Speaker SPEAKER_01: And one thing that Geoffrey Hinton does emphasize is that digital intelligence the kind espoused by these trap bars is
+
+55
+00:05:11,257 --> 00:05:13,619
+Speaker SPEAKER_01: is very different to human intelligence.
+
+56
+00:05:13,658 --> 00:05:27,052
+Speaker SPEAKER_01: And that may present an opportunity for us to tap into our own human strengths and understand how we can behave and cooperate with one another in ways that might allow us to regulate these technologies and rein them in.
+
+57
+00:05:27,413 --> 00:05:31,357
+Speaker SPEAKER_01: But I will say, Geoffrey Hinton has been working on these technologies for several decades.
+
+58
+00:05:31,377 --> 00:05:36,141
+Speaker SPEAKER_01: There are many within the space that have been issuing these warnings for several years.
+
+59
+00:05:36,461 --> 00:05:40,925
+Speaker SPEAKER_01: So his own warning does seem to be coming quite late in the day.
+
+60
+00:05:40,906 --> 00:05:46,495
+Speaker SPEAKER_01: And there is a sense that maybe the genie's out of the bottle now, and there's no real accounting for what happens next.
+

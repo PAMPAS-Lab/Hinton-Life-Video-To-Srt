@@ -1,0 +1,1772 @@
+1
+00:00:02,072 --> 00:00:09,981
+Speaker SPEAKER_07: Hi, everyone.
+
+2
+00:00:11,064 --> 00:00:11,624
+Speaker SPEAKER_07: Welcome back.
+
+3
+00:00:11,644 --> 00:00:12,445
+Speaker SPEAKER_07: I hope you had a good lunch.
+
+4
+00:00:13,627 --> 00:00:17,591
+Speaker SPEAKER_07: My name is Will Douglas-Hevan, senior editor for AI at MIT Technology Review.
+
+5
+00:00:18,411 --> 00:00:22,657
+Speaker SPEAKER_07: And I think we all agree there's no denying that generative AI is the thing of the moment.
+
+6
+00:00:23,599 --> 00:00:24,940
+Speaker SPEAKER_07: But innovation does not stand still.
+
+7
+00:00:25,300 --> 00:00:29,885
+Speaker SPEAKER_07: And in this chapter, we're going to take a look at cutting edge research that is already pushing ahead and asking what's next.
+
+8
+00:00:30,507 --> 00:00:35,854
+Speaker SPEAKER_07: But starting us off, I'd like to introduce a very special speaker who will be joining us virtually.
+
+9
+00:00:36,856 --> 00:00:44,067
+Speaker SPEAKER_07: Geoffrey Hinton is a professor emeritus at University of Toronto and, until this week, an engineering fellow at Google.
+
+10
+00:00:44,087 --> 00:00:47,773
+Speaker SPEAKER_07: But on Monday, he announced that after 10 years, he will be stepping down.
+
+11
+00:00:48,799 --> 00:00:51,203
+Speaker SPEAKER_07: Jeffrey's one of the most important figures in modern AI.
+
+12
+00:00:52,124 --> 00:01:01,936
+Speaker SPEAKER_07: He's a pioneer of deep learning, developing some of the most fundamental techniques that underpin AI as we know it today, such as backpropagation, the algorithm that allows machines to learn.
+
+13
+00:01:03,457 --> 00:01:07,742
+Speaker SPEAKER_07: This technique is the foundation on which pretty much all of deep learning rests today.
+
+14
+00:01:09,004 --> 00:01:16,713
+Speaker SPEAKER_07: In 2018, Jeffrey received the Turing Award, which is often called the Nobel of computer science, alongside Jan Lekun and Yoshua Bengio.
+
+15
+00:01:18,347 --> 00:01:24,355
+Speaker SPEAKER_07: He's here with us today to talk about intelligence, what it means, and where attempts to build it into machines will take us.
+
+16
+00:01:25,156 --> 00:01:27,019
+Speaker SPEAKER_07: Jeffrey, welcome to EmTech.
+
+17
+00:01:28,140 --> 00:01:28,441
+Speaker SPEAKER_07: Thank you.
+
+18
+00:01:29,081 --> 00:01:29,861
+Speaker SPEAKER_07: How's your week going?
+
+19
+00:01:30,082 --> 00:01:31,063
+Speaker SPEAKER_07: Busy few days, I imagine.
+
+20
+00:01:32,165 --> 00:01:38,352
+Speaker SPEAKER_05: Well, the last 10 minutes was horrible because my computer crashed and I had to find another computer and connect it up.
+
+21
+00:01:38,373 --> 00:01:39,194
+Speaker SPEAKER_07: And we're glad you're back.
+
+22
+00:01:39,513 --> 00:01:41,996
+Speaker SPEAKER_07: That's the kind of technical detail we're not supposed to share with the audience.
+
+23
+00:01:43,118 --> 00:01:44,801
+Speaker SPEAKER_07: It's great you're here.
+
+24
+00:01:45,281 --> 00:01:46,582
+Speaker SPEAKER_07: Very happy that you could join us.
+
+25
+00:01:46,968 --> 00:01:51,813
+Speaker SPEAKER_07: Now, I mean, it's been in the news everywhere that you stepped down from Google this week.
+
+26
+00:01:52,393 --> 00:01:55,075
+Speaker SPEAKER_07: Could you start by telling us why you made that decision?
+
+27
+00:01:56,637 --> 00:01:58,198
+Speaker SPEAKER_05: Well, there were a number of reasons.
+
+28
+00:01:58,218 --> 00:02:00,240
+Speaker SPEAKER_05: There's always a bunch of reasons for a decision like that.
+
+29
+00:02:00,840 --> 00:02:06,206
+Speaker SPEAKER_05: One was that I'm 75, and I'm not as good at doing technical work as I used to be.
+
+30
+00:02:07,427 --> 00:02:11,010
+Speaker SPEAKER_05: My memory's not as good, and when I program, I forget to do things.
+
+31
+00:02:11,531 --> 00:02:12,551
+Speaker SPEAKER_05: So it was time to retire.
+
+32
+00:02:13,873 --> 00:02:15,354
+Speaker SPEAKER_05: A second was,
+
+33
+00:02:15,772 --> 00:02:23,723
+Speaker SPEAKER_05: Very recently, I've changed my mind a lot about the relationship between the brain and the kind of digital intelligence we're developing.
+
+34
+00:02:25,044 --> 00:02:37,221
+Speaker SPEAKER_05: So, I used to think that the computer models we were developing weren't as good as the brain, and the aim was to see if you could understand more about the brain by seeing what it takes to improve the computer models.
+
+35
+00:02:39,364 --> 00:02:41,747
+Speaker SPEAKER_05: Over the last few months, I've changed my mind completely
+
+36
+00:02:42,384 --> 00:02:46,876
+Speaker SPEAKER_05: And I think probably the computer models are working in a rather different way from the brain.
+
+37
+00:02:47,236 --> 00:02:50,324
+Speaker SPEAKER_05: They're using back propagation, and I think the brain's probably not.
+
+38
+00:02:51,347 --> 00:02:55,736
+Speaker SPEAKER_05: And a couple of things have led me to that conclusion, but one is the performance of things like GPT-4.
+
+39
+00:02:56,526 --> 00:03:05,644
+Speaker SPEAKER_07: So let's, I want to get on to the points of GPT-4 very much in a minute, but let's go back so that we all understand the argument you're making.
+
+40
+00:03:05,683 --> 00:03:09,310
+Speaker SPEAKER_07: And tell us a little bit about what backpropagation is.
+
+41
+00:03:09,350 --> 00:03:13,217
+Speaker SPEAKER_07: And this is an algorithm that you developed with a couple of colleagues back in the 1980s.
+
+42
+00:03:15,962 --> 00:03:19,429
+Speaker SPEAKER_05: Many different groups discover backpropagation.
+
+43
+00:03:19,645 --> 00:03:25,853
+Speaker SPEAKER_05: The special thing we did was used it and showed that it could develop good internal representations.
+
+44
+00:03:26,433 --> 00:03:33,763
+Speaker SPEAKER_05: And curiously, we did that by implementing a tiny language model.
+
+45
+00:03:35,444 --> 00:03:39,210
+Speaker SPEAKER_05: It had embedding vectors that were only six components.
+
+46
+00:03:39,931 --> 00:03:42,454
+Speaker SPEAKER_05: And the training set was 112 cases.
+
+47
+00:03:43,975 --> 00:03:45,097
+Speaker SPEAKER_05: But it was a language model.
+
+48
+00:03:45,116 --> 00:03:49,062
+Speaker SPEAKER_05: It was trying to predict the next term in a string of symbols.
+
+49
+00:03:50,171 --> 00:03:59,663
+Speaker SPEAKER_05: And about 10 years later, Yoshua Bengio took basically the same net and used it on natural language and showed it actually worked for natural language if you made it much bigger.
+
+50
+00:04:01,887 --> 00:04:07,513
+Speaker SPEAKER_05: But the way backpropagation works, I can give you a rough explanation of it.
+
+51
+00:04:09,316 --> 00:04:15,582
+Speaker SPEAKER_05: People who know how it works can sort of sit back and feel smug and laugh at the way I'm presenting it.
+
+52
+00:04:15,883 --> 00:04:16,184
+Speaker SPEAKER_05: OK.
+
+53
+00:04:16,805 --> 00:04:19,267
+Speaker SPEAKER_05: Because I'm a bit worried about them.
+
+54
+00:04:20,192 --> 00:04:24,177
+Speaker SPEAKER_05: So imagine you wanted to detect birds in images.
+
+55
+00:04:25,559 --> 00:04:29,764
+Speaker SPEAKER_05: So an image, let's suppose it was a 100 pixel by 100 pixel image.
+
+56
+00:04:30,324 --> 00:04:34,048
+Speaker SPEAKER_05: That's 10,000 pixels, and each pixel is three channels, RGB.
+
+57
+00:04:34,709 --> 00:04:40,755
+Speaker SPEAKER_05: So that's 30,000 numbers, the intensity in each channel in each pixel that represents the image.
+
+58
+00:04:41,677 --> 00:04:48,225
+Speaker SPEAKER_05: And the way to think of the computer vision problem is, how do I turn those 30,000 numbers into a decision about whether it's a bird or not?
+
+59
+00:04:49,336 --> 00:04:51,860
+Speaker SPEAKER_05: And people tried for a long time to do that, and they weren't very good at it.
+
+60
+00:04:53,281 --> 00:04:55,264
+Speaker SPEAKER_05: But here's a suggestion for how you might do it.
+
+61
+00:04:56,187 --> 00:05:02,776
+Speaker SPEAKER_05: You might have a layer of feature detectors that detects very simple features and images, like, for example, edges.
+
+62
+00:05:03,519 --> 00:05:13,233
+Speaker SPEAKER_05: So, a feature detector might have big positive weights to a column of pixels, and then big negative weights to the neighboring column of pixels.
+
+63
+00:05:13,923 --> 00:05:16,365
+Speaker SPEAKER_05: So if both columns are bright, it won't turn on.
+
+64
+00:05:16,766 --> 00:05:18,288
+Speaker SPEAKER_05: And if both columns are dim, it won't turn on.
+
+65
+00:05:18,870 --> 00:05:24,357
+Speaker SPEAKER_05: But if the column on one side is bright and the column on the other side is dim, it'll get very excited.
+
+66
+00:05:24,817 --> 00:05:25,939
+Speaker SPEAKER_05: And that's an edge detector.
+
+67
+00:05:26,821 --> 00:05:33,009
+Speaker SPEAKER_05: So I just told you how to wire up an edge detector by hand by having one column of big positive weights and next to it one column of big negative weights.
+
+68
+00:05:33,889 --> 00:05:38,976
+Speaker SPEAKER_05: And we can imagine a big layer of those detecting edges in different orientations and different scales all over the image.
+
+69
+00:05:39,798 --> 00:05:41,600
+Speaker SPEAKER_05: We'd need a rather large number of them.
+
+70
+00:05:41,800 --> 00:05:45,983
+Speaker SPEAKER_07: And edges in an image, you mean just lines, sort of edges of a shape?
+
+71
+00:05:46,105 --> 00:05:48,646
+Speaker SPEAKER_05: A place where the intensity changes from bright to dark.
+
+72
+00:05:50,709 --> 00:05:51,410
+Speaker SPEAKER_05: Yeah, just that.
+
+73
+00:05:52,190 --> 00:05:56,475
+Speaker SPEAKER_05: Then we might have a layer of feature detectors above that that detect combinations of edges.
+
+74
+00:05:57,336 --> 00:06:04,843
+Speaker SPEAKER_05: So for example, we might have something that detects two edges that join at a fine angle like this.
+
+75
+00:06:07,247 --> 00:06:10,389
+Speaker SPEAKER_05: So it'll have a big positive weight to each of those two edges.
+
+76
+00:06:10,740 --> 00:06:13,983
+Speaker SPEAKER_05: And if both of those edges are there at the same time, it'll get excited.
+
+77
+00:06:15,064 --> 00:06:18,129
+Speaker SPEAKER_05: And that would detect something that might be a bird's beak.
+
+78
+00:06:18,528 --> 00:06:20,511
+Speaker SPEAKER_05: It might not, but it might be a bird's beak.
+
+79
+00:06:20,531 --> 00:06:26,997
+Speaker SPEAKER_05: You might also, in that layer, have a feature detector that would detect a whole bunch of edges arranged in a circle.
+
+80
+00:06:28,579 --> 00:06:30,420
+Speaker SPEAKER_05: And that might be a bird's eye.
+
+81
+00:06:30,461 --> 00:06:31,742
+Speaker SPEAKER_05: It might be all sorts of other things.
+
+82
+00:06:31,762 --> 00:06:34,925
+Speaker SPEAKER_05: It might be a knob on a fridge or something.
+
+83
+00:06:36,593 --> 00:06:48,908
+Speaker SPEAKER_05: Then in a third layer, you might have a feature detector that detects this potential beak, and detects the potential eye, and is wired up so they're like a beak and an eye in the right spatial relation to one another.
+
+84
+00:06:49,490 --> 00:06:52,113
+Speaker SPEAKER_05: And if it sees that, it says, ah, this might be the head of a bird.
+
+85
+00:06:53,295 --> 00:06:59,242
+Speaker SPEAKER_05: And you can imagine if you keep wiring like that, you could eventually have something that detects a bird.
+
+86
+00:06:59,576 --> 00:07:06,324
+Speaker SPEAKER_05: But wiring all that up by hand would be very, very difficult, deciding on what should be connected to what and what the weight should be.
+
+87
+00:07:07,045 --> 00:07:14,211
+Speaker SPEAKER_05: And it would be especially difficult because you want these sort of intermediate layers to be good, not just for detecting birds, but for detecting all sorts of other things.
+
+88
+00:07:16,053 --> 00:07:19,497
+Speaker SPEAKER_05: So it would be more or less impossible to wire it up by hand.
+
+89
+00:07:20,899 --> 00:07:22,940
+Speaker SPEAKER_05: So the way bag propagation works is this.
+
+90
+00:07:23,081 --> 00:07:24,423
+Speaker SPEAKER_05: You start with random weights.
+
+91
+00:07:25,024 --> 00:07:27,305
+Speaker SPEAKER_05: So these feature detectors are just complete rubbish.
+
+92
+00:07:28,483 --> 00:07:33,952
+Speaker SPEAKER_05: and you put in a picture of a bird, and at the output it says, like, 0.5 it's a bird.
+
+93
+00:07:34,834 --> 00:07:36,197
+Speaker SPEAKER_05: Suppose you only have birds or non-birds.
+
+94
+00:07:37,418 --> 00:07:53,665
+Speaker SPEAKER_05: And then you ask yourself the following question, how could I change each of the weights in the network, each of the weights on connections in the network, so that instead of saying 0.5, it says 0.501 that it's a bird, and 0.499 that it's not.
+
+95
+00:07:54,843 --> 00:08:03,555
+Speaker SPEAKER_05: And you change the weights in the directions that will make it more likely to say that a bird is a bird and less likely to say that a non-bird is a bird.
+
+96
+00:08:05,297 --> 00:08:06,358
+Speaker SPEAKER_05: And you just keep doing that.
+
+97
+00:08:07,019 --> 00:08:07,980
+Speaker SPEAKER_05: And that's backpropagation.
+
+98
+00:08:08,021 --> 00:08:23,060
+Speaker SPEAKER_05: Backpropagation is actually how you take the discrepancy between what you want, which is a probability of one that it's a bird, and what it's got at present, which is a probability of 0.5 that it's a bird, how you take that discrepancy and send it backwards through the network
+
+99
+00:08:23,512 --> 00:08:31,062
+Speaker SPEAKER_05: so that you can compute for every feature detector in the network whether you'd like it to be a bit more active or a bit less active.
+
+100
+00:08:31,663 --> 00:08:48,205
+Speaker SPEAKER_05: And once you've computed that, if you know you want a feature detector to be a bit more active, you can increase the weights coming from feature detectors in the layer below that are active, and maybe put in some negative weights to feature detectors in the layer below that are off, and now you'll have a better detector.
+
+101
+00:08:48,488 --> 00:08:54,582
+Speaker SPEAKER_05: So backpropagation is just going backwards through the network to figure out for each feature detector whether you want it a little bit more active or a little bit less active.
+
+102
+00:08:55,504 --> 00:08:55,885
+Speaker SPEAKER_07: Thank you.
+
+103
+00:08:56,005 --> 00:09:01,840
+Speaker SPEAKER_07: I can show there's no one in the audience here that's smiling and thinking that was a silly explanation.
+
+104
+00:09:02,207 --> 00:09:11,183
+Speaker SPEAKER_07: So let's fast forward quite a lot to, you know, that technique basically performed really well on ImageNet.
+
+105
+00:09:11,264 --> 00:09:16,653
+Speaker SPEAKER_07: We had Joel Pino from Meta yesterday showing how far image detection had come.
+
+106
+00:09:17,073 --> 00:09:20,460
+Speaker SPEAKER_07: And it's also the technique that underpins large language models.
+
+107
+00:09:21,341 --> 00:09:22,984
+Speaker SPEAKER_07: So I want to talk now about
+
+108
+00:09:22,964 --> 00:09:42,711
+Speaker SPEAKER_07: This technique, which you initially were thinking of as almost like a poor approximation of what biological brains might do, has turned out to do things which I think have stunned you, particularly in large language models.
+
+109
+00:09:42,691 --> 00:09:56,109
+Speaker SPEAKER_07: Talk to us about why that sort of amazement that you have with today's large language models has completely sort of almost flipped your thinking of what backpropagation or machine learning in general is.
+
+110
+00:09:57,530 --> 00:10:02,076
+Speaker SPEAKER_05: So if you look at these large language models, they have about a trillion connections.
+
+111
+00:10:03,399 --> 00:10:06,803
+Speaker SPEAKER_05: And things like GPT-4 know much more than we do.
+
+112
+00:10:07,725 --> 00:10:10,048
+Speaker SPEAKER_05: They have sort of common sense knowledge about everything.
+
+113
+00:10:11,664 --> 00:10:14,687
+Speaker SPEAKER_05: And so they probably know a thousand times as much as a person.
+
+114
+00:10:16,570 --> 00:10:19,452
+Speaker SPEAKER_05: But they've got a trillion connections and we've got a hundred trillion connections.
+
+115
+00:10:20,594 --> 00:10:25,778
+Speaker SPEAKER_05: So they're much, much better at getting a lot of knowledge into only a trillion connections than we are.
+
+116
+00:10:27,801 --> 00:10:32,446
+Speaker SPEAKER_05: And I think it's because back propagation may be a much, much better learning algorithm than what we've got.
+
+117
+00:10:33,246 --> 00:10:34,447
+Speaker SPEAKER_05: That's scary.
+
+118
+00:10:35,168 --> 00:10:36,971
+Speaker SPEAKER_07: Yeah, I definitely want to get onto the scary stuff.
+
+119
+00:10:36,990 --> 00:10:38,432
+Speaker SPEAKER_07: But what do you mean by better?
+
+120
+00:10:39,457 --> 00:10:43,183
+Speaker SPEAKER_05: It can pack more information into only a few connections.
+
+121
+00:10:43,784 --> 00:10:43,965
+Speaker SPEAKER_07: Right.
+
+122
+00:10:44,546 --> 00:10:46,408
+Speaker SPEAKER_05: We're defining a trillion as only a few.
+
+123
+00:10:47,370 --> 00:10:48,371
+Speaker SPEAKER_07: Okay.
+
+124
+00:10:48,392 --> 00:10:57,004
+Speaker SPEAKER_07: So these digital computers are better at learning than humans, which itself is a huge claim.
+
+125
+00:10:57,846 --> 00:11:03,173
+Speaker SPEAKER_07: But then you also argue that that's something that we should be scared of.
+
+126
+00:11:03,234 --> 00:11:05,618
+Speaker SPEAKER_07: So could you take us through that step of the argument?
+
+127
+00:11:05,969 --> 00:11:24,312
+Speaker SPEAKER_05: Yeah, let me give you a separate piece of the argument, which is that if a computer is digital, which involves very high energy costs and very careful fabrication, you can have many copies of the same model running on different hardware that do exactly the same thing.
+
+128
+00:11:25,014 --> 00:11:27,336
+Speaker SPEAKER_05: They can look at different data, but the model's exactly the same.
+
+129
+00:11:28,057 --> 00:11:30,981
+Speaker SPEAKER_05: And what that means is, suppose you have 10,000 copies.
+
+130
+00:11:31,822 --> 00:11:35,368
+Speaker SPEAKER_05: They can be looking at 10,000 different subsets of the data,
+
+131
+00:11:35,787 --> 00:11:38,873
+Speaker SPEAKER_05: And whenever one of them learns anything, all the others know it.
+
+132
+00:11:39,914 --> 00:11:43,682
+Speaker SPEAKER_05: One of them figures out how to change the weights so it can deal with its data.
+
+133
+00:11:44,604 --> 00:11:49,614
+Speaker SPEAKER_05: They all communicate with each other and they all agree to change the weights by the average of what all of them want.
+
+134
+00:11:50,916 --> 00:11:58,149
+Speaker SPEAKER_05: And now, the 10,000 things are communicating very effectively with each other.
+
+135
+00:11:58,349 --> 00:12:02,552
+Speaker SPEAKER_05: so that they can see 10,000 times as much data as one agent could.
+
+136
+00:12:03,153 --> 00:12:04,214
+Speaker SPEAKER_05: And people can't do that.
+
+137
+00:12:05,034 --> 00:12:13,461
+Speaker SPEAKER_05: If I learn a whole lot of stuff about quantum mechanics, and I want you to know all that stuff about quantum mechanics, it's a long, painful process of getting you to understand it.
+
+138
+00:12:14,182 --> 00:12:20,048
+Speaker SPEAKER_05: I can't just copy my weights into your brain, because your brain isn't exactly the same as mine.
+
+139
+00:12:20,067 --> 00:12:20,509
+Speaker SPEAKER_07: No, it's not.
+
+140
+00:12:24,552 --> 00:12:27,715
+Speaker SPEAKER_05: It's younger.
+
+141
+00:12:28,859 --> 00:12:39,812
+Speaker SPEAKER_07: So we have digital computers that can learn more things more quickly, and they can instantly teach it to each other.
+
+142
+00:12:39,832 --> 00:12:45,299
+Speaker SPEAKER_07: It's like, you know, people in the room here could instantly transfer what they had in their heads into mine.
+
+143
+00:12:46,160 --> 00:12:48,203
+Speaker SPEAKER_07: But why is that scary?
+
+144
+00:12:49,885 --> 00:12:55,692
+Speaker SPEAKER_05: Well, because they can learn so much more, and they might... Take an example of a doctor.
+
+145
+00:12:56,399 --> 00:13:03,967
+Speaker SPEAKER_05: And imagine you have one doctor who's seen 1,000 patients and another doctor who's seen 100 million patients.
+
+146
+00:13:05,610 --> 00:13:15,283
+Speaker SPEAKER_05: You would expect the doctor who's seen 100 million patients, if he's not too forgetful, to have noticed all sorts of trends in the data that just aren't visible if you've only seen 1,000 patients.
+
+147
+00:13:16,364 --> 00:13:19,587
+Speaker SPEAKER_05: You may have only seen one patient with some rare disease.
+
+148
+00:13:19,687 --> 00:13:24,232
+Speaker SPEAKER_05: The other doctors who've seen 100 million will have seen, well, you can figure out how many patients, but a lot.
+
+149
+00:13:25,936 --> 00:13:29,620
+Speaker SPEAKER_05: And so we'll see all sorts of regularities that just aren't apparent in small data.
+
+150
+00:13:31,884 --> 00:13:39,095
+Speaker SPEAKER_05: And that's why things that can get through a lot of data can probably see structure in data we'll never see.
+
+151
+00:13:42,580 --> 00:13:47,787
+Speaker SPEAKER_07: But then, take me to the point where I should be scared of this, though.
+
+152
+00:13:48,931 --> 00:13:53,138
+Speaker SPEAKER_05: Well, if you look at GPT-4, it can already do simple reasoning.
+
+153
+00:13:53,759 --> 00:13:55,942
+Speaker SPEAKER_05: I mean, reasoning is the area where we're still better.
+
+154
+00:13:57,244 --> 00:14:03,695
+Speaker SPEAKER_05: But I was impressed the other day, GPT-4 doing a piece of common sense reasoning that I didn't think it would be able to do.
+
+155
+00:14:04,515 --> 00:14:10,245
+Speaker SPEAKER_05: So I asked it, I want all the rooms in my house to be white.
+
+156
+00:14:10,985 --> 00:14:15,293
+Speaker SPEAKER_05: At present, there's some white rooms, some blue rooms, and some yellow rooms.
+
+157
+00:14:16,251 --> 00:14:18,655
+Speaker SPEAKER_05: And yellow paint fades to white within a year.
+
+158
+00:14:19,817 --> 00:14:23,003
+Speaker SPEAKER_05: So what should I do if I want them all to be white in two years time?
+
+159
+00:14:25,287 --> 00:14:28,211
+Speaker SPEAKER_05: And it said you should paint the blue rooms yellow.
+
+160
+00:14:29,193 --> 00:14:31,256
+Speaker SPEAKER_05: That's not the natural solution, but it works, right?
+
+161
+00:14:31,798 --> 00:14:31,898
+Unknown Speaker: Yeah.
+
+162
+00:14:32,586 --> 00:14:41,037
+Speaker SPEAKER_05: That's pretty impressive common sense reasoning of the kind that it's been very hard to get AI to do using symbolic AI.
+
+163
+00:14:41,697 --> 00:14:44,541
+Speaker SPEAKER_05: Because it had to understand what fades means.
+
+164
+00:14:44,620 --> 00:14:47,624
+Speaker SPEAKER_05: It had to understood by temporal stuff.
+
+165
+00:14:48,905 --> 00:15:01,480
+Speaker SPEAKER_05: And so they're doing sort of sensible reasoning with an IQ of like 80 or 90 or something.
+
+166
+00:15:02,152 --> 00:15:09,489
+Speaker SPEAKER_05: And as a friend of mine said, it's as if some genetic engineers have said, we're going to improve grizzly bears.
+
+167
+00:15:09,929 --> 00:15:13,979
+Speaker SPEAKER_05: We've already improved them to have an IQ of 65 and they can talk English now.
+
+168
+00:15:14,220 --> 00:15:15,884
+Speaker SPEAKER_05: And they're very useful for all sorts of things.
+
+169
+00:15:16,365 --> 00:15:19,130
+Speaker SPEAKER_05: But we think we can improve the IQ to 210.
+
+170
+00:15:23,498 --> 00:15:33,830
+Speaker SPEAKER_07: I mean, I certainly have, and I'm sure many people have had that feeling when you're interacting with these latest chatbots, you know, sort of hair on the back of the neck, sort of uncanny feeling.
+
+171
+00:15:34,291 --> 00:15:38,034
+Speaker SPEAKER_07: But, you know, when I have that feeling and I'm uncomfortable, I just close my laptop.
+
+172
+00:15:39,056 --> 00:15:40,418
+Speaker SPEAKER_07: So.
+
+173
+00:15:40,437 --> 00:15:52,392
+Speaker SPEAKER_05: Yes, but these things we'll have learned from us by reading all the novels that ever were and everything Machiavelli ever wrote that
+
+174
+00:15:53,366 --> 00:15:54,990
+Speaker SPEAKER_05: how to manipulate people, right?
+
+175
+00:15:55,571 --> 00:15:58,956
+Speaker SPEAKER_05: And if they're much smarter than us, they'll be very good at manipulating us.
+
+176
+00:15:58,975 --> 00:16:00,217
+Speaker SPEAKER_05: You won't realize what's going on.
+
+177
+00:16:00,519 --> 00:16:07,068
+Speaker SPEAKER_05: You'll be like a two-year-old who's being asked, do you want the peas or the cauliflower, and doesn't realize you don't have to have either.
+
+178
+00:16:07,870 --> 00:16:10,414
+Speaker SPEAKER_05: And you'll be that easy to manipulate.
+
+179
+00:16:12,518 --> 00:16:17,907
+Speaker SPEAKER_05: And so even if they can't directly pull levers, they can certainly get us to pull levers.
+
+180
+00:16:18,510 --> 00:16:24,398
+Speaker SPEAKER_05: It turns out if you can manipulate people, you can invade a building in Washington without ever going there yourself.
+
+181
+00:16:28,724 --> 00:16:29,144
+Speaker SPEAKER_07: Very good.
+
+182
+00:16:30,044 --> 00:16:30,605
+Speaker SPEAKER_07: Yeah.
+
+183
+00:16:30,625 --> 00:16:43,201
+Speaker SPEAKER_07: So is that, is that, I mean, if the word, okay, this is a very hypothetical world, but if there were no bad actors, you know, people with, with bad intentions, would we be safe?
+
+184
+00:16:45,697 --> 00:16:46,399
+Speaker SPEAKER_05: I don't know.
+
+185
+00:16:46,438 --> 00:16:56,965
+Speaker SPEAKER_05: We'd be safer in a world where people have bad intentions and where the political system is so broken that we can't even decide not to give assault rifles to teenage boys.
+
+186
+00:16:59,049 --> 00:17:01,917
+Speaker SPEAKER_05: If you can't solve that problem, how are you going to solve this problem?
+
+187
+00:17:02,908 --> 00:17:03,789
+Speaker SPEAKER_07: Well, I mean, I don't know.
+
+188
+00:17:03,809 --> 00:17:05,991
+Speaker SPEAKER_07: I was hoping that you would have some thoughts.
+
+189
+00:17:08,354 --> 00:17:16,481
+Speaker SPEAKER_07: So one, I mean, unless we didn't make this clear at the beginning, I mean, you want to speak out about this.
+
+190
+00:17:16,903 --> 00:17:23,648
+Speaker SPEAKER_07: And you feel more comfortable doing that without it sort of having any blowback on Google.
+
+191
+00:17:24,650 --> 00:17:25,832
+Speaker SPEAKER_07: But you're speaking out about it.
+
+192
+00:17:26,011 --> 00:17:31,396
+Speaker SPEAKER_07: But in some sense, talk is cheap if we then don't have,
+
+193
+00:17:31,376 --> 00:17:32,439
+Speaker SPEAKER_07: actions?
+
+194
+00:17:32,459 --> 00:17:33,140
+Speaker SPEAKER_07: What do we do?
+
+195
+00:17:33,160 --> 00:17:37,167
+Speaker SPEAKER_07: I mean, when we, lots of people this week are listening to you, what should we do about it?
+
+196
+00:17:38,250 --> 00:17:44,603
+Speaker SPEAKER_05: I wish it was like climate change, where you could say, if you've got half a brain, you'd stop burning carbon.
+
+197
+00:17:46,326 --> 00:17:47,969
+Speaker SPEAKER_05: It's clear what you should do about it.
+
+198
+00:17:48,029 --> 00:17:50,314
+Speaker SPEAKER_05: It's clear that's painful, but has to be done.
+
+199
+00:17:50,715 --> 00:17:55,423
+Speaker SPEAKER_05: I don't know of any solution like that to stop these things taking over from us.
+
+200
+00:17:55,702 --> 00:17:59,429
+Speaker SPEAKER_05: What we really want, I don't think we're going to stop developing them because they're so useful.
+
+201
+00:17:59,869 --> 00:18:02,574
+Speaker SPEAKER_05: They'll be incredibly useful in medicine and in everything else.
+
+202
+00:18:04,195 --> 00:18:06,579
+Speaker SPEAKER_05: So I don't think there's much chance of stopping development.
+
+203
+00:18:07,000 --> 00:18:12,268
+Speaker SPEAKER_05: What we want is some way of making sure that even if they're smarter than us,
+
+204
+00:18:12,248 --> 00:18:14,611
+Speaker SPEAKER_05: they're going to do things that are beneficial for us.
+
+205
+00:18:15,011 --> 00:18:16,354
+Speaker SPEAKER_05: That's called the alignment problem.
+
+206
+00:18:16,874 --> 00:18:24,003
+Speaker SPEAKER_05: But we need to try and do that in a world where there's bad actors who want to build robot soldiers that kill people.
+
+207
+00:18:25,066 --> 00:18:26,347
+Speaker SPEAKER_05: And it seems very hard to me.
+
+208
+00:18:27,048 --> 00:18:30,733
+Speaker SPEAKER_05: So I'm sorry, I'm sounding the alarm and saying we have to worry about this.
+
+209
+00:18:31,535 --> 00:18:34,199
+Speaker SPEAKER_05: And I wish I had a nice simple solution I could push, but I don't.
+
+210
+00:18:34,558 --> 00:18:38,825
+Speaker SPEAKER_05: But I think it's very important that people get together and think hard about it and see whether there is a solution.
+
+211
+00:18:39,065 --> 00:18:40,887
+Speaker SPEAKER_05: It's not clear there is a solution.
+
+212
+00:18:41,087 --> 00:18:43,351
+Speaker SPEAKER_07: So I mean, talk to us about that.
+
+213
+00:18:43,371 --> 00:18:49,176
+Speaker SPEAKER_07: I mean, you spent your career on the technicalities of this technology.
+
+214
+00:18:49,637 --> 00:18:51,359
+Speaker SPEAKER_07: Is there no technical fix?
+
+215
+00:18:51,400 --> 00:19:03,513
+Speaker SPEAKER_07: Why can we not build in guardrails or make them worse at learning or restrict the way that they can communicate, if those are the two strings of your argument?
+
+216
+00:19:03,795 --> 00:19:06,758
+Speaker SPEAKER_05: I mean, we're trying to do all sorts of guardrails.
+
+217
+00:19:07,665 --> 00:19:09,587
+Speaker SPEAKER_05: But suppose they did get really smart.
+
+218
+00:19:10,229 --> 00:19:11,451
+Speaker SPEAKER_05: And these things can program, right?
+
+219
+00:19:11,471 --> 00:19:12,392
+Speaker SPEAKER_05: They can write programs.
+
+220
+00:19:13,011 --> 00:19:17,258
+Speaker SPEAKER_05: And suppose you give them the ability to execute those programs, which we'll certainly do.
+
+221
+00:19:20,000 --> 00:19:22,103
+Speaker SPEAKER_05: Smart things can outsmart us.
+
+222
+00:19:23,925 --> 00:19:33,717
+Speaker SPEAKER_05: So imagine your two-year-old saying, my dad does things I don't like, so I'm going to make some rules for what my dad can do.
+
+223
+00:19:34,657 --> 00:19:37,622
+Speaker SPEAKER_05: You could probably figure out how to live with those rules and still get what you want.
+
+224
+00:19:39,137 --> 00:19:39,357
+Speaker SPEAKER_07: Yeah.
+
+225
+00:19:41,082 --> 00:19:50,558
+Speaker SPEAKER_07: But there still seems to be a step where these smart machines somehow have motivation of their own.
+
+226
+00:19:51,500 --> 00:19:52,682
+Speaker SPEAKER_05: Yes, that's a very good point.
+
+227
+00:19:52,823 --> 00:19:55,627
+Speaker SPEAKER_05: So we evolved
+
+228
+00:19:55,759 --> 00:20:00,946
+Speaker SPEAKER_05: And because we evolved, we have certain built-in goals that we find very hard to turn off.
+
+229
+00:20:01,827 --> 00:20:05,192
+Speaker SPEAKER_05: Like, we try not to damage our bodies, that's what pain's about.
+
+230
+00:20:05,231 --> 00:20:09,698
+Speaker SPEAKER_05: We try and get enough to eat, so we feed our bodies.
+
+231
+00:20:12,642 --> 00:20:15,826
+Speaker SPEAKER_05: We try and make as many copies of ourselves as possible.
+
+232
+00:20:16,606 --> 00:20:24,416
+Speaker SPEAKER_05: Maybe not deliberately with that intention, but we've been wired up so there's pleasure involved in making many copies of ourselves.
+
+233
+00:20:25,662 --> 00:20:29,105
+Speaker SPEAKER_05: That all came from evolution, and it's important that we can't turn it off.
+
+234
+00:20:30,727 --> 00:20:34,451
+Speaker SPEAKER_05: If you could turn it off, you don't do so well.
+
+235
+00:20:34,510 --> 00:20:40,217
+Speaker SPEAKER_05: There's a wonderful group called the Shakers, who are related to the Quakers, who made beautiful furniture, but didn't believe in sex.
+
+236
+00:20:41,479 --> 00:20:43,320
+Speaker SPEAKER_05: And there aren't any of them around anymore.
+
+237
+00:20:46,124 --> 00:20:50,788
+Speaker SPEAKER_05: So these digital intelligences didn't evolve.
+
+238
+00:20:51,128 --> 00:20:51,890
+Speaker SPEAKER_05: We made them.
+
+239
+00:20:52,550 --> 00:20:54,893
+Speaker SPEAKER_05: And so they don't have these built-in goals.
+
+240
+00:20:55,750 --> 00:21:00,176
+Speaker SPEAKER_05: And so the issue is, if we can put the goals in, maybe it'll all be okay.
+
+241
+00:21:00,778 --> 00:21:07,469
+Speaker SPEAKER_05: But my big worry is, sooner or later, someone will wire into them the ability to create their own sub goals.
+
+242
+00:21:08,310 --> 00:21:15,362
+Speaker SPEAKER_05: In fact, they almost have that already, the versions of ChatGPT that call ChatGPT.
+
+243
+00:21:16,455 --> 00:21:27,628
+Speaker SPEAKER_05: If you give something the ability to reach certain sub-goals in order to achieve other goals, I think it'll very quickly realize that getting more control is a very good sub-goal because it helps you achieve other goals.
+
+244
+00:21:29,511 --> 00:21:33,476
+Speaker SPEAKER_05: And if these things get carried away with getting more control, we're in trouble.
+
+245
+00:21:34,917 --> 00:21:38,962
+Speaker SPEAKER_07: So what's the worst case scenario that you think is conceivable?
+
+246
+00:21:40,044 --> 00:21:42,446
+Speaker SPEAKER_05: Oh, I think it's quite conceivable
+
+247
+00:21:42,730 --> 00:21:46,536
+Speaker SPEAKER_05: that humanity is just a passing phase in the evolution of intelligence.
+
+248
+00:21:47,277 --> 00:21:49,359
+Speaker SPEAKER_05: You couldn't directly evolve digital intelligence.
+
+249
+00:21:49,380 --> 00:21:53,145
+Speaker SPEAKER_05: It requires too much energy and too much careful fabrication.
+
+250
+00:21:53,807 --> 00:21:58,694
+Speaker SPEAKER_05: You need biological intelligence to evolve so that it can create digital intelligence.
+
+251
+00:21:59,516 --> 00:22:09,632
+Speaker SPEAKER_05: The digital intelligence can then absorb everything people ever wrote in a fairly slow way, which is what ChatGPT has been doing.
+
+252
+00:22:09,982 --> 00:22:13,967
+Speaker SPEAKER_05: But then it can start getting direct experience of the world and learn much faster.
+
+253
+00:22:15,167 --> 00:22:18,571
+Speaker SPEAKER_05: And it may keep us around for a while to keep the power stations running.
+
+254
+00:22:19,373 --> 00:22:23,356
+Speaker SPEAKER_05: But after that, maybe not.
+
+255
+00:22:23,636 --> 00:22:29,202
+Speaker SPEAKER_05: So the good news is we figured out how to build beings that are immortal.
+
+256
+00:22:29,824 --> 00:22:33,948
+Speaker SPEAKER_05: So these digital intelligences, when a piece of hardware dies, they don't die.
+
+257
+00:22:34,587 --> 00:22:37,070
+Speaker SPEAKER_05: If you've got the weight stored in some medium,
+
+258
+00:22:37,539 --> 00:22:42,327
+Speaker SPEAKER_05: and you can find another piece of hardware that can run the same instructions, then you can bring it to life again.
+
+259
+00:22:44,550 --> 00:22:47,797
+Speaker SPEAKER_05: So we've got immortality, but it's not for us.
+
+260
+00:22:49,680 --> 00:22:52,523
+Speaker SPEAKER_05: So Ray Kurzweil is very interested in being immortal.
+
+261
+00:22:53,224 --> 00:22:56,790
+Speaker SPEAKER_05: I think it's a very bad idea for old white men to be immortal.
+
+262
+00:22:57,672 --> 00:23:01,759
+Speaker SPEAKER_05: We've got the immortality, but it's not for Ray.
+
+263
+00:23:01,991 --> 00:23:08,641
+Speaker SPEAKER_07: No, I mean, the scary thing is that, in a way, maybe you will be, because you invented much of this technology.
+
+264
+00:23:09,481 --> 00:23:16,590
+Speaker SPEAKER_07: I mean, when I hear you say this, I mean, part of me wants to run off the stage into the street now and start unplugging computers.
+
+265
+00:23:19,213 --> 00:23:21,396
+Speaker SPEAKER_05: I'm afraid we can't do that.
+
+266
+00:23:21,416 --> 00:23:21,616
+Speaker SPEAKER_07: Why?
+
+267
+00:23:22,397 --> 00:23:23,819
+Speaker SPEAKER_07: You sound like Hal from 2001.
+
+268
+00:23:23,839 --> 00:23:24,320
+Speaker SPEAKER_05: Exactly.
+
+269
+00:23:27,545 --> 00:23:27,644
+Unknown Speaker: Yeah.
+
+270
+00:23:29,228 --> 00:23:41,588
+Speaker SPEAKER_07: But I mean, more seriously, I mean, I know you said before that it was suggested a few months ago that there should be a moratorium on AI advancement.
+
+271
+00:23:41,789 --> 00:23:44,934
+Speaker SPEAKER_07: And I don't think you think that's a very good idea.
+
+272
+00:23:45,015 --> 00:23:48,642
+Speaker SPEAKER_07: But more generally, I'm curious why.
+
+273
+00:23:48,662 --> 00:23:51,185
+Speaker SPEAKER_07: I mean, should we not just stop?
+
+274
+00:23:51,165 --> 00:24:01,184
+Speaker SPEAKER_07: And I know, sorry, I was just going to say that, you know, I know that you've spoken also that you're an investor of your personal wealth in some companies like Cohere that are building these large language models.
+
+275
+00:24:01,265 --> 00:24:06,355
+Speaker SPEAKER_07: So I'm just curious about your personal sense of responsibility and each of our personal responsibility.
+
+276
+00:24:06,375 --> 00:24:07,176
+Speaker SPEAKER_07: What should we be doing?
+
+277
+00:24:07,857 --> 00:24:10,001
+Speaker SPEAKER_07: I mean, should we try and stop this is what I'm saying.
+
+278
+00:24:10,740 --> 00:24:19,194
+Speaker SPEAKER_05: Yeah, so I think if you take the existential risk seriously, as I now do, I used to think it was way off, but I now think it's serious and fairly close.
+
+279
+00:24:20,336 --> 00:24:24,262
+Speaker SPEAKER_05: It might be quite sensible to just stop developing these things any further.
+
+280
+00:24:25,164 --> 00:24:27,888
+Speaker SPEAKER_05: But I think it's completely naive to think that would happen.
+
+281
+00:24:28,710 --> 00:24:30,353
+Speaker SPEAKER_05: There's no way to make that happen.
+
+282
+00:24:31,210 --> 00:24:37,060
+Speaker SPEAKER_05: And one reason, I mean, if the US stops developing and the Chinese won't, they're going to be used in weapons.
+
+283
+00:24:37,781 --> 00:24:41,650
+Speaker SPEAKER_05: And just for that reason alone, governments aren't going to stop developing them.
+
+284
+00:24:41,670 --> 00:24:46,519
+Speaker SPEAKER_05: So yes, I think stopping developing them might be a rational thing to do.
+
+285
+00:24:46,718 --> 00:24:48,319
+Speaker SPEAKER_05: But there's no way it's going to happen.
+
+286
+00:24:48,359 --> 00:24:50,821
+Speaker SPEAKER_05: So it's silly to sign petitions saying, please stop now.
+
+287
+00:24:51,403 --> 00:24:52,423
+Speaker SPEAKER_05: We did have a holiday.
+
+288
+00:24:52,743 --> 00:24:59,270
+Speaker SPEAKER_05: We had a holiday from about 2017 for several years because Google developed the technology first.
+
+289
+00:24:59,651 --> 00:25:01,292
+Speaker SPEAKER_05: It developed the transformers.
+
+290
+00:25:01,313 --> 00:25:02,753
+Speaker SPEAKER_05: It also developed the fusion models.
+
+291
+00:25:03,494 --> 00:25:07,018
+Speaker SPEAKER_05: And it didn't put them out there for people to use and abuse.
+
+292
+00:25:07,578 --> 00:25:10,221
+Speaker SPEAKER_05: It was very careful with them because it didn't want to damage his reputation.
+
+293
+00:25:10,260 --> 00:25:12,844
+Speaker SPEAKER_05: And it knew there could be bad consequences.
+
+294
+00:25:12,824 --> 00:25:15,347
+Speaker SPEAKER_05: But that can only happen if there's a single leader.
+
+295
+00:25:16,170 --> 00:25:29,594
+Speaker SPEAKER_05: Once OpenAI had built similar things using transformers and money from Microsoft, and Microsoft decided to put it out there, Google didn't have really much choice.
+
+296
+00:25:29,733 --> 00:25:36,486
+Speaker SPEAKER_05: If you're going to live in a capitalist system, you can't stop Google competing with Microsoft.
+
+297
+00:25:37,022 --> 00:25:38,423
+Speaker SPEAKER_05: I don't think Google did anything wrong.
+
+298
+00:25:38,443 --> 00:25:40,006
+Speaker SPEAKER_05: I think it was very responsible to begin with.
+
+299
+00:25:40,467 --> 00:25:47,794
+Speaker SPEAKER_05: But I think it's just inevitable in a capitalist system or a system with competition between countries like the US and China that this stuff will be developed.
+
+300
+00:25:49,536 --> 00:25:54,781
+Speaker SPEAKER_05: My one hope is that because if we allowed it to take over, it will be bad for all of us.
+
+301
+00:25:55,442 --> 00:25:59,365
+Speaker SPEAKER_05: We could get the US and China to agree like we could with nuclear weapons, which were bad for all of us.
+
+302
+00:26:00,047 --> 00:26:02,809
+Speaker SPEAKER_05: We're all in the same boat with respect to the existential threat.
+
+303
+00:26:02,829 --> 00:26:06,574
+Speaker SPEAKER_05: So we all ought to be able to cooperate on trying to stop it.
+
+304
+00:26:06,622 --> 00:26:08,503
+Speaker SPEAKER_07: as long as we can make some money on the way.
+
+305
+00:26:09,265 --> 00:26:13,470
+Speaker SPEAKER_07: I'm going to take some audience questions from the room, if you make yourself known.
+
+306
+00:26:13,710 --> 00:26:18,454
+Speaker SPEAKER_07: And while people are going around with the microphone, there's one question I was going to ask from the online audience.
+
+307
+00:26:19,296 --> 00:26:26,584
+Speaker SPEAKER_07: I'm interested, I mean, you mentioned a little bit about sort of maybe a transition period as machines get smarter and outpace humans.
+
+308
+00:26:26,604 --> 00:26:31,529
+Speaker SPEAKER_07: I mean, will there be a moment where it's hard to define what's human and what isn't?
+
+309
+00:26:31,670 --> 00:26:34,333
+Speaker SPEAKER_07: Or are these two very distinct forms of intelligence?
+
+310
+00:26:35,275 --> 00:26:37,156
+Speaker SPEAKER_05: I think they're distinct forms of intelligence.
+
+311
+00:26:37,897 --> 00:26:44,467
+Speaker SPEAKER_05: Now, of course, the digital intelligences are very good at mimicking us because they've been trained to mimic us.
+
+312
+00:26:45,909 --> 00:26:52,557
+Speaker SPEAKER_05: And so it's very hard to tell if chatGBT wrote it or whether we wrote it.
+
+313
+00:26:52,978 --> 00:26:56,083
+Speaker SPEAKER_05: So in that sense, they look quite like us, but inside they're not working the same way.
+
+314
+00:26:58,144 --> 00:26:59,426
+Speaker SPEAKER_07: Who is first in the room?
+
+315
+00:27:02,173 --> 00:27:05,057
+Speaker SPEAKER_04: Hello, my name is Hal Gregerson and my middle name is not 9000.
+
+316
+00:27:06,039 --> 00:27:10,185
+Speaker SPEAKER_04: I'm a faculty over in the MIT Sloan School.
+
+317
+00:27:11,307 --> 00:27:15,914
+Speaker SPEAKER_04: Arguably asking questions is one of the most important human abilities we have.
+
+318
+00:27:17,438 --> 00:27:25,329
+Speaker SPEAKER_04: From your perspective, now in 2023, what question or two should we pay most attention to?
+
+319
+00:27:26,473 --> 00:27:35,606
+Speaker SPEAKER_04: And is it possible for these technologies to actually help us ask better questions and out-question the technology?
+
+320
+00:27:37,851 --> 00:27:45,642
+Speaker SPEAKER_05: Yes, but what I'm saying is, there's many questions we should be asking, but one of them is, how do we prevent them from taking over?
+
+321
+00:27:45,662 --> 00:27:47,265
+Speaker SPEAKER_05: How do we prevent them from getting control?
+
+322
+00:27:48,326 --> 00:27:54,996
+Speaker SPEAKER_05: And we could ask them questions about that, but I wouldn't entirely trust their answers.
+
+323
+00:27:56,932 --> 00:28:02,584
+Speaker SPEAKER_07: question at the back, and I want to get through as many as we can, so if you can keep your question as short as possible.
+
+324
+00:28:05,108 --> 00:28:08,576
+Speaker SPEAKER_03: Dr. Hinton, thank you so much for being here with us today.
+
+325
+00:28:09,337 --> 00:28:15,329
+Speaker SPEAKER_03: I shall say this is the most expensive lecture I've ever paid for, but I think it was worthwhile.
+
+326
+00:28:17,317 --> 00:28:23,226
+Speaker SPEAKER_03: I just have a question for you, because you mentioned the analogy of nuclear history.
+
+327
+00:28:23,865 --> 00:28:26,269
+Speaker SPEAKER_03: And obviously, there's a lot of comparisons.
+
+328
+00:28:26,289 --> 00:28:34,519
+Speaker SPEAKER_03: By any chance, do you remember what President Truman told Oppenheimer when he was in the Oval Office?
+
+329
+00:28:34,539 --> 00:28:35,060
+Speaker SPEAKER_05: No, I don't.
+
+330
+00:28:35,141 --> 00:28:36,362
+Speaker SPEAKER_05: I know something about that.
+
+331
+00:28:37,463 --> 00:28:40,347
+Speaker SPEAKER_05: But I don't know what Truman told Oppenheimer.
+
+332
+00:28:40,367 --> 00:28:40,768
+Speaker SPEAKER_03: Thank you.
+
+333
+00:28:41,108 --> 00:28:41,729
+Speaker SPEAKER_03: We'll take it from here.
+
+334
+00:28:43,432 --> 00:28:45,334
+Speaker SPEAKER_07: Next audience question.
+
+335
+00:28:47,557 --> 00:28:51,903
+Speaker SPEAKER_07: Sorry, if the people on the mics could let me know who's next, maybe give a... Go ahead.
+
+336
+00:28:52,304 --> 00:28:53,645
+Speaker SPEAKER_06: Hello, Jacob Woodruff.
+
+337
+00:28:54,787 --> 00:29:03,959
+Speaker SPEAKER_06: With the amount of data that's been required to train these large language models, would we expect a plateau in the intelligence of these systems?
+
+338
+00:29:04,880 --> 00:29:08,924
+Speaker SPEAKER_06: And how might that slow down or restrict the advancement?
+
+339
+00:29:09,884 --> 00:29:15,171
+Speaker SPEAKER_05: OK, so that is a ray of hope that maybe we've just used up all human knowledge and they're not going to get any smarter.
+
+340
+00:29:15,791 --> 00:29:18,536
+Speaker SPEAKER_05: But think about images and video.
+
+341
+00:29:19,857 --> 00:29:26,666
+Speaker SPEAKER_05: So multimodal models will be much smarter than models that just train on language alone.
+
+342
+00:29:26,686 --> 00:29:29,651
+Speaker SPEAKER_05: They'll have a much better idea of how to deal with space, for example.
+
+343
+00:29:30,813 --> 00:29:38,202
+Speaker SPEAKER_05: And in terms of the amount of total video, we still don't have very good ways of processing video in these models.
+
+344
+00:29:38,436 --> 00:29:39,519
+Speaker SPEAKER_05: of modeling video.
+
+345
+00:29:40,000 --> 00:29:41,102
+Speaker SPEAKER_05: We're getting better all the time.
+
+346
+00:29:41,682 --> 00:29:46,132
+Speaker SPEAKER_05: But I think there's plenty of data in things like video that tell you how the world works.
+
+347
+00:29:46,833 --> 00:29:50,420
+Speaker SPEAKER_05: So we're not hitting the data limits for multimodal models yet.
+
+348
+00:29:53,026 --> 00:29:54,407
+Speaker SPEAKER_07: Next gentleman in the back.
+
+349
+00:29:55,049 --> 00:29:56,833
+Speaker SPEAKER_07: And please do keep your questions short.
+
+350
+00:29:56,897 --> 00:29:59,760
+Speaker SPEAKER_01: Hello, Dr. Hindle, Rajiv Sevarwal from PwC.
+
+351
+00:30:00,461 --> 00:30:07,871
+Speaker SPEAKER_01: The point that I wanted to understand is that everything that AI is doing is learning from what we are teaching them, okay?
+
+352
+00:30:07,891 --> 00:30:15,039
+Speaker SPEAKER_01: Data, yes, they are faster at learning how 1 trillion connectors can do much more than 100 trillion connectors that we have.
+
+353
+00:30:15,539 --> 00:30:19,345
+Speaker SPEAKER_01: But every piece of human evolution has been driven by
+
+354
+00:30:19,325 --> 00:30:24,930
+Speaker SPEAKER_01: thought experiments, like Einstein used to do thought experiments because there was no speed of light out here on this planet.
+
+355
+00:30:25,510 --> 00:30:34,298
+Speaker SPEAKER_01: How can AI get to that point, if at all, and if it cannot, then how can we possibly have an existential threat from them because they will not be self-learning, so to say.
+
+356
+00:30:34,880 --> 00:30:38,123
+Speaker SPEAKER_01: They will be self-learning limited to the model that we tell them.
+
+357
+00:30:39,364 --> 00:30:45,509
+Speaker SPEAKER_05: I think that's a very interesting argument, but I think they will be able to do thought experiments.
+
+358
+00:30:45,549 --> 00:30:46,671
+Speaker SPEAKER_05: I think they'll be able to reason.
+
+359
+00:30:47,070 --> 00:30:48,893
+Speaker SPEAKER_05: So let me give you an analogy.
+
+360
+00:30:49,160 --> 00:30:55,327
+Speaker SPEAKER_05: If you take AlphaZero, which plays chess, it has three ingredients.
+
+361
+00:30:56,128 --> 00:30:59,773
+Speaker SPEAKER_05: It's got something that evaluates the board position to say, is that good for me?
+
+362
+00:30:59,814 --> 00:31:04,760
+Speaker SPEAKER_05: It's got something that looks at a board position and says, what's a sensible move to consider?
+
+363
+00:31:05,801 --> 00:31:12,230
+Speaker SPEAKER_05: And then it's got Monte Carlo rollout, where it does what's called calculation, where you think, if I go here and he goes there, and I go here and he goes there.
+
+364
+00:31:13,173 --> 00:31:26,342
+Speaker SPEAKER_05: Now, suppose you leave out the Monte Carlo rollout and you just train it from human experts to have a good evaluation function and a good way to choose moves to consider, it still plays a pretty good game of chess.
+
+365
+00:31:27,144 --> 00:31:29,489
+Speaker SPEAKER_05: And I think that's what we've got with the chatbots.
+
+366
+00:31:30,652 --> 00:31:32,936
+Speaker SPEAKER_05: And we haven't got them doing internal reasoning.
+
+367
+00:31:33,997 --> 00:31:34,938
+Speaker SPEAKER_05: But that will come.
+
+368
+00:31:35,479 --> 00:31:43,807
+Speaker SPEAKER_05: And once they start doing internal reasoning to check for the consistency between the different things they believe, then they'll get much smarter and they will be able to do thought experiments.
+
+369
+00:31:44,548 --> 00:31:52,537
+Speaker SPEAKER_05: And one reason they haven't got this internal reasoning is because they've been trained from inconsistent data.
+
+370
+00:31:53,478 --> 00:31:58,282
+Speaker SPEAKER_05: And so it's very hard for them to do reasoning because they've been trained on all these inconsistent beliefs.
+
+371
+00:31:58,516 --> 00:32:05,890
+Speaker SPEAKER_05: And I think they're going to have to be trained so they say, you know, if I have this ideology, then this is true.
+
+372
+00:32:05,930 --> 00:32:07,794
+Speaker SPEAKER_05: And if I have that ideology, then that is true.
+
+373
+00:32:08,173 --> 00:32:12,422
+Speaker SPEAKER_05: And once they're trained like that, within an ideology, they're going to be able to try and get consistency.
+
+374
+00:32:13,183 --> 00:32:17,992
+Speaker SPEAKER_05: And so we're going to get a move like from a version of AlphaZero that just has a
+
+375
+00:32:18,192 --> 00:32:28,859
+Speaker SPEAKER_05: something that guesses good moves and something that evaluates positions to a version that has long chains of Monte Carlo rollout, which is the corner of reasoning, and it's going to get much better.
+
+376
+00:32:30,140 --> 00:32:35,390
+Speaker SPEAKER_07: I'm going to take one in the front here, and then if you can be quick, we'll try and squeeze one more in as well.
+
+377
+00:32:35,410 --> 00:32:37,693
+Speaker SPEAKER_02: Lewis Lamb, Jeff, I know you for a long time.
+
+378
+00:32:38,194 --> 00:32:51,439
+Speaker SPEAKER_02: Jeff, people criticize language models because allegedly they are lacking semantics and grounding to the world, and you have been trying to as well to explain how neural networks work for a long time.
+
+379
+00:32:51,419 --> 00:33:03,375
+Speaker SPEAKER_02: Is the question of semantics and explainability relevant here, or language models have taken over and we are now doomed to go forward without semantics or grounding to reality?
+
+380
+00:33:04,836 --> 00:33:15,991
+Speaker SPEAKER_05: I find it very hard to believe that they don't have semantics when they can solve problems like how I get all the rooms in my house to be painted white in two years' time.
+
+381
+00:33:16,208 --> 00:33:19,594
+Speaker SPEAKER_05: I mean, whatever semantic is, it's to do with the meaning of that stuff.
+
+382
+00:33:20,355 --> 00:33:22,098
+Speaker SPEAKER_05: And it understood the meaning.
+
+383
+00:33:22,159 --> 00:33:22,640
+Speaker SPEAKER_05: It got it.
+
+384
+00:33:23,000 --> 00:33:27,689
+Speaker SPEAKER_05: Now, I agree it's not grounded by being a robot.
+
+385
+00:33:28,089 --> 00:33:30,575
+Speaker SPEAKER_05: But you can make multimodal ones that are grounded.
+
+386
+00:33:30,714 --> 00:33:31,276
+Speaker SPEAKER_05: Google's done that.
+
+387
+00:33:31,977 --> 00:33:36,546
+Speaker SPEAKER_05: And the multimodal ones that are grounded, you can say, please close the drawer.
+
+388
+00:33:36,526 --> 00:33:38,909
+Speaker SPEAKER_05: and they reach out and grab the handle and close the drawer.
+
+389
+00:33:39,449 --> 00:33:41,530
+Speaker SPEAKER_05: And it's very hard to say that doesn't have semantics.
+
+390
+00:33:41,892 --> 00:34:03,174
+Speaker SPEAKER_05: In fact, in the very early days of AI, in the days of Winograd in the 1970s, they had just a simulated world, but they had what was called procedural semantics, where if you said to it, put the red block in the green box, and it put the red block in the green box, you said, see, it understood the language.
+
+391
+00:34:03,931 --> 00:34:05,923
+Speaker SPEAKER_05: And that was the criterion people used back then.
+
+392
+00:34:05,983 --> 00:34:10,110
+Speaker SPEAKER_05: But now that neural nets can do it, they say that's not an adequate criterion.
+
+393
+00:34:11,963 --> 00:34:12,443
+Speaker SPEAKER_00: One at the back.
+
+394
+00:34:13,786 --> 00:34:16,670
+Speaker SPEAKER_00: Hey Jeff, this is Ishwar Balani from SAI Group.
+
+395
+00:34:16,690 --> 00:34:21,076
+Speaker SPEAKER_00: So clearly, you know, the technology is advancing at an exponential pace.
+
+396
+00:34:21,978 --> 00:34:37,701
+Speaker SPEAKER_00: I wanted to get your thoughts, if you looked at the near and medium term, say one to three or maybe five year horizon, what the social and economic implications are, you know, from a societal perspective with, you know, job loss or maybe new jobs being created.
+
+397
+00:34:37,760 --> 00:34:41,346
+Speaker SPEAKER_00: Just wanted to get your thoughts on how we proceed.
+
+398
+00:34:41,326 --> 00:34:43,728
+Speaker SPEAKER_00: given the state of the technology and rate of change?
+
+399
+00:34:44,670 --> 00:34:50,777
+Speaker SPEAKER_05: Yes, so the alarm bell I'm ringing is to do with the existential threat of them taking control.
+
+400
+00:34:51,458 --> 00:35:03,132
+Speaker SPEAKER_05: Lots of other people have talked about that, and I don't consider myself to be an expert on that, but there's some very obvious things that they're going to make a whole bunch of jobs much more efficient.
+
+401
+00:35:03,331 --> 00:35:16,349
+Speaker SPEAKER_05: So I know someone who answers letters of complaint to a health service, and he used to take 25 minutes writing a letter, and now it takes him five minutes because he gives it to CHAT-GPT, and CHAT-GPT writes the letter for him, and then he just checks it.
+
+402
+00:35:16,909 --> 00:35:21,576
+Speaker SPEAKER_05: There'll be lots of stuff like that, which is going to cause huge increases in productivity.
+
+403
+00:35:22,079 --> 00:35:25,943
+Speaker SPEAKER_05: There will be delays because people are very conservative about adopting new technology.
+
+404
+00:35:26,182 --> 00:35:28,266
+Speaker SPEAKER_05: But I think there's going to be huge increases in productivity.
+
+405
+00:35:29,126 --> 00:35:36,014
+Speaker SPEAKER_05: My worry is that those increases in productivity are going to go to putting people out of work and making the rich richer and the poor poorer.
+
+406
+00:35:37,034 --> 00:35:42,000
+Speaker SPEAKER_05: And as you do that, as you make that gap bigger, society gets more and more violent.
+
+407
+00:35:42,581 --> 00:35:49,047
+Speaker SPEAKER_05: This thing called the Gini Index, which predicts quite well how much violence there is.
+
+408
+00:35:49,719 --> 00:36:02,757
+Speaker SPEAKER_05: this technology, which ought to be wonderful, you know, even the good uses of technology for doing helpful things ought to be wonderful, but in our current political systems, it's going to be used to make the rich richer and the poor poorer.
+
+409
+00:36:03,918 --> 00:36:10,969
+Speaker SPEAKER_05: You might be able to ameliorate that by having a kind of basic income that everybody gets, but
+
+410
+00:36:12,822 --> 00:36:22,175
+Speaker SPEAKER_05: the technology is being developed in a society that is not designed to use it for everybody's good.
+
+411
+00:36:24,518 --> 00:36:29,746
+Speaker SPEAKER_07: A question here from Joe Costaldo of the Global Mail, who's in the audience.
+
+412
+00:36:30,387 --> 00:36:33,512
+Speaker SPEAKER_07: Do you intend to hold on to your investments in Cahir and other companies?
+
+413
+00:36:33,773 --> 00:36:38,340
+Speaker SPEAKER_07: And if so, why?
+
+414
+00:36:38,994 --> 00:36:46,025
+Speaker SPEAKER_05: Well, I could take the money and I could put it in the bank and let them profit from it.
+
+415
+00:36:49,128 --> 00:36:53,936
+Speaker SPEAKER_05: Yes, I'm going to hold on to my investments in Cohere, partly because the people who run Cohere are friends of mine.
+
+416
+00:36:56,659 --> 00:37:01,686
+Speaker SPEAKER_05: I sort of believe these big language models are going to be very helpful.
+
+417
+00:37:03,009 --> 00:37:05,492
+Speaker SPEAKER_05: I think the technology
+
+418
+00:37:05,793 --> 00:37:09,157
+Speaker SPEAKER_05: should be good, and it should make things work better.
+
+419
+00:37:10,539 --> 00:37:14,065
+Speaker SPEAKER_05: It's the politics we need to fix for things like employment.
+
+420
+00:37:16,208 --> 00:37:20,893
+Speaker SPEAKER_05: But when it comes to the existential threat, we have to think how we can keep control of the technology.
+
+421
+00:37:21,614 --> 00:37:25,621
+Speaker SPEAKER_05: But the good news there is that we're all in the same boat, so we might be able to get cooperation.
+
+422
+00:37:26,422 --> 00:37:34,432
+Speaker SPEAKER_07: And in speaking out, I mean, part of your thinking, as I understand it, is that you actually want to engage with the people making this technology and, you know,
+
+423
+00:37:35,172 --> 00:37:40,981
+Speaker SPEAKER_07: change their minds or maybe make a case for, I don't really know.
+
+424
+00:37:41,001 --> 00:37:45,688
+Speaker SPEAKER_07: I mean, we've established that we don't really know what to do, but it's about engaging rather than stepping back.
+
+425
+00:37:46,811 --> 00:37:51,679
+Speaker SPEAKER_05: So one of the things that made me leave Google and go public with this
+
+426
+00:37:51,760 --> 00:38:02,197
+Speaker SPEAKER_05: is to say, he used to be a junior professor, but he's now a middle-ranked professor, who I think very highly of, who encouraged me to do this.
+
+427
+00:38:02,217 --> 00:38:05,083
+Speaker SPEAKER_05: He said, Jeff, you need to speak out there, listen to you.
+
+428
+00:38:05,344 --> 00:38:08,027
+Speaker SPEAKER_05: People are just blind to this danger.
+
+429
+00:38:09,992 --> 00:38:13,498
+Speaker SPEAKER_05: And I think people are listening now.
+
+430
+00:38:13,849 --> 00:38:17,378
+Speaker SPEAKER_07: Yeah, no, I think everyone in this room is listening for a start.
+
+431
+00:38:18,641 --> 00:38:25,378
+Speaker SPEAKER_07: Just one last question, and we're out of time, but do you have regrets that you were involved in making this?
+
+432
+00:38:25,831 --> 00:38:29,496
+Speaker SPEAKER_05: CaveMets tried very hard to get me to say I had regrets.
+
+433
+00:38:29,715 --> 00:38:31,458
+Speaker SPEAKER_07: CaveMets at the New York Times.
+
+434
+00:38:31,980 --> 00:38:32,199
+Speaker SPEAKER_05: Yes.
+
+435
+00:38:32,840 --> 00:38:39,130
+Speaker SPEAKER_05: And in the end, I said, well, maybe slight regrets, which got reported as has regrets.
+
+436
+00:38:40,811 --> 00:38:43,815
+Speaker SPEAKER_05: I don't think I made any bad decisions in doing research.
+
+437
+00:38:43,916 --> 00:38:49,344
+Speaker SPEAKER_05: I think it was perfectly reasonable back in the 70s and 80s to do research on how to make artificial neural nets.
+
+438
+00:38:50,865 --> 00:38:52,047
+Speaker SPEAKER_05: It wasn't really foreseeable.
+
+439
+00:38:52,487 --> 00:38:54,471
+Speaker SPEAKER_05: This stage of it wasn't foreseeable.
+
+440
+00:38:54,451 --> 00:38:59,643
+Speaker SPEAKER_05: And until very recently, I thought this existential crisis was a long way off.
+
+441
+00:38:59,664 --> 00:39:01,949
+Speaker SPEAKER_05: So I don't really have any regrets about what I did.
+
+442
+00:39:04,376 --> 00:39:05,338
+Speaker SPEAKER_07: Thank you, Geoffrey.
+
+443
+00:39:05,438 --> 00:39:06,722
+Speaker SPEAKER_07: Thank you so much for joining us.
+

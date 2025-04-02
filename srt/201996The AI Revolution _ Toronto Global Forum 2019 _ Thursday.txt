@@ -1,0 +1,1256 @@
+1
+00:00:05,278 --> 00:00:12,183
+Speaker SPEAKER_00: Okay, if anybody in this room thinks that I was even the least bit intimidated before accepting to do this interview.
+
+2
+00:00:12,721 --> 00:00:13,641
+Speaker SPEAKER_00: You would all be right.
+
+3
+00:00:14,683 --> 00:00:16,806
+Speaker SPEAKER_00: That said, we're going to try and have a great discussion here.
+
+4
+00:00:17,106 --> 00:00:22,794
+Speaker SPEAKER_00: And I know that 25 minutes from now, people will walk away knowing quite a bit more than they knew when they came in.
+
+5
+00:00:22,934 --> 00:00:23,675
+Speaker SPEAKER_00: So let's get started.
+
+6
+00:00:24,315 --> 00:00:32,326
+Speaker SPEAKER_00: I thought it would be so helpful, given that you just, the two of you with a colleague, just won the Turing Prize Award.
+
+7
+00:00:32,826 --> 00:00:39,234
+Speaker SPEAKER_00: I thought it would be for your discovery on neural nets and deep learning, if you, Jeff,
+
+8
+00:00:39,383 --> 00:00:46,076
+Speaker SPEAKER_00: gave the audience a good understanding of what exactly is deep learning and what are neural nets.
+
+9
+00:00:46,537 --> 00:00:55,216
+Speaker SPEAKER_03: Okay, so 60 years ago or longer at the beginning of AI, there were two ideas about how you make intelligent systems.
+
+10
+00:00:55,898 --> 00:00:59,906
+Speaker SPEAKER_03: There was a logic inspired idea that you process strings of symbols
+
+11
+00:01:00,409 --> 00:01:01,451
+Speaker SPEAKER_03: using rules of inference.
+
+12
+00:01:01,551 --> 00:01:08,581
+Speaker SPEAKER_03: And there was the biologically inspired idea that you try and mimic a big network of brain cells and learn the strengths of the connections.
+
+13
+00:01:09,043 --> 00:01:10,525
+Speaker SPEAKER_03: And these were very different paradigms.
+
+14
+00:01:11,186 --> 00:01:17,375
+Speaker SPEAKER_03: And for a long, long time, the neural net paradigm, based on trying to mimic the brain, didn't work very well.
+
+15
+00:01:18,376 --> 00:01:19,438
+Speaker SPEAKER_03: And we didn't really know why.
+
+16
+00:01:19,737 --> 00:01:26,468
+Speaker SPEAKER_03: And in the end, it turned out it didn't work very well because we hadn't given enough data and we hadn't got enough computer power.
+
+17
+00:01:26,784 --> 00:01:32,021
+Speaker SPEAKER_03: And starting the beginning of this century, we got more and more computer power, more and more data.
+
+18
+00:01:32,421 --> 00:01:39,242
+Speaker SPEAKER_03: And suddenly, systems that learned how to do things, as opposed to systems where you programmed them,
+
+19
+00:01:39,509 --> 00:01:40,349
+Speaker SPEAKER_03: became effective.
+
+20
+00:01:40,709 --> 00:01:42,453
+Speaker SPEAKER_03: And that's what's happened in the last 10 years.
+
+21
+00:01:42,873 --> 00:01:49,281
+Speaker SPEAKER_03: We've seen them be much better at speech recognition, much better at recognizing things in images, much better at machine translation.
+
+22
+00:01:50,221 --> 00:02:00,834
+Speaker SPEAKER_03: And all of this is done by taking a big network of simulated brain cells that have connections between them and modifying the connection strengths so the network behaves more in the way you'd like it to behave.
+
+23
+00:02:01,856 --> 00:02:08,604
+Speaker SPEAKER_03: And so to get it to do something, you don't write a program that tells it how to do that particular thing.
+
+24
+00:02:08,719 --> 00:02:20,514
+Speaker SPEAKER_03: You write a program that tells the big network how to learn, and then for any particular task, you just give it some input data, you show it what the correct output data is, and it just figures out how to change all the connection strengths.
+
+25
+00:02:20,533 --> 00:02:22,780
+Speaker SPEAKER_03: So if you give it those inputs, it gives you the right outputs.
+
+26
+00:02:23,046 --> 00:02:26,532
+Speaker SPEAKER_03: and it tends to generalize well to new examples.
+
+27
+00:02:27,114 --> 00:02:30,639
+Speaker SPEAKER_03: So if you've got any big data set and you want to predict anything, this is the way to go.
+
+28
+00:02:30,980 --> 00:02:36,509
+Speaker SPEAKER_00: So essentially, you're mimicking the way you believe our brains work.
+
+29
+00:02:36,530 --> 00:02:39,194
+Speaker SPEAKER_03: At a very abstract level, we're mimicking how the brains work.
+
+30
+00:02:39,414 --> 00:02:47,889
+Speaker SPEAKER_03: All the details are different, but the general idea that you learn from examples by adapting connection strengths is how the brain works.
+
+31
+00:02:47,870 --> 00:02:49,793
+Speaker SPEAKER_03: Was it your, please, Joshua.
+
+32
+00:02:49,812 --> 00:03:03,510
+Speaker SPEAKER_02: I just want to motivate a bit more why learning is so important and why the classical AI approach based on symbols and rules and facts that were given by humans didn't work.
+
+33
+00:03:05,794 --> 00:03:10,781
+Speaker SPEAKER_02: Because there's so many things that we know how to do, but we can't program computers to do.
+
+34
+00:03:11,162 --> 00:03:13,305
+Speaker SPEAKER_02: We don't have conscious access to that knowledge.
+
+35
+00:03:13,944 --> 00:03:17,370
+Speaker SPEAKER_02: You and I know how to recognize this as a glass of water.
+
+36
+00:03:17,485 --> 00:03:21,469
+Speaker SPEAKER_02: But we can't tell a computer how to do that job.
+
+37
+00:03:21,490 --> 00:03:38,834
+Speaker SPEAKER_02: And so it turns out there's a lot about the abilities of our brain, which we can't dissect in simple explanations that we can give to computers in the same way that we can't even explain another human, because we don't have access to that knowledge.
+
+38
+00:03:38,854 --> 00:03:39,895
+Speaker SPEAKER_02: It's hidden in our brain.
+
+39
+00:03:40,436 --> 00:03:46,884
+Speaker SPEAKER_02: And so the solution for computers to have that kind of knowledge is to learn from data, just like children do.
+
+40
+00:03:46,865 --> 00:03:48,586
+Speaker SPEAKER_02: That's why it's so important.
+
+41
+00:03:49,048 --> 00:03:53,573
+Speaker SPEAKER_00: So it's the closest to mimicking our brain as opposed to the logic approach.
+
+42
+00:03:54,054 --> 00:03:55,354
+Speaker SPEAKER_00: Our brains work randomly.
+
+43
+00:03:55,375 --> 00:04:04,686
+Speaker SPEAKER_02: It's not mimicking our brain because neuroscientists would say the brain is very different from what we're doing, but it's clearly inspired by a lot of the things we know about brains.
+
+44
+00:04:04,746 --> 00:04:09,632
+Speaker SPEAKER_00: And was your background in cognitive psychology, I was curious about this,
+
+45
+00:04:09,611 --> 00:04:13,036
+Speaker SPEAKER_00: Is that combination of cognitive psychology and computer science?
+
+46
+00:04:13,377 --> 00:04:20,745
+Speaker SPEAKER_00: Was it that cognitive psychology background that twigged you to this way of thinking about it?
+
+47
+00:04:21,887 --> 00:04:25,411
+Speaker SPEAKER_03: Actually, I didn't get along very well in psychology.
+
+48
+00:04:26,052 --> 00:04:26,473
+Speaker SPEAKER_03: You quit?
+
+49
+00:04:27,694 --> 00:04:32,661
+Speaker SPEAKER_03: The inspiration was from thinking what those cognitive psychologists were saying was complete bullshit and would never work.
+
+50
+00:04:34,163 --> 00:04:35,084
+Speaker SPEAKER_03: Okay, all right.
+
+51
+00:04:35,545 --> 00:04:37,307
+Speaker SPEAKER_00: So we had to come up with something else.
+
+52
+00:04:37,877 --> 00:04:38,978
+Speaker SPEAKER_00: to figure it out.
+
+53
+00:04:40,682 --> 00:04:51,154
+Speaker SPEAKER_00: For both of you, you worked in this field for many years, and Jeff, you a bit longer, because you're older, kind of in the wilderness, meaning your approach to things was not being taken seriously.
+
+54
+00:04:51,535 --> 00:04:52,697
+Speaker SPEAKER_00: What keeps you going?
+
+55
+00:04:52,757 --> 00:04:55,761
+Speaker SPEAKER_00: I think it's so interesting about scientists and their curiosity.
+
+56
+00:04:56,201 --> 00:04:57,523
+Speaker SPEAKER_00: What keeps you going?
+
+57
+00:04:57,562 --> 00:05:07,074
+Speaker SPEAKER_00: What keeps you pushing to get to the breakthrough when the mainstream computer scientists are kind of ignoring you, or even worse?
+
+58
+00:05:07,848 --> 00:05:08,949
+Speaker SPEAKER_00: We were obviously right.
+
+59
+00:05:11,875 --> 00:05:13,096
+Speaker SPEAKER_00: But it takes something, right?
+
+60
+00:05:13,396 --> 00:05:13,697
+Speaker SPEAKER_00: Does it?
+
+61
+00:05:14,178 --> 00:05:14,418
+Speaker SPEAKER_02: Yeah.
+
+62
+00:05:14,800 --> 00:05:16,101
+Speaker SPEAKER_02: I mean, other than brain power.
+
+63
+00:05:16,182 --> 00:05:24,136
+Speaker SPEAKER_02: I think if you want to be successful in research, you have to be willing to do things that others are not doing, because research is exploration.
+
+64
+00:05:24,175 --> 00:05:25,156
+Speaker SPEAKER_02: It's discovery, right?
+
+65
+00:05:25,838 --> 00:05:29,865
+Speaker SPEAKER_02: And before you do discovery, many other people might not believe it.
+
+66
+00:05:30,666 --> 00:05:32,589
+Speaker SPEAKER_02: So you have to have that.
+
+67
+00:05:32,872 --> 00:05:39,252
+Speaker SPEAKER_02: self-confidence to some extent and willingness to take risks for this kind of thing to happen.
+
+68
+00:05:39,694 --> 00:05:40,997
+Speaker SPEAKER_00: I think that's a big idea, right?
+
+69
+00:05:41,038 --> 00:05:43,947
+Speaker SPEAKER_00: Being willing to do something that no one else is doing.
+
+70
+00:05:44,365 --> 00:05:47,588
+Speaker SPEAKER_03: Particularly when it looks implausible.
+
+71
+00:05:47,687 --> 00:05:54,053
+Speaker SPEAKER_03: So as Yoshua said, what people in conventional AI were doing was putting facts into the computer.
+
+72
+00:05:54,093 --> 00:06:04,283
+Speaker SPEAKER_03: They would look at the world, they'd write down some facts, they'd express them in some logical language that the computer could program, and they'd put the facts into the computer.
+
+73
+00:06:04,302 --> 00:06:10,007
+Speaker SPEAKER_03: And the alternative was that the computer would derive all this knowledge just from data, where the knowledge wasn't at all explicit.
+
+74
+00:06:10,689 --> 00:06:14,372
+Speaker SPEAKER_03: And that seemed sort of tough, that seemed hard to do.
+
+75
+00:06:14,351 --> 00:06:24,867
+Speaker SPEAKER_03: And in particular, the idea that you could get a computer with a lot of random connections in it, and it would learn to do complicated things like machine translation, seemed utterly implausible to almost everybody.
+
+76
+00:06:25,307 --> 00:06:30,074
+Speaker SPEAKER_02: So let me just add another thing to clarify the terms.
+
+77
+00:06:30,355 --> 00:06:34,721
+Speaker SPEAKER_02: So AI is about building machines that might eventually be as intelligent as us.
+
+78
+00:06:36,163 --> 00:06:43,312
+Speaker SPEAKER_02: And machine learning is an approach to AI where we want computers to learn how to do things and understand the world.
+
+79
+00:06:43,562 --> 00:06:48,750
+Speaker SPEAKER_02: And deep learning and neural nets is a particular form of machine learning that is inspired by the brain.
+
+80
+00:06:48,930 --> 00:06:51,374
+Speaker SPEAKER_02: Okay, so because all of these terms can be confusing sometimes.
+
+81
+00:06:51,394 --> 00:06:51,694
+Speaker SPEAKER_00: Together.
+
+82
+00:06:51,814 --> 00:06:53,257
+Speaker SPEAKER_00: No, that is very helpful.
+
+83
+00:06:55,720 --> 00:07:04,151
+Speaker SPEAKER_00: What do you see as the most exciting initiatives that are going on today, actually, where deep learning is being applied?
+
+84
+00:07:04,833 --> 00:07:06,415
+Speaker SPEAKER_00: What are the biggest initiatives?
+
+85
+00:07:07,711 --> 00:07:12,177
+Speaker SPEAKER_03: That's hard to answer because there's a lot of different areas where it's being applied.
+
+86
+00:07:12,197 --> 00:07:18,509
+Speaker SPEAKER_03: So there's areas like, for example, to save the planet, we need to make solar panels more efficient.
+
+87
+00:07:19,410 --> 00:07:21,353
+Speaker SPEAKER_03: And to do that, we need nanotechnology.
+
+88
+00:07:22,314 --> 00:07:26,422
+Speaker SPEAKER_03: And deep learning is now being applied to predicting the properties of materials.
+
+89
+00:07:26,783 --> 00:07:28,665
+Speaker SPEAKER_03: So I think it may have a big impact there.
+
+90
+00:07:29,086 --> 00:07:32,351
+Speaker SPEAKER_03: If you could make solar panels 10% more efficient, that would have a huge effect.
+
+91
+00:07:32,567 --> 00:07:36,016
+Speaker SPEAKER_00: And tip the scales on the viability of that.
+
+92
+00:07:36,237 --> 00:07:43,314
+Speaker SPEAKER_02: In fact, the same technique could be used to potentially, it hasn't been done yet, build better carbon capture, better batteries.
+
+93
+00:07:43,413 --> 00:07:48,947
+Speaker SPEAKER_02: So the applications to climate change is something new, but it has a lot of potential.
+
+94
+00:07:48,966 --> 00:07:51,031
+Speaker SPEAKER_02: But it's not just in materials, it's also
+
+95
+00:07:51,012 --> 00:08:00,567
+Speaker SPEAKER_02: for example, in improving the efficiency of the use of electricity and using forecasting to be able to use the renewables more efficiently.
+
+96
+00:08:01,869 --> 00:08:06,716
+Speaker SPEAKER_02: It's in better climate models because it's very hard to predict the future, that's just changing.
+
+97
+00:08:07,276 --> 00:08:08,238
+Speaker SPEAKER_02: So there are lots of ways.
+
+98
+00:08:08,319 --> 00:08:12,404
+Speaker SPEAKER_02: But these are more where we're looking forward.
+
+99
+00:08:12,745 --> 00:08:16,310
+Speaker SPEAKER_02: Right now, most of the applications of
+
+100
+00:08:16,408 --> 00:08:25,769
+Speaker SPEAKER_02: deep learning are more in companies that are using it for improving how they interact with their customers.
+
+101
+00:08:25,790 --> 00:08:26,711
+Speaker SPEAKER_00: So predictions.
+
+102
+00:08:27,213 --> 00:08:34,570
+Speaker SPEAKER_02: Yeah, so it could be, for example, search engines, recommendations, ads.
+
+103
+00:08:34,549 --> 00:08:36,552
+Speaker SPEAKER_02: proposing things that customers need.
+
+104
+00:08:36,852 --> 00:08:42,522
+Speaker SPEAKER_00: I want to come back to that in one minute, the prediction machines and the ads and the proposing things customers want.
+
+105
+00:08:43,302 --> 00:08:47,688
+Speaker SPEAKER_00: Let me ask you about driverless cars, because that's one of the applications we hear so much about.
+
+106
+00:08:48,629 --> 00:08:52,216
+Speaker SPEAKER_00: Who wants to take a shot at telling us a bit what the status is of driverless cars?
+
+107
+00:08:53,317 --> 00:08:55,419
+Speaker SPEAKER_03: I think it's inevitable they will come.
+
+108
+00:08:56,120 --> 00:08:58,784
+Speaker SPEAKER_03: I think when they come, they'll save a lot of lives.
+
+109
+00:08:58,764 --> 00:09:07,696
+Speaker SPEAKER_03: I think it may well be there's a transition, this is just my own personal opinion, in how we view transport.
+
+110
+00:09:07,756 --> 00:09:10,767
+Speaker SPEAKER_03: Like, currently we have cars and we have trains.
+
+111
+00:09:10,982 --> 00:09:23,559
+Speaker SPEAKER_03: And what if we could have things like trains, but that came whenever you wanted and went wherever you wanted, but they're not things you own, they're things that are socially owned, and they're things that are highly coordinated.
+
+112
+00:09:23,600 --> 00:09:25,081
+Speaker SPEAKER_03: So you have a lot of central coordination.
+
+113
+00:09:25,582 --> 00:09:29,548
+Speaker SPEAKER_03: So you can get a lot of them traveling very close together very fast without problems.
+
+114
+00:09:29,528 --> 00:09:34,672
+Speaker SPEAKER_03: So I think there may be a transition over a longer time period in the whole way transport works.
+
+115
+00:09:34,712 --> 00:09:39,537
+Speaker SPEAKER_00: So the concept of you own your personal car, that paradigm goes away.
+
+116
+00:09:39,777 --> 00:09:43,419
+Speaker SPEAKER_00: I think that concept is going to disappear, but it'll take time.
+
+117
+00:09:43,539 --> 00:09:45,682
+Speaker SPEAKER_02: We're not there yet, by the way.
+
+118
+00:09:45,981 --> 00:09:51,626
+Speaker SPEAKER_00: So let's take driverless cars at some level, even the ones that we see tooting around the Google campus.
+
+119
+00:09:52,087 --> 00:09:55,169
+Speaker SPEAKER_00: How long before you imagine those will be commercialized?
+
+120
+00:09:56,051 --> 00:09:59,433
+Speaker SPEAKER_03: I think it's sometime between a few years and 50 years.
+
+121
+00:10:01,591 --> 00:10:04,014
+Speaker SPEAKER_03: Really, it's still that unknown.
+
+122
+00:10:04,153 --> 00:10:06,557
+Speaker SPEAKER_03: I think it's very hard to predict the future.
+
+123
+00:10:06,857 --> 00:10:10,501
+Speaker SPEAKER_03: You can predict the future quite well for a few years and then it's like fog.
+
+124
+00:10:10,542 --> 00:10:15,467
+Speaker SPEAKER_03: You can see quite clearly and suddenly you hit this wall where you just don't know what's happening beyond the wall.
+
+125
+00:10:15,869 --> 00:10:17,129
+Speaker SPEAKER_03: And I think predicting the future is like that.
+
+126
+00:10:17,169 --> 00:10:21,174
+Speaker SPEAKER_03: I think for driverless cars, I'm pretty confident in the next 10 years we'll have a lot of them around.
+
+127
+00:10:21,195 --> 00:10:21,755
+Speaker SPEAKER_00: We'll have a lot.
+
+128
+00:10:21,936 --> 00:10:25,000
+Speaker SPEAKER_00: But we don't know for sure.
+
+129
+00:10:24,980 --> 00:10:28,703
+Speaker SPEAKER_00: I'm curious because I thought that was so much more advanced.
+
+130
+00:10:28,745 --> 00:10:30,886
+Speaker SPEAKER_00: You hear about it as if they're like tomorrow.
+
+131
+00:10:31,587 --> 00:10:32,970
+Speaker SPEAKER_00: What's creating the fogginess?
+
+132
+00:10:33,149 --> 00:10:36,192
+Speaker SPEAKER_02: Think of it like it's an 80-20 issue.
+
+133
+00:10:37,014 --> 00:10:41,019
+Speaker SPEAKER_02: Making progress on driverless cars has been very fast initially.
+
+134
+00:10:41,879 --> 00:10:52,572
+Speaker SPEAKER_02: In fact, somebody with a bit of technical know-how in a few months can cook up something that will kind of work so long as the driving situation is easy.
+
+135
+00:10:52,552 --> 00:11:00,932
+Speaker SPEAKER_02: But then getting those things to be really secure and safe at the level of human is going to take a lot more work.
+
+136
+00:11:01,936 --> 00:11:03,458
+Speaker SPEAKER_02: So it's really hard.
+
+137
+00:11:03,479 --> 00:11:07,548
+Speaker SPEAKER_00: So it's not necessarily as soon as we think.
+
+138
+00:11:07,750 --> 00:11:09,955
+Speaker SPEAKER_02: There's a lot of investment going on.
+
+139
+00:11:09,934 --> 00:11:16,162
+Speaker SPEAKER_02: But there's also a lot of uncertainty because there's some basic challenges which remain to be dealt with.
+
+140
+00:11:16,221 --> 00:11:17,524
+Speaker SPEAKER_03: Let me give you an example.
+
+141
+00:11:17,943 --> 00:11:19,886
+Speaker SPEAKER_03: So machine translation is now pretty good.
+
+142
+00:11:21,609 --> 00:11:24,272
+Speaker SPEAKER_03: But there's some things we're still quite a long way off being able to do.
+
+143
+00:11:24,511 --> 00:11:26,735
+Speaker SPEAKER_03: And we don't know when we'll be able to do them.
+
+144
+00:11:26,754 --> 00:11:33,562
+Speaker SPEAKER_03: For example, if I ask you to translate into French, the trophy would not fit in the suitcase because it was too small.
+
+145
+00:11:34,318 --> 00:11:37,865
+Speaker SPEAKER_03: you think the it refers to the suitcase because it's too small.
+
+146
+00:11:38,385 --> 00:11:44,254
+Speaker SPEAKER_03: But if I say the trophy will not fit in the suitcase because it was too big, you think the it refers to the trophy because it's too big.
+
+147
+00:11:44,755 --> 00:11:46,318
+Speaker SPEAKER_03: And in French, they're different genders.
+
+148
+00:11:46,339 --> 00:11:48,601
+Speaker SPEAKER_03: So you have to know which it is to translate the it.
+
+149
+00:11:49,322 --> 00:11:50,524
+Speaker SPEAKER_03: And Google Translate can't do it.
+
+150
+00:11:50,586 --> 00:11:51,606
+Speaker SPEAKER_03: You try it on Google Translate.
+
+151
+00:11:51,626 --> 00:11:52,227
+Speaker SPEAKER_03: It won't get it right.
+
+152
+00:11:52,649 --> 00:11:54,572
+Speaker SPEAKER_03: I mean, it'll get it right half the time.
+
+153
+00:11:54,552 --> 00:11:57,280
+Speaker SPEAKER_03: That's acceptable for machine translation.
+
+154
+00:11:57,562 --> 00:11:58,885
+Speaker SPEAKER_03: You can make the occasional mistake.
+
+155
+00:11:59,528 --> 00:12:02,236
+Speaker SPEAKER_03: It's not acceptable for self-driving cars.
+
+156
+00:12:02,717 --> 00:12:08,054
+Speaker SPEAKER_03: And cases like that where you need a deep understanding of what's going on in order to make the right decision.
+
+157
+00:12:08,389 --> 00:12:12,077
+Speaker SPEAKER_03: There's many different cases like that, all of which are rare, but you have to get them all right.
+
+158
+00:12:12,317 --> 00:12:23,100
+Speaker SPEAKER_00: So do you imagine that by the time self-driving cars or vehicles, whether for one, are accepted, that the assumption is they will be perfect in their performance?
+
+159
+00:12:23,120 --> 00:12:25,245
+Speaker SPEAKER_00: No, I think, I mean, the public would love that.
+
+160
+00:12:25,264 --> 00:12:26,027
+Speaker SPEAKER_02: Just better than humans.
+
+161
+00:12:26,006 --> 00:12:27,448
+Speaker SPEAKER_03: Just better than humans.
+
+162
+00:12:27,509 --> 00:12:29,692
+Speaker SPEAKER_03: But it's not sufficient for them to be better than humans.
+
+163
+00:12:29,812 --> 00:12:38,664
+Speaker SPEAKER_03: That is, if on average they're better than humans, if they kill far fewer people than humans, but they make mistakes that humans wouldn't have made, the public's gonna be very unhappy.
+
+164
+00:12:39,706 --> 00:12:49,019
+Speaker SPEAKER_00: This in itself could be a two hour discussion and I wanna get to a bunch of things, but it does raise all kinds of questions like, if they do happen, who's responsible if someone gets killed?
+
+165
+00:12:49,480 --> 00:12:50,542
+Speaker SPEAKER_00: Is it the driverless car?
+
+166
+00:12:51,062 --> 00:12:51,623
+Speaker SPEAKER_00: The companies.
+
+167
+00:12:52,323 --> 00:12:53,466
+Speaker SPEAKER_00: The companies.
+
+168
+00:12:53,850 --> 00:12:54,631
+Speaker SPEAKER_00: Building the cars.
+
+169
+00:12:55,113 --> 00:12:56,595
+Speaker SPEAKER_00: The companies building the algorithms.
+
+170
+00:12:57,095 --> 00:12:57,294
+Speaker SPEAKER_00: Yes.
+
+171
+00:12:57,696 --> 00:13:01,640
+Speaker SPEAKER_00: No, I think it's the researchers who develop the algorithms against the companies.
+
+172
+00:13:01,660 --> 00:13:04,705
+Speaker SPEAKER_00: So as I said, this in itself could be a two-hour discussion.
+
+173
+00:13:04,945 --> 00:13:21,647
+Speaker SPEAKER_00: Let me come back a bit to the part we know that's more proximate, which is the use of deep learning in companies that are essentially selling us things or services, Amazon, Google, or engaging us socially, Facebook, et cetera.
+
+174
+00:13:21,626 --> 00:13:29,996
+Speaker SPEAKER_00: They are in a huge race to get better and better, and they certainly seem to be in a race to accumulate as much data as they can.
+
+175
+00:13:30,857 --> 00:13:31,479
+Speaker SPEAKER_02: And researchers.
+
+176
+00:13:31,799 --> 00:13:32,900
+Speaker SPEAKER_00: And researchers, yes.
+
+177
+00:13:32,921 --> 00:13:33,662
+Speaker SPEAKER_00: So there's two parts.
+
+178
+00:13:33,721 --> 00:13:43,533
+Speaker SPEAKER_00: Their dominance on accumulating the researchers, and their massive dominance on accumulating data.
+
+179
+00:13:43,868 --> 00:13:45,549
+Speaker SPEAKER_00: Help us understand where this goes.
+
+180
+00:13:45,649 --> 00:13:54,139
+Speaker SPEAKER_00: I imagine the more we, they wanna know what we do, where we eat, where we sleep, who we're having relationships with, what we watch, et cetera, et cetera, et cetera.
+
+181
+00:13:54,158 --> 00:14:04,549
+Speaker SPEAKER_00: At what point do they have so much data about us that their ability to influence us overtakes our ability to influence ourselves?
+
+182
+00:14:04,831 --> 00:14:13,419
+Speaker SPEAKER_00: And should we be concerned with the larger issue of human agency as these prediction machines get so much better?
+
+183
+00:14:13,518 --> 00:14:14,099
+Speaker SPEAKER_02: Definitely.
+
+184
+00:14:15,941 --> 00:14:34,284
+Speaker SPEAKER_02: We don't want to have other organizations, whether these machines are controlled by a particular person or controlled by a company or a government, to have too much influence on us, to basically manipulate us.
+
+185
+00:14:34,946 --> 00:14:36,788
+Speaker SPEAKER_02: This is not morally acceptable.
+
+186
+00:14:37,729 --> 00:14:42,816
+Speaker SPEAKER_02: And I think politicians eventually will have to face
+
+187
+00:14:43,066 --> 00:14:57,062
+Speaker SPEAKER_02: the decisions about where we put social norms, laws, and regulations to clarify what is acceptable and what is not acceptable in terms of how AI, using a lot of data about each of us, can influence us.
+
+188
+00:14:58,764 --> 00:15:04,090
+Speaker SPEAKER_02: Personally, I would put the bar very low to make sure that we keep our agency.
+
+189
+00:15:04,110 --> 00:15:05,412
+Speaker SPEAKER_02: Meaning no regulation would be high?
+
+190
+00:15:05,392 --> 00:15:22,184
+Speaker SPEAKER_02: Meaning that I don't think we should allow the use of AI to influence people in doing things that clearly they haven't chosen to be in their own interest, but is maybe in the interest of some other organizations that want to sell you something or whatever.
+
+191
+00:15:22,164 --> 00:15:28,552
+Speaker SPEAKER_00: So does that require some kind of privacy laws or transparency laws?
+
+192
+00:15:28,611 --> 00:15:32,677
+Speaker SPEAKER_00: And I'm going to get to Jeff on this because I know he has a view about transparency.
+
+193
+00:15:32,716 --> 00:15:38,624
+Speaker SPEAKER_00: But is that where you think it has to go to some kind of regulation on our privacy?
+
+194
+00:15:38,644 --> 00:15:40,725
+Speaker SPEAKER_02: It's not just privacy.
+
+195
+00:15:40,765 --> 00:15:43,870
+Speaker SPEAKER_02: So privacy is another issue which is
+
+196
+00:15:44,355 --> 00:15:49,182
+Speaker SPEAKER_02: What data do we allow others to use and for what purposes?
+
+197
+00:15:49,241 --> 00:16:01,355
+Speaker SPEAKER_02: And so part of it is the purposes might be we don't want to have our data used against us, essentially, whether it's your medical data or where you go and with whom you are and so on.
+
+198
+00:16:03,658 --> 00:16:10,566
+Speaker SPEAKER_02: So it's related to privacy, but it's more about the limits we put on how AI can be used that's morally acceptable.
+
+199
+00:16:11,591 --> 00:16:16,616
+Speaker SPEAKER_03: I think with medical data, it's clear that there's a big trade-off.
+
+200
+00:16:16,756 --> 00:16:30,870
+Speaker SPEAKER_03: I don't necessarily want people knowing much about my medical conditions, but I'd really like to get better predictions and better treatment based on programs that learn from lots of other people's medical conditions.
+
+201
+00:16:31,410 --> 00:16:40,299
+Speaker SPEAKER_03: So there's a trade-off I have to make, which is really I'm going to get much better medical treatment if you can use a lot of data to make predictions.
+
+202
+00:16:40,279 --> 00:16:54,363
+Speaker SPEAKER_03: Things like blockchain will be very helpful there, so that I can control my data, and I can make decisions like, okay, I want you to be able to predict well what treatment I need, so you can use my data for learning, and then you can predict well.
+
+203
+00:16:54,623 --> 00:17:00,852
+Speaker SPEAKER_03: If I don't like that, I can say, okay, I'll accept much worse predictions, and you can't see all my personal data.
+
+204
+00:17:00,832 --> 00:17:04,435
+Speaker SPEAKER_03: I think it would be very good if people could make that trade-off.
+
+205
+00:17:04,777 --> 00:17:06,397
+Speaker SPEAKER_03: Until recently, that didn't seem feasible.
+
+206
+00:17:06,458 --> 00:17:08,460
+Speaker SPEAKER_03: It looked like a politician had to make the trade-off for everybody.
+
+207
+00:17:08,799 --> 00:17:10,922
+Speaker SPEAKER_00: But I think with blockchain, you can give people much more control.
+
+208
+00:17:11,522 --> 00:17:28,798
+Speaker SPEAKER_00: But you would assume most people, if you said, look, if you share your data, and nobody knows it's you personally, and they can't use it against you, that is, they can't not hire you or give you a loan or go out on a date with you or whatever, if you share it on that basis, you're trusting the fact that that's going to happen.
+
+209
+00:17:28,778 --> 00:17:34,984
+Speaker SPEAKER_02: Right, so we need a mechanism to make sure that those wishes are actually satisfied.
+
+210
+00:17:35,365 --> 00:17:47,880
+Speaker SPEAKER_02: And maybe one possibility is to have neutral third parties, like what we call data trusts, that would be defending my needs.
+
+211
+00:17:48,480 --> 00:17:49,201
+Speaker SPEAKER_02: I'm not a lawyer.
+
+212
+00:17:49,301 --> 00:17:55,308
+Speaker SPEAKER_02: I can't understand tens of pages of legal language about how my data is going to be used.
+
+213
+00:17:55,288 --> 00:18:06,480
+Speaker SPEAKER_02: But an organization which understands my needs and the needs of millions of people could have the means to sign in my behalf when my data is going to be used for some purpose.
+
+214
+00:18:06,759 --> 00:18:09,083
+Speaker SPEAKER_00: So some intermediary between the user.
+
+215
+00:18:09,143 --> 00:18:09,222
+Speaker SPEAKER_00: Yes.
+
+216
+00:18:10,423 --> 00:18:13,287
+Speaker SPEAKER_00: I'm a bit fascinated and interested in your view.
+
+217
+00:18:13,747 --> 00:18:17,111
+Speaker SPEAKER_00: We in the Western world do have this concept of privacy.
+
+218
+00:18:17,171 --> 00:18:18,192
+Speaker SPEAKER_00: We think we're entitled to it.
+
+219
+00:18:18,231 --> 00:18:18,531
+Speaker SPEAKER_00: We should.
+
+220
+00:18:19,492 --> 00:18:21,914
+Speaker SPEAKER_00: China doesn't have such an issue on privacy.
+
+221
+00:18:22,236 --> 00:18:23,457
+Speaker SPEAKER_00: In fact,
+
+222
+00:18:23,436 --> 00:18:25,819
+Speaker SPEAKER_00: People there seem to recognize they have no privacy.
+
+223
+00:18:25,839 --> 00:18:27,301
+Speaker SPEAKER_00: The government knows everything they do.
+
+224
+00:18:28,002 --> 00:18:43,884
+Speaker SPEAKER_00: If we get engaged in trying to understand the proper levels of legislation, regulation, and China does not, does that potentially give them the ability to have huge leads over us in what their scientists do and what they can do?
+
+225
+00:18:44,163 --> 00:18:44,825
+Speaker SPEAKER_02: Is that a concern?
+
+226
+00:18:45,285 --> 00:18:45,826
+Speaker SPEAKER_02: I don't think so.
+
+227
+00:18:45,865 --> 00:18:48,869
+Speaker SPEAKER_02: I think mostly it gives us a huge lead in controlling their population.
+
+228
+00:18:51,313 --> 00:18:53,375
+Speaker SPEAKER_00: You don't think it gives them a lead in
+
+229
+00:18:53,778 --> 00:18:57,040
+Speaker SPEAKER_00: advancing their artificial intelligence because they have more data?
+
+230
+00:18:57,300 --> 00:18:57,501
+Speaker SPEAKER_00: No.
+
+231
+00:18:58,522 --> 00:18:58,903
+Speaker SPEAKER_00: No concern?
+
+232
+00:18:58,923 --> 00:18:59,523
+Speaker SPEAKER_00: Do you have a concern?
+
+233
+00:19:01,285 --> 00:19:06,630
+Speaker SPEAKER_03: My main concern there is, I have a friend who just came back from Western China, where he knew some Uyghurs.
+
+234
+00:19:07,351 --> 00:19:08,833
+Speaker SPEAKER_03: And what's happening there is terrible.
+
+235
+00:19:09,452 --> 00:19:10,954
+Speaker SPEAKER_03: And it depends on mass surveillance.
+
+236
+00:19:13,376 --> 00:19:16,019
+Speaker SPEAKER_03: And it worries me that AI can be used that way.
+
+237
+00:19:16,480 --> 00:19:21,625
+Speaker SPEAKER_03: And I think we need lots of protections to stop it being used that way in the West.
+
+238
+00:19:22,144 --> 00:19:34,163
+Speaker SPEAKER_02: But it's going to be difficult to do it in the current international coordination framework where states have a lot of autonomy in how they deal with their internal affairs.
+
+239
+00:19:34,243 --> 00:19:45,621
+Speaker SPEAKER_02: And I think ultimately this and other issues like climate change raise the question of how do we set up global rules for the planet where
+
+240
+00:19:47,490 --> 00:19:56,424
+Speaker SPEAKER_02: human rights and the environment and fiscal equity or whatever that needs to be settled at the global level can be done.
+
+241
+00:19:56,484 --> 00:20:02,654
+Speaker SPEAKER_02: And I don't think that the current institutions we have with the UN and so on are sufficient for that.
+
+242
+00:20:03,636 --> 00:20:08,605
+Speaker SPEAKER_00: It does feel like there's this asymmetry between
+
+243
+00:20:08,720 --> 00:20:24,348
+Speaker SPEAKER_00: the advancing world of AI, which even though you say there's so much to do with this advancing world of AI, and our ability as societies to structure, make decisions, I mean,
+
+244
+00:20:24,328 --> 00:20:33,839
+Speaker SPEAKER_00: the entire United States is still wrapped up deciding whether or not abortion is legal, a case we thought was prosecuted 40 years ago, and they're still prosecuting that.
+
+245
+00:20:33,859 --> 00:20:36,544
+Speaker SPEAKER_00: They're having trouble accepting the fact that climate change is real.
+
+246
+00:20:37,365 --> 00:20:40,288
+Speaker SPEAKER_00: We see what's happening all over the world with different governments.
+
+247
+00:20:40,909 --> 00:20:49,459
+Speaker SPEAKER_00: Can you comment a bit on that asymmetry, the asymmetry of where science is and where we as humans and organized societies are?
+
+248
+00:20:50,401 --> 00:20:53,905
+Speaker SPEAKER_03: I think it's, I mean, I think society is going backwards, right?
+
+249
+00:20:53,926 --> 00:20:54,467
+Speaker SPEAKER_03: Okay, interesting.
+
+250
+00:20:54,487 --> 00:20:57,772
+Speaker SPEAKER_03: The technology is going forwards, we're going to greatly increase productivity.
+
+251
+00:20:58,453 --> 00:21:10,873
+Speaker SPEAKER_03: Whether that great increase in productivity benefits people in general is going to depend very much on political decisions and it's very worrying that we're getting these populist governments
+
+252
+00:21:11,156 --> 00:21:14,324
+Speaker SPEAKER_03: that deceive the majority of the people.
+
+253
+00:21:15,546 --> 00:21:16,808
+Speaker SPEAKER_04: And I don't like it.
+
+254
+00:21:16,989 --> 00:21:22,480
+Speaker SPEAKER_00: You don't like, I mean, as you said, I know you said many times you're a scientist, not a social policy maker.
+
+255
+00:21:22,500 --> 00:21:31,178
+Speaker SPEAKER_00: I think you do try and think about social policy, but it feels to me like we need you to think about somehow to engage in the social policy discussions.
+
+256
+00:21:31,238 --> 00:21:32,540
+Speaker SPEAKER_02: The whole,
+
+257
+00:21:33,314 --> 00:21:34,734
+Speaker SPEAKER_02: society needs to engage.
+
+258
+00:21:35,496 --> 00:21:41,701
+Speaker SPEAKER_02: In Montreal, we built this Montreal Declaration for Socially Responsible Development of AI.
+
+259
+00:21:42,481 --> 00:21:59,116
+Speaker SPEAKER_02: And we tried to bring in around the table, of course, the AI scientists, but the social scientists, the political scientists, the legal, medical people, and ordinary citizens who came to libraries to give us feedback and build a better set of principles for social norms regarding AI.
+
+260
+00:21:59,557 --> 00:22:00,598
+Speaker SPEAKER_02: I want to come back to your question.
+
+261
+00:22:01,799 --> 00:22:03,320
+Speaker SPEAKER_02: There's a phrase that I really like.
+
+262
+00:22:03,300 --> 00:22:09,026
+Speaker SPEAKER_02: that's connected to the discussion, which is wisdom race.
+
+263
+00:22:09,046 --> 00:22:10,988
+Speaker SPEAKER_02: So there's a kind of wisdom race.
+
+264
+00:22:11,228 --> 00:22:20,556
+Speaker SPEAKER_02: There's a sort of race right now between our collective individual wisdom on the one hand, and the power of the technologies that we're bringing into the world.
+
+265
+00:22:21,636 --> 00:22:28,702
+Speaker SPEAKER_02: And think of it like if you give big guns to children, some bad things could happen.
+
+266
+00:22:28,903 --> 00:22:31,806
+Speaker SPEAKER_02: If you give them big bombs, it might be even worse.
+
+267
+00:22:32,528 --> 00:22:34,851
+Speaker SPEAKER_02: And AI can be misused in big ways.
+
+268
+00:22:34,871 --> 00:22:37,914
+Speaker SPEAKER_02: The more powerful it is, the more it can be misused.
+
+269
+00:22:37,934 --> 00:22:38,936
+Speaker SPEAKER_02: By fewer and fewer people.
+
+270
+00:22:38,957 --> 00:22:40,858
+Speaker SPEAKER_02: And so we need to take care of the wisdom part.
+
+271
+00:22:41,279 --> 00:22:46,066
+Speaker SPEAKER_03: Yes, and that- I think you need to respect the Second Amendment rights of children.
+
+272
+00:22:46,727 --> 00:22:49,770
+Speaker SPEAKER_00: I mean, this wisdom, that's a beautiful phrase.
+
+273
+00:22:49,891 --> 00:22:52,114
+Speaker SPEAKER_00: The wisdom, wisdom rights?
+
+274
+00:22:52,355 --> 00:22:52,494
+Speaker SPEAKER_00: Race.
+
+275
+00:22:52,515 --> 00:22:53,496
+Speaker SPEAKER_00: Race, the wisdom race.
+
+276
+00:22:53,916 --> 00:22:56,460
+Speaker SPEAKER_00: That is a beautiful phrase.
+
+277
+00:22:56,440 --> 00:22:59,584
+Speaker SPEAKER_00: of all things I'll take home today, that will be at the top of the list.
+
+278
+00:22:59,604 --> 00:23:03,627
+Speaker SPEAKER_00: I know we have many international guests here today, but we are here in Canada.
+
+279
+00:23:04,388 --> 00:23:06,632
+Speaker SPEAKER_00: We do have the two of you as Canadians.
+
+280
+00:23:07,132 --> 00:23:19,246
+Speaker SPEAKER_00: And I am curious as to your views on what we in Canada can do to build on this wonderful leadership that you have started to create for.
+
+281
+00:23:19,266 --> 00:23:24,152
+Speaker SPEAKER_00: What are the most important things we can do in Canada to build on this lead?
+
+282
+00:23:24,807 --> 00:23:28,171
+Speaker SPEAKER_03: Well, my own personal view is the most important thing we could do is re-elect Trudeau.
+
+283
+00:23:29,051 --> 00:23:29,633
+Speaker SPEAKER_00: Okay.
+
+284
+00:23:29,653 --> 00:23:31,555
+Speaker SPEAKER_00: Well, there we go.
+
+285
+00:23:33,396 --> 00:23:33,797
+Speaker SPEAKER_00: Oh, okay.
+
+286
+00:23:33,856 --> 00:23:34,518
+Speaker SPEAKER_00: What do you think?
+
+287
+00:23:35,779 --> 00:23:49,836
+Speaker SPEAKER_02: Well, in addition, I think that Canada has a tradition of being a strong but neutral and positive, peaceful player in the international scene.
+
+288
+00:23:50,153 --> 00:24:00,567
+Speaker SPEAKER_02: And AI and other questions, I think, require Canada's presence at that table and taking leadership and not just following our neighbors in the South.
+
+289
+00:24:01,288 --> 00:24:02,871
+Speaker SPEAKER_00: That would be good.
+
+290
+00:24:03,412 --> 00:24:04,292
+Speaker SPEAKER_00: We want to do that.
+
+291
+00:24:04,814 --> 00:24:10,321
+Speaker SPEAKER_00: You brought up elections and politics, so I feel that I have permission to weigh into this.
+
+292
+00:24:10,301 --> 00:24:20,715
+Speaker SPEAKER_00: There is all this proof now that the last election was hacked, and hacking could be a whole discussion that I'd love to have with you, the risks of hacking of AI systems.
+
+293
+00:24:21,277 --> 00:24:31,771
+Speaker SPEAKER_00: Is there any way to avoid that level of interference in any election, but let's talk about the American election because it is so important to the world.
+
+294
+00:24:32,373 --> 00:24:36,659
+Speaker SPEAKER_00: Is there any way to avoid that level of interference in the next election?
+
+295
+00:24:37,179 --> 00:24:37,660
+Speaker SPEAKER_03: Yes.
+
+296
+00:24:38,382 --> 00:24:39,364
+Speaker SPEAKER_03: And how?
+
+297
+00:24:40,005 --> 00:24:52,829
+Speaker SPEAKER_03: Machine learning researchers can do things about it, like Cambridge Analytica was created by a machine learning researcher called Bob Mercer and other machine learning researchers
+
+298
+00:24:53,484 --> 00:24:55,227
+Speaker SPEAKER_03: didn't like what Cambridge Analytica did.
+
+299
+00:24:56,167 --> 00:24:58,971
+Speaker SPEAKER_03: And Bob Mercer became an embarrassment to the company he worked for.
+
+300
+00:25:00,252 --> 00:25:04,538
+Speaker SPEAKER_03: And he had to retire as the co-CEO of the company.
+
+301
+00:25:05,460 --> 00:25:16,894
+Speaker SPEAKER_03: And in this cycle, so far as I can tell, because of the embarrassment produced by other machine learning researchers' reaction, Bob Mercer is not going to be funding Trump.
+
+302
+00:25:16,958 --> 00:25:23,468
+Speaker SPEAKER_03: That's just a little thing we can do, but at least I think we've kept him out of the equation this time around.
+
+303
+00:25:23,567 --> 00:25:24,288
+Speaker SPEAKER_00: So it is doable.
+
+304
+00:25:24,630 --> 00:25:30,077
+Speaker SPEAKER_00: I think there should be some big time articles like New York Time facing articles on what can be done.
+
+305
+00:25:30,598 --> 00:25:33,682
+Speaker SPEAKER_00: Last question because I'm out of time and I just want to ask you this.
+
+306
+00:25:33,983 --> 00:25:35,605
+Speaker SPEAKER_00: How close are we to the singularity?
+
+307
+00:25:37,910 --> 00:25:39,712
+Speaker SPEAKER_03: That assumes there's a singularity.
+
+308
+00:25:39,732 --> 00:25:40,153
+Speaker SPEAKER_00: Okay.
+
+309
+00:25:40,814 --> 00:25:43,258
+Speaker SPEAKER_00: So is that a word that should be discarded?
+
+310
+00:25:44,299 --> 00:25:44,619
+Speaker SPEAKER_00: Yeah.
+
+311
+00:25:44,988 --> 00:25:50,582
+Speaker SPEAKER_03: I think the singularity is definitely well beyond the point where the fog stops you seeing anything.
+
+312
+00:25:52,586 --> 00:25:52,906
+Speaker SPEAKER_00: All right.
+
+313
+00:25:53,367 --> 00:25:53,890
+Speaker SPEAKER_00: Thank you.
+
+314
+00:25:53,990 --> 00:25:56,095
+Speaker SPEAKER_00: It is such an honor to be here with you.
+
