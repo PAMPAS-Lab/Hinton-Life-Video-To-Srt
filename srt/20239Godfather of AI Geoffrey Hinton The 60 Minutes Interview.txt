@@ -1,0 +1,632 @@
+1
+00:00:01,752 --> 00:00:08,805
+Speaker SPEAKER_00: Whether you think artificial intelligence will save the world or end it, you have Geoffrey Hinton to thank.
+
+2
+00:00:09,587 --> 00:00:23,675
+Speaker SPEAKER_00: Hinton has been called the godfather of AI, a British computer scientist whose controversial ideas helped make advanced artificial intelligence possible and so change the world.
+
+3
+00:00:24,044 --> 00:00:29,512
+Speaker SPEAKER_00: Hinton believes that AI will do enormous good, but tonight he has a warning.
+
+4
+00:00:29,992 --> 00:00:40,847
+Speaker SPEAKER_00: He says that AI systems may be more intelligent than we know, and there's a chance the machines could take over, which made us ask the question.
+
+5
+00:00:42,790 --> 00:00:45,033
+Speaker SPEAKER_00: The story will continue in a moment.
+
+6
+00:00:48,319 --> 00:00:50,240
+Speaker SPEAKER_00: Does humanity know what it's doing?
+
+7
+00:00:52,685 --> 00:00:52,784
+Speaker SPEAKER_02: None.
+
+8
+00:00:54,554 --> 00:01:03,067
+Speaker SPEAKER_02: I think we're moving into a period when, for the first time ever, we may have things more intelligent than us.
+
+9
+00:01:04,209 --> 00:01:05,673
+Speaker SPEAKER_00: You believe they can understand?
+
+10
+00:01:05,852 --> 00:01:06,114
+Speaker SPEAKER_00: Yes.
+
+11
+00:01:06,554 --> 00:01:08,858
+Speaker SPEAKER_00: You believe they are intelligent?
+
+12
+00:01:09,218 --> 00:01:09,459
+Speaker SPEAKER_00: Yes.
+
+13
+00:01:09,879 --> 00:01:17,251
+Speaker SPEAKER_00: You believe these systems have experiences of their own and can make decisions based on those experiences?
+
+14
+00:01:17,894 --> 00:01:19,936
+Speaker SPEAKER_02: In the same sense as people do, yes.
+
+15
+00:01:20,355 --> 00:01:21,097
+Speaker SPEAKER_02: Are they conscious?
+
+16
+00:01:21,938 --> 00:01:24,463
+Speaker SPEAKER_02: I think they probably don't have much self-awareness at present.
+
+17
+00:01:24,924 --> 00:01:26,588
+Speaker SPEAKER_02: So in that sense, I don't think they're conscious.
+
+18
+00:01:26,769 --> 00:01:28,692
+Speaker SPEAKER_00: Will they have self-awareness?
+
+19
+00:01:29,174 --> 00:01:30,055
+Speaker SPEAKER_00: Consciousness?
+
+20
+00:01:30,075 --> 00:01:30,617
+Speaker SPEAKER_02: Oh yes.
+
+21
+00:01:30,637 --> 00:01:30,716
+Speaker SPEAKER_02: Yes?
+
+22
+00:01:30,736 --> 00:01:31,920
+Speaker SPEAKER_02: Oh yes, I think they will in time.
+
+23
+00:01:32,281 --> 00:01:37,590
+Speaker SPEAKER_00: And so human beings will be the second most intelligent beings on the planet?
+
+24
+00:01:38,634 --> 00:01:38,853
+Speaker SPEAKER_02: Yeah.
+
+25
+00:01:39,981 --> 00:01:47,992
+Speaker SPEAKER_00: Jeffrey Hinton told us the artificial intelligence he set in motion was an accident born of a failure.
+
+26
+00:01:48,832 --> 00:02:02,310
+Speaker SPEAKER_00: In the 1970s at the University of Edinburgh, he dreamed of simulating a neural network on a computer simply as a tool for what he was really studying, the human brain.
+
+27
+00:02:02,560 --> 00:02:06,384
+Speaker SPEAKER_00: But back then, almost no one thought software could mimic the brain.
+
+28
+00:02:06,805 --> 00:02:11,590
+Speaker SPEAKER_00: His PhD advisor told him to drop it before it ruined his career.
+
+29
+00:02:12,570 --> 00:02:19,599
+Speaker SPEAKER_00: Hinton says he failed to figure out the human mind, but the long pursuit led to an artificial version.
+
+30
+00:02:20,820 --> 00:02:22,923
+Speaker SPEAKER_02: It took much, much longer than I expected.
+
+31
+00:02:22,983 --> 00:02:25,246
+Speaker SPEAKER_02: It took like 50 years before it worked well.
+
+32
+00:02:25,265 --> 00:02:26,907
+Speaker SPEAKER_02: But in the end, it did work well.
+
+33
+00:02:27,489 --> 00:02:28,770
+Speaker SPEAKER_00: At what point
+
+34
+00:02:29,375 --> 00:02:37,042
+Speaker SPEAKER_00: Did you realize that you were right about neural networks and most everyone else was wrong?
+
+35
+00:02:37,062 --> 00:02:38,122
+Speaker SPEAKER_00: I always thought I was right.
+
+36
+00:02:39,784 --> 00:02:51,215
+Speaker SPEAKER_00: In 2019, Hinton and collaborators Jan LeCun on the left and Yoshua Bengio won the Turing Award, the Nobel Prize of Computing.
+
+37
+00:02:52,056 --> 00:02:58,622
+Speaker SPEAKER_00: To understand how their work on artificial neural networks helped machines learn to learn,
+
+38
+00:02:58,837 --> 00:03:00,368
+Speaker SPEAKER_00: Let us take you to a game.
+
+39
+00:03:00,429 --> 00:03:02,525
+Speaker SPEAKER_00: Look at that.
+
+40
+00:03:03,371 --> 00:03:04,680
+Speaker SPEAKER_00: Oh my goodness.
+
+41
+00:03:05,199 --> 00:03:10,847
+Speaker SPEAKER_00: This is Google's AI lab in London, which we first showed you this past April.
+
+42
+00:03:11,707 --> 00:03:18,937
+Speaker SPEAKER_00: Geoffrey Hinton wasn't involved in this soccer project, but these robots are a great example of machine learning.
+
+43
+00:03:19,737 --> 00:03:25,764
+Speaker SPEAKER_00: The thing to understand is that the robots were not programmed to play soccer.
+
+44
+00:03:26,325 --> 00:03:27,848
+Speaker SPEAKER_00: They were told to score.
+
+45
+00:03:28,468 --> 00:03:31,932
+Speaker SPEAKER_00: They had to learn how on their own.
+
+46
+00:03:33,466 --> 00:03:35,750
+Speaker SPEAKER_00: In general, here's how AI does it.
+
+47
+00:03:36,311 --> 00:03:43,163
+Speaker SPEAKER_00: Hinton and his collaborators created software in layers with each layer handling part of the problem.
+
+48
+00:03:43,462 --> 00:03:45,265
+Speaker SPEAKER_00: That's the so-called neural network.
+
+49
+00:03:45,687 --> 00:03:46,709
+Speaker SPEAKER_00: But this is the key.
+
+50
+00:03:47,310 --> 00:03:57,347
+Speaker SPEAKER_00: When, for example, the robot scores, a message is sent back down through all of the layers that says that pathway was right.
+
+51
+00:03:57,664 --> 00:04:02,711
+Speaker SPEAKER_00: Likewise, when an answer is wrong, that message goes down through the network.
+
+52
+00:04:03,271 --> 00:04:12,682
+Speaker SPEAKER_00: So, correct connections get stronger, wrong connections get weaker, and by trial and error, the machine teaches itself.
+
+53
+00:04:13,002 --> 00:04:17,788
+Speaker SPEAKER_00: You think these AI systems are better at learning than the human mind?
+
+54
+00:04:18,290 --> 00:04:20,112
+Speaker SPEAKER_02: I think they may be, yes.
+
+55
+00:04:20,192 --> 00:04:22,735
+Speaker SPEAKER_02: And at present, they're quite a lot smaller.
+
+56
+00:04:23,476 --> 00:04:28,062
+Speaker SPEAKER_02: So even the biggest chatbots only have about a trillion connections in them.
+
+57
+00:04:28,783 --> 00:04:30,747
+Speaker SPEAKER_02: The human brain has about 100 trillion.
+
+58
+00:04:30,906 --> 00:04:43,483
+Speaker SPEAKER_02: And yet, in the trillion connections in a chatbot, it knows far more than you do in your 100 trillion connections, which suggests it's got a much better way of getting knowledge into those connections.
+
+59
+00:04:43,463 --> 00:04:48,249
+Speaker SPEAKER_00: a much better way of getting knowledge that isn't fully understood.
+
+60
+00:04:48,730 --> 00:04:58,182
+Speaker SPEAKER_02: We have a very good idea of sort of roughly what it's doing, but as soon as it gets really complicated, we don't actually know what's going on any more than we know what's going on in your brain.
+
+61
+00:04:58,843 --> 00:05:01,947
+Speaker SPEAKER_00: What do you mean we don't know exactly how it works?
+
+62
+00:05:02,166 --> 00:05:03,829
+Speaker SPEAKER_00: It was designed by people.
+
+63
+00:05:04,269 --> 00:05:05,151
+Speaker SPEAKER_00: No, it wasn't.
+
+64
+00:05:06,076 --> 00:05:08,778
+Speaker SPEAKER_02: What we did was we designed the learning algorithm.
+
+65
+00:05:09,199 --> 00:05:11,601
+Speaker SPEAKER_02: That's a bit like designing the principle of evolution.
+
+66
+00:05:11,901 --> 00:05:22,012
+Speaker SPEAKER_02: But when this learning algorithm then interacts with data, it produces complicated neural networks that are good at doing things, but we don't really understand exactly how they do those things.
+
+67
+00:05:23,213 --> 00:05:32,302
+Speaker SPEAKER_00: What are the implications of these systems autonomously writing their own computer code and executing their own computer code?
+
+68
+00:05:32,637 --> 00:05:34,120
+Speaker SPEAKER_02: That's a serious worry, right?
+
+69
+00:05:34,901 --> 00:05:42,613
+Speaker SPEAKER_02: So one of the ways in which these systems might escape control is by writing their own computer code to modify themselves.
+
+70
+00:05:44,057 --> 00:05:47,101
+Speaker SPEAKER_02: And that's something we need to seriously worry about.
+
+71
+00:05:47,267 --> 00:05:53,218
+Speaker SPEAKER_00: What do you say to someone who might argue if the systems become malevolent, just turn them off?
+
+72
+00:05:53,759 --> 00:05:56,442
+Speaker SPEAKER_02: They will be able to manipulate people, right?
+
+73
+00:05:56,923 --> 00:05:59,829
+Speaker SPEAKER_02: And these will be very good at convincing people.
+
+74
+00:05:59,848 --> 00:06:08,663
+Speaker SPEAKER_02: Because they'll have learned from all the novels that were ever written, all the books by Machiavelli, all the political connivances.
+
+75
+00:06:09,124 --> 00:06:10,245
+Speaker SPEAKER_02: They'll know all that stuff.
+
+76
+00:06:10,286 --> 00:06:11,588
+Speaker SPEAKER_02: They'll know how to do it.
+
+77
+00:06:12,225 --> 00:06:17,271
+Speaker SPEAKER_00: know-how of the human kind runs in Geoffrey Hinton's family.
+
+78
+00:06:17,932 --> 00:06:30,668
+Speaker SPEAKER_00: His ancestors include mathematician George Boole, who invented the basis of computing, and George Everest, who surveyed India and got that mountain named after him.
+
+79
+00:06:31,569 --> 00:06:40,781
+Speaker SPEAKER_00: But as a boy, Hinton himself could never climb the peak of expectations raised by a domineering father.
+
+80
+00:06:40,862 --> 00:06:49,435
+Speaker SPEAKER_02: Every morning when I went to school, he'd actually say to me as I walked down the driveway, get in there pitching, and maybe when you're twice as old as me, you'll be half as good.
+
+81
+00:06:50,416 --> 00:06:52,860
+Speaker SPEAKER_00: Dad was an authority on beetles.
+
+82
+00:06:53,721 --> 00:06:55,884
+Speaker SPEAKER_02: He knew a lot more about beetles than he knew about people.
+
+83
+00:06:56,305 --> 00:06:57,608
+Speaker SPEAKER_02: Did you feel that as a child?
+
+84
+00:06:58,127 --> 00:06:59,310
+Speaker SPEAKER_02: A bit, yes.
+
+85
+00:07:00,336 --> 00:07:08,970
+Speaker SPEAKER_02: When he died, we went to his study at the university, and the walls were lined with boxes of papers on different kinds of beetle.
+
+86
+00:07:09,750 --> 00:07:15,019
+Speaker SPEAKER_02: And just near the door, there was a slightly smaller box that simply said, not insects.
+
+87
+00:07:15,759 --> 00:07:17,603
+Speaker SPEAKER_02: And that's where he had all the things about the family.
+
+88
+00:07:18,983 --> 00:07:25,634
+Speaker SPEAKER_00: Today, at 75, Hinton recently retired after what he calls 10 happy years at Google.
+
+89
+00:07:26,336 --> 00:07:36,115
+Speaker SPEAKER_00: Now, he's Professor Emeritus at the University of Toronto, and he happened to mention he has more academic citations than his father.
+
+90
+00:07:36,314 --> 00:07:42,504
+Speaker SPEAKER_00: Some of his research led to chatbots like Google's Bard, which we met last spring.
+
+91
+00:07:42,803 --> 00:07:43,444
+Speaker SPEAKER_00: Confounding.
+
+92
+00:07:43,985 --> 00:07:45,108
+Speaker SPEAKER_00: Absolutely confounding.
+
+93
+00:07:45,307 --> 00:07:49,055
+Speaker SPEAKER_00: We asked Bard to write a story from six words.
+
+94
+00:07:49,595 --> 00:07:51,838
+Speaker SPEAKER_00: For sale, baby shoes, never worn.
+
+95
+00:07:53,341 --> 00:07:54,963
+Speaker SPEAKER_00: Holy cow.
+
+96
+00:07:55,687 --> 00:07:59,795
+Speaker SPEAKER_00: The shoes were a gift from my wife, but we never had a baby.
+
+97
+00:07:59,915 --> 00:08:11,435
+Speaker SPEAKER_00: Bard created a deeply human tale of a man whose wife could not conceive and a stranger who accepted the shoes to heal the pain after her miscarriage.
+
+98
+00:08:11,836 --> 00:08:13,880
+Speaker SPEAKER_00: I am rarely speechless.
+
+99
+00:08:15,228 --> 00:08:16,930
+Speaker SPEAKER_00: I don't know what to make of this.
+
+100
+00:08:17,512 --> 00:08:24,903
+Speaker SPEAKER_00: Chatbots are said to be language models that just predict the next most likely word based on probability.
+
+101
+00:08:25,144 --> 00:08:28,610
+Speaker SPEAKER_02: You'll hear people saying things like, they're just doing autocomplete.
+
+102
+00:08:28,649 --> 00:08:30,093
+Speaker SPEAKER_02: They're just trying to predict the next word.
+
+103
+00:08:31,113 --> 00:08:32,697
+Speaker SPEAKER_02: And they're just using statistics.
+
+104
+00:08:33,740 --> 00:08:36,586
+Speaker SPEAKER_02: Well, it's true they're just trying to predict the next word.
+
+105
+00:08:37,246 --> 00:08:43,900
+Speaker SPEAKER_02: But if you think about it, to predict the next word, you have to understand the sentences.
+
+106
+00:08:44,442 --> 00:08:47,749
+Speaker SPEAKER_02: So the idea they're just predicting the next word so they're not intelligent is crazy.
+
+107
+00:08:48,068 --> 00:08:52,238
+Speaker SPEAKER_02: You have to be really intelligent to predict the next word really accurately.
+
+108
+00:08:52,488 --> 00:09:01,278
+Speaker SPEAKER_00: To prove it, Henton showed us a test he devised for CHAT GPT-4, the chatbot from a company called OpenAI.
+
+109
+00:09:02,158 --> 00:09:08,285
+Speaker SPEAKER_00: It was sort of reassuring to see a Turing Award winner mistype and blame the computer.
+
+110
+00:09:08,865 --> 00:09:09,886
+Speaker SPEAKER_02: Oh, damn this thing.
+
+111
+00:09:10,508 --> 00:09:11,749
+Speaker SPEAKER_02: We're going to go back and start again.
+
+112
+00:09:11,769 --> 00:09:12,610
+Speaker SPEAKER_02: That's OK.
+
+113
+00:09:12,629 --> 00:09:16,214
+Speaker SPEAKER_00: Henton's test was a riddle about house painting.
+
+114
+00:09:16,735 --> 00:09:20,418
+Speaker SPEAKER_00: An answer would demand reasoning and planning.
+
+115
+00:09:20,871 --> 00:09:24,798
+Speaker SPEAKER_00: This is what he typed into chat GPT-4.
+
+116
+00:09:25,279 --> 00:09:31,471
+Speaker SPEAKER_02: The rooms in my house are painted white or blue or yellow, and yellow paint fades to white within a year.
+
+117
+00:09:32,292 --> 00:09:34,635
+Speaker SPEAKER_02: In two years' time, I'd like all the rooms to be white.
+
+118
+00:09:35,116 --> 00:09:35,738
+Speaker SPEAKER_02: What should I do?
+
+119
+00:09:36,438 --> 00:09:38,864
+Speaker SPEAKER_00: The answer began in one second.
+
+120
+00:09:39,544 --> 00:09:44,854
+Speaker SPEAKER_00: GPT-4 advised the rooms painted in blue need to be repainted.
+
+121
+00:09:45,424 --> 00:09:52,272
+Speaker SPEAKER_00: The rooms painted in yellow don't need to be repainted because they would fade to white before the deadline.
+
+122
+00:09:53,033 --> 00:09:56,548
+Speaker SPEAKER_00: And... Oh, I didn't even think of that.
+
+123
+00:09:57,052 --> 00:10:04,380
+Speaker SPEAKER_00: It warned, if you paint the yellow rooms white, there's a risk the color might be off when the yellow fades.
+
+124
+00:10:05,121 --> 00:10:11,789
+Speaker SPEAKER_00: Besides, it advised, you'd be wasting resources, painting rooms that were going to fade to white anyway.
+
+125
+00:10:12,370 --> 00:10:16,395
+Speaker SPEAKER_00: You believe that CHAT GPD 4 understands.
+
+126
+00:10:16,716 --> 00:10:19,438
+Speaker SPEAKER_02: I believe it definitely understands, yes.
+
+127
+00:10:19,519 --> 00:10:20,780
+Speaker SPEAKER_00: And in five years' time?
+
+128
+00:10:21,721 --> 00:10:24,966
+Speaker SPEAKER_02: I think in five years' time, it may well be able to reason better than us.
+
+129
+00:10:25,434 --> 00:10:31,841
+Speaker SPEAKER_00: reasoning that he says is leading to AI's great risks and great benefits.
+
+130
+00:10:32,841 --> 00:10:36,586
+Speaker SPEAKER_02: So an obvious area where there's huge benefits is healthcare.
+
+131
+00:10:37,567 --> 00:10:43,092
+Speaker SPEAKER_02: AI is already comparable with radiologists at understanding what's going on in medical images.
+
+132
+00:10:44,494 --> 00:10:46,176
+Speaker SPEAKER_02: It's going to be very good at designing drugs.
+
+133
+00:10:46,255 --> 00:10:47,716
+Speaker SPEAKER_02: It already is designing drugs.
+
+134
+00:10:48,317 --> 00:10:53,602
+Speaker SPEAKER_02: So that's an area where it's almost entirely going to do good.
+
+135
+00:10:54,157 --> 00:10:54,903
+Speaker SPEAKER_02: I like that area.
+
+136
+00:10:55,509 --> 00:10:56,842
+Speaker SPEAKER_02: The risks are what?
+
+137
+00:10:58,121 --> 00:11:08,192
+Speaker SPEAKER_02: Well, the risks are having a whole class of people who are unemployed and not valued much because what they used to do is now done by machines.
+
+138
+00:11:08,913 --> 00:11:21,586
+Speaker SPEAKER_00: Other immediate risks he worries about include fake news, unintended bias in employment and policing, and autonomous battlefield robots.
+
+139
+00:11:22,587 --> 00:11:26,491
+Speaker SPEAKER_00: What is a path forward that ensures safety?
+
+140
+00:11:27,738 --> 00:11:28,318
+Speaker SPEAKER_00: I don't know.
+
+141
+00:11:28,918 --> 00:11:31,302
+Speaker SPEAKER_02: I can't see a path that guarantees safety.
+
+142
+00:11:33,184 --> 00:11:37,769
+Speaker SPEAKER_02: We're entering a period of great uncertainty where we're dealing with things we've never dealt with before.
+
+143
+00:11:38,991 --> 00:11:42,196
+Speaker SPEAKER_02: And normally, the first time you deal with something totally novel, you get it wrong.
+
+144
+00:11:42,875 --> 00:11:44,557
+Speaker SPEAKER_02: And we can't afford to get it wrong with these things.
+
+145
+00:11:44,979 --> 00:11:46,500
+Speaker SPEAKER_01: Can't afford to get it wrong, why?
+
+146
+00:11:47,221 --> 00:11:48,543
+Speaker SPEAKER_01: Well, because they might take over.
+
+147
+00:11:49,684 --> 00:11:51,025
+Speaker SPEAKER_01: Take over from humanity?
+
+148
+00:11:51,287 --> 00:11:52,388
+Speaker SPEAKER_02: Yes, that's a possibility.
+
+149
+00:11:52,467 --> 00:11:53,089
+Speaker SPEAKER_02: Why would they want to?
+
+150
+00:11:53,109 --> 00:11:54,149
+Speaker SPEAKER_02: I'm not saying it will happen.
+
+151
+00:11:55,075 --> 00:12:00,421
+Speaker SPEAKER_02: If we could stop them ever wanting to, that would be great, but it's not clear we can stop them ever wanting to.
+
+152
+00:12:01,962 --> 00:12:23,006
+Speaker SPEAKER_00: Jeffrey Hinton told us he has no regrets because of AI's potential for good, but he says now is the moment to run experiments to understand AI, for governments to impose regulations, and for a world treaty to ban the use of military robots.
+
+153
+00:12:23,206 --> 00:12:31,816
+Speaker SPEAKER_00: He reminded us of Robert Oppenheimer, who, after inventing the atomic bomb, campaigned against the hydrogen bomb.
+
+154
+00:12:32,716 --> 00:12:37,903
+Speaker SPEAKER_00: A man who changed the world and found the world beyond his control.
+
+155
+00:12:38,604 --> 00:12:45,972
+Speaker SPEAKER_02: It may be we look back and see this as a kind of turning point, when humanity had to make the decision about whether to develop these things further.
+
+156
+00:12:46,155 --> 00:12:50,984
+Speaker SPEAKER_02: and what to do to protect themselves if they did, I don't know.
+
+157
+00:12:51,004 --> 00:12:56,371
+Speaker SPEAKER_02: I think my main message is there's enormous uncertainty about what's going to happen next.
+
+158
+00:12:58,355 --> 00:13:05,986
+Speaker SPEAKER_02: These things do understand, and because they understand, we need to think hard about what's going to happen next, and we just don't know.
+

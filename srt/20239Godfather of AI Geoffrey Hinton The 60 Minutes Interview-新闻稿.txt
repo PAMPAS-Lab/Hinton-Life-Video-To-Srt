@@ -1,0 +1,147 @@
+Whether you think artificial intelligence will save the world or end it, you have Geoffrey Hinton to thank. Hinton has been called "the Godfather of AI," a British computer scientist whose controversial ideas helped make advanced artificial intelligence possible and, so, changed the world. As we first reported last year, Hinton believes that AI will do enormous good but, tonight, he has a warning. He says that AI systems may be more intelligent than we know and there's a chance the machines could take over. Which made us ask the question:
+
+Scott Pelley: Does humanity know what it's doing?
+
+Geoffrey Hinton: No. I think we're moving into a period when for the first time ever we may have things more intelligent than us.  
+
+Scott Pelley: You believe they can understand?
+Geoffrey Hinton: Yes.
+
+Scott Pelley: You believe they are intelligent?
+
+Geoffrey Hinton: Yes.
+
+Scott Pelley: You believe these systems have experiences of their own and can make decisions based on those experiences?Geoffrey Hinton: In the same sense as people do, yes.
+
+Scott Pelley: Are they conscious?
+
+Geoffrey Hinton: I think they probably don't have much self-awareness at present. So, in that sense, I don't think they're conscious.
+
+Scott Pelley: Will they have self-awareness, consciousness?
+
+Geoffrey Hinton: Oh, yes.
+
+Scott Pelley: Yes?
+
+Geoffrey Hinton: Oh, yes. I think they will, in time. 
+Scott Pelley: And so human beings will be the second most intelligent beings on the planet?
+
+Geoffrey Hinton: Yeah.
+
+Geoffrey Hinton told us the artificial intelligence he set in motion was an accident born of a failure. In the 1970s, at the University of Edinburgh, he dreamed of simulating a neural network on a computer— simply as a tool for what he was really studying--the human brain. But, back then, almost no one thought software could mimic the brain.  His Ph.D. advisor told him to drop it before it ruined his career. Hinton says he failed to figure out the human mind. But the long pursuit led to an artificial version.  
+
+Geoffrey Hinton: It took much, much longer than I expected. It took, like, 50 years before it worked well, but in the end it did work well.
+
+Scott Pelley: At what point did you realize that you were right about neural networks and most everyone else was wrong?
+
+Geoffrey Hinton: I always thought I was right.
+
+In 2019, Hinton and collaborators, Yann Lecun, on the left, and Yoshua Bengio, won the Turing Award-- the Nobel Prize of computing. To understand how their work on artificial neural networks helped machines learn to learn, let us take you to a game.  
+
+This is Google's AI lab in London, which we first showed you last year. Geoffrey Hinton was not involved in this soccer project, but these robots are a great example of machine learning. The thing to understand is the robots were not programmed to play soccer. They were told to score. They had to learn how on their own.
+In general, here's how AI does it. Hinton and his collaborators created software in layers, with each layer handling part of the problem. That's the so-called neural network.  But this is the key: when, for example, the robot scores, a message is sent back down through all of the layers that says, "that pathway was right." 
+
+Likewise, when an answer is wrong, that message goes down through the network. So, correct connections get stronger. Wrong connections get weaker. And by trial and error, the machine teaches itself.
+
+Scott Pelley: You think these AI systems are better at learning than the human mind.
+
+Geoffrey Hinton: I think they may be, yes. And at present, they're quite a lot smaller. So even the biggest chatbots only have about a trillion connections in them.  The human brain has about 100 trillion. And yet, in the trillion connections in a chatbot, it knows far more than you do in your hundred trillion connections, which suggests it's got a much better way of getting knowledge into those connections.
+
+--a much better way of getting knowledge that isn't fully understood.
+
+Geoffrey Hinton: We have a very good idea of sort of roughly what it's doing. But as soon as it gets really complicated, we don't actually know what's going on any more than we know what's going on in your brain.
+
+Scott Pelley: What do you mean we don't know exactly how it works? It was designed by people.
+
+Geoffrey Hinton: No, it wasn't. What we did was we designed the learning algorithm. That's a bit like designing the principle of evolution. But when this learning algorithm then interacts with data, it produces complicated neural networks that are good at doing things. But we don't really understand exactly how they do those things.
+
+Scott Pelley: What are the implications of these systems autonomously writing their own computer code and executing their own computer code?
+
+Geoffrey Hinton: That's a serious worry, right? So, one of the ways in which these systems might escape control is by writing their own computer code to modify themselves. And that's something we need to seriously worry about.
+
+Scott Pelley: What do you say to someone who might argue, "If the systems become malevolent, just turn them off"?
+
+Geoffrey Hinton:  They will be able to manipulate people, right? And these will be very good at convincing people 'cause they'll have learned from all the novels that were ever written, all the books by Machiavelli, all the political connivances, they'll know all that stuff. They'll know how to do it.
+
+'Know how,' of the human kind runs in Geoffrey Hinton's family.  His ancestors include mathematician George Boole, who invented the basis of computing,  and George Everest who surveyed India and got that mountain named after him. But, as a boy Hinton himself, could never climb the peak of expectations raised by a domineering father. 
+
+Geoffrey Hinton: Every morning when I went to school he'd actually say to me, as I walked down the driveway, "get in there pitching and maybe when you're twice as old as me you'll be half as good."
+
+Dad was an authority on beetles.
+
+Geoffrey Hinton: He knew a lot more about beetles than he knew about people. 
+
+Scott Pelley: Did you feel that as a child?
+
+Geoffrey Hinton: A bit, yes. When he died, we went to his study at the university, and the walls were lined with boxes of papers on different kinds of beetle. And just near the door there was a slightly smaller box that simply said, "Not insects," and that's where he had all the things about the family.
+
+Today, at 76, Hinton is retired after what he calls 10 happy years at Google. Now, he's professor emeritus at the University of Toronto. And, he happened to mention, he has more academic citations than his father. Some of his research led to chatbots like Google's Bard, which we met last year. 
+
+Scott Pelley: Confounding, absolutely confounding.
+
+We asked Bard to write a story from six words.
+
+Scott Pelley: For sale. Baby shoes. Never worn.
+
+Scott Pelley: Holy Cow! The shoes were a gift from my wife, but we never had a baby…
+
+Bard created a deeply human tale of a man whose wife could not conceive and a stranger, who accepted the shoes to heal the pain after her miscarriage. 
+
+Scott Pelley: I am rarely speechless. I don't know what to make of this. 
+
+Chatbots are said to be language models that just predict the next most likely word based on probability. 
+
+Geoffrey Hinton: You'll hear people saying things like, "They're just doing auto-complete. They're just trying to predict the next word. And they're just using statistics." Well, it's true they're just trying to predict the next word. But if you think about it, to predict the next word you have to understand the sentences.  So, the idea they're just predicting the next word so they're not intelligent is crazy. You have to be really intelligent to predict the next word really accurately.
+
+To prove it, Hinton showed us a test he devised for ChatGPT4, the chatbot from a company called OpenAI. It was sort of reassuring to see a Turing Award winner mistype and blame the computer.
+
+Geoffrey Hinton: Oh, damn this thing! We're going to go back and start again.
+
+Scott Pelley: That's OK
+
+Hinton's test was a riddle about house painting. An answer would demand reasoning and planning. This is what he typed into ChatGPT4.
+
+Geoffrey Hinton: "The rooms in my house are painted white or blue or yellow. And yellow paint fades to white within a year. In two years' time, I'd like all the rooms to be white. What should I do?" 
+
+The answer began in one second, GPT4 advised "the rooms painted in blue" "need to be repainted." "The rooms painted in yellow" "don't need to [be] repaint[ed]" because they would fade to white before the deadline.  And...  
+
+Geoffrey Hinton: Oh! I didn't even think of that!
+
+It warned, "if you paint the yellow rooms white" there's a risk the color might be off when the yellow fades.  Besides, it advised, "you'd be wasting resources" painting rooms that were going to fade to white anyway.
+
+Scott Pelley: You believe that ChatGPT4 understands? 
+
+Geoffrey Hinton: I believe it definitely understands, yes.  
+
+Scott Pelley: And in five years' time?
+
+Geoffrey Hinton: I think in five years' time it may well be able to reason better than us. 
+
+Reasoning that he says, is leading to AI's great risks and great benefits.
+
+Geoffrey Hinton: So an obvious area where there's huge benefits is health care. AI is already comparable with radiologists at understanding what's going on in medical images. It's gonna be very good at designing drugs. It already is designing drugs. So that's an area where it's almost entirely gonna do good. I like that area.
+Scott Pelley: The risks are what?
+
+Geoffrey Hinton: Well, the risks are having a whole class of people who are unemployed and not valued much because what they-- what they used to do is now done by machines.
+
+Other immediate risks he worries about include fake news, unintended bias in employment and policing and autonomous battlefield robots.
+
+Scott Pelley: What is a path forward that ensures safety?
+
+Geoffrey Hinton: I don't know. I-- I can't see a path that guarantees safety. We're entering a period of great uncertainty where we're dealing with things we've never dealt with before. And normally, the first time you deal with something totally novel, you get it wrong. And we can't afford to get it wrong with these things. 
+
+Scott Pelley: Can't afford to get it wrong, why?
+
+Geoffrey Hinton: Well, because they might take over.
+
+Scott Pelley: Take over from humanity?
+
+Geoffrey Hinton: Yes. That's a possibility.
+
+Scott Pelley: Why would they want to?
+
+Geoffrey Hinton: I'm not saying it will happen. If we could stop them ever wanting to, that would be great. But it's not clear we can stop them ever wanting to.
+
+Geoffrey Hinton told us he has no regrets because of AI's potential for good. But he says now is the moment to run experiments to understand AI, for governments to impose regulations and for a world treaty to ban the use of military robots. He reminded us of Robert Oppenheimer who after inventing the atomic bomb, campaigned against the hydrogen bomb--a man who changed the world and found the world beyond his control. 
+
+Geoffrey Hinton: It may be we look back and see this as a kind of turning point when humanity had to make the decision about whether to develop these things further and what to do to protect themselves if they did. I don't know. I think my main message is there's enormous uncertainty about what's gonna happen next. These things do understand. And because they understand, we need to think hard about what's going to happen next. And we just don't know.

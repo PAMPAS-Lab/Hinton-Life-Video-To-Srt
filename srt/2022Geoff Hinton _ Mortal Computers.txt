@@ -1,0 +1,700 @@
+1
+00:00:14,037 --> 00:00:19,964
+Speaker SPEAKER_01: Now it is time for our first keynote speaker, who truly needs no introduction.
+
+2
+00:00:20,004 --> 00:00:31,021
+Speaker SPEAKER_01: There's someone in the front row here who tried to wrestle me out of the way to get close to Dr. Geoffrey Hinton to say how much he means to him.
+
+3
+00:00:31,120 --> 00:00:34,985
+Speaker SPEAKER_01: So I really think he needs no introduction, but I shall give him one.
+
+4
+00:00:35,826 --> 00:00:43,537
+Speaker SPEAKER_01: Dr. Geoffrey Hinton is Chief Scientific Advisor of Vector Institute, as well as one of its co-founders.
+
+5
+00:00:43,804 --> 00:00:46,954
+Speaker SPEAKER_01: Dr. Hinton designs machine learning algorithms.
+
+6
+00:00:47,515 --> 00:00:58,387
+Speaker SPEAKER_01: He aims to discover a learning procedure that is efficient at finding complex structure in large, high-dimensional data sets and to show that this is how the brain learns to see.
+
+7
+00:00:58,621 --> 00:01:06,634
+Speaker SPEAKER_01: He is one of the researchers that introduced the backpropagation algorithm and the first to use backpropagation for learning word embeddings.
+
+8
+00:01:07,275 --> 00:01:20,477
+Speaker SPEAKER_01: His other contributions to neural network research are many, including the Boltzmann's machines, distributed representations, variational learning, and deep belief nets, to name a few.
+
+9
+00:01:21,436 --> 00:01:30,012
+Speaker SPEAKER_01: Jeffrey's research group in Toronto made major breakthroughs in deep learning that have truly revolutionized speech recognition and object classification.
+
+10
+00:01:31,290 --> 00:01:34,114
+Speaker SPEAKER_01: a little bit about Dr. Hinton's history.
+
+11
+00:01:34,153 --> 00:01:44,665
+Speaker SPEAKER_01: He has a BA in Experimental Psychology from Cambridge and completed his PhD in Artificial Intelligence in 1978 from Edinburgh.
+
+12
+00:01:45,146 --> 00:01:56,438
+Speaker SPEAKER_01: He did post-doctoral work at Sussex University and at the University of California, San Diego and spent five years at Carnegie Mellon and then came north to Canada.
+
+13
+00:01:56,418 --> 00:02:03,325
+Speaker SPEAKER_01: where he became a fellow of the Canadian Institute for Advanced Research, and moved to the Department of Computer Science at the University of Toronto.
+
+14
+00:02:04,246 --> 00:02:13,098
+Speaker SPEAKER_01: He crossed the pond for three years, where he set up the Gatsby Computational Neuroscience Unit at University College London, and then returned back to Canada.
+
+15
+00:02:13,878 --> 00:02:23,691
+Speaker SPEAKER_01: From 2004 to 2013, he was the director of a program on neural computation and adaptive perception, funded by CIFAR.
+
+16
+00:02:24,801 --> 00:02:33,778
+Speaker SPEAKER_01: In 2013, Google acquired Hinton's neural network startup, DNN Research, which he developed out of his research at the university.
+
+17
+00:02:33,799 --> 00:02:37,887
+Speaker SPEAKER_01: He is vice president and engineering fellow at Google.
+
+18
+00:02:37,907 --> 00:02:44,919
+Speaker SPEAKER_01: He is a fellow of the Royal Society, the Royal Society of Canada, and the Association for the Advancement of Artificial Intelligence.
+
+19
+00:02:44,900 --> 00:02:54,341
+Speaker SPEAKER_01: Dr. Hinton has inspired and supported many, many researchers throughout his career who have also gone on to do incredible things with their careers.
+
+20
+00:02:55,103 --> 00:03:02,419
+Speaker SPEAKER_01: He has received many awards and accolades for his groundbreaking work, and I just wanted to highlight a couple of them.
+
+21
+00:03:02,399 --> 00:03:08,272
+Speaker SPEAKER_01: In 2010, Dr. Hinton received Canada's top award in science and engineering, the Nsert Herzberg Gold Medal.
+
+22
+00:03:09,055 --> 00:03:15,770
+Speaker SPEAKER_01: In 2017, he was given the BBVA Frontiers of Knowledge Award in recognition of his world-class research.
+
+23
+00:03:16,473 --> 00:03:20,543
+Speaker SPEAKER_01: In 2018, he won the Turing Award together with Yann LeCun
+
+24
+00:03:20,522 --> 00:03:34,735
+Speaker SPEAKER_01: and Yoshua Bengio, and in 2019, he received the Honda Prize, which is awarded to an interdisciplinary researcher who is addressing global challenges and contributing to the creation of a truly humane civilization.
+
+25
+00:03:35,515 --> 00:03:40,287
+Speaker SPEAKER_01: I could go on, but I won't, so please do join me in welcoming Dr. Jeffrey Hinton.
+
+26
+00:03:53,361 --> 00:03:59,074
+Speaker SPEAKER_00: When people get old, like me, they sometimes have the idea that what they're going to do is upload their mind to a computer.
+
+27
+00:04:00,156 --> 00:04:11,860
+Speaker SPEAKER_00: Today I'm going to tell you why that idea is ridiculous and will never work.
+
+28
+00:04:13,594 --> 00:04:18,923
+Speaker SPEAKER_00: So in conventional computing, there's a separation between hardware and software.
+
+29
+00:04:19,423 --> 00:04:20,404
+Speaker SPEAKER_00: And that's very important.
+
+30
+00:04:21,105 --> 00:04:25,492
+Speaker SPEAKER_00: It's probably the most fundamental principle of computer science, that the hardware should be separate from the software.
+
+31
+00:04:29,158 --> 00:04:32,483
+Speaker SPEAKER_00: We've got a problem here that I normally read my slides so I know what I'm going to say next.
+
+32
+00:04:33,345 --> 00:04:34,507
+Speaker SPEAKER_00: And I can't read them.
+
+33
+00:04:34,526 --> 00:04:39,774
+Speaker SPEAKER_00: If I go over here, I'll be OK.
+
+34
+00:04:39,795 --> 00:04:40,074
+Speaker SPEAKER_00: Yeah, OK.
+
+35
+00:04:42,416 --> 00:04:50,449
+Speaker SPEAKER_00: The point about that separation is you can have knowledge in a program or in a set of weights and you can run the same knowledge on a different chip or a different computer.
+
+36
+00:04:50,970 --> 00:04:52,833
+Speaker SPEAKER_00: So when the hardware dies, the knowledge doesn't die.
+
+37
+00:04:54,035 --> 00:04:55,716
+Speaker SPEAKER_00: But you achieve that at a great cost.
+
+38
+00:04:55,757 --> 00:04:56,999
+Speaker SPEAKER_00: That's a wonderful thing to have.
+
+39
+00:04:57,360 --> 00:05:02,146
+Speaker SPEAKER_00: It means you can make a million copies of the same program and send them to a million cell phones.
+
+40
+00:05:02,684 --> 00:05:05,709
+Speaker SPEAKER_00: But to do that, the computer has to act in a reliable way.
+
+41
+00:05:06,350 --> 00:05:09,415
+Speaker SPEAKER_00: So we have to run transistors at high power, so they're nice and digital.
+
+42
+00:05:10,377 --> 00:05:13,461
+Speaker SPEAKER_00: And we need to fabricate the hardware so it does what you expect it to do.
+
+43
+00:05:13,783 --> 00:05:16,206
+Speaker SPEAKER_00: And so another copy of the hardware will do exactly the same thing.
+
+44
+00:05:19,291 --> 00:05:22,396
+Speaker SPEAKER_00: Now, if we abandon that immortality,
+
+45
+00:05:22,612 --> 00:05:25,497
+Speaker SPEAKER_00: In literature, what you get back is love if you abandon immortality.
+
+46
+00:05:26,920 --> 00:05:30,925
+Speaker SPEAKER_00: But here, what we're going to get back is something even more important, which is low energy.
+
+47
+00:05:32,728 --> 00:05:40,161
+Speaker SPEAKER_00: We can use very low power analog hardware that's unreliable, and we don't need to know the precise connectivity of the hardware.
+
+48
+00:05:40,781 --> 00:05:46,831
+Speaker SPEAKER_00: So the idea is that the whole of the field of computer science relied on separation of hardware and software.
+
+49
+00:05:47,267 --> 00:05:51,233
+Speaker SPEAKER_00: And people are now busy saying, if I have a big set of weights, how do I explain how it really works?
+
+50
+00:05:52,035 --> 00:05:53,978
+Speaker SPEAKER_00: I want to go in exactly the opposite direction.
+
+51
+00:05:55,480 --> 00:06:00,588
+Speaker SPEAKER_00: Sort of based on the brain, I want to say the knowledge and the hardware are intimately entangled and will never separate them.
+
+52
+00:06:02,670 --> 00:06:12,125
+Speaker SPEAKER_00: For this to work, there has to be a learning procedure that operates in a particular piece of hardware and makes use of all the weird analog properties of that particular piece of hardware.
+
+53
+00:06:13,927 --> 00:06:15,569
+Speaker SPEAKER_00: That's what I call a mortal computer.
+
+54
+00:06:17,017 --> 00:06:19,901
+Speaker SPEAKER_00: So it has the advantage that we can use immense parallelism.
+
+55
+00:06:19,942 --> 00:06:21,944
+Speaker SPEAKER_00: We can use parallelism at the level of the weights.
+
+56
+00:06:22,685 --> 00:06:26,370
+Speaker SPEAKER_00: And so the computing elements don't need to run very fast, which keeps them lower power.
+
+57
+00:06:27,432 --> 00:06:30,435
+Speaker SPEAKER_00: Also, we don't need to fabricate these things.
+
+58
+00:06:31,276 --> 00:06:33,119
+Speaker SPEAKER_00: Fabrication is getting more and more expensive.
+
+59
+00:06:33,139 --> 00:06:34,321
+Speaker SPEAKER_00: You need like a billion dollars.
+
+60
+00:06:34,620 --> 00:06:36,142
+Speaker SPEAKER_00: Actually, I think that was a few years ago.
+
+61
+00:06:36,182 --> 00:06:40,848
+Speaker SPEAKER_00: You need several billion dollars now to make a fabrication plant.
+
+62
+00:06:43,192 --> 00:06:49,000
+Speaker SPEAKER_00: Instead of doing that, what we can do is grow these things very cheaply and very unreliably.
+
+63
+00:06:49,480 --> 00:06:51,142
+Speaker SPEAKER_00: That's going to involve a lot of nanotechnology.
+
+64
+00:06:51,783 --> 00:07:07,386
+Speaker SPEAKER_00: But these are my predictions about something that's coming, maybe not in the next couple of years, but it's coming in the next decade or so, and will be a completely different kind of computer that violates a lot of the very basic assumptions you make that you can separate the knowledge from the hardware.
+
+65
+00:07:09,649 --> 00:07:12,473
+Speaker SPEAKER_00: There's two big problems, of course, that are preventing this happening.
+
+66
+00:07:12,875 --> 00:07:24,127
+Speaker SPEAKER_00: It seems like a problem that when the piece of hardware dies, everything it's learned dies, because you can't copy the knowledge in a neural net by just copying the weights.
+
+67
+00:07:24,767 --> 00:07:40,266
+Speaker SPEAKER_00: If those weights are running in hardware that's very flaky, very specific to that particular instance, and where you don't actually know all the details of the connectivity or the input output functions of the neurons, if you have things like neurons.
+
+68
+00:07:43,317 --> 00:07:49,627
+Speaker SPEAKER_00: We also need a learning algorithm that will allow a mortal computer to make use of its hardware properly.
+
+69
+00:07:50,648 --> 00:07:51,709
+Speaker SPEAKER_00: And we don't have one yet.
+
+70
+00:07:52,250 --> 00:07:54,574
+Speaker SPEAKER_00: Backpropagation's not the right algorithm.
+
+71
+00:07:55,055 --> 00:08:00,504
+Speaker SPEAKER_00: In backpropagation, you have to know exactly how the forward process works in order to backpropagate gradients.
+
+72
+00:08:01,285 --> 00:08:11,079
+Speaker SPEAKER_00: And I believe the big bottleneck in having this different kind of computer, these mortal throwaway computers, is that we don't yet have the right learning algorithm.
+
+73
+00:08:13,826 --> 00:08:18,012
+Speaker SPEAKER_00: So I'm going to just show you that it's not impossible to get a learning algorithm and things like this.
+
+74
+00:08:20,995 --> 00:08:25,180
+Speaker SPEAKER_00: This is some very old ideas, updated slightly recently.
+
+75
+00:08:26,502 --> 00:08:35,952
+Speaker SPEAKER_00: A really simple learning procedure is just you make a random vector of changes to the weights, and then you look and see how much that improves things, and you then
+
+76
+00:08:37,148 --> 00:08:42,697
+Speaker SPEAKER_00: Multiply the vector random changes by how much it improved things, and you make that be a permanent change to the weights.
+
+77
+00:08:43,499 --> 00:08:44,681
+Speaker SPEAKER_00: And everybody knows that'll work.
+
+78
+00:08:44,880 --> 00:08:46,583
+Speaker SPEAKER_00: It's unbiased.
+
+79
+00:08:46,945 --> 00:08:48,407
+Speaker SPEAKER_00: It's noisy, but unbiased.
+
+80
+00:08:48,427 --> 00:08:53,436
+Speaker SPEAKER_00: But it's just incredibly slow because it has a lot of variance.
+
+81
+00:08:55,745 --> 00:08:59,448
+Speaker SPEAKER_00: Also, you can't use matrix multiplies with that.
+
+82
+00:08:59,490 --> 00:09:05,196
+Speaker SPEAKER_00: Matrix matrix multiplies because you need to make different perturbations on every case.
+
+83
+00:09:06,077 --> 00:09:07,418
+Speaker SPEAKER_00: Otherwise, you get very high variance.
+
+84
+00:09:09,981 --> 00:09:17,451
+Speaker SPEAKER_00: Now, instead of doing that, people about 30 years ago figured out that you could perturb the activities.
+
+85
+00:09:17,951 --> 00:09:23,018
+Speaker SPEAKER_00: So you add a random vector of perturbations to the total input to a neuron.
+
+86
+00:09:24,178 --> 00:09:25,780
+Speaker SPEAKER_00: And you do the same thing.
+
+87
+00:09:25,860 --> 00:09:28,384
+Speaker SPEAKER_00: You say, how much did that random vector improve things?
+
+88
+00:09:28,945 --> 00:09:35,873
+Speaker SPEAKER_00: And let's multiply that random vector by how much it improved things and add that to what we want to happen to the inputs.
+
+89
+00:09:36,793 --> 00:09:42,059
+Speaker SPEAKER_00: So then you've got an unbiased estimate of the derivatives with respect to the total inputs to the units.
+
+90
+00:09:42,640 --> 00:09:45,403
+Speaker SPEAKER_00: And then you can just go and compute how to change the weights to follow that gradient.
+
+91
+00:09:46,024 --> 00:09:47,125
+Speaker SPEAKER_00: That's a much better algorithm.
+
+92
+00:09:47,145 --> 00:09:48,988
+Speaker SPEAKER_00: It's got much lower variance.
+
+93
+00:09:49,070 --> 00:09:54,407
+Speaker SPEAKER_00: The things that you're adding noise to are the neurons, not the weights, so there's thousands of times less of them.
+
+94
+00:09:56,131 --> 00:10:01,830
+Speaker SPEAKER_00: The question is, and it works for small things like MNIST, but will it scale up?
+
+95
+00:10:03,447 --> 00:10:20,047
+Speaker SPEAKER_00: One way to make it scale up to much bigger networks is instead of trying to find an algorithm that scales to more parameters, have an algorithm that works quite well if you don't have that many parameters, and just scale up the number of modules you have that have that many parameters.
+
+96
+00:10:20,067 --> 00:10:21,729
+Speaker SPEAKER_00: And the human cortex is a bit like that.
+
+97
+00:10:21,769 --> 00:10:24,030
+Speaker SPEAKER_00: It's got millions of these relatively small modules.
+
+98
+00:10:26,754 --> 00:10:30,619
+Speaker SPEAKER_00: To do that, you need to have local objective functions for these modules.
+
+99
+00:10:30,903 --> 00:10:35,889
+Speaker SPEAKER_00: And that's how you can make these not very efficient learning algorithms scale up to very big systems.
+
+100
+00:10:36,448 --> 00:10:38,331
+Speaker SPEAKER_00: But where do these local objective functions come from?
+
+101
+00:10:39,413 --> 00:10:42,115
+Speaker SPEAKER_00: Well, one possibility is unsupervised contrastive learning.
+
+102
+00:10:42,897 --> 00:10:53,048
+Speaker SPEAKER_00: So there's a method suggested in the 90s by Sue Becker and I, but we didn't get a very good version of it, where you just try and make two sources of information agree.
+
+103
+00:10:54,990 --> 00:10:59,255
+Speaker SPEAKER_00: So you take two patches from the same image, and you try and make them agree on their representation.
+
+104
+00:11:00,011 --> 00:11:16,139
+Speaker SPEAKER_00: The modern version of that uses a contrastive method where you use negative examples where you take two patches from different images and say they should be different and two patches from the same image and say they should be the same and that's how you get, that's your objective function.
+
+105
+00:11:17,081 --> 00:11:23,352
+Speaker SPEAKER_00: I've left out all the details of specifying in terms of log probabilities but most of you know that.
+
+106
+00:11:23,822 --> 00:11:32,934
+Speaker SPEAKER_00: You could take that algorithm and have little modules that are trying to make representations from one patch agree with representations of other patches.
+
+107
+00:11:34,336 --> 00:11:36,701
+Speaker SPEAKER_00: And you could have each module have a few hidden layers.
+
+108
+00:11:37,522 --> 00:11:39,924
+Speaker SPEAKER_00: You could use this kind of activity perturbation algorithm.
+
+109
+00:11:40,785 --> 00:11:43,809
+Speaker SPEAKER_00: And then you could have greedily between multiple layers.
+
+110
+00:11:44,711 --> 00:11:46,333
+Speaker SPEAKER_00: And that way, you can learn representations.
+
+111
+00:11:46,394 --> 00:11:49,938
+Speaker SPEAKER_00: And then right at the end, you can associate the representations with the right answer.
+
+112
+00:11:50,239 --> 00:11:53,003
+Speaker SPEAKER_00: So you just learn a linear model at the end, which doesn't require backprop.
+
+113
+00:11:54,653 --> 00:12:01,144
+Speaker SPEAKER_00: So there's a very good researcher, and one of the best that Vector has produced, called Mengyi Ren.
+
+114
+00:12:02,947 --> 00:12:07,096
+Speaker SPEAKER_00: He's been messing about with a variant of the activity perturbation method.
+
+115
+00:12:07,677 --> 00:12:09,440
+Speaker SPEAKER_00: I don't have time to go into the details.
+
+116
+00:12:10,041 --> 00:12:13,707
+Speaker SPEAKER_00: But he's basically shown that it can be made to work.
+
+117
+00:12:13,687 --> 00:12:36,826
+Speaker SPEAKER_00: This isn't that convincing evidence because I think many could show that anything could be made to work but he has some results which I don't have time to go into where you compare using backpropagation in these local modules with using activity perturbation to get your gradient and the question is will this work for relatively large problems like ImageNet as opposed to just small problems like CIFAR?
+
+118
+00:12:37,110 --> 00:12:52,971
+Speaker SPEAKER_00: And if you look at the first number in the right-hand column, in the kind of nets he was using, which weren't that big, backpropagation using this contrastive learning objective gives you 55% error rate.
+
+119
+00:12:53,711 --> 00:12:54,953
+Speaker SPEAKER_00: And so you get about half of them right.
+
+120
+00:12:56,375 --> 00:12:58,477
+Speaker SPEAKER_00: And if you look at the bottom,
+
+121
+00:12:58,677 --> 00:13:00,620
+Speaker SPEAKER_00: the bottom entry in the right-hand column.
+
+122
+00:13:01,200 --> 00:13:05,686
+Speaker SPEAKER_00: This local activity perturbation gives you about 75% error rate, so you get about a quarter of them right.
+
+123
+00:13:06,006 --> 00:13:08,309
+Speaker SPEAKER_00: Since there's 1,000 possible answers, that's still not bad.
+
+124
+00:13:08,889 --> 00:13:14,878
+Speaker SPEAKER_00: So you can actually make this scale up to things of the size of ImageNet, where you have millions of connections, many millions of connections.
+
+125
+00:13:16,059 --> 00:13:19,604
+Speaker SPEAKER_00: But I'll leave it at that, because that's not really what I want to talk about.
+
+126
+00:13:19,904 --> 00:13:25,511
+Speaker SPEAKER_00: I just want to show it is possible to get learning algorithms other than backprop that sort of work, and we'll be able to make them work better.
+
+127
+00:13:28,528 --> 00:13:34,015
+Speaker SPEAKER_00: In these mortal computers, the other problem is how do you transfer knowledge?
+
+128
+00:13:34,035 --> 00:13:36,649
+Speaker SPEAKER_00: You don't want the mortal computer to just die and lose all the knowledge.
+
+129
+00:13:37,607 --> 00:13:41,211
+Speaker SPEAKER_00: And also, how do you transfer knowledge within the computer itself?
+
+130
+00:13:41,993 --> 00:13:47,779
+Speaker SPEAKER_00: So vision systems use convolution, or they use transformers that apply the same weights to different patches in the image.
+
+131
+00:13:48,900 --> 00:13:58,032
+Speaker SPEAKER_00: And you can't do that in one of these mortal computers, because different patches of the image will be handled by hardware that was grown and was unreliable and is slightly different from the hardware that handles some other patch.
+
+132
+00:13:59,274 --> 00:14:02,096
+Speaker SPEAKER_00: So you have to use knowledge distillation.
+
+133
+00:14:03,359 --> 00:14:24,793
+Speaker SPEAKER_00: And in knowledge distillation, what you do is you learn stuff in one location, and then if you've got some contrastive kind of objective function, or if you say, I would like what I produce from one location to be predictable from what I produce in other locations by some simple function that I learned,
+
+134
+00:14:24,892 --> 00:14:31,318
+Speaker SPEAKER_00: then you can get knowledge between locations by using distillation, by using the context as a teacher for the local thing.
+
+135
+00:14:32,240 --> 00:14:36,504
+Speaker SPEAKER_00: And that goes on everywhere, so everything can get taught by distillation.
+
+136
+00:14:36,524 --> 00:14:51,860
+Speaker SPEAKER_00: And that's actually better than copying weights across, because that can cope with the fact that your front end, your retina, might have different sized receptor fields with different spacing for different modules, but modules can still transfer knowledge to each other by giving each other targets for learning.
+
+137
+00:14:53,849 --> 00:14:55,932
+Speaker SPEAKER_00: There's distilling knowledge between mortal computers.
+
+138
+00:14:58,676 --> 00:15:07,568
+Speaker SPEAKER_00: So the way distillation works is once you've trained a computer, it can give you not just what the right answer is, but probabilities of all the wrong answers.
+
+139
+00:15:07,990 --> 00:15:10,413
+Speaker SPEAKER_00: And that's much richer information than just the right answer.
+
+140
+00:15:11,434 --> 00:15:16,442
+Speaker SPEAKER_00: And that means you can train another computer from those probabilities much better than you can train it just from the raw data.
+
+141
+00:15:17,543 --> 00:15:22,049
+Speaker SPEAKER_00: And in the community of mortal computers,
+
+142
+00:15:22,874 --> 00:15:26,919
+Speaker SPEAKER_00: What we want to do is get the internal knowledge from one to another.
+
+143
+00:15:27,620 --> 00:15:28,763
+Speaker SPEAKER_00: We can't copy weights.
+
+144
+00:15:29,764 --> 00:15:34,371
+Speaker SPEAKER_00: The internal knowledge isn't in the form of programs or symbolic expressions that we can copy.
+
+145
+00:15:35,052 --> 00:15:42,244
+Speaker SPEAKER_00: It's gunk, a huge bunch of weights tied up with a huge bunch of hardware that works in weird ways that we don't understand.
+
+146
+00:15:43,306 --> 00:15:49,455
+Speaker SPEAKER_00: The way to get the knowledge across is to produce extra outputs that are learned just in order to get the knowledge across.
+
+147
+00:15:50,144 --> 00:15:52,727
+Speaker SPEAKER_00: And that's what I think one of the main functions of language is.
+
+148
+00:15:53,469 --> 00:15:56,695
+Speaker SPEAKER_00: We tend to think of language as describing what's out there.
+
+149
+00:15:57,436 --> 00:16:07,532
+Speaker SPEAKER_00: I think one of the main functions of it is to get the knowledge that's in my head into your head by making my head produce some extra additional outputs.
+
+150
+00:16:08,274 --> 00:16:12,220
+Speaker SPEAKER_00: And you can train to produce those, to agree with me in those extra outputs.
+
+151
+00:16:12,807 --> 00:16:19,855
+Speaker SPEAKER_00: And that allows you to get information about the function that's in my head quite independent of what all the weights are.
+
+152
+00:16:19,875 --> 00:16:21,317
+Speaker SPEAKER_00: That's how I think people share knowledge.
+
+153
+00:16:22,399 --> 00:16:25,744
+Speaker SPEAKER_00: And Trump's tweets are a nice example of that.
+
+154
+00:16:26,325 --> 00:16:32,472
+Speaker SPEAKER_00: People used to mistake Trump's tweets for statements of fact, and then they complained that they weren't actually true.
+
+155
+00:16:33,254 --> 00:16:35,437
+Speaker SPEAKER_00: That was just complete misunderstanding of what was going on.
+
+156
+00:16:36,077 --> 00:16:42,426
+Speaker SPEAKER_00: What Trump was doing was responding to situations with strings of words,
+
+157
+00:16:42,405 --> 00:16:50,215
+Speaker SPEAKER_00: And his believers, his followers, then knew which strings of words they ought to produce in response to those situations.
+
+158
+00:16:50,414 --> 00:16:54,879
+Speaker SPEAKER_00: And what that did was got Trump's beliefs into the heads of his followers.
+
+159
+00:16:55,520 --> 00:16:58,663
+Speaker SPEAKER_00: It wasn't at all about describing anything.
+
+160
+00:16:59,225 --> 00:17:01,147
+Speaker SPEAKER_00: It's much more like in a football crowd.
+
+161
+00:17:02,568 --> 00:17:06,713
+Speaker SPEAKER_00: The first time you ever go to a football game as a kid, you learn who to jeer at.
+
+162
+00:17:07,433 --> 00:17:09,797
+Speaker SPEAKER_00: People learn that very quickly.
+
+163
+00:17:12,291 --> 00:17:14,355
+Speaker SPEAKER_00: I'm not suggesting that all computers should be mortal.
+
+164
+00:17:14,757 --> 00:17:23,011
+Speaker SPEAKER_00: I think just ones that need to be very cheap to fabricate, very cheap to run, disposable, but need to have the kind of knowledge that GPT-3 has.
+
+165
+00:17:24,173 --> 00:17:29,984
+Speaker SPEAKER_00: I'm going in an opposite direction to most people.
+
+166
+00:17:30,005 --> 00:17:32,809
+Speaker SPEAKER_00: Most people want to take neural net black boxes and make them explainable.
+
+167
+00:17:33,791 --> 00:17:36,155
+Speaker SPEAKER_00: I'm taking neural net black boxes
+
+168
+00:17:36,321 --> 00:17:51,006
+Speaker SPEAKER_00: in which currently the weights and the hardware are separable and saying they're really inseparable in these mortal computers because you want to make use of all the weird analog properties of the hardware and so the boxes are going to get much blacker
+
+169
+00:17:53,398 --> 00:18:00,608
+Speaker SPEAKER_00: And finally, it may be these mortal computers look very like a brain and use spiking neurons.
+
+170
+00:18:00,890 --> 00:18:01,450
+Speaker SPEAKER_00: They may not.
+
+171
+00:18:03,272 --> 00:18:09,561
+Speaker SPEAKER_00: But the limitation to neuromorphic hardware, the reason we haven't seen it everywhere, is that we don't have the learning algorithm.
+
+172
+00:18:10,002 --> 00:18:12,066
+Speaker SPEAKER_00: And that's the reason we don't have mortal computers yet.
+
+173
+00:18:12,886 --> 00:18:14,509
+Speaker SPEAKER_00: And so there is a basic problem.
+
+174
+00:18:14,568 --> 00:18:19,635
+Speaker SPEAKER_00: The brain is using a learning procedure that's making use of the fine details of the hardware, and we don't know what it is.
+
+175
+00:18:21,097 --> 00:18:21,499
+Speaker SPEAKER_00: I'm done.
+

@@ -1,0 +1,2348 @@
+1
+00:00:04,637 --> 00:00:06,179
+Speaker SPEAKER_00: Thank you, John, for that nice introduction.
+
+2
+00:00:08,683 --> 00:00:11,407
+Speaker SPEAKER_00: Before I start, I'd like to say something about Ian Howard.
+
+3
+00:00:12,087 --> 00:00:15,313
+Speaker SPEAKER_00: I used to love to visit York and talk to Ian Howard.
+
+4
+00:00:15,333 --> 00:00:17,295
+Speaker SPEAKER_00: He was a really great scientist.
+
+5
+00:00:17,315 --> 00:00:21,882
+Speaker SPEAKER_00: He always struck me as the closest I'd ever get to meeting a true Victorian scientist.
+
+6
+00:00:23,324 --> 00:00:24,506
+Speaker SPEAKER_00: And he loved making things.
+
+7
+00:00:26,609 --> 00:00:28,131
+Speaker SPEAKER_00: So York always reminds me of Ian.
+
+8
+00:00:30,068 --> 00:00:34,473
+Speaker SPEAKER_00: Okay, today I'm going to talk about some work that's already published on capsule networks.
+
+9
+00:00:37,878 --> 00:00:42,404
+Speaker SPEAKER_00: The current way to do object recognition is to use convolutional neural nets.
+
+10
+00:00:44,167 --> 00:00:47,771
+Speaker SPEAKER_00: They've got multiple layers of feature detectors, which are learned discriminatively.
+
+11
+00:00:49,853 --> 00:00:50,314
+Speaker SPEAKER_00: That's good.
+
+12
+00:00:51,496 --> 00:00:56,362
+Speaker SPEAKER_00: And the features are local, and each type of feature detector is replicated across space.
+
+13
+00:00:57,490 --> 00:01:01,534
+Speaker SPEAKER_00: so they can deal with objects when they move, or when they're in a different position.
+
+14
+00:01:02,136 --> 00:01:02,536
+Speaker SPEAKER_00: That's good.
+
+15
+00:01:03,457 --> 00:01:11,387
+Speaker SPEAKER_00: As you go up the hierarchy of features, the feature detectors respond to things in a larger region of space, and that's good.
+
+16
+00:01:14,251 --> 00:01:23,262
+Speaker SPEAKER_00: The feature detectors are interleaved with subsampling layers, which pool the information from a bunch of feature detectors, and the aim of that is to get invariance,
+
+17
+00:01:24,456 --> 00:01:28,331
+Speaker SPEAKER_00: and to throw away positional information.
+
+18
+00:01:28,350 --> 00:01:28,992
+Speaker SPEAKER_00: And that's bad.
+
+19
+00:01:29,835 --> 00:01:33,689
+Speaker SPEAKER_00: I'll try and argue with you, I'll try and tell you why that's bad.
+
+20
+00:01:39,138 --> 00:01:51,233
+Speaker SPEAKER_00: So current neural nets that do object recognition, conv nets, convolutional nets, cannot generalize well to novel orientations or scales or shears.
+
+21
+00:01:52,355 --> 00:02:01,347
+Speaker SPEAKER_00: And they're not dealing in a principled way with the effect that a change of viewpoint has on an image.
+
+22
+00:02:01,328 --> 00:02:05,918
+Speaker SPEAKER_00: So the biggest source of variation in images is from changing viewpoints.
+
+23
+00:02:06,721 --> 00:02:09,586
+Speaker SPEAKER_00: There's other sources of variation like lighting and stuff like that.
+
+24
+00:02:10,169 --> 00:02:14,038
+Speaker SPEAKER_00: But changing viewpoints is particularly nasty source of variation for machine learning.
+
+25
+00:02:14,778 --> 00:02:17,245
+Speaker SPEAKER_00: And I'll try and give you insight into why it's so nasty.
+
+26
+00:02:17,680 --> 00:02:22,384
+Speaker SPEAKER_00: The same part of an object shows up on different pixels when you change your viewpoint.
+
+27
+00:02:24,106 --> 00:02:29,152
+Speaker SPEAKER_00: And for machine learning, that's as if you had two hospitals that coded their data differently.
+
+28
+00:02:29,193 --> 00:02:33,598
+Speaker SPEAKER_00: So in hospital one, you code the data as age, weight, blood type, financial status.
+
+29
+00:02:34,098 --> 00:02:39,024
+Speaker SPEAKER_00: And in hospital two, you code the data as weight, blood type, age, financial status.
+
+30
+00:02:39,985 --> 00:02:42,927
+Speaker SPEAKER_00: You have to get financial status in there.
+
+31
+00:02:42,907 --> 00:02:55,508
+Speaker SPEAKER_00: Now, if you knew that, if you knew that the same information was going to show up on different input dimensions, you'd be crazy if you did machine learning to just go about doing learning by saying, well, we're going to ignore that.
+
+32
+00:02:55,528 --> 00:02:59,977
+Speaker SPEAKER_00: We're just going to get lots and lots of hospitals, and we're just going to hope it all sort of averages out somehow.
+
+33
+00:03:01,520 --> 00:03:07,650
+Speaker SPEAKER_00: You'd obviously want to unscramble it so you get the same dimensions mean the same things.
+
+34
+00:03:07,764 --> 00:03:10,807
+Speaker SPEAKER_00: But that's what viewpoint does to images.
+
+35
+00:03:10,828 --> 00:03:12,850
+Speaker SPEAKER_00: It puts the same information on different pixels.
+
+36
+00:03:14,092 --> 00:03:23,322
+Speaker SPEAKER_00: And the way ConvNet's trying to deal with it is by just trying to get lots and lots of images from different viewpoints and gently unscrambling it by pooling.
+
+37
+00:03:23,543 --> 00:03:32,473
+Speaker SPEAKER_00: The best they've got for unscrambling is pooling, which says, if it occurred nearby, it'll eventually lead to activation in the same feature detector because we're pooling.
+
+38
+00:03:32,492 --> 00:03:35,376
+Speaker SPEAKER_00: That doesn't seem like a very principled way of dealing with viewpoint.
+
+39
+00:03:35,760 --> 00:03:39,668
+Speaker SPEAKER_00: And this whole talk is going to be about how we might deal better with viewpoint.
+
+40
+00:03:39,687 --> 00:03:42,092
+Speaker SPEAKER_00: The one good thing about it is it does deal with translation.
+
+41
+00:03:42,955 --> 00:03:57,481
+Speaker SPEAKER_00: So in a ConvNet, because you replicate features across space, then if I translate the image, there will be a feature detector of the same kind in a different position that will respond to whatever feature I saw before.
+
+42
+00:03:58,237 --> 00:04:00,084
+Speaker SPEAKER_00: That's not actually equivariance.
+
+43
+00:04:01,026 --> 00:04:03,375
+Speaker SPEAKER_00: Sorry, that's not actually invariance, that's equivariance.
+
+44
+00:04:03,776 --> 00:04:08,110
+Speaker SPEAKER_00: In other words, when I translate the image, I actually translate which feature detector responds.
+
+45
+00:04:08,412 --> 00:04:10,037
+Speaker SPEAKER_00: So the translation goes through the system.
+
+46
+00:04:15,534 --> 00:04:20,668
+Speaker SPEAKER_00: One problem, another problem with ConvNets is they don't produce a parse tree for an image.
+
+47
+00:04:20,848 --> 00:04:26,603
+Speaker SPEAKER_00: And it seems sort of psychologically realistic to think when I see a scene, I do something like parsing it.
+
+48
+00:04:26,663 --> 00:04:31,214
+Speaker SPEAKER_00: I know which parts are which and which parts belong to which holes.
+
+49
+00:04:31,194 --> 00:04:35,000
+Speaker SPEAKER_00: So that's one thing they don't do, combinettes.
+
+50
+00:04:35,019 --> 00:04:39,865
+Speaker SPEAKER_00: Another thing they don't do is they don't assign intrinsic frames of reference to objects.
+
+51
+00:04:40,966 --> 00:04:45,112
+Speaker SPEAKER_00: So many of you are psychologists or psychophysicists, so you will know these examples.
+
+52
+00:04:46,112 --> 00:04:57,826
+Speaker SPEAKER_00: But if you look at the, yeah, if you look at the object on the left, left, yes.
+
+53
+00:04:58,786 --> 00:05:03,932
+Speaker SPEAKER_00: If I just tell you it's a country, you initially see it as kind of reflected Australia.
+
+54
+00:05:03,952 --> 00:05:12,985
+Speaker SPEAKER_00: As soon as I tell you that it's at a diagonal orientation, you can see that it's Africa, right?
+
+55
+00:05:13,086 --> 00:05:15,249
+Speaker SPEAKER_00: It's very familiar once you get the right orientation.
+
+56
+00:05:15,269 --> 00:05:17,351
+Speaker SPEAKER_00: But if you don't get the right orientation, it's not at all familiar.
+
+57
+00:05:19,093 --> 00:05:24,180
+Speaker SPEAKER_00: If you look at the object on the right, you have two completely different ways of seeing that.
+
+58
+00:05:24,261 --> 00:05:27,105
+Speaker SPEAKER_00: You can see it as an upright diamond or as a tilted square.
+
+59
+00:05:28,233 --> 00:05:31,377
+Speaker SPEAKER_00: And those are completely different internal representations.
+
+60
+00:05:32,237 --> 00:05:33,899
+Speaker SPEAKER_00: Now a ConvNet doesn't have anything like that.
+
+61
+00:05:34,019 --> 00:05:45,093
+Speaker SPEAKER_00: A ConvNet, you put the data in, it goes through, you recognize the object, but it's not like the same, the very same pixels can lead to two completely different interpretations in a ConvNet.
+
+62
+00:05:47,235 --> 00:05:50,740
+Speaker SPEAKER_00: Because a ConvNet doesn't do anything like explicitly imposing a frame of reference.
+
+63
+00:05:51,480 --> 00:05:56,906
+Speaker SPEAKER_00: And I'm gonna argue that explicitly imposing frames of reference is what you need to do to deal with viewpoint properly.
+
+64
+00:05:57,798 --> 00:06:09,255
+Speaker SPEAKER_00: So I'm going to try and make this problem even more evident by showing you a little puzzle.
+
+65
+00:06:09,737 --> 00:06:11,620
+Speaker SPEAKER_00: I found it in a Christmas cracker many years ago.
+
+66
+00:06:12,221 --> 00:06:16,767
+Speaker SPEAKER_00: And what we're going to do is we're going to take a solid tetrahedron
+
+67
+00:06:18,132 --> 00:06:20,415
+Speaker SPEAKER_00: and we're going to cut it into two with a plane.
+
+68
+00:06:21,797 --> 00:06:24,980
+Speaker SPEAKER_00: So this is going to be a jigsaw puzzle, but a 3D jigsaw puzzle.
+
+69
+00:06:25,882 --> 00:06:27,803
+Speaker SPEAKER_00: And it doesn't sound that hard, right?
+
+70
+00:06:28,625 --> 00:06:37,297
+Speaker SPEAKER_00: If I tell you I'm going to take a solid tetrahedron and I'm going to cut it with a plane, and then what I'm going to do is I'm going to do an experiment on MIT professors.
+
+71
+00:06:39,079 --> 00:06:43,144
+Speaker SPEAKER_00: I'm going to give MIT professors these two pieces of a tetrahedron.
+
+72
+00:06:44,017 --> 00:06:46,060
+Speaker SPEAKER_00: And I'm going to say, these make a tetrahedron.
+
+73
+00:06:46,081 --> 00:06:47,862
+Speaker SPEAKER_00: I'm going to check they know what a tetrahedron is.
+
+74
+00:06:48,803 --> 00:06:55,934
+Speaker SPEAKER_00: And I'm going to say, can you put these two solid pieces together to make a tetrahedron?
+
+75
+00:06:55,954 --> 00:06:57,154
+Speaker SPEAKER_00: And they can't, it turns out.
+
+76
+00:06:58,776 --> 00:07:00,480
+Speaker SPEAKER_00: In fact, it takes them a long time.
+
+77
+00:07:00,540 --> 00:07:06,987
+Speaker SPEAKER_00: And the number of minutes it takes them is about equal to the number of years they've been at MIT.
+
+78
+00:07:09,095 --> 00:07:14,220
+Speaker SPEAKER_00: So the young ones get it in a few minutes, and the old ones just don't get it.
+
+79
+00:07:15,721 --> 00:07:16,521
+Speaker SPEAKER_00: Some of them give up.
+
+80
+00:07:16,603 --> 00:07:23,249
+Speaker SPEAKER_00: And one MIT professor called Carl Hewitt, who I tried this on a long time ago, after 10 minutes, he proved that it was impossible.
+
+81
+00:07:25,050 --> 00:07:25,411
+Speaker SPEAKER_00: OK.
+
+82
+00:07:25,511 --> 00:07:27,512
+Speaker SPEAKER_00: Now, you may wonder why this is so hard.
+
+83
+00:07:28,374 --> 00:07:30,196
+Speaker SPEAKER_00: So I have a demonstration here.
+
+84
+00:07:33,278 --> 00:07:37,043
+Speaker SPEAKER_00: I think Ian would have appreciated this, because it involved making something.
+
+85
+00:07:39,942 --> 00:07:46,117
+Speaker SPEAKER_00: Now part of the point of this demonstration is these pieces are large and clumsy, so it's hard to manipulate them, and that makes it much harder.
+
+86
+00:07:47,038 --> 00:07:47,600
+Speaker SPEAKER_00: So here we are.
+
+87
+00:07:48,000 --> 00:07:53,254
+Speaker SPEAKER_00: These two pieces make a tetrahedron, right?
+
+88
+00:07:53,334 --> 00:07:54,997
+Speaker SPEAKER_00: They're identical, okay?
+
+89
+00:07:55,535 --> 00:07:56,596
+Speaker SPEAKER_00: And here's what people do.
+
+90
+00:07:56,656 --> 00:08:00,322
+Speaker SPEAKER_00: They say, well, you know, the reason I've got to put two faces the same together.
+
+91
+00:08:00,362 --> 00:08:00,843
+Speaker SPEAKER_00: So let's see.
+
+92
+00:08:00,882 --> 00:08:01,725
+Speaker SPEAKER_00: I'm going to put those together.
+
+93
+00:08:01,764 --> 00:08:04,269
+Speaker SPEAKER_00: No, that's not a tetrahedron.
+
+94
+00:08:04,509 --> 00:08:05,069
+Speaker SPEAKER_00: Let's see.
+
+95
+00:08:05,610 --> 00:08:07,093
+Speaker SPEAKER_00: Well, that's clearly not a tetrahedron.
+
+96
+00:08:08,134 --> 00:08:09,737
+Speaker SPEAKER_00: And that's not a tetrahedron.
+
+97
+00:08:09,757 --> 00:08:10,678
+Speaker SPEAKER_00: And then people do this.
+
+98
+00:08:10,778 --> 00:08:11,420
+Speaker SPEAKER_00: And I watch them do it.
+
+99
+00:08:11,439 --> 00:08:12,461
+Speaker SPEAKER_00: They say, that's not a tetrahedron.
+
+100
+00:08:12,482 --> 00:08:12,982
+Speaker SPEAKER_00: What about this?
+
+101
+00:08:13,202 --> 00:08:15,365
+Speaker SPEAKER_00: That's not a tetrahedron.
+
+102
+00:08:16,747 --> 00:08:18,369
+Speaker SPEAKER_00: I don't know, how do you make a tetrahedron?
+
+103
+00:08:18,730 --> 00:08:20,552
+Speaker SPEAKER_00: What is a tetrahedron?
+
+104
+00:08:21,132 --> 00:08:22,755
+Speaker SPEAKER_00: And people will spend a long, long time.
+
+105
+00:08:22,915 --> 00:08:37,756
+Speaker SPEAKER_00: Now, just occasionally, people get it almost immediately, maybe because they've seen it before, or maybe because they went to a US public school a long time ago, where they got milk delivered in tetrahedral cartons, and they stacked them in a particular way.
+
+106
+00:08:39,038 --> 00:08:43,966
+Speaker SPEAKER_00: So let me show you how you make a tetrahedron, in case some of you haven't figured it out yet.
+
+107
+00:08:44,005 --> 00:08:45,488
+Speaker SPEAKER_00: You do it like that.
+
+108
+00:08:46,327 --> 00:08:52,033
+Speaker SPEAKER_00: And the question is, why can presumably intelligent people like MIT professors not see this?
+
+109
+00:08:52,914 --> 00:08:54,135
+Speaker SPEAKER_00: It's not that hard, right?
+
+110
+00:08:54,677 --> 00:08:57,700
+Speaker SPEAKER_00: If you think about it, there's only three different types of face here.
+
+111
+00:08:57,720 --> 00:09:02,404
+Speaker SPEAKER_00: There's the little triangle, the big trapezoid, and the rectangle.
+
+112
+00:09:03,485 --> 00:09:08,051
+Speaker SPEAKER_00: Well, part of this, since you're psychologists, is it's a real-life Muller-Lyer illusion.
+
+113
+00:09:08,811 --> 00:09:11,634
+Speaker SPEAKER_00: So actually, people don't perceive it as a rectangle.
+
+114
+00:09:12,595 --> 00:09:14,277
+Speaker SPEAKER_00: So if you show people this,
+
+115
+00:09:15,725 --> 00:09:20,870
+Speaker SPEAKER_00: You see this guy has an arrow coming out and sort of coming out.
+
+116
+00:09:22,732 --> 00:09:25,576
+Speaker SPEAKER_00: And this guy has an arrow going in.
+
+117
+00:09:25,655 --> 00:09:29,841
+Speaker SPEAKER_00: So actually people perceive that as not quite square.
+
+118
+00:09:29,900 --> 00:09:32,303
+Speaker SPEAKER_00: And that helps to explain why it's so hard.
+
+119
+00:09:32,683 --> 00:09:33,664
+Speaker SPEAKER_00: It's an illusion involved.
+
+120
+00:09:34,505 --> 00:09:38,931
+Speaker SPEAKER_00: But nevertheless, you'd have thought they would be able to get this in less than 10 minutes.
+
+121
+00:09:40,008 --> 00:09:45,072
+Speaker SPEAKER_00: Now, I'm going to try and explain, apart from the illusion aspect, why it's so hard.
+
+122
+00:09:45,994 --> 00:09:51,399
+Speaker SPEAKER_00: The reason it's so hard is because when you see this object, you impose an intrinsic frame of reference on it.
+
+123
+00:09:52,279 --> 00:09:59,265
+Speaker SPEAKER_00: That is, it has three axes, one of which goes this way, one of which goes this way, and one of which goes that way.
+
+124
+00:09:59,846 --> 00:10:06,352
+Speaker SPEAKER_00: It's a rectangular coordinate frame you impose on this, and you perceive it relative to that rectangular coordinate frame.
+
+125
+00:10:06,534 --> 00:10:14,500
+Speaker SPEAKER_00: And you have two of them, and they're the same, so you want to align their coordinate frames, which is what you do with reflection.
+
+126
+00:10:15,241 --> 00:10:17,067
+Speaker SPEAKER_00: And that doesn't work.
+
+127
+00:10:18,820 --> 00:10:28,254
+Speaker SPEAKER_00: If you look at how this fits into a tetrahedron, then the rectangular coordinate frame of this piece is nothing like the coordinate frame you impose on the tetrahedron.
+
+128
+00:10:28,594 --> 00:10:39,070
+Speaker SPEAKER_00: For the whole tetrahedron, there's a vertical that goes down through the vertex, and then you have to break symmetry for this triangle somehow to get the other axes.
+
+129
+00:10:39,590 --> 00:10:42,735
+Speaker SPEAKER_00: But it just doesn't align with the coordinate frame of a tetrahedron.
+
+130
+00:10:43,524 --> 00:10:48,532
+Speaker SPEAKER_00: Now, there's a completely different psychological representation of a tetrahedron.
+
+131
+00:10:48,971 --> 00:10:52,756
+Speaker SPEAKER_00: That is, inside your brain, you can represent a tetrahedron in a different way.
+
+132
+00:10:55,000 --> 00:11:02,529
+Speaker SPEAKER_00: You can represent it as there's a horizontal edge at the top, there's a horizontal edge at right angles at the bottom,
+
+133
+00:11:03,421 --> 00:11:08,846
+Speaker SPEAKER_00: And you just put in all the lines that join those two edges, and they make a tetrahedron, right?
+
+134
+00:11:09,528 --> 00:11:11,669
+Speaker SPEAKER_00: It's the sum of all the lines joining those two edges.
+
+135
+00:11:12,250 --> 00:11:17,297
+Speaker SPEAKER_00: If you perceive a tetrahedron like that, it's a completely different psychological object.
+
+136
+00:11:17,557 --> 00:11:23,923
+Speaker SPEAKER_00: And it's very easy, if you perceive it like that, to see that you can cut it with a plane that makes a square cross-section.
+
+137
+00:11:24,565 --> 00:11:26,126
+Speaker SPEAKER_00: Because near the top, it's a rectangle one way.
+
+138
+00:11:26,147 --> 00:11:27,607
+Speaker SPEAKER_00: And near the bottom, it's a rectangle the other way.
+
+139
+00:11:27,668 --> 00:11:31,673
+Speaker SPEAKER_00: So there's some mathematical theorem that says in the middle, it better be a square.
+
+140
+00:11:34,100 --> 00:11:45,943
+Speaker SPEAKER_00: So the point of this long, long demo is that the way you see things depends on rectangular frames of reference that you impose on them.
+
+141
+00:11:45,964 --> 00:11:53,658
+Speaker SPEAKER_00: And ConvNets don't explain that at all, because ConvNets don't do that.
+
+142
+00:11:53,678 --> 00:11:54,100
+Speaker SPEAKER_00: OK.
+
+143
+00:12:04,136 --> 00:12:19,529
+Speaker SPEAKER_00: So what I'm going to do is take standard feedforward neural nets and change them in quite a few ways in order to try and get something that deals in a principled way with viewpoint.
+
+144
+00:12:21,350 --> 00:12:27,375
+Speaker SPEAKER_00: If you think about the current neural network technology we have, it's obviously not exactly like the brain.
+
+145
+00:12:27,917 --> 00:12:29,057
+Speaker SPEAKER_00: It's inspired by the brain.
+
+146
+00:12:30,058 --> 00:12:32,000
+Speaker SPEAKER_00: But the way the neurons work isn't just like the brain.
+
+147
+00:12:32,441 --> 00:12:33,741
+Speaker SPEAKER_00: And it was all just kind of made up.
+
+148
+00:12:35,283 --> 00:12:40,629
+Speaker SPEAKER_00: People who came to the field lately somehow think there's something magic about neural nets.
+
+149
+00:12:41,149 --> 00:12:42,811
+Speaker SPEAKER_00: We just made it up, OK?
+
+150
+00:12:42,831 --> 00:12:45,014
+Speaker SPEAKER_00: For 30 years, we used logistic units.
+
+151
+00:12:45,793 --> 00:12:50,479
+Speaker SPEAKER_00: And then after 30 years, we decided, hey, why not use rectified linear units?
+
+152
+00:12:50,458 --> 00:12:52,923
+Speaker SPEAKER_00: Unrectified linear units are much easier to optimize.
+
+153
+00:12:54,284 --> 00:12:55,866
+Speaker SPEAKER_00: Neither of them are exactly what neurons do.
+
+154
+00:12:56,508 --> 00:13:02,277
+Speaker SPEAKER_00: But the important thing to remember if you're new to neural nets is it's all just made up, right?
+
+155
+00:13:02,317 --> 00:13:06,543
+Speaker SPEAKER_00: It's just engineering and people try things that worked.
+
+156
+00:13:08,649 --> 00:13:30,642
+Speaker SPEAKER_00: What we've really discovered, if you ask what people have empirically discovered who've been doing neural nets, the thing they've really discovered that's a big surprise even to some of them is that if you take a system with a whole lot of parameters and you optimize it by stochastic gradient descent, that is, you give it a small subset of all the training cases.
+
+157
+00:13:31,567 --> 00:13:46,193
+Speaker SPEAKER_00: And you say, on that small subset, figure out how to change the parameters to get better answers, and then take a small step in that direction, or a related direction, and then do it again for another small set of examples.
+
+158
+00:13:46,634 --> 00:13:47,836
+Speaker SPEAKER_00: That works.
+
+159
+00:13:47,817 --> 00:13:50,178
+Speaker SPEAKER_00: It sort of doesn't have any right to work, but it really works.
+
+160
+00:13:50,298 --> 00:13:53,783
+Speaker SPEAKER_00: And actually, asymptotically, you can show it's as efficient as you could be.
+
+161
+00:13:55,283 --> 00:13:58,966
+Speaker SPEAKER_00: So even this dumb optimization algorithm is asymptotically efficient.
+
+162
+00:13:59,768 --> 00:14:05,714
+Speaker SPEAKER_00: So you're never going to beat it by a whole lot, not hugely, not kind of polynomially.
+
+163
+00:14:06,293 --> 00:14:10,498
+Speaker SPEAKER_00: And so that's what we've really discovered.
+
+164
+00:14:10,738 --> 00:14:15,562
+Speaker SPEAKER_00: And now the question is, what kinds of systems are we going to apply this stochastic gradient descent to?
+
+165
+00:14:16,740 --> 00:14:20,346
+Speaker SPEAKER_00: And currently, the systems we use have a lot of problems.
+
+166
+00:14:21,427 --> 00:14:26,475
+Speaker SPEAKER_00: So, here's one thing that's wrong with standard neurons.
+
+167
+00:14:27,498 --> 00:14:29,179
+Speaker SPEAKER_00: They can't tell if two inputs are the same.
+
+168
+00:14:30,182 --> 00:14:31,244
+Speaker SPEAKER_00: Okay?
+
+169
+00:14:31,264 --> 00:14:34,227
+Speaker SPEAKER_00: Our standard neuron is a linear filter followed by non-linearity.
+
+170
+00:14:35,309 --> 00:14:43,001
+Speaker SPEAKER_00: And you can't make a neuron that if I give it a one, one says yes, and if I give it a zero, zero says yes, and I give it a one, zero, or a zero, one says no.
+
+171
+00:14:43,538 --> 00:14:45,061
+Speaker SPEAKER_00: That's the XOR problem.
+
+172
+00:14:45,081 --> 00:14:51,071
+Speaker SPEAKER_00: And the standard solution to it is to say, well, let's put in a hidden layer that will separate out the cases and then recombine things.
+
+173
+00:14:51,952 --> 00:14:52,614
+Speaker SPEAKER_00: And that works.
+
+174
+00:14:52,634 --> 00:14:55,138
+Speaker SPEAKER_00: And that was, that's been accepted as the way you deal with this.
+
+175
+00:14:55,698 --> 00:14:57,062
+Speaker SPEAKER_00: But it's not the only way to deal with it.
+
+176
+00:14:57,722 --> 00:14:59,866
+Speaker SPEAKER_00: We could deal with it by having a different kind of neuron.
+
+177
+00:15:00,748 --> 00:15:01,068
+Speaker SPEAKER_00: Okay?
+
+178
+00:15:01,288 --> 00:15:03,572
+Speaker SPEAKER_00: Something that can recognize whether two things are the same.
+
+179
+00:15:05,135 --> 00:15:05,817
+Speaker SPEAKER_00: And notice
+
+180
+00:15:07,147 --> 00:15:13,554
+Speaker SPEAKER_00: That's got a very different flavor from the neurons we use at present.
+
+181
+00:15:13,934 --> 00:15:19,783
+Speaker SPEAKER_00: Because a neuron that can recognize whether two things are the same can do with covariance structure directly.
+
+182
+00:15:21,664 --> 00:15:30,596
+Speaker SPEAKER_00: The neurons that just do linear filters are always multiplying an activity vector in the layer below by a weight vector to see if they should be active.
+
+183
+00:15:31,136 --> 00:15:35,162
+Speaker SPEAKER_00: That's very different from looking at two activity vectors and seeing if they agree.
+
+184
+00:15:36,356 --> 00:15:40,000
+Speaker SPEAKER_00: And this talk's going to be about a system that looks at activity vectors to see if they agree.
+
+185
+00:15:41,282 --> 00:15:44,846
+Speaker SPEAKER_00: And that, as a sort of primitive operation, can tell whether two things are the same.
+
+186
+00:15:45,667 --> 00:15:46,847
+Speaker SPEAKER_00: That's one thing wrong with our neurons.
+
+187
+00:15:49,971 --> 00:15:54,856
+Speaker SPEAKER_00: They also have, if you're an engineer, they have surprisingly little structure.
+
+188
+00:15:55,277 --> 00:16:00,822
+Speaker SPEAKER_00: You've got neurons, you've got weights, you've got neurons, you've got layers, and you've got whole networks, and that's about it.
+
+189
+00:16:02,424 --> 00:16:05,048
+Speaker SPEAKER_00: You've got some architecture of how the layers are connected.
+
+190
+00:16:05,837 --> 00:16:12,947
+Speaker SPEAKER_00: I'm going to suggest we should actually have something between a layer and a neuron, which is a small group of neurons, which I'm going to call a capsule.
+
+191
+00:16:14,548 --> 00:16:29,807
+Speaker SPEAKER_00: And the idea of capsules is you're going to do a bunch of internal computation, and the capsule's going to have some neurons in it, and the activities of the neurons in a capsule are going to represent different dimensions of the same thing.
+
+192
+00:16:30,368 --> 00:16:34,932
+Speaker SPEAKER_00: So if you want to represent a multidimensional object, you'll have a little group of neurons
+
+193
+00:16:35,403 --> 00:16:42,389
+Speaker SPEAKER_00: If I want to be able to represent 10 degrees of freedom, I'll have 10 neurons in there that represent the values on the different dimensions.
+
+194
+00:16:42,409 --> 00:16:47,215
+Speaker SPEAKER_00: And the way we know that those 10 values go together as properties of the same thing is that they're in the same capsule.
+
+195
+00:16:48,576 --> 00:16:52,740
+Speaker SPEAKER_00: I can't just have a big layer of values, because then I don't know which values are what.
+
+196
+00:16:53,381 --> 00:17:02,270
+Speaker SPEAKER_00: I want to be able to represent several things at once, so I need to package the things, just like you do in a computer.
+
+197
+00:17:05,845 --> 00:17:19,652
+Speaker SPEAKER_00: So in the visual pathway, what a capsule is going to do is a capsule will learn to represent objects or object parts of a particular kind.
+
+198
+00:17:22,230 --> 00:17:28,406
+Speaker SPEAKER_00: It'll have associated with it a single logistic unit that says whether this object or object part is present.
+
+199
+00:17:29,409 --> 00:17:32,175
+Speaker SPEAKER_00: So it needs to decide whether the thing it represents is there or not.
+
+200
+00:17:32,877 --> 00:17:36,106
+Speaker SPEAKER_00: And almost all the time for almost all the things, they're not there.
+
+201
+00:17:36,708 --> 00:17:38,653
+Speaker SPEAKER_00: That's how vision is.
+
+202
+00:17:40,050 --> 00:17:42,796
+Speaker SPEAKER_00: And then in addition to that, it's going to have two other things.
+
+203
+00:17:43,417 --> 00:17:44,539
+Speaker SPEAKER_00: I'm only going to talk about one of them.
+
+204
+00:17:44,819 --> 00:17:49,990
+Speaker SPEAKER_00: It'll have something that represents the viewpoint that you have on this part.
+
+205
+00:17:50,530 --> 00:17:53,738
+Speaker SPEAKER_00: And as you change your viewpoint, those parameters will change.
+
+206
+00:17:54,660 --> 00:18:01,553
+Speaker SPEAKER_00: And in computer graphics, a standard way to represent viewpoints would be with a 4x4 matrix in 3D.
+
+207
+00:18:02,376 --> 00:18:08,230
+Speaker SPEAKER_00: So it'll have a little matrix associated with it, which says, what's the viewpoint?
+
+208
+00:18:08,592 --> 00:18:16,470
+Speaker SPEAKER_00: Which amounts to saying, what's the relation between the camera and the intrinsic frame of reference you've imposed on this part?
+
+209
+00:18:17,750 --> 00:18:20,292
+Speaker SPEAKER_00: Notice that you can't say what the viewpoint is.
+
+210
+00:18:20,373 --> 00:18:25,618
+Speaker SPEAKER_00: You can't put numbers into this matrix unless you have an intrinsic frame of reference.
+
+211
+00:18:25,638 --> 00:18:37,373
+Speaker SPEAKER_00: And if you put a different intrinsic frame of reference on the same thing, like turning a diamond into a square, then you'll get a different representation of the relation between that thing and the camera.
+
+212
+00:18:37,972 --> 00:18:41,917
+Speaker SPEAKER_00: The position will be the same, but the orientations in that case will be different.
+
+213
+00:18:43,957 --> 00:18:56,434
+Speaker SPEAKER_00: The fact that we always impose frames of reference suggests that we're using some way of representing the relationship between the camera and the object part using the fact that we've got this frame of reference embedded in the object.
+
+214
+00:18:58,357 --> 00:18:58,458
+Speaker SPEAKER_00: Okay.
+
+215
+00:19:02,223 --> 00:19:12,798
+Speaker SPEAKER_00: Now, once you go for this idea that you're going to have a little group of neurons, the different dimensions in the little group of neurons are going to be representing different properties of some object or object part.
+
+216
+00:19:13,453 --> 00:19:22,469
+Speaker SPEAKER_00: Then you have the problem, what happens if two instances of that kind of thing occur in the same part of the visual field?
+
+217
+00:19:24,491 --> 00:19:29,740
+Speaker SPEAKER_00: So one way to solve that is to make the capsules only respond to a very small region of the visual field.
+
+218
+00:19:30,402 --> 00:19:35,631
+Speaker SPEAKER_00: And so low down when they're representing simple things like edges, they're gonna have small receptor fields.
+
+219
+00:19:36,010 --> 00:19:40,018
+Speaker SPEAKER_00: But as you get higher up and you have a capsule responding to a face,
+
+220
+00:19:41,212 --> 00:19:46,259
+Speaker SPEAKER_00: You're going to get a serious problem if you have two faces in the same part of the receptor field.
+
+221
+00:19:46,279 --> 00:19:52,169
+Speaker SPEAKER_00: So if you take two transparent spaces and superimpose them, you'll have great difficulty seeing what's going on.
+
+222
+00:19:52,209 --> 00:20:02,984
+Speaker SPEAKER_00: And we're going to make a very strong representational assumption, which is that you only have, for each part of the visual field, you only have one capsule of each type.
+
+223
+00:20:04,113 --> 00:20:06,917
+Speaker SPEAKER_00: If it's representing low-level features, it's got a small area.
+
+224
+00:20:07,097 --> 00:20:11,085
+Speaker SPEAKER_00: If it's representing high-level features, it's got a big area it covers, but you're only allowed one of them.
+
+225
+00:20:11,705 --> 00:20:17,777
+Speaker SPEAKER_00: That's the price of being able to use activities of different neurons to represent where you are in different coordinates.
+
+226
+00:20:19,078 --> 00:20:26,172
+Speaker SPEAKER_00: You're binding it together by saying, these are different properties of the thing that's here, and there better only be one thing there.
+
+227
+00:20:26,674 --> 00:20:35,284
+Speaker SPEAKER_00: The consequence of that is that if you ever do get things of the same kind very close together, relative to the size of your fields, your system's going to get very confused.
+
+228
+00:20:36,164 --> 00:20:46,734
+Speaker SPEAKER_00: And there's a lot of evidence called crowding that in perception you do get very confused when you have things of the same kind close together and you can't put your fovea on one of them.
+
+229
+00:20:47,135 --> 00:20:51,980
+Speaker SPEAKER_00: So if in slightly peripheral vision you put two things of the same kind close together, you get all mixed up.
+
+230
+00:20:52,000 --> 00:20:52,760
+Speaker SPEAKER_00: They're very hard to see.
+
+231
+00:20:53,362 --> 00:20:54,403
+Speaker SPEAKER_00: Okay.
+
+232
+00:20:54,383 --> 00:21:02,134
+Speaker SPEAKER_00: So there's some psychological evidence that this apparently crazy assumption, that you only allow one thing of each kind at each place, may actually be true.
+
+233
+00:21:05,398 --> 00:21:07,803
+Speaker SPEAKER_00: Okay, now, how are my capsules gonna work?
+
+234
+00:21:08,344 --> 00:21:10,906
+Speaker SPEAKER_00: How are we gonna recognize objects by recognizing their parts?
+
+235
+00:21:12,229 --> 00:21:17,096
+Speaker SPEAKER_00: Well, the idea is, let's ignore the front end of the system to begin with.
+
+236
+00:21:17,116 --> 00:21:21,403
+Speaker SPEAKER_00: Let's suppose we've already got to low-level capsules, and I'm gonna say how you get to high-level capsules now.
+
+237
+00:21:22,582 --> 00:21:38,845
+Speaker SPEAKER_00: So the idea is that to detect whether an object's there, you're gonna get votes from smaller pieces saying what the pose of the object should be.
+
+238
+00:21:38,865 --> 00:21:40,386
+Speaker SPEAKER_00: When I say pose, I mean viewpoint.
+
+239
+00:21:40,426 --> 00:21:42,349
+Speaker SPEAKER_00: What viewpoint you have on this thing.
+
+240
+00:21:43,411 --> 00:21:46,715
+Speaker SPEAKER_00: And these votes are gonna come from smaller things that you have viewpoints of.
+
+241
+00:21:47,978 --> 00:21:56,269
+Speaker SPEAKER_00: And these votes, there'll be smaller things that aren't part of the object that may be making votes, and there'll be kind of irrelevant votes that are voting for crazy things.
+
+242
+00:21:57,009 --> 00:22:03,318
+Speaker SPEAKER_00: And then there'll be the actual parts of the object that make votes that agree.
+
+243
+00:22:03,378 --> 00:22:13,413
+Speaker SPEAKER_00: And when you see this agreement, agreement is crucial here, so agreement between activities, you get these little voting vectors, then you say there's something really there.
+
+244
+00:22:14,453 --> 00:22:17,377
+Speaker SPEAKER_00: So what you're doing is you're looking for a high dimensional coincidence.
+
+245
+00:22:17,981 --> 00:22:32,498
+Speaker SPEAKER_00: So if you think of all the votes as those blue dots and the red dots as votes that agree, you would then say forget the outliers, we've got a whole bunch of votes that agree on something and that's significant.
+
+246
+00:22:33,507 --> 00:22:41,458
+Speaker SPEAKER_00: So if you think about it, if you've got a cluttered or noisy environment, high dimensional agreement is a very good thing to use to filter stuff out.
+
+247
+00:22:42,259 --> 00:22:47,727
+Speaker SPEAKER_00: Like if you're listening to radio traffic, and you see in the radio traffic New York, and that occurs a few times.
+
+248
+00:22:48,769 --> 00:22:52,193
+Speaker SPEAKER_00: And you see in the radio traffic September, and that occurs a few times.
+
+249
+00:22:52,954 --> 00:22:58,603
+Speaker SPEAKER_00: And you see the 9th, and that occurs a few times.
+
+250
+00:22:59,932 --> 00:23:02,236
+Speaker SPEAKER_00: That should maybe alert you.
+
+251
+00:23:02,596 --> 00:23:12,170
+Speaker SPEAKER_00: But if you see New York, September the 9th, and that occurs in three different messages, you should think, you know, we've got a high dimensional coincidence now.
+
+252
+00:23:12,190 --> 00:23:15,595
+Speaker SPEAKER_00: We've got a coincidence of, you know, the month and the day and the place.
+
+253
+00:23:16,936 --> 00:23:21,502
+Speaker SPEAKER_00: And we've got several things, several votes for that.
+
+254
+00:23:21,482 --> 00:23:25,008
+Speaker SPEAKER_00: And because it's a high-dimensional space, that's not likely to happen by chance.
+
+255
+00:23:25,588 --> 00:23:26,990
+Speaker SPEAKER_00: And so now we've got very strong evidence.
+
+256
+00:23:27,951 --> 00:23:32,338
+Speaker SPEAKER_00: Much more than just the evidence for September or the 9th or New York.
+
+257
+00:23:32,358 --> 00:23:33,299
+Speaker SPEAKER_00: Okay.
+
+258
+00:23:34,161 --> 00:23:39,910
+Speaker SPEAKER_00: So the idea of CAPTURES is it's gonna work by doing high-dimensional coincidence filtering, which involves comparing predictions.
+
+259
+00:23:42,393 --> 00:23:45,798
+Speaker SPEAKER_00: And this is the sort of, this is the central slide of the talk.
+
+260
+00:23:46,519 --> 00:23:49,042
+Speaker SPEAKER_00: If you understand this slide, you've understood the main point of the talk.
+
+261
+00:23:51,132 --> 00:23:58,340
+Speaker SPEAKER_00: We're going to have one layer of capsules where we've already decided whether they're there or not, and if they are there, what their pose is.
+
+262
+00:23:59,281 --> 00:24:04,067
+Speaker SPEAKER_00: That is, what's the relationship between the camera and the intrinsic frame of reference imposed on this part.
+
+263
+00:24:05,388 --> 00:24:12,377
+Speaker SPEAKER_00: And let's suppose we have two parts, a mouth and a nose, and we know their relationship to the camera.
+
+264
+00:24:13,660 --> 00:24:15,721
+Speaker SPEAKER_00: And let's suppose a face is just a rigid object.
+
+265
+00:24:17,238 --> 00:24:29,053
+Speaker SPEAKER_00: then if you know the relationship of the mouth to the camera, and you know the relationship of the mouth to the face, you can predict the relationship of the face to the camera.
+
+266
+00:24:30,173 --> 00:24:31,536
+Speaker SPEAKER_00: And that's just a matrix multiply.
+
+267
+00:24:31,915 --> 00:24:36,041
+Speaker SPEAKER_00: You have a bunch of numbers that represent the pose of the mouth.
+
+268
+00:24:36,602 --> 00:24:38,845
+Speaker SPEAKER_00: You multiply them by a weight matrix.
+
+269
+00:24:38,865 --> 00:24:40,426
+Speaker SPEAKER_00: So these are activities.
+
+270
+00:24:40,626 --> 00:24:46,795
+Speaker SPEAKER_00: And as you change the camera position or move the mouth around, all those activities change.
+
+271
+00:24:47,214 --> 00:24:48,616
+Speaker SPEAKER_00: There's nothing invariant about them.
+
+272
+00:24:49,116 --> 00:24:50,278
+Speaker SPEAKER_00: They're highly variant.
+
+273
+00:24:54,763 --> 00:25:02,933
+Speaker SPEAKER_00: But the relationship between the mouth and the face is something that's completely invariant, that doesn't depend on viewpoint.
+
+274
+00:25:08,520 --> 00:25:10,042
+Speaker SPEAKER_00: Okay.
+
+275
+00:25:10,359 --> 00:25:12,804
+Speaker SPEAKER_00: Oh, the microphone had gone off.
+
+276
+00:25:13,084 --> 00:25:14,786
+Speaker SPEAKER_00: I can't hear it, but.
+
+277
+00:25:14,806 --> 00:25:16,127
+Speaker SPEAKER_00: Sorry, someone should have said, thank you.
+
+278
+00:25:17,691 --> 00:25:17,931
+Speaker SPEAKER_00: Sorry?
+
+279
+00:25:19,933 --> 00:25:21,036
+Speaker SPEAKER_00: Oh, okay.
+
+280
+00:25:21,056 --> 00:25:21,635
+Speaker SPEAKER_00: It's louder now.
+
+281
+00:25:22,998 --> 00:25:25,622
+Speaker SPEAKER_00: Okay, so you'll believe what I say more.
+
+282
+00:25:29,807 --> 00:25:35,777
+Speaker SPEAKER_00: Okay, so the relationship between the mouth and the face does not change as you change your viewpoint.
+
+283
+00:25:36,414 --> 00:25:42,257
+Speaker SPEAKER_00: So if you want to get invariant knowledge about objects into a system, into a neural net,
+
+284
+00:25:42,962 --> 00:25:46,987
+Speaker SPEAKER_00: The place to get the invariant knowledge is into the relationship between parts and wholes.
+
+285
+00:25:47,667 --> 00:25:51,051
+Speaker SPEAKER_00: That's what's invariant, at least for rigid objects.
+
+286
+00:25:51,672 --> 00:25:57,898
+Speaker SPEAKER_00: What's variant is where the pieces and the whole object are and what orientation they're in.
+
+287
+00:25:58,519 --> 00:26:00,622
+Speaker SPEAKER_00: You don't want to try and make that be invariant.
+
+288
+00:26:01,202 --> 00:26:07,890
+Speaker SPEAKER_00: Of course, the final name of the object, or that little P, the probability that this part is there,
+
+289
+00:26:07,869 --> 00:26:11,416
+Speaker SPEAKER_00: That you want to be invariant across some reasonable range.
+
+290
+00:26:11,436 --> 00:26:13,320
+Speaker SPEAKER_00: So that is something that's going to be invariant.
+
+291
+00:26:13,801 --> 00:26:16,969
+Speaker SPEAKER_00: But you're also getting all this stuff that's equivariant.
+
+292
+00:26:16,989 --> 00:26:20,214
+Speaker SPEAKER_00: As you change the camera or change the object, all this stuff varies.
+
+293
+00:26:20,236 --> 00:26:21,458
+Speaker SPEAKER_00: But it all varies together.
+
+294
+00:26:22,653 --> 00:26:30,144
+Speaker SPEAKER_00: So what you'd like is that the pose of the mouth times the relationship between the mouth and the face predicts the pose of the face.
+
+295
+00:26:31,227 --> 00:26:32,228
+Speaker SPEAKER_00: The same with the nose.
+
+296
+00:26:32,709 --> 00:26:39,480
+Speaker SPEAKER_00: And if those two predictions agree, and there's all sorts of issues about how well do they need to agree and so on, if they agree, you believe there's a face there.
+
+297
+00:26:40,355 --> 00:26:44,962
+Speaker SPEAKER_00: So really what you'd like to see is several predictions, and you'd like to see them agreeing tightly.
+
+298
+00:26:45,644 --> 00:26:46,625
+Speaker SPEAKER_00: And you're going to do a trade-off.
+
+299
+00:26:46,685 --> 00:26:48,669
+Speaker SPEAKER_00: If there's a few that agree really well, that's good.
+
+300
+00:26:49,069 --> 00:26:51,453
+Speaker SPEAKER_00: If there's a lot that agree not so well, that's also good.
+
+301
+00:26:52,315 --> 00:26:55,299
+Speaker SPEAKER_00: And that's how we're going to try and recognize holes from their parts.
+
+302
+00:26:56,261 --> 00:26:58,045
+Speaker SPEAKER_00: And of course, we're not going to hand-wire this stuff.
+
+303
+00:26:58,065 --> 00:27:01,991
+Speaker SPEAKER_00: We're going to hope the system can just learn all of it by doing stochastic gradient descent.
+
+304
+00:27:02,913 --> 00:27:05,738
+Speaker SPEAKER_00: But we're going to wire up a system in which it should be possible to learn that.
+
+305
+00:27:11,776 --> 00:27:21,509
+Speaker SPEAKER_00: So the point here is that as viewpoint changes, all of these poses change, but the relationship between the pose of the face and the pose of the mouth doesn't change, that's fixed.
+
+306
+00:27:21,809 --> 00:27:23,291
+Speaker SPEAKER_00: That's where the invariant knowledge is gonna be.
+
+307
+00:27:23,531 --> 00:27:24,394
+Speaker SPEAKER_00: And that's in the weights.
+
+308
+00:27:30,761 --> 00:27:35,528
+Speaker SPEAKER_00: So, what motivated all this is how do you recognize things from your viewpoints?
+
+309
+00:27:36,509 --> 00:27:38,692
+Speaker SPEAKER_00: And one approach is to have a lot of training data.
+
+310
+00:27:39,334 --> 00:27:41,277
+Speaker SPEAKER_00: That's the sledgehammer approach.
+
+311
+00:27:42,640 --> 00:27:57,807
+Speaker SPEAKER_00: And a better approach is to say, look, if you take images of the same rigid shape and you change viewpoint, the things being imaged jump to different pixels.
+
+312
+00:27:59,209 --> 00:28:02,454
+Speaker SPEAKER_00: And that's a big mess for machine learning if you're going to do machine learning on the pixels.
+
+313
+00:28:03,615 --> 00:28:07,563
+Speaker SPEAKER_00: And that jump, if you look at it in pixel space, is a big mess.
+
+314
+00:28:08,263 --> 00:28:19,083
+Speaker SPEAKER_00: That is, if I take an object and I image it from one viewpoint, and then I change my viewpoint and image it from a different viewpoint, I can't just average those two images to get an image of the object from the intermediate viewpoint.
+
+315
+00:28:19,563 --> 00:28:20,305
+Speaker SPEAKER_00: It's non-linear.
+
+316
+00:28:20,525 --> 00:28:24,612
+Speaker SPEAKER_00: If I average those two images, I get sort of two ghost images that are separate.
+
+317
+00:28:27,105 --> 00:28:37,401
+Speaker SPEAKER_00: What we'd like is a space in which things are linear, and you get that linear space by transforming to the space of identified features with coordinates.
+
+318
+00:28:37,421 --> 00:28:46,173
+Speaker SPEAKER_00: So if I want to blend two people's faces, like for example, Michael Cohen and John Dean, I might want to blend those.
+
+319
+00:28:48,257 --> 00:28:56,808
+Speaker SPEAKER_00: I wouldn't try blending the images, I'd try recognizing the relevant pieces, and then blending those coordinates, and then that'll work.
+
+320
+00:28:56,788 --> 00:28:57,530
+Speaker SPEAKER_00: Okay.
+
+321
+00:28:57,550 --> 00:28:59,914
+Speaker SPEAKER_00: So, here's a piece of logic.
+
+322
+00:29:03,122 --> 00:29:05,707
+Speaker SPEAKER_00: Graphics programs have no problem dealing with viewpoint.
+
+323
+00:29:06,228 --> 00:29:13,663
+Speaker SPEAKER_00: If a graphics guy is showing you an image and you say, show it to me from a different viewpoint, he won't say, oh, well, I didn't train from that viewpoint, you can't really expect me to do that.
+
+324
+00:29:14,183 --> 00:29:15,928
+Speaker SPEAKER_00: He'll just show it to you from a different viewpoint.
+
+325
+00:29:17,410 --> 00:29:21,253
+Speaker SPEAKER_00: And we have no problem recognizing things from new viewpoints, pretty much.
+
+326
+00:29:22,214 --> 00:29:27,479
+Speaker SPEAKER_00: And therefore, by infallible logic, we have graphic programs in our head.
+
+327
+00:29:28,480 --> 00:29:30,702
+Speaker SPEAKER_00: Okay.
+
+328
+00:29:30,722 --> 00:29:33,105
+Speaker SPEAKER_00: That's the best logic I'm gonna use today.
+
+329
+00:29:40,832 --> 00:29:47,198
+Speaker SPEAKER_00: So the point is, if you ask what does viewpoint do to images, in the pixel domain, it really messes them up.
+
+330
+00:29:48,358 --> 00:30:02,772
+Speaker SPEAKER_00: But if you can get to coordinates where you represent the relation between the camera and a part of an object, in that domain, the viewpoint does very simple things to the coordinate representation.
+
+331
+00:30:03,766 --> 00:30:04,767
+Speaker SPEAKER_00: Everything's linear.
+
+332
+00:30:07,651 --> 00:30:10,755
+Speaker SPEAKER_00: Perspective's too complicated for me, so I'm going to assume orthographic projection.
+
+333
+00:30:11,214 --> 00:30:16,481
+Speaker SPEAKER_00: Assuming that, everything's nice and linear, and you can make perspective linear if you do some work.
+
+334
+00:30:16,582 --> 00:30:21,428
+Speaker SPEAKER_00: Everything's nice and linear, and we're crazy not to be using that linear structure.
+
+335
+00:30:21,989 --> 00:30:23,631
+Speaker SPEAKER_00: It's simple structure.
+
+336
+00:30:23,611 --> 00:30:26,115
+Speaker SPEAKER_00: that completely deals with viewpoint.
+
+337
+00:30:26,134 --> 00:30:36,032
+Speaker SPEAKER_00: It doesn't deal with other things like deformations, non-rigid deformations, but viewpoint, which is the main source of variation, is completely dealt with in this linear way by going to those coordinates.
+
+338
+00:30:37,315 --> 00:30:38,396
+Speaker SPEAKER_00: So that's what we ought to be doing.
+
+339
+00:30:44,553 --> 00:30:51,846
+Speaker SPEAKER_00: So now let's talk about, once we've decided to go to coordinates, how we're going to do segmentation.
+
+340
+00:30:52,507 --> 00:30:57,454
+Speaker SPEAKER_00: Because if you find a bunch of parts, you might find a part that's, for example, a circle.
+
+341
+00:30:58,517 --> 00:31:08,433
+Speaker SPEAKER_00: And that circle could be the left eye of a face or the right eye of a face, or it could be the front wheel of a car or the back wheel of a car.
+
+342
+00:31:08,548 --> 00:31:17,277
+Speaker SPEAKER_00: You don't know for sure what it is and so you're going to have to make a bunch of votes about what it might be and then look for coincidence to decide on what it is.
+
+343
+00:31:19,416 --> 00:31:25,703
+Speaker SPEAKER_00: We're gonna assume that for every part you find, it belongs to at most one whole.
+
+344
+00:31:26,404 --> 00:31:33,053
+Speaker SPEAKER_00: It might be an orphan, but if it belongs to a whole, it's at most one of those.
+
+345
+00:31:33,993 --> 00:31:47,549
+Speaker SPEAKER_00: So what a part has to do is it has to look to see, it has to vote for various wholes, and then it has to look to see whether its vote appeared inside a cluster of other votes, or whether its vote was an outlier.
+
+346
+00:31:48,661 --> 00:31:50,442
+Speaker SPEAKER_00: And initially, it won't really know.
+
+347
+00:31:50,462 --> 00:31:51,183
+Speaker SPEAKER_00: You've got this circle.
+
+348
+00:31:51,204 --> 00:31:53,387
+Speaker SPEAKER_00: It doesn't know whether it's part of a face or part of a car.
+
+349
+00:31:54,148 --> 00:31:57,113
+Speaker SPEAKER_00: So it makes us, it scatters lots of votes over all possibilities.
+
+350
+00:31:58,134 --> 00:32:02,820
+Speaker SPEAKER_00: Then it needs to look to see whether those votes agreed with votes coming from other places.
+
+351
+00:32:02,881 --> 00:32:07,547
+Speaker SPEAKER_00: If they agreed, it says, okay, I need to focus my votes there.
+
+352
+00:32:08,589 --> 00:32:21,317
+Speaker SPEAKER_00: So we're going to have to have an iterative process that does segmentation by, initially you have these rather vague votes, or these votes that vote for a proposed for each thing, but aren't very confident.
+
+353
+00:32:22,022 --> 00:32:25,146
+Speaker SPEAKER_00: and each part will spread its votes over many things.
+
+354
+00:32:26,208 --> 00:32:35,519
+Speaker SPEAKER_00: And then you'll get some top-down, which will say, please, from these high-level capsules, it'll say, please send more of your vote to me, because you agree with my cluster.
+
+355
+00:32:36,220 --> 00:32:39,002
+Speaker SPEAKER_00: Or please send less of your vote to me, because you're an outlier.
+
+356
+00:32:39,703 --> 00:32:41,125
+Speaker SPEAKER_00: And we can do a few iterations of that.
+
+357
+00:32:41,165 --> 00:32:42,346
+Speaker SPEAKER_00: We actually do three iterations.
+
+358
+00:32:42,968 --> 00:32:51,979
+Speaker SPEAKER_00: And the system will quickly settle down to sending the vote from a part to a capsule that's receiving other votes that agree with it.
+
+359
+00:32:52,988 --> 00:32:54,671
+Speaker SPEAKER_00: And it settles down surprisingly fast.
+
+360
+00:32:56,773 --> 00:32:57,714
+Speaker SPEAKER_00: So here's the picture.
+
+361
+00:33:00,700 --> 00:33:04,065
+Speaker SPEAKER_00: For each part, we have what we call a rooting softmax.
+
+362
+00:33:04,424 --> 00:33:10,013
+Speaker SPEAKER_00: That is, think of it in terms of, with what probability should I belong to each of these high-level capsules?
+
+363
+00:33:11,055 --> 00:33:15,080
+Speaker SPEAKER_00: And the sum of those probabilities should be one, assuming you're not an orphan.
+
+364
+00:33:18,465 --> 00:33:20,970
+Speaker SPEAKER_00: So initially, the probabilities will all be small.
+
+365
+00:33:23,144 --> 00:33:38,857
+Speaker SPEAKER_00: And for the particular part we're looking at in this slide, it might send a vote to capsule K that agrees with a cluster of other votes that come to capsule K, and a vote to capsule J that's an outlier.
+
+366
+00:33:41,587 --> 00:33:59,250
+Speaker SPEAKER_00: And the reason you can be an outlier for one capsule and an inlier for the other capsule is because when you send your vote, you multiply your pose by the part-whole relationship between the part and the whole, and that's a different part-whole relationship for these two capsules.
+
+367
+00:33:59,990 --> 00:34:08,001
+Speaker SPEAKER_00: So the two higher level capsules have different views of this part, because they see the part filtered through different part-whole relationships.
+
+368
+00:34:08,672 --> 00:34:22,608
+Speaker SPEAKER_00: So a bunch of parts that are seen as all being agreeing by capsule K might be seen as disagreeing by capsule J because they're filtered through different part or relationships.
+
+369
+00:34:22,949 --> 00:34:25,873
+Speaker SPEAKER_00: And that's why this converges much faster than standard clustering algorithms.
+
+370
+00:34:26,534 --> 00:34:31,800
+Speaker SPEAKER_00: You can think of the high level capsules as like the cluster means, as like the clusters.
+
+371
+00:34:32,481 --> 00:34:36,385
+Speaker SPEAKER_00: You can think of the lower level capsules you've discovered already as like the data.
+
+372
+00:34:37,023 --> 00:34:41,369
+Speaker SPEAKER_00: And you're trying to explain this data in terms of these clusters.
+
+373
+00:34:42,130 --> 00:34:46,317
+Speaker SPEAKER_00: And you're actually going to run the clustering algorithm during perception, which sounds crazy.
+
+374
+00:34:47,418 --> 00:34:55,871
+Speaker SPEAKER_00: But it will settle very fast, because each of the high-level clusters has a different view of the data, because it sees it filtered through different partial relationships.
+
+375
+00:34:56,733 --> 00:34:59,336
+Speaker SPEAKER_00: And that's why it converges in three iterations instead of, like, 50.
+
+376
+00:35:01,460 --> 00:35:01,679
+Speaker SPEAKER_00: OK.
+
+377
+00:35:04,327 --> 00:35:14,521
+Speaker SPEAKER_00: So the objective function for doing the routing is to try to get the active capsules in one layer to explain the capsules in the layer below.
+
+378
+00:35:16,003 --> 00:35:31,025
+Speaker SPEAKER_00: And what we're doing is actually a version of the EM algorithm for fitting a mixture of Gaussians to data, but it converges much faster because each component of the mixture has a different view of the data, and so that breaks symmetry very strongly.
+
+379
+00:35:31,242 --> 00:35:32,967
+Speaker SPEAKER_00: I'm not going to go into the details of this.
+
+380
+00:35:33,086 --> 00:35:37,440
+Speaker SPEAKER_00: All the details are in a published paper that was in ICLR in 2018.
+
+381
+00:35:37,480 --> 00:35:40,829
+Speaker SPEAKER_00: I'll give you a reference at the end.
+
+382
+00:35:46,902 --> 00:35:49,945
+Speaker SPEAKER_00: And this is mainly for a machine learning audience.
+
+383
+00:35:52,007 --> 00:36:03,563
+Speaker SPEAKER_00: But the important thing is that there's an inner loop that happens during perception when you're finding these clusters and sending information back saying, please send me more or please send me less, and it'll settle down to nice clusters.
+
+384
+00:36:04,304 --> 00:36:08,889
+Speaker SPEAKER_00: And that's what's doing the segmentation and finding the holes to combine these parts into.
+
+385
+00:36:08,929 --> 00:36:11,592
+Speaker SPEAKER_00: It's solving the assignment problem of assigning holes to parts.
+
+386
+00:36:13,429 --> 00:36:14,652
+Speaker SPEAKER_00: That's not the learning algorithm.
+
+387
+00:36:14,672 --> 00:36:18,382
+Speaker SPEAKER_00: That's just an inner loop thing that's deciding which parts get combined into which holes.
+
+388
+00:36:19,947 --> 00:36:28,992
+Speaker SPEAKER_00: Then in the outer loop, there's a learning algorithm that's trying to make the clusters tighter or trying to make them less tight.
+
+389
+00:36:31,603 --> 00:36:45,697
+Speaker SPEAKER_00: It's important that sometimes the learning algorithm is trying to make them less tight, and it's going to try and make them less tight because if you find that thing, then it's part of some larger thing which you don't want to see in that image because you're told it's not there.
+
+390
+00:36:46,487 --> 00:36:48,751
+Speaker SPEAKER_00: And so we're going to do discriminative learning for all of this.
+
+391
+00:36:48,811 --> 00:36:57,664
+Speaker SPEAKER_00: So the high level decision about what the object is, is going to send back information saying, oh, you're claiming it's a cat, but actually it's a dog.
+
+392
+00:36:58,085 --> 00:37:00,288
+Speaker SPEAKER_00: So please don't see this cat's ear here.
+
+393
+00:37:01,250 --> 00:37:10,664
+Speaker SPEAKER_00: And you'll get information coming back that says, make those votes for the cat's ear be less well clustered, and make the votes for the dog's ear be better clustered.
+
+394
+00:37:11,565 --> 00:37:13,507
+Speaker SPEAKER_00: Okay.
+
+395
+00:37:14,804 --> 00:37:21,996
+Speaker SPEAKER_00: Similarly, the relationship between the parts and the holes, we're doing discriminative learning for that.
+
+396
+00:37:22,538 --> 00:37:32,998
+Speaker SPEAKER_00: If we did unsupervised learning in this version of CAPTURES, it wouldn't work because what would happen is it would say, boy, I know how to get really good clusters.
+
+397
+00:37:33,181 --> 00:37:36,429
+Speaker SPEAKER_00: I can just make everything vote for zero.
+
+398
+00:37:37,110 --> 00:37:48,119
+Speaker SPEAKER_00: And if everything votes for zero, so we use transformation matrices to just sort of throw it away and vote for zero, then you get really tight clusters, but you wouldn't really explain anything, okay?
+
+399
+00:37:48,139 --> 00:37:49,603
+Speaker SPEAKER_00: It'll cause collapse.
+
+400
+00:37:49,583 --> 00:37:58,215
+Speaker SPEAKER_00: And that's the problem you get with unsupervised learning, as soon as you try and minimize squared distances in a domain that you completely control.
+
+401
+00:37:58,916 --> 00:38:04,606
+Speaker SPEAKER_00: If you minimize squared distances when you reconstruct the input, that's fine, because you don't control the data.
+
+402
+00:38:04,927 --> 00:38:08,992
+Speaker SPEAKER_00: There's real data, and then you're trying to make predictions that fit with it.
+
+403
+00:38:09,309 --> 00:38:16,228
+Speaker SPEAKER_00: But if you've got two different things making predictions, you want them to fit, that's really easy if you train it just to fit.
+
+404
+00:38:16,628 --> 00:38:18,795
+Speaker SPEAKER_00: You've got to train it discriminatively so it doesn't collapse.
+
+405
+00:38:19,737 --> 00:38:21,260
+Speaker SPEAKER_00: Or you've got to have a better objective function.
+
+406
+00:38:22,726 --> 00:38:31,659
+Speaker SPEAKER_00: Okay, so what we do is we do these three iterations to do the assignment after we've established the lower layer of capsules.
+
+407
+00:38:32,460 --> 00:38:35,764
+Speaker SPEAKER_00: Then after we've done the three iterations we've now established the next layer of capsules.
+
+408
+00:38:36,385 --> 00:38:40,532
+Speaker SPEAKER_00: Then that's all finished and then we go to the layer above that and so on.
+
+409
+00:38:40,512 --> 00:38:45,378
+Speaker SPEAKER_00: And we're doing it greedily in the sense that we establish the parts.
+
+410
+00:38:45,398 --> 00:38:47,782
+Speaker SPEAKER_00: Once we've established the parts, we don't change the poses of the parts.
+
+411
+00:38:47,802 --> 00:38:51,367
+Speaker SPEAKER_00: We're not going to use top-down information to revise our opinion about where the parts are.
+
+412
+00:38:52,429 --> 00:38:55,753
+Speaker SPEAKER_00: And so we're doing it sort of greedily a layer at a time.
+
+413
+00:38:56,534 --> 00:39:00,039
+Speaker SPEAKER_00: But for each new layer, there's three iterations of routing.
+
+414
+00:39:00,019 --> 00:39:11,115
+Speaker SPEAKER_00: And then to do the gradient descent, we just unroll that routing, which you can do in something like TensorFlow and just back propagate through everything to change everything so as to get the right answer.
+
+415
+00:39:15,963 --> 00:39:16,583
+Speaker SPEAKER_00: I just said that.
+
+416
+00:39:18,967 --> 00:39:20,731
+Speaker SPEAKER_00: So here's a little proof of concept.
+
+417
+00:39:21,572 --> 00:39:25,157
+Speaker SPEAKER_00: We thought that once we got this working, we could then scale it up to something bigger.
+
+418
+00:39:25,978 --> 00:39:29,182
+Speaker SPEAKER_00: And I'll come to why we haven't done that yet later.
+
+419
+00:39:29,887 --> 00:39:46,467
+Speaker SPEAKER_00: So it's a task created by Yann LeCun, which is you take little plastic toys that you buy in a toy store, and for each object class, you have five examples that are training ones.
+
+420
+00:39:47,027 --> 00:39:48,748
+Speaker SPEAKER_00: So five little plastic cars.
+
+421
+00:39:49,389 --> 00:39:50,331
+Speaker SPEAKER_00: They're the training cars.
+
+422
+00:39:51,291 --> 00:39:53,974
+Speaker SPEAKER_00: You have five different ones that are gonna be the test cars.
+
+423
+00:39:54,014 --> 00:39:56,637
+Speaker SPEAKER_00: They're different cars, different physical objects.
+
+424
+00:39:56,938 --> 00:40:11,956
+Speaker SPEAKER_00: You paint everything green, and you now put on a turntable, and you have lots of lights, and you get to see it from many viewpoints, both in azimuth, I think that's azimuth, and in elevation, with many different lighting conditions.
+
+425
+00:40:12,217 --> 00:40:22,389
+Speaker SPEAKER_00: And so you make yourself a big data set of these five instances of each of the five kind of objects, with many viewpoints.
+
+426
+00:40:22,369 --> 00:40:27,960
+Speaker SPEAKER_00: But then what you have to do at test time is recognize a new instance of that kind of object.
+
+427
+00:40:27,981 --> 00:40:33,010
+Speaker SPEAKER_00: So you might be trained on elephants and crocodiles and you might have to recognize a hippopotamus.
+
+428
+00:40:34,672 --> 00:40:38,099
+Speaker SPEAKER_00: So here's some examples of what the images look like when they've been down sampled a bit.
+
+429
+00:40:38,923 --> 00:40:42,027
+Speaker SPEAKER_00: You get images from many different viewpoints.
+
+430
+00:40:43,269 --> 00:40:50,519
+Speaker SPEAKER_00: There's cars and trucks and animals and airplanes and people.
+
+431
+00:40:51,661 --> 00:40:56,768
+Speaker SPEAKER_00: This was done in the United States, so the concept of a person includes that they're holding a weapon.
+
+432
+00:40:57,090 --> 00:41:01,835
+Speaker SPEAKER_00: Every single instance of a person is holding a weapon.
+
+433
+00:41:03,217 --> 00:41:04,820
+Speaker SPEAKER_00: That's how you tell the difference between people and animals.
+
+434
+00:41:07,585 --> 00:41:07,885
+Speaker SPEAKER_00: Okay.
+
+435
+00:41:12,050 --> 00:41:28,994
+Speaker SPEAKER_00: So now, I talked about how you deal with geometric relations, but actually if you think about computer graphics, you take an object from the pose of the whole object, you figure out the poses of the parts of the object, you go down a hierarchy like this until you get to little triangles, and then you have to render it.
+
+436
+00:41:30,016 --> 00:41:35,643
+Speaker SPEAKER_00: When you get to little triangles that are the surface of an object, describe the surface of an object, up till then it's geometry.
+
+437
+00:41:36,670 --> 00:41:39,193
+Speaker SPEAKER_00: And there's nothing to do with light or reflectance.
+
+438
+00:41:39,213 --> 00:41:41,556
+Speaker SPEAKER_00: But then, light comes into it.
+
+439
+00:41:42,117 --> 00:41:43,418
+Speaker SPEAKER_00: You're not really interested in light.
+
+440
+00:41:43,458 --> 00:41:44,639
+Speaker SPEAKER_00: It's just a way of seeing things.
+
+441
+00:41:44,679 --> 00:41:45,661
+Speaker SPEAKER_00: You're interested in what's there.
+
+442
+00:41:46,443 --> 00:41:47,204
+Speaker SPEAKER_00: Unless you're an artist.
+
+443
+00:41:47,925 --> 00:41:49,806
+Speaker SPEAKER_00: And then you render it.
+
+444
+00:41:51,228 --> 00:41:53,170
+Speaker SPEAKER_00: And we need to invert the rendering process.
+
+445
+00:41:53,391 --> 00:41:57,998
+Speaker SPEAKER_00: And that's very different from inverting the geometric aspects of it, which is what I've been talking about.
+
+446
+00:41:58,518 --> 00:42:00,501
+Speaker SPEAKER_00: So we need a bottom level that de-renders.
+
+447
+00:42:01,425 --> 00:42:08,896
+Speaker SPEAKER_00: And the way we're going to do that is we're going to take an image, we're going to apply a bunch of filters, we're going to have a stack.
+
+448
+00:42:08,956 --> 00:42:14,885
+Speaker SPEAKER_00: At each point in the image, we're going to have a stack of 128 different 5x5 filters.
+
+449
+00:42:15,786 --> 00:42:22,978
+Speaker SPEAKER_00: Then at each point in the image, we're going to take that big vector of activities and we're going to convert that into
+
+450
+00:42:24,291 --> 00:42:29,559
+Speaker SPEAKER_00: That vector activity is centered at that point, but also the nearby activities of this stack of 128 filters.
+
+451
+00:42:30,559 --> 00:42:36,286
+Speaker SPEAKER_00: And then centered at that point, we're going to have 32 different types of primary capsule.
+
+452
+00:42:36,547 --> 00:42:45,117
+Speaker SPEAKER_00: And for each of these primary capsules, we're going to, from these filter outputs, we're going to decide whether it's there or not, or with what probability it's there.
+
+453
+00:42:45,554 --> 00:42:46,896
+Speaker SPEAKER_00: and what its pose is.
+
+454
+00:42:47,597 --> 00:42:51,083
+Speaker SPEAKER_00: So a little 4x4 matrix that describes its pose.
+
+455
+00:42:51,103 --> 00:42:53,628
+Speaker SPEAKER_00: So this is a very primitive way of doing de-rendering.
+
+456
+00:42:54,007 --> 00:42:59,356
+Speaker SPEAKER_00: We're working on much better ways of doing it by actually taking a renderer and backpropagating through it to train a de-renderer.
+
+457
+00:43:01,840 --> 00:43:03,284
+Speaker SPEAKER_00: But for now we're just going to use that.
+
+458
+00:43:04,365 --> 00:43:05,106
+Speaker SPEAKER_00: It works well enough.
+
+459
+00:43:05,927 --> 00:43:11,797
+Speaker SPEAKER_00: And then once we've got the primary capsules, we then have some layers of capsules.
+
+460
+00:43:12,588 --> 00:43:16,461
+Speaker SPEAKER_00: But the whole thing is going to be convolutional.
+
+461
+00:43:16,481 --> 00:43:24,048
+Speaker SPEAKER_00: That is, each capsule will have pose parameters that say the precise position and orientation and scale and so on.
+
+462
+00:43:25,784 --> 00:43:31,175
+Speaker SPEAKER_00: But the catch will be replicated across space so that you can see two eyes at once.
+
+463
+00:43:32,958 --> 00:43:37,027
+Speaker SPEAKER_00: Two eyes on top of each other you'd be confused by, but two eyes that are separate, you can see both of those at once.
+
+464
+00:43:37,989 --> 00:43:43,539
+Speaker SPEAKER_00: So that we make this whole thing convolutional so that it deals with translation just by replication.
+
+465
+00:43:43,519 --> 00:43:45,302
+Speaker SPEAKER_00: That's with coarse translation.
+
+466
+00:43:45,623 --> 00:43:49,568
+Speaker SPEAKER_00: The fine scale translation within a receptive field is dealt with in the pose matrix.
+
+467
+00:43:50,389 --> 00:43:54,916
+Speaker SPEAKER_00: So it's got a completely different way of dealing with fine changes in position and dealing with coarse changes.
+
+468
+00:43:55,157 --> 00:43:57,961
+Speaker SPEAKER_00: It's a bit like if you take the mobile cell phone.
+
+469
+00:43:59,583 --> 00:44:02,068
+Speaker SPEAKER_00: You move around and the same cell tower deals with you.
+
+470
+00:44:02,248 --> 00:44:03,128
+Speaker SPEAKER_00: That's like a capsule.
+
+471
+00:44:03,409 --> 00:44:06,193
+Speaker SPEAKER_00: Then after a while, you get handed off to another cell tower.
+
+472
+00:44:06,875 --> 00:44:09,679
+Speaker SPEAKER_00: That's when you get represented by a different capsule.
+
+473
+00:44:13,050 --> 00:44:21,360
+Speaker SPEAKER_00: So after we got the primary capsules, we have some more lesser capsules, and then at the top we have capsules that represent individual classes.
+
+474
+00:44:23,043 --> 00:44:28,010
+Speaker SPEAKER_00: And so there'll be five of those for animal, person, truck, plane, and whatever the other thing was.
+
+475
+00:44:30,092 --> 00:44:33,195
+Speaker SPEAKER_00: Car, yeah.
+
+476
+00:44:33,215 --> 00:44:37,842
+Speaker SPEAKER_00: This is a well-studied benchmark, and so you can look at how well various systems do.
+
+477
+00:44:39,884 --> 00:44:40,425
+Speaker SPEAKER_00: So,
+
+478
+00:44:42,177 --> 00:44:47,364
+Speaker SPEAKER_00: A standard CNN, without a lot of work going into it, does 5.2% error on the test data.
+
+479
+00:44:48,246 --> 00:44:50,969
+Speaker SPEAKER_00: The best CNN in the literature that we could find does 2.56%.
+
+480
+00:44:51,931 --> 00:44:59,742
+Speaker SPEAKER_00: That was done by Sirisan working with Schmidt Hooper, and they did lots and lots of pre-processing to get the best performance they possibly could.
+
+481
+00:45:01,063 --> 00:45:07,273
+Speaker SPEAKER_00: If you take a previous version of capsules that we published in NIPS, that got 3.6%.
+
+482
+00:45:07,507 --> 00:45:14,677
+Speaker SPEAKER_00: And then with these capsules that have these little pose matrices and use this clustering algorithm, we get 1.8% errors.
+
+483
+00:45:15,818 --> 00:45:17,922
+Speaker SPEAKER_00: Now this is ideal for what we're doing.
+
+484
+00:45:17,942 --> 00:45:20,445
+Speaker SPEAKER_00: So this data set is kind of ideal for testing this idea.
+
+485
+00:45:21,688 --> 00:45:24,311
+Speaker SPEAKER_00: We'd better be able to beat the opposition on this ideal data.
+
+486
+00:45:24,831 --> 00:45:29,077
+Speaker SPEAKER_00: If you take a cluttered background and add that, that confuses our system.
+
+487
+00:45:29,539 --> 00:45:32,623
+Speaker SPEAKER_00: We still do slightly better than the best CNN, but not a lot better.
+
+488
+00:45:34,166 --> 00:45:36,349
+Speaker SPEAKER_00: If you look at extrapolation to new viewpoints,
+
+489
+00:45:37,983 --> 00:45:46,434
+Speaker SPEAKER_00: then what you can do is you can train on a limited range of azimuths and then test on azimuths outside that range.
+
+490
+00:45:47,615 --> 00:45:53,063
+Speaker SPEAKER_00: Or you can train on a limited range of elevations and then test on elevations outside that range.
+
+491
+00:45:54,686 --> 00:45:58,931
+Speaker SPEAKER_00: Now, because capsules do better than CNNs, they're gonna win anyway.
+
+492
+00:45:59,231 --> 00:46:06,201
+Speaker SPEAKER_00: So what we do is we take a CNN, we sort of train it to completion on the limited range of data,
+
+493
+00:46:06,568 --> 00:46:11,538
+Speaker SPEAKER_00: And then we take our capsule system and we train it until it gets the same performance as the CNN.
+
+494
+00:46:12,960 --> 00:46:20,393
+Speaker SPEAKER_00: So when we had a limited range of azimuths, the CNN trained on the training data got 3.7% error.
+
+495
+00:46:24,762 --> 00:46:26,264
+Speaker SPEAKER_00: Sorry, yeah.
+
+496
+00:46:26,784 --> 00:46:29,891
+Speaker SPEAKER_00: It's trained on the familiar viewpoints.
+
+497
+00:46:30,251 --> 00:46:31,574
+Speaker SPEAKER_00: You get 3.7% error.
+
+498
+00:46:31,894 --> 00:46:33,538
+Speaker SPEAKER_00: We train the capsules to get the same.
+
+499
+00:46:34,259 --> 00:46:37,987
+Speaker SPEAKER_00: And then we test on the extrapolated viewpoints.
+
+500
+00:46:38,007 --> 00:46:44,860
+Speaker SPEAKER_00: And the capsules generalize a lot better than the CNN, showing that it's not just the capsules work better, it's that they generalize better.
+
+501
+00:46:45,440 --> 00:46:46,643
+Speaker SPEAKER_00: And we do the same for elevation.
+
+502
+00:46:47,043 --> 00:46:48,507
+Speaker SPEAKER_00: And again, they generalize a lot better.
+
+503
+00:46:49,920 --> 00:46:54,965
+Speaker SPEAKER_00: It's not as much as I'd like, but it's definitely much better.
+
+504
+00:46:55,905 --> 00:47:03,452
+Speaker SPEAKER_00: Now you might ask, if you're an old-fashioned computer vision person, you might ask, why isn't this just a Hough transform?
+
+505
+00:47:03,472 --> 00:47:07,195
+Speaker SPEAKER_00: Because in computer vision, they have Hough transforms for finding parts that are related, right?
+
+506
+00:47:08,356 --> 00:47:14,563
+Speaker SPEAKER_00: And, well, it is just a Hough transform, but it's what you might call a non-parametric Hough transform.
+
+507
+00:47:14,583 --> 00:47:17,885
+Speaker SPEAKER_00: So in Hough transforms, you would make a big array
+
+508
+00:47:18,440 --> 00:47:31,835
+Speaker SPEAKER_00: and a part would vote in this array, and if it's a degenerate part, like if it doesn't have all degrees of freedom, it will put a big streak of votes in this array, and then you look for the intersections in the array.
+
+509
+00:47:32,496 --> 00:47:39,503
+Speaker SPEAKER_00: The problem is, if you want to have six degrees of freedom, you'd need a 60 array, and that would be hopeless.
+
+510
+00:47:39,523 --> 00:47:41,967
+Speaker SPEAKER_00: So it's normally only done for two degrees of freedom, or sometimes three.
+
+511
+00:47:42,739 --> 00:47:53,157
+Speaker SPEAKER_00: So what we're doing is we're saying, suppose you could learn parts that have all the degrees of freedom of viewpoint.
+
+512
+00:47:53,177 --> 00:48:00,610
+Speaker SPEAKER_00: Then if this is a fully specified part, I can now make a point vote in the space for the whole.
+
+513
+00:48:01,090 --> 00:48:05,018
+Speaker SPEAKER_00: I don't need to have an array where I scatter lots of votes.
+
+514
+00:48:05,038 --> 00:48:07,262
+Speaker SPEAKER_00: I make an unambiguous point vote.
+
+515
+00:48:08,373 --> 00:48:18,286
+Speaker SPEAKER_00: And now instead of having this big array for the viewpoint on the whole thing, we just have these votes that come from the parts we happen to have, and we look for clusters among those votes.
+
+516
+00:48:19,067 --> 00:48:23,972
+Speaker SPEAKER_00: And that's how we get over the problem of having to tile a six-dimensional space.
+
+517
+00:48:23,992 --> 00:48:29,519
+Speaker SPEAKER_00: Of course, we do this business of looking for votes in the six-dimensional space.
+
+518
+00:48:30,731 --> 00:48:33,235
+Speaker SPEAKER_00: and we convolutionally tile that over the image.
+
+519
+00:48:33,315 --> 00:48:37,842
+Speaker SPEAKER_00: So we're doing it over the image, but for large things, it's coarse tiling.
+
+520
+00:48:39,704 --> 00:48:41,847
+Speaker SPEAKER_00: So that's how we're kind of dealing with the basic problem.
+
+521
+00:48:42,429 --> 00:48:44,492
+Speaker SPEAKER_00: We're dealing with the basic problem of Hough transforms in two ways.
+
+522
+00:48:45,313 --> 00:48:48,757
+Speaker SPEAKER_00: One is by not gridding the space, just using convolution for
+
+523
+00:48:48,737 --> 00:48:57,115
+Speaker SPEAKER_00: the two degrees of freedom, and the other is by making sure that our parts have enough degrees of freedom so they can make a point vote.
+
+524
+00:48:58,119 --> 00:49:01,726
+Speaker SPEAKER_00: And it's very hard to do that by hand unless you're David Lowe.
+
+525
+00:49:02,106 --> 00:49:06,476
+Speaker SPEAKER_00: David Lowe, that was the point of SIFT features to allow you to do Hough transforms.
+
+526
+00:49:06,456 --> 00:49:09,920
+Speaker SPEAKER_00: But that got forgotten when people learned about machine learning.
+
+527
+00:49:09,960 --> 00:49:13,905
+Speaker SPEAKER_00: They threw away the point of SIF features and just did dumb machine learning on bags of SIF features.
+
+528
+00:49:14,646 --> 00:49:23,637
+Speaker SPEAKER_00: Machine learning was kind of a disaster for vision, because it threw away all that good old fashioned geometric vision, which is what we need to deal with viewpoint properly.
+
+529
+00:49:23,657 --> 00:49:24,318
+Speaker SPEAKER_00: I enjoy saying that.
+
+530
+00:49:26,960 --> 00:49:29,123
+Speaker SPEAKER_00: We tried to scale this up to big image sets.
+
+531
+00:49:30,266 --> 00:49:34,855
+Speaker SPEAKER_00: And there's just a kind of hardware problem, hardware and software problem.
+
+532
+00:49:34,875 --> 00:49:39,541
+Speaker SPEAKER_00: All the hardware and software designed for neural nets is designed to optimize things for big matrix multiplies.
+
+533
+00:49:40,643 --> 00:49:43,849
+Speaker SPEAKER_00: And when we try and scale it up, we just run out of memory right away.
+
+534
+00:49:44,751 --> 00:49:48,056
+Speaker SPEAKER_00: And it's because this software is keeping too many copies of things.
+
+535
+00:49:48,878 --> 00:49:56,190
+Speaker SPEAKER_00: We need to use the software that does automatic differentiation, because if you try and back propagate through these unrolled loops and compute it all by hand, it's a pain.
+
+536
+00:49:56,170 --> 00:50:00,664
+Speaker SPEAKER_00: So at present there's just a technical difficulty in making it scale up.
+
+537
+00:50:01,688 --> 00:50:05,320
+Speaker SPEAKER_00: But there's also some much more serious problems than those practical ones.
+
+538
+00:50:07,762 --> 00:50:13,208
+Speaker SPEAKER_00: So there's all sorts of things wrong with what I just told you.
+
+539
+00:50:14,009 --> 00:50:15,731
+Speaker SPEAKER_00: And so I'm going to go over some of the main things wrong with it.
+
+540
+00:50:16,992 --> 00:50:19,195
+Speaker SPEAKER_00: One I've already mentioned.
+
+541
+00:50:19,594 --> 00:50:26,983
+Speaker SPEAKER_00: You'd like to do unsupervised learning to learn all this structure and just have a little bit of supervised signal when you get labeled examples to sort of help it out.
+
+542
+00:50:27,842 --> 00:50:37,213
+Speaker SPEAKER_00: But if you try and do this using unsupervised learning, the transformation matrices all collapse and all the votes just predict the origin and they all say, hey, I agree really nicely.
+
+543
+00:50:38,425 --> 00:50:48,576
+Speaker SPEAKER_00: and that's because you're trying to optimize something in a space that you control, as opposed to a space where the data's fixed.
+
+544
+00:50:49,217 --> 00:50:59,188
+Speaker SPEAKER_00: Underspecified poses, like a circle, if you have a circle, you don't know what orientation it's in, and so you can't predict the orientation of the whole.
+
+545
+00:51:00,588 --> 00:51:05,074
+Speaker SPEAKER_00: It's easy from a whole to predict the part,
+
+546
+00:51:05,306 --> 00:51:09,878
+Speaker SPEAKER_00: but the part might be degenerate, like if you imagine a constellation of stars.
+
+547
+00:51:10,579 --> 00:51:18,760
+Speaker SPEAKER_00: From the constellation you can predict where the stars are, but from an individual star you can't predict much about the constellation because you don't know the orientation or anything.
+
+548
+00:51:19,751 --> 00:51:37,474
+Speaker SPEAKER_00: And the third major problem is actually Sarah Sabor, who made this all work, had to put a lot of work into tuning the whole system, that is the learning rates of various things, because to say that a cluster's there, you need to
+
+549
+00:51:39,108 --> 00:51:42,351
+Speaker SPEAKER_00: have found a cluster that has multiple points that are close together.
+
+550
+00:51:42,833 --> 00:51:45,715
+Speaker SPEAKER_00: But obviously, you're doing a trade-off between how many points and how close.
+
+551
+00:51:46,697 --> 00:51:48,960
+Speaker SPEAKER_00: And that trade-off is going to vary during the learning.
+
+552
+00:51:48,980 --> 00:51:54,567
+Speaker SPEAKER_00: At the beginning of learning, the cluster is going to be very poor, because you haven't learned the transformation matrices properly yet.
+
+553
+00:51:55,347 --> 00:51:56,889
+Speaker SPEAKER_00: And you can't just say there's nothing there.
+
+554
+00:51:56,929 --> 00:52:00,454
+Speaker SPEAKER_00: You have to allow it to say the cluster might be there, even though it's a very full cluster.
+
+555
+00:52:00,855 --> 00:52:03,217
+Speaker SPEAKER_00: As learning goes by, you need to let all that change.
+
+556
+00:52:03,538 --> 00:52:07,663
+Speaker SPEAKER_00: So it gets much more demanding about how tight the cluster has to be for it to be there.
+
+557
+00:52:07,643 --> 00:52:10,385
+Speaker SPEAKER_00: And just getting all that to work was painful.
+
+558
+00:52:11,728 --> 00:52:13,170
+Speaker SPEAKER_00: I mean, like, months painful.
+
+559
+00:52:17,855 --> 00:52:21,259
+Speaker SPEAKER_00: I want to just show you, before I finish, it doing segmentation.
+
+560
+00:52:21,840 --> 00:52:24,503
+Speaker SPEAKER_00: But this is an earlier version we had of capsules.
+
+561
+00:52:24,523 --> 00:52:29,268
+Speaker SPEAKER_00: But I just want to show you it can do quite impressive segmentation using these same general ideas.
+
+562
+00:52:29,288 --> 00:52:32,592
+Speaker SPEAKER_00: But this was a somewhat earlier version that works in a slightly different way.
+
+563
+00:52:33,833 --> 00:52:35,675
+Speaker SPEAKER_00: So these are just on some NIPS digits.
+
+564
+00:52:36,719 --> 00:52:46,556
+Speaker SPEAKER_00: And what you're seeing in white is what the computer sees, and it's made by superimposing two digits, but with a small offset.
+
+565
+00:52:47,679 --> 00:52:50,965
+Speaker SPEAKER_00: And what you're seeing in color underneath
+
+566
+00:52:51,771 --> 00:52:58,659
+Speaker SPEAKER_00: is the best two digits found by the capsule system is top two beds.
+
+567
+00:52:59,318 --> 00:53:03,704
+Speaker SPEAKER_00: And I draw one in red and the other in green, so the overlap will be yellow.
+
+568
+00:53:04,704 --> 00:53:12,472
+Speaker SPEAKER_00: And so you get to see that it did actually manage to see the two digits.
+
+569
+00:53:12,492 --> 00:53:17,998
+Speaker SPEAKER_00: And in cases like, for example, the... Did I really get it right?
+
+570
+00:53:19,074 --> 00:53:27,873
+Speaker SPEAKER_00: Yes, in cases like the one in the bottom row, second from the right, if you look at that, it's quite hard to tell what's going on.
+
+571
+00:53:28,855 --> 00:53:31,360
+Speaker SPEAKER_00: And it correctly perceives that as a nine and a five.
+
+572
+00:53:32,242 --> 00:53:32,983
+Speaker SPEAKER_00: That's what it really is.
+
+573
+00:53:33,644 --> 00:53:37,893
+Speaker SPEAKER_00: Now, of course, there's cases when it gets it wrong that I'm not showing you.
+
+574
+00:53:37,873 --> 00:53:42,559
+Speaker SPEAKER_00: But it gets about half the number of errors that the best combinate could do.
+
+575
+00:53:42,579 --> 00:53:46,163
+Speaker SPEAKER_00: And I should say, the systems are trained on overlapping digits.
+
+576
+00:53:46,684 --> 00:53:52,590
+Speaker SPEAKER_00: So it's not that it's, it'd be much better if it's trained on single digits, and the first time you showed an overlapping pair, it says, hey, there's two digits there.
+
+577
+00:53:53,150 --> 00:53:55,833
+Speaker SPEAKER_00: But these are actually trained to see two overlapping digits.
+
+578
+00:53:56,634 --> 00:53:58,396
+Speaker SPEAKER_00: If you don't do that, a combinate can't do it at all.
+
+579
+00:53:59,958 --> 00:54:01,840
+Speaker SPEAKER_00: And now I'm done.
+
+580
+00:54:04,114 --> 00:54:06,018
+Speaker SPEAKER_00: So three published papers on capsules.
+
+581
+00:54:06,038 --> 00:54:09,443
+Speaker SPEAKER_00: There's an early one called Transforming Autoencoders in 2011.
+
+582
+00:54:10,664 --> 00:54:14,771
+Speaker SPEAKER_00: And then there's one in NIPS that does that segmentation of digits that I showed you.
+
+583
+00:54:15,311 --> 00:54:18,556
+Speaker SPEAKER_00: And then the thing I talked about today is in ICLR in 2018.
+
+584
+00:54:21,221 --> 00:54:22,663
+Speaker SPEAKER_00: That's matrix capsules.
+
+585
+00:54:22,643 --> 00:54:29,141
+Speaker SPEAKER_00: And there's a new version of capsules we're working on that I hope to talk about today, but it doesn't work yet, and I don't want to talk about something until it works.
+
+586
+00:54:29,884 --> 00:54:32,751
+Speaker SPEAKER_00: And we're hoping that will be in NIPS 2019.
+
+587
+00:54:32,771 --> 00:54:36,061
+Speaker SPEAKER_00: Okay, I'm done.
+

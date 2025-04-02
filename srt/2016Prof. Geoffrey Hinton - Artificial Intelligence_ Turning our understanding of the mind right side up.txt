@@ -1,0 +1,2928 @@
+1
+00:00:00,031 --> 00:00:01,552
+Speaker SPEAKER_00: My name is Alan Bernstein.
+
+2
+00:00:02,535 --> 00:00:12,228
+Speaker SPEAKER_00: I'm the president and CEO of CIFAR, and it is my distinct pleasure to welcome all of you to CIFAR's annual dinner this evening.
+
+3
+00:00:13,109 --> 00:00:23,304
+Speaker SPEAKER_00: I'd like to take a moment to recognize an important individual who's here with us this evening, the Honourable Elizabeth Dousdwell, Lieutenant Governor of Ontario.
+
+4
+00:00:28,667 --> 00:00:40,487
+Speaker SPEAKER_00: Her Honor is a true friend of science, who throughout her career has strongly advocated for the importance of the links between science and science policy and public policy.
+
+5
+00:00:40,948 --> 00:00:43,652
+Speaker SPEAKER_00: And thank you again for joining us, Your Honor.
+
+6
+00:00:44,234 --> 00:00:47,799
+Speaker SPEAKER_00: It's always a pleasure to have you with us, and you're always welcome.
+
+7
+00:00:48,481 --> 00:00:50,143
+Speaker SPEAKER_00: You consider it an open invitation.
+
+8
+00:00:50,444 --> 00:00:53,950
+Speaker SPEAKER_00: Just let me know, and you're always welcome at a CFAR event.
+
+9
+00:00:53,929 --> 00:01:01,057
+Speaker SPEAKER_00: I'd also like to take a moment to recognize the members of our Board of Directors who are here with us this evening.
+
+10
+00:01:01,777 --> 00:01:03,899
+Speaker SPEAKER_00: The CFAR Board Chair, Barb Stamets.
+
+11
+00:01:04,480 --> 00:01:06,623
+Speaker SPEAKER_00: I don't know where all of you are, so you'll have to forgive me.
+
+12
+00:01:08,584 --> 00:01:10,867
+Speaker SPEAKER_00: There you are.
+
+13
+00:01:10,887 --> 00:01:12,388
+Speaker SPEAKER_00: Vice Chair, Bruce Mitchell.
+
+14
+00:01:15,430 --> 00:01:19,194
+Speaker SPEAKER_00: To my left, Past Chair, David Dodge.
+
+15
+00:01:19,359 --> 00:01:19,921
+Speaker SPEAKER_00: Where's David?
+
+16
+00:01:20,141 --> 00:01:20,561
+Speaker SPEAKER_00: There he is.
+
+17
+00:01:22,944 --> 00:01:24,367
+Speaker SPEAKER_00: And Director Stephen Lister.
+
+18
+00:01:24,387 --> 00:01:25,507
+Speaker SPEAKER_00: I saw Stephen sitting down.
+
+19
+00:01:25,647 --> 00:01:30,194
+Speaker SPEAKER_00: And Pat Meredith over there.
+
+20
+00:01:30,213 --> 00:01:36,722
+Speaker SPEAKER_00: CIFAR's board, I'm so privileged as a CEO to have a board like the one that I have.
+
+21
+00:01:36,822 --> 00:01:48,337
+Speaker SPEAKER_00: They give their time and their wisdom and their advice and support so generously to CIFAR to help ensure that CIFAR delivers on our mission, which is
+
+22
+00:01:50,409 --> 00:01:58,180
+Speaker SPEAKER_00: I think I've just ruined the slide, Advancer Jeff, sorry, to make a strategic and transformative contribution to research.
+
+23
+00:01:59,903 --> 00:02:04,049
+Speaker SPEAKER_00: We live in a time when organizations like CIFAR are needed, I think, more than ever.
+
+24
+00:02:04,531 --> 00:02:17,969
+Speaker SPEAKER_00: The complexity and the magnitude of today's both opportunities and challenges, from climate change, the refugee crisis that we know all too well these days, terrorism, social inclusivity, economic development,
+
+25
+00:02:17,949 --> 00:02:36,701
+Speaker SPEAKER_00: child and brain development, the health of our oceans, the molecular basis of disease, all of those things and lots more demand the collaborative efforts of the world's very best researchers, regardless of country, the institution they belong to, the faculty they're in, the department they're in,
+
+26
+00:02:36,681 --> 00:02:39,247
+Speaker SPEAKER_00: or the discipline that they subscribe to.
+
+27
+00:02:39,266 --> 00:02:43,955
+Speaker SPEAKER_00: And that's precisely what CIFAR does for the past 30 years.
+
+28
+00:02:44,477 --> 00:02:53,955
+Speaker SPEAKER_00: We have been connecting Canada and the world's best minds in unique global research networks to really discuss deeply questions of importance to the world.
+
+29
+00:02:54,516 --> 00:02:57,643
+Speaker SPEAKER_00: I don't think there's another organization on the planet
+
+30
+00:02:57,622 --> 00:02:59,604
+Speaker SPEAKER_00: like CIFAR, we've looked pretty hard.
+
+31
+00:03:00,385 --> 00:03:22,229
+Speaker SPEAKER_00: We give our fellows and advisors, who are close to 400 of them now, based in 115 institutions in 18 countries, the time and freedom to explore entirely new perspectives, strike up new collaborations that they never thought they would be striking up, to take entirely new paths of discovery.
+
+32
+00:03:22,210 --> 00:03:33,694
+Speaker SPEAKER_00: Our work puts Canada at the very center of some of the world's most important discussions, discussions that ultimately will lead to transformative knowledge that will change the world.
+
+33
+00:03:34,777 --> 00:03:41,652
+Speaker SPEAKER_00: CFAR creates these unique conditions that make it possible for researchers from widely divergent fields
+
+34
+00:03:41,633 --> 00:03:51,063
+Speaker SPEAKER_00: to share their individual perspectives and knowledge, to bear on important problems, and to share entirely new ways of understanding an issue.
+
+35
+00:03:52,025 --> 00:04:04,300
+Speaker SPEAKER_00: And I can tell you, because we're now going through starting four new programs, how interesting it is, how exciting it is to see the chemistry between people who, not only have they not met before, but would never meet.
+
+36
+00:04:05,308 --> 00:04:09,816
+Speaker SPEAKER_00: and their disciplines would never intersect had it not been for being in a CFAR program.
+
+37
+00:04:10,197 --> 00:04:12,520
+Speaker SPEAKER_00: And they initially go through a period of doubt.
+
+38
+00:04:12,961 --> 00:04:13,762
+Speaker SPEAKER_00: Why am I here?
+
+39
+00:04:14,502 --> 00:04:15,324
+Speaker SPEAKER_00: Who is this person?
+
+40
+00:04:15,405 --> 00:04:16,766
+Speaker SPEAKER_00: What are they talking about?
+
+41
+00:04:16,807 --> 00:04:18,108
+Speaker SPEAKER_00: I don't understand this language.
+
+42
+00:04:18,689 --> 00:04:21,394
+Speaker SPEAKER_00: And gradually, over a period of meetings,
+
+43
+00:04:21,374 --> 00:04:22,295
+Speaker SPEAKER_00: They get it.
+
+44
+00:04:22,355 --> 00:04:23,216
+Speaker SPEAKER_00: The light comes on.
+
+45
+00:04:24,358 --> 00:04:31,709
+Speaker SPEAKER_00: And it's just a magical thing to see that happen and to see the new perspectives of knowledge that comes with that light coming on.
+
+46
+00:04:32,490 --> 00:04:39,781
+Speaker SPEAKER_00: So tonight, we wanted to give you a bit of a window into those sorts of interdisciplinary conversations that CIFAR makes possible.
+
+47
+00:04:40,442 --> 00:04:43,627
+Speaker SPEAKER_00: As you know, we had originally planned to have a double header.
+
+48
+00:04:44,108 --> 00:04:49,997
+Speaker SPEAKER_00: I last heard the Jays were winning, by the way, with Daniel Dennett and Jeff Hinton.
+
+49
+00:04:49,976 --> 00:04:54,826
+Speaker SPEAKER_00: Due to an illness, Dan is unable to be with us today, sadly.
+
+50
+00:04:55,408 --> 00:04:57,891
+Speaker SPEAKER_00: He's informed us that he'll not be possible to be here.
+
+51
+00:04:59,235 --> 00:05:00,898
+Speaker SPEAKER_00: Jeff is not a poor substitute.
+
+52
+00:05:01,418 --> 00:05:07,891
+Speaker SPEAKER_00: Jeff Hinton is without doubt the world's leading expert on artificial intelligence and deep learning.
+
+53
+00:05:08,593 --> 00:05:10,516
+Speaker SPEAKER_00: He's a CIFAR Distinguished Fellow.
+
+54
+00:05:10,497 --> 00:05:19,951
+Speaker SPEAKER_00: and who will help us understand why his work and his colleagues in deep learning has become one of the hottest areas in science and in society today.
+
+55
+00:05:19,971 --> 00:05:21,454
+Speaker SPEAKER_00: And I'll say more about Jeff later on.
+
+56
+00:05:22,836 --> 00:05:33,432
+Speaker SPEAKER_00: Jeff will be joined by our CBC radio host, Nora Young, who will help us begin to understand how our world is about to change by this new science.
+
+57
+00:05:33,413 --> 00:05:38,920
+Speaker SPEAKER_00: Tonight, I have a number of people I'd like to thank for making CIFAR what it is today.
+
+58
+00:05:38,940 --> 00:05:42,206
+Speaker SPEAKER_00: To begin with, I'd like to acknowledge Pekka Senervo.
+
+59
+00:05:43,908 --> 00:06:02,694
+Speaker SPEAKER_00: Pekka served seven years as Senior Vice President at CIFAR, and earlier this year, he informed us that he had decided to leave CIFAR and return full-time to his teaching and research in high-energy physics and particle physics at the University of Toronto.
+
+60
+00:06:03,586 --> 00:06:06,089
+Speaker SPEAKER_00: Pekka is a world-renowned particle physicist.
+
+61
+00:06:06,531 --> 00:06:14,223
+Speaker SPEAKER_00: He was a member of the team that discovered the Higgs boson, the discovery of which led to the Nobel Prize last year in physics.
+
+62
+00:06:15,324 --> 00:06:28,665
+Speaker SPEAKER_00: And he brought that international research reputation to CIFAR and has been a passionate, a truly passionate advocate for research and a respected colleague to all of us here at CIFAR.
+
+63
+00:06:28,644 --> 00:06:30,747
+Speaker SPEAKER_00: He's guided our research programs.
+
+64
+00:06:31,187 --> 00:06:35,314
+Speaker SPEAKER_00: He's insisted on rigorous review of each of our programs every five years.
+
+65
+00:06:35,774 --> 00:06:38,519
+Speaker SPEAKER_00: He's helped evolve the Global Academy for Young People.
+
+66
+00:06:38,959 --> 00:06:42,363
+Speaker SPEAKER_00: And he's initiated our very first efforts in knowledge mobilization.
+
+67
+00:06:42,884 --> 00:06:56,322
+Speaker SPEAKER_00: And I personally am immensely grateful to Pekka for first holding my hand when I first got to CIFAR and for his leadership in helping to realize CIFAR 2.0, our refreshed vision for CIFAR.
+
+68
+00:06:56,302 --> 00:07:05,399
+Speaker SPEAKER_00: Pekka played the lead role in our first ever global call for ideas for research proposals to create new programs here at CIFAR.
+
+69
+00:07:06,021 --> 00:07:16,360
+Speaker SPEAKER_00: And without question, truly without question, CIFAR would not be where it is today without Pekka's leadership, his hard work, his passion for research, and his passion for CIFAR.
+
+70
+00:07:16,720 --> 00:07:19,064
+Speaker SPEAKER_00: Pekka, we're going to miss you, and we miss you well.
+
+71
+00:07:19,305 --> 00:07:20,387
+Speaker SPEAKER_00: We wish you well.
+
+72
+00:07:20,367 --> 00:07:21,874
+Speaker SPEAKER_00: I think Pat's here.
+
+73
+00:07:21,894 --> 00:07:22,557
+Speaker SPEAKER_00: I haven't seen her.
+
+74
+00:07:22,576 --> 00:07:23,360
+Speaker SPEAKER_00: There she is.
+
+75
+00:07:23,401 --> 00:07:24,766
+Speaker SPEAKER_00: Pat, it's really nice to have you here.
+
+76
+00:07:25,189 --> 00:07:29,769
+Speaker SPEAKER_00: You'll have your husband back maybe a little bit more over the coming months and years.
+
+77
+00:07:40,870 --> 00:07:51,108
+Speaker SPEAKER_00: Later this evening, we're also going to pay tribute to Richard Ivey, who has been on CFAR's board for 20 years, and who has been truly a mighty champion for CFAR.
+
+78
+00:07:51,550 --> 00:07:55,197
+Speaker SPEAKER_00: We'll hear more about, and I think from, Richard later on in the evening.
+
+79
+00:07:55,937 --> 00:07:58,002
+Speaker SPEAKER_00: On our screens this evening,
+
+80
+00:07:57,982 --> 00:08:04,956
+Speaker SPEAKER_00: you should be seeing, the names of public and private supporters and our partners who have given generously to CFAR.
+
+81
+00:08:05,478 --> 00:08:09,625
+Speaker SPEAKER_00: Many of you are here with us tonight and I can't thank you enough for your support.
+
+82
+00:08:10,307 --> 00:08:11,990
+Speaker SPEAKER_00: Research costs money.
+
+83
+00:08:12,122 --> 00:08:30,007
+Speaker SPEAKER_00: no secret, but if you think of the global issues that I listed before, just think of climate change or mental illness, the cost of the work that we do is but actually a very, very small drop in a very, very large bucket of the true cost of those issues to society.
+
+84
+00:08:31,007 --> 00:08:41,842
+Speaker SPEAKER_00: And I want to thank particularly those here with us tonight who have so generously contributed half a million dollars or more to help CFAR's major new initiatives.
+
+85
+00:08:41,822 --> 00:08:57,000
+Speaker SPEAKER_00: the Asrielli Foundation, the Government of Ontario, Richard W. and Donna Ivey, Richard M. Ivey, Jerry and Geraldine Heffernan, Michael and Sonia Kerner, and the RBC Foundation.
+
+86
+00:08:57,782 --> 00:09:08,235
+Speaker SPEAKER_00: All of you and the organizations that you represent, as well as many people who, of course, have given much less than that, are absolutely critical to do the work that we do.
+
+87
+00:09:08,215 --> 00:09:12,121
+Speaker SPEAKER_00: We've also added new research partners for the very first time in our history.
+
+88
+00:09:12,602 --> 00:09:19,836
+Speaker SPEAKER_00: Brain Canada, Genome Canada, Genome British Columbia, and for the very first time again, partners from outside of Canada.
+
+89
+00:09:20,517 --> 00:09:20,937
+Speaker SPEAKER_00: The U.S.
+
+90
+00:09:21,119 --> 00:09:22,922
+Speaker SPEAKER_00: Gordon and Betty Moore Foundation.
+
+91
+00:09:23,503 --> 00:09:26,307
+Speaker SPEAKER_00: Gordon Moore being the inventor of the computer chip.
+
+92
+00:09:26,288 --> 00:09:38,153
+Speaker SPEAKER_00: supports our program in quantum materials and microbial biodiversity, and INRIA, the French agency helping to support Jeff's program in neurocomputation and adaptive perception.
+
+93
+00:09:38,874 --> 00:09:42,542
+Speaker SPEAKER_00: With all of your support, I think we're making tremendous progress.
+
+94
+00:09:42,522 --> 00:09:49,614
+Speaker SPEAKER_00: After a very successful global call for new research ideas, we've added four really exciting new programs.
+
+95
+00:09:50,054 --> 00:09:51,857
+Speaker SPEAKER_00: Bio-inspired solar energy.
+
+96
+00:09:52,239 --> 00:09:55,043
+Speaker SPEAKER_00: Many of you will have heard Ted Sargent talk about that last year.
+
+97
+00:09:55,605 --> 00:09:56,966
+Speaker SPEAKER_00: Brain, mind, and consciousness.
+
+98
+00:09:57,368 --> 00:09:58,929
+Speaker SPEAKER_00: The molecular architecture of life.
+
+99
+00:09:59,431 --> 00:10:00,894
+Speaker SPEAKER_00: And humans in the microbiome.
+
+100
+00:10:01,394 --> 00:10:05,120
+Speaker SPEAKER_00: Bringing the total number of our programs up to 14.
+
+101
+00:10:05,100 --> 00:10:09,388
+Speaker SPEAKER_00: I'm very pleased with that progress, but we don't intend to stop there.
+
+102
+00:10:10,028 --> 00:10:17,441
+Speaker SPEAKER_00: The world faces many important questions that can benefit and indeed absolutely needs research and from CIFAR's unique model.
+
+103
+00:10:18,101 --> 00:10:24,292
+Speaker SPEAKER_00: Thank you all for working with me and my colleagues to continue CIFAR's truly vital work for the world.
+
+104
+00:10:24,731 --> 00:10:26,134
+Speaker SPEAKER_00: And now please enjoy your meal.
+
+105
+00:10:26,575 --> 00:10:28,357
+Speaker SPEAKER_00: Bon appétit, and I will be back.
+
+106
+00:10:38,394 --> 00:10:40,720
+Speaker SPEAKER_00: If I could have your attention again, please.
+
+107
+00:10:48,414 --> 00:10:50,639
+Speaker SPEAKER_00: I hope you all had a good meal.
+
+108
+00:10:50,698 --> 00:10:53,063
+Speaker SPEAKER_00: I looked at the menu quickly this evening.
+
+109
+00:10:53,104 --> 00:10:59,576
+Speaker SPEAKER_00: It said a trio of decent desserts, but it actually meant decadent, so I read it too quickly.
+
+110
+00:10:59,995 --> 00:11:03,559
+Speaker SPEAKER_00: I'm very pleased that we have Nora Young with us tonight.
+
+111
+00:11:04,601 --> 00:11:20,125
+Speaker SPEAKER_00: Most of you will be familiar with Nora as the founding host of CBC's Definitely Not the Opera, or DNTO, and now she's the host of Spark, which is a show which examines how technology is shaping our lives and the larger world in which we live in.
+
+112
+00:11:20,785 --> 00:11:26,475
+Speaker SPEAKER_00: And after the presentations, Nora will lead Jeff in the conversation.
+
+113
+00:11:26,455 --> 00:11:29,919
+Speaker SPEAKER_00: I'd also like to say a few words about Jeff Hinton.
+
+114
+00:11:30,741 --> 00:11:40,798
+Speaker SPEAKER_00: Jeff is a CIFAR Distinguished Fellow, a Distinguished Researcher at Google, and a Distinguished Professor at the University of Toronto.
+
+115
+00:11:41,499 --> 00:11:44,143
+Speaker SPEAKER_00: So he's distinguished times three.
+
+116
+00:11:45,389 --> 00:11:54,282
+Speaker SPEAKER_00: And let me point out that he's one of only three people to be granted the title of a CFAR Distinguished Fellow in our long history.
+
+117
+00:11:54,822 --> 00:11:56,445
+Speaker SPEAKER_00: That title is a lifetime honor.
+
+118
+00:11:56,785 --> 00:12:08,663
+Speaker SPEAKER_00: It's granted by CFAR's Board of Directors to an extremely small number of researchers who have made outstanding, long-term, long-lasting contributions both to CFAR and to science.
+
+119
+00:12:08,643 --> 00:12:11,748
+Speaker SPEAKER_00: while substantially advancing knowledge in their own fields of study.
+
+120
+00:12:12,549 --> 00:12:16,216
+Speaker SPEAKER_00: I think in Jeff's case that honor is very, very richly deserved.
+
+121
+00:12:17,077 --> 00:12:31,883
+Speaker SPEAKER_00: Jeff became interested in a branch of computer science called neural networks back in the last millennia and stayed interested long enough, long after just about everybody else had walked away from it.
+
+122
+00:12:33,095 --> 00:12:53,178
+Speaker SPEAKER_00: In 2004, he found an intellectual home for his work when he was asked to found CIFAR's program called Neural Computation and Adaptive Perception, along with Yoshua Bengio from the Université de Montréal and Yann LeCun from NYU and now Facebook.
+
+123
+00:12:53,480 --> 00:13:04,032
+Speaker SPEAKER_00: They, along with other fellows in the program, continue to work on neural networks and developed a revolutionary new approach to neural networks called deep learning.
+
+124
+00:13:05,013 --> 00:13:10,739
+Speaker SPEAKER_00: This form of artificial intelligence has become hugely successful in the last few years.
+
+125
+00:13:11,379 --> 00:13:17,866
+Speaker SPEAKER_00: And indeed, it's being used for everything from image recognition to natural language processing.
+
+126
+00:13:17,846 --> 00:13:24,421
+Speaker SPEAKER_00: Google, Facebook, China's Baidu and others are using it and conducting research into it.
+
+127
+00:13:25,142 --> 00:13:37,729
+Speaker SPEAKER_00: I'm very proud that CIFAR took the risks way before I joined this wonderful organization in providing the support in those early days to help make that revolution possible.
+
+128
+00:13:37,708 --> 00:13:48,634
+Speaker SPEAKER_00: Wired Magazine, which is the sort of magazine of record in Silicon Valley, have done two stories on Jeff, on CFAR, and on NCAP over the last year.
+
+129
+00:13:48,654 --> 00:13:53,085
+Speaker SPEAKER_00: I'll just read a brief quote from part of one of those stories.
+
+130
+00:13:53,065 --> 00:14:04,268
+Speaker SPEAKER_00: And I quote, with just half a million dollar a year investment from CIFAR, Hinton's consortium of free thinkers is set to feed countless dollars back into the economy.
+
+131
+00:14:05,090 --> 00:14:12,205
+Speaker SPEAKER_00: In the process, Hinton and CIFAR have changed the face of the community that once spurned them.
+
+132
+00:14:12,184 --> 00:14:18,931
+Speaker SPEAKER_00: Students at universities are turning away from more traditional machine learning projects to work on deep learning.
+
+133
+00:14:20,072 --> 00:14:23,195
+Speaker SPEAKER_00: In other words, deep learning has now become mainstream.
+
+134
+00:14:24,375 --> 00:14:27,458
+Speaker SPEAKER_00: We've ceased to be the lunatic fringe, Hinton says.
+
+135
+00:14:28,360 --> 00:14:30,101
+Speaker SPEAKER_00: We're now the lunatic core.
+
+136
+00:14:32,964 --> 00:14:39,210
+Speaker SPEAKER_00: I'd like to now invite Nora and someone who's anything but a lunatic to join me here on the stage.
+
+137
+00:14:39,429 --> 00:14:40,250
+Speaker SPEAKER_00: Nora, Jeff.
+
+138
+00:14:49,241 --> 00:14:52,056
+Speaker SPEAKER_06: Thank you very much.
+
+139
+00:14:52,096 --> 00:14:52,698
+Speaker SPEAKER_04: Thank you very much.
+
+140
+00:14:52,719 --> 00:14:54,166
+Speaker SPEAKER_04: I want to get right to things.
+
+141
+00:14:54,186 --> 00:14:57,581
+Speaker SPEAKER_04: I will just say one thing before we begin the Jays 1.
+
+142
+00:15:01,357 --> 00:15:15,778
+Speaker SPEAKER_04: 7-1 I think so I'm gonna turn things over to to Jeff to to enlighten us and then I'm gonna have a quick Q&A between the two of us and then we'll open up the floor a bit at the end so Jeff Okay, I'd like to start by thanking CIFAR.
+
+143
+00:15:16,259 --> 00:15:29,138
+Speaker SPEAKER_02: CIFAR was the reason I came to Canada in 1987 they had an artificial intelligence program as one of their first programs and I came back to Canada in 2002 and
+
+144
+00:15:29,910 --> 00:15:54,298
+Speaker SPEAKER_02: I worked with CFAR to set up this program, and it's had a tremendous effect in that it's enabled researchers in many different places, both in Canada, like Montreal and UBC and Toronto, and in the States and in Israel and in Finland, all sorts of places, to interact on a regular basis, and that led to some rather pleasing progress.
+
+145
+00:15:56,572 --> 00:16:02,485
+Speaker SPEAKER_02: So, I'm gonna try and explain to you what deep learning is, starting by assuming that you know nothing.
+
+146
+00:16:03,787 --> 00:16:08,736
+Speaker SPEAKER_02: I'm an academic, and I want to explain things properly.
+
+147
+00:16:08,756 --> 00:16:14,567
+Speaker SPEAKER_02: So, it's about neural networks, and neural networks are made up of artificial neurons.
+
+148
+00:16:14,989 --> 00:16:16,471
+Speaker SPEAKER_02: So what's an artificial neuron?
+
+149
+00:16:16,822 --> 00:16:18,726
+Speaker SPEAKER_02: Well, it's not quite like a real neuron.
+
+150
+00:16:18,746 --> 00:16:22,234
+Speaker SPEAKER_02: Real neurons are complicated, just like real molecules are complicated.
+
+151
+00:16:22,274 --> 00:16:27,124
+Speaker SPEAKER_02: But if you want to understand a gas, you can pretend a molecule is a billiard ball, and you can understand a lot about gases.
+
+152
+00:16:27,924 --> 00:16:31,432
+Speaker SPEAKER_02: Similarly, we're going to idealize, oops, I want to go back.
+
+153
+00:16:33,056 --> 00:16:37,784
+Speaker SPEAKER_02: We're going to idealize a neuron by saying it's something that gets
+
+154
+00:16:39,232 --> 00:16:41,616
+Speaker SPEAKER_02: a bunch of inputs, if you look at the figure on the left.
+
+155
+00:16:42,577 --> 00:16:46,424
+Speaker SPEAKER_02: And on these input lines that come from other neurons or the senses, it has weights.
+
+156
+00:16:47,105 --> 00:16:50,071
+Speaker SPEAKER_02: It takes the activity on an input line, multiplies it by the weight, and adds it all up.
+
+157
+00:16:50,431 --> 00:16:51,231
+Speaker SPEAKER_02: That's its total input.
+
+158
+00:16:51,852 --> 00:16:54,457
+Speaker SPEAKER_02: And then it gives an output that's a function of the total input.
+
+159
+00:16:55,018 --> 00:16:59,065
+Speaker SPEAKER_02: And the input-output function is shown on the right for one kind of artificial neuron.
+
+160
+00:16:59,044 --> 00:17:03,778
+Speaker SPEAKER_02: So if its total input is above a threshold, it gives an output that just increases as it gets more input.
+
+161
+00:17:04,138 --> 00:17:06,787
+Speaker SPEAKER_02: If it's below the threshold, it says nothing.
+
+162
+00:17:07,608 --> 00:17:09,212
+Speaker SPEAKER_02: So it has a way of kind of hiding information.
+
+163
+00:17:09,534 --> 00:17:12,362
+Speaker SPEAKER_02: It doesn't care about fluctuations in input if they're below the threshold.
+
+164
+00:17:13,490 --> 00:17:18,895
+Speaker SPEAKER_02: OK, and this is much simpler than a real neuron, although not totally dissimilar.
+
+165
+00:17:19,557 --> 00:17:24,202
+Speaker SPEAKER_02: But by studying things like this, we can ask, if you put a bunch of these guys together, how could we do stuff?
+
+166
+00:17:24,222 --> 00:17:26,085
+Speaker SPEAKER_02: And in particular, let's take an interesting task.
+
+167
+00:17:26,786 --> 00:17:29,588
+Speaker SPEAKER_02: I show you 3 million numbers.
+
+168
+00:17:30,148 --> 00:17:35,275
+Speaker SPEAKER_02: And these 3 million numbers are the RGB values of the pixels in a 1,000 by 1,000 image.
+
+169
+00:17:36,336 --> 00:17:39,160
+Speaker SPEAKER_02: And your job is to write a computer program that takes 3 million numbers.
+
+170
+00:17:40,134 --> 00:17:43,641
+Speaker SPEAKER_02: and outputs a string of words that describe what's going on in the image.
+
+171
+00:17:45,263 --> 00:17:47,327
+Speaker SPEAKER_02: Now, you don't want to have to write that program.
+
+172
+00:17:48,229 --> 00:17:51,214
+Speaker SPEAKER_02: You'd much rather write a simple program that does learning and let it figure it out.
+
+173
+00:17:52,155 --> 00:17:54,079
+Speaker SPEAKER_02: Evolution thought the same way.
+
+174
+00:17:56,324 --> 00:17:59,730
+Speaker SPEAKER_02: So we connect up these neurons in an artificial neural network.
+
+175
+00:18:00,182 --> 00:18:03,387
+Speaker SPEAKER_02: where we have input neurons that typically represent things like pixels in an image.
+
+176
+00:18:04,088 --> 00:18:05,451
+Speaker SPEAKER_02: We have multiple intermediate layers.
+
+177
+00:18:06,192 --> 00:18:10,137
+Speaker SPEAKER_02: And then we have output neurons that represent, say, decisions about what might be in the image.
+
+178
+00:18:11,480 --> 00:18:19,531
+Speaker SPEAKER_02: We call the layers in the middle hidden layers because just by knowing what the inputs and outputs are, you don't know what they're doing.
+
+179
+00:18:19,551 --> 00:18:23,237
+Speaker SPEAKER_02: And the aim is to train neural networks so it uses those hidden layers sensibly.
+
+180
+00:18:24,922 --> 00:18:25,763
+Speaker SPEAKER_02: So how do we train it?
+
+181
+00:18:26,464 --> 00:18:27,728
+Speaker SPEAKER_02: Well, there's two kinds of algorithm.
+
+182
+00:18:27,748 --> 00:18:28,690
+Speaker SPEAKER_02: There's supervised training.
+
+183
+00:18:29,111 --> 00:18:32,558
+Speaker SPEAKER_02: In supervised training, we showed an input, and we showed the right output.
+
+184
+00:18:33,160 --> 00:18:35,684
+Speaker SPEAKER_02: So we showed an image, and we say, in this image, there's a cat and a dog.
+
+185
+00:18:37,890 --> 00:18:44,684
+Speaker SPEAKER_02: And then you adjust the weights on all these neurons so that next time you show that image, you'll be slightly better at getting the right answer.
+
+186
+00:18:45,424 --> 00:18:46,705
+Speaker SPEAKER_02: And I'll tell you how you do that in a minute.
+
+187
+00:18:47,287 --> 00:18:49,750
+Speaker SPEAKER_02: In unsupervised training, we don't even tell it the answer.
+
+188
+00:18:49,769 --> 00:18:50,631
+Speaker SPEAKER_02: We just show it inputs.
+
+189
+00:18:51,271 --> 00:18:57,598
+Speaker SPEAKER_02: And it tries to use its hidden neurons in such a way that from the activities of the hidden neurons, it can reconstruct the inputs.
+
+190
+00:19:00,942 --> 00:19:04,446
+Speaker SPEAKER_02: So here's a way to think about the supervised learning algorithm we're going to use.
+
+191
+00:19:05,008 --> 00:19:08,731
+Speaker SPEAKER_02: It's not the algorithm we use, but we use something that does the same thing more efficiently.
+
+192
+00:19:10,230 --> 00:19:15,476
+Speaker SPEAKER_02: If you sort of have a simple theory of evolution, you might think the way to train a neural network is this.
+
+193
+00:19:16,596 --> 00:19:26,865
+Speaker SPEAKER_02: You give it inputs at the bottom, you get outputs at the top, you compare those with the correct outputs and see how well you're doing, and you do that for a small sample of cases where you know the right answers.
+
+194
+00:19:28,167 --> 00:19:31,089
+Speaker SPEAKER_02: And you see how well the network is currently performing on that sample of cases.
+
+195
+00:19:32,090 --> 00:19:37,115
+Speaker SPEAKER_02: Then you take one of the weights in the network, that weight shown in red, and you change it slightly.
+
+196
+00:19:38,023 --> 00:19:41,387
+Speaker SPEAKER_02: And you ask, does my network do better or worse on those cases?
+
+197
+00:19:42,088 --> 00:19:45,113
+Speaker SPEAKER_02: If it does worse, you leave the weight where it was.
+
+198
+00:19:45,153 --> 00:19:46,875
+Speaker SPEAKER_02: But if it does better, you keep that change.
+
+199
+00:19:47,455 --> 00:19:51,060
+Speaker SPEAKER_02: So you made a mutation to a weight, and you kept it if the thing gets better.
+
+200
+00:19:52,123 --> 00:19:56,848
+Speaker SPEAKER_02: And it's pretty obvious to everybody that if you did that for long enough, you'd get pretty good weights in this network.
+
+201
+00:19:58,109 --> 00:20:02,395
+Speaker SPEAKER_02: Well, there's an algorithm that instead of changing one weight at a time, can change all the weights in parallel.
+
+202
+00:20:03,076 --> 00:20:06,141
+Speaker SPEAKER_02: It just involves using some calculus, which I won't bother you with.
+
+203
+00:20:07,150 --> 00:20:14,599
+Speaker SPEAKER_02: It's called the back propagation algorithm, and it simply does pretty much what I was describing for the mutation method, but it does it for all the weights in parallel.
+
+204
+00:20:15,240 --> 00:20:21,849
+Speaker SPEAKER_02: So if you have a million weights, it's a million times as efficient as changing one weight and then seeing how well it does.
+
+205
+00:20:22,691 --> 00:20:26,256
+Speaker SPEAKER_02: And if you have a billion weights, it's a billion times as efficient.
+
+206
+00:20:26,977 --> 00:20:32,824
+Speaker SPEAKER_02: Now you actually have about 10 to the 14 weights, so it's 10 to the 14 times as efficient, which is something like the age of the universe.
+
+207
+00:20:33,986 --> 00:20:34,086
+Unknown Speaker: Okay.
+
+208
+00:20:35,315 --> 00:20:37,596
+Speaker SPEAKER_02: It's good to get numbers that'll impress physicists.
+
+209
+00:20:40,157 --> 00:20:42,540
+Speaker SPEAKER_02: So people use this backpropagation algorithm.
+
+210
+00:20:42,761 --> 00:20:43,843
+Speaker SPEAKER_02: Many different people invented it.
+
+211
+00:20:43,923 --> 00:20:46,446
+Speaker SPEAKER_02: But they used it in the 80s when workstations were fast enough.
+
+212
+00:20:47,107 --> 00:20:48,690
+Speaker SPEAKER_02: And you would put in an image at the bottom.
+
+213
+00:20:49,111 --> 00:20:50,173
+Speaker SPEAKER_02: You would get out the answers.
+
+214
+00:20:50,732 --> 00:20:52,236
+Speaker SPEAKER_02: And you would backpropagate error signals.
+
+215
+00:20:52,916 --> 00:21:01,429
+Speaker SPEAKER_02: And to get the idea, what you're hoping is that early layers of features will, early layers of these neurons will learn to be feature detectors for things like edges.
+
+216
+00:21:02,089 --> 00:21:06,336
+Speaker SPEAKER_02: And then maybe at the next layer, you'll detect a pair of edges joining at a fine angle.
+
+217
+00:21:06,856 --> 00:21:08,358
+Speaker SPEAKER_02: And so that could be a beak.
+
+218
+00:21:09,030 --> 00:21:14,698
+Speaker SPEAKER_02: And if you get evidence for a beak and also evidence for an eye and maybe a feather, then maybe you think it's a bird.
+
+219
+00:21:15,239 --> 00:21:17,461
+Speaker SPEAKER_02: And so the idea is we get a hierarchy of features this way.
+
+220
+00:21:17,903 --> 00:21:21,467
+Speaker SPEAKER_02: And we know that the human brain does object recognition, something like that.
+
+221
+00:21:22,087 --> 00:21:24,230
+Speaker SPEAKER_02: And it turned out if you train these networks, they can do that too.
+
+222
+00:21:28,596 --> 00:21:29,637
+Speaker SPEAKER_02: So,
+
+223
+00:21:29,955 --> 00:21:39,125
+Speaker SPEAKER_02: In the mid-80s and the late 80s, it was applied to lots of things, this algorithm, like reading the amounts on checks, detecting credit card fraud, interpreting pap smears.
+
+224
+00:21:39,145 --> 00:21:41,127
+Speaker SPEAKER_02: But it never worked quite as well as we hoped.
+
+225
+00:21:41,327 --> 00:21:45,512
+Speaker SPEAKER_02: Maybe for reading the amounts on checks it did, but for other things, it wasn't quite as good as we thought it would be.
+
+226
+00:21:46,133 --> 00:21:49,356
+Speaker SPEAKER_02: And it couldn't make use of those hidden layers.
+
+227
+00:21:49,436 --> 00:21:51,719
+Speaker SPEAKER_02: It couldn't learn lots of layers of features in the way we thought it ought to.
+
+228
+00:21:52,660 --> 00:21:55,262
+Speaker SPEAKER_02: And so most people gave up on it.
+
+229
+00:21:57,125 --> 00:21:58,967
+Speaker SPEAKER_02: Then we set up the CIFAR program.
+
+230
+00:21:59,317 --> 00:22:02,882
+Speaker SPEAKER_02: This is actually a version of history that's somewhat tailored towards C-File.
+
+231
+00:22:03,702 --> 00:22:08,548
+Speaker SPEAKER_02: Then we set up the C-File program, and everything changed.
+
+232
+00:22:08,909 --> 00:22:14,596
+Speaker SPEAKER_02: A bunch of smart people got together and had regular meetings, and we figured out how to make backprop work better.
+
+233
+00:22:15,356 --> 00:22:18,700
+Speaker SPEAKER_02: And we're very concerned with all the clever little technical tricks we invented to do that.
+
+234
+00:22:19,621 --> 00:22:20,663
+Speaker SPEAKER_02: You wouldn't be interested in those.
+
+235
+00:22:20,903 --> 00:22:27,029
+Speaker SPEAKER_02: All you need to know is that it now works amazingly well, particularly if you have a lot of data and a lot of compute power.
+
+236
+00:22:28,630 --> 00:22:30,172
+Speaker SPEAKER_02: So here was the first killer app.
+
+237
+00:22:31,413 --> 00:22:40,785
+Speaker SPEAKER_02: If you wanna recognize speech, you want to be able to take a sound wave and recognize which particular piece of which phoneme someone's saying.
+
+238
+00:22:42,106 --> 00:22:50,678
+Speaker SPEAKER_02: And so what you do is take the sound wave, pre-process it into 11 frames of coefficients, and then you're asking for the middle frame, which piece of which phoneme is someone saying?
+
+239
+00:22:51,459 --> 00:22:56,545
+Speaker SPEAKER_02: And here we have, whoops, here we have 183 different possible pieces of phonemes.
+
+240
+00:22:57,335 --> 00:23:03,663
+Speaker SPEAKER_02: And a couple of my students trained a big, deep neural net using back propagation and our new tricks.
+
+241
+00:23:04,684 --> 00:23:08,890
+Speaker SPEAKER_02: And they discovered it works better than standard speech recognizers, just a little bit better.
+
+242
+00:23:09,790 --> 00:23:16,660
+Speaker SPEAKER_02: But since standard speech recognizers had sort of 30 years of careful engineering in them, and this was two students in my lab, it was obvious it was going to win.
+
+243
+00:23:17,652 --> 00:23:21,476
+Speaker SPEAKER_02: And pretty soon, MSR and IBM and Google were all developing it further.
+
+244
+00:23:22,057 --> 00:23:24,519
+Speaker SPEAKER_02: And one of my students went to Google in an internship.
+
+245
+00:23:24,980 --> 00:23:27,402
+Speaker SPEAKER_02: And by 2012, this came out in the Android.
+
+246
+00:23:27,823 --> 00:23:31,567
+Speaker SPEAKER_02: And it was responsible for a big jump in the quality of the speech recognition.
+
+247
+00:23:31,586 --> 00:23:36,672
+Speaker SPEAKER_02: And now all speech recognizers use some form of neural net trained with backpropagation, all the good ones anyway.
+
+248
+00:23:38,733 --> 00:23:40,375
+Speaker SPEAKER_02: Then we did the same thing for object recognition.
+
+249
+00:23:41,436 --> 00:23:43,980
+Speaker SPEAKER_02: So you take a high resolution image,
+
+250
+00:23:44,398 --> 00:23:51,191
+Speaker SPEAKER_02: And there's a data set, it's important to have a big data set, with a million images and a thousand different classes of object.
+
+251
+00:23:52,292 --> 00:23:55,479
+Speaker SPEAKER_02: And someone has labeled it by the name of the most prominent object.
+
+252
+00:23:56,520 --> 00:24:00,007
+Speaker SPEAKER_02: And since there might be several objects in the image, you're allowed to make five guesses.
+
+253
+00:24:00,067 --> 00:24:03,133
+Speaker SPEAKER_02: And if you guess the same name as them in five guesses, you win, otherwise you lose.
+
+254
+00:24:04,041 --> 00:24:10,810
+Speaker SPEAKER_02: And a bunch of good computer vision groups used the existing technology of 2012, the computer vision technology.
+
+255
+00:24:11,151 --> 00:24:13,574
+Speaker SPEAKER_02: And the computer vision people were very down on neural nets.
+
+256
+00:24:13,875 --> 00:24:15,856
+Speaker SPEAKER_02: They were saying, these things will never work for real images.
+
+257
+00:24:17,419 --> 00:24:18,500
+Speaker SPEAKER_02: And then we got these results.
+
+258
+00:24:19,501 --> 00:24:22,885
+Speaker SPEAKER_02: So the computer vision community had asymptoted at about 25% error.
+
+259
+00:24:23,086 --> 00:24:26,530
+Speaker SPEAKER_02: And we were getting 16% error.
+
+260
+00:24:26,590 --> 00:24:29,474
+Speaker SPEAKER_02: And something very impressive happened.
+
+261
+00:24:29,657 --> 00:24:34,125
+Speaker SPEAKER_02: The computer vision community, over the next year, basically gave up on what they've been doing.
+
+262
+00:24:34,806 --> 00:24:36,269
+Speaker SPEAKER_02: And they said, OK, this works better.
+
+263
+00:24:36,288 --> 00:24:36,848
+Speaker SPEAKER_02: We're going to do that.
+
+264
+00:24:37,410 --> 00:24:39,053
+Speaker SPEAKER_02: Now, that's not how scientists behave.
+
+265
+00:24:39,453 --> 00:24:45,083
+Speaker SPEAKER_02: If you want to get scientists to give up on their theory, you wait for them to die and get new scientists.
+
+266
+00:24:45,103 --> 00:24:49,650
+Speaker SPEAKER_02: But in this case, they gave up on their theory, and they all do this stuff now.
+
+267
+00:24:49,670 --> 00:24:52,153
+Speaker SPEAKER_02: And unfortunately, some of them are better at it than we are.
+
+268
+00:24:53,675 --> 00:24:56,019
+Speaker SPEAKER_02: And whoops, three years later.
+
+269
+00:24:56,404 --> 00:25:19,829
+Speaker SPEAKER_02: With further engineering it was down from 16% to 5% and that's about human levels and so five years ago if you said how long will it take before I can show you any image from the web and You've got a reasonable better than identifying an obvious object in it people said oh You're not gonna be able to do that for images in general for a long time, but now we can do it Okay
+
+270
+00:25:23,269 --> 00:25:26,115
+Speaker SPEAKER_02: So these are the kinds of images it gets, and these are its five guesses.
+
+271
+00:25:26,676 --> 00:25:28,460
+Speaker SPEAKER_02: And you see there it's very confident it's a cheetah.
+
+272
+00:25:30,443 --> 00:25:34,751
+Speaker SPEAKER_02: Here it's confident it's a bullet train, but the point is the other bets are good bets too.
+
+273
+00:25:35,133 --> 00:25:37,016
+Speaker SPEAKER_02: And notice that image has lots of other things in it.
+
+274
+00:25:37,537 --> 00:25:41,565
+Speaker SPEAKER_02: But if you ask someone what's that an image of, they would say bullet train, and so does the program.
+
+275
+00:25:43,434 --> 00:25:45,678
+Speaker SPEAKER_02: Here, it gets it wrong.
+
+276
+00:25:45,758 --> 00:25:53,148
+Speaker SPEAKER_02: Its first bet is scissors, and you can tell from that that it needs glasses, because it sees that chain as the blades of the scissors.
+
+277
+00:25:53,749 --> 00:25:54,931
+Speaker SPEAKER_02: Frying pan's even more obvious.
+
+278
+00:25:55,751 --> 00:25:59,317
+Speaker SPEAKER_02: But you can see that all its bets are visually plausible things.
+
+279
+00:25:59,356 --> 00:26:00,679
+Speaker SPEAKER_02: They're visually similar objects.
+
+280
+00:26:01,339 --> 00:26:05,285
+Speaker SPEAKER_02: So it's really sort of seeing what's there.
+
+281
+00:26:05,305 --> 00:26:11,433
+Speaker SPEAKER_02: Now, for the last bit, I'm gonna talk about one more application, which is applying this to natural language.
+
+282
+00:26:11,920 --> 00:26:13,201
+Speaker SPEAKER_02: which Google's kind of interested in.
+
+283
+00:26:14,022 --> 00:26:20,352
+Speaker SPEAKER_02: And we're going to do that using recurrent nets of a horribly complicated kind invented by some people I'm not going to mention again.
+
+284
+00:26:23,477 --> 00:26:26,942
+Speaker SPEAKER_02: So this is a simplified version of their nets called recurrent neural nets.
+
+285
+00:26:27,501 --> 00:26:31,567
+Speaker SPEAKER_02: And the idea with a recurrent net is at each time step, input comes in at the bottom.
+
+286
+00:26:31,768 --> 00:26:33,651
+Speaker SPEAKER_02: I've only shown one input neuron, but there will be many.
+
+287
+00:26:35,113 --> 00:26:37,497
+Speaker SPEAKER_02: And that input coming into the bottom actually goes to all the hidden neurons.
+
+288
+00:26:39,259 --> 00:26:41,201
+Speaker SPEAKER_02: And the net also can get to give an output.
+
+289
+00:26:42,480 --> 00:26:47,005
+Speaker SPEAKER_02: And the hidden neurons are getting input from other hidden neurons.
+
+290
+00:26:47,506 --> 00:26:48,646
+Speaker SPEAKER_02: That's why it's a recurrent net.
+
+291
+00:26:49,248 --> 00:26:58,056
+Speaker SPEAKER_02: So as time goes by, the states of the hidden neurons at any one of those time slices are determined by the input and by the previous states of all the hidden neurons.
+
+292
+00:26:59,037 --> 00:27:07,724
+Speaker SPEAKER_02: And the weights on those connections, those two green weights and one red weight going into the middle neuron, they're the same at each time step because it's a recurrent net.
+
+293
+00:27:07,786 --> 00:27:10,327
+Speaker SPEAKER_02: It's reusing the same weights at each time step.
+
+294
+00:27:11,724 --> 00:27:17,852
+Speaker SPEAKER_02: And so that kind of net, if we could train it, would be able to take a sequence of inputs and produce a sequence of outputs.
+
+295
+00:27:22,396 --> 00:27:26,442
+Speaker SPEAKER_02: And Ilyas Tatskiva and two of his coworkers had a bright idea.
+
+296
+00:27:26,501 --> 00:27:32,509
+Speaker SPEAKER_02: They said, why don't we abandon the way Google does translation, which is having a huge table of phrases that map to other phrases.
+
+297
+00:27:34,030 --> 00:27:39,116
+Speaker SPEAKER_02: The person who's got the five minute sign is going to have to shout at me because I'm not looking in that direction.
+
+298
+00:27:40,665 --> 00:27:41,467
+Speaker SPEAKER_02: Good, she didn't shout.
+
+299
+00:27:45,031 --> 00:27:46,673
+Speaker SPEAKER_02: He said, let's just use a recurrent net.
+
+300
+00:27:46,913 --> 00:27:47,694
+Speaker SPEAKER_02: And let's have a recurrent net.
+
+301
+00:27:47,714 --> 00:27:48,736
+Speaker SPEAKER_02: We feed English words in.
+
+302
+00:27:49,897 --> 00:27:52,760
+Speaker SPEAKER_02: And then after we fed the English words in, it spews out French words.
+
+303
+00:27:53,942 --> 00:27:55,365
+Speaker SPEAKER_02: We don't have any big phrase table anywhere.
+
+304
+00:27:56,025 --> 00:27:59,809
+Speaker SPEAKER_02: And we just train the whole thing by showing it translated pairs.
+
+305
+00:27:59,849 --> 00:28:01,271
+Speaker SPEAKER_02: We show this string of English words.
+
+306
+00:28:01,311 --> 00:28:02,834
+Speaker SPEAKER_02: I want you to produce that string of French words.
+
+307
+00:28:04,635 --> 00:28:05,998
+Speaker SPEAKER_02: So the way it works is this.
+
+308
+00:28:06,940 --> 00:28:13,866
+Speaker SPEAKER_02: It's got an encoder recurrent neural net, and that takes one English word at a time until it gets to the end of the English sentence.
+
+309
+00:28:13,886 --> 00:28:19,874
+Speaker SPEAKER_02: And it converts that English word into what we call a word vector, which is just a big bunch of features of the word.
+
+310
+00:28:21,395 --> 00:28:26,201
+Speaker SPEAKER_02: So similar words have very similar feature vectors, and that enables it to generalize.
+
+311
+00:28:27,261 --> 00:28:30,265
+Speaker SPEAKER_02: And then those word vectors feed into the hidden units.
+
+312
+00:28:30,768 --> 00:28:33,851
+Speaker SPEAKER_02: And the hidden units over time accumulate information in their state.
+
+313
+00:28:34,631 --> 00:28:39,296
+Speaker SPEAKER_02: And the final state of the hidden units has accumulated information about all the words we put in.
+
+314
+00:28:39,935 --> 00:28:41,277
+Speaker SPEAKER_02: And we're gonna call that a thought.
+
+315
+00:28:42,317 --> 00:28:45,461
+Speaker SPEAKER_02: And this isn't a kind of, I mean this literally.
+
+316
+00:28:45,701 --> 00:28:46,801
+Speaker SPEAKER_02: I mean this really is a thought.
+
+317
+00:28:47,163 --> 00:28:48,683
+Speaker SPEAKER_02: You never saw a thought before.
+
+318
+00:28:48,743 --> 00:28:49,785
+Speaker SPEAKER_02: That's what one looks like.
+
+319
+00:28:50,266 --> 00:28:52,508
+Speaker SPEAKER_02: Well, if you spelled out the neural net, that's what one would look like.
+
+320
+00:28:52,748 --> 00:28:58,512
+Speaker SPEAKER_02: It would be the activity vector of the final state of this recurrent net after it's heard the English sentence.
+
+321
+00:28:59,557 --> 00:29:07,787
+Speaker SPEAKER_02: And then to translate what we do is we take that thought and we make it the initial state of the French network.
+
+322
+00:29:07,807 --> 00:29:12,791
+Speaker SPEAKER_02: And the French network takes the thought and says, okay, given that thought, what do I think the first word might be?
+
+323
+00:29:13,593 --> 00:29:18,919
+Speaker SPEAKER_02: And it says, well, 40% is le, and 30% is la, and 10% is cha.
+
+324
+00:29:20,300 --> 00:29:23,865
+Speaker SPEAKER_02: And I've run out of my French words, but there's some more of them.
+
+325
+00:29:24,346 --> 00:29:26,407
+Speaker SPEAKER_02: So it puts bets over French words.
+
+326
+00:29:26,859 --> 00:29:36,250
+Speaker SPEAKER_02: And when you're training it, if it really was le, you say, OK, you said le 40%, but you should have said le 100% because that's the right answer.
+
+327
+00:29:36,711 --> 00:29:38,452
+Speaker SPEAKER_02: So you're going to back propagate.
+
+328
+00:29:38,492 --> 00:29:41,997
+Speaker SPEAKER_02: You're going to change the weight so it's more likely to give more weight to le.
+
+329
+00:29:44,579 --> 00:29:47,563
+Speaker SPEAKER_02: Then what you do is you look at the next word in the sentence.
+
+330
+00:29:48,223 --> 00:29:49,325
+Speaker SPEAKER_02: Oops, I keep doing that.
+
+331
+00:29:49,705 --> 00:29:51,567
+Speaker SPEAKER_02: I try to use the laser pointer.
+
+332
+00:29:53,843 --> 00:30:00,834
+Speaker SPEAKER_02: You look at the next word in the sentence, and you put that in, and you say, try and output the second word of the French sentence.
+
+333
+00:30:00,854 --> 00:30:03,116
+Speaker SPEAKER_02: So the first word was le.
+
+334
+00:30:04,378 --> 00:30:05,381
+Speaker SPEAKER_02: It has to guess the le.
+
+335
+00:30:05,701 --> 00:30:10,208
+Speaker SPEAKER_02: After it's failed to guess the le, you now tell it the le, and you say, OK, the first word was actually le.
+
+336
+00:30:10,407 --> 00:30:11,470
+Speaker SPEAKER_02: What do you think the second word is?
+
+337
+00:30:11,990 --> 00:30:13,011
+Speaker SPEAKER_02: And it makes bets about that.
+
+338
+00:30:13,613 --> 00:30:14,515
+Speaker SPEAKER_02: And you keep going like that.
+
+339
+00:30:15,256 --> 00:30:20,644
+Speaker SPEAKER_02: And you adjust all the weights so that it will get better at making those bets.
+
+340
+00:30:20,894 --> 00:30:23,856
+Speaker SPEAKER_02: After you've trained it, you can then get it to produce sentences.
+
+341
+00:30:24,377 --> 00:30:25,278
+Speaker SPEAKER_02: So you give it a thought.
+
+342
+00:30:26,160 --> 00:30:27,981
+Speaker SPEAKER_02: It produces a distribution of first words.
+
+343
+00:30:28,442 --> 00:30:30,023
+Speaker SPEAKER_02: You pick one of them randomly.
+
+344
+00:30:30,044 --> 00:30:31,365
+Speaker SPEAKER_02: With 40% chance, you pick la.
+
+345
+00:30:31,405 --> 00:30:32,707
+Speaker SPEAKER_02: With 30% chance, you pick la.
+
+346
+00:30:33,989 --> 00:30:39,394
+Speaker SPEAKER_02: And whichever one you picked, you feed it in as word one and say, OK, given that's the first word, what do you think word two is?
+
+347
+00:30:40,296 --> 00:30:41,616
+Speaker SPEAKER_02: And it'll give you a distribution.
+
+348
+00:30:41,656 --> 00:30:42,258
+Speaker SPEAKER_02: You pick a word.
+
+349
+00:30:42,597 --> 00:30:43,700
+Speaker SPEAKER_02: And so it'll produce a sentence.
+
+350
+00:30:44,000 --> 00:30:46,281
+Speaker SPEAKER_02: You keep going till it picks a full stop.
+
+351
+00:30:46,303 --> 00:30:50,326
+Speaker SPEAKER_02: And if you run it again, it might well produce a different sentence, because you might randomly pick different words.
+
+352
+00:30:50,964 --> 00:30:52,268
+Speaker SPEAKER_02: OK, we'll see it doing that in a minute.
+
+353
+00:30:54,251 --> 00:30:57,778
+Speaker SPEAKER_02: So that's how it generates sentences after you've trained it.
+
+354
+00:31:00,123 --> 00:31:07,657
+Speaker SPEAKER_02: And the impressive thing about this is it only took about a man year to do this, if you ignore the few thousand man years it went into the infrastructure.
+
+355
+00:31:09,577 --> 00:31:13,863
+Speaker SPEAKER_02: It works about as well as standard translation systems.
+
+356
+00:31:14,443 --> 00:31:22,653
+Speaker SPEAKER_02: And we've seen before that if you can get one of these deep learning systems done by a couple of students to work as well as the standard technology, then a few years later, it's going to be much better.
+
+357
+00:31:24,195 --> 00:31:26,398
+Speaker SPEAKER_02: What's more, we only trained it on a pair of languages.
+
+358
+00:31:26,419 --> 00:31:30,644
+Speaker SPEAKER_02: And if you train it on lots of pairs of languages, so for every language, you have an encoder.
+
+359
+00:31:30,924 --> 00:31:32,346
+Speaker SPEAKER_02: And for every language, you have a decoder.
+
+360
+00:31:32,707 --> 00:31:35,349
+Speaker SPEAKER_02: But they can all share the thoughts.
+
+361
+00:31:35,920 --> 00:31:40,285
+Speaker SPEAKER_02: Then you can give it a Dutch sentence, and you get the translation into 25 European languages.
+
+362
+00:31:41,026 --> 00:31:47,354
+Speaker SPEAKER_02: And you can train the whole system by backpropagating through all 25 translations to get much more information about what the Dutch sentence meant.
+
+363
+00:31:51,138 --> 00:31:56,005
+Speaker SPEAKER_02: So now let's combine the vision and the language, and then I'll be done.
+
+364
+00:31:57,384 --> 00:32:18,803
+Speaker SPEAKER_02: What we're going to do is we're going to take the net that learned to recognize objects, and we're going to say the last layer of that net before it actually says what the objects are, the last layer of hidden units before it makes its decisions, are really going to be a description of what's in the image or an activity vector that describes what's in the image in terms of objects rather than in terms of pixel intensities.
+
+365
+00:32:18,782 --> 00:32:21,650
+Speaker SPEAKER_02: At the input, it's the pixel intensities that tell you what's there.
+
+366
+00:32:21,670 --> 00:32:24,556
+Speaker SPEAKER_02: But by the time you get to the last layer, it's got all sorts of bets about it.
+
+367
+00:32:24,576 --> 00:32:25,959
+Speaker SPEAKER_02: It might be this object or that object.
+
+368
+00:32:26,681 --> 00:32:28,625
+Speaker SPEAKER_02: And that's what the last layer is coding.
+
+369
+00:32:29,807 --> 00:32:32,775
+Speaker SPEAKER_02: So now what we're going to do is take that last layer and say, that's a percept.
+
+370
+00:32:34,830 --> 00:32:41,278
+Speaker SPEAKER_02: It's nice to take all these terms I learned when I was a psychology student and actually be able to actually have these things now rather than just talk about them.
+
+371
+00:32:41,617 --> 00:32:42,439
+Speaker SPEAKER_02: That's a percept.
+
+372
+00:32:43,279 --> 00:32:51,548
+Speaker SPEAKER_02: And if we take the percept and we map it through a matrix to get a thought, we feed that into the decoder network.
+
+373
+00:32:52,229 --> 00:32:55,071
+Speaker SPEAKER_02: And now the decoder network can tell us what's in the image.
+
+374
+00:32:55,992 --> 00:33:00,518
+Speaker SPEAKER_02: So the idea is you take your network that could recognize objects,
+
+375
+00:33:01,240 --> 00:33:02,961
+Speaker SPEAKER_02: You take the last hidden layer of it.
+
+376
+00:33:03,742 --> 00:33:06,166
+Speaker SPEAKER_02: You map that through one more set of weights to get a thought.
+
+377
+00:33:06,887 --> 00:33:10,673
+Speaker SPEAKER_02: That thought goes into the decoder network, which says the thought.
+
+378
+00:33:11,212 --> 00:33:12,494
+Speaker SPEAKER_02: That is, turns the thought into words.
+
+379
+00:33:14,397 --> 00:33:20,164
+Speaker SPEAKER_02: And you train it by showing it images where someone's told you the caption, and it learns to produce captions.
+
+380
+00:33:20,204 --> 00:33:24,230
+Speaker SPEAKER_02: And then you give it new images it's never seen before, and see what captions it produces.
+
+381
+00:33:25,451 --> 00:33:27,535
+Speaker SPEAKER_02: So here's a new image it had never seen before.
+
+382
+00:33:28,509 --> 00:33:33,615
+Speaker SPEAKER_02: In the database, the right caption is, people are crouched around in an open market.
+
+383
+00:33:34,436 --> 00:33:38,181
+Speaker SPEAKER_02: What the neural net says is a group of people shopping at an outdoor market.
+
+384
+00:33:41,224 --> 00:33:41,805
+Speaker SPEAKER_02: Here's another one.
+
+385
+00:33:44,788 --> 00:33:54,700
+Speaker SPEAKER_02: The true caption is a young girl asleep on the sofa cuddling a stuffed bear, and that's clearly better than what the neural net says, but the neural net says a closeup of a child holding a stuffed animal, and that's not bad.
+
+386
+00:33:55,119 --> 00:33:58,263
+Speaker SPEAKER_02: If you're a computer vision person, you wouldn't have predicted we could do that by now.
+
+387
+00:34:02,210 --> 00:34:06,916
+Speaker SPEAKER_02: So this has a lot of implications for Google, particularly for document processing.
+
+388
+00:34:06,936 --> 00:34:11,563
+Speaker SPEAKER_02: If we can take a sentence and turn it into a thought, then a document's just a sequence of thoughts.
+
+389
+00:34:13,105 --> 00:34:16,269
+Speaker SPEAKER_02: And we can actually now apply neural networks to modeling that sequence of thoughts.
+
+390
+00:34:16,449 --> 00:34:19,474
+Speaker SPEAKER_02: We can make each thought be an input and say, predict the next thought.
+
+391
+00:34:20,255 --> 00:34:21,336
+Speaker SPEAKER_02: That's natural reasoning.
+
+392
+00:34:21,577 --> 00:34:23,559
+Speaker SPEAKER_02: That's what AI could never do.
+
+393
+00:34:23,978 --> 00:34:26,802
+Speaker SPEAKER_02: I always try to do it in a different way, and it just couldn't do that.
+
+394
+00:34:27,302 --> 00:34:35,074
+Speaker SPEAKER_02: Now, it might turn out that if you take the stuff on the web and discover the kind of reasoning that's going on, it is natural reasoning, but it's not very good.
+
+395
+00:34:36,697 --> 00:34:37,478
+Speaker SPEAKER_02: That's what I suspect.
+
+396
+00:34:39,320 --> 00:34:43,086
+Speaker SPEAKER_02: But at least this way, we can get computers to understand what the document says.
+
+397
+00:34:44,369 --> 00:34:49,175
+Speaker SPEAKER_02: And if you can do that, then Google should be able to give you much better answers to your queries.
+
+398
+00:34:49,882 --> 00:35:00,938
+Speaker SPEAKER_02: you should be able to say things like, find me a document that supports Stephen Harper and pretends to be in favor of science but is really deeply against it.
+
+399
+00:35:06,786 --> 00:35:11,072
+Speaker SPEAKER_02: If you should want to say such a thing, actually there's no need anymore.
+
+400
+00:35:12,594 --> 00:35:14,757
+Speaker SPEAKER_02: In order to get human levels of reasoning,
+
+401
+00:35:15,143 --> 00:35:21,050
+Speaker SPEAKER_02: it seems quite likely that we'll need human scale of weights in the neural nets.
+
+402
+00:35:21,550 --> 00:35:23,492
+Speaker SPEAKER_02: And we have about 10 to the 14 of these weights.
+
+403
+00:35:24,373 --> 00:35:28,518
+Speaker SPEAKER_02: That's 100 trillion.
+
+404
+00:35:28,539 --> 00:35:33,284
+Speaker SPEAKER_02: And the nets you're seeing doing this translation only have of the order of 100 million.
+
+405
+00:35:35,146 --> 00:35:38,090
+Speaker SPEAKER_02: So we're orders, many orders of magnitude too small at present.
+
+406
+00:35:38,630 --> 00:35:44,036
+Speaker SPEAKER_02: And that perhaps explains why our nets only half understand what they're saying.
+
+407
+00:35:46,244 --> 00:35:50,969
+Speaker SPEAKER_02: We're going to need much bigger nets for this to do a good job, but we will.
+
+408
+00:35:54,032 --> 00:36:00,221
+Speaker SPEAKER_02: The last two slides are about cognitive science, and they're covering the revolution that's happened that Dennett was going to talk about.
+
+409
+00:36:00,260 --> 00:36:10,733
+Speaker SPEAKER_02: So for many years, AI was dominated by the idea that the internal representations are symbolic expressions, and you operate on them with rules of inference.
+
+410
+00:36:12,603 --> 00:36:16,128
+Speaker SPEAKER_02: And most people in AI didn't think there was any alternative.
+
+411
+00:36:16,608 --> 00:36:18,152
+Speaker SPEAKER_02: They didn't think there was a hypothesis.
+
+412
+00:36:18,251 --> 00:36:23,960
+Speaker SPEAKER_02: A few people, like Newell and Simon said, it's the physical symbol, symbol, hypothesis.
+
+413
+00:36:24,481 --> 00:36:27,065
+Speaker SPEAKER_02: But most AI people thought, that's just how it has to be.
+
+414
+00:36:28,047 --> 00:36:36,179
+Speaker SPEAKER_02: And that's because their only model of how you can take some sentences and arrive at some other true sentences was formal logic.
+
+415
+00:36:36,717 --> 00:36:38,440
+Speaker SPEAKER_02: That's a system that does it.
+
+416
+00:36:38,460 --> 00:36:43,248
+Speaker SPEAKER_02: Similarly, for most physicists, the only way you could get things to propagate was to have a medium.
+
+417
+00:36:44,070 --> 00:36:51,121
+Speaker SPEAKER_02: So as a stage in physics, when people didn't think it was a hypothesis that light waves went through an ether, they thought there's no alternative.
+
+418
+00:36:51,161 --> 00:36:51,902
+Speaker SPEAKER_02: There must be an ether.
+
+419
+00:36:51,922 --> 00:36:52,503
+Speaker SPEAKER_02: Let's find it.
+
+420
+00:36:53,786 --> 00:36:55,409
+Speaker SPEAKER_02: And they were very upset when there wasn't.
+
+421
+00:36:57,411 --> 00:37:00,818
+Speaker SPEAKER_02: And people in conventional AI are hopefully very upset now.
+
+422
+00:37:03,380 --> 00:37:08,844
+Speaker SPEAKER_02: In particular, people in conventional AI thought that analogical reasoning was a sort of second-class citizen.
+
+423
+00:37:08,885 --> 00:37:10,047
+Speaker SPEAKER_02: That's something we'll come to later.
+
+424
+00:37:10,067 --> 00:37:11,387
+Speaker SPEAKER_02: That's not really the essence of reasoning.
+
+425
+00:37:11,608 --> 00:37:14,050
+Speaker SPEAKER_02: The essence of reasoning is proper, correct, formal reasoning.
+
+426
+00:37:14,851 --> 00:37:17,094
+Speaker SPEAKER_02: Actually, we know it's exactly the other way around with people.
+
+427
+00:37:17,833 --> 00:37:23,300
+Speaker SPEAKER_02: And in fact, if you look at my argument here, my argument for trashing classical AI is not a piece of logical reasoning.
+
+428
+00:37:23,559 --> 00:37:24,940
+Speaker SPEAKER_02: It's an analogy with some physics.
+
+429
+00:37:28,864 --> 00:37:32,509
+Speaker SPEAKER_02: The other paradigm for cognitive science comes from biology.
+
+430
+00:37:33,063 --> 00:37:36,467
+Speaker SPEAKER_02: And it says, look, we're biological organisms.
+
+431
+00:37:36,547 --> 00:37:40,112
+Speaker SPEAKER_02: We've got these brains that evolved to do things like vision and motor control.
+
+432
+00:37:40,612 --> 00:37:41,994
+Speaker SPEAKER_02: They didn't evolve to do logic.
+
+433
+00:37:42,293 --> 00:37:44,617
+Speaker SPEAKER_02: And they didn't actually evolve to do natural language.
+
+434
+00:37:44,657 --> 00:37:46,438
+Speaker SPEAKER_02: They evolved for other things.
+
+435
+00:37:46,780 --> 00:37:49,001
+Speaker SPEAKER_02: And they're highly optimized for these other things.
+
+436
+00:37:49,382 --> 00:37:52,306
+Speaker SPEAKER_02: And then we've put all this high level stuff on top of them.
+
+437
+00:37:52,326 --> 00:37:53,788
+Speaker SPEAKER_02: And they're not very good at it, but they can do it.
+
+438
+00:37:53,807 --> 00:37:54,889
+Speaker SPEAKER_02: And it's very important to do it.
+
+439
+00:37:56,190 --> 00:37:59,474
+Speaker SPEAKER_02: So symbol processing is done on top of this other apparition.
+
+440
+00:38:00,788 --> 00:38:03,490
+Speaker SPEAKER_02: And it's not done by having symbols inside the head.
+
+441
+00:38:04,152 --> 00:38:06,614
+Speaker SPEAKER_02: You don't have to have symbols inside the head to do symbol processing.
+
+442
+00:38:07,335 --> 00:38:10,719
+Speaker SPEAKER_02: In just the same ways, you don't have to have pixels inside the head to do pixel processing.
+
+443
+00:38:11,099 --> 00:38:12,981
+Speaker SPEAKER_02: You look at an image, you process those pixels.
+
+444
+00:38:13,943 --> 00:38:21,472
+Speaker SPEAKER_02: But someone who said, well, you must do that by shuffling pixels in the head, someone like, for example, Steve Koslin, would just be stupid.
+
+445
+00:38:22,293 --> 00:38:23,954
+Speaker SPEAKER_02: Oh, sorry, Steve.
+
+446
+00:38:23,974 --> 00:38:25,496
+Speaker SPEAKER_02: Would be incorrect.
+
+447
+00:38:28,193 --> 00:38:33,724
+Speaker SPEAKER_02: We process, the only place you find symbols with us is at the input and at the output.
+
+448
+00:38:33,744 --> 00:38:35,547
+Speaker SPEAKER_02: Inside, it's just all big vectors of activity.
+
+449
+00:38:35,728 --> 00:38:36,429
+Speaker SPEAKER_02: That's all there is.
+
+450
+00:38:37,351 --> 00:38:39,315
+Speaker SPEAKER_02: And those big vectors of activity are thoughts.
+
+451
+00:38:39,514 --> 00:38:40,376
+Speaker SPEAKER_02: That's what thoughts are.
+
+452
+00:38:41,900 --> 00:38:42,320
+Speaker SPEAKER_02: I'm done.
+
+453
+00:38:53,405 --> 00:38:59,871
+Speaker SPEAKER_04: I was told to be very strict with you as to time, but you came in right on the wire, so well done.
+
+454
+00:39:00,172 --> 00:39:06,099
+Speaker SPEAKER_04: So I want to get into some of the sort of more broader considerations of some of the implications of this research.
+
+455
+00:39:06,119 --> 00:39:15,849
+Speaker SPEAKER_04: But I want to ask a personal question to start with, which is that deep learning and neural network approaches have kind of seen their time in the wilderness in the past.
+
+456
+00:39:16,250 --> 00:39:26,061
+Speaker SPEAKER_04: So what was it that kept you so sure that you were on the right path when there were large swaths of the AI community that didn't think it was the right path?
+
+457
+00:39:26,934 --> 00:39:29,498
+Speaker SPEAKER_02: they're just obviously the right thing to do.
+
+458
+00:39:30,039 --> 00:39:31,242
+Speaker SPEAKER_02: I mean, the brain does it, right?
+
+459
+00:39:31,262 --> 00:39:33,344
+Speaker SPEAKER_02: And the brain doesn't do it by someone programming the brain.
+
+460
+00:39:34,106 --> 00:39:37,891
+Speaker SPEAKER_02: I mean, real anatists somehow think evolution programmed the brain, and that's how it does it.
+
+461
+00:39:38,333 --> 00:39:40,275
+Speaker SPEAKER_02: But that's crazy.
+
+462
+00:39:42,920 --> 00:39:46,184
+Speaker SPEAKER_02: So it's just obvious the brain is doing this somehow, and it's doing it by learning.
+
+463
+00:39:47,306 --> 00:39:51,052
+Speaker SPEAKER_02: And it's obvious that logic is something that comes very late.
+
+464
+00:39:51,168 --> 00:39:59,956
+Speaker SPEAKER_02: And really, if these methods that they're trying to do logic with aren't able to do motor control and perception, they're not gonna be explaining most of what's going on in the brain.
+
+465
+00:40:00,918 --> 00:40:03,481
+Speaker SPEAKER_02: So it just seemed to me there was never any alternative.
+
+466
+00:40:03,561 --> 00:40:03,742
+Speaker SPEAKER_04: Right.
+
+467
+00:40:04,302 --> 00:40:08,427
+Speaker SPEAKER_04: Now you alluded to natural language processing as one of the applications of this.
+
+468
+00:40:08,786 --> 00:40:18,998
+Speaker SPEAKER_04: I'm wondering if you could expand on that a little bit and just talk about, in practical terms, what would that mean in terms of our relationship with the computers around us if we have more advanced natural language processing?
+
+469
+00:40:19,889 --> 00:40:29,797
+Speaker SPEAKER_02: Okay, so I think we would all appreciate having a personal assistant who was really intelligent,
+
+470
+00:40:29,980 --> 00:40:38,849
+Speaker SPEAKER_02: but accepted very low wages, and really knew all about us, but was never critical, except when really necessary.
+
+471
+00:40:39,630 --> 00:40:45,175
+Speaker SPEAKER_02: And I think that dream is no longer a dream.
+
+472
+00:40:45,215 --> 00:40:48,778
+Speaker SPEAKER_02: I think we're going to be able to make things that are much, much better than things like Siri.
+
+473
+00:40:48,798 --> 00:40:54,925
+Speaker SPEAKER_02: Things that really understand what's going on in the conversation, and really understand what you mean, and can deal with novel stuff.
+
+474
+00:40:54,905 --> 00:40:56,548
+Speaker SPEAKER_02: And I have no idea how long it's going to be.
+
+475
+00:40:56,588 --> 00:40:57,490
+Speaker SPEAKER_02: It might be 20 years.
+
+476
+00:40:57,811 --> 00:40:58,612
+Speaker SPEAKER_02: It might be five years.
+
+477
+00:40:59,375 --> 00:41:02,681
+Speaker SPEAKER_02: But I think it's clear that with deep learning, we're going to be able to get something like that.
+
+478
+00:41:03,704 --> 00:41:09,436
+Speaker SPEAKER_02: And so I think computers are going to actually enhance our intelligence a lot and just take all the boring bits out of life.
+
+479
+00:41:10,159 --> 00:41:18,068
+Speaker SPEAKER_04: You argue that human thought is this complex pattern of neural activity rather than, as you discussed, this sequential order of reasoning.
+
+480
+00:41:18,530 --> 00:41:25,036
+Speaker SPEAKER_04: So what does your work suggest about the way that mental language and thought work for us as human beings?
+
+481
+00:41:25,498 --> 00:41:25,757
+Speaker SPEAKER_02: OK.
+
+482
+00:41:25,898 --> 00:41:29,461
+Speaker SPEAKER_02: I'm glad you asked that, because as you know, I have a couple more slides.
+
+483
+00:41:30,903 --> 00:41:31,445
+Speaker SPEAKER_02: I did know that.
+
+484
+00:41:31,784 --> 00:41:32,626
+Speaker SPEAKER_02: Academics are like this.
+
+485
+00:41:32,666 --> 00:41:34,288
+Speaker SPEAKER_02: They never miss a chance to put up more slides.
+
+486
+00:41:35,769 --> 00:41:37,871
+Speaker SPEAKER_02: Can I get up the extra slides, please?
+
+487
+00:41:38,257 --> 00:41:51,295
+Speaker SPEAKER_02: Okay, I think, and Dennett agrees with me on this, which was a huge relief, because I'm not a philosopher and he is, that people get misled by misunderstanding how the language of the mental works.
+
+488
+00:41:52,036 --> 00:41:56,483
+Speaker SPEAKER_02: So most people think that mental states are somehow weird, spooky things in your head.
+
+489
+00:41:57,605 --> 00:42:01,030
+Speaker SPEAKER_02: And I want to argue that's not how the language works at all.
+
+490
+00:42:01,831 --> 00:42:05,817
+Speaker SPEAKER_02: And there's a very simple way out of this mistake, which is to say that
+
+491
+00:42:06,860 --> 00:42:09,523
+Speaker SPEAKER_02: We want to refer to what's going on in our brains, right?
+
+492
+00:42:09,623 --> 00:42:14,990
+Speaker SPEAKER_02: I want you to know that in my brain, there's a strong desire to hit you, and you better behave better.
+
+493
+00:42:15,831 --> 00:42:17,614
+Speaker SPEAKER_02: And I want to communicate that to you.
+
+494
+00:42:18,175 --> 00:42:24,364
+Speaker SPEAKER_02: And it's no use me saying that neuron 52 is highly active, because that won't mean anything to you.
+
+495
+00:42:25,065 --> 00:42:27,407
+Speaker SPEAKER_02: Even if I gave you the whole activity vector, it wouldn't mean anything to you.
+
+496
+00:42:28,809 --> 00:42:36,579
+Speaker SPEAKER_02: But a good thing to give to you would be I could describe the normal consequences of this activity vector I have.
+
+497
+00:42:37,724 --> 00:42:49,193
+Speaker SPEAKER_02: And similarly with sensation, I could describe what would have to be in the world for me to be having this sensory activity vector.
+
+498
+00:42:49,213 --> 00:42:57,041
+Speaker SPEAKER_02: So the idea is that when I say I have a sensation of red, I'm not referring to something inside my head.
+
+499
+00:42:58,101 --> 00:43:01,204
+Speaker SPEAKER_02: Almost everybody thinks you're referring to something inside your head, some inner thing.
+
+500
+00:43:02,126 --> 00:43:05,688
+Speaker SPEAKER_02: But if you look at the word red, red refers to things in the world.
+
+501
+00:43:05,786 --> 00:43:07,168
+Speaker SPEAKER_02: It doesn't refer to anything.
+
+502
+00:43:07,228 --> 00:43:09,170
+Speaker SPEAKER_02: It refers to the colors of objects in the world.
+
+503
+00:43:10,471 --> 00:43:14,514
+Speaker SPEAKER_02: And so the language you use for sensation is language that refers to things in the world.
+
+504
+00:43:15,135 --> 00:43:17,338
+Speaker SPEAKER_02: And what's going on is we're using a trick.
+
+505
+00:43:17,777 --> 00:43:22,101
+Speaker SPEAKER_02: We want to refer to these brain patterns, but we can't refer to the brain patterns directly.
+
+506
+00:43:22,702 --> 00:43:24,905
+Speaker SPEAKER_02: So we refer to them via their normal causes.
+
+507
+00:43:25,485 --> 00:43:28,869
+Speaker SPEAKER_02: So I say to you, I've got the brain pattern I would have if I was looking at something red.
+
+508
+00:43:29,849 --> 00:43:32,132
+Speaker SPEAKER_02: So when someone says, I'm seeing pink elephants,
+
+509
+00:43:33,394 --> 00:43:35,318
+Speaker SPEAKER_02: They don't mean there's pink elephants in my head.
+
+510
+00:43:35,717 --> 00:43:41,105
+Speaker SPEAKER_02: They mean if there were pink elephants out there in the real world, then what's in my head would be perception.
+
+511
+00:43:42,065 --> 00:43:44,730
+Speaker SPEAKER_02: I've got the brain pattern that would be appropriate for that.
+
+512
+00:43:44,750 --> 00:43:49,976
+Speaker SPEAKER_02: And similarly for the language of, so that's sensation language, and feeling language is the same.
+
+513
+00:43:52,539 --> 00:43:59,148
+Speaker SPEAKER_02: When I say I feel like hitting Jerry, what I mean is there's a pattern in my head that if I didn't exercise self-control would cause me to hit Jerry.
+
+514
+00:44:01,289 --> 00:44:04,331
+Speaker SPEAKER_02: So the point here is that a mental state isn't an internal state.
+
+515
+00:44:05,032 --> 00:44:17,666
+Speaker SPEAKER_02: It's a hypothetical external state that's being used to refer to what's going on in the brain via normal causation or in either direction, via this causing the state in the brain or the state in the brain causing this.
+
+516
+00:44:18,346 --> 00:44:22,351
+Speaker SPEAKER_02: And there's one place where we get causation in both directions, and that's thoughts.
+
+517
+00:44:23,532 --> 00:44:25,132
+Speaker SPEAKER_02: So here's the real language of thought.
+
+518
+00:44:25,373 --> 00:44:28,697
+Speaker SPEAKER_02: Here's how the language of the word thought works.
+
+519
+00:44:29,469 --> 00:44:34,016
+Speaker SPEAKER_02: If I say, I can say John thought and take anything I like and put it in quotes, and that's what John thought.
+
+520
+00:44:34,677 --> 00:44:37,179
+Speaker SPEAKER_02: But that doesn't mean this thing in quotes is inside John's head.
+
+521
+00:44:37,860 --> 00:44:41,746
+Speaker SPEAKER_02: It's not a string of symbols in his head like AI people used to think.
+
+522
+00:44:41,766 --> 00:44:46,072
+Speaker SPEAKER_02: What I mean by that is, when I say John thought, where should we go for lunch?
+
+523
+00:44:46,992 --> 00:44:53,942
+Speaker SPEAKER_02: What I mean is, John had a neural pattern of activity in his head that would normally be appropriate, that would normally be caused
+
+524
+00:44:54,141 --> 00:44:56,003
+Speaker SPEAKER_02: by somebody else saying, where should we go for lunch?
+
+525
+00:44:56,884 --> 00:45:00,467
+Speaker SPEAKER_02: And would also be the normal cause of him saying, where should we go for lunch?
+
+526
+00:45:01,407 --> 00:45:04,170
+Speaker SPEAKER_02: You see, we have audio in and we have audio out.
+
+527
+00:45:04,271 --> 00:45:10,396
+Speaker SPEAKER_02: So with thoughts, you can have them described by their normal causes and by what they would cause.
+
+528
+00:45:10,757 --> 00:45:16,282
+Speaker SPEAKER_02: And if you share a language with somebody, then that's what thoughts are.
+
+529
+00:45:17,643 --> 00:45:23,288
+Speaker SPEAKER_02: They're patterns in your head, they're big activity factors in your head, and I describe them
+
+530
+00:45:23,807 --> 00:45:26,871
+Speaker SPEAKER_02: by saying what would have caused them or what they would cause.
+
+531
+00:45:26,891 --> 00:45:29,195
+Speaker SPEAKER_02: Cuz there's no use describing them by the activities of the neurons.
+
+532
+00:45:29,215 --> 00:45:30,978
+Speaker SPEAKER_02: It wouldn't be any use to anybody.
+
+533
+00:45:30,998 --> 00:45:31,619
+Speaker SPEAKER_02: Okay, thank you for that.
+
+534
+00:45:31,719 --> 00:45:32,519
+Speaker SPEAKER_02: I'm sorry it was a bit long.
+
+535
+00:45:32,559 --> 00:45:32,780
+Speaker SPEAKER_04: All right.
+
+536
+00:45:33,240 --> 00:45:36,686
+Speaker SPEAKER_04: Okay, so that's what's going on with thought.
+
+537
+00:45:37,126 --> 00:45:39,550
+Speaker SPEAKER_04: But can we talk about consciousness?
+
+538
+00:45:39,570 --> 00:45:41,994
+Speaker SPEAKER_04: I realize this is getting a little bit wooly, but- We can.
+
+539
+00:45:42,014 --> 00:45:45,057
+Speaker SPEAKER_04: I know that philosophers of mind talk about this idea of the hard problem of consciousness.
+
+540
+00:45:45,137 --> 00:45:45,458
+Speaker SPEAKER_00: Yes, they do.
+
+541
+00:45:45,498 --> 00:45:52,228
+Speaker SPEAKER_04: Which is this idea that the question of how these patterns of activity in the brain end up being something like the feeling of
+
+542
+00:45:52,445 --> 00:45:56,289
+Speaker SPEAKER_04: what it feels like to be standing on a stage with Geoffrey Hinton in front of a crowd of people.
+
+543
+00:45:56,771 --> 00:46:00,596
+Speaker SPEAKER_04: So what does your research suggest about that?
+
+544
+00:46:01,056 --> 00:46:08,485
+Speaker SPEAKER_02: Okay, so the slides I just put up suggest that's just all a silly mistake that comes from not understanding how natural language works.
+
+545
+00:46:09,067 --> 00:46:11,550
+Speaker SPEAKER_02: This is an exactly Wittgensteinian solution to the problem.
+
+546
+00:46:11,590 --> 00:46:18,840
+Speaker SPEAKER_02: It says, if you look how natural language actually works, these philosophical problems will just evaporate.
+
+547
+00:46:19,192 --> 00:46:23,135
+Speaker SPEAKER_02: And I'm very relieved to say, I ran this by Dennett thinking he's gonna trash me.
+
+548
+00:46:23,735 --> 00:46:24,797
+Speaker SPEAKER_02: And he said, no, I agree.
+
+549
+00:46:26,978 --> 00:46:32,724
+Speaker SPEAKER_02: He was trained in linguistic philosophy in Oxford just after Wittgenstein was around, so that may be part of the explanation.
+
+550
+00:46:32,744 --> 00:46:35,706
+Speaker SPEAKER_02: But most people think sensations are things inside their head.
+
+551
+00:46:36,407 --> 00:46:39,710
+Speaker SPEAKER_02: And philosophers talk about that by saying there's qualia.
+
+552
+00:46:39,731 --> 00:46:42,594
+Speaker SPEAKER_02: And qualia are these magic things you have inside your head.
+
+553
+00:46:42,614 --> 00:46:46,396
+Speaker SPEAKER_02: They're this spooky stuff that science can't get its hands on.
+
+554
+00:46:47,068 --> 00:46:48,811
+Speaker SPEAKER_02: There isn't any spooky stuff.
+
+555
+00:46:48,831 --> 00:46:54,780
+Speaker SPEAKER_02: There's red things out there, and there's patterns of activity in my head that represent that the things are red out there, and there's nothing else.
+
+556
+00:46:55,983 --> 00:46:58,786
+Speaker SPEAKER_04: But so why do we have that feeling of I-ness?
+
+557
+00:46:59,126 --> 00:46:59,969
+Speaker SPEAKER_04: Where does that come from?
+
+558
+00:47:00,429 --> 00:47:02,632
+Speaker SPEAKER_02: Ah, there's a separate thing about personal identity.
+
+559
+00:47:02,693 --> 00:47:03,574
+Speaker SPEAKER_02: I don't want to get into that.
+
+560
+00:47:03,594 --> 00:47:04,416
+Speaker SPEAKER_02: There's all sorts of stuff there.
+
+561
+00:47:04,436 --> 00:47:04,735
+Speaker SPEAKER_02: Fair enough.
+
+562
+00:47:04,775 --> 00:47:09,422
+Speaker SPEAKER_02: But if we're just talking about perception, I don't think there's any mystery anymore.
+
+563
+00:47:09,443 --> 00:47:09,643
+Speaker SPEAKER_02: Right.
+
+564
+00:47:09,704 --> 00:47:11,166
+Speaker SPEAKER_02: There isn't anything mysterious.
+
+565
+00:47:11,525 --> 00:47:14,510
+Speaker SPEAKER_02: And notice philosophers will often say, well,
+
+566
+00:47:14,777 --> 00:47:21,367
+Speaker SPEAKER_02: What if, when I look at red things, I get the same qualia as you get when you look at green things?
+
+567
+00:47:22,369 --> 00:47:24,572
+Speaker SPEAKER_02: I get the same sensation as you get when you look at green things.
+
+568
+00:47:25,333 --> 00:47:29,579
+Speaker SPEAKER_02: Well, if you think about how the language works, that's logically impossible.
+
+569
+00:47:30,239 --> 00:47:32,603
+Speaker SPEAKER_02: It's not just that it doesn't happen, it's logically impossible.
+
+570
+00:47:33,204 --> 00:47:38,271
+Speaker SPEAKER_02: Because what I mean by the sensation of red is the thing I normally get when I look at red things.
+
+571
+00:47:38,891 --> 00:47:45,266
+Speaker SPEAKER_02: And so I can't have the sensation of green when I look at red things, as long as I'm not colorblind, because that's just how the language works.
+
+572
+00:47:46,909 --> 00:47:49,797
+Speaker SPEAKER_02: So these philosophical problems just sort of, poof, they dissolve.
+
+573
+00:47:51,210 --> 00:48:03,478
+Speaker SPEAKER_04: So to return a little bit to the practical applications of some of this, some of the problems that deep learning is looking at are speech recognition, image recognition, and natural language processing.
+
+574
+00:48:03,498 --> 00:48:09,472
+Speaker SPEAKER_04: So assuming things continue to improve in this area, what's the next horizon beyond?
+
+575
+00:48:10,786 --> 00:48:15,291
+Speaker SPEAKER_02: So there's obviously going to be things like self-driving cars, and they already work pretty well.
+
+576
+00:48:15,972 --> 00:48:17,673
+Speaker SPEAKER_02: And things like that are fairly obvious.
+
+577
+00:48:18,253 --> 00:48:24,621
+Speaker SPEAKER_02: I think really skilled and attentive personal assistants is going to make a huge difference.
+
+578
+00:48:24,641 --> 00:48:29,467
+Speaker SPEAKER_02: Someone was talking at dinner about, what's going to come along that's going to be as disruptive as the internet?
+
+579
+00:48:30,387 --> 00:48:32,230
+Speaker SPEAKER_02: And I think something like that would be as disruptive.
+
+580
+00:48:32,931 --> 00:48:38,396
+Speaker SPEAKER_02: If I had a personal assistant who just knew everything, and anything that needed remembering,
+
+581
+00:48:40,840 --> 00:48:46,539
+Speaker SPEAKER_02: I'm afraid I was almost tempted to say she would remember it, but my personal assistant would remember it.
+
+582
+00:48:50,193 --> 00:48:52,842
+Speaker SPEAKER_02: That would make a huge difference to everybody's life.
+
+583
+00:48:53,210 --> 00:49:10,644
+Speaker SPEAKER_02: Of course there's bad uses of all this stuff and we know that whatever we produce NSA is going to use it to spy on us and the American military is going to use it to invade little countries without any American dead and things like that.
+
+584
+00:49:13,351 --> 00:49:13,952
+Speaker SPEAKER_02: So
+
+585
+00:49:15,231 --> 00:49:19,878
+Speaker SPEAKER_02: You could say we shouldn't be developing any of this technology because people use it for bad things.
+
+586
+00:49:20,719 --> 00:49:21,500
+Speaker SPEAKER_02: I'm an optimist.
+
+587
+00:49:21,559 --> 00:49:25,864
+Speaker SPEAKER_02: I'm more hopeful that we'll get the good uses than the bad uses, but we will get some bad uses.
+
+588
+00:49:26,344 --> 00:49:32,652
+Speaker SPEAKER_02: And there's not much we can do about that except political activity of trying to get people to use this technology sensibly.
+
+589
+00:49:33,614 --> 00:49:45,188
+Speaker SPEAKER_04: We have seen recently high profile people in the sciences talking about the dangers of robots in particular, but AI more generally in the
+
+590
+00:49:45,454 --> 00:49:46,317
+Speaker SPEAKER_04: far future.
+
+591
+00:49:46,416 --> 00:49:50,306
+Speaker SPEAKER_04: Is that something that concerns you and do you think that we need some kind of ethical frameworks around that?
+
+592
+00:49:51,108 --> 00:49:54,135
+Speaker SPEAKER_02: Yeah, it's very hard to see into the far future.
+
+593
+00:49:54,155 --> 00:49:56,380
+Speaker SPEAKER_02: It's like looking a long way through fog, it doesn't work.
+
+594
+00:49:58,967 --> 00:50:03,818
+Speaker SPEAKER_02: But I think it's perfectly reasonable to think that like in a hundred years,
+
+595
+00:50:04,117 --> 00:50:09,164
+Speaker SPEAKER_02: The technology might have developed so much that we can build things that are better than people.
+
+596
+00:50:09,684 --> 00:50:12,367
+Speaker SPEAKER_02: They've read every book in the world, they just understand much more than us.
+
+597
+00:50:12,987 --> 00:50:16,833
+Speaker SPEAKER_02: And all these horror scenarios of us being replaced by these intelligent machines.
+
+598
+00:50:17,592 --> 00:50:20,657
+Speaker SPEAKER_02: So at that kind of time scale, who knows?
+
+599
+00:50:21,398 --> 00:50:25,141
+Speaker SPEAKER_02: I think it's very unlikely in the next short time scale.
+
+600
+00:50:25,161 --> 00:50:26,824
+Speaker SPEAKER_02: I think that's not gonna happen in 10 years.
+
+601
+00:50:28,425 --> 00:50:30,467
+Speaker SPEAKER_04: So around 2000, sorry, go ahead.
+
+602
+00:50:30,487 --> 00:50:32,050
+Speaker SPEAKER_02: Yeah, one other thing to say about that.
+
+603
+00:50:32,400 --> 00:50:40,081
+Speaker SPEAKER_02: I think what NSA is doing already is almost as horrific as that scenario.
+
+604
+00:50:41,023 --> 00:50:48,503
+Speaker SPEAKER_02: And so, to steal a phrase from a philosopher with a rather bad reputation, the terrible has already happened.
+
+605
+00:50:50,643 --> 00:51:02,947
+Speaker SPEAKER_04: Around 2006, we started to see this big leap ahead with deep learning, particularly, partly, at least based on the fact that these very large neural networks could work faster than they could before.
+
+606
+00:51:03,007 --> 00:51:11,503
+Speaker SPEAKER_04: So, is there another technological barrier that you see that we have to overcome to get to the next level, or what's the hard
+
+607
+00:51:11,483 --> 00:51:12,923
+Speaker SPEAKER_04: problem that you're working on now.
+
+608
+00:51:13,585 --> 00:51:21,152
+Speaker SPEAKER_02: So what's kind of interesting at present is that it looks so we might be in a phase of normal science where business as usual is going to make a whole lot of progress.
+
+609
+00:51:22,173 --> 00:51:40,512
+Speaker SPEAKER_02: And I can't actually see why by get, you know, assuming the computer industry can keep producing better hardware and keep doing computations burning less energy, if they can keep doing that with Moore's law for another 10 years or 20 years, I think business as usual is going to take us a huge way.
+
+610
+00:51:41,081 --> 00:51:44,597
+Speaker SPEAKER_02: Obviously, if we get big breakthroughs, big conceptual breakthroughs, that'll take us further.
+
+611
+00:51:45,340 --> 00:51:48,914
+Speaker SPEAKER_02: I think one of the big breakthroughs is going to come is we're going to understand the brain.
+
+612
+00:51:49,688 --> 00:52:05,304
+Speaker SPEAKER_02: I actually, this is just a bet, my personal belief is we're gonna get close enough to how the brain really does do these things that suddenly it all begins to click and we kind of fall into a minimum where it's just obvious how the brain is actually doing this stuff.
+
+613
+00:52:05,324 --> 00:52:06,804
+Speaker SPEAKER_02: And I think we might be quite close to that.
+
+614
+00:52:07,266 --> 00:52:15,813
+Speaker SPEAKER_02: And that will be another revolution because that would affect all sorts of things like education and our sense of who we are.
+
+615
+00:52:16,452 --> 00:52:19,556
+Speaker SPEAKER_02: So I think that would be very exciting.
+
+616
+00:52:19,576 --> 00:52:20,797
+Speaker SPEAKER_02: I'm hoping I get to see that.
+
+617
+00:52:21,057 --> 00:52:22,480
+Speaker SPEAKER_04: Yeah.
+
+618
+00:52:22,500 --> 00:52:30,271
+Speaker SPEAKER_04: So conceptually, do you think there will be a point at which artificial intelligence surpasses human intelligence?
+
+619
+00:52:30,291 --> 00:52:32,474
+Speaker SPEAKER_02: Oh, I think it's inevitable in the very long run.
+
+620
+00:52:32,494 --> 00:52:32,833
+Speaker SPEAKER_04: Yeah.
+
+621
+00:52:32,853 --> 00:52:36,800
+Speaker SPEAKER_02: I mean, why should it sort of asymptote human intelligence?
+
+622
+00:52:37,380 --> 00:52:39,804
+Speaker SPEAKER_02: I don't see any reason.
+
+623
+00:52:41,726 --> 00:52:43,489
+Speaker SPEAKER_02: Sorry, go ahead.
+
+624
+00:52:44,481 --> 00:52:49,009
+Speaker SPEAKER_02: What is done with that technology, I think is gonna be very hard to say.
+
+625
+00:52:49,028 --> 00:52:51,693
+Speaker SPEAKER_02: And I think it's something, it's worthwhile philosophers thinking about that.
+
+626
+00:52:52,313 --> 00:52:53,715
+Speaker SPEAKER_02: But I don't think it's an imminent threat.
+
+627
+00:52:55,159 --> 00:53:08,920
+Speaker SPEAKER_04: But given that human beings are creatures who are embodied and emotional and have hormones and all of this other sort of stuff, do you think that will be an intelligence that is a different type of intelligence from human intelligence?
+
+628
+00:53:09,659 --> 00:53:11,320
+Speaker SPEAKER_02: It could be.
+
+629
+00:53:12,382 --> 00:53:18,889
+Speaker SPEAKER_02: I should say at this point, sort of, just because I figured out some technical tricks for neural networks, people think I'm an expert on the future.
+
+630
+00:53:18,909 --> 00:53:20,132
+Speaker SPEAKER_02: I don't know any more about it than you do.
+
+631
+00:53:20,952 --> 00:53:30,664
+Speaker SPEAKER_02: But my guess would be that, yes, you wouldn't want to create other intelligences that are just like people.
+
+632
+00:53:31,204 --> 00:53:33,447
+Speaker SPEAKER_02: I mean, it's more fun creating people.
+
+633
+00:53:33,467 --> 00:53:36,931
+Speaker SPEAKER_02: You would want other intelligences to be complementary.
+
+634
+00:53:39,038 --> 00:53:44,244
+Speaker SPEAKER_04: So what are you excited about right now in terms of deep learning and where do you see that?
+
+635
+00:53:44,264 --> 00:53:49,211
+Speaker SPEAKER_02: I'm excited about the machine translation, even though I myself haven't made any direct contribution to it.
+
+636
+00:53:50,052 --> 00:53:50,994
+Speaker SPEAKER_02: Some of my students are doing it.
+
+637
+00:53:51,715 --> 00:53:56,081
+Speaker SPEAKER_02: And I think over the fairly short term, we're going to get much better translators.
+
+638
+00:53:56,360 --> 00:53:56,842
+Speaker SPEAKER_02: Yeah.
+
+639
+00:53:56,862 --> 00:54:00,467
+Speaker SPEAKER_02: And I'm excited for things like understanding documents.
+
+640
+00:54:01,387 --> 00:54:04,913
+Speaker SPEAKER_02: I think there's going to be huge progress there over the next five to 10 years.
+
+641
+00:54:05,393 --> 00:54:05,494
+Speaker SPEAKER_04: Okay.
+
+642
+00:54:05,514 --> 00:54:06,614
+Speaker SPEAKER_04: And what will that look like?
+
+643
+00:54:08,333 --> 00:54:10,474
+Speaker SPEAKER_02: I think it'll look roughly like what I said.
+
+644
+00:54:10,514 --> 00:54:25,969
+Speaker SPEAKER_02: Instead of giving Google some words, and it'll find you all the documents have those words in, you give Google some themes, and it'll find the documents that are saying that, even if they're saying it in different words.
+
+645
+00:54:26,028 --> 00:54:37,699
+Speaker SPEAKER_02: And so you're gonna be able to search for documents that, by what it is the documents are claiming, independent of whatever the words are.
+
+646
+00:54:39,907 --> 00:54:42,170
+Speaker SPEAKER_02: And that will be kind of useful.
+
+647
+00:54:42,192 --> 00:54:43,393
+Speaker SPEAKER_04: That will be kind of useful, yeah.
+
+648
+00:54:43,815 --> 00:54:45,318
+Speaker SPEAKER_04: I think we have a little bit of time left.
+
+649
+00:54:45,338 --> 00:54:47,021
+Speaker SPEAKER_04: I'd like to open things up to questions.
+
+650
+00:54:47,061 --> 00:54:49,646
+Speaker SPEAKER_04: There is a microphone over there.
+
+651
+00:54:49,686 --> 00:54:54,695
+Speaker SPEAKER_04: Maybe somebody can pass the microphone over to people who have questions.
+
+652
+00:54:57,001 --> 00:54:58,384
+Speaker SPEAKER_04: Is there anyone in the audience who has a question?
+
+653
+00:54:58,423 --> 00:54:59,585
+Speaker SPEAKER_04: There's a question over here.
+
+654
+00:55:02,722 --> 00:55:05,304
+Speaker SPEAKER_07: Hi, hello.
+
+655
+00:55:05,945 --> 00:55:08,369
+Speaker SPEAKER_07: Professor Rinton, I've got a question.
+
+656
+00:55:08,650 --> 00:55:29,576
+Speaker SPEAKER_07: Just after watching your slides on the language of thought, are you suggesting that you'd be able to have machines or algorithms that are able to understand or could you train these nets to understand human emotion or simulate emotion similar to those that human beings simulate?
+
+657
+00:55:29,757 --> 00:55:30,838
+Speaker SPEAKER_02: I don't see why not.
+
+658
+00:55:30,818 --> 00:55:33,186
+Speaker SPEAKER_02: I don't see anything special about emotion in that sense.
+
+659
+00:55:34,771 --> 00:55:38,103
+Speaker SPEAKER_02: We can already get computers that are pretty good at reading the emotional expressions of faces.
+
+660
+00:55:39,688 --> 00:55:42,717
+Speaker SPEAKER_02: But most people say, but a computer couldn't have an emotion.
+
+661
+00:55:43,204 --> 00:55:45,889
+Speaker SPEAKER_02: And I think that's just a misunderstanding of how natural language works.
+
+662
+00:55:46,452 --> 00:55:55,530
+Speaker SPEAKER_02: You could have a state of activity inside this big neural net in the computer such that if the computer wasn't exercising self-control, it would get out there and punch you.
+
+663
+00:55:56,231 --> 00:55:57,653
+Speaker SPEAKER_02: And that would be a cross-computer.
+
+664
+00:55:58,356 --> 00:56:01,601
+Speaker SPEAKER_02: And it would be a genuinely cross-computer.
+
+665
+00:56:02,289 --> 00:56:03,431
+Speaker SPEAKER_07: We've got another question.
+
+666
+00:56:03,871 --> 00:56:09,798
+Speaker SPEAKER_07: I was wondering, how do you see the commercialization of deep learning playing out?
+
+667
+00:56:10,199 --> 00:56:11,981
+Speaker SPEAKER_07: Commercialization.
+
+668
+00:56:12,001 --> 00:56:12,722
+Speaker SPEAKER_07: Commercialization.
+
+669
+00:56:13,382 --> 00:56:14,704
+Speaker SPEAKER_02: I see it as a thoroughly good thing.
+
+670
+00:56:15,626 --> 00:56:15,905
+Speaker SPEAKER_07: OK.
+
+671
+00:56:16,346 --> 00:56:22,413
+Speaker SPEAKER_07: But I mean, is it going to be an API that you would basically download and train for your specific task?
+
+672
+00:56:22,773 --> 00:56:30,643
+Speaker SPEAKER_07: Or is it just going to be something that big companies like Google, Flickr, et cetera, are going to train for their specific tasks?
+
+673
+00:56:32,108 --> 00:56:36,329
+Speaker SPEAKER_02: I think it's actually quite tricky for me to comment on that at present.
+
+674
+00:56:36,349 --> 00:56:37,132
+Speaker SPEAKER_07: Okay.
+
+675
+00:56:37,152 --> 00:56:37,414
+Speaker SPEAKER_07: Sorry.
+
+676
+00:56:37,936 --> 00:56:39,704
+Speaker SPEAKER_07: I understand.
+
+677
+00:56:41,456 --> 00:56:42,458
+Speaker SPEAKER_04: Thank you for your question.
+
+678
+00:56:42,659 --> 00:56:44,420
+Speaker SPEAKER_04: There was a question over here.
+
+679
+00:56:44,561 --> 00:56:47,085
+Speaker SPEAKER_04: I wonder, is it possible to pass the microphone over?
+
+680
+00:56:47,326 --> 00:56:48,347
+Speaker SPEAKER_04: Yes, please show, yes.
+
+681
+00:56:49,409 --> 00:56:56,659
+Speaker SPEAKER_05: Google would say that machines are going to be as intelligent as humans by 2030 or 2040.
+
+682
+00:56:56,679 --> 00:57:07,195
+Speaker SPEAKER_05: And I'm wondering, given humans' limited lifespan in terms of learning, whether what that forecast for our independence from machines, and whether you have a point of view on how we would
+
+683
+00:57:09,233 --> 00:57:10,481
+Speaker SPEAKER_02: Yeah, I do have a point of view.
+
+684
+00:57:10,782 --> 00:57:12,434
+Speaker SPEAKER_02: I mean, I'm not very confident in it.
+
+685
+00:57:12,956 --> 00:57:15,514
+Speaker SPEAKER_02: But my point of view is we'll get a symbiosis.
+
+686
+00:57:15,815 --> 00:57:24,164
+Speaker SPEAKER_02: I mean, there was a, I don't know biology very well, but there was a point a long time ago when cells got other cells inside them, mitochondria or something, and that made things go better.
+
+687
+00:57:24,864 --> 00:57:37,137
+Speaker SPEAKER_02: And I think you might think of it in evolutionary terms like that, that up to now we've just been biological cells, but now you're gonna get a symbiosis of a person and an intelligent computer, and that's gonna be a far more powerful thing.
+
+688
+00:57:37,898 --> 00:57:41,382
+Speaker SPEAKER_02: And I'm hoping that that's the route it goes, rather than computers replacing people.
+
+689
+00:57:43,692 --> 00:57:53,501
+Speaker SPEAKER_05: What is the relationship between electronics and biology?
+
+690
+00:57:53,521 --> 00:57:55,742
+Speaker SPEAKER_02: Because the symbiotic relationship, one is a machine that's been created and the other is a living human being.
+
+691
+00:57:55,762 --> 00:57:57,605
+Speaker SPEAKER_02: Yeah, but remember the machine can learn.
+
+692
+00:57:57,684 --> 00:58:04,692
+Speaker SPEAKER_02: So as long as you've got adaptive devices, your assistant can sort of adapt to you and you can adapt to your assistant.
+
+693
+00:58:05,431 --> 00:58:07,974
+Speaker SPEAKER_02: So I agree there's a question about how they communicate.
+
+694
+00:58:08,275 --> 00:58:13,480
+Speaker SPEAKER_02: I'm sure there'll be all sorts of fancy technologies for getting things to activate your brain cells without
+
+695
+00:58:13,730 --> 00:58:14,992
+Speaker SPEAKER_02: having to put electrodes in.
+
+696
+00:58:18,858 --> 00:58:26,012
+Speaker SPEAKER_02: No, the fact is nobody has a clue about what's going to happen.
+
+697
+00:58:26,032 --> 00:58:38,032
+Speaker SPEAKER_03: I have kids and sometimes they have control of their parents but not accountability to break something that would fall on my shoulders.
+
+698
+00:58:38,806 --> 00:58:51,123
+Speaker SPEAKER_03: how do you view, as we get more sophisticated, multi-layered networks, you can't really debug them, I mean, you can, but who's accountable?
+
+699
+00:58:51,143 --> 00:58:56,289
+Speaker SPEAKER_02: For example, a kill decision on a drone.
+
+700
+00:58:56,309 --> 00:59:03,699
+Speaker SPEAKER_02: I haven't really thought very hard about that problem, and I know there are other people who've thought much harder about that problem, and so I don't really have anything useful to say.
+
+701
+00:59:07,476 --> 00:59:09,559
+Speaker SPEAKER_04: I think we have time maybe for one more question.
+
+702
+00:59:10,782 --> 00:59:18,932
+Speaker SPEAKER_01: You mentioned that in order for the networks to get better and better, they need more and more neurons, millions, billions, trillions.
+
+703
+00:59:19,893 --> 00:59:26,103
+Speaker SPEAKER_01: And you also said that if Moore's Law continues to apply, we're going to have the ability to do that.
+
+704
+00:59:26,523 --> 00:59:37,398
+Speaker SPEAKER_01: But my question is whether you really think Moore's Law is going to continue to apply, or are we going to run into quantum effects at some point that are going to create a bit of a barrier to moving to the next level?
+
+705
+00:59:37,952 --> 00:59:41,757
+Speaker SPEAKER_02: Yeah, the thing about Moore's law is it's very like evolution itself.
+
+706
+00:59:42,599 --> 00:59:51,369
+Speaker SPEAKER_02: That you have a narrow view of, I mean, maybe 15 years ago, the view of Moore's law would be computers get twice as fast every two years.
+
+707
+00:59:52,010 --> 00:59:55,193
+Speaker SPEAKER_02: And it's the same sort of VLSI, but it's shrinking and getting faster.
+
+708
+00:59:55,753 --> 00:59:57,576
+Speaker SPEAKER_02: And that's how Moore's law is going to be achieved.
+
+709
+00:59:58,137 --> 01:00:00,639
+Speaker SPEAKER_02: And then all of a sudden, we reach a bottleneck there.
+
+710
+01:00:01,121 --> 01:00:02,663
+Speaker SPEAKER_02: And so it just kind of squirts sideways.
+
+711
+01:00:02,722 --> 01:00:04,525
+Speaker SPEAKER_02: And now we have more cores.
+
+712
+01:00:05,105 --> 01:00:07,268
+Speaker SPEAKER_02: And we get twice as many cores every two years.
+
+713
+01:00:07,518 --> 01:00:10,126
+Speaker SPEAKER_02: And then something else will happen.
+
+714
+01:00:11,028 --> 01:00:18,472
+Speaker SPEAKER_02: And so the set of things that can be developed to make Moore's Law keep holding is a kind of open-ended set.
+
+715
+01:00:19,193 --> 01:00:21,882
+Speaker SPEAKER_02: It's not like you're playing a game where there's limited rules and so on.
+
+716
+01:00:22,688 --> 01:00:24,489
+Speaker SPEAKER_02: We are, of course, all governed by physics.
+
+717
+01:00:24,911 --> 01:00:27,815
+Speaker SPEAKER_02: But we're a long way from sort of particles here.
+
+718
+01:00:28,315 --> 01:00:30,759
+Speaker SPEAKER_02: And there's lots and lots of different things to be exploited.
+
+719
+01:00:31,199 --> 01:00:38,628
+Speaker SPEAKER_02: And what seems to happen historically, and I think will keep happening for a while, is that we'll just find different directions to improve in.
+
+720
+01:00:39,349 --> 01:00:43,715
+Speaker SPEAKER_02: Maybe it'll all suddenly go genuinely 3D, and that'll be a huge win.
+
+721
+01:00:44,936 --> 01:00:48,882
+Speaker SPEAKER_02: So I actually think Moore's law is going to hold for longer than most people think it's going to hold.
+
+722
+01:00:48,902 --> 01:00:50,585
+Speaker SPEAKER_02: And I think another 10 years is perfectly reasonable.
+
+723
+01:00:50,605 --> 01:00:50,824
+Speaker SPEAKER_01: Thank you.
+
+724
+01:00:50,844 --> 01:00:52,306
+Speaker SPEAKER_01: An optimistic view, and good.
+
+725
+01:00:54,429 --> 01:00:55,932
+Speaker SPEAKER_04: Well, I want to thank you for your questions.
+
+726
+01:00:55,952 --> 01:00:58,659
+Speaker SPEAKER_04: I want to thank Geoffrey for that very stimulating presentation.
+
+727
+01:00:58,679 --> 01:01:01,786
+Speaker SPEAKER_04: You'll be around if people want to chat with you informally afterwards.
+
+728
+01:01:02,387 --> 01:01:04,612
+Speaker SPEAKER_02: And I'd like to thank Nora for joining us to host.
+
+729
+01:01:04,833 --> 01:01:05,112
+Speaker SPEAKER_04: Thanks.
+
+730
+01:01:05,333 --> 01:01:05,594
+Speaker SPEAKER_04: Thanks.
+
+731
+01:01:05,775 --> 01:01:06,094
+Speaker SPEAKER_04: Thank you.
+
+732
+01:01:06,195 --> 01:01:06,836
+Speaker SPEAKER_04: Thank you, Geoffrey.
+
