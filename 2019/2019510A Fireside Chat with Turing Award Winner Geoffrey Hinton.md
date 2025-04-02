@@ -5,7 +5,7 @@
 - **时间**: 2019年5月10日
 - **主讲人**: Geoffrey Hinton (SPEAKER_00) × Nicholas Thompson (SPEAKER_01)
 - **核心主题**: 神经网络发展历程、生物学习机制启发、深度学习未来挑战
-- **视频链接**: [Wired Interview](https://example.com) (注：原文档未提供链接)
+- **视频链接**：[完整视频](https://www.bilibili.com/video/BV1s4421A7gU/?spm_id_from=333.337.search-card.all.click&vd_source=0bd589f46b265005336c077eea20fb52)
 - **内容概况**: 
   本次对谈覆盖Hinton从1980年代开始的神经网络研究，包括早期挫折、2000年代关键突破（如反向传播算法优化），以及他对意识、教育变革和AI伦理的前瞻思考。Hinton以生物学启发的视角，解释为何坚信神经网络是智能的唯一路径。
 
