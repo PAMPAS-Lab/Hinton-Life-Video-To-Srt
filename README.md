@@ -80,6 +80,8 @@
   - **核心内容**: 回顾Hinton如何引领现代AI技术的发展。  
   - [链接](./2018/2018626This%20Canadian%20Genius%20Created%20Modern%20AI.md)
 
+---
+
 ## 2019
 
 ### **1月**
@@ -253,23 +255,17 @@
   - **核心内容**: 在牛津大学Sheldonian剧院的演讲，探讨AI与人类智能的未来。  
   - [链接](./2024/2024229eoffrey%20Hinton%20教授在%20Sheldonian.md)
 
----
-
 ### **4月**
 - **2024/2024411 Ray Kurzweil & Geoff Hinton Debate the Future**  
   - **日期**: 4月11日  
   - **核心内容**: 与雷·库兹韦尔就AI未来发展及伦理风险展开辩论。  
   - [链接](./2024/2024411Ray%20Kurzweil%20&%20Geoff%20Hinton%20Debate%20the%20Future.md)
 
----
-
 ### **5月**
 - **2024/2024515 Geoffrey Hinton On working with Ilya**  
   - **日期**: 5月15日  
   - **核心内容**: 回顾与Ilya Sutskever的合作经历，反思AI发展的关键节点。  
   - [链接](./2024/2024515Geoffrey%20Hinton%20On%20working%20with%20Ilya.md)
-
----
 
 ### **6月**
 - **2024/202467 Keynote interview with Geoffrey Hinton (remote) and Nicholas Thompson (in-person)**  
@@ -287,15 +283,11 @@
   - **核心内容**: 问答环节中讨论AI对就业、医疗及社会结构的长期影响。  
   - [链接](./2024/2024628Q&A%20with%20Geoffrey%20Hinton.md)
 
----
-
 ### **7月**
 - **2024/202472 Geoffrey Hinton 担忧 AI 的未来**  
   - **日期**: 7月2日  
   - **核心内容**: 表达对AI失控风险的担忧，呼吁全球合作制定安全协议。  
   - [链接](./2024/202472Geoffrey%20Hinton%20担忧%20AI%20的未来.md)
-
----
 
 ### **10月**
 - **2024/2024109 ‘Godfather of AI’ on AI “exceeding human intelligence” and it “trying to take over”**  
@@ -318,8 +310,6 @@
   - **核心内容**: 批评OpenAI创始人Sam Altman的商业动机，认为其可能削弱AI的长期安全性。  
   - [链接](./2024/20241012Geoffrey%20Hinton%20Calls%20It%20Unfortunate%20That%20Ilya%20Found%20Out%20Sam%20Altman%20Was%20Profit-Driven.md)
 
----
-
 ### **11月**
 - **2024/2024121 AI教父Hinton十一月KBS访谈**  
   - **日期**: 11月12日（推测标题矛盾，文件名显示12月1日）  
@@ -330,8 +320,6 @@
   - **日期**: 11月16日  
   - **核心内容**: 在Turing Minds会议上回答公众提问，涵盖AI伦理、监管及技术突破。  
   - [链接](./2024/20241116Questions%20&%20Answers%20with%20Dr.%20Geoffrey%20Hinton%20-%20Turing%20Minds%202024.md)
-
----
 
 ### **12月**
 - **2024/2024121 AI教父Hinton十一月KBS访谈**  
