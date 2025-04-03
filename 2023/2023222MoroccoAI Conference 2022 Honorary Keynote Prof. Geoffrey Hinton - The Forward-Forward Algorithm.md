@@ -2,10 +2,10 @@
 
 ## 📽️ 视频概览
 - **标题**: The Forward-Forward Algorithm: A New Approach to Training Neural Networks
-- **时间**: 2022年于MoroccoAI Conference
+- **时间**: 2022年2月22日于MoroccoAI Conference
 - **主讲人**: Geoffrey Hinton (SPEAKER_01)
 - **核心主题**: 探讨了神经网络的新训练方法——前向-前向算法（Forward-Forward Algorithm），并讨论了无监督学习、卷积神经网络的局限性以及未来的发展方向。
-- **视频链接**：[链接文本](https://example.com/moroccoai-conference-2022)
+- **视频链接**: [完整视频](https://www.youtube.com/watch?v=_5W5BvKe_6Y)
 
 ## 🎯 核心观点与技术预测
 
