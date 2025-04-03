@@ -1,12 +1,11 @@
-# Geoffrey Hinton: “AI教父对数字智能的警告”（2025年采访总结）
+# Geoffrey Hinton: “AI教父对数字智能的警告”
 
 ## 📽️ 视频概览
 - **标题**: 教父对话：Geoffrey Hinton为何担忧AI的未来  
 - **日期**: 2025年1月26号（在伦敦家中采访）  
 - **演讲者**: Geoffrey Hinton（多伦多大学荣休教授，前谷歌研究员）  
 - **核心主题**: 从神经网络先驱到AI风险警示者——分析数字智能的进化优势与生存风险  
-- **视频链接**: [完整采访](https://example.com/hinton-interview-2025)  
-
+- **视频链接**: [完整视频](https://www.youtube.com/watch?v=y2df7HXfQdM)
 ---
 
 ## 🎯 核心观点与技术预测
