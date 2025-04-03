@@ -1,14 +1,15 @@
-# Geoffrey Hinton Reflects: From Boltzmann Machines to AI Consciousness (2024 Interview Insights)
+# Geoffrey Hinton Reflects: From Boltzmann Machines to AI Consciousness
 
 ## 📽️ 视频概览
 - **标题**: "On Working with Ilya Sutskever & The Evolution of AI" - Geoffrey Hinton Interview
-- **时间**: 2024年5月
+- **时间**: 2024年5月15日
 - **主讲人**: Geoffrey Hinton (与采访者深度对话)
 - **核心主题**:
   - 与Ilya Sutskever的合作起源与突破性工作 (00:05:00-00:08:00)
   - 语言模型理解的本质辩论 (00:09:00-00:15:00)
   - 数字计算与生物计算的哲学对比 (00:23:00-00:27:00)
   - AI意识的理论框架创新 (00:29:00-00:32:00)
+- **视频链接**: [完整视频](https://www.youtube.com/watch?v=n4IQOBka8bc)
 - **内容亮点**:
   - 首次披露1985年首个神经网络语言模型细节
   - 关于"堆肥堆像原子弹"的GPT-4类比能力分析
