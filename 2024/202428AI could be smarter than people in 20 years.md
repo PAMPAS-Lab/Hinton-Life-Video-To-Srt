@@ -1,12 +1,11 @@
-# Geoffrey Hinton: "AI Could Be Smarter Than People in 20 Years" (2024 Interview Summary)
+# Geoffrey Hinton: "AI Could Be Smarter Than People in 20 Years" 
 
 ## 📽️ 视频概览
 - **标题**: AI Could Be Smarter Than People in 20 Years
 - **时间**: 2024年2月8号加拿大电视台专访
 - **主讲人**: Geoffrey Hinton (AI领域"教父")
 - **核心主题**: 超级智能AI的临近风险与机遇，包括选举安全、医疗革命和人类文明存续挑战
-- **视频链接**: [完整访谈](根据实际链接补充)
--**内容概况**-：
+- **视频链接**: [完整视频](https://www.youtube.com/watch?v=bEuNgY7Olbo)  
 ---
 
 ## 🎯 核心观点与技术预测
