@@ -5,7 +5,7 @@
 - **时间**: 2023年于6月5号剑桥大学
 - **主讲人**: Geoffrey Hinton (SPEAKER_12)
 - **核心主题**: 对比数字计算（Digital Computation）与生物计算（Biological Computation）的优劣，探讨人工智能超越人类智能的可能性及潜在风险。
-- **视频链接**: [观看完整讲座](https://techtv.mit.edu/collections/bcs/videos/30698-what-s-wrong-with-convolutional-nets)
+- **视频链接**: [完整视频](https://www.youtube.com/watch?v=rGgGOccMEiY)
 - **内容概况**: 讲座围绕Hinton对AI风险认知的转变展开，重点分析了数字智能在知识共享和学习算法上的优势，并预测超级智能可能在未来5-20年内出现。
 
 ---
