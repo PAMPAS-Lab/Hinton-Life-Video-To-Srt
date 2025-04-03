@@ -1,11 +1,11 @@
-# Geoffrey Hinton: "AI教父在InfoTech Live 2023上的访谈" (2024年采访总结)
+# Geoffrey Hinton: "AI教父在InfoTech Live 2023上的访谈"
 
 ## 📽️ 视频概览
 - **标题**: AI教父在InfoTech Live 2023上的访谈  
 - **时间**: 2024年  
 - **主讲人**: Geoffrey Hinton  
 - **核心主题**: 探讨了人工智能的发展历程、关键突破及其对未来的展望，特别强调了深度学习的重要性及面临的挑战。  
-- **视频链接**: [完整采访](https://example.com/hinton-infotech-live-2023)  
+- **视频链接**: [完整视频](https://www.youtube.com/watch?v=q2Hg29zvD8U)  
 
 ---
 
