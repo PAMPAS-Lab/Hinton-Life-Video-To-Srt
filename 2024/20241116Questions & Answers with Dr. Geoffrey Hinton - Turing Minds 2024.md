@@ -9,7 +9,7 @@
   - 玻尔兹曼机(1985)的统计物理基础与"睡眠学习"机制
   - 现代深度学习与早期神经网络理论的传承关系
 - **技术深度**: 包含数学推导与认知科学类比，适合有机器学习基础的观众
-- **视频链接**: [完整视频](https://www.bilibili.com/video/BV1dY2PYfEiv/?spm_id_from=333.337.search-card.all.click&vd_source=0bd589f46b265005336c077eea20fb52)
+- **视频链接**: [完整视频](https://www.youtube.com/watch?v=GL-CjROdRWg)
 
 ---
 
