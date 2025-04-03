@@ -2,10 +2,10 @@
 
 ## 📽️ 视频概览
 - **标题**: Nobel Prize Lecture by Geoffrey Hinton
-- **时间**: 2024年1月28日
+- **时间**: 2024年12月8日
 - **主讲人**: Geoffrey Hinton（2018年图灵奖得主，2024年诺贝尔物理学奖获得者）
 - **核心主题**: 玻尔兹曼机（Boltzmann Machines）的理论突破及其对深度学习的奠基性贡献
-- **视频链接**: [Nobel Prize Organization](https://www.nobelprize.org)
+- **视频链接**: [完整视频](https://www.youtube.com/watch?v=XDE9DjpcSdI)  
 - **内容概况**: 1小时20分钟的技术讲座，详细阐释玻尔兹曼机的运行原理、学习算法及其在现代AI发展中的关键作用
 
 ---
