@@ -1,10 +1,11 @@
-# Geoffrey Hinton: "Why The Godfather of AI Now Fears His Own Creation" (2024 Interview Summary)
+# Geoffrey Hinton: "Why The Godfather of AI Now Fears His Own Creation"
 
 ## 📽️ 视频概览
 - **标题**: Why The Godfather of AI Now Fears His Own Creation
-- **时间**: 2024年 (具体日期未提及)
+- **时间**: 2025年1月18日
 - **主讲人**: Geoffrey Hinton (2024年诺贝尔物理学奖得主，前Google副总裁及工程研究员)
 - **核心主题**: Hinton反思AI技术的快速发展及其对人类社会的潜在威胁，探讨AI意识、安全性及伦理问题
+- **视频链接**: [完整视频](https://www.youtube.com/watch?v=b_DUft-BdIE)
 - **内容概况**: 本次访谈深入讨论了Hinton对AI技术未来发展的担忧，包括AI可能超越人类控制的风险、AI意识的本质、以及如何确保AI发展的安全性
 
 ---
