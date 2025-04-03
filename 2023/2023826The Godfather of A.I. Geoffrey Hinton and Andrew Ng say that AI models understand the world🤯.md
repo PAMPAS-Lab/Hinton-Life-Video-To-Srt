@@ -2,7 +2,7 @@
 
 ## 📽️ 视频概览
 - **标题**: The Godfather of A.I. Geoffrey Hinton and Andrew Ng say that AI models understand the world
-- **时间**: 2023年8月
+- **时间**: 2023年8月26日
 - **主讲人**: 
   - Geoffrey Hinton（多伦多大学荣休教授）
   - Andrew Ng（DeepLearning.AI创始人）
@@ -10,6 +10,7 @@
   - AI研究社区需就大语言模型(Large Language Models)的"理解能力"达成共识（00:02:00）
   - "世界模型"(World Model)构建是理解的关键证据（00:03:12）
   - 技术共识对政策制定的重要性（00:00:19）
+- **视频链接**: [完整视频](https://www.youtube.com/watch?v=TyF-DQ_w5DE) 
 - **内容亮点**:
   - 两大AI领袖首次公开联合呼吁学术共识
   - 回应Yann LeCun的"随机鹦鹉"(Stochastic Parrot)理论
