@@ -1,4 +1,4 @@
-# Geoffrey Hinton and Yann LeCun: Insights into Neural Networks and Machine Learning (2014 MIT Talk Summary)
+# Geoffrey Hinton and Yann LeCun: Insights into Neural Networks and Machine Learning
 
 ## 📽️ 视频概览
 - **标题**: 深度学习与神经网络的现状及未来
