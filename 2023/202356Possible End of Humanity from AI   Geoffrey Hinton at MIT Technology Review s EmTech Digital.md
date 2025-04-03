@@ -5,7 +5,7 @@
 - **时间**: 2023年5月6号于MIT EmTech Digital会议  
 - **主讲人**: Geoffrey Hinton (SPEAKER_05)，深度学习先驱、图灵奖得主  
 - **核心主题**: AI技术（尤其是大语言模型）的潜在生存威胁，数字智能超越生物智能的可能性，以及人类应对策略的探讨  
-- **完整字幕**: [点击查看](https://example.com)（示例链接）  
+- **视频链接**: [完整视频](https://www.technologyreview.com/2023/05/03/1072589/video-geoffrey-hinton-google-ai-risk-ethics/)  
 
 ---
 
