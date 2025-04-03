@@ -1,10 +1,11 @@
-# Geoffrey Hinton: AI's Evolutionary Leap & Existential Risks (2024 Interview Summary)
+# Geoffrey Hinton: AI's Evolutionary Leap & Existential Risks
 
 ## 📽️ 视频概览
 - **标题**: Geoffrey Hinton 担忧 AI 的未来
-- **时间**: 2024年
+- **时间**: 2024年7月2日
 - **主讲人**: Geoffrey Hinton (多伦多大学名誉教授，"AI教父")
 - **核心主题**: 数字智能超越生物智能的机制、AI发展速度的重新评估，以及超级智能带来的生存威胁
+- **视频链接**: [完整视频](https://www.youtube.com/watch?v=LTb6afKYpJc)
 - **内容概况**: 本次深度访谈揭示了Hinton对AI认知的根本转变，从技术架构差异到社会监管框架的全面思考，包含神经网络工作原理的权威讲解和ChatGPT能力的惊人案例。
 
 ---
