@@ -5,7 +5,7 @@
 - **时间**: 2023年5月2号
 - **主讲人**: Dr. Geoffrey Hinton (SPEAKER_02)
 - **核心主题**: 反思 AI 发展的风险，警告人工智能可能超越人类智能，并被恶意利用。
-- **视频来源**: [BBC News](https://www.bbc.com)
+- **视频来源**: [完整视频](https://www.youtube.com/watch?v=DsBGaHywRhs)
 
 ---
 
