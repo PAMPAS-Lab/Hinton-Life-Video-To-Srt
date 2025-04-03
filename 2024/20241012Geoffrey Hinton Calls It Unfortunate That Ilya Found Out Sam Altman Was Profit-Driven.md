@@ -1,4 +1,4 @@
-# Geoffrey Hinton on AI Safety, OpenAI Governance & Healthcare Potential (2024 Press Call Transcript)
+# Geoffrey Hinton on AI Safety, OpenAI Governance & Healthcare Potential
 
 ## 📽️ 视频概览
 - **场合**: 2024年诺贝尔物理学奖得主媒体问答会
@@ -8,6 +8,7 @@
   - OpenAI内部安全理念冲突
   - AI监管与安全研究投入
   - 医疗诊断等社会效益展望
+- **视频链接**: [完整视频](https://www.youtube.com/watch?v=9K5mtyXrhnU)
 - **对话特点**: 展现Hinton对AI发展的矛盾心态 - 既担忧失控风险，又期待技术红利
 
 ---
