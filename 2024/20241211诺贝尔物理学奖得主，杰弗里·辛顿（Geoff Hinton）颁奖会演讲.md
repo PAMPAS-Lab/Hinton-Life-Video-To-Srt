@@ -1,4 +1,4 @@
-# Geoffrey Hinton Nobel Prize Lecture: "Hopfield Nets & The Dawn of Deep Learning" (2024 Stockholm)
+# Geoffrey Hinton Nobel Prize Lecture: "Hopfield Nets & The Dawn of Deep Learning"
 
 ## 📽️ 视频概览
 - **场合**: 2024年诺贝尔物理学奖颁奖典礼学术讲座
@@ -9,6 +9,7 @@
   - 玻尔兹曼机(1985)的"觉醒-睡眠"学习机制
   - 受限玻尔兹曼机(RBM)如何开启深度学习革命
 - **演讲特色**: 避开数学公式，通过可视化类比阐述复杂概念(00:02:11)
+- **视频链接**: [完整视频](https://www.youtube.com/watch?v=KCnqcugl8p4)
 
 ---
 
