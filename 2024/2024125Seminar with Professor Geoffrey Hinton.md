@@ -1,11 +1,11 @@
-# Geoffrey Hinton: "What's Wrong with Convolutional Neural Nets?" (2014 MIT Talk Summary)
+# Seminar with Professor Geoffrey Hinton
 
 📽️ **视频概览**  
-- **标题**: What's Wrong with Convolutional Neural Nets?  
-- **时间**: 2014年于MIT  
+- **标题**: Seminar with Professor Geoffrey Hinton 
+- **时间**: 2014年于12月5日
 - **主讲人**: Geoffrey Hinton (SPEAKER_01)  
 - **核心主题**: 批判传统卷积神经网络（ConvNets）的局限性，提出“胶囊网络”（Capsule Networks）的架构设计。  
-- **视频链接**: [链接文本](#)
+- **视频链接**: [完整视频](https://www.youtube.com/watch?v=515TAgpJrYc)  
 
 ---
 
