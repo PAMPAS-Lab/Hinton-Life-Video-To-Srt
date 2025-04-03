@@ -2,10 +2,10 @@
 
 ## 📽️ 视频概览
 - **标题**: Geoffrey Hinton helped create AI. Now he’s worried it will destroy us.
-- **时间**: 2023年于某未指明的会议或访谈
+- **时间**: 2023年于5月11日
 - **主讲人**: Geoffrey Hinton (SPEAKER_01)
 - **核心主题**: 探讨了AI技术的发展现状、潜在风险以及Hinton对未来的担忧，特别是关于AI可能带来的伦理和社会问题。
-- **视频链接**：[链接文本](https://example.com/geoffrey-hinton-interview)
+- **视频链接**：[完整视频](https://www.youtube.com/watch?v=CkTUgOOa3n8)
 
 ## 🎯 核心观点与技术预测
 
