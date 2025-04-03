@@ -5,7 +5,7 @@
 - **时间**: 2022年于斯坦福大学
 - **主讲人**: Geoffrey Hinton (SPEAKER_00)
 - **核心主题**: 提出"Glom"架构，通过动态嵌入向量（embeddings）的"共识岛屿"（islands of agreement）实现神经网络中对部分-整体层次结构的表达，解决传统卷积网络（ConvNets）和胶囊网络（Capsule Networks）的局限性。
-- **视频链接**: [Stanford CS25讲座](https://www.youtube.com/watch?v=示例链接)
+- **视频链接**: [完整视频](https://www.youtube.com/watch?v=CYaju6aCMoQ)  
 - **内容概况**: 演讲结合认知心理学实验、计算机视觉任务和自然语言处理模型（如BERT），阐述如何通过层级化动态路由实现生物可解释的视觉解析树（parse tree）建模。
 
 ---
