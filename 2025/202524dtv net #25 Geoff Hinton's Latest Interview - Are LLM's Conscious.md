@@ -1,10 +1,11 @@
-# Geoffrey Hinton: Consciousness & Control in AI Systems (2024 Interview Summary)
+# Geoffrey Hinton: Consciousness & Control in AI Systems
 
 ## 📽️ 视频概览
 - **标题**: Are LLM's Conscious? - Geoffrey Hinton's Latest Interview
-- **时间**: 2024年
+- **时间**: 2025年2月4日
 - **主讲人**: Geoffrey Hinton (多伦多大学名誉教授，"AI教父")
 - **核心主题**: 大语言模型的意识可能性、智能体自主目标形成的风险机制，以及社会应对策略
+- **视频链接**: [完整视频](https://www.youtube.com/watch?v=yybJ0r3SCF8)
 - **内容概况**: 本次访谈深入探讨了AI系统的意识本质，揭示了智能体通过子目标获取控制权的演化路径，并分析了政治监管面临的根本性挑战。
 
 ---
