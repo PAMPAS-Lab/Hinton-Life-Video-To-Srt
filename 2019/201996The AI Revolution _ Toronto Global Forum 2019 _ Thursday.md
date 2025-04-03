@@ -1,9 +1,9 @@
-# Geoffrey Hinton: "The Evolution of AI and Deep Learning" (Interview Summary)
+# Geoffrey Hinton: "The Evolution of AI and Deep Learning"
 
 ## 📽️ 视频概览
-- **标题**: The Evolution of AI and Deep Learning (推测标题，基于内容)
+- **标题**: The Evolution of AI and Deep Learning
 - **时间**: 2019年9月6号
-- **主讲人**: Geoffrey Hinton (SPEAKER_03), 另一位发言者 (SPEAKER_02，可能为Yoshua Bengio), 采访者 (SPEAKER_00)
+- **主讲人**: Geoffrey Hinton (SPEAKER_03), 另一位发言者 (SPEAKER_02，为Yoshua Bengio), 采访者 (SPEAKER_00)
 - **核心主题**: 探讨AI从符号主义到神经网络的范式转变，深度学习的核心概念及其应用前景，Hinton分享其技术信念与社会影响思考。
 - **视频链接**：[完整视频](https://www.youtube.com/watch?v=e8FBi4icNgs)
 - **内容概况**: 本采访记录了Geoffrey Hinton对AI和深度学习发展的见解，从早期神经网络的挣扎到现代应用的突破。他阐述了深度学习的基本原理（如通过数据调整连接强度），探讨了其在材料科学、自动驾驶等领域的潜力，同时对隐私、伦理和社会治理提出深刻反思。Hinton强调技术进步与社会智慧之间的“竞赛”，并对未来发展持谨慎乐观态度。
