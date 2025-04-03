@@ -1,10 +1,11 @@
-# Geoffrey Hinton: AI's Promise & Peril (2024 Keynote Interview Summary)
+# Geoffrey Hinton: AI's Promise & Peril
 
 ## 📽️ 视频概览
 - **标题**: Keynote interview with Geoffrey Hinton (remote) and Nicholas Thompson (in-person)
 - **时间**: 2024年6月7号
 - **主讲人**: Geoffrey Hinton (AI先驱, 图灵奖得主)
 - **核心主题**: AI技术发展带来的机遇与生存威胁，数字智能超越生物智能的机制，以及社会监管框架的紧迫需求
+- **视频链接**: [完整视频](https://www.youtube.com/watch?v=dNjClDI6zT4)
 - **内容概况**: 本次访谈涵盖了Hinton从Google离职的深层原因、AI系统的主观体验、技术不平等影响、选举安全威胁等多维度讨论，呈现了这位"AI教父"对技术发展最前沿的思考与预警。
 
 ---
