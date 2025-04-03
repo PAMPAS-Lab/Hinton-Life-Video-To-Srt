@@ -2,12 +2,13 @@
 
 ## 📽️ 视频概览
 - **标题**: Geoffrey Hinton's Public Lecture on AI Understanding and Risks
-- **时间**: 2024年于Sheldonian Theatre
+- **时间**: 2024年2月28日于Sheldonian Theatre
 - **主讲人**: Geoffrey Hinton (深度学习先驱，图灵奖得主)
 - **核心主题**: 
   - 神经网络与语言模型如何实现真正的"理解"
   - 数字计算与模拟计算的本质差异及其对AI发展的影响
   - AI对人类文明的生存性威胁
+- **视频链接**: [完整视频](https://www.youtube.com/watch?v=N1TEjTeQeg0)  
 - **内容框架**:
   - 对比符号主义与神经网络两种AI范式 (00:00:02-00:01:20)
   - 反向传播算法原理及其效率突破 (00:01:20-00:04:07)
