@@ -1,8 +1,8 @@
-# Geoffrey Hinton vs. Ray Kurzweil: The Great AI Debate (2024 Discussion Summary)
+# Geoffrey Hinton vs. Ray Kurzweil: The Great AI Debate
 
 ## 📽️ 视频概览
 - **标题**: "Digital Superintelligence: Threat or Hope?" - Kurzweil & Hinton Debate
-- **时间**: 2024年4月
+- **时间**: 2024年4月11日
 - **参与者**: 
   - Geoffrey Hinton (深度学习先驱)
   - Ray Kurzweil (未来学家，Google工程总监)
@@ -16,6 +16,7 @@
   - Hinton的"主观体验"新理论 (00:13:00-00:16:00)
   - Kurzweil的2045奇点论 vs Hinton的5-20年预测 (00:23:00-00:24:00)
   - 关于人类永生的根本分歧 (开场即引爆)
+- **视频链接**: [完整视频](https://www.youtube.com/watch?v=kCre83853TM)
 
 ---
 
