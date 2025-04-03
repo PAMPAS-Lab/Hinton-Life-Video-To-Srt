@@ -1,14 +1,15 @@
-# Geoffrey Hinton: "Hopfield Nets & Boltzmann Machines" (Turing Minds 2024 Lecture Summary)
+# Geoffrey Hinton: "Hopfield Nets & Boltzmann Machines"
 
 ## 📽️ 视频概览
 - **标题**: Rediscovering Neural Network Foundations - Hopfield Nets & Boltzmann Machines
-- **时间**: 2024年11月16日于Turing Minds研讨会
+- **时间**: 2024年11月16日
 - **主讲人**: Geoffrey Hinton (2024诺贝尔物理学奖得主)
 - **核心主题**: 
   - Hopfield网络(1982)的动力学与能量最小化原理
   - 玻尔兹曼机(1985)的统计物理基础与"睡眠学习"机制
   - 现代深度学习与早期神经网络理论的传承关系
 - **技术深度**: 包含数学推导与认知科学类比，适合有机器学习基础的观众
+- **视频链接**: [完整视频](https://www.bilibili.com/video/BV1dY2PYfEiv/?spm_id_from=333.337.search-card.all.click&vd_source=0bd589f46b265005336c077eea20fb52)
 
 ---
 
