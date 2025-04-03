@@ -1,10 +1,11 @@
-# Geoffrey Hinton: "AI 超越人类智能与潜在威胁" (2024 访谈总结)
+# Geoffrey Hinton: "AI 超越人类智能与潜在威胁"
 
 ## 📽️ 视频概览
 - **标题**: 'Godfather of AI' on AI "exceeding human intelligence" and it "trying to take over"
-- **时间**: 2024年
+- **时间**: 2024年10月9日
 - **主讲人**: Geoffrey Hinton (AI领域先驱，被誉为"深度学习之父")
 - **核心主题**: 讨论AI超越人类智能的时间表、失控风险、军事应用威胁以及社会影响
+- **视频链接**: [完整视频](https://www.youtube.com/watch?v=MGJpR591oaM)
 - **内容概况**: Hinton从技术专家角度分析了AI发展的临界点，提出5-20年内有50%概率面临AI试图接管控制权的危机，并呼吁国际社会优先监管军事应用。
 
 ---
