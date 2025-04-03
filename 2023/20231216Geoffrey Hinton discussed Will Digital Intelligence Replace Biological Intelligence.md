@@ -5,7 +5,7 @@
 - **时间**: 2023年MIT Miller科学与伦理讲座
 - **主讲人**: Geoffrey Hinton (图灵奖得主，多伦多大学荣誉教授)
 - **核心主题**: 数字计算与生物计算的本质差异，大型语言模型的理解能力，以及超级智能的伦理挑战
-- **讲座链接**: [MIT STS Program](https://sts.mit.edu)
+- **视频链接**: [完整视频](https://www.youtube.com/watch?v=iWPo7Yhg7Vc)
 - **内容亮点**: 
   - 首次系统阐述"可死亡计算"(Mortal Computation)理论 (00:04:27)
   - 公开承认从Google离职的真实原因 (00:01:17)
