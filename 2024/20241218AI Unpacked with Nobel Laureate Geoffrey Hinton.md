@@ -1,10 +1,11 @@
-# Geoffrey Hinton：2024年诺贝尔奖得主谈AI未来展望（MIT对话实录）
+# Geoffrey Hinton：2024年诺贝尔奖得主谈AI未来展望
 
 ## 📽️ 视频概览
 - **标题**: AI Unpacked with Nobel Laureate Geoffrey Hinton  
-- **时间**: 2024年12月于MIT  
+- **时间**: 2024年12月于18日
 - **主讲人**: Geoffrey Hinton（深度学习之父，2024年诺贝尔奖得主）  
-- **核心主题**: AI技术发展速度、大语言模型（LLM）的理解能力、创造力本质、社会影响及未来工作形态  
+- **核心主题**: AI技术发展速度、大语言模型（LLM）的理解能力、创造力本质、社会影响及未来工作形态
+- **视频链接**: [完整视频](https://www.youtube.com/watch?v=9JlKg57GPgM)  
 - **内容亮点**: 包含Hinton对AI发展历史的反思、对GPT-4认知能力的突破性见解，以及关于医疗/教育领域变革的前瞻预测  
 
 ---
