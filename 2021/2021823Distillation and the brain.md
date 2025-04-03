@@ -1,4 +1,4 @@
-# Geoffrey Hinton: "Distillation and the Brain" (2021 MIT Talk Summary)
+# Geoffrey Hinton: "Distillation and the Brain" 
 
 ## 📽️ 视频概览
 - **标题**: Distillation and the Brain  
