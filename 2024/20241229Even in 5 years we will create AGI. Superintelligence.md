@@ -1,11 +1,11 @@
-# Geoffrey Hinton: "即使在5年内我们也会创造出AGI. 超级智能" (2024年采访总结)
+# Geoffrey Hinton: "即使在5年内我们也会创造出AGI. 超级智能"
 
 ## 📽️ 视频概览
 - **标题**: 即使在5年内我们也会创造出AGI. 超级智能  
-- **时间**: 2024年  
+- **时间**: 2024年12月29日  
 - **主讲人**: Geoffrey Hinton  
 - **核心主题**: 探讨了AI的发展现状、技术突破及其对未来的展望，特别是关于通用人工智能（AGI）的预测和超级智能的风险。  
-- **视频链接**: [完整采访](https://example.com/hinton-superintelligence-2024)  
+- **视频链接**: [完整视频](https://www.youtube.com/watch?v=515TAgpJrYc)  
 
 ---
 
