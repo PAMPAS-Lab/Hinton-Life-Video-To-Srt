@@ -6,7 +6,7 @@
 - **主讲人**: Geoffrey Hinton (SPEAKER_00) - 深度学习先驱，前Google研究员
 - **核心主题**: 人工智能的潜在风险，包括超级智能AI失控的可能性
 - **背景**: Hinton辞去Google职务以自由表达对AI风险的担忧
-- **完整内容**: [视频链接](根据实际链接补充)
+- **视频链接**: [完整视频](https://www.youtube.com/watch?v=Y6Sgp7y178k)  
 
 ---
 
