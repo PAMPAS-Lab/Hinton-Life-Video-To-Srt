@@ -2,9 +2,10 @@
 
 ## 📽️ 视频概览
 - **标题**: "The Godfather in Conversation: Why Geoffrey Hinton is worried about the future of AI"
-- **时间**: 2023年6月于伦敦家中录制
+- **时间**: 2023年6月23日
 - **主讲人**: Geoffrey Hinton（多伦多大学荣休教授，前Google Brain团队成员）
 - **核心主题**: AI技术突变的潜在风险、数字智能与生物智能的本质差异、社会应对策略
+- **视频链接**: [完整视频](https://www.youtube.com/watch?v=-9cW4Gcn5WY)  
 - **内容亮点**: 
   - 首次详细解释为何辞去Google职务（00:00:16）
   - 揭示数字智能超越人类智能的"蜂群思维"特性（00:01:50）
