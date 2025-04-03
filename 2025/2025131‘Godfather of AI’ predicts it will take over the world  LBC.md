@@ -5,7 +5,7 @@
 - **时间**: 2025年1月31日LBC电台专访
 - **主讲人**: Geoffrey Hinton (AI教父，多伦多大学教授)
 - **核心主题**: AI发展速度、失控风险、就业冲击及监管挑战
-- **完整访谈**: [LBC访谈链接](https://www.lbc.co.uk/radio/presenters/iain-dale/geoffrey-hinton-ai-takeover/)
+- **视频链接**: [完整视频](https://www.youtube.com/watch?v=vxkBE23zDmQ&t=0s)
 - **内容概况**: 40分钟深度对话，涵盖AI进化、意识本质、经济影响等关键议题
 
 ---
