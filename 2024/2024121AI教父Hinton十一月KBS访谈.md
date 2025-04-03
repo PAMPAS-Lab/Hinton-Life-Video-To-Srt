@@ -1,11 +1,12 @@
-# Geoffrey Hinton KBS访谈："AI革命与人类未来"（2024年深度解析）
+# Geoffrey Hinton KBS访谈："AI革命与人类未来"
 
 ## 📽️ 视频概览
 - **标题**: AI教父Geoffrey Hinton十一月KBS独家访谈
-- **时间**: 2024年11月于韩国放送公社(KBS)
+- **时间**: 2024年12月1日于韩国放送公社(KBS)
 - **主讲人**: Geoffrey Hinton (SPEAKER_00)
 - **核心主题**: 深度学习的生物学基础、AI技术的社会影响、超级智能的伦理挑战
 - **内容概况**: 从神经网络原理到AI军事化应用的系统性论述
+- **视频链接**: [完整视频](https://www.bilibili.com/video/BV1fSzZYAEGX/?spm_id_from=333.337.search-card.all.click&vd_source=0bd589f46b265005336c077eea20fb52) 
 - **视频分段**: 完整访谈包含112条字幕段落，时长17分46秒
 
 ---
