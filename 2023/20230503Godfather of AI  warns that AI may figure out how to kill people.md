@@ -1,4 +1,4 @@
-# Geoffrey Hinton: "AI May Figure Out How to Kill People" (Interview Summary)
+# Geoffrey Hinton: "AI May Figure Out How to Kill People"
 
 ## 📽️ 视频概览
 - **标题**: AI May Figure Out How to Kill People – Geoffrey Hinton
