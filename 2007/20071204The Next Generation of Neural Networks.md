@@ -8,7 +8,7 @@
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=AyzOUbkUf3M&t=2205s)
 - **历史地位**：该演讲被视为深度学习复兴的关键转折点
 - **字幕文件链接**
-  - [原始英文字幕](https://github.com/<daibi1234>/Hinton-Life-Video-To-Srt/raw/main/srt/20071204 The Next Generation of Neural Networks.txt)
+  - [原始英文字幕](https://github.com/<daibi1234>/Hinton-Life-Video-To-Srt/raw/main/srt/20071204_The_Next_Generation_of_Neural_Networks.txt)
   - [中文字幕](https://github.com/<daibi1234>/Hinton-Life-Video-To-Srt/raw/main/srt/20071204_The_Next_Generation_of_Neural_Networks-中文.txt)
 
 ## 🎯 核心突破
@@ -55,5 +55,3 @@
 
 > "大脑并不使用反向传播，它一定有其他计算方式"  
 > —— Hinton对生物学习的深刻洞察
-
-该演讲提出的分层预训练思想，直接催生了后来的AlexNet等突破性成果，奠定了现代深度学习的基础范式。
