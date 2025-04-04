@@ -1,8 +1,8 @@
-# Geoffrey Hinton: "The Future of AI, Digital vs. Analog Computation, and Existential Risks" (2024 Sheldonian Lecture Summary)
+# Geoffrey Hinton: "The Future of AI, Digital vs. Analog Computation, and Existential Risks"
 
 ## 📽️ 视频概览
 - **标题**: Geoffrey Hinton's Public Lecture on AI Understanding and Risks
-- **时间**: 2024年2月28日于Sheldonian Theatre
+- **时间**: 2024年2月29日于Sheldonian Theatre
 - **主讲人**: Geoffrey Hinton (深度学习先驱，图灵奖得主)
 - **核心主题**: 
   - 神经网络与语言模型如何实现真正的"理解"
