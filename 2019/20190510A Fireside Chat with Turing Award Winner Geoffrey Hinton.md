@@ -1,4 +1,4 @@
-# Geoffrey Hinton: "Fireside Chat on Neural Networks & AI" (2019 Wired Interview Summary)
+# Geoffrey Hinton: "Fireside Chat on Neural Networks & AI"
 
 ## 📽️ 视频概览
 - **标题**: Fireside Chat with Turing Award Winner Geoffrey Hinton
