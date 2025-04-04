@@ -1,4 +1,4 @@
-# Geoffrey Hinton: "Possible End of Humanity from AI" (2023 MIT EmTech Digital Talk Summary)
+# Geoffrey Hinton: "Possible End of Humanity from AI"
 
 ## 📽️ 视频概览
 - **标题**: Possible End of Humanity from AI  
