@@ -1,4 +1,4 @@
-# Geoffrey Hinton深度访谈：AI风险预警与技术伦理（2023年对话全解析）
+# Geoffrey Hinton深度访谈：AI风险预警与技术伦理
 
 ## 📽️ 视频概览
 - **标题**: "The Godfather in Conversation: Why Geoffrey Hinton is worried about the future of AI"
