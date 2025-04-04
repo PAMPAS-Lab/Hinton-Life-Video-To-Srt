@@ -1,7 +1,7 @@
-# 数学思维模型与人工智能的未来：Geoffrey Hinton等专家的深度讨论（2021年小组讨论摘要）
+# 数学思维模型与人工智能的未来：Geoffrey Hinton等专家的深度讨论
 
 ## 📽️ 视频概览
-- **标题**: Is There a Mathematical Model of the Mind? (Panel Discussion)
+- **标题**: Is There a Mathematical Model of the Mind?
 - **时间**: 2021年5月17日
 - **主持人**: Reena Maligray (Google)
 - **主要嘉宾**: 
