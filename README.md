@@ -110,7 +110,7 @@
 - **2019/20190906 The AI Revolution Toronto Global Forum 2019 Thursday**  
   - **日期**: 9月6日  
   - **核心内容**: 在多伦多全球论坛上参与AI革命主题讨论，分享AI技术的最新进展。  
-  - [链接](./2019/20190906The%20AI%20Revolution%20Toronto%20Global%20Forum%202019%20Thursday.md)
+  - [链接](./2019/20190906_AI_Revolution-Toronto_Global_Forum_Keynote.md)
 
 ---
 
