@@ -2,7 +2,7 @@
 
 ## 📽️ 视频概览
 - **标题**: "Godfather of artificial intelligence talks impact and potential of new AI"
-- **时间**: 2023年2月22日于CBS《周六晨间》节目
+- **时间**: 2023年3月25日于CBS《周六晨间》节目
 - **主讲人**: Geoffrey Hinton（AI教父）、Nick Frost（Cohere联合创始人）等
 - **核心主题**: 探讨生成式AI技术的爆发式发展、社会影响及AGI（通用人工智能）的潜在风险
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=uG2SKIdLUj4)
