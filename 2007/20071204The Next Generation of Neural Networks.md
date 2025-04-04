@@ -1,4 +1,4 @@
-# Geoffrey Hinton："下一代神经网络"（2007年MIT演讲总结）
+# Geoffrey Hinton："下一代神经网络"
 
 ## 📽️ 视频概览
 - **标题**：下一代神经网络
