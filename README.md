@@ -66,7 +66,7 @@
 - **2016/20160417 Can sensory cortex do backpropagation? - Geoffrey Hinton**  
   - **日期**: 4月17日  
   - **核心内容**: 分析感官皮层是否具备类似反向传播的学习机制（修正拼写 `Geoffery` 为 `Geoffrey`）。  
-  - [链接](./2016/20160417Can%20sensory%20cortex%20do%20backpropagation%20-%20Geoffrey%20Hinton.md)
+  - [链接](./2016/20160417_Sensory_Cortex_Backpropagation-Geoffrey_Hinton.md)
 
 ---
 
