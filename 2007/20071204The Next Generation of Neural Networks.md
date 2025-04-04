@@ -7,7 +7,7 @@
 - **核心主题**：提出受限玻尔兹曼机(RBM)和深度信念网络(DBN)的创新训练方法
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=AyzOUbkUf3M&t=2205s)
 - **历史地位**：该演讲被视为深度学习复兴的关键转折点
-- ### 字幕文件链接
+- **字幕文件链接**
 - [原始英文字幕](srt/2007124The%20Next%20Generation%20of%20Neural%20Networks.txt)
 - [中文字幕](srt/2007124The%20Next%20Generation%20of%20Neural%20Networks-%E4%B8%AD%E6%96%87.txt)
 ## 🎯 核心突破
