@@ -1,8 +1,8 @@
-# Geoffrey Hinton: "Representing Part-Whole Hierarchies in Neural Networks" (2022 Stanford Talk Summary)
+# Geoffrey Hinton: "Representing Part-Whole Hierarchies in Neural Networks"
 
 ## 📽️ 视频概览
 - **标题**: Representing Part-Whole Hierarchies in a Neural Network
-- **时间**: 2022年于斯坦福大学
+- **时间**: 2022年8月21日
 - **主讲人**: Geoffrey Hinton (SPEAKER_00)
 - **核心主题**: 提出"Glom"架构，通过动态嵌入向量（embeddings）的"共识岛屿"（islands of agreement）实现神经网络中对部分-整体层次结构的表达，解决传统卷积网络（ConvNets）和胶囊网络（Capsule Networks）的局限性。
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=CYaju6aCMoQ)  
