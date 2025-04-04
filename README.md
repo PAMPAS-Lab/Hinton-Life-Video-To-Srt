@@ -86,7 +86,7 @@
 - **2019/20190113 creative destruction lab**  
   - **日期**: 1月13日  
   - **核心内容**: 参与Creative Destruction Lab活动，探讨AI与创业的结合。  
-  - [链接](./2019/20190113creative%20destruction%20lab.md)
+  - [链接](./2019/20190906_AI_Revolution-Toronto_Global_Forum_Keynote.md)
 
 ### **3月**
 - **2019/20190300 geoffrey hinton - capsule networks**  
