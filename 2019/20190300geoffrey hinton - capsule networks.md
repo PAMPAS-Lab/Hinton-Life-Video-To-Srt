@@ -1,4 +1,4 @@
-# Geoffrey Hinton: "What's Wrong with Convolutional Neural Nets?" (Talk Summary)
+# Geoffrey Hinton: "What's Wrong with Convolutional Neural Nets?"
 
 ## 📽️ 视频概览
 - **标题**: What's Wrong with Convolutional Neural Nets?
