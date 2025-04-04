@@ -170,17 +170,11 @@
   - **核心内容**: 与李飞飞就负责任的AI发展进行对话。  
   - [链接](./2023/20230104_Geoffrey_Hinton_in_conversation_with_FeiFei_Li_-_Responsible.md)
 
-### **2月**
-- **2023/20230222 MoroccoAI Conference 2022 Honorary Keynote Prof. Geoffrey Hinton - The Forward-Forward Algorithm**  
-  - **日期**: 2月22日  
-  - **核心内容**: 在摩洛哥AI会议上介绍前向算法（Forward-Forward Algorithm）的创新研究。  
-  - [链接](./2023/20230222MoroccoAI%20Conference%202022%20Honorary%20Keynote%20Prof.%20Geoffrey%20Hinton%20-%20The%20Forward-Forward%20Algorithm.md)
-
 ### **3月**
 - **2023/20230325 _Godfather of artificial intelligence_ talks impact and potential of new AI**  
   - **日期**: 3月25日  
   - **核心内容**: 探讨新AI技术对社会的潜在影响与可能性。  
-  - [链接](./2023/20230325_Godfather%20of%20artificial%20intelligence_%20talks%20impact%20and%20potential%20of%20new%20AI.md)
+  - [链接](./2023/20230325_Godfather_of_artificial_intelligence_talks_impact_and_potential_of_new_AI.md)
 
 ### **5月**
 - **2023/20230502 AI godfather quits Google over dangers of Artificial Intelligence - BBC News**  
