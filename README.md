@@ -184,7 +184,7 @@
 - **2023/20230503 Godfather of AI warns that AI may figure out how to kill people**  
   - **日期**: 5月3日  
   - **核心内容**: 警告AI可能具备致命性技术能力。  
-  - [链接](./2023/20230503Godfather%20of%20AI%20warns%20that%20AI%20may%20figure%20out%20how%20to%20kill%20people.md)
+  - [链接](./2023/20230503_Godfather_of_AI_warns_that_AI_may_figure_out_how_to_kill_people.md)
 - **2023/20230506 Possible End of Humanity from AI Geoffrey Hinton at MIT Technology Review s EmTech Digital**  
   - **日期**: 5月6日  
   - **核心内容**: 在MIT技术峰会上讨论AI可能引发的人类存续危机。  
