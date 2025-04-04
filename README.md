@@ -120,7 +120,7 @@
 - **2020/20200210 AAAI 20 AAAI 2020 Keynotes Turing Award Winners Event Geoff Hinton**  
   - **日期**: 2月10日  
   - **核心内容**: AAAI会议上关于图灵奖得主的AI前沿观点。  
-  - [链接](./2020/20200210AAAI%2020%20AAAI%202020%20Keynotes%20Turing%20Award%20Winners%20Event%20Geoff%20Hinton.md)
+  - [链接](./2020/20200210_AAAI_20_Keynotes_Turing_Award_Winners_Event_Geoff_Hinton.md)
 
 ### **8月**
 - **2020/20200809 图灵奖得主Geoffrey Hinton最新演讲透露下一代神经网络模型的构想丨SIGIR 2020**  
