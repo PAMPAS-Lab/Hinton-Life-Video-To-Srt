@@ -45,7 +45,7 @@
 - **2014/2014 What's wrong with convolutional nets**  
   - **日期**: 日期未知  
   - **核心内容**: 分析卷积神经网络的局限性及改进方向。  
-  - [链接](./2014/20140000What%27s%20wrong%20with%20convolutional%20nets.md)
+  - [链接](./2014/20140000_Whats_wrong_with_convolutional_nets.md)
 
 ---
 
