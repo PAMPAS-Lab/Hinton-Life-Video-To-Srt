@@ -1,4 +1,4 @@
-# Geoffrey Hinton与李飞飞对话："负责任的人工智能发展" (2023年多伦多大学活动摘要)
+# Geoffrey Hinton与李飞飞对话："负责任的人工智能发展"
 
 ## 📽️ 视频概览
 - **标题**: Geoffrey Hinton与李飞飞关于负责任AI发展的对话
