@@ -168,7 +168,7 @@
 - **2023/20230104 Geoffrey Hinton in conversation with Fei-Fei Li — Responsible**  
   - **日期**: 1月4日  
   - **核心内容**: 与李飞飞就负责任的AI发展进行对话。  
-  - [链接](./2023/20230104Geoffrey%20Hinton%20in%20conversation%20with%20Fei-Fei%20Li%20—%20Responsible.md)
+  - [链接](./2023/20230104_Geoffrey_Hinton_in_conversation_with_FeiFei_Li_-_Responsible.md)
 
 ### **2月**
 - **2023/20230222 MoroccoAI Conference 2022 Honorary Keynote Prof. Geoffrey Hinton - The Forward-Forward Algorithm**  
