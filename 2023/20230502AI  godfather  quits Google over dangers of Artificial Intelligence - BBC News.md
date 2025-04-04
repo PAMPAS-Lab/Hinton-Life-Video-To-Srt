@@ -1,4 +1,4 @@
-# Geoffrey Hinton: "The Godfather of AI Quits Google Over Dangers of Artificial Intelligence" (BBC Interview Summary)
+# Geoffrey Hinton: "The Godfather of AI Quits Google Over Dangers of Artificial Intelligence"
 
 ## 📽️ 视频概览
 - **标题**: The Godfather of AI Quits Google Over Dangers of Artificial Intelligence
