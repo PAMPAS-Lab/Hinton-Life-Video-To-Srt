@@ -180,7 +180,7 @@
 - **2023/20230502 AI godfather quits Google over dangers of Artificial Intelligence - BBC News**  
   - **日期**: 5月2日  
   - **核心内容**: 辞职声明中强调AI技术的潜在风险。  
-  - [链接](./2023/20230502AI%20godfather%20quits%20Google%20over%20dangers%20of%20Artificial%20Intelligence%20-%20BBC%20News.md)
+  - [链接](./2023/20230502_AI_godfather_quits_Google_over_dangers_of_Artificial_Intelligence_-_BBC_News.md)
 - **2023/20230503 Godfather of AI warns that AI may figure out how to kill people**  
   - **日期**: 5月3日  
   - **核心内容**: 警告AI可能具备致命性技术能力。  
