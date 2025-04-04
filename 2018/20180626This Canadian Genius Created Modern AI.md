@@ -1,8 +1,8 @@
-# Geoffrey Hinton: "The Canadian Genius Who Created Modern AI" (2018 Documentary Summary)
+# Geoffrey Hinton: "The Canadian Genius Who Created Modern AI"
 
 ## 📽️ 视频概览
 - **标题**: This Canadian Genius Created Modern AI
-- **时间**: 2018年6月
+- **时间**: 2018年6月26日
 - **主讲人**: Geoffrey Hinton (SPEAKER_02) 及多位评论者
 - **核心主题**: 追溯Hinton坚持神经网络研究40年的历程，揭示深度学习革命的转折点
 - **视频链接**：[完整视频](https://www.youtube.com/watch?v=l9RWTMNnvi4)
