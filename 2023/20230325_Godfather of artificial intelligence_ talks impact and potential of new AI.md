@@ -1,4 +1,4 @@
-# Geoffrey Hinton: AI 革命的影响与潜在风险（2023 CBS专访深度解析）
+# Geoffrey Hinton: AI 革命的影响与潜在风险
 
 ## 📽️ 视频概览
 - **标题**: "Godfather of artificial intelligence talks impact and potential of new AI"
