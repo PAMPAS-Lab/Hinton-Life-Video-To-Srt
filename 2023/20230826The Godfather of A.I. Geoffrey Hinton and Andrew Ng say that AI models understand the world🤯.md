@@ -1,4 +1,4 @@
-# Geoffrey Hinton与Andrew Ng对话：AI模型是否真正理解世界？（2023年深度讨论）
+# Geoffrey Hinton与Andrew Ng对话：AI模型是否真正理解世界？
 
 ## 📽️ 视频概览
 - **标题**: The Godfather of A.I. Geoffrey Hinton and Andrew Ng say that AI models understand the world
