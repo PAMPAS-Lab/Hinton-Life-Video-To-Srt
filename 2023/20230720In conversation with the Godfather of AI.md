@@ -1,4 +1,4 @@
-# Geoffrey Hinton深度对话：AI教父的六大风险预警与职业建议（2023年最新访谈）
+# Geoffrey Hinton深度对话：AI教父的六大风险预警与职业建议
 
 ## 📽️ 视频概览
 - **标题**: In conversation with the Godfather of AI
