@@ -1,4 +1,4 @@
-# Geoffrey Hinton: "多时间尺度适应与智能的本质" (2019 CDL演讲深度解析)
+# Geoffrey Hinton: "多时间尺度适应与智能的本质"
 
 ## 📽️ 视频概览
 - **标题**: The Interactions Between Different Timescales of Adaptation  
