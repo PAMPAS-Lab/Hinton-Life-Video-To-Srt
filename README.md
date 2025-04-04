@@ -104,7 +104,7 @@
 - **2019/20190624 Geoffrey Hinton and Yann LeCun**  
   - **日期**: 6月24日  
   - **核心内容**: 与Yann LeCun的对话，探讨深度学习与AI的未来方向。  
-  - [链接](./2019/20190624Geoffrey%20Hinton%20and%20Yann%20LeCun.md)
+  - [链接](./2019/20190624Geoffrey Hinton and Yann LeCun.md)
 
 ### **9月**
 - **2019/20190906 The AI Revolution Toronto Global Forum 2019 Thursday**  
