@@ -1,4 +1,4 @@
-# Geoffrey Hinton: "AI's Potential and Perils" (Interview Summary)
+# Geoffrey Hinton: "AI's Potential and Perils"
 
 ## 📽️ 视频概览
 - **标题**: AI's Potential and Perils (推测标题，基于内容)
