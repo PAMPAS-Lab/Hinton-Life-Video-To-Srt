@@ -1,4 +1,4 @@
-# Geoffrey Hinton: "The Brain Doesn't Do Backprop" (2017 Talk Summary)
+# Geoffrey Hinton: "The Brain Doesn't Do Backprop"
 
 ## 📽️ 视频概览
 - **标题**: Meet Geoffrey Hinton - 深度学习的神经科学启示
