@@ -136,7 +136,7 @@
 - **2021/20210517 Is There a Mathematical Model of the Mind (Panel Discussion)**  
   - **日期**: 5月17日  
   - **核心内容**: 关于心智数学模型的圆桌讨论。  
-  - [链接](./2021/20210517Is%20There%20a%20Mathematical%20Model%20of%20the%20Mind%20(Panel%20Discussion).md)
+  - [链接](./2021/20210517_Is_There_a_Mathematical_Model_of_the_Mind_Panel_Discussion.md)
 
 ### **8月**
 - **2021/20210823 Distillation and the brain**  
