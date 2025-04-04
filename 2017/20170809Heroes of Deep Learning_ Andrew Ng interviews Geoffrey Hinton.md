@@ -1,7 +1,7 @@
-# Geoffrey Hinton: "The Evolution of Deep Learning" (DeepLearning.AI Interview Summary)
+# Geoffrey Hinton: "The Evolution of Deep Learning"
 
 ## 📽️ 视频概览
-- **标题**: The Evolution of Deep Learning (推测标题，基于内容)
+- **标题**: The Evolution of Deep Learning
 - **时间**:2017年8月9号
 - **主讲人**: Geoffrey Hinton (SPEAKER_02)，采访者 (SPEAKER_00)
 - **核心主题**: 回顾Hinton在AI和深度学习领域的个人历程，探讨其关键技术贡献（如反向传播、受限玻尔兹曼机、胶囊网络），并展望未来发展方向。
