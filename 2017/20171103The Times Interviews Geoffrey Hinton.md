@@ -1,8 +1,8 @@
-# Geoffrey Hinton: "The Future of Neural Networks" (2017 Interview Summary)
+# Geoffrey Hinton: "The Future of Neural Networks"
 
 ## 📽️ 视频概览
 - **标题**: The Times Interviews Geoffrey Hinton
-- **时间**: 2017年1月13日
+- **时间**: 2017年11月3日
 - **主讲人**: Geoffrey Hinton (与Cade Metz对话)
 - **核心主题**: 探讨当前卷积神经网络的局限性，提出"胶囊网络"(Capsule Networks)的创新架构
 - **视频链接**：[完整视频](https://www.youtube.com/watch?v=ag9YIHlncbM)
