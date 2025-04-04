@@ -1,4 +1,4 @@
-# Geoffrey Hinton: "Digital vs. Biological Intelligence" (2023 MIT Miller Lecture Summary)
+# Geoffrey Hinton: "Digital vs. Biological Intelligence"
 
 ## 📽️ 视频概览
 - **标题**: Will Digital Intelligence Replace Biological Intelligence?
