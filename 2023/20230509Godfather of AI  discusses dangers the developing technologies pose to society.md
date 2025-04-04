@@ -1,4 +1,4 @@
-# Geoffrey Hinton on AI Risks: "We're Entering a Time of Great Uncertainty" (2023 Interview Summary)
+# Geoffrey Hinton on AI Risks: "We're Entering a Time of Great Uncertainty"
 
 ## 📽️ 视频概览
 - **标题**: Godfather of AI discusses dangers the developing technologies pose to society
