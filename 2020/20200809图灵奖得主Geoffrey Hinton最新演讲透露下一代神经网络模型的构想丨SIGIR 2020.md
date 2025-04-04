@@ -1,7 +1,7 @@
-# Geoffrey Hinton: "The Future of Neural Networks and Unsupervised Learning" (SIGAR 2020 Keynote Summary)
+# Geoffrey Hinton: "The Future of Neural Networks and Unsupervised Learning"
 
 ## 📽️ 视频概览
-- **标题**: The Future of Neural Networks and Unsupervised Learning (推测标题，基于内容)
+- **标题**: The Future of Neural Networks and Unsupervised Learning
 - **时间**: 2020年于SIGAR 2020会议 | 2020年8月9号
 - **主讲人**: Geoffrey Hinton (SPEAKER_01)，介绍者 (SPEAKER_02)
 - **核心主题**: 探讨神经网络的过去与未来，重点阐述无监督学习的重要性、技术演进及应用潜力，同时反思大脑学习机制与深度学习的差异。
