@@ -54,7 +54,7 @@
 - **2016/2016 Prof. Geoffrey Hinton - Artificial Intelligence Turning our understanding of the mind right side up**  
   - **日期**: 日期未知  
   - **核心内容**: 探讨AI如何重新定义人类对心智与认知的理解。  
-  - [链接](./2016/20160000Prof.%20Geoffrey%20Hinton%20-%20Artificial%20Intelligence%20Turning%20our%20understanding%20of%20the%20mind%20right%20side%20up.md)
+  - [链接](./2016/2016Prof.%20Geoffrey%20Hinton%20-%20Artificial%20Intelligence%20Turning%20our%20understanding%20of%20the%20mind%20right%20side%20up.md)
 
 ### **3月**
 - **2016/20160304 Geoffrey Hinton: The Godfather of Deep Learning**  
