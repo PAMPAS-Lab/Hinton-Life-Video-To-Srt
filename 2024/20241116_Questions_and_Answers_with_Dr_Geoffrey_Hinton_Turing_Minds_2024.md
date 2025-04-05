@@ -10,7 +10,9 @@
   - 现代深度学习与早期神经网络理论的传承关系
 - **技术深度**: 包含数学推导与认知科学类比，适合有机器学习基础的观众
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=GL-CjROdRWg)
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20241116Questions_Answers_with_Dr_Geoffrey_Hinton_Turing_Minds_2024.txt)
+  - [中文字幕](../srt/20241116Questions_Answers_with_Dr_Geoffrey_Hinton_Turing_Minds_2024-中文.txt)
 ---
 
 ## 🎯 核心理论与技术解析
