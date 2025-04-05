@@ -6,9 +6,11 @@
 - **主讲人**: Geoffrey Hinton (SPEAKER_00)  
 - **核心主题**: 大脑如何通过“蒸馏”（Distillation）机制实现知识共享，提出“通用胶囊”（Universal Capsules）架构与脑科学模型的关联性。  
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=asZoedN31VE)  
--**内容概况**-：  
+- **内容概况**：  
 Hinton从视觉认知的神经机制切入，批判传统卷积神经网络（ConvNets）的权重共享假设在生物学上的不合理性，提出通过“注意力加权平均”实现跨脑区知识蒸馏的理论框架，并结合心理学实验与计算模型验证其可行性。
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20210823Distillation_and_the_brain.txt)
+  - [中文字幕](../srt/20210823Distillation_and_the_brain-中文.txt)
 ---
 
 ## 🎯 核心观点与技术预测
