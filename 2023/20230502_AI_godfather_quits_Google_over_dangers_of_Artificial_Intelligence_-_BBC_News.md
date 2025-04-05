@@ -6,7 +6,9 @@
 - **主讲人**: Dr. Geoffrey Hinton (SPEAKER_02)
 - **核心主题**: 反思 AI 发展的风险，警告人工智能可能超越人类智能，并被恶意利用。
 - **视频来源**: [完整视频](https://www.youtube.com/watch?v=DsBGaHywRhs)
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20230502AI_godfather_quits_Google_over_dangers_of_Artificial_Intelligence-BBC_News.txt)
+  - [中文字幕](../srt/20230502AI_godfather_quits_Google_over_dangers_of_Artificial_Intelligence-BBC_News-中文.txt)
 ---
 
 ## 🎯 主要内容
