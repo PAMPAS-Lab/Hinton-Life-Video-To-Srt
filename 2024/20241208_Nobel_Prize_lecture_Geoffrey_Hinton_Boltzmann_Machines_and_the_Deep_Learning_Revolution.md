@@ -7,7 +7,9 @@
 - **核心主题**: 玻尔兹曼机（Boltzmann Machines）的理论突破及其对深度学习的奠基性贡献
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=XDE9DjpcSdI)  
 - **内容概况**: 1小时20分钟的技术讲座，详细阐释玻尔兹曼机的运行原理、学习算法及其在现代AI发展中的关键作用
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20241208Nobel_Prize_lecture_Geoffrey_Hinton.txt)
+  - [中文字幕](../srt/20241208Nobel_Prize_lecture_Geoffrey_Hinton-中文.txt)
 ---
 
 ## 🎯 核心理论与技术突破
