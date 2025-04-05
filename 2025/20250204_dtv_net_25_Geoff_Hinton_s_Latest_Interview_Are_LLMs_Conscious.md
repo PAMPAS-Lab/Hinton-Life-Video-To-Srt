@@ -7,7 +7,9 @@
 - **核心主题**: 大语言模型的意识可能性、智能体自主目标形成的风险机制，以及社会应对策略
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=yybJ0r3SCF8)
 - **内容概况**: 本次访谈深入探讨了AI系统的意识本质，揭示了智能体通过子目标获取控制权的演化路径，并分析了政治监管面临的根本性挑战。
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20250204dtv_net_25_Geoff_Hinton's_Latest_Interview_Are_LLM's_Conscious.txt)
+  - [中文字幕](../srt/20250204dtv_net_25_Geoff_Hinton's_Latest_Interview_Are_LLM's_Conscious-中文.txt)  
 ---
 
 ## 🎯 核心观点与技术预测
