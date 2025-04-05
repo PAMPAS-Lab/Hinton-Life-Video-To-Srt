@@ -362,26 +362,26 @@
 - **2025/20250118Why The Godfather of AI Now Fears His Own Creation  Geoffrey Hinton**  
   - **日期**: 1月18日  
   - **核心内容**: 解释他对AI发展的担忧及对其潜在威胁的反思。  
-  - [链接](./2025/20250118Why%20The%20Godfather%20of%20AI%20Now%20Fears%20His%20Own%20Creation%20Geoffrey%20Hinton.md)
+  - [链接](./2025/20250118_Why_The_Godfather_of_AI_Now_Fears_His_Own_Creation_Geoffrey_Hinton.md)
 
 - **2025/20250126The Godfather in Conversation Why Geoffrey Hinton is worried about the future of AI**  
   - **日期**: 1月26日  
   - **核心内容**: 深入探讨他对AI未来的担忧及其根源。  
-  - [链接](./2025/20250126The%20Godfather%20in%20Conversation%20Why%20Geoffrey%20Hinton%20is%20worried%20about%20the%20future%20of%20AI.md)
+  - [链接](./2025/20250126_The_Godfather_in_Conversation_Why_Geoffrey_Hinton_is_worried_about_the_future_of_AI.md)
 
 - **2025/20250131‘Godfather of AI’ predicts it will take over the world  LBC**  
   - **日期**: 1月31日  
   - **核心内容**: 预测AI可能接管世界并讨论其潜在影响。  
-  - [链接](./2025/20250131‘Godfather%20of%20AI’%20predicts%20it%20will%20take%20over%20the%20world%20LBC.md)
+  - [链接](./2025/20250131_Godfather_of_AI_predicts_it_will_take_over_the_world_LBC.md)
 
 ### **2月**
 - **2025/20250204dtv net #25 Geoff Hinton's Latest Interview - Are LLM's Conscious**  
   - **日期**: 2月4日  
   - **核心内容**: 探讨大型语言模型（LLMs）是否具备意识。  
-  - [链接](./2025/20250204dtv%20net%20%2325%20Geoff%20Hinton's%20Latest%20Interview%20-%20Are%20LLM's%20Conscious.md)
+  - [链接](./2025/20250204_dtv_net_25_Geoff_Hinton_s_Latest_Interview_Are_LLMs_Conscious.md)
 
 ### **3月**
 - **2025/20250315Geoffrey Hinton**  
   - **日期**: 3月15日  
   - **核心内容**: 综合讨论AI的伦理、技术进展及未来挑战。  
-  - [链接](./2025/20250315Geoffrey%20Hinton.md)
+  - [链接](./2025/20250315_Geoffrey_Hinton.md)
