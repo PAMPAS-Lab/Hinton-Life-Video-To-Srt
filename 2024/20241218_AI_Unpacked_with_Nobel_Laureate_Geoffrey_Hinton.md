@@ -7,7 +7,9 @@
 - **核心主题**: AI技术发展速度、大语言模型（LLM）的理解能力、创造力本质、社会影响及未来工作形态
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=9JlKg57GPgM)  
 - **内容亮点**: 包含Hinton对AI发展历史的反思、对GPT-4认知能力的突破性见解，以及关于医疗/教育领域变革的前瞻预测  
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20241218AI_Unpacked_with_Nobel_Laureate_Geoffrey_Hinton.txt)
+  - [中文字幕](../srt/20241218AI_Unpacked_with_Nobel_Laureate_Geoffrey_Hinton-中文.txt)
 ---
 
 ## 🎯 核心观点与技术洞见
