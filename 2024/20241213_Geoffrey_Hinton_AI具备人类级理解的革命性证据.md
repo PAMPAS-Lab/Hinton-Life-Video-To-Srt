@@ -7,7 +7,9 @@
 - **核心主题**: 驳斥"随机鹦鹉论"，论证大语言模型与人类理解机制的同一性
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=0tOkdZSpOMQ)
 - **内容亮点**: 从1985年首个神经网络语言模型出发，结合认知心理学实验，揭示AI与人类思维的本质相似性
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20241213Prof_Geoffrey_Hinton_Leaves_the_Audience_Stunned_by_Showing_AI_Can_Think_Like_Humans_Geoffrey_Hinton_Geoffrey_Hinton-中文.txt)
+  - [中文字幕](../srt/20241213Prof_Geoffrey_Hinton_Leaves_the_Audience_Stunned_by_Showing_AI_Can_Think_Like_Humans_Geoffrey_Hinton_Geoffrey_Hinton-中文.txt)
 ---
 
 ## 🎯 核心论证框架
