@@ -6,7 +6,9 @@
 - **主讲人**: Geoffrey Hinton  
 - **核心主题**: 探讨了人工智能的发展历程、关键突破及其对未来的展望，特别强调了深度学习的重要性及面临的挑战。  
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=q2Hg29zvD8U)  
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20241223DIGITP_Executive_Sponsor_Robert_Meikle_interviews_Geoffrey_Hinton_The_Father_of_Ai.txt)
+  - [中文字幕](../srt/20241223DIGITP_Executive_Sponsor_Robert_Meikle_interviews_Geoffrey_Hinton_The_Father_of_Ai-中文.txt)
 ---
 
 ## 🎯 核心观点与技术预测
