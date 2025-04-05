@@ -8,8 +8,8 @@
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=AyzOUbkUf3M&t=2205s)
 - **历史地位**：该演讲被视为深度学习复兴的关键转折点
 - **字幕文件链接**
-  - [原始英文字幕](main/srt/20071204_The_Next_Generation_of_Neural_Networks.txt)
-  - [中文字幕](srt/20071204_The_Next_Generation_of_Neural_Networks_Chinese)
+  - [原始英文字幕](../srt/20071204_The_Next_Generation_of_Neural_Networks.txt)
+  - [中文字幕](../srt/20071204_The_Next_Generation_of_Neural_Networks_Chinese.txt)
 
 ## 🎯 核心突破
 
