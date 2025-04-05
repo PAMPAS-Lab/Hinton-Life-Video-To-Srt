@@ -14,7 +14,9 @@
   - 首次披露1985年首个神经网络语言模型细节
   - 关于"堆肥堆像原子弹"的GPT-4类比能力分析
   - 对Chomsky语言学理论的直接挑战
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20240515Geoffrey_Hinton_On_working_with_Ilya.txt)
+  - [中文字幕](../srt/20240515Geoffrey_Hinton_On_working_with_Ilya-中文.txt)
 ---
 
 ## 🎯 核心学术观点
