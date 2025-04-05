@@ -7,7 +7,9 @@
 - **核心主题**: 从神经科学视角解析数字智能的进化风险、RLHF技术缺陷与治理框架
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=PTF5Up1hMhw)
 - **内容亮点**: 包含Hinton对AI主观体验的哲学论证、对开源权重的安全警告，以及"蜻蜓幼虫"人类命运隐喻
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20240628Q_A_with_Geoffrey_Hinton.txt)
+  - [中文字幕](../srt/20240628Q_A_with_Geoffrey_Hinton-中文.txt)
 ---
 
 ## 🎯 核心观点与技术批判
