@@ -188,49 +188,49 @@
 - **2023/20230506 Possible End of Humanity from AI Geoffrey Hinton at MIT Technology Review s EmTech Digital**  
   - **日期**: 5月6日  
   - **核心内容**: 在MIT技术峰会上讨论AI可能引发的人类存续危机。  
-  - [链接](./2023/20230506Possible%20End%20of%20Humanity%20from%20AI%20Geoffrey%20Hinton%20at%20MIT%20Technology%20Review%20s%20EmTech%20Digital.md)
+  - [链接](./2023/20230506_Possible_End_of_Humanity_from_AI_Geoffrey_Hinton_at_MIT_Technology_Review_EmTech_Digital.md)
 - **2023/20230509 Godfather of AI discusses dangers the developing technologies pose to society**  
   - **日期**: 5月9日  
   - **核心内容**: 分析AI技术对社会的威胁与应对策略。  
-  - [链接](./2023/20230509Godfather%20of%20AI%20discusses%20dangers%20the%20developing%20technologies%20pose%20to%20society.md)
+  - [链接](./2023/20230509_Godfather_of_AI_discusses_dangers_the_developing_technologies_pose_to_society.md)
 - **2023/20230511 Geoffrey Hinton helped create AI. Now he’s worried it will destroy us**  
   - **日期**: 5月11日  
   - **核心内容**: 反思AI创造历程并表达对其失控的担忧。  
-  - [链接](./2023/20230511Geoffrey%20Hinton%20helped%20create%20AI.%20Now%20he’s%20worried%20it%20will%20destroy%20us.md)
+  - [链接](./2023/20230511_Geoffrey_Hinton_helped_create_AI_Now_he_is_worried_it_will_destroy_us.md)
 
 ### **6月**
-- **2023/20230623 The Godfather in Conversation Why Geoffrey Hinton is worried about the future of AI**  
-  - **日期**: 6月23日  
-  - **核心内容**: 对话中解释对AI未来的担忧根源。  
-  - [链接](./2023/20230623The%20Godfather%20in%20Conversation%20Why%20Geoffrey%20Hinton%20is%20worried%20about%20the%20future%20of%20AI.md)
 - **2023/20230605 Geoffrey Hinton - Two Paths to Intelligence**  
   - **日期**: 6月5日  
   - **核心内容**: 提出通向智能的两种路径理论。  
-  - [链接](./2023/20230605Geoffrey%20Hinton%20-%20Two%20Paths%20to%20Intelligence.md)
+  - [链接](./2023/20230605_Geoffrey_Hinton_Two_Paths_to_Intelligence.mdd)
+- **2023/20230623 The Godfather in Conversation Why Geoffrey Hinton is worried about the future of AI**  
+  - **日期**: 6月23日  
+  - **核心内容**: 对话中解释对AI未来的担忧根源。  
+  - [链接](./2023/20230623_The_Godfather_in_Conversation_Why_Geoffrey_Hinton_is_worried_about_the_future_of_AI.md)
 
 ### **7月**
 - **2023/20230720 In conversation with the Godfather of AI**  
   - **日期**: 7月20日  
   - **核心内容**: 综合讨论AI伦理、技术与未来挑战。  
-  - [链接](./2023/20230720In%20conversation%20with%20the%20Godfather%20of%20AI.md)
+  - [链接](./2023/20230720_In_conversation_with_the_Godfather_of_AI.md)
 
 ### **8月**
 - **2023/20230826 The Godfather of A.I. Geoffrey Hinton and Andrew Ng say that AI models understand the world**  
   - **日期**: 8月26日  
   - **核心内容**: 与Andrew Ng共同探讨AI模型对世界的理解能力。  
-  - [链接](./2023/20230826The%20Godfather%20of%20A.I.%20Geoffrey%20Hinton%20and%20Andrew%20Ng%20say%20that%20AI%20models%20understand%20the%20world.md)
+  - [链接](./2023/20230826_The_Godfather_of_A_I_Geoffrey_Hinton_and_Andrew_Ng_say_that_AI_models_understand_the_world.md)
 
 ### **9月**
 - **2023/20230900 Godfather of AI Geoffrey Hinton The 60 Minutes Interview**  
   - **日期**: 9月未知日（根据文件名推测为9月）  
   - **核心内容**: 在《60分钟》访谈中回顾AI发展与伦理争议。  
-  - [链接](./2023/20230900Godfather%20of%20AI%20Geoffrey%20Hinton%20The%2060%20Minutes%20Interview.md)
+  - [链接](./2023/20230900_Godfather_of_AI_Geoffrey_Hinton_The_60_Minutes_Interview.md)
 
 ### **10月**
 - **2023/20230104 Geoffrey Hinton in conversation with Fei-Fei Li — Responsible**  
   - **日期**: 10月4日（文件名日期可能存在矛盾，按路径调整）  
   - **核心内容**: 可能为重复条目，需核对原始数据。  
-  - [链接](./2023/20231004Geoffrey%20Hinton%20in%20conversation%20with%20Fei-Fei%20Li%20—%20Responsible.md)
+  - [链接](./2023/20231004_Geoffrey_Hinton_in_conversation_with_Fei_Fei_Li_Responsible.md)
 
 ---
 
@@ -240,12 +240,12 @@
 - **2024/20240208 AI could be smarter than people in 20 years**  
   - **日期**: 2月8日  
   - **核心内容**: 预测AI在20年内可能超越人类智能。  
-  - [链接](./2024/20240208AI%20could%20be%20smarter%20than%20people%20in%2020%20years.md)
+  - [链接](./2024/20240208_AI_could_be_smarter_than_people_in_20_years.md)
 
 - **2024/20240229 eoffrey Hinton 教授在 Sheldonian**  
   - **日期**: 2月29日  
   - **核心内容**: 在牛津大学Sheldonian剧院的演讲，探讨AI与人类智能的未来。  
-  - [链接](./2024/20240229eoffrey%20Hinton%20教授在%20Sheldonian.md)
+  - [链接](./2024/20240229_Geoffrey_Hinton_教授在_Sheldonian.md)
 
 ### **4月**
 - **2024/20240411 Ray Kurzweil & Geoff Hinton Debate the Future**  
@@ -257,35 +257,35 @@
 - **2024/20240515 Geoffrey Hinton On working with Ilya**  
   - **日期**: 5月15日  
   - **核心内容**: 回顾与Ilya Sutskever的合作经历，反思AI发展的关键节点。  
-  - [链接](./2024/20240515Geoffrey%20Hinton%20On%20working%20with%20Ilya.md)
+  - [链接](./2024/20240515_Geoffrey_Hinton_On_working_with_Ilya.md)
 
 ### **6月**
 - **2024/20240607 Keynote interview with Geoffrey Hinton (remote) and Nicholas Thompson (in-person)**  
   - **日期**: 6月7日  
   - **核心内容**: 远程访谈中讨论AI技术的伦理挑战与监管必要性。  
-  - [链接](./2024/20240607Keynote%20interview%20with%20Geoffrey%20Hinton%20(remote)%20and%20Nicholas%20Thompson%20(in-person).md)
+  - [链接](./2024/20240607_Keynote_interview_with_Geoffrey_Hinton_remote_and_Nicholas_Thompson_in_person.md)
 
 - **2024/20240615 AI will become smarter than humans Geoffrey Hinton**  
   - **日期**: 6月15日  
   - **核心内容**: 重申AI超越人类智能的预测，并强调安全控制的重要性。  
-  - [链接](./2024/20240615AI%20will%20become%20smarter%20than%20humans%20Geoffrey%20Hinton.md)
+  - [链接](./2024/20240615_AI_will_become_smarter_than_humans_Geoffrey_Hinton.md)
 
 - **2024/20240628 Q&A with Geoffrey Hinton**  
   - **日期**: 6月28日  
   - **核心内容**: 问答环节中讨论AI对就业、医疗及社会结构的长期影响。  
-  - [链接](./2024/20240628Q&A%20with%20Geoffrey%20Hinton.md)
+  - [链接](./2024/20240628_Q_and_A_with_Geoffrey_Hinton.md)
 
 ### **7月**
 - **2024/20240702 Geoffrey Hinton 担忧 AI 的未来**  
   - **日期**: 7月2日  
   - **核心内容**: 表达对AI失控风险的担忧，呼吁全球合作制定安全协议。  
-  - [链接](./2024/20240702Geoffrey%20Hinton%20担忧%20AI%20的未来.md)
+  - [链接](./2024/20240702_Geoffrey_Hinton_担忧_AI_的未来.md)
 
 ### **10月**
 - **2024/20241009 ‘Godfather of AI’ on AI “exceeding human intelligence” and it “trying to take over”**  
   - **日期**: 10月9日  
   - **核心内容**: 强调AI超越人类智能的紧迫性，并警告技术失控的潜在威胁。  
-  - [链接](./2024/20241009‘Godfather%20of%20AI’%20on%20AI%20“exceeding%20human%20intelligence”%20and%20it%20“trying%20to%20take%20over”.md)
+  - [链接](./2024/20241009_Godfather_of_AI_on_AI_exceeding_human_intelligence_and_trying_to_take_over.md)
 
 - **2024/20241009 多伦多校长线上会议hinton**  
   - **日期**: 10月9日  
@@ -295,64 +295,64 @@
 - **2024/20241010 瑞典皇家科学院宣布 2024 年诺贝尔物理学奖获奖者及成果介绍**  
   - **日期**: 10月10日  
   - **核心内容**: 作为诺贝尔物理学奖得主，阐述其贡献对AI与神经科学的交叉影响。  
-  - [链接](./2024/20241010瑞典皇家科学院宣布%202024%20年诺贝尔物理学奖获奖者及成果介绍.md)
+  - [链接](./2024/20241010_瑞典皇家科学院宣布_2024_年诺贝尔物理学奖获奖者及成果介绍.md)
 
 - **2024/20241012 Geoffrey Hinton Calls It Unfortunate That Ilya Found Out Sam Altman Was Profit-Driven**  
   - **日期**: 10月12日  
   - **核心内容**: 批评OpenAI创始人Sam Altman的商业动机，认为其可能削弱AI的长期安全性。  
-  - [链接](./2024/20241012Geoffrey%20Hinton%20Calls%20It%20Unfortunate%20That%20Ilya%20Found%20Out%20Sam%20Altman%20Was%20Profit-Driven.md)
+  - [链接](./2024/20241012_Geoffrey_Hinton_Calls_It_Unfortunate_That_Ilya_Found_Out_Sam_Altman_Was_Profit_Driven.md)
 
 ### **11月**
 - **2024/20241116 Questions & Answers with Dr. Geoffrey Hinton - Turing Minds 2024**  
   - **日期**: 11月16日  
   - **核心内容**: 在Turing Minds会议上回答公众提问，涵盖AI伦理、监管及技术突破。  
-  - [链接](./2024/20241116Questions%20&%20Answers%20with%20Dr.%20Geoffrey%20Hinton%20-%20Turing%20Minds%202024.md)
+  - [链接](./2024/20241116_Questions_and_Answers_with_Dr_Geoffrey_Hinton_Turing_Minds_2024.md)
 
 ### **12月**
 - **2024/20241201 AI教父Hinton十一月KBS访谈**  
   - **日期**: 12月1日  
   - **核心内容**: 为11月访谈，12月播放出来。  
-  - [链接](./2024/20241201%20AI教父Hinton十一月KBS访谈.md)
+  - [链接](./2024/20241201_AI教父Hinton_十一月KBS访谈.md)
+
+- **2024/20241205 Seminar with Professor Geoffrey Hinton**  
+  - **日期**: 12月5日  
+  - **核心内容**: 批判传统卷积神经网络（ConvNets）的局限性，提出“胶囊网络”（Capsule Networks）的架构设计。  
+  - [链接](./2024/20241205_Seminar_with_Professor_Geoffrey_Hinton_Critique_of_ConvNets_and_Introduction_to_Capsule_Networks.md)
+
+- **2024/20241208 Geoffrey Hinton 2024诺贝尔物理学奖演讲：玻尔兹曼机与深度学习革命**  
+  - **日期**: 12月8日  
+  - **核心内容**: 玻尔兹曼机（Boltzmann Machines）的理论突破及其对深度学习的奠基性贡献。  
+  - [链接](./2024/20241208_Nobel_Prize_lecture_Geoffrey_Hinton_Boltzmann_Machines_and_the_Deep_Learning_Revolution.md)
 
 - **2024/20241211 诺贝尔物理学奖得主，杰弗里·辛顿（Geoff Hinton）颁奖会演讲**  
   - **日期**: 12月11日  
   - **核心内容**: 颁奖典礼演讲中强调AI对科学发现的推动作用，呼吁平衡创新与安全。  
-  - [链接](./2024/20241211诺贝尔物理学奖得主，杰弗里·辛顿（Geoff%20Hinton）颁奖会演讲.md)
+  - [链接](./2024/20241211_诺贝尔物理学奖得主_杰弗里_辛顿_Geoff_Hinton_颁奖会演讲.md)
 
 - **2024/20241212 Geoffrey Hinton: "AI教父在获得VinFuture奖时的讲话" **  
   - **日期**: 12月12日  
   - **核心内容**: 接受VinFuture奖时，强调AI需服务于人类福祉而非军事化。  
-  - [链接](./2024/20241212Prof.%20Geoffrey%20Hinton%20AI%20Godfather%20on%20receiving%20the%20VinFuture%20Prize%20(%E5%85%B3%E4%BA%8E%20Geoffrey%20E.%20Hinton).md)
+  - [链接](./2024/20241212_Geoffrey_Hinton_AI教父在获得VinFuture奖时的讲话.md)
 
 - **2024/20241213 Geoffrey Hinton："AI具备人类级理解的革命性证据" **  
   - **日期**: 12月13日  
   - **核心内容**: 展示AI理解复杂问题的能力，引发对“机器意识”的哲学讨论。  
-  - [链接](./2024/20241213Prof.%20Geoffrey%20Hinton%20AI%20Godfather%20on%20receiving%20the%20VinFuture%20Prize%20(Geoffrey%20E.%20Hinton).md)
+  - [链接](./2024/20241213_Geoffrey_Hinton_AI具备人类级理解的革命性证据.md)
 
 - **2024/20241218 AI Unpacked with Nobel Laureate Geoffrey Hinton**  
   - **日期**: 12月18日  
   - **核心内容**: 深入解析AI技术原理，呼吁开发“可解释性AI”以增强透明度。  
-  - [链接](./2024/20241218AI%20Unpacked%20with%20Nobel%20Laureate%20Geoffrey%20Hinton.md)
+  - [链接](./2024/20241218_AI_Unpacked_with_Nobel_Laureate_Geoffrey_Hinton.md)
 
 - **2024/20241223 DIGITP Executive Sponsor Robert Meikle interviews Geoffrey Hinton**  
   - **日期**: 12月23日  
   - **核心内容**: 探讨AI在医疗、能源等领域的实际应用案例。  
-  - [链接](./2024/20241223DIGITP%20Executive%20Sponsor%20Robert%20Meikle%20interviews%20Geoffrey%20Hinton%20-%20The%20Father%20of%20Ai.md)
-
-- **2024/20241225 Seminar with Professor Geoffrey Hinton**  
-  - **日期**: 12月25日  
-  - **核心内容**: 年度学术研讨会上讨论胶囊网络（Capsule Networks）的最新进展。  
-  - [链接](./2024/20241225Seminar%20with%20Professor%20Geoffrey%20Hinton.md)
-
-- **2024/20241228 Nobel Prize lecture Geoffrey Hinton**  
-  - **日期**: 12月28日  
-  - **核心内容**: 诺贝尔奖演讲中反思AI的伦理挑战，提出“安全优先”的研发框架。  
-  - [链接](./2024/20241228Nobel%20Prize%20lecture%20Geoffrey%20Hinton.md)
+  - [链接](./2024/20241223_DIGITP_Executive_Sponsor_Robert_Meikle_interviews_Geoffrey_Hinton.md)
 
 - **2024/20241229 Even in 5 years we will create AGI. Superintelligence**  
   - **日期**: 12月29日  
   - **核心内容**: 预测5年内实现AGI（通用人工智能），并警告其潜在风险。  
-  - [链接](./2024/20241229Even%20in%205%20years%20we%20will%20create%20AGI.%20Superintelligence.md)
+  - [链接](./2024/20241229_Even_in_5_years_we_will_create_AGI_Superintelligence.md)
 
 ---
 
