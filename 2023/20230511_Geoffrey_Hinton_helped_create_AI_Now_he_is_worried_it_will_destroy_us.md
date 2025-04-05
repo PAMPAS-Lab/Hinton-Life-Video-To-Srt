@@ -6,6 +6,10 @@
 - **主讲人**: Geoffrey Hinton (SPEAKER_01)
 - **核心主题**: 探讨了AI技术的发展现状、潜在风险以及Hinton对未来的担忧，特别是关于AI可能带来的伦理和社会问题。
 - **视频链接**：[完整视频](https://www.youtube.com/watch?v=CkTUgOOa3n8)
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20230511Geoffrey_Hinton_helped_create_AI_Now_he’s_worried_it_will_destroy_us.txt)
+  - [中文字幕](../srt/20230511Geoffrey_Hinton_helped_create_AI_Now_he’s_worried_it_will_destroy_us-中文.txt)
+---
 
 ## 🎯 核心观点与技术预测
 
