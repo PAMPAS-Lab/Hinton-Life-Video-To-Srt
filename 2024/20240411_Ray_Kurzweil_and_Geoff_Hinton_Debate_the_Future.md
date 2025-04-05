@@ -17,7 +17,9 @@
   - Kurzweil的2045奇点论 vs Hinton的5-20年预测 (00:23:00-00:24:00)
   - 关于人类永生的根本分歧 (开场即引爆)
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=kCre83853TM)
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20240411Ray_Kurzweil_Geoff_Hinton_Debate_the_Future.txt)
+  - [中文字幕](../srt/20240411Ray_Kurzweil_Geoff_Hinton_Debate_the_Future-中文.txt)
 ---
 
 ## 🎯 核心观点与技术洞见
