@@ -6,6 +6,10 @@
 - **主讲人**: Geoffrey Hinton (SPEAKER_01)
 - **核心主题**: 探讨了神经网络的工作原理、无监督学习的重要性、卷积神经网络（ConvNets）的局限性以及未来可能的发展方向。
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=2EDP4v-9TUA)  
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20220601eason_2_Ep_22_Geoff_Hinton_on_revolutionizing_artificial_intelligence...again.txt)
+  - [中文字幕](../srt/20220601eason_2_Ep_22_Geoff_Hinton_on_revolutionizing_artificial_intelligence...again-中文.txt)
+---
 
 ## 🎯 核心观点与技术预测
 
