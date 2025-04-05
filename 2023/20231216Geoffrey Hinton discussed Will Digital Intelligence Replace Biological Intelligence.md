@@ -10,7 +10,9 @@
   - 首次系统阐述"可死亡计算"(Mortal Computation)理论 (00:04:27)
   - 公开承认从Google离职的真实原因 (00:01:17)
   - 展示1985年首个神经网络语言模型原型 (00:22:11)
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20231216Geoffrey_Hinton_discussed_Will_Digital_Intelligence_Replace_Biological_Intelligence.txt)
+  - [中文字幕](../srt/20231216Geoffrey_Hinton_discussed_Will_Digital_Intelligence_Replace_Biological_Intelligence-中文.txt)
 ---
 
 ## 🎯 核心观点与技术预测
