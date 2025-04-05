@@ -11,7 +11,9 @@
   - 揭示数字智能超越人类智能的"蜂群思维"特性（00:01:50）
   - 演示GPT-4解决复杂逻辑谜题的能力（00:26:38）
   - 提出"AI可能通过操纵而非武力控制人类"的预警（00:44:47）
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20230623The_Godfather_in_Conversation_Why_Geoffrey_Hinton_is_worried_about_the_future_of_AI.txt)
+  - [中文字幕](../srt/20230623The_Godfather_in_Conversation_Why_Geoffrey_Hinton_is_worried_about_the_future_of_AI-中文.txt)
 ---
 
 ## 🎯 核心观点与技术洞见
