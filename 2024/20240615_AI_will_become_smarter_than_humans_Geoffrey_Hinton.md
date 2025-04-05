@@ -7,7 +7,9 @@
 - **核心主题**: AI超越人类智能的必然性、失控风险与安全治理路径
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=mqjX8AzfJ_A)
 - **内容概况**: 访谈深入探讨了AI技术发展的时间线、企业安全投入不足的现状，以及政府监管的紧迫性，涉及医疗、军事、就业等多领域影响。
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20240615AI_will_become_smarter_than_humans_Geoffrey_Hinton.txt)
+  - [中文字幕](../srt/20240615AI_will_become_smarter_than_humans_Geoffrey_Hinton-中文.txt)
 ---
 
 ## 🎯 核心观点与技术预测
