@@ -7,7 +7,9 @@
 - **核心主题**: AI发展速度、失控风险、就业冲击及监管挑战
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=vxkBE23zDmQ&t=0s)
 - **内容概况**: 40分钟深度对话，涵盖AI进化、意识本质、经济影响等关键议题
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20250131Godfather_of_AI_predicts_it_will_take_over_the_world_LBC.txt)
+  - [中文字幕](../srt/20250131Godfather_of_AI_predicts_it_will_take_over_the_world_LBC-中文.txt)  
 ---
 
 ## 🎯 核心观点与技术预测
