@@ -7,7 +7,9 @@
 - **核心主题**: 探讨人工智能（AI）的起源、当前能力、未来发展及其潜在风险与益处，Hinton 从神经网络先驱的视角反思技术影响。
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=qrvK_KuIeJk&t=3s)
 - **内容概况**: 本视频记录了Geoffrey Hinton 对AI发展的深刻见解，从其个人经历和技术突破讲起，阐述AI如何从模拟人脑的工具演变为超越人类智能的系统。他强调AI的理解能力、学习效率及潜在自主性，同时警告其可能失控的风险，呼吁实验、监管和国际合作以应对未来挑战。
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20230900Godfather_of_AI_Geoffrey_Hinton_The_60_Minutes_Interview.txt)
+  - [中文字幕](../srt/20230900Godfather_of_AI_Geoffrey_Hinton_The_60_Minutes_Interview-中文.txt)
 ---
 
 ## 🎯 核心观点与技术预测
