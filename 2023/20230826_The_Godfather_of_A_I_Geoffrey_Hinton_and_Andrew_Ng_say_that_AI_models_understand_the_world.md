@@ -15,7 +15,9 @@
   - 两大AI领袖首次公开联合呼吁学术共识
   - 回应Yann LeCun的"随机鹦鹉"(Stochastic Parrot)理论
   - 提出"特征交互=理解"的新认知框架（00:04:26）
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20230826The_Godfather_of_A.I._Geoffrey_Hinton_and_Andrew_Ng_say_that_AI_models_understand_the_world.txt)
+  - [中文字幕](../srt/20230826The_Godfather_of_A.I._Geoffrey_Hinton_and_Andrew_Ng_say_that_AI_models_understand_the_world-中文.txt)
 ---
 
 ## 🎯 核心观点与技术洞见
