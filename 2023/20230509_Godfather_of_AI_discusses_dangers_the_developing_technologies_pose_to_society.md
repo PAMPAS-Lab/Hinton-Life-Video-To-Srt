@@ -7,7 +7,9 @@
 - **核心主题**: 人工智能的潜在风险，包括超级智能AI失控的可能性
 - **背景**: Hinton辞去Google职务以自由表达对AI风险的担忧
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=Y6Sgp7y178k)  
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20230509Godfather_of_AI_discusses_dangers_the_developing_technologies_pose_to_society.txt)
+  - [中文字幕](../srt/20230509Godfather_of_AI_discusses_dangers_the_developing_technologies_pose_to_society-中文.txt)
 ---
 
 ## 🎯 核心观点与风险警告
