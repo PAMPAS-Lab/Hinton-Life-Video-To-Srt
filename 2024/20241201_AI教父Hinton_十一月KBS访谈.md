@@ -8,7 +8,9 @@
 - **内容概况**: 从神经网络原理到AI军事化应用的系统性论述
 - **视频链接**: [完整视频](https://www.bilibili.com/video/BV1fSzZYAEGX/?spm_id_from=333.337.search-card.all.click&vd_source=0bd589f46b265005336c077eea20fb52) 
 - **视频分段**: 完整访谈包含112条字幕段落，时长17分46秒
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20241201AI教父Hinton十一月KBS访谈.txt)
+  - [中文字幕](../srt/20241201AI教父Hinton十一月KBS访谈-中文.txt)
 ---
 
 ## 🎯 核心观点与技术预测
