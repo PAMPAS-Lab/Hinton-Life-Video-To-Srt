@@ -6,7 +6,9 @@
 - **主讲人**: Geoffrey Hinton (与Cade Metz对话)
 - **核心主题**: 探讨当前卷积神经网络的局限性，提出"胶囊网络"(Capsule Networks)的创新架构
 - **内容概况**: Hinton通过心理学实验和计算机图形学类比，阐述传统卷积神经网络在视角不变性方面的根本缺陷，并详细介绍胶囊网络的工作原理和实验成果
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20171103The_Times_Interviews_Geoffrey_Hinton.txt)
+  - [中文字幕](../srt/20171103The_Times_Interviews_Geoffrey_Hinton-中文.txt)
 ---
 
 ## 🎯 核心观点与技术突破
