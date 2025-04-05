@@ -6,7 +6,9 @@
 - **主讲人**: Geoffrey Hinton (SPEAKER_00)
 - **核心主题**: 反思 AI 发展潜在的风险，警告 AI 可能会学会操纵甚至伤害人类。
 - **视频来源**: [完整视频](https://www.youtube.com/watch?v=FAbsoxQtUwM)
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20230503Godfather_of_AI_warns_that_AI_may_figure_out_how_to_kill_people.txt)
+  - [中文字幕](../srt/20230503Godfather_of_AI_warns_that_AI_may_figure_out_how_to_kill_people-中文.txt)
 ---
 
 ## 🎯 主要内容
