@@ -7,7 +7,9 @@
 - **核心主题**: 探讨AI在医疗领域的突破性应用及其对人类智能的挑战
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=UCde2APKc8w)
 - **内容概况**: 从ImageNet革命到最新医学诊断LLM，Hinton深入解析AI的理解能力边界及医疗应用前景
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20231209Geoffrey_Hinton_Large_Language_Models_in_Medicine_They_Understand_and_Have_Empathy.txt)
+  - [中文字幕](../srt/20231209Geoffrey_Hinton_Large_Language_Models_in_Medicine_They_Understand_and_Have_Empathy-中文.txt)
 ---
 
 ## 🎯 核心观点与技术预测
