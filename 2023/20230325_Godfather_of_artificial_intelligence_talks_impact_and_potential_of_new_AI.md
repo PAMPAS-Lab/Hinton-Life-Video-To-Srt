@@ -7,7 +7,9 @@
 - **核心主题**: 探讨生成式AI技术的爆发式发展、社会影响及AGI（通用人工智能）的潜在风险
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=uG2SKIdLUj4)
 - **内容概况**: 记者Brooke Silva-Braga探访多伦多AI研究重镇，采访Hinton及其弟子对ChatGPT等技术的看法，涉及技术原理、应用场景与伦理争议
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20230325_Godfather_of_artificial_intelligence_talks_impact_and_potential_of_new_AI.txt)
+  - [中文字幕](../srt/20230325_Godfather_of_artificial_intelligence_talks_impact_and_potential_of_new_AI-中文.txt)
 ---
 
 ## 🎯 核心观点与技术洞见
