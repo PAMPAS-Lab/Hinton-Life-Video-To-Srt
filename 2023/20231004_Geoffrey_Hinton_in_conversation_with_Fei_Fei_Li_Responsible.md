@@ -10,7 +10,9 @@
 - **核心主题**: 从ImageNet到ChatGPT的AI发展历程，以及AI对社会的影响与责任
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=QWWgr2rN45o) 
 - **内容概况**: 两位AI先驱回顾了AI发展的关键里程碑，探讨了当前技术的社会影响，并分享了他们对AI未来的展望与担忧。
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20231004Geoffrey_Hinton_in_conversation_with_Fei-Fei-Li_Responsible.txt)
+  - [中文字幕](../srt/20231004Geoffrey_Hinton_in_conversation_with_Fei-Fei-Li_Responsible-中文.txt)
 ---
 
 ## 🎯 核心观点与技术预测
