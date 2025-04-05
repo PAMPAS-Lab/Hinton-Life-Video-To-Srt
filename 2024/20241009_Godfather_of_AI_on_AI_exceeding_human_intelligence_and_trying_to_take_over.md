@@ -8,8 +8,8 @@
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=MGJpR591oaM)
 - **内容概况**: Hinton从技术专家角度分析了AI发展的临界点，提出5-20年内有50%概率面临AI试图接管控制权的危机，并呼吁国际社会优先监管军事应用。
 - **字幕文件链接**
-  - [原始英文字幕](../srt/20241009University_of_Toronto_Press_Conference_Professor_Geoffrey_Hinton.txt)
-  - [中文字幕](../srt/20241009University_of_Toronto_Press_Conference_Professor_Geoffrey_Hinton-中文.txt)
+  - [原始英文字幕](../srt/20241009‘Godfather_of_AI’_on_AI_exceeding_human_intelligence_and_it_trying_to_take_over.txt)
+  - [中文字幕](../srt/20241009‘Godfather_of_AI’_on_AI_exceeding_human_intelligence_and_it_trying_to_take_over-中文.txt)
 ---
 
 ## 🎯 核心观点与技术预测
