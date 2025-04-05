@@ -7,7 +7,9 @@
 - **核心主题**：介绍受限玻尔兹曼机(RBM)的创新改进与三阶交互模型
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=VdIURAu1-aU)  
 - **技术突破**：提出因子化三阶玻尔兹曼机，实现运动建模与语音识别突破
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20100319Recent_Developments_in_Deep_Learning.txt)
+  - [中文字幕](../srt/20100319Recent_Developments_in_Deep_Learning-中文.txt)
 ## 🎯 核心技术演进
 
 ### 1. 受限玻尔兹曼机(RBM)的强化
