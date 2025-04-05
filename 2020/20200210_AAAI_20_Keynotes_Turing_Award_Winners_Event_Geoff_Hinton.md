@@ -6,7 +6,9 @@
 - **主讲人**: Geoffrey Hinton (SPEAKER_07)  
 - **核心主题**: 批判卷积神经网络(CNNs)的局限性，提出胶囊网络(Capsule Networks)的革新设计，并探讨自我监督学习的前景  
 - **视频链接**: [AAAI 2020 Keynotes](https://www.youtube.com/watch?v=UX8OubxsY8w&t=142s)  
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20200210AAAI_2020_Keynotes_Turing_Award_Winners_Event_Geoff_Hinton.txt)
+  - [中文字幕](../srt/20200210AAAI_2020_Keynotes_Turing_Award_Winners_Event_Geoff_Hinton-中文.txt)
 ---
 
 ## 🎯 核心观点与技术预测
