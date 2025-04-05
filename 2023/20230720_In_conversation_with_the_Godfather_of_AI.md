@@ -14,7 +14,9 @@
   - 首次公开解释"管道工职业建议"的深层逻辑（00:12:55）
   - 演示GPT-4解决复杂逻辑谜题（"房屋粉刷问题"）（00:02:51）
   - 披露Google多模态模型Gemini研发细节（00:15:46）
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20230720In_conversation_with_the_Godfather_of_AI.txt)
+  - [中文字幕](../srt/20230720In_conversation_with_the_Godfather_of_AI-中文.txt)
 ---
 
 ## 🎯 核心观点与技术洞见
