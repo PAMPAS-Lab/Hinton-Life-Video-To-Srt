@@ -6,6 +6,9 @@
 - **演讲者**: Geoffrey Hinton（多伦多大学荣休教授，前谷歌研究员）  
 - **核心主题**: 从神经网络先驱到AI风险警示者——分析数字智能的进化优势与生存风险  
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=y2df7HXfQdM)
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20250126_The_Godfather_in_Conversation_Why_Geoffrey_Hinton_is_worried_about_the_future_of_AI.txt)
+  - [中文字幕](../srt/20250126_The_Godfather_in_Conversation_Why_Geoffrey_Hinton_is_worried_about_the_future_of_AI-中文.txt)  
 ---
 
 ## 🎯 核心观点与技术预测
