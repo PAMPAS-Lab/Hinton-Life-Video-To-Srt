@@ -7,7 +7,9 @@
 - **核心主题**: 探讨深度学习的定义、技术发展及其对人工智能的影响，展望其在翻译、语音识别及日常生活中的应用前景。
 - **视频链接**：[完整视频](https://www.youtube.com/watch?v=XG-dwZMc7Ng)
 - **内容概况**: 本采访记录了Geoffrey Hinton 对深度学习的深入解读，从其神经网络基础讲起，阐释其如何通过模拟大脑神经元学习机制，推动AI从手写编程转向数据驱动的自主学习。他以Google Translate和Watson为例，分析深度学习的当前应用与未来潜力，同时表达对长期风险的谨慎态度。
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20160304Geoffrey_Hinton_The_Godfather_of_Deep_Learning.txt)
+  - [中文字幕](../srt/20160304Geoffrey_Hinton_The_Godfather_of_Deep_Learning-中文.txt)
 ---
 
 ## 🎯 核心观点与技术预测
