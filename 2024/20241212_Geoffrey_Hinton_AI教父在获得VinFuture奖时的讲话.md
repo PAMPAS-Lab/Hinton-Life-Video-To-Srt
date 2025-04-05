@@ -6,7 +6,9 @@
 - **主讲人**: Geoffrey Hinton  
 - **核心主题**: 探讨了人工智能领域的关键人物及其贡献，讨论了奖项的意义、技术预测及对未来的展望。  
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=EYHQO9PQQ1Q)
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20241212_Prof_Geoffrey_Hinton_AI_Godfather_on_receiving_the_VinFuture_Prize.txt)
+  - [中文字幕](../srt/20241212_Prof_Geoffrey_Hinton_AI_Godfather_on_receiving_the_VinFuture_Prize-中文.txt)
 ---
 
 ## 🎯 核心观点与技术预测
