@@ -7,7 +7,9 @@
 - **核心主题**: 分析传统卷积神经网络（ConvNets）的局限性，提出胶囊网络（Capsule Networks）作为改进方案，解决视角变化和几何关系的建模问题。
 - **视频链接**：[完整视频](https://www.youtube.com/watch?v=byqn-p_vokE)
 - **内容概况**: Geoffrey Hinton 在这场演讲中从卷积神经网络的缺陷入手，详细阐述了其在处理视角变化、空间关系和物体解析上的不足，并介绍了胶囊网络的设计理念、技术细节及初步实验结果。他结合心理学实验、计算机图形学和神经科学，论证了胶囊网络的潜力，同时坦诚其当前挑战和未来方向。
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20190300geoffrey_hinton_capsule_networks.txt)
+  - [中文字幕](../srt/20190300geoffrey_hinton_capsule_networks-中文.txt)
 ---
 
 ## 🎯 核心观点与技术预测
