@@ -7,7 +7,9 @@
 - **核心主题**: 探讨大脑感觉皮层是否可能实现反向传播算法（Backpropagation），并提出新的神经计算模型
 - **视频链接**：[完整视频](https://www.youtube.com/watch?v=cBLk5baHbZ8)
 - **内容概况**: Hinton系统回应了神经科学界对反向传播的四大质疑，提出通过时间导数表示误差导数的新颖理论，并展示了"反馈对齐"(Feedback Alignment)实验证据
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20160417Can_sensory_cortex_do_backpropagation_Geoffery_Hinton.txt)
+  - [中文字幕](../srt/20160417Can_sensory_cortex_do_backpropagation_Geoffery_Hinton-中文.txt)
 ---
 
 ## 🎯 核心观点与技术预测
