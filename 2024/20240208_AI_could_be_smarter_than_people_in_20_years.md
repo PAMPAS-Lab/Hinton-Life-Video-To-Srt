@@ -5,7 +5,10 @@
 - **时间**: 2024年2月8号于都柏林大学学院
 - **主讲人**: Geoffrey Hinton (AI先驱)、Orla Feely教授(UCD校长)
 - **核心主题**: 深度学习革命历程与AI伦理挑战
-- **视频链接**: [完整视频](https://www.youtube.com/watch?v=bEuNgY7Olbo)  
+- **视频链接**: [完整视频](https://www.youtube.com/watch?v=bEuNgY7Olbo)
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20240208AI_could_be_smarter_than_people_in_20_years.txt)
+  - [中文字幕](../srt/20240208AI_could_be_smarter_than_people_in_20_years-中文.txt)
 ---
 
 ## 🎯 核心观点与技术预测
