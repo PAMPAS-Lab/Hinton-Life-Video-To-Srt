@@ -10,7 +10,9 @@
   - 医疗诊断等社会效益展望
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=9K5mtyXrhnU)
 - **对话特点**: 展现Hinton对AI发展的矛盾心态 - 既担忧失控风险，又期待技术红利
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20241012Geoffrey_Hinton_Calls_It_Unfortunate_That_Ilya_Found_Out_Sam_Altman_Was_Profit-Driven.txt)
+  - [中文字幕](../srt/20241012Geoffrey_Hinton_Calls_It_Unfortunate_That_Ilya_Found_Out_Sam_Altman_Was_Profit-Driven-中文.txt)
 ---
 
 ## 🎯 核心观点与争议焦点
