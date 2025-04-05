@@ -7,7 +7,9 @@
 - **核心主题**: Hinton反思AI技术的快速发展及其对人类社会的潜在威胁，探讨AI意识、安全性及伦理问题
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=b_DUft-BdIE)
 - **内容概况**: 本次访谈深入讨论了Hinton对AI技术未来发展的担忧，包括AI可能超越人类控制的风险、AI意识的本质、以及如何确保AI发展的安全性
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20250118_Why_The_Godfather_of_AI_Now_Fears_His_Own_Creation_Geoffrey_Hinton.txt)
+  - [中文字幕](../srt/20250118_Why_The_Godfather_of_AI_Now_Fears_His_Own_Creation_Geoffrey_Hinton-中文.txt)  
 ---
 
 ## 🎯 核心观点与技术预测
