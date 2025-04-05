@@ -6,6 +6,9 @@
 - **主讲人**: Geoffrey Hinton（SPEAKER_01）、Yoshua Bengio（SPEAKER_02）  
 - **核心主题**: 神经网络与深度学习的突破性贡献，及其在医疗、语言翻译、社会影响等领域的应用  
 - **视频链接**：[完整视频](https://www.youtube.com/watch?v=BWIV5xQoYbA)
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20190327Turing_Award_goes_to_Canadian_researchers_who_taught_AI_to_learn_like_humans.txt)
+  - [中文字幕](../srt/20190327Turing_Award_goes_to_Canadian_researchers_who_taught_AI_to_learn_like_humans-中文.txt)
 ---
 
 ## 🎯 核心观点与技术预测
