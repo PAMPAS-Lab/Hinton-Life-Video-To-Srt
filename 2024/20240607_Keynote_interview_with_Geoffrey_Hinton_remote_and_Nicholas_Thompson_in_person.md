@@ -7,7 +7,9 @@
 - **核心主题**: AI技术发展带来的机遇与生存威胁，数字智能超越生物智能的机制，以及社会监管框架的紧迫需求
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=dNjClDI6zT4)
 - **内容概况**: 本次访谈涵盖了Hinton从Google离职的深层原因、AI系统的主观体验、技术不平等影响、选举安全威胁等多维度讨论，呈现了这位"AI教父"对技术发展最前沿的思考与预警。
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20240607Keynote_interview_with_Geoffrey_Hinton_remote_and_Nicholas_Thompson_in-person-中文.txt)
+  - [中文字幕](../srt/20240607Keynote_interview_with_Geoffrey_Hinton_remote_and_Nicholas_Thompson_in-person-中文.txt)
 ---
 
 ## 🎯 核心观点与技术预测
