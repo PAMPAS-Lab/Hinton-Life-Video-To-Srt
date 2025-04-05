@@ -1,4 +1,4 @@
-# Geoffrey Hinton: CIFAR Annual Dinner Keynote on Deep Learning (2016)
+# Geoffrey Hinton: CIFAR Annual Dinner Keynote on Deep Learning
 
 ## 📽️ 视频概览
 - **标题**: CIFAR Annual Dinner Keynote Address
@@ -7,7 +7,9 @@
 - **核心主题**: 探讨深度学习的技术基础、发展历程及其对人工智能和社会的深远影响
 - **视频链接**：[完整视频](https://www.youtube.com/watch?v=fDR1I2Shw_E)
 - **内容概况**: 本文档记录了 CIFAR 年度晚宴的演讲和问答环节。Alan Bernstein 作为 CIFAR 总裁开场，介绍了组织的使命和成就，随后 Geoffrey Hinton 发表主旨演讲，详细讲解了深度学习的原理、技术突破及其未来潜力。Nora Young 主持问答环节，涵盖技术应用、哲学意义和伦理问题。本演讲不仅回顾了 Hinton 在神经网络领域的坚持与突破，还展望了 AI 的未来发展。
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20160304Geoffrey_Hinton_The_Godfather_of_Deep_Learning.txt)
+  - [中文字幕](../srt/20160304Geoffrey_Hinton_The_Godfather_of_Deep_Learning-中文.txt)
 ---
 
 ## 🎯 核心观点与技术预测
