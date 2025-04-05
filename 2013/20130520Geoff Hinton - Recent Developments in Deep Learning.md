@@ -8,7 +8,9 @@
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=vShMxxqtDDs)  
 - **内容概况**:  
   本演讲系统回顾了反向传播（Backpropagation）的历史局限性（如梯度消失问题），并重点阐述了通过预训练（Pre-training）、Dropout、修正线性单元（ReLU）等技术实现深度网络训练的突破。Hinton还探讨了卷积神经网络（ConvNets）在计算机视觉中的局限性，并展望了胶囊网络（Capsule Networks）和递归神经网络（RNN）的未来潜力。
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20130520Geoff_Hinton_Recent_Developments_in_Deep_Learning.txt)
+  - [中文字幕](../srt/20130520Geoff_Hinton_Recent_Developments_in_Deep_Learning-中文.txt)
 ---
 
 ## 🎯 核心观点与技术预测
