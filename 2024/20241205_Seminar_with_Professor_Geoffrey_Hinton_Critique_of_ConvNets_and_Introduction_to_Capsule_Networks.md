@@ -6,7 +6,9 @@
 - **主讲人**: Geoffrey Hinton (SPEAKER_01)  
 - **核心主题**: 批判传统卷积神经网络（ConvNets）的局限性，提出“胶囊网络”（Capsule Networks）的架构设计。  
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=515TAgpJrYc)  
-
+- **字幕文件链接**
+  - [原始英文字幕](../srt/20241205Seminar_with_Professor_Geoffrey_Hinton.txt)
+  - [中文字幕](../srt/20241205Seminar_with_Professor_Geoffrey_Hinton-中文.txt)
 ---
 
 ## **内容概况**
