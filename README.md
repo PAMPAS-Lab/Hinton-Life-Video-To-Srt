@@ -244,12 +244,6 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
 
 ## 2023
 
-### **1月**
-- **2023/20230104 Geoffrey Hinton in conversation with Fei-Fei Li — Responsible**  
-  - **日期**: 1月4日  
-  - **核心内容**: 与李飞飞就负责任的AI发展进行对话。  
-  - [链接](./2023/20230104_Geoffrey_Hinton_in_conversation_with_FeiFei_Li_-_Responsible.md)
-
 ### **3月**
 - **2023/20230325 _Godfather of artificial intelligence_ talks impact and potential of new AI**  
   - **日期**: 3月25日  
