@@ -1,6 +1,6 @@
 # Hinton-Life-Video-To-Srt
 
-## Geoffrey Everest Hinton简介
+## Geoffrey Everest Hinton介绍
 Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是英国出生的加拿大计算机学家和心理学家，现任多伦多大学教授。他在类神经网络和深度学习领域做出了杰出贡献，被誉为“深度学习教父”。2018年，他与约书亚·本希奥、杨立昆共同获得图灵奖。2024年，他与约翰·霍普菲尔德共同获得诺贝尔物理学奖。
 
 ## 生平
