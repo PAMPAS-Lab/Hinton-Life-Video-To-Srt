@@ -1,5 +1,83 @@
 # Hinton-Life-Video-To-Srt
 
+## Geoffrey Everest Hinton简介
+Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是英国出生的加拿大计算机学家和心理学家，现任多伦多大学教授。他在类神经网络和深度学习领域做出了杰出贡献，被誉为“深度学习教父”。2018年，他与约书亚·本希奥、杨立昆共同获得图灵奖。2024年，他与约翰·霍普菲尔德共同获得诺贝尔物理学奖。
+
+## 生平
+- **教育背景**
+  - 1970年：剑桥大学实验心理学学士学位
+  - 1978年：爱丁堡大学人工智能博士学位
+
+- **职业经历**
+  - 曾在萨塞克斯大学、加州大学圣迭戈分校、剑桥大学、卡内基梅隆大学和伦敦大学学院工作
+  - 1998年：当选皇家学会会士
+  - 2005年：获得IJCAI杰出学者奖终生成就奖
+  - 2011年：获得赫茨伯格加拿大科学和工程金奖
+  - 2013年3月：加入Google，同时Google并购了他创办的DNNresearch公司
+  - 目前：多伦多大学计算机科学系教授，Vector Institute首席科学顾问
+
+## 研究兴趣
+- **主要贡献**
+  - **反向传播算法（Backpropagation Algorithm）**：一种用于训练人工神经网络的常用方法，通过误差梯度逐层调整网络权重。
+  - **对比散度算法（Contrastive Divergence Algorithm）**：一种用于快速训练受限玻尔兹曼机（Restricted Boltzmann Machine, RBM）的有效算法。
+  - **波尔兹曼机（Boltzmann Machines）**：一类基于统计力学的能量模型，能够学习数据的概率分布。其中包括受限玻尔兹曼机（RBM），其结构中不存在单元之间的内部连接。
+  - **分散表示（Distributed Representation）**：指每个概念由多个维度的数值来表示，并且这些数值分布在多个节点上，而不是单一节点负责一个概念。
+  - **时延神经网络（Time-Delay Neural Networks, TDNNs）**：一种特殊类型的卷积神经网络（CNN），常用于处理时间序列数据或语音信号处理。
+  - **专家混合系统（Mixtures of Experts, MoE）**：一种模块化的神经网络架构，其中不同的“专家”子网络处理输入的不同方面，最后由门控网络决定各专家输出的权重。
+  - **亥姆霍兹机（Helmholtz Machines）**：一种早期的生成模型，旨在模拟人类大脑如何处理感知信息，包含一个识别网络和一个生成网络。
+  - **胶囊神经网络（Capsule Networks, CapsNets）**：一种改进传统卷积神经网络的方法，它使用胶囊（capsules）代替单个神经元，每个胶囊代表一组神经元，专门捕捉特定实体的各种属性如位置、姿态等。
+
+- **代表性研究论文**
+  1. **反向传播算法的使用**
+     - Rumelhart D E, Hinton G E, Williams R J. Learning representations by back-propagating errors[J]. Cognitive modeling, 1988, 5(3): 1.
+  2. **CNN语音识别开篇TDN网络**
+     - Waibel A, Hanazawa T, Hinton G, et al. Phoneme recognition using time-delay neural networks[J]. Backpropagation: Theory, Architectures and Applications, 1995: 35-61.
+  3. **DBN网络的学习**
+     - Hinton G E, Osindero S, Teh Y W. A fast learning algorithm for deep belief nets[J]. Neural computation, 2006, 18(7): 1527-1554.
+  4. **深度学习的开篇**
+     - Hinton G E, Salakhutdinov R R. Reducing the dimensionality of data with neural networks[J]. science, 2006, 313(5786): 504-507.
+  5. **数据降维可视化方法t-SNE**
+     - Maaten L, Hinton G. Visualizing data using t-SNE[J]. Journal of machine learning research, 2008, 9(Nov): 2579-2605.
+  6. **DBM模型**
+     - Salakhutdinov R, Hinton G. Deep boltzmann machines[C]//Artificial intelligence and statistics. 2009: 448-455.
+  7. **ReLU激活函数的使用**
+     - Nair V, Hinton G E. Rectified linear units improve restricted boltzmann machines[C]//Proceedings of the 27th international conference on machine learning (ICML-10). 2010: 807-814.
+  8. **RBM模型的训练**
+     - Hinton G E. A practical guide to training restricted Boltzmann machines[M]//Neural networks: Tricks of the trade. Springer, Berlin, Heidelberg, 2012: 599-619.
+  9. **深度学习语音识别开篇Hinton G, Deng L, Yu D, et al.**
+     - Deep neural networks for acoustic modeling in speech recognition[J]. IEEE Signal processing magazine, 2012, 29.
+  10. **深度学习图像识别开篇AlexNet**
+     - Krizhevsky A, Sutskever I, Hinton G E. Imagenet classification with deep convolutional neural networks[C]//Advances in neural information processing systems. 2012: 1097-1105.
+  11. **权重初始化和Momentum优化方法的研究**
+     - Sutskever I, Martens J, Dahl G, et al. On the importance of initialization and momentum in deep learning[C]//International conference on machine learning. 2013: 1139-1147.
+  12. **Dropout方法提出**
+     - Srivastava N, Hinton G, Krizhevsky A, et al. Dropout: a simple way to prevent neural networks from overfitting[J]. The Journal of Machine Learning Research, 2014, 15(1): 1929-1958.
+  13. **三巨头深度学习综述**
+     - LeCun Y, Bengio Y, Hinton G. Deep learning[J]. nature, 2015, 521(7553): 436.
+  14. **蒸馏学习算法**
+     - Hinton G, Vinyals O, Dean J. Distilling the knowledge in a neural network[J]. arXiv preprint arXiv:1503.02531, 2015.
+  15. **Capsule Network**
+     - Sabour S, Frosst N, Hinton G E. Dynamic routing between capsules[C]//Advances in neural information processing systems. 2017: 3856-3866.
+
+## 轶事
+- **家族背景**
+  - 他是逻辑学家乔治·布尔与数学家和教育家玛丽·埃佛勒斯·布尔的曾曾孙，布尔的工作最终成为了现代电子计算机的基础。
+  - 他是外科医生和作家詹姆士·辛顿的后裔。
+- **个人生活**
+  - 有两任妻子，两个孩子。
+- **观点**
+  - 2023年5月，他称其后悔研发人工智能，担心人工智能会为世界带来严重危害。
+
+## 个人主页
+- [Geoffrey Hinton的个人主页](http://www.cs.toronto.edu/~hinton/bio.html)
+
+## 获奖
+- 1998年：当选皇家学会会士
+- 2005年：IJCAI杰出学者奖终生成就奖
+- 2011年：赫茨伯格加拿大科学和工程金奖
+- 2018年：图灵奖
+- 2024年：诺贝尔物理学奖
+
 ## 2007
 
 ### **12月**
