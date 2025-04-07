@@ -83,8 +83,9 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
 ## 2007
 
 ### **12月**
-- **2007/20071204 The Next Generation of Neural Networks**  
-  - **日期**: 12月4日  
+- **2007/20071204 The Next Generation of Neural Networks|Google Tech Talks**  
+  - **日期**: 12月4日
+  - **视频类型**：讲座  
   - **核心内容**: 探讨神经网络的下一代发展，可能涉及深度学习的早期架构创新。  
   - [链接](./2007/20071204The%20Next%20Generation%20of%20Neural%20Networks.md)
 
@@ -93,8 +94,9 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
 ## 2010
 
 ### **3月**
-- **2010/20100319 Recent Developments in Deep Learning**  
-  - **日期**: 3月19日  
+- **2010/20100319 Recent Developments in Deep Learning|Google Tech Talk**  
+  - **日期**: 3月19日
+  - **视频类型**：讲座  
   - **核心内容**: 总结当时深度学习领域的最新进展与挑战。  
   - [链接](./2010/20100319Recent%20Developments%20in%20Deep%20Learning.md)
 
@@ -103,8 +105,9 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
 ## 2012
 
 ### **8月**
-- **2012/20120824 Brains**  
-  - **日期**: 8月24日  
+- **2012/20120824 Brains|Google Tech Talk**  
+  - **日期**: 8月24日
+  - **视频类型**：讲座
   - **核心内容**: 可能涉及神经科学与人工智能的交叉研究，探讨大脑启发的AI模型。  
   - [链接](./2012/20120824Brains.md)
 
@@ -113,8 +116,9 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
 ## 2013
 
 ### **5月**
-- **2013/20130520 Geoff Hinton - Recent Developments in Deep Learning**  
-  - **日期**: 5月20日  
+- **2013/20130520 Geoff Hinton - Recent Developments in Deep Learning|UBC**  
+  - **日期**: 5月20日
+  - **视频类型**：大学讲座  
   - **核心内容**: 再次聚焦深度学习进展，可能讨论卷积网络或反向传播的优化。  
   - [链接](./2013/20130520Geoff%20Hinton%20-%20Recent%20Developments%20in%20Deep%20Learning.md)
 
@@ -122,8 +126,9 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
 
 ## 2014
 
-- **2014/2014 What's wrong with convolutional nets**  
-  - **日期**: 日期未知  
+- **2014/2014 What's wrong with convolutional nets|多伦多大学**  
+  - **日期**: 日期未知
+  - **视频**：大学讲座  
   - **核心内容**: 分析卷积神经网络的局限性及改进方向。  
   - [链接](./2014/20140000_Whats_wrong_with_convolutional_nets.md)
 
@@ -131,21 +136,25 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
 
 ## 2016
 
-- **2016/2016 Prof. Geoffrey Hinton - Artificial Intelligence Turning our understanding of the mind right side up**  
-  - **日期**: 日期未知  
+- **2016/2016 Prof. Geoffrey Hinton - Artificial Intelligence Turning our understanding of the mind right side up|CBC Radio Spark访谈**  
+  - **录制日期**: 2016年
+  - **视频类型**：节目访谈
+  - **采访人**：Nora Young  
   - **核心内容**: 探讨AI如何重新定义人类对心智与认知的理解。  
   - [链接](./2016/20160000_Geoffrey_Hinton-Artificial_Intelligence_Redefining_Mind_Understanding.md)
 
 ### **3月**
-- **2016/20160304 Geoffrey Hinton: The Godfather of Deep Learning**  
-  - **日期**: 3月4日  
+- **2016/20160304 Geoffrey Hinton: The Godfather of Deep Learning|TVO采访**  
+  - **日期**: 3月4日
+  - **视频类型**：新闻采访  
   - **核心内容**: 探讨Hinton在深度学习领域的开创性贡献。  
   - [链接](./2016/20160304Geoffrey%20Hinton%20The%20Godfather%20of%20Deep%20Learning.md)
 
 ### **4月**
 - **2016/20160417 Can sensory cortex do backpropagation? - Geoffrey Hinton**  
-  - **日期**: 4月17日  
-  - **核心内容**: 分析感官皮层是否具备类似反向传播的学习机制（修正拼写 `Geoffery` 为 `Geoffrey`）。  
+  - **日期**: 4月17日
+  - **视频类型**：讲座  
+  - **核心内容**: 分析感官皮层是否具备类似反向传播的学习机制。  
   - [链接](./2016/20160417_Sensory_Cortex_Backpropagation-Geoffrey_Hinton.md)
 
 ---
@@ -153,8 +162,10 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
 ## 2018
 
 ### **6月**
-- **2018/20180626 This Canadian Genius Created Modern AI**  
-  - **日期**: 6月26日  
+- **2018/20180626 This Canadian Genius Created Modern AI|BloombergHelloWorld**  
+  - **日期**: 6月26日
+  - **视频类型**：人物访谈
+  - **采访人**：Ashlee Vance  
   - **核心内容**: 回顾Hinton如何引领现代AI技术的发展。  
   - [链接](./2018/20180626This%20Canadian%20Genius%20Created%20Modern%20AI.md)
 
@@ -164,31 +175,37 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
 
 ### **1月**
 - **2019/20190113 creative destruction lab**  
-  - **日期**: 1月13日  
+  - **日期**: 1月13日
+  - **视频类型**：技术讲座  
   - **核心内容**: 参与Creative Destruction Lab活动，探讨AI与创业的结合。  
   - [链接](./2019/20190906_AI_Revolution-Toronto_Global_Forum_Keynote.md)
 
 ### **3月**
-- **2019/20190300 geoffrey hinton - capsule networks**  
-  - **日期**: 3月  
+- **2019/20190300 geoffrey hinton - capsule networks|ICE**  
+  - **日期**: 3月8日
+  - **视频类型**：技术讲座 
   - **核心内容**: 介绍胶囊网络（Capsule Networks）的最新研究成果。  
   - [链接](./2019/20190300geoffrey%20hinton%20-%20capsule%20networks.md)
 
 ### **5月**
-- **2019/20190510 A Fireside Chat with Turing Award Winner Geoffrey Hinton**  
-  - **日期**: 5月10日  
+- **2019/20190510 A Fireside Chat with Turing Award Winner Geoffrey Hinton|Google I/O'19**  
+  - **日期**: 5月10日
+  - **视频类型**：人物访谈  
   - **核心内容**: 与图灵奖得主Geoffrey Hinton的炉边谈话，讨论AI前沿技术与挑战。  
   - [链接](./2019/20190510A%20Fireside%20Chat%20with%20Turing%20Award%20Winner%20Geoffrey%20Hinton.md)
 
 ### **6月**
-- **2019/20190624 Geoffrey Hinton and Yann LeCun**  
-  - **日期**: 6月24日  
+- **2019/20190624 Geoffrey Hinton and Yann LeCun|2018 ACM**  
+  - **日期**: 6月24日
+  - **视频类型**：技术讲座  
   - **核心内容**: 与Yann LeCun的对话，探讨深度学习与AI的未来方向。  
   - [链接](./2019/20190624_Geoffrey_Hinton_and_Yann_LeCun.md)
 
 ### **9月**
-- **2019/20190906 The AI Revolution Toronto Global Forum 2019 Thursday**  
-  - **日期**: 9月6日  
+- **2019/20190906 The AI Revolution Toronto Global Forum 2019 Thursday|DBRS**  
+  - **日期**: 9月6日
+  - **视频类型**：人物访谈
+  - **采访人**：Heather Reisman  
   - **核心内容**: 在多伦多全球论坛上参与AI革命主题讨论，分享AI技术的最新进展。  
   - [链接](./2019/20190906_AI_Revolution-Toronto_Global_Forum_Keynote.md)
 
@@ -197,14 +214,16 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
 ## 2020
 
 ### **2月**
-- **2020/20200210 AAAI 20 AAAI 2020 Keynotes Turing Award Winners Event Geoff Hinton**  
-  - **日期**: 2月10日  
+- **2020/20200210 AAAI 20 AAAI 2020 Keynotes Turing Award Winners Event Geoff Hinton|AAAI 2020**  
+  - **日期**: 2月10日
+  - **视频类型**：技术讲座  
   - **核心内容**: AAAI会议上关于图灵奖得主的AI前沿观点。  
   - [链接](./2020/20200210_AAAI_20_Keynotes_Turing_Award_Winners_Event_Geoff_Hinton.md)
 
 ### **8月**
 - **2020/20200809 图灵奖得主Geoffrey Hinton最新演讲透露下一代神经网络模型的构想丨SIGIR 2020**  
-  - **日期**: 8月9日  
+  - **日期**: 8月9日
+  - **视频类型**：讲座  
   - **核心内容**: 在SIGIR会议上分享下一代神经网络构想。  
   - [链接](./2020/20200809图灵奖得主Geoffrey%20Hinton最新演讲透露下一代神经网络模型的构想丨SIGIR%202020.md)
 
@@ -213,8 +232,11 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
 ## 2021
 
 ### **5月**
-- **2021/20210517 Is There a Mathematical Model of the Mind (Panel Discussion)**  
-  - **日期**: 5月17日  
+- **2021/20210517 Is There a Mathematical Model of the Mind (Panel Discussion)|Google TechTalk**  
+  - **日期**: 5月17日
+  - **视频类型**：小组研讨会
+  - **成员**：Bin Yu - UC Berkeley，Geoffrey Hinton - University of Toronto and Google，Jack Gallant - UC Berkeley，
+              Lenore Blum - CMU/UC Berkeley，Percy Liang - Stanford University ，Rina Panigrahy - Google (moderator)  
   - **核心内容**: 关于心智数学模型的圆桌讨论。  
   - [链接](./2021/20210517_Is_There_a_Mathematical_Model_of_the_Mind_Panel_Discussion.md)
 
