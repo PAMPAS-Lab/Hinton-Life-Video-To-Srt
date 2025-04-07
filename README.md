@@ -127,7 +127,7 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
 ## 2014
 
 - **2014/2014 What's wrong with convolutional nets|多伦多大学**  
-  - **日期**: 日期未知
+  - **录制日期**:2014 
   - **视频**：大学讲座  
   - **核心内容**: 分析卷积神经网络的局限性及改进方向。  
   - [链接](./2014/20140000_Whats_wrong_with_convolutional_nets.md)
