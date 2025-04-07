@@ -28,13 +28,13 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
   - **胶囊神经网络（Capsule Networks, CapsNets）**：一种改进传统卷积神经网络的方法，它使用胶囊（capsules）代替单个神经元，每个胶囊代表一组神经元，专门捕捉特定实体的各种属性如位置、姿态等。
 
 - **代表性研究论文**
-  1. **反向传播算法的使用**
+  **反向传播算法的使用**
      - Rumelhart D E, Hinton G E, Williams R J. Learning representations by back-propagating errors[J]. Cognitive modeling, 1988, 5(3): 1.
-  2. **CNN语音识别开篇TDN网络**
+  **CNN语音识别开篇TDN网络**
      - Waibel A, Hanazawa T, Hinton G, et al. Phoneme recognition using time-delay neural networks[J]. Backpropagation: Theory, Architectures and Applications, 1995: 35-61.
-  3. **DBN网络的学习**
+  **DBN网络的学习**
      - Hinton G E, Osindero S, Teh Y W. A fast learning algorithm for deep belief nets[J]. Neural computation, 2006, 18(7): 1527-1554.
-  4. **深度学习的开篇**
+  **深度学习的开篇**
      - Hinton G E, Salakhutdinov R R. Reducing the dimensionality of data with neural networks[J]. Science, 2006, 313(5786): 504-507.
   5. **数据降维可视化方法t-SNE**
      - Maaten L, Hinton G. Visualizing data using t-SNE[J]. Journal of Machine Learning Research, 2008, 9(Nov): 2579-2605.
