@@ -36,27 +36,27 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
      - Hinton G E, Osindero S, Teh Y W. A fast learning algorithm for deep belief nets[J]. Neural computation, 2006, 18(7): 1527-1554.
   **深度学习的开篇**
      - Hinton G E, Salakhutdinov R R. Reducing the dimensionality of data with neural networks[J]. Science, 2006, 313(5786): 504-507.
-  5. **数据降维可视化方法t-SNE**
+  **数据降维可视化方法t-SNE**
      - Maaten L, Hinton G. Visualizing data using t-SNE[J]. Journal of Machine Learning Research, 2008, 9(Nov): 2579-2605.
-  6. **DBM模型**
+  **DBM模型**
      - Salakhutdinov R, Hinton G. Deep Boltzmann Machines[C]//Artificial Intelligence and Statistics. 2009: 448-455.
-  7. **ReLU激活函数的使用**
+  **ReLU激活函数的使用**
      - Nair V, Hinton G E. Rectified Linear Units Improve Restricted Boltzmann Machines[C]//Proceedings of the 27th International Conference on Machine Learning (ICML-10). 2010: 807-814.
-  8. **RBM模型的训练**
+  **RBM模型的训练**
      - Hinton G E. A Practical Guide to Training Restricted Boltzmann Machines[M]//Neural Networks: Tricks of the Trade. Springer, Berlin, Heidelberg, 2012: 599-619.
-  9. **深度学习语音识别开篇**
+  **深度学习语音识别开篇**
      - Hinton G, Deng L, Yu D, et al. Deep Neural Networks for Acoustic Modeling in Speech Recognition[J]. IEEE Signal Processing Magazine, 2012, 29.
-  10. **深度学习图像识别开篇AlexNet**
+  **深度学习图像识别开篇AlexNet**
      - Krizhevsky A, Sutskever I, Hinton G E. Imagenet Classification with Deep Convolutional Neural Networks[C]//Advances in Neural Information Processing Systems. 2012: 1097-1105.
-  11. **权重初始化和Momentum优化方法的研究**
+  **权重初始化和Momentum优化方法的研究**
      - Sutskever I, Martens J, Dahl G, et al. On the Importance of Initialization and Momentum in Deep Learning[C]//International Conference on Machine Learning. 2013: 1139-1147.
-  12. **Dropout方法提出**
+  **Dropout方法提出**
      - Srivastava N, Hinton G, Krizhevsky A, et al. Dropout: A Simple Way to Prevent Neural Networks from Overfitting[J]. The Journal of Machine Learning Research, 2014, 15(1): 1929-1958.
-  13. **三巨头深度学习综述**
+  **三巨头深度学习综述**
      - LeCun Y, Bengio Y, Hinton G. Deep Learning[J]. Nature, 2015, 521(7553): 436.
-  14. **蒸馏学习算法**
+  **蒸馏学习算法**
      - Hinton G, Vinyals O, Dean J. Distilling the Knowledge in a Neural Network[J]. arXiv preprint arXiv:1503.02531, 2015.
-  15. **Capsule Network**
+  **Capsule Network**
      - Sabour S, Frosst N, Hinton G E. Dynamic Routing Between Capsules[C]//Advances in Neural Information Processing Systems. 2017: 3856-3866.
   
 ## 轶事
