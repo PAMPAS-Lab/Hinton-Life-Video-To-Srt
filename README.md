@@ -378,75 +378,76 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
   - [链接](./2024/20240702_Geoffrey_Hinton_担忧_AI_的未来.md)
 
 ### **10月**
-- **2024/20241009 ‘Godfather of AI’ on AI “exceeding human intelligence” and it “trying to take over”**  
-  - **日期**: 10月9日  
+- **2024/20241009 ‘Godfather of AI’ on AI “exceeding human intelligence” and it “trying to take over|BBC Newsnight”**  
+  - **日期**: 10月9日
+  - **视频类型**：人物访谈
+  - **采访人**：Faisal Islam  
   - **核心内容**: 强调AI超越人类智能的紧迫性，并警告技术失控的潜在威胁。  
   - [链接](./2024/20241009_Godfather_of_AI_on_AI_exceeding_human_intelligence_and_trying_to_take_over.md)
 
-- **2024/20241009 多伦多校长线上会议hinton**  
-  - **日期**: 10月9日  
+- **2024/20241009 多伦多校长线上会议hinton|University of Toronto Press Conference**  
+  - **日期**: 10月9日
+  - **视频类型**：会议采访
+  - **采访人**：Meric Gertler  
   - **核心内容**: 与多伦多大学校长讨论AI教育、研究及伦理治理。  
   - [链接](./2024/20241009多伦多校长线上会议hinton.md)
 
 - **2024/20241010 瑞典皇家科学院宣布 2024 年诺贝尔物理学奖获奖者及成果介绍**  
-  - **日期**: 10月10日  
+  - **日期**: 10月10日
+  - **视频类型**：颁奖演讲  
   - **核心内容**: 作为诺贝尔物理学奖得主，阐述其贡献对AI与神经科学的交叉影响。  
   - [链接](./2024/20241010_瑞典皇家科学院宣布_2024_年诺贝尔物理学奖获奖者及成果介绍.md)
 
-- **2024/20241012 Geoffrey Hinton Calls It Unfortunate That Ilya Found Out Sam Altman Was Profit-Driven**  
-  - **日期**: 10月12日  
-  - **核心内容**: 批评OpenAI创始人Sam Altman的商业动机，认为其可能削弱AI的长期安全性。  
-  - [链接](./2024/20241012_Geoffrey_Hinton_Calls_It_Unfortunate_That_Ilya_Found_Out_Sam_Altman_Was_Profit_Driven.md)
-
 ### **11月**
-- **2024/20241116 Questions & Answers with Dr. Geoffrey Hinton - Turing Minds 2024**  
-  - **日期**: 11月16日  
+- **2024/20241116 Questions & Answers with Dr. Geoffrey Hinton - Turing Minds 2024|Turing Minds 2024**  
+  - **日期**: 11月16日
+  - **视频类型**：技术问答
+  - **主持人**：Parsa Khazaeepoul和Zack Axel  
   - **核心内容**: 在Turing Minds会议上回答公众提问，涵盖AI伦理、监管及技术突破。  
   - [链接](./2024/20241116_Questions_and_Answers_with_Dr_Geoffrey_Hinton_Turing_Minds_2024.md)
 
 ### **12月**
-- **2024/20241201 AI教父Hinton十一月KBS访谈**  
-  - **日期**: 12月1日  
+- **2024/20241201 AI教父Hinton十一月访谈|KBS**  
+  - **首映日期**: 12月1日
+  - **视频类型**：技术访谈  
   - **核心内容**: 为11月访谈，12月播放出来。  
   - [链接](./2024/20241201_AI教父Hinton_十一月KBS访谈.md)
 
-- **2024/20241205 Seminar with Professor Geoffrey Hinton**  
-  - **日期**: 12月5日  
+- **2024/20241205 Seminar with Professor Geoffrey Hinton|IVA**  
+  - **日期**: 12月5日
+  - **视频类型**：小组讨论
+  - **小组成员**：Kia Höök、Anders Sandberg、Staffan Truvé和Anette Novak  
   - **核心内容**: 批判传统卷积神经网络（ConvNets）的局限性，提出“胶囊网络”（Capsule Networks）的架构设计。  
   - [链接](./2024/20241205_Seminar_with_Professor_Geoffrey_Hinton_Critique_of_ConvNets_and_Introduction_to_Capsule_Networks.md)
 
-- **2024/20241208 Geoffrey Hinton 2024诺贝尔物理学奖演讲：玻尔兹曼机与深度学习革命**  
-  - **日期**: 12月8日  
+- **2024/20241208 Geoffrey Hinton 2024诺贝尔物理学奖演讲：玻尔兹曼机与深度学习革命|Nobel Prize lecture**  
+  - **日期**: 12月8日
+  - **视频类型**:颁奖演讲  
   - **核心内容**: 玻尔兹曼机（Boltzmann Machines）的理论突破及其对深度学习的奠基性贡献。  
   - [链接](./2024/20241208_Nobel_Prize_lecture_Geoffrey_Hinton_Boltzmann_Machines_and_the_Deep_Learning_Revolution.md)
 
-- **2024/20241211 诺贝尔物理学奖得主，杰弗里·辛顿（Geoff Hinton）颁奖会演讲**  
-  - **日期**: 12月11日  
-  - **核心内容**: 颁奖典礼演讲中强调AI对科学发现的推动作用，呼吁平衡创新与安全。  
-  - [链接](./2024/20241211_诺贝尔物理学奖得主_杰弗里_辛顿_Geoff_Hinton_颁奖会演讲.md)
-
-- **2024/20241212 Geoffrey Hinton: "AI教父在获得VinFuture奖时的讲话" **  
-  - **日期**: 12月12日  
+- **2024/20241212 Geoffrey Hinton: "AI教父在获得VinFuture奖时的讲话"|VinFuture Prize**  
+  - **日期**: 12月12日
+  - **视频类型**：颁奖采访  
   - **核心内容**: 接受VinFuture奖时，强调AI需服务于人类福祉而非军事化。  
   - [链接](./2024/20241212_Geoffrey_Hinton_AI教父在获得VinFuture奖时的讲话.md)
 
-- **2024/20241213 Geoffrey Hinton："AI具备人类级理解的革命性证据" **  
-  - **日期**: 12月13日  
-  - **核心内容**: 展示AI理解复杂问题的能力，引发对“机器意识”的哲学讨论。  
-  - [链接](./2024/20241213_Geoffrey_Hinton_AI具备人类级理解的革命性证据.md)
-
-- **2024/20241218 AI Unpacked with Nobel Laureate Geoffrey Hinton**  
-  - **日期**: 12月18日  
+- **2024/20241218 AI Unpacked with Nobel Laureate Geoffrey Hinton|Valence**  
+  - **日期**: 12月18日
+  - **视频类型**：人物访谈  
   - **核心内容**: 深入解析AI技术原理，呼吁开发“可解释性AI”以增强透明度。  
   - [链接](./2024/20241218_AI_Unpacked_with_Nobel_Laureate_Geoffrey_Hinton.md)
 
-- **2024/20241223 DIGITP Executive Sponsor Robert Meikle interviews Geoffrey Hinton**  
-  - **日期**: 12月23日  
+- **2024/20241223 DIGITP Executive Sponsor Robert Meikle interviews Geoffrey Hinton|Info-Tech 2023**  
+  - **日期**: 12月23日
+  - **视频类型**：人物访谈
+  - **采访人**：Robert Meikle  
   - **核心内容**: 探讨AI在医疗、能源等领域的实际应用案例。  
   - [链接](./2024/20241223_DIGITP_Executive_Sponsor_Robert_Meikle_interviews_Geoffrey_Hinton.md)
 
 - **2024/20241229 Even in 5 years we will create AGI. Superintelligence**  
-  - **日期**: 12月29日  
+  - **日期**: 12月29日
+  - **视频类型**：技术讲座  
   - **核心内容**: 预测5年内实现AGI（通用人工智能），并警告其潜在风险。  
   - [链接](./2024/20241229_Even_in_5_years_we_will_create_AGI_Superintelligence.md)
 
@@ -455,29 +456,36 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
 ## 2025
 
 ### **1月**
-- **2025/20250118Why The Godfather of AI Now Fears His Own Creation  Geoffrey Hinton**  
-  - **日期**: 1月18日  
+- **2025/20250118Why The Godfather of AI Now Fears His Own Creation  Geoffrey Hinton|万物理论**  
+  - **日期**: 1月18日
+  - **视频类型**：技术讨论
+  - **采访人**：Curt Jaimungal 
   - **核心内容**: 解释他对AI发展的担忧及对其潜在威胁的反思。  
   - [链接](./2025/20250118_Why_The_Godfather_of_AI_Now_Fears_His_Own_Creation_Geoffrey_Hinton.md)
 
-- **2025/20250126The Godfather in Conversation Why Geoffrey Hinton is worried about the future of AI**  
-  - **日期**: 1月26日  
+- **2025/20250126The Godfather in Conversation Why Geoffrey Hinton is worried about the future of AI|The Godfather in Conversation**  
+  - **日期**: 1月26日
+  - **视频类型**：人物访谈  
   - **核心内容**: 深入探讨他对AI未来的担忧及其根源。  
   - [链接](./2025/20250126_The_Godfather_in_Conversation_Why_Geoffrey_Hinton_is_worried_about_the_future_of_AI.md)
 
-- **2025/20250131‘Godfather of AI’ predicts it will take over the world  LBC**  
-  - **日期**: 1月31日  
+- **2025/20250131‘Godfather of AI’ predicts it will take over the world|LBC**  
+  - **日期**: 1月31日
+  - **视频类型**：新闻采访
+  - **采访人**：Andrew Marr  
   - **核心内容**: 预测AI可能接管世界并讨论其潜在影响。  
   - [链接](./2025/20250131_Godfather_of_AI_predicts_it_will_take_over_the_world_LBC.md)
 
 ### **2月**
-- **2025/20250204dtv net #25 Geoff Hinton's Latest Interview - Are LLM's Conscious**  
-  - **日期**: 2月4日  
+- **2025/20250204dtv net #25 Geoff Hinton's Latest Interview - Are LLM's Conscious|VK3TET**  
+  - **日期**: 2月4日
+  - **视频类型**：技术问答  
   - **核心内容**: 探讨大型语言模型（LLMs）是否具备意识。  
   - [链接](./2025/20250204_dtv_net_25_Geoff_Hinton_s_Latest_Interview_Are_LLMs_Conscious.md)
 
 ### **3月**
-- **2025/20250315Geoffrey Hinton**  
-  - **日期**: 3月15日  
+- **2025/20250315Geoffrey Hinton, Nobel Prize in Physics 2024: Official interview|Nobel Prize**  
+  - **日期**: 3月15日
+  - **视频类型**：获奖采访  
   - **核心内容**: 综合讨论AI的伦理、技术进展及未来挑战。  
   - [链接](./2025/20250315_Geoffrey_Hinton.md)
