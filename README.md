@@ -251,14 +251,15 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
 ## 2022
 
 ### **6月**
-- **2022/20220601 eason 2 Ep 22 Geoff Hinton on revolutionizing artificial intelligence... again**  
-  - **日期**: 6月1日（文件名“eason”可能为“Season”拼写错误）  
-  - **核心内容**: 讨论AI革命的持续性与新突破。  
+- **2022/20220601 Season 2 Ep 22 Geoff Hinton on revolutionizing artificial intelligence... again**  
+  - **日期**: 6月1日
+  - **核心内容**: 讨论AI革命的持续性与新突破。 
   - [链接](./2022/20220601eason%202%20Ep%2022%20Geoff%20Hinton%20on%20revolutionizing%20artificial%20intelligence...%20again.md)
 
 ### **8月**
-- **2022/20220812 Stanford CS25 V2 I Represent part-whole hierarchies in a neural network**  
-  - **日期**: 8月12日  
+- **2022/20220812 V2 I Represent part-whole hierarchies in a neural network|Stanford CS25 **  
+  - **日期**: 8月12日
+  - **视频类型**：大学讲座  
   - **核心内容**: 斯坦福课程中讲解神经网络的层级表示方法。  
   - [链接](./2022/20220812Stanford%20CS25%20V2%20I%20Represent%20part-whole%20hierarchies%20in%20a%20neural%20network.md)
 
@@ -267,65 +268,81 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
 ## 2023
 
 ### **3月**
-- **2023/20230325 _Godfather of artificial intelligence_ talks impact and potential of new AI**  
-  - **日期**: 3月25日  
+- **2023/20230325 _Godfather of artificial intelligence_ talks impact and potential of new AI|CBS**  
+  - **日期**: 3月25日
+  - **视频类型**：演讲  
   - **核心内容**: 探讨新AI技术对社会的潜在影响与可能性。  
   - [链接](./2023/20230325_Godfather_of_artificial_intelligence_talks_impact_and_potential_of_new_AI.md)
 
 ### **5月**
-- **2023/20230502 AI godfather quits Google over dangers of Artificial Intelligence - BBC News**  
-  - **日期**: 5月2日  
+- **2023/20230502 AI godfather quits Google over dangers of Artificial Intelligence|BBC News**  
+  - **日期**: 5月2日
+  - **视频类型**：新闻采访  
   - **核心内容**: 辞职声明中强调AI技术的潜在风险。  
   - [链接](./2023/20230502_AI_godfather_quits_Google_over_dangers_of_Artificial_Intelligence_-_BBC_News.md)
-- **2023/20230503 Godfather of AI warns that AI may figure out how to kill people**  
-  - **日期**: 5月3日  
+- **2023/20230503 Godfather of AI warns that AI may figure out how to kill people|CNN News**  
+  - **日期**: 5月3日
+  - **视频类型**：新闻采访 
   - **核心内容**: 警告AI可能具备致命性技术能力。  
   - [链接](./2023/20230503_Godfather_of_AI_warns_that_AI_may_figure_out_how_to_kill_people.md)
-- **2023/20230506 Possible End of Humanity from AI Geoffrey Hinton at MIT Technology Review s EmTech Digital**  
-  - **日期**: 5月6日  
+- **2023/20230506 Possible End of Humanity from AI Geoffrey Hinton at MIT Technology Review s EmTech Digital|Mit Technology Review**  
+  - **日期**: 5月6日
+  - **视频类型**：技术研讨会
   - **核心内容**: 在MIT技术峰会上讨论AI可能引发的人类存续危机。  
   - [链接](./2023/20230506_Possible_End_of_Humanity_from_AI_Geoffrey_Hinton_at_MIT_Technology_Review_EmTech_Digital.md)
-- **2023/20230509 Godfather of AI discusses dangers the developing technologies pose to society**  
-  - **日期**: 5月9日  
+- **2023/20230509 Godfather of AI discusses dangers the developing technologies pose to society|Amanpour and Company**  
+  - **日期**: 5月9日
+  - **视频类型**：新闻采访  
   - **核心内容**: 分析AI技术对社会的威胁与应对策略。  
   - [链接](./2023/20230509_Godfather_of_AI_discusses_dangers_the_developing_technologies_pose_to_society.md)
-- **2023/20230511 Geoffrey Hinton helped create AI. Now he’s worried it will destroy us**  
-  - **日期**: 5月11日  
+- **2023/20230511 Geoffrey Hinton helped create AI. Now he’s worried it will destroy us|CBC news**  
+  - **日期**: 5月11日
+  - **视频类型**：新闻采访
+  - **采访人**：Adrienne Arseualt  
   - **核心内容**: 反思AI创造历程并表达对其失控的担忧。  
   - [链接](./2023/20230511_Geoffrey_Hinton_helped_create_AI_Now_he_is_worried_it_will_destroy_us.md)
 
 ### **6月**
-- **2023/20230605 Geoffrey Hinton - Two Paths to Intelligence**  
-  - **日期**: 6月5日  
+- **2023/20230605 Geoffrey Hinton - Two Paths to Intelligence|剑桥大学**  
+  - **日期**: 6月5日
+  - **视频类型**：讲座  
   - **核心内容**: 提出通向智能的两种路径理论。  
   - [链接](./2023/20230605_Geoffrey_Hinton_Two_Paths_to_Intelligence.mdd)
-- **2023/20230623 The Godfather in Conversation Why Geoffrey Hinton is worried about the future of AI**  
-  - **日期**: 6月23日  
+- **2023/20230623 The Godfather in Conversation Why Geoffrey Hinton is worried about the future of AI|University of Toronto**  
+  - **日期**: 6月23日
+  - **视频类型**：人物访谈  
   - **核心内容**: 对话中解释对AI未来的担忧根源。  
   - [链接](./2023/20230623_The_Godfather_in_Conversation_Why_Geoffrey_Hinton_is_worried_about_the_future_of_AI.md)
 
 ### **7月**
-- **2023/20230720 In conversation with the Godfather of AI**  
-  - **日期**: 7月20日  
+- **2023/20230720 In conversation with the Godfather of AI|Collision Conference**  
+  - **日期**: 7月20日
+  - **视频类型**：人物访谈
+  - **主持人**：Nick Thompson  
   - **核心内容**: 综合讨论AI伦理、技术与未来挑战。  
   - [链接](./2023/20230720_In_conversation_with_the_Godfather_of_AI.md)
 
 ### **8月**
 - **2023/20230826 The Godfather of A.I. Geoffrey Hinton and Andrew Ng say that AI models understand the world**  
-  - **日期**: 8月26日  
+  - **日期**: 8月26日
+  - **视频类型**：人物访谈
+  - **采访人**：Andrew Ng  
   - **核心内容**: 与Andrew Ng共同探讨AI模型对世界的理解能力。  
   - [链接](./2023/20230826_The_Godfather_of_A_I_Geoffrey_Hinton_and_Andrew_Ng_say_that_AI_models_understand_the_world.md)
 
 ### **9月**
 - **2023/20230900 Godfather of AI Geoffrey Hinton The 60 Minutes Interview**  
-  - **日期**: 9月未知日（根据文件名推测为9月）  
+  - **日期**: 9月
+  - **视频类型**：采访
+  - **采访人**：Scott Pelley
   - **核心内容**: 在《60分钟》访谈中回顾AI发展与伦理争议。  
   - [链接](./2023/20230900_Godfather_of_AI_Geoffrey_Hinton_The_60_Minutes_Interview.md)
 
 ### **10月**
-- **2023/20230104 Geoffrey Hinton in conversation with Fei-Fei Li — Responsible**  
-  - **日期**: 10月4日（文件名日期可能存在矛盾，按路径调整）  
-  - **核心内容**: 可能为重复条目，需核对原始数据。  
+- **2023/20230104 Geoffrey Hinton in conversation with Fei-Fei Li — Responsible|Radical Ventures**  
+  - **日期**: 10月4日
+  - **视频类型**：演讲  
+  - **核心内容**: 从ImageNet到ChatGPT的AI发展历程，以及AI对社会的影响与责任。  
   - [链接](./2023/20231004_Geoffrey_Hinton_in_conversation_with_Fei_Fei_Li_Responsible.md)
 
 ---
@@ -333,47 +350,59 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
 ## 2024
 
 ### **2月**
-- **2024/20240208 AI could be smarter than people in 20 years**  
-  - **日期**: 2月8日  
+- **2024/20240208 AI could be smarter than people in 20 years|CBC News**  
+  - **日期**: 2月8日
+  - **视频类型**：人物访谈
+  - **采访人**：Travis Dhanraj   
   - **核心内容**: 预测AI在20年内可能超越人类智能。  
   - [链接](./2024/20240208_AI_could_be_smarter_than_people_in_20_years.md)
 
-- **2024/20240229 eoffrey Hinton 教授在 Sheldonian**  
-  - **日期**: 2月29日  
+- **2024/20240229 eoffrey Hinton 教授在 Sheldonian|Romanes**  
+  - **日期**: 2月29日
+  - **视频类型**：讲座  
   - **核心内容**: 在牛津大学Sheldonian剧院的演讲，探讨AI与人类智能的未来。  
   - [链接](./2024/20240229_Geoffrey_Hinton_教授在_Sheldonian.md)
 
 ### **4月**
-- **2024/20240411 Ray Kurzweil & Geoff Hinton Debate the Future**  
-  - **日期**: 4月11日  
+- **2024/20240411 Ray Kurzweil & Geoff Hinton Debate the Future|the 2024 Abundance360 Summit**  
+  - **日期**: 4月11日
+  - **视频类型**：研讨会
+  - **讨论人**：Ray Kurzweil，  
   - **核心内容**: 与雷·库兹韦尔就AI未来发展及伦理风险展开辩论。  
   - [链接](./2024/2024411Ray%20Kurzweil%20&%20Geoff%20Hinton%20Debate%20the%20Future.md)
 
 ### **5月**
-- **2024/20240515 Geoffrey Hinton On working with Ilya**  
-  - **日期**: 5月15日  
+- **2024/20240515 Geoffrey Hinton On working with Ilya|Sana AI**  
+  - **日期**: 5月15日
+  - **视频类型**：人物对话
+  - **对话人**：Joel Hellermark  
   - **核心内容**: 回顾与Ilya Sutskever的合作经历，反思AI发展的关键节点。  
   - [链接](./2024/20240515_Geoffrey_Hinton_On_working_with_Ilya.md)
 
 ### **6月**
-- **2024/20240607 Keynote interview with Geoffrey Hinton (remote) and Nicholas Thompson (in-person)**  
-  - **日期**: 6月7日  
+- **2024/20240607 Keynote interview with Geoffrey Hinton (remote) and Nicholas Thompson (in-person)|AI for Good**  
+  - **日期**: 6月7日
+  - **视频类型**：主题访谈
+  - **主持人**：Nicholas Thompson  
   - **核心内容**: 远程访谈中讨论AI技术的伦理挑战与监管必要性。  
   - [链接](./2024/20240607_Keynote_interview_with_Geoffrey_Hinton_remote_and_Nicholas_Thompson_in_person.md)
 
-- **2024/20240615 AI will become smarter than humans Geoffrey Hinton**  
-  - **日期**: 6月15日  
+- **2024/20240615 AI will become smarter than humans Geoffrey Hinton|BNN Bloomberg**  
+  - **日期**: 6月15日
+  - **视频类型**：新闻采访  
   - **核心内容**: 重申AI超越人类智能的预测，并强调安全控制的重要性。  
   - [链接](./2024/20240615_AI_will_become_smarter_than_humans_Geoffrey_Hinton.md)
 
 - **2024/20240628 Q&A with Geoffrey Hinton**  
-  - **日期**: 6月28日  
+  - **日期**: 6月28日
+  - **视频类型**：新闻采访  
   - **核心内容**: 问答环节中讨论AI对就业、医疗及社会结构的长期影响。  
   - [链接](./2024/20240628_Q_and_A_with_Geoffrey_Hinton.md)
 
 ### **7月**
 - **2024/20240702 Geoffrey Hinton 担忧 AI 的未来**  
-  - **日期**: 7月2日  
+  - **日期**: 7月2日
+  - **视频类型**：人物访谈  
   - **核心内容**: 表达对AI失控风险的担忧，呼吁全球合作制定安全协议。  
   - [链接](./2024/20240702_Geoffrey_Hinton_担忧_AI_的未来.md)
 
