@@ -242,7 +242,8 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
 
 ### **8月**
 - **2021/20210823 Distillation and the brain**  
-  - **日期**: 8月23日  
+  - **日期**: 8月23日
+  - **视频类型**：技术讲座  
   - **核心内容**: 探讨知识蒸馏技术与大脑机制的关联。  
   - [链接](./2021/20210823Distillation%20and%20the%20brain.md)
 
@@ -251,13 +252,15 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
 ## 2022
 
 ### **6月**
-- **2022/20220601 Season 2 Ep 22 Geoff Hinton on revolutionizing artificial intelligence... again**  
+- **2022/20220601 Season 2 Ep 22 Geoff Hinton on revolutionizing artificial intelligence... again|The Robot Brains Podcast**  
   - **日期**: 6月1日
+  - **视频类型**：人物访谈
+  - **主持人**：Pieter Abbeel
   - **核心内容**: 讨论AI革命的持续性与新突破。 
   - [链接](./2022/20220601eason%202%20Ep%2022%20Geoff%20Hinton%20on%20revolutionizing%20artificial%20intelligence...%20again.md)
 
 ### **8月**
-- **2022/20220812 V2 I Represent part-whole hierarchies in a neural network|Stanford CS25 **  
+- **2022/20220812 V2 I Represent part-whole hierarchies in a neural network|Stanford CS25**  
   - **日期**: 8月12日
   - **视频类型**：大学讲座  
   - **核心内容**: 斯坦福课程中讲解神经网络的层级表示方法。  
@@ -439,7 +442,7 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
 - **2024/20241201 AI教父Hinton十一月访谈|KBS**  
   - **首映日期**: 12月1日
   - **视频类型**：技术访谈  
-  - **核心内容**: 为11月访谈，12月播放出来。  
+  - **核心内容**: 深度学习的生物学基础、AI技术的社会影响、超级智能的伦理挑战。  
   - [链接](./2024/20241201_AI教父Hinton_十一月KBS访谈.md)
 
 - **2024/20241205 Seminar with Professor Geoffrey Hinton|IVA**  
