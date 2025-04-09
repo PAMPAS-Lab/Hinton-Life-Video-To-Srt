@@ -570,15 +570,17 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
 - **2024/20241010 瑞典皇家科学院宣布 2024 年诺贝尔物理学奖获奖者及成果介绍**  
   - **日期**: 10月10日
   - **视频类型**：颁奖演讲
-  - **采访机构**：瑞典皇家科学院
-  - **机构介绍**： 
-  - **核心内容**: 作为诺贝尔物理学奖得主，阐述其贡献对AI与神经科学的交叉影响。  
+  - **采访机构**：瑞典皇家科学院(Royal Swedish Academy of Sciences)
+  - **机构介绍**：瑞典皇家科学院是瑞典的一个重要学术机构，成立于1739年，总部设在瑞典首都斯德哥尔摩。它是一个独立的非政府组织，旨在促进科学，特别是自然科学和数学的发展。 
+  - **核心内容**: 表彰John Hopfield和Geoffrey Hinton在人工神经网络领域的奠基性贡献。  
   - [链接](./2024/20241010_瑞典皇家科学院宣布_2024_年诺贝尔物理学奖获奖者及成果介绍.md)
 
 ### **11月**
 - **2024/20241116 Questions & Answers with Dr. Geoffrey Hinton - Turing Minds 2024|Turing Minds 2024**  
   - **日期**: 11月16日
   - **视频类型**：技术问答
+  - **采访机构**：Georgia Institute of Technology，即乔治亚理工学院
+  - **机构介绍**：乔治亚理工学院，是一所位于美国乔治亚州亚特兰大市的顶尖公立研究型大学。该校以其工程学、计算机科学和信息技术课程闻名于世，但同时也提供了包括商业管理、人文科学、建筑设计等多个领域的优秀教育项目。
   - **主持人**：Parsa Khazaeepoul和Zack Axel  
   - **核心内容**: 在Turing Minds会议上回答公众提问，涵盖AI伦理、监管及技术突破。  
   - [链接](./2024/20241116_Questions_and_Answers_with_Dr_Geoffrey_Hinton_Turing_Minds_2024.md)
@@ -586,46 +588,60 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
 ### **12月**
 - **2024/20241201 AI教父Hinton十一月访谈|KBS**  
   - **首映日期**: 12月1日
-  - **视频类型**：技术访谈  
+  - **视频类型**：技术访谈
+  - **采访机构**：KBS指的是韩国放送公社
+  - **机构介绍**：KBS是韩国最具代表性和历史最为悠久的公共广播电视台之一。  
   - **核心内容**: 深度学习的生物学基础、AI技术的社会影响、超级智能的伦理挑战。  
   - [链接](./2024/20241201_AI教父Hinton_十一月KBS访谈.md)
 
-- **2024/20241205 Seminar with Professor Geoffrey Hinton|IVA**  
+- **2024/20241205 Seminar with Professor Geoffrey Hinton**  
   - **日期**: 12月5日
   - **视频类型**：小组讨论
+  - **采访机构**：Kungliga Ingenjörsvetenskapsakademien，简称IVA，即瑞典皇家工程科学院
+  - **机构介绍**：瑞典皇家工程科学院是全球历史最悠久的工程科学学术机构之一，成立于1919年。它位于瑞典，并且在推动工程科学、经济和技术领域的进步方面扮演了重要角色。
   - **小组成员**：Kia Höök、Anders Sandberg、Staffan Truvé和Anette Novak  
   - **核心内容**: 批判传统卷积神经网络（ConvNets）的局限性，提出“胶囊网络”（Capsule Networks）的架构设计。  
   - [链接](./2024/20241205_Seminar_with_Professor_Geoffrey_Hinton_Critique_of_ConvNets_and_Introduction_to_Capsule_Networks.md)
 
-- **2024/20241208 Geoffrey Hinton 2024诺贝尔物理学奖演讲：玻尔兹曼机与深度学习革命|Nobel Prize lecture**  
+- **2024/20241208 Nobel Prize Lecture by Geoffrey Hinton**  
   - **日期**: 12月8日
-  - **视频类型**:颁奖演讲  
+  - **视频类型**:颁奖演讲
+  - **采访机构**：Nobel Prize，即诺贝尔奖。
+  - **机构介绍**：诺贝尔奖（Nobel Prize）是根据瑞典发明家阿尔弗雷德·诺贝尔的遗嘱设立的一系列国际奖项，旨在奖励那些在物理学、化学、生理学或医学、文学以及和平领域为人类做出最大贡献的人士。  
   - **核心内容**: 玻尔兹曼机（Boltzmann Machines）的理论突破及其对深度学习的奠基性贡献。  
   - [链接](./2024/20241208_Nobel_Prize_lecture_Geoffrey_Hinton_Boltzmann_Machines_and_the_Deep_Learning_Revolution.md)
 
-- **2024/20241212 Geoffrey Hinton: "AI教父在获得VinFuture奖时的讲话"|VinFuture Prize**  
+- **2024/20241212 Geoffrey Hinton: "AI教父在获得VinFuture奖时的讲话"**  
   - **日期**: 12月12日
-  - **视频类型**：颁奖采访  
-  - **核心内容**: 接受VinFuture奖时，强调AI需服务于人类福祉而非军事化。  
+  - **视频类型**：颁奖采访
+  - **采访机构**：VinFuture Foundation
+  - **机构介绍**：VinFuture Foundation 是一个成立于2020年12月20日的非营利组织，由越南首富 Phạm Nhật Vượng 及其妻子 Phạm Thu Hương 创立。该基金会致力于通过表彰和奖励具有突破性的科技创新来推动全球科技和社会进步。VinFuture Prize 是其核心项目，旨在鼓励那些能够对日常生活产生重大积极影响并有助于解决全球性挑战的科学和技术成就。  
+  - **核心内容**: 探讨了人工智能领域的关键人物及其贡献，讨论了奖项的意义、技术预测及对未来的展望。  
   - [链接](./2024/20241212_Geoffrey_Hinton_AI教父在获得VinFuture奖时的讲话.md)
 
-- **2024/20241218 AI Unpacked with Nobel Laureate Geoffrey Hinton|Valence**  
+- **2024/20241218 AI Unpacked with Nobel Laureate Geoffrey Hinton**  
   - **日期**: 12月18日
-  - **视频类型**：人物访谈  
-  - **核心内容**: 深入解析AI技术原理，呼吁开发“可解释性AI”以增强透明度。  
+  - **视频类型**：人物访谈
+  - **采访机构**：Valence
+  - **机构介绍**：Valence 是一家专注于 AI 驱动的组织教练解决方案的公司，特别关注人才发展和领导力提升。其核心产品是一个名为 Nadia's AI 教练，旨在为经理提供个性化的、始终可用的教练服务，适应每个组织的文化和价值观。 
+  - **核心内容**: 探讨了人工智能的发展历程、关键突破及其对未来的展望，特别强调了深度学习的重要性及面临的挑战。  
   - [链接](./2024/20241218_AI_Unpacked_with_Nobel_Laureate_Geoffrey_Hinton.md)
 
-- **2024/20241223 DIGITP Executive Sponsor Robert Meikle interviews Geoffrey Hinton|Info-Tech 2023**  
+- **2024/20241223 AI教父在InfoTech Live 2023上的访谈**  
   - **日期**: 12月23日
   - **视频类型**：人物访谈
+  - **采访机构**：Info-Tech Research Group
+  - **机构介绍**：Info-Tech Research Group 是一家提供战略、技术和研究服务的信息技术（IT）咨询公司，它帮助企业中的首席信息官（CIOs）和IT领导者做出战略性决策。
   - **采访人**：Robert Meikle  
-  - **核心内容**: 探讨AI在医疗、能源等领域的实际应用案例。  
+  - **核心内容**: 探讨了人工智能的发展历程、关键突破及其对未来的展望，特别强调了深度学习的重要性及面临的挑战。  
   - [链接](./2024/20241223_DIGITP_Executive_Sponsor_Robert_Meikle_interviews_Geoffrey_Hinton.md)
 
 - **2024/20241229 Even in 5 years we will create AGI. Superintelligence**  
   - **日期**: 12月29日
-  - **视频类型**：技术讲座  
-  - **核心内容**: 预测5年内实现AGI（通用人工智能），并警告其潜在风险。  
+  - **视频类型**：技术讲座
+  - **采访机构**：瑞典皇家科学院(Royal Swedish Academy of Sciences)
+  - **机构介绍**：瑞典皇家科学院是瑞典的一个重要学术机构，成立于1739年，总部设在瑞典首都斯德哥尔摩。它是一个独立的非政府组织，旨在促进科学，特别是自然科学和数学的发展。
+  - **核心内容**: 探讨了AI的发展现状、技术突破及其对未来的展望，特别是关于通用人工智能（AGI）的预测和超级智能的风险。  
   - [链接](./2024/20241229_Even_in_5_years_we_will_create_AGI_Superintelligence.md)
 
 ---
@@ -633,36 +649,44 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
 ## 2025
 
 ### **1月**
-- **2025/20250118Why The Godfather of AI Now Fears His Own Creation  Geoffrey Hinton|万物理论**  
+- **2025/20250118 Why The Godfather of AI Now Fears His Own Creation**  
   - **日期**: 1月18日
   - **视频类型**：技术讨论
+  - **采访机构**：Theories of Everything，简称万物理论
+  - **机构介绍**："Theories of Everything" 是一个由博主 Curt Jaimungal 主持的频道和播客，专注于深度探讨科学、哲学和技术等领域的重要话题。Curt Jaimungal 对话的对象通常是各个领域的专家、学者和思想领袖。
   - **采访人**：Curt Jaimungal 
-  - **核心内容**: 解释他对AI发展的担忧及对其潜在威胁的反思。  
+  - **核心内容**: Hinton反思AI技术的快速发展及其对人类社会的潜在威胁，探讨AI意识、安全性及伦理问题。  
   - [链接](./2025/20250118_Why_The_Godfather_of_AI_Now_Fears_His_Own_Creation_Geoffrey_Hinton.md)
 
-- **2025/20250126The Godfather in Conversation Why Geoffrey Hinton is worried about the future of AI|The Godfather in Conversation**  
+- **2025/20250126 教父对话：Geoffrey Hinton为何担忧AI的未来**  
   - **日期**: 1月26日
-  - **视频类型**：人物访谈  
-  - **核心内容**: 深入探讨他对AI未来的担忧及其根源。  
+  - **视频类型**：人物访谈
+  - **采访机构**：University of Toronto，即多伦多大学
+  - **机构介绍**：是加拿大最古老、最大的大学之一，位于安大略省的多伦多市。它成立于1827年，最初名为“国王学院”，直到1849年才改为现名并成为一所非宗教性质的学府。  
+  - **核心内容**: 从神经网络先驱到AI风险警示者——分析数字智能的进化优势与生存风险。  
   - [链接](./2025/20250126_The_Godfather_in_Conversation_Why_Geoffrey_Hinton_is_worried_about_the_future_of_AI.md)
 
 - **2025/20250131‘Godfather of AI’ predicts it will take over the world|LBC**  
   - **日期**: 1月31日
   - **视频类型**：新闻采访
+  - **采访机构**：London Broadcasting Company，简称LBC，即伦敦广播公司
+  - **机构介绍**：伦敦广播公司是一家位于英国的广播电台。它最初成立于1973年，是英国首个商业广播电台，主要服务于伦敦地区。LBC 的成立标志着英国广播业的一个重要里程碑，因为它打破了BBC长期以来对广播市场的垄断。
   - **采访人**：Andrew Marr  
-  - **核心内容**: 预测AI可能接管世界并讨论其潜在影响。  
+  - **核心内容**: AI发展速度、失控风险、就业冲击及监管挑战。  
   - [链接](./2025/20250131_Godfather_of_AI_predicts_it_will_take_over_the_world_LBC.md)
 
 ### **2月**
-- **2025/20250204dtv net #25 Geoff Hinton's Latest Interview - Are LLM's Conscious|VK3TET**  
+- **2025/20250204 Geoffrey Hinton: Consciousness & Control in AI Systems**  
   - **日期**: 2月4日
   - **视频类型**：技术问答  
-  - **核心内容**: 探讨大型语言模型（LLMs）是否具备意识。  
+  - **核心内容**: 大语言模型的意识可能性、智能体自主目标形成的风险机制，以及社会应对策略。  
   - [链接](./2025/20250204_dtv_net_25_Geoff_Hinton_s_Latest_Interview_Are_LLMs_Conscious.md)
 
 ### **3月**
-- **2025/20250315Geoffrey Hinton, Nobel Prize in Physics 2024: Official interview|Nobel Prize**  
+- **2025/20250315 Geoffrey Hinton on AI Risks and Personal Reflections**  
   - **日期**: 3月15日
-  - **视频类型**：获奖采访  
-  - **核心内容**: 综合讨论AI的伦理、技术进展及未来挑战。  
+  - **视频类型**：获奖采访
+  - **采访机构**：Nobel Prize，即诺贝尔奖。
+  - **机构介绍**：诺贝尔奖（Nobel Prize）是根据瑞典发明家阿尔弗雷德·诺贝尔的遗嘱设立的一系列国际奖项，旨在奖励那些在物理学、化学、生理学或医学、文学以及和平领域为人类做出最大贡献的人士。   
+  - **核心内容**: AI发展时间线、存在性风险、科学伦理与个人科研历程。  
   - [链接](./2025/20250315_Geoffrey_Hinton.md)
