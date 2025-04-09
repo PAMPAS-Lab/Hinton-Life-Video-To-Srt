@@ -26,8 +26,8 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
   - **专家混合系统（Mixtures of Experts, MoE）**：一种模块化的神经网络架构，其中不同的“专家”子网络处理输入的不同方面，最后由门控网络决定各专家输出的权重。
   - **亥姆霍兹机（Helmholtz Machines）**：一种早期的生成模型，旨在模拟人类大脑如何处理感知信息，包含一个识别网络和一个生成网络。
   - **胶囊神经网络（Capsule Networks, CapsNets）**：一种改进传统卷积神经网络的方法，它使用胶囊（capsules）代替单个神经元，每个胶囊代表一组神经元，专门捕捉特定实体的各种属性如位置、姿态等。
-
->主要贡献的内容引用自维基百科 
+>主要贡献的内容引用自维基百科
+ 
 - **代表性研究论文**
   **反向传播算法的使用**
      - Rumelhart D E, Hinton G E, Williams R J. Learning representations by back-propagating errors[J]. Cognitive modeling, 1988, 5(3): 1.
@@ -59,7 +59,8 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
      - Hinton G, Vinyals O, Dean J. Distilling the Knowledge in a Neural Network[J]. arXiv preprint arXiv:1503.02531, 2015.
   **Capsule Network**
      - Sabour S, Frosst N, Hinton G E. Dynamic Routing Between Capsules[C]//Advances in Neural Information Processing Systems. 2017: 3856-3866.
-                                                                                                                                           > 引用自知乎文章(【AI大咖】认真认识一代AI教父Hinton)
+> 引用自知乎文章(【AI大咖】认真认识一代AI教父Hinton)
+
 ## 轶事
 - **家族背景**
   - 他是逻辑学家乔治·布尔与数学家和教育家玛丽·埃佛勒斯·布尔的曾曾孙，布尔的工作最终成为了现代电子计算机的基础。
