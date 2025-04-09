@@ -1,7 +1,7 @@
 # Geoffrey Hinton: "AI's Potential and Perils"
 
 ## 📽️ 视频概览
-- **标题**: AI's Potential and Perils (推测标题，基于内容)
+- **标题**: AI's Potential and Perils
 - **时间**: 2023年9月
 - **主讲人**: Geoffrey Hinton (SPEAKER_02)，采访者 (SPEAKER_00)
 - **核心主题**: 探讨人工智能（AI）的起源、当前能力、未来发展及其潜在风险与益处，Hinton 从神经网络先驱的视角反思技术影响。
