@@ -342,7 +342,7 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
   - [链接](./2023/20230325_Godfather_of_artificial_intelligence_talks_impact_and_potential_of_new_AI.md)
 
 ### **3月**
-- **2023/20230325 _Godfather of artificial intelligence_ talks impact and potential of new AI|CBS**  
+- **2023/20230325 _Godfather of artificial intelligence_ talks impact and potential of new AI**  
   - **日期**: 3月25日
   - **视频类型**：新闻采访
   - **采访机构**：Columbia Broadcasting System, CBS
@@ -359,6 +359,7 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
   - **机构介绍**：它是全球最具影响力的新闻媒体之一。BBC News不仅为英国本土提供详尽的新闻报道，还以其全球视角和深入洞察影响着世界各地的信息流动。  
   - **核心内容**: 反思 AI 发展的风险，警告人工智能可能超越人类智能，并被恶意利用。  
   - [链接](./2023/20230502_AI_godfather_quits_Google_over_dangers_of_Artificial_Intelligence_-_BBC_News.md)
+    
 - **2023/20230503 AI May Figure Out How to Kill People – Geoffrey Hinton**  
   - **日期**: 5月3日
   - **视频类型**：新闻采访
@@ -366,6 +367,7 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
   - **机构介绍**：CNN是一个在全球范围内极具影响力的新闻媒体。
   - **核心内容**: 反思 AI 发展潜在的风险，警告 AI 可能会学会操纵甚至伤害人类。  
   - [链接](./2023/20230503_Godfather_of_AI_warns_that_AI_may_figure_out_how_to_kill_people.md)
+    
 - **2023/20230506 Possible End of Humanity from AI**  
   - **日期**: 5月6日
   - **视频类型**：技术研讨会
@@ -373,6 +375,7 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
   - **机构介绍**：这是一所位于美国马萨诸塞州剑桥市的世界顶尖私立研究型大学，不仅是一个培养高级科技人才的摇篮，也是一个推动科学技术前沿探索的重要力量。
   - **核心内容**: AI技术（尤其是大语言模型）的潜在生存威胁，数字智能超越生物智能的可能性，以及人类应对策略的探讨。  
   - [链接](./2023/20230506_Possible_End_of_Humanity_from_AI_Geoffrey_Hinton_at_MIT_Technology_Review_EmTech_Digital.md)
+    
 - **2023/20230509 Godfather of AI discusses dangers the developing technologies pose to society**  
   - **日期**: 5月9日
   - **视频类型**：新闻采访
@@ -381,6 +384,7 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
   - **采访人**：Christiane Amanpour。
   - **核心内容**: 人工智能的潜在风险，包括超级智能AI失控的可能性。  
   - [链接](./2023/20230509_Godfather_of_AI_discusses_dangers_the_developing_technologies_pose_to_society.md)
+    
 - **2023/20230511 Geoffrey Hinton helped create AI. Now he’s worried it will destroy us.**  
   - **日期**: 5月11日
   - **视频类型**：新闻采访
@@ -398,6 +402,7 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
   - **机构介绍**：剑桥大学是一所位于英国英格兰剑桥市的世界著名公立研究型大学，是英语世界中第二古老的大学，也是世界现存第四古老的大学。它的前身是一个学者协会。 
   - **核心内容**: 对比数字计算（Digital Computation）与生物计算（Biological Computation）的优劣，探讨人工智能超越人类智能的可能性及潜在风险。  
   - [链接](./2023/20230605_Geoffrey_Hinton_Two_Paths_to_Intelligence.mdd)
+    
 - **2023/20230623 The Godfather in Conversation Why Geoffrey Hinton is worried about the future of AI**  
   - **日期**: 6月23日
   - **视频类型**：人物访谈
@@ -443,52 +448,91 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
   - **核心内容**: 从ImageNet到ChatGPT的AI发展历程，以及AI对社会的影响与责任。  
   - [链接](./2023/20231004_Geoffrey_Hinton_in_conversation_with_Fei_Fei_Li_Responsible.md)
 
+### **12月**
+- **2023/202301209 大型语言模型在医学中的理解与共情能力**  
+  - **日期**: 12月9日
+  - **视频类型**：技术讨论
+  - **采访机构**：Ground Truths
+  - **机构介绍**：Ground Truths是一个由美国著名医学专家Eric Topol医学博士创办的播客(Podcast)和在线内容平台，专注于探讨医学、科学、技术(尤其是人工智能)与社会的交叉领域。其核心目标是揭示复杂议题背后的“真实”(Ground Truth)，即基于证据、数据和科学的事实，而非猜测或炒作。
+  - **采访人**：Eric Topol 
+  - **核心内容**: 探讨AI在医疗领域的突破性应用及其对人类智能的挑战。  
+  - [链接](./2023/20231209Geoffrey_Hinton_Large_Language_Models_in_Medicine_They_Understand_and_Have_Empathy.md)
+  
+- **2023/202301216 Will Digital Intelligence Replace Biological Intelligence?**  
+  - **日期**: 12月16日
+  - **视频类型**：技术讲座
+  - **采访机构**：2023 Arthur Miller Lecture in Science and Ethics
+  - **机构介绍**：2023 Arthur Miller Lecture in Science and Ethics 是一项以科学史学家、作家 Arthur I. Miller 命名的年度讲座，聚焦于科学进步与伦理挑战的交汇点。该讲座通常由顶尖科学家、哲学家或公共知识分子主讲，探讨技术革新背后的道德困境与社会责任。
+  - **核心内容**: 数字计算与生物计算的本质差异，大型语言模型的理解能力，以及超级智能的伦理挑战。  
+  - [链接](./2023/20231216Geoffrey_Hinton_discussed_Will_Digital_Intelligence_Replace_Biological_Intelligence.md)
+   
 ---
 
 ## 2024
 
 ### **2月**
-- **2024/20240208 AI could be smarter than people in 20 years|CBC News**  
+- **2024/20240208 AI could be smarter than people in 20 years**  
   - **日期**: 2月8日
-  - **视频类型**：人物访谈
+  - **视频类型**：新闻采访
+  - **采访机构**：Columbia Broadcasting System, CBS
+  - **机构介绍**：CBS是美国三大全国性商业广播电视网之一，成立于1927年，总部位于纽约。CBS提供新闻、娱乐、体育等多种类型的节目，并在全球范围内拥有广泛的影响力。
   - **采访人**：Travis Dhanraj   
   - **核心内容**: 预测AI在20年内可能超越人类智能。  
-  - [链接](./2024/20240208_AI_could_be_smarter_than_people_in_20_years.md)
+  - [链接](./2024/20240208AI_could_be_smarter_than_people_in_20_years.md)
 
-- **2024/20240229 eoffrey Hinton 教授在 Sheldonian|Romanes**  
+- **2024/20240229 eoffrey Hinton 教授在 Sheldonian Romanes Lecture**  
   - **日期**: 2月29日
-  - **视频类型**：讲座  
+  - **视频类型**：技术讲座
+  - **采访机构**：University of Oxford，即牛津大学
+  - **机构介绍**：牛津大学是英语世界历史最悠久的大学，也是全球顶尖的研究型学府之一，不仅是学术圣地，更是人类文明演进的缩影。  
   - **核心内容**: 在牛津大学Sheldonian剧院的演讲，探讨AI与人类智能的未来。  
   - [链接](./2024/20240229_Geoffrey_Hinton_教授在_Sheldonian.md)
 
 ### **4月**
-- **2024/20240411 Ray Kurzweil & Geoff Hinton Debate the Future|the 2024 Abundance360 Summit**  
+- **2024/20240408 Geoffrey Hinton Awarded UCD Ulysses Medal: Key Insights from the 2024 Ceremony**  
+  - **日期**: 4月8日
+  - **视频类型**：颁奖讲座
+  - **采访机构**：University College Dublin, UCD(即都柏林大学)
+  - **机构介绍**：都柏林大学是爱尔兰规模最大、国际声誉最高的研究型大学之一，也是欧洲领先的高等教育机构。  
+  - **核心内容**: 深度学习革命历程与AI伦理挑战。  
+  - [链接](./2024/20240408Geoffrey_Hinton_Awarded_UCD_Ulysses_Medal_Key_Insights_from_the_2024_Ceremony.md)
+  
+- **2024/20240411 "Digital Superintelligence: Threat or Hope?" - Kurzweil & Hinton Debate**  
   - **日期**: 4月11日
   - **视频类型**：研讨会
-  - **讨论人**：Ray Kurzweil，  
-  - **核心内容**: 与雷·库兹韦尔就AI未来发展及伦理风险展开辩论。  
+  - **采访机构**：the 2024 Abundance360 Summit
+  - **机构介绍**：2024 Abundance360 Summit 是由未来学家、企业家 Peter Diamandis（奇点大学联合创始人）主办的年度高端峰会，聚焦指数级技术（如人工智能、量子计算、合成生物学等）的颠覆性潜力及其对商业、社会和人类未来的影响。
+  - **讨论人**：Ray Kurzweil
+  - **主持人**：Peter Diamandis  
+  - **核心内容**:数字智能与生物智能的本质差异。  
   - [链接](./2024/2024411Ray%20Kurzweil%20&%20Geoff%20Hinton%20Debate%20the%20Future.md)
 
 ### **5月**
-- **2024/20240515 Geoffrey Hinton On working with Ilya|Sana AI**  
+- **2024/20240515 Geoffrey Hinton On working with Ilya Sutskever & The Evolution of AI**  
   - **日期**: 5月15日
   - **视频类型**：人物对话
+  - **采访机构**：Sana AI
+  - **机构介绍**：Sana AI 是由瑞典科技公司 Sana Labs 开发的一款企业级人工智能平台，专注于知识管理、学习与协作的智能化转型。其核心目标是通过AI技术整合组织内外的知识资源，提升团队效率与决策能力。
   - **对话人**：Joel Hellermark  
   - **核心内容**: 回顾与Ilya Sutskever的合作经历，反思AI发展的关键节点。  
   - [链接](./2024/20240515_Geoffrey_Hinton_On_working_with_Ilya.md)
 
 ### **6月**
-- **2024/20240607 Keynote interview with Geoffrey Hinton (remote) and Nicholas Thompson (in-person)|AI for Good**  
+- **2024/20240607 Keynote interview with Geoffrey Hinton (remote) and Nicholas Thompson (in-person)**  
   - **日期**: 6月7日
   - **视频类型**：主题访谈
+  - **采访机构**：AI for Good Global Summit(人工智能向善全球峰会)
+  - **机构介绍**：AI for Good Global Summit是由 联合国国际电信联盟（ITU） 牵头，联合 40余家联合国机构（如UNESCO、WHO、WFP等）共同主办的全球性年度峰会，旨在推动人工智能技术加速实现联合国 可持续发展目标（SDGs），同时确保技术应用的伦理与包容性。
   - **主持人**：Nicholas Thompson  
-  - **核心内容**: 远程访谈中讨论AI技术的伦理挑战与监管必要性。  
+  - **核心内容**: AI技术发展带来的机遇与生存威胁，数字智能超越生物智能的机制，以及社会监管框架的紧迫需求。  
   - [链接](./2024/20240607_Keynote_interview_with_Geoffrey_Hinton_remote_and_Nicholas_Thompson_in_person.md)
 
 - **2024/20240615 AI will become smarter than humans Geoffrey Hinton|BNN Bloomberg**  
   - **日期**: 6月15日
-  - **视频类型**：新闻采访  
-  - **核心内容**: 重申AI超越人类智能的预测，并强调安全控制的重要性。  
+  - **视频类型**：新闻采访
+  - **采访机构**：BNN Bloomberg
+  - **机构介绍**：BNN Bloomberg是加拿大一个专注于商业新闻的电视频道和服务，它结合了Business News Network (BNN) 和 Bloomberg LP 的资源，提供深入的市场分析、金融资讯及经济报道。
+  - **核心内容**: AI超越人类智能的必然性、失控风险与安全治理路径。  
   - [链接](./2024/20240615_AI_will_become_smarter_than_humans_Geoffrey_Hinton.md)
 
 - **2024/20240628 Q&A with Geoffrey Hinton**  
@@ -508,6 +552,8 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
 - **2024/20241009 ‘Godfather of AI’ on AI “exceeding human intelligence” and it “trying to take over|BBC Newsnight”**  
   - **日期**: 10月9日
   - **视频类型**：人物访谈
+  - **采访机构**：British Broadcasting Corporation，简称BBC，即英国广播公司。
+  - **机构介绍**：英国广播公司是英国的公共广播公司，也是世界上最大的广播组织之一。
   - **采访人**：Faisal Islam  
   - **核心内容**: 强调AI超越人类智能的紧迫性，并警告技术失控的潜在威胁。  
   - [链接](./2024/20241009_Godfather_of_AI_on_AI_exceeding_human_intelligence_and_trying_to_take_over.md)
@@ -515,13 +561,17 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
 - **2024/20241009 多伦多校长线上会议hinton|University of Toronto Press Conference**  
   - **日期**: 10月9日
   - **视频类型**：会议采访
+  - **采访机构**：University of Toronto，即多伦多大学
+  - **机构介绍**：是加拿大最古老、最大的大学之一，位于安大略省的多伦多市。它成立于1827年，最初名为“国王学院”，直到1849年才改为现名并成为一所非宗教性质的学府。
   - **采访人**：Meric Gertler  
   - **核心内容**: 与多伦多大学校长讨论AI教育、研究及伦理治理。  
   - [链接](./2024/20241009多伦多校长线上会议hinton.md)
 
 - **2024/20241010 瑞典皇家科学院宣布 2024 年诺贝尔物理学奖获奖者及成果介绍**  
   - **日期**: 10月10日
-  - **视频类型**：颁奖演讲  
+  - **视频类型**：颁奖演讲
+  - **采访机构**：瑞典皇家科学院
+  - **机构介绍**： 
   - **核心内容**: 作为诺贝尔物理学奖得主，阐述其贡献对AI与神经科学的交叉影响。  
   - [链接](./2024/20241010_瑞典皇家科学院宣布_2024_年诺贝尔物理学奖获奖者及成果介绍.md)
 
