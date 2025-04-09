@@ -8,8 +8,8 @@
 - **视频链接**：[完整视频](https://www.youtube.com/watch?v=-eyhCTvrEtE)
 - **内容概况**: 本采访记录了Geoffrey Hinton从高中时期对大脑记忆的兴趣，到成为深度学习先驱的职业生涯。他分享了反向传播（Backpropagation）、受限玻尔兹曼机（RBM）、胶囊网络（Capsules）等创新背后的故事，分析这些技术如何推动AI从符号主义转向神经网络范式，并对无监督学习、脑启发计算及新手建议发表见解。
 - **字幕文件链接**
-  - [原始英文字幕](../srt/20170809Heroes_of_Deep_Learning_ Andrew_Ng_interviews_Geoffrey_Hinton.txt)
-  - [中文字幕](../srt/20170809Heroes_of_Deep_Learning_ Andrew_Ng_interviews_Geoffrey_Hinton-中文.txt)
+  - [原始英文字幕](../srt/20170912Meet_Geoffrey_Hinton.txt)
+  - [中文字幕](../srt/20170912Meet_Geoffrey_Hinton-中文.txt)
 ---
 
 ## 🎯 核心观点与技术预测
