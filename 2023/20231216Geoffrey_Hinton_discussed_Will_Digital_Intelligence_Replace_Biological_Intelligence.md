@@ -2,7 +2,7 @@
 
 ## 📽️ 视频概览
 - **标题**: Will Digital Intelligence Replace Biological Intelligence?
-- **时间**: 2023年MIT Miller科学与伦理讲座
+- **时间**: 2023年12月16日Arthur Miller科学与伦理讲座
 - **主讲人**: Geoffrey Hinton (图灵奖得主，多伦多大学荣誉教授)
 - **核心主题**: 数字计算与生物计算的本质差异，大型语言模型的理解能力，以及超级智能的伦理挑战
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=iWPo7Yhg7Vc)
