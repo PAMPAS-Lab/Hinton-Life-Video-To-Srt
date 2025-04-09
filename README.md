@@ -59,7 +59,7 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
      - Hinton G, Vinyals O, Dean J. Distilling the Knowledge in a Neural Network[J]. arXiv preprint arXiv:1503.02531, 2015.
   **Capsule Network**
      - Sabour S, Frosst N, Hinton G E. Dynamic Routing Between Capsules[C]//Advances in Neural Information Processing Systems. 2017: 3856-3866.
-> 引用自知乎文章(【AI大咖】认真认识一代AI教父Hinton)
+> 代表性研究论文的内容引用自知乎文章(【AI大咖】认真认识一代AI教父Hinton)
 
 ## 轶事
 - **家族背景**
