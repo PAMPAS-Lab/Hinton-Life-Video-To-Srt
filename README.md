@@ -27,7 +27,7 @@ Geoffrey Everest Hinton（1947年12月6日—），又译杰弗里·欣顿，是
   - **亥姆霍兹机（Helmholtz Machines）**：一种早期的生成模型，旨在模拟人类大脑如何处理感知信息，包含一个识别网络和一个生成网络。
   - **胶囊神经网络（Capsule Networks, CapsNets）**：一种改进传统卷积神经网络的方法，它使用胶囊（capsules）代替单个神经元，每个胶囊代表一组神经元，专门捕捉特定实体的各种属性如位置、姿态等。
 
->引用自维基百科 
+>主要贡献的内容引用自维基百科 
 - **代表性研究论文**
   **反向传播算法的使用**
      - Rumelhart D E, Hinton G E, Williams R J. Learning representations by back-propagating errors[J]. Cognitive modeling, 1988, 5(3): 1.
