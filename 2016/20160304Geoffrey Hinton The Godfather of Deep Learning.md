@@ -1,7 +1,7 @@
-# Geoffrey Hinton: "The Rise of Deep Learning" (TVO Interview Summary)
+# Geoffrey Hinton: "The Rise of Deep Learning"
 
 ## 📽️ 视频概览
-- **标题**: The Rise of Deep Learning (推测标题，基于内容)
+- **标题**: The Rise of Deep Learning
 - **时间**: 2016年3月4号
 - **主讲人**: Geoffrey Hinton (SPEAKER_01)，采访者 (SPEAKER_02)
 - **核心主题**: 探讨深度学习的定义、技术发展及其对人工智能的影响，展望其在翻译、语音识别及日常生活中的应用前景。
