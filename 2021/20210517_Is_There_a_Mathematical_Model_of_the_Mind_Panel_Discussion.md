@@ -10,7 +10,7 @@
   - Jack Gallant (UC伯克利认知神经科学家)
   - Percy Liang (斯坦福大学)
   - Bin Yu (UC伯克利统计学家)
-- **核心主题**: 探索心智的数学模型可能性，对比人脑与深度学习系统的差异
+- **核心主题**: 探索心智的数学模型可能性，对比人脑与深度学习系统的差异。
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=Ulo-vKm14rg)  
 - **字幕文件链接**
   - [原始英文字幕](../srt/20210517Is_There_a_Mathematical_Model_of_the_Mind_(Panel_Discussion).txt)
