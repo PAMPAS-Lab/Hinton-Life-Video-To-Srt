@@ -1,8 +1,8 @@
-# Geoffrey Hinton: "Recent Developments in Deep Learning" (2014 MIT Talk Summary)
+# Geoffrey Hinton: "Recent Developments in Deep Learning"
 
 ## 📽️ 视频概览
 - **标题**: Recent Developments in Deep Learning  
-- **时间**: 2014年于MIT  
+- **时间**: 2013年5月30日  
 - **主讲人**: Geoffrey Hinton (SPEAKER_07)  
 - **核心主题**: 深度学习技术的突破与未来方向，包括深度神经网络（DNN）的优化、语音/图像识别进展，以及生成模型与硬件协同设计。
 - **视频链接**: [完整视频](https://www.youtube.com/watch?v=vShMxxqtDDs)  
