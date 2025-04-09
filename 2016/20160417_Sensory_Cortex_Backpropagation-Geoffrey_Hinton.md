@@ -1,4 +1,4 @@
-# Geoffrey Hinton: "Can Sensory Cortex Do Backpropagation?" (2016 MIT Talk Summary)
+# Geoffrey Hinton: "Can Sensory Cortex Do Backpropagation?"
 
 ## 📽️ 视频概览
 - **标题**: Can Sensory Cortex Do Backpropagation?
