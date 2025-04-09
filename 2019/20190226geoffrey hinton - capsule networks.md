@@ -2,7 +2,7 @@
 
 ## 📽️ 视频概览
 - **标题**: What's Wrong with Convolutional Neural Nets?
-- **时间**: 2019年3月
+- **时间**: 2019年2月26日
 - **主讲人**: Geoffrey Hinton (SPEAKER_00)
 - **核心主题**: 分析传统卷积神经网络（ConvNets）的局限性，提出胶囊网络（Capsule Networks）作为改进方案，解决视角变化和几何关系的建模问题。
 - **视频链接**：[完整视频](https://www.youtube.com/watch?v=byqn-p_vokE)
